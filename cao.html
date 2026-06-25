@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cao! · Dawn Vision</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
+  <style>
+    /* Cao page header - flush with nav, no top margin */
+    .cao-page-header {
+      background: var(--klein);
+      color: var(--white);
+      padding: clamp(40px, 6vw, 64px) 0 clamp(28px, 4vw, 40px);
+    }
+    .cao-page-header__eyebrow {
+      font-size: 9px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      font-family: var(--serif-display);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .cao-page-header__title {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -1px;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+    .cao-page-header__desc {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.5);
+      font-style: italic;
+      font-family: var(--serif);
+      max-width: 480px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Inner nav -->
+  <nav class="inner-nav">
+    <div class="inner-nav__inner">
+      <div class="inner-nav__group">
+        <a href="index.html" class="inner-nav__link">Home</a>
+        <a href="articles.html" class="inner-nav__link">Articles</a>
+      </div>
+      <a href="index.html" class="inner-nav__brand">
+        Dawn Vision
+        <small>Daily Briefing</small>
+      </a>
+      <div class="inner-nav__group">
+        <a href="cao.html" class="inner-nav__link inner-nav__link--active">Cao</a>
+        <a href="about.html" class="inner-nav__link">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cao page header - flush with nav -->
+  <div class="cao-page-header">
+    <div class="container">
+      <div class="cao-page-header__eyebrow">Daily Rant</div>
+      <h2 class="cao-page-header__title">Cao!</h2>
+      <p class="cao-page-header__desc">每天一点槽，笑完继续搞。</p>
+    </div>
+  </div>
+
+  <main class="container" style="padding-top: clamp(32px, 5vw, 48px); padding-bottom: clamp(40px, 6vw, 64px);">
+    <div class="cao-listing">
+
+      <a href="cao/2026-06-25-ai-coding-fails.html" class="cao-listing__item">
+        <div class="cao-listing__meta">Issue 001 · 2026.06.25</div>
+        <h3 class="cao-listing__title">AI Coding 2026 翻车现场：Claude Code 删库、Codex 装死、Open Claw 胡说八道</h3>
+        <p class="cao-listing__excerpt">你的终端里跑着 Claude Code，IDE 里挂着 Codex，后台还蹲着个 Open Claw——它们互相打架、一起写 Bug、然后异口同声地告诉你"编译通过了"。</p>
+      </a>
+
+      <div style="text-align: center; padding: clamp(40px, 5vw, 56px) 0; font-size: 0.85rem; color: var(--gray-light); font-style: italic; font-family: var(--sans);">
+        — 更多槽点，即将上线 —
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__brand">Dawn Vision</div>
+      <div class="site-footer__meta">© 2026 · Daily at 16:30 CST · Weekdays Only</div>
+    </div>
+  </footer>
+
+</body>
+</html>

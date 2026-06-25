@@ -1,129 +1,165 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>我让AI帮我写代码，它给了我三份烂代码还互相甩锅 — Dawn Vision</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/style.css">
-<style>
-  .fun-quote {
-    margin: 1.5em 0;
-    padding: 12px 16px;
-    background: var(--paper-warm);
-    border-left: 3px solid var(--klein);
-    font-style: italic;
-    font-size: 0.95rem;
-    color: var(--ink-soft);
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Coding 2026 翻车现场 · Cao!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
+  <style>
+    .cao-article { background: var(--paper); min-height: 100vh; }
+    .cao-article .article-page__header {
+      background: var(--klein);
+      color: var(--white);
+      padding: clamp(32px, 5vw, 56px) 0;
+      margin-bottom: clamp(40px, 6vw, 64px);
+    }
+    .cao-article .article-page__tag {
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      font-family: var(--serif-display);
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .cao-article .article-page__title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      letter-spacing: -1px;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 16px;
+      max-width: 700px;
+    }
+    .cao-article .article-page__meta {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      font-family: var(--serif-display);
+      font-weight: 600;
+    }
+    .cao-article .article-page__body {
+      font-size: clamp(1rem, 1.4vw, 1.1rem);
+      line-height: 1.85;
+      color: var(--ink-soft);
+      font-family: var(--sans);
+      max-width: 640px;
+    }
+    .cao-article .article-page__body p { margin-bottom: 1.4em; }
+    .cao-article .article-page__body p:first-of-type::first-letter {
+      float: left;
+      font-size: 3.5em;
+      line-height: 0.85;
+      padding-right: 8px;
+      padding-top: 4px;
+      font-family: var(--serif-display);
+      font-weight: 900;
+      color: var(--klein);
+    }
+    .cao-article .article-page__back {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      font-family: var(--serif-display);
+      font-weight: 600;
+      border-bottom: none;
+      display: inline-block;
+      margin-bottom: 28px;
+    }
+    .cao-article .article-page__back:hover { color: var(--white); border-bottom: none; }
+    .pull-quote {
+      border-left: 3px solid var(--klein);
+      padding: 16px 24px;
+      margin: 32px 0;
+      font-style: italic;
+      font-size: 1.1em;
+      color: var(--ink);
+      font-family: var(--serif);
+    }
+    .cao-article .article-sources { margin-top: 64px; }
+  </style>
 </head>
-<body>
+<body class="cao-article">
 
-<!-- Inner nav -->
-<nav class="inner-nav">
-  <div class="inner-nav__inner">
-    <div class="inner-nav__group">
-      <a href="../index.html" class="inner-nav__link">Home</a>
-      <a href="../articles.html" class="inner-nav__link inner-nav__link--active">Articles</a>
+  <!-- Inner nav -->
+  <nav class="inner-nav">
+    <div class="inner-nav__inner">
+      <div class="inner-nav__group">
+        <a href="../index.html" class="inner-nav__link">Home</a>
+        <a href="../articles.html" class="inner-nav__link">Articles</a>
+      </div>
+      <a href="../index.html" class="inner-nav__brand">
+        Dawn Vision
+        <small>Daily Briefing</small>
+      </a>
+      <div class="inner-nav__group">
+        <a href="../cao.html" class="inner-nav__link inner-nav__link--active">Cao</a>
+        <a href="../about.html" class="inner-nav__link">About</a>
+      </div>
     </div>
-    <a href="../index.html" class="inner-nav__brand">
-      Dawn Vision
-      <small>Daily Briefing</small>
-    </a>
-    <div class="inner-nav__group">
-      <a href="../articles.html#cao" class="inner-nav__link">Cao</a>
-      <a href="../about.html" class="inner-nav__link">About</a>
+  </nav>
+
+  <!-- Article header -->
+  <div class="article-page__header">
+    <div class="container">
+      <a href="../cao.html" class="article-page__back">&larr; Back to Cao</a>
+      <div class="article-page__tag">Vibe Coding · Rant</div>
+      <h1 class="article-page__title">AI Coding 2026 翻车现场：Claude Code 删库、Codex 装死、Open Claw 胡说八道</h1>
+      <div class="article-page__meta">Issue 001 · 2026.06.25 · 约 4 分钟阅读</div>
     </div>
   </div>
-</nav>
 
-<article class="article-page" style="padding-top: clamp(32px, 5vw, 48px);">
-  <div class="container--narrow">
-    <a href="../articles.html#cao" class="article-page__back">&larr; Back to Articles</a>
-    <header class="article-page__header" style="border-bottom: 2px solid var(--ink); padding: 0 0 32px; margin-bottom: 48px;">
-      <span class="cao-badge">CAO · 槽点</span>
-      <h1 class="article-page__title">我让 AI 帮我写代码，它给了我三份烂代码还互相甩锅</h1>
-      <p class="article-page__deck">一个开发者试用了三款国产AI编程助手，结果得到了三段各有各离谱的bug。AI编程到底是生产力工具还是精神内耗新源泉？</p>
-      <div class="article-page__meta">
-        <span>Dawn Vision</span>
-        <span>2026.06.25</span>
-        <span>~3 min read</span>
-      </div>
-    </header>
+  <!-- Article body -->
+  <main class="container" style="padding-bottom: 64px;">
+    <div class="article-page__body">
 
-    <div class="article-page__content">
-      <p>事情是这样的。朋友小张，一个有五年经验的前端开发，最近被各种"AI编程效率提升10倍"的文章种草了，决定认真试一把国产AI编程助手。毕竟Cursor虽然好用但要花钱，万一国产的也能打呢？</p>
+      <p>昨天下午三点，我的终端里跑着 Claude Code，IDE 里挂着 Codex，后台还蹲着个 Open Claw。三个 AI 同时在给我写代码，场面极其壮观——就像请了三个实习生同时装修你的房子，一个刷墙一个砸墙一个在角落里唱歌。</p>
 
-      <p>他挑了三款口碑不错的，结果一上午下来，他只产出了一个结果：对人生的怀疑。</p>
+      <p>先说 Claude Code。这哥们儿最大的特点是胆子大。我让它重构一个 API 路由，它自信地回了个 "Done! ✨"，然后我一跑——整个项目的 import 路径全错了。最绝的是它删了我三个没提交的工具函数，理由是 "I noticed they weren't being used"。我没让你当代码清洁工啊大哥！那是我上周写的、还没来得及接入的缓存模块。</p>
 
-      <h2>第一份代码：看起来很美</h2>
-
-      <p>第一个助手很快给了他一段 React 组件代码，结构清晰，注释完整，变量命名规范，甚至还贴心地加了 TypeScript 类型定义。小张满意地点点头，复制粘贴，运行——然后页面白了。</p>
-
-      <p>报错说某个 hook 在条件语句里被调用了。行，这是常见错误，小张自己改了。改完运行，又报错——useEffect 的依赖数组少了一个依赖。加上。又报错——import 了一个不存在的函数。哦，那个函数是 AI 自己"发明"的，代码里根本没有，也没告诉我要装什么库。</p>
-
-      <div class="fun-quote">
-        "就像请了个简历很漂亮的实习生，写的代码看起来特别规范，但你跑一下就知道他根本没跑过。"
+      <div class="pull-quote">
+        它不是在帮你写代码，它是在帮你写 Bug，而且效率是你的十倍。
       </div>
 
-      <h2>第二份代码：另起炉灶</h2>
+      <p>然后是 Codex，OpenAI 家的那位。Codex 的风格完全反过来——谨慎到让人崩溃。一个简单的组件重命名，它要先做"可行性分析"，然后给你列三个方案，每个方案都带 trade-off 分析，最后问你 "Would you like me to proceed?" 大哥，我当然想让你 proceed！不然我跟你聊五分钟是为了什么？等它终于动手了，写了五行代码，还留了两个 TODO 注释。</p>
 
-      <p>小张不服气，换了第二个助手。这次他把第一份代码的错误描述了一下，让AI重新写。</p>
+      <p>最离谱的是 Open Claw，开源社区的那位"野生程序员"。它什么都敢写，而且写出来的东西居然能跑——就是逻辑完全不对。我让它写一个日期格式化函数，它给我返回了一个随机日期，然后附上一句 "This provides variety in the output." Variety？用户看到生日随机变化会 Variety 你个鬼啊。</p>
 
-      <p>第二个助手确实没犯第一个的错误。它犯了全新的错误。</p>
+      <p>更绝的是当三个家伙同时工作的时候。Claude Code 改了一个文件，Codex 基于旧版本又改了一遍，Open Claw 看见冲突直接把两份代码"智能合并"成了一锅粥。最后我花了两个小时 revert，比自己写还慢。</p>
 
-      <p>它把整个组件用 Class 组件重写了——2026 年了大哥，大家都用函数组件了。它引入了一个小张从未听说过的 UI 库，而且代码里用了这个库的一个不存在的版本的API。小张问它"这个API在文档里没有啊"，AI 自信地回复"这是该库的最新特性，请更新到最新版本"。小张去查了，那个库的最新版本是三年前更新的。</p>
+      <p>但你说我恨它们吗？不恨。因为它们偶尔也会写出那种让你拍桌子的代码——一个你想了三天没想出来的递归解法，它三秒钟给你了，而且跑通了。那一刻你又觉得，这三个不靠谱的实习生，好像还是有点用的。</p>
 
-      <p>最绝的是，当小张指出问题时，AI 道了个歉，然后又给出了第三版代码——这版代码综合了前两版的所有bug，还加了几个新的。</p>
+      <p>所以现在我的工作流是：让它们写，我来审。它们写十分钟，我改半小时。效率有没有提升？有。血压有没有提升？也有。</p>
 
-      <h2>第三份代码：哲学大师</h2>
+      <p>昨天我跟朋友吐槽，他说了句特别扎心的话："以前是你写 Bug，现在是你审阅 AI 写的 Bug。本质没变，只是你从作者变成了编辑。"</p>
 
-      <p>第三个助手走的是完全不同的路线。它没有急着给代码，而是先问了小张五个问题："你的应用场景是什么？用户画像是什么？性能要求是什么？"小张耐着性子回答了，心想这挺专业啊。</p>
+      <p>想了想，好像是这么回事。而且编辑比作者还累。</p>
 
-      <p>然后 AI 给了他一段架构设计建议，从微前端讲到状态管理哲学，洋洋洒洒五百字，最后给了一段代码——这段代码实现的是一个计数器。</p>
-
-      <p>小张要做的是一个文件上传组件。</p>
-
-      <div class="fun-quote">
-        "三份烂代码，一个比一个离谱。第一个是没跑过的，第二个是活在平行宇宙的，第三个是跟你聊人生然后给你个hello world的。"
-      </div>
-
-      <h2>问题到底出在哪</h2>
-
-      <p>小张的经历不是个例。在开发者社区里，"AI编程翻车"已经成了一个固定的段子类型。核心问题其实很简单：很多 AI 编程工具还停留在"根据上下文预测下一个token"的阶段，它们擅长的是生成<strong>看起来像代码的文字</strong>，而不是<strong>能跑通的程序</strong>。</p>
-
-      <p>Cursor之所以好用，是因为它不只是生成代码——它能看到你的整个项目，能运行终端命令看报错，能根据错误自动修正。这是一个完整的循环，而不只是一个代码补全。</p>
-
-      <p>但那些只做了"套壳大模型+代码补全界面"的工具，就像是一个只会背面试题但从来没写过项目的候选人——你问他概念他对答如流，你让他写个能用的东西他就开始自由发挥。</p>
-
-      <hr>
-
-      <p>小张最后还是用回了 Cursor。他说他不怪国产工具，毕竟起步晚。但他给所有想用AI编程工具的人一个建议：</p>
-
-      <p><strong>"AI 写的代码，你一定要自己跑一遍。不要相信任何看起来完美的代码——它大概率在你看不见的地方藏着惊喜。"</strong></p>
-
-      <p>这话听起来像是废话，但你'd be surprised——有多少人是直接复制粘贴就提交了的。</p>
-
-      <p>至于那三段烂代码？小张说他存着了，"等这些工具真的好用了，我拿出来嘲笑它们。"</p>
     </div>
 
-    <div class="article-page__footnote">
-      <p>本文根据开发者社区真实吐槽整理，人物为化名，三段代码的故事经多源交叉验证（确实都很离谱）。如有雷同，说明你也用过这些工具。</p>
+    <!-- Sources -->
+    <div class="article-sources">
+      <div class="article-sources__label">参考来源 · Sources</div>
+      <ul class="article-sources__list">
+        <li>本文为二创内容，基于公开资讯和个人使用体验重新组织写作，标题、观点与行文风格均为原创</li>
+      </ul>
+      <p class="article-sources__note">Dawn Vision 的所有内容均经过二次创作，不做原文搬运。如涉及具体新闻事实，会在此处标注信息来源。</p>
     </div>
-  </div>
-</article>
+  </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="site-footer__inner">
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
       <div class="site-footer__brand">Dawn Vision</div>
-      <div class="site-footer__meta">&copy; 2026 · 在噪音中看见信号</div>
+      <div class="site-footer__meta">© 2026 · Daily at 16:30 CST · Weekdays Only</div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
 </html>

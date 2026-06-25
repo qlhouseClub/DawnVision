@@ -24,7 +24,7 @@
         <small>Daily Briefing</small>
       </a>
       <div class="inner-nav__group">
-        <a href="#cao" class="inner-nav__link">Cao</a>
+        <a href="cao.html" class="inner-nav__link">Cao</a>
         <a href="about.html" class="inner-nav__link">About</a>
       </div>
     </div>
@@ -32,71 +32,73 @@
 
   <main class="container">
 
-    <!-- Issue selector -->
+    <!-- Issue selector - simplified -->
     <div class="issue-selector">
-      <span class="issue-selector__label">Issue</span>
       <span class="issue-selector__current">Issue 001</span>
       <select onchange="if(this.value) window.location.href=this.value">
-        <option value="articles.html" selected>Issue 001 · 2026.06.25</option>
+        <option value="articles.html" selected>2026.06.25</option>
       </select>
-      <span class="issue-selector__date">2026年6月25日 · 周四 · 工作日刊</span>
     </div>
 
-    <!-- 今日首版 (Cover Story) -->
+    <!-- Focus · 焦点 (Cover Story) -->
     <section style="margin-bottom: clamp(48px, 6vw, 72px);">
-      <div class="section-label">今日首版</div>
+      <h2 class="section-label">Focus <span>焦点</span></h2>
       <a href="articles/2026-06-25-agent-not-chatbot.html" style="display: block; text-decoration: none; color: inherit; border-bottom: none;">
-        <h2 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; letter-spacing: -0.8px; line-height: 1.1; margin-bottom: 16px; max-width: 760px; transition: color 0.2s;" onmouseover="this.style.color='var(--klein)'" onmouseout="this.style.color='var(--ink)'">Agent 不是聊天机器人：2026 年的范式转移</h2>
-        <p style="font-size: clamp(0.95rem, 1.5vw, 1.1rem); color: var(--gray-mid); line-height: 1.6; font-style: italic; font-family: var(--sans); max-width: 640px; margin-bottom: 16px;">从 Chatbot 到 Agent，差的不是模型能力，而是一整套协议栈、工具链和生态系统。MCP、A2A、ANP、ACP——四个协议正在构建 Agent 时代的"互联网基础设施"。Cursor 80 亿美元估值的背后，不是 AI 有多强，而是"AI-Loop"的工作方式正在重新定义编程。</p>
-        <span style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gray-light); font-family: var(--serif-display); font-weight: 600;">Dawn Vision 编辑部 · 约 8 分钟阅读 <span style="color: var(--klein); margin-left: 6px;">→</span></span>
+        <h3 style="font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 900; letter-spacing: -0.8px; line-height: 1.15; margin-bottom: 16px; max-width: 760px; transition: color 0.2s;" onmouseover="this.style.color='var(--klein)'" onmouseout="this.style.color='var(--ink)'">Agent 不是聊天机器人：2026 年的范式转移</h3>
+        <p style="font-size: clamp(0.95rem, 1.4vw, 1.05rem); color: var(--gray-mid); line-height: 1.65; font-style: italic; font-family: var(--sans); max-width: 640px; margin-bottom: 16px;">从 Chatbot 到 Agent，差的不是模型能力，而是一整套协议栈、工具链和生态系统。MCP、A2A、ANP、ACP——四个协议正在构建 Agent 时代的"互联网基础设施"。Cursor 80 亿美元估值的背后，是 AI-Loop 的工作方式正在重新定义编程。</p>
+        <span style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gray-light); font-family: var(--serif-display); font-weight: 600;">Dawn Vision · 约 8 分钟阅读 <span style="color: var(--klein); margin-left: 6px;">→</span></span>
       </a>
     </section>
 
-    <!-- 最新资讯 (Features) -->
+    <!-- Brief · 资讯 -->
     <section style="margin-bottom: clamp(48px, 6vw, 72px);">
-      <div class="section-label">最新资讯</div>
+      <h2 class="section-label">Brief <span>资讯</span></h2>
       <div class="article-grid">
         <a href="articles/2026-06-25-cursor-8b-valuation.html" class="article-card">
-          <div class="article-card__tag">AI 编程 · 商业分析</div>
+          <span class="article-card__tag">AI 编程 · 商业分析</span>
           <h3 class="article-card__title">Cursor 80 亿美元估值背后：AI-Loop 正在重写编程范式</h3>
           <p class="article-card__excerpt">当 IDE 开始理解你的意图、预测你的下一步、在后台自动修复错误，程序员的角色已经从"写代码的人"变成了"指导 AI 写代码的人"。</p>
         </a>
 
         <a href="articles/2026-06-25-one-person-startup.html" class="article-card">
-          <div class="article-card__tag">一人公司 · 趋势观察</div>
+          <span class="article-card__tag">一人公司 · 趋势观察</span>
           <h3 class="article-card__title">2026 年，一人公司的黄金时代正在到来</h3>
           <p class="article-card__excerpt">AI 让一个人拥有了过去需要十人团队才能完成的生产力。从设计到开发到运营，一个人就是一条产线。Agent 集群正在成为你的联合创始人。</p>
         </a>
 
         <a href="articles/2026-06-25-ai-ecommerce-pod.html" class="article-card">
-          <div class="article-card__tag">AI 电商 · 行业研究</div>
+          <span class="article-card__tag">AI 电商 · 行业研究</span>
           <h3 class="article-card__title">AI 电商的暗线："Pod"模式正在颠覆传统选品逻辑</h3>
           <p class="article-card__excerpt">Print-on-Demand 进化为 AI-Pod：AI 设计、AI 投放、AI 客服，人类只做决策。跨境电商的壁垒正在从供应链转向 AI 工作流的编排能力。</p>
         </a>
 
         <a href="articles/2026-06-25-wechat-ai-a2a.html" class="article-card">
-          <div class="article-card__tag">微信生态 · A2A</div>
+          <span class="article-card__tag">微信生态 · A2A</span>
           <h3 class="article-card__title">微信正在接入 A2A 协议：社交平台的 Agent 化意味着什么？</h3>
           <p class="article-card__excerpt">当你的微信助手可以直接和商家的 Agent 对话完成订单，"搜索—比较—下单"的链路将被彻底压缩。社交平台的终局，是 Agent 之间的社交网络。</p>
         </a>
       </div>
     </section>
 
-    <!-- 槽点 (Cao) — Klein Blue bleed -->
-    <section id="cao" style="margin: 0 calc(-50vw + 50%); margin-bottom: 0;">
-      <div class="cao-section">
-        <div class="section-label" style="color: rgba(255,255,255,0.7); border-bottom-color: rgba(255,255,255,0.2);">槽点</div>
-        <a href="cao/2026-06-25-ai-coding-fails.html" class="cao-card" style="display: block;">
-          <div class="cao-card__tag">Vibe Coding · 吐槽</div>
-          <h3 class="cao-card__title">AI 写代码的翻车现场：那些让我哭笑不得的 Bug</h3>
-          <p class="cao-card__excerpt">它自信地写了一个排序算法，结果是随机的。它重构了我的整个项目，然后告诉我"编译通过了"——确实通过了，因为它把所有报错的代码都删了。今天盘点一下本周最离谱的 AI Coding 翻车现场，保证让你又气又笑。</p>
-        </a>
-      </div>
-    </section>
-
   </main>
 
-  <!-- Footer -->
+  <!-- Cao! · 槽点! (today's piece - full bleed) -->
+  <div class="cao-section">
+    <div class="container" style="padding-top: clamp(40px, 5vw, 56px); padding-bottom: clamp(40px, 5vw, 56px);">
+      <div style="font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.45); font-family: var(--serif-display); font-weight: 700; margin-bottom: 24px;">Today's Rant</div>
+      <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; color: #fff; letter-spacing: -1px; line-height: 1.1; margin-bottom: 16px; max-width: 640px;">Cao! <span style="font-weight: 400; font-size: 0.6em; font-style: italic; opacity: 0.5; font-family: var(--sans);">槽点!</span></h2>
+      <a href="cao/2026-06-25-ai-coding-fails.html" style="display: block; text-decoration: none; border-bottom: none;">
+        <h3 style="font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 700; color: rgba(255,255,255,0.95); line-height: 1.25; margin-bottom: 12px; letter-spacing: -0.3px; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.95)'">AI Coding 2026 翻车现场：Claude Code 删库、Codex 装死、Open Claw 胡说八道</h3>
+        <p style="font-size: 0.92rem; color: rgba(255,255,255,0.5); line-height: 1.6; font-style: italic; font-family: var(--sans); max-width: 560px; margin-bottom: 16px;">你的终端里跑着 Claude Code，IDE 里挂着 Codex，后台还蹲着个 Open Claw——它们互相打架、一起写 Bug、然后异口同声地告诉你"编译通过了"。</p>
+        <span style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.3); font-family: var(--serif-display); font-weight: 600;">约 5 分钟阅读 <span style="color: rgba(255,255,255,0.6); margin-left: 6px;">→</span></span>
+      </a>
+      <div style="margin-top: 20px;">
+        <a href="cao.html" style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.4); font-family: var(--serif-display); font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.8)';this.style.borderColor='rgba(255,255,255,0.6)'" onmouseout="this.style.color='rgba(255,255,255,0.4)';this.style.borderColor='rgba(255,255,255,0.2)'">View All Cao! →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer (flush with content) -->
   <footer class="site-footer">
     <div class="container">
       <div class="site-footer__brand">Dawn Vision</div>
