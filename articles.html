@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles · Dawn Vision</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
+</head>
+<body>
+
+  <!-- Inner nav -->
+  <nav class="inner-nav">
+    <div class="inner-nav__inner">
+      <div class="inner-nav__group">
+        <a href="index.html" class="inner-nav__link">Home</a>
+        <a href="articles.html" class="inner-nav__link inner-nav__link--active">Articles</a>
+      </div>
+      <a href="index.html" class="inner-nav__brand">
+        Dawn Vision
+        <small>Daily Briefing</small>
+      </a>
+      <div class="inner-nav__group">
+        <a href="#cao" class="inner-nav__link">Cao</a>
+        <a href="about.html" class="inner-nav__link">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- Issue selector -->
+    <div class="issue-selector">
+      <span class="issue-selector__label">Issue</span>
+      <span class="issue-selector__current">Issue 001</span>
+      <select onchange="if(this.value) window.location.href=this.value">
+        <option value="articles.html" selected>Issue 001 · 2026.06.25</option>
+      </select>
+      <span class="issue-selector__date">2026年6月25日 · 周四 · 工作日刊</span>
+    </div>
+
+    <!-- 今日首版 (Cover Story) -->
+    <section style="margin-bottom: clamp(48px, 6vw, 72px);">
+      <div class="section-label">今日首版</div>
+      <a href="articles/2026-06-25-agent-not-chatbot.html" style="display: block; text-decoration: none; color: inherit; border-bottom: none;">
+        <h2 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; letter-spacing: -0.8px; line-height: 1.1; margin-bottom: 16px; max-width: 760px; transition: color 0.2s;" onmouseover="this.style.color='var(--klein)'" onmouseout="this.style.color='var(--ink)'">Agent 不是聊天机器人：2026 年的范式转移</h2>
+        <p style="font-size: clamp(0.95rem, 1.5vw, 1.1rem); color: var(--gray-mid); line-height: 1.6; font-style: italic; font-family: var(--sans); max-width: 640px; margin-bottom: 16px;">从 Chatbot 到 Agent，差的不是模型能力，而是一整套协议栈、工具链和生态系统。MCP、A2A、ANP、ACP——四个协议正在构建 Agent 时代的"互联网基础设施"。Cursor 80 亿美元估值的背后，不是 AI 有多强，而是"AI-Loop"的工作方式正在重新定义编程。</p>
+        <span style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gray-light); font-family: var(--serif-display); font-weight: 600;">Dawn Vision 编辑部 · 约 8 分钟阅读 <span style="color: var(--klein); margin-left: 6px;">→</span></span>
+      </a>
+    </section>
+
+    <!-- 最新资讯 (Features) -->
+    <section style="margin-bottom: clamp(48px, 6vw, 72px);">
+      <div class="section-label">最新资讯</div>
+      <div class="article-grid">
+        <a href="articles/2026-06-25-cursor-8b-valuation.html" class="article-card">
+          <div class="article-card__tag">AI 编程 · 商业分析</div>
+          <h3 class="article-card__title">Cursor 80 亿美元估值背后：AI-Loop 正在重写编程范式</h3>
+          <p class="article-card__excerpt">当 IDE 开始理解你的意图、预测你的下一步、在后台自动修复错误，程序员的角色已经从"写代码的人"变成了"指导 AI 写代码的人"。</p>
+        </a>
+
+        <a href="articles/2026-06-25-one-person-startup.html" class="article-card">
+          <div class="article-card__tag">一人公司 · 趋势观察</div>
+          <h3 class="article-card__title">2026 年，一人公司的黄金时代正在到来</h3>
+          <p class="article-card__excerpt">AI 让一个人拥有了过去需要十人团队才能完成的生产力。从设计到开发到运营，一个人就是一条产线。Agent 集群正在成为你的联合创始人。</p>
+        </a>
+
+        <a href="articles/2026-06-25-ai-ecommerce-pod.html" class="article-card">
+          <div class="article-card__tag">AI 电商 · 行业研究</div>
+          <h3 class="article-card__title">AI 电商的暗线："Pod"模式正在颠覆传统选品逻辑</h3>
+          <p class="article-card__excerpt">Print-on-Demand 进化为 AI-Pod：AI 设计、AI 投放、AI 客服，人类只做决策。跨境电商的壁垒正在从供应链转向 AI 工作流的编排能力。</p>
+        </a>
+
+        <a href="articles/2026-06-25-wechat-ai-a2a.html" class="article-card">
+          <div class="article-card__tag">微信生态 · A2A</div>
+          <h3 class="article-card__title">微信正在接入 A2A 协议：社交平台的 Agent 化意味着什么？</h3>
+          <p class="article-card__excerpt">当你的微信助手可以直接和商家的 Agent 对话完成订单，"搜索—比较—下单"的链路将被彻底压缩。社交平台的终局，是 Agent 之间的社交网络。</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- 槽点 (Cao) — Klein Blue bleed -->
+    <section id="cao" style="margin: 0 calc(-50vw + 50%); margin-bottom: 0;">
+      <div class="cao-section">
+        <div class="section-label" style="color: rgba(255,255,255,0.7); border-bottom-color: rgba(255,255,255,0.2);">槽点</div>
+        <a href="cao/2026-06-25-ai-coding-fails.html" class="cao-card" style="display: block;">
+          <div class="cao-card__tag">Vibe Coding · 吐槽</div>
+          <h3 class="cao-card__title">AI 写代码的翻车现场：那些让我哭笑不得的 Bug</h3>
+          <p class="cao-card__excerpt">它自信地写了一个排序算法，结果是随机的。它重构了我的整个项目，然后告诉我"编译通过了"——确实通过了，因为它把所有报错的代码都删了。今天盘点一下本周最离谱的 AI Coding 翻车现场，保证让你又气又笑。</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__brand">Dawn Vision</div>
+      <div class="site-footer__meta">© 2026 · Daily at 16:30 CST · Weekdays Only</div>
+    </div>
+  </footer>
+
+</body>
+</html>
