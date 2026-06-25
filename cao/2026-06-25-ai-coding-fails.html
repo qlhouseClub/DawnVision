@@ -6,28 +6,14 @@
 <title>我让AI帮我写代码，它给了我三份烂代码还互相甩锅 — Dawn Vision</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700;8..60,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/style.css">
 <style>
-  /* CAO articles get a slightly different tone - slightly more playful but still editorial */
-  .cao-badge {
-    display: inline-block;
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    background: var(--dawn);
-    color: var(--paper);
-    padding: 3px 8px;
-    margin-bottom: 16px;
-    font-family: var(--sans);
-    font-weight: 700;
-  }
-  .article-page__content p { font-size: 1.02rem; }
   .fun-quote {
     margin: 1.5em 0;
     padding: 12px 16px;
     background: var(--paper-warm);
-    border-left: 3px solid var(--dawn);
+    border-left: 3px solid var(--klein);
     font-style: italic;
     font-size: 0.95rem;
     color: var(--ink-soft);
@@ -36,22 +22,18 @@
 </head>
 <body>
 
-<header class="masthead">
-  <div class="container">
-    <div class="masthead__top"><span>Issue 001 · CAO</span><span>June 25, 2026</span></div>
-    <div class="masthead__brand"><a href="../index.html">Dawn Vision</a></div>
-    <p class="masthead__tagline">在噪音中看见信号 — AI时代的深度观察</p>
-  </div>
-</header>
-
-<article class="article-page">
+<article class="article-page" style="padding-top: clamp(48px, 8vw, 80px);">
   <div class="container--narrow">
-    <a href="../index.html" class="article-page__back">&larr; 返回目录</a>
-    <header class="article-page__header">
-      <div class="cao-badge">槽 · CAO</div>
+    <a href="../index.html" class="article-page__back">&larr; Back to Issue 001</a>
+    <header class="article-page__header" style="border-bottom: 2px solid var(--ink); padding: 0 0 32px; margin-bottom: 48px;">
+      <span class="cao-badge">CAO · 槽点</span>
       <h1 class="article-page__title">我让 AI 帮我写代码，它给了我三份烂代码还互相甩锅</h1>
       <p class="article-page__deck">一个开发者试用了三款国产AI编程助手，结果得到了三段各有各离谱的bug。AI编程到底是生产力工具还是精神内耗新源泉？</p>
-      <div class="article-page__meta"><span>Dawn Vision · 槽点编辑部</span><span>2026年6月25日</span><span>阅读约 3 分钟</span></div>
+      <div class="article-page__meta">
+        <span>Dawn Vision</span>
+        <span>2026.06.25</span>
+        <span>~3 min read</span>
+      </div>
     </header>
 
     <div class="article-page__content">
@@ -110,9 +92,9 @@
       <p>至于那三段烂代码？小张说他存着了，"等这些工具真的好用了，我拿出来嘲笑它们。"</p>
     </div>
 
-    <footer class="article-page__footnote">
+    <div class="article-page__footnote">
       <p>本文根据开发者社区真实吐槽整理，人物为化名，三段代码的故事经多源交叉验证（确实都很离谱）。如有雷同，说明你也用过这些工具。</p>
-    </footer>
+    </div>
   </div>
 </article>
 

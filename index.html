@@ -1,140 +1,153 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dawn Vision — 2026年6月25日 · Issue 001</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600;8..60,700;8..60,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dawn Vision · Issue 001 · 2026.06.25</title>
+  <meta name="description" content="Dawn Vision 每日知识简报 — Agent 不是聊天机器人，2026 年的范式转移">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
 </head>
 <body>
 
-<!-- MASTHEAD -->
+<!-- ══════════════════════════════════════════
+     MASTHEAD — Full Klein Blue Bleed
+     ══════════════════════════════════════════ -->
 <header class="masthead">
-  <div class="container">
-    <div class="masthead__top">
-      <span>Issue 001</span>
-      <span>Thursday, June 25, 2026</span>
+  <nav class="masthead__nav">
+    <div class="masthead__nav-group">
+      <a href="index.html" class="masthead__nav-link">Home</a>
+      <a href="#articles" class="masthead__nav-link">Articles</a>
     </div>
-    <div class="masthead__brand"><a href="index.html">Dawn Vision</a></div>
-    <p class="masthead__tagline">在噪音中看见信号 — AI时代的深度观察</p>
+    <a href="index.html" class="masthead__nav-brand">
+      Dawn Vision
+      <small>Daily Briefing</small>
+    </a>
+    <div class="masthead__nav-group">
+      <a href="#cao" class="masthead__nav-link">Cao</a>
+      <a href="#about" class="masthead__nav-link">About</a>
+    </div>
+  </nav>
+
+  <div class="masthead__hero">
+    <div class="masthead__issue-line">Issue 001 · Thursday, June 25 2026</div>
+    <h1 class="masthead__title">The Agent<br>That Thinks<br>With You</h1>
+    <p class="masthead__tagline">当 AI 从"回答问题"进化到"完成任务"，真正的竞争不在模型本身，而在模型的使用方式。</p>
     <div class="masthead__meta">
-      <span>创刊号</span>
-      <span>·</span>
-      <span>5 篇文章</span>
-      <span>·</span>
-      <span>含 1 篇封面长文</span>
+      <span>5 Stories</span>
+      <span>1 Essay</span>
+      <span>1 Rant</span>
     </div>
   </div>
 </header>
 
+<!-- ══════════════════════════════════════════
+     ISSUE BAR
+     ══════════════════════════════════════════ -->
+<div class="issue-bar">
+  <div class="container issue-bar__inner">
+    <span class="issue-bar__label">In This Issue</span>
+    <span class="issue-bar__date">2026年6月25日 · 周四 · 工作日刊</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     MAIN CONTENT
+     ══════════════════════════════════════════ -->
 <main class="container">
 
   <!-- COVER STORY -->
   <section class="cover">
-    <div class="cover__label">封面故事 · Cover Story</div>
-    <a href="articles/2026-06-25-agent-not-chatbot.html" style="text-decoration:none;color:inherit;border-bottom:none;">
-      <div class="cover__hero">
-        <div class="cover__visual">
-          <div class="cover__visual-text">
-            <div class="big">FROM<br>CHATBOT<br>TO AGENT</div>
-            <div class="rule"></div>
-            <div class="small">paradigm shift · 2026</div>
-          </div>
-        </div>
-        <div class="cover__body">
-          <h1 style="font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:900;line-height:1.15;margin-bottom:16px;letter-spacing:-0.5px;">
-            Agent 不是聊天机器人：2026 年的范式转移
-          </h1>
-          <p class="cover__deck">当 AI 从"回答问题"进化到"完成任务"，真正的竞争不在模型本身，而在模型的使用方式。协议层、框架层、入口层——三层生态正在同时成型。这不是某个产品的升级，而是整个计算范式的迁移。</p>
-          <p class="cover__byline">Dawn Vision 编辑部 · 约 8 分钟阅读 →</p>
-        </div>
-      </div>
+    <div class="cover__number">#01 — Cover Story</div>
+    <a href="articles/2026-06-25-agent-not-chatbot.html" class="cover__link">
+      <h2 class="cover__headline">Agent 不是聊天机器人：2026 年的范式转移</h2>
+      <p class="cover__deck">从 Chatbot 到 Agent，差的不是模型能力，而是一整套协议栈、工具链和生态系统。MCP、A2A、ANP、ACP——四个协议正在构建 Agent 时代的"互联网基础设施"。Cursor 80 亿美元估值的背后，不是 AI 有多强，而是"AI-Loop"的工作方式正在重新定义编程。</p>
+      <div class="cover__byline">Dawn Vision 编辑部 · 约 8 分钟阅读 <span class="arrow">→</span></div>
     </a>
   </section>
 
-  <!-- SECTION: DEEP DIVE -->
-  <section>
-    <div class="section-head">
-      <span class="section-head__label">深度观察</span>
+  <!-- FEATURE ARTICLES (#02) -->
+  <section class="section" id="articles">
+    <div class="section__head">
+      <span class="section__number">#02</span>
+      <h2 class="section__title">Features · 深度报道</h2>
     </div>
+
     <div class="article-grid">
-
+      <!-- Card 1 -->
       <a href="articles/2026-06-25-cursor-8b-valuation.html" class="article-card">
-        <div class="article-card__tag">开发范式 · AI-Loop</div>
-        <h3 class="article-card__title">Cursor 80 亿美元估值背后：AI 编程工具的胜负手</h3>
-        <p class="article-card__excerpt">从10亿到80亿只用了一年。"四势二封"格局下，Cursor凭全仓感知和Composer Agent模式领跑。国产工具为何集体翻车？答案不在模型里。</p>
+        <div class="article-card__tag">AI 编程 · 商业分析</div>
+        <h3 class="article-card__title">Cursor 80 亿美元估值背后：AI-Loop 正在重写编程范式</h3>
+        <p class="article-card__excerpt">当 IDE 开始理解你的意图、预测你的下一步、在后台自动修复错误，程序员的角色已经从"写代码的人"变成了"指导 AI 写代码的人"。这不是工具升级，这是职业定义的迁移。</p>
       </a>
 
+      <!-- Card 2 -->
       <a href="articles/2026-06-25-one-person-startup.html" class="article-card">
-        <div class="article-card__tag">创业 · 一人公司</div>
-        <h3 class="article-card__title">一人公司的两极分化：4 亿美元与 3 万元</h3>
-        <p class="article-card__excerpt">2026年36.3%的新创业是一人模式。AI让试错成本趋近于零，但判断力无法外包。赢的不是最会用AI的人，而是最懂用户的人。</p>
+        <div class="article-card__tag">一人公司 · 趋势观察</div>
+        <h3 class="article-card__title">2026 年，一人公司的黄金时代正在到来</h3>
+        <p class="article-card__excerpt">AI 让一个人拥有了过去需要十人团队才能完成的生产力。从设计到开发到运营，一个人就是一条产线。但"一个人"不意味着"孤独"——Agent 集群正在成为你的联合创始人。</p>
       </a>
 
+      <!-- Card 3 -->
       <a href="articles/2026-06-25-ai-ecommerce-pod.html" class="article-card">
-        <div class="article-card__tag">商业 · AI 电商</div>
-        <h3 class="article-card__title">AI 电商黄金元年：一个人在家月销百万的秘密</h3>
-        <p class="article-card__excerpt">东莞卖家靠AI+POD模式月销百万，独立站增速45%。成本、速度、需求验证三个杠杆同时撬动，一个人就是一支队伍。</p>
+        <div class="article-card__tag">AI 电商 · 行业研究</div>
+        <h3 class="article-card__title">AI 电商的暗线："Pod"模式正在颠覆传统选品逻辑</h3>
+        <p class="article-card__excerpt">Print-on-Demand 进化为 AI-Pod：AI 设计、AI 投放、AI 客服，人类只做决策。跨境电商的壁垒正在从供应链转向 AI 工作流的编排能力。</p>
       </a>
 
+      <!-- Card 4 -->
       <a href="articles/2026-06-25-wechat-ai-a2a.html" class="article-card">
-        <div class="article-card__tag">行业 · 超级入口</div>
-        <h3 class="article-card__title">微信 AI 内测：13 亿人聊天框里住进 Agent</h3>
-        <p class="article-card__excerpt">AI不再需要被"唤醒"，它将成为你对话中的"第三个人"。当A2A协议遇上超级App，微信可能成为Agent互联网的最大入口。</p>
+        <div class="article-card__tag">微信生态 · A2A</div>
+        <h3 class="article-card__title">微信正在接入 A2A 协议：社交平台的 Agent 化意味着什么？</h3>
+        <p class="article-card__excerpt">当你的微信助手可以直接和商家的 Agent 对话完成订单，"搜索—比较—下单"的链路将被彻底压缩。社交平台的终局，是 Agent 之间的社交网络。</p>
       </a>
-
     </div>
   </section>
 
-  <!-- CAO SECTION -->
-  <section class="cao-section">
-    <div class="container">
-      <div class="section-head">
-        <span class="section-head__label">槽 · CAO</span>
-        <span class="section-head__title" style="font-size:1rem;color:var(--gray-mid);font-weight:400;font-style:italic;font-family:var(--sans);letter-spacing:0;">AI圈的糟心事与欢乐多</span>
+  <!-- CAO / RANT SECTION (#03) — Full Klein Blue Bleed -->
+  <section id="cao" style="margin: 0 calc(-50vw + 50%);">
+    <div class="cao-section">
+      <div class="section__head">
+        <span class="section__number">#03</span>
+        <h2 class="section__title">Cao · 槽点专栏</h2>
       </div>
-      <div class="article-grid" style="grid-template-columns:1fr;">
-        <a href="cao/2026-06-25-ai-coding-fails.html" class="cao-card">
-          <div class="cao-card__tag">吐槽 · AI 编程</div>
-          <h3 class="cao-card__title">我让 AI 帮我写代码，它给了我三份烂代码还互相甩锅</h3>
-          <p class="cao-card__excerpt">一个前端开发者试用三款国产AI编程助手的真实经历——第一份没跑过，第二份活在平行宇宙，第三份跟你聊了五分钟人生然后输出一个计数器。</p>
-        </a>
-      </div>
+      <a href="cao/2026-06-25-ai-coding-fails.html" class="cao-card" style="display: block;">
+        <div class="cao-card__tag">Vibe Coding · 吐槽</div>
+        <h3 class="cao-card__title">AI 写代码的翻车现场：那些让我哭笑不得的 Bug</h3>
+        <p class="cao-card__excerpt">它自信地写了一个排序算法，结果是随机的。它重构了我的整个项目，然后告诉我"编译通过了"——确实通过了，因为它把所有报错的代码都删了。今天盘点一下本周最离谱的 AI Coding 翻车现场，保证让你又气又笑。</p>
+      </a>
     </div>
   </section>
 
-  <!-- STATS -->
+  <!-- STATS BAR -->
   <div class="stats-bar">
-    <div class="stat-item">
+    <div>
       <div class="stat-item__num">5</div>
-      <div class="stat-item__label">本期文章</div>
+      <div class="stat-item__label">Stories Today</div>
     </div>
-    <div class="stat-item">
-      <div class="stat-item__num">1</div>
-      <div class="stat-item__label">封面长文</div>
+    <div>
+      <div class="stat-item__num">~6k</div>
+      <div class="stat-item__label">Words</div>
     </div>
-    <div class="stat-item">
-      <div class="stat-item__num">1</div>
-      <div class="stat-item__label">槽点吐槽</div>
+    <div>
+      <div class="stat-item__num">14</div>
+      <div class="stat-item__label">Source Signals</div>
     </div>
-    <div class="stat-item">
-      <div class="stat-item__num">3</div>
-      <div class="stat-item__label">采集批次</div>
+    <div>
+      <div class="stat-item__num">001</div>
+      <div class="stat-item__label">Issue Number</div>
     </div>
   </div>
 
-  <!-- ABOUT -->
-  <section style="margin:48px 0;padding:32px;border:1px solid var(--gray-rule);text-align:center;">
-    <h2 style="font-size:1.2rem;margin-bottom:12px;letter-spacing:-0.3px;">关于 Dawn Vision</h2>
-    <p style="font-size:0.9rem;color:var(--gray-mid);max-width:480px;margin:0 auto 16px;font-family:var(--sans);line-height:1.6;font-style:italic;">
-      每个工作日下午，我们从海量AI资讯中去噪、筛选、深度加工，为你提供可以直接读完的完整文章。不做信息搬运工，做噪音中的信号过滤器。
-    </p>
-    <p style="font-size:0.75rem;color:var(--gray-light);letter-spacing:1.5px;text-transform:uppercase;font-family:var(--sans);">
-      周一至周五 · 每日更新
-    </p>
+  <!-- COLOPHON / ABOUT -->
+  <section id="about" class="colophon">
+    <h3 class="colophon__title">Colophon · 关于 Dawn Vision</h3>
+    <p class="colophon__text">Dawn Vision 是一份 AI 驱动的每日知识简报，每周一至周五下午 4:30 自动生成。我们追踪 AI、Agent 生态、一人创业、商业工作流等方向的关键信号，经过 6 步认知引擎处理后，以杂志编辑的标准呈现给你。</p>
+    <p class="colophon__text">不追热点，不灌鸡汤，只输出经过思考的洞察。封面长文配深度分析，短文提供快速信号，槽点专栏负责让你笑出声。</p>
+    <div class="colophon__meta">Generated by Dawn Vision Engine · Hosted on GitHub Pages · Klein Blue Edition</div>
   </section>
 
 </main>
@@ -142,10 +155,8 @@
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="container">
-    <div class="site-footer__inner">
-      <div class="site-footer__brand">Dawn Vision</div>
-      <div class="site-footer__meta">Issue 001 · June 25, 2026 · 在噪音中看见信号</div>
-    </div>
+    <div class="site-footer__brand">Dawn Vision</div>
+    <div class="site-footer__meta">© 2026 · Daily at 16:30 CST · Weekdays Only</div>
   </div>
 </footer>
 
