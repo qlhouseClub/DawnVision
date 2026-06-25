@@ -1110,7 +1110,7 @@ main {
   align-items: center;
   gap: 16px;
   padding: clamp(20px, 3vw, 32px) 0 clamp(16px, 2vw, 24px);
-  border-bottom: 2px solid var(--ink);
+  border-bottom: 2px solid var(--klein);
   margin-bottom: clamp(40px, 5vw, 64px);
   flex-wrap: wrap;
 }
@@ -1168,7 +1168,7 @@ main {
   font-family: var(--serif-display);
   margin-bottom: 28px;
   padding-bottom: 14px;
-  border-bottom: 2px solid var(--ink);
+  border-bottom: 2px solid var(--klein);
 }
 
 .section-label span {
