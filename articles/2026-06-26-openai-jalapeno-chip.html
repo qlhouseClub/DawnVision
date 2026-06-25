@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenAI 的 Jalapeño：当模型开始定义芯片 · Dawn Vision</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
+</head>
+<body>
+
+<!-- Inner nav -->
+<nav class="inner-nav">
+  <div class="inner-nav__inner">
+    <div class="inner-nav__group">
+      <a href="../index.html" class="inner-nav__link">Home</a>
+      <a href="../articles.html" class="inner-nav__link inner-nav__link--active">Articles</a>
+    </div>
+    <a href="../index.html" class="inner-nav__brand">
+      Dawn Vision
+      <small>Daily Briefing</small>
+    </a>
+    <div class="inner-nav__group">
+      <a href="../cao.html" class="inner-nav__link">Cao</a>
+      <a href="../about.html" class="inner-nav__link">About</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Klein Blue Hero -->
+<div class="article-page__hero">
+  <div class="article-page__hero-inner">
+    <a href="../articles.html" class="article-page__back" style="color: rgba(255,255,255,0.5); margin-bottom: 32px; display: inline-block;">← Back to Articles</a>
+    <div class="article-page__hero-label">Cover Story · 封面故事</div>
+    <h1 class="article-page__hero-title">OpenAI 的<br>Jalapeño</h1>
+    <p class="article-page__hero-deck">9个月流片、推理成本砍半、功耗降三成——但博通要微软先买40%才肯开工，资本市场用脚投票。"模型定义芯片"的时代真的来了吗？</p>
+  </div>
+</div>
+
+<article class="article-page">
+  <div class="container--narrow">
+
+    <div class="article-page__meta" style="margin-bottom: 48px;">
+      <span>Dawn Vision 编辑部</span>
+      <span>2026.06.26</span>
+      <span>约 9 分钟阅读</span>
+      <span>Issue 002</span>
+    </div>
+
+    <div class="article-page__content">
+      <p>北京时间 6 月 25 日，OpenAI 联合博通正式发布了首款定制 AI 推理芯片——Jalapeño（墨西哥辣椒）。</p>
+
+      <p>从立项到流片仅 9 个月，刷新了高性能 ASIC 的开发周期纪录。要知道，这个行业通常需要 18-24 个月。博通 CEO 陈福阳在发布会上宣称，这颗芯片比传统 GPU 节省约 50% 推理成本、功耗降低约 30%，工程样品已经在实验室里稳定跑着 GPT-5.3-Codex-Spark。</p>
+
+      <p>听起来很美好。但资本市场的反应耐人寻味：消息发布当天，博通股价仅涨 1.6%。</p>
+
+      <p>要知道，2025 年双方签约的消息传出时，博通当天涨了 15%。这 1.6% 的涨幅，更像是一种礼貌性的鼓掌——"挺好的，然后呢？"</p>
+
+      <h2>辣椒很辣，但谁来买单？</h2>
+
+      <p>核心问题悬而未决：钱。</p>
+
+      <p>首阶段 1.3 吉瓦产能的芯片生产成本约 180 亿美元。博通的态度很明确：微软得先承诺采购 40%，否则融资不启动。微软呢？至今没有点头。</p>
+
+      <p>这不是一笔小账。OpenAI 自己预测，到 2029 年运营烧钱将超过 2000 亿美元。与此同时，他们还在推进 5000 亿美元的 Stargate 超级数据中心项目。一颗 Jalapeño 只是开胃菜，后面的满汉全席才是真正的账单。</p>
+
+      <div class="pull-quote">
+        "芯片行业有句老话：设计一颗芯片不难，难的是让别人为它买单。"
+        <span class="pull-quote__attr">—— 半导体行业观察者</span>
+      </div>
+
+      <p>理解这背后的博弈，需要回到一个更本质的问题：为什么 AI 公司突然开始自己做芯片了？</p>
+
+      <h2>从"用芯片"到"定义芯片"：范式正在转移</h2>
+
+      <p>过去三十年，芯片行业的逻辑是"芯片定义软件"——英特尔造出更快的 CPU，微软和开发者们再想办法把这些算力用起来。英伟达造出更强的 GPU，AI 实验室再围绕 CUDA 生态构建模型。</p>
+
+      <p>但 2026 年的今天，这个逻辑正在反转。</p>
+
+      <p>大模型的运算模式高度结构化、高度可预测：大量的矩阵乘法、固定的注意力机制、规律的内存访问模式。当你知道自己要跑什么 workload，通用 GPU 的很多设计就变成了浪费——就像你明知道每天只走同一条路上班，却非要开一辆全地形越野车。</p>
+
+      <p>于是"模型定义芯片"成为可能：AI 公司比任何人都清楚自己的模型需要什么样的硬件，他们可以反过来设计芯片——去掉不需要的电路，优化关键路径，为 Transformer 架构量身定制计算单元。</p>
+
+      <p>Jalapeño 不是第一个吃螃蟹的。谷歌 TPU 已经走了 13 年，亚马逊 Trainium/Inferentia 也迭代到了第三代，微软的 Athena、Meta 的 MTIA 都在推进中。但 OpenAI 的特殊之处在于：它是第一个真正意义上"模型公司"做芯片——它不卖云服务，不做广告，它的全部收入和未来都押注在模型本身。</p>
+
+      <p>这形成了一个诱人的飞轮：AI 设计芯片 → 芯片运行 AI → AI 变强 → 设计下一代芯片。理论上，这个飞轮一旦转起来，英伟达的 GPU 霸权将被釜底抽薪。</p>
+
+      <h2>但飞轮转起来之前，你得先推第一把</h2>
+
+      <p>理论很美，现实很骨感。</p>
+
+      <p>谷歌 TPU 走了 13 年，至今谷歌云仍然在大量采购英伟达 GPU。为什么？因为自研芯片的容错空间太小了。</p>
+
+      <p>英伟达的 CUDA 生态花了二十年构建，数百万开发者、数不清的软件库、成熟的工具链——这不是"芯片快 50%"就能轻易替代的。而且 GPU 是通用的：今天跑大模型，明天可以跑物理仿真，后天可以渲染电影。但 ASIC 是为特定 workload 定制的，如果模型架构变了呢？</p>
+
+      <p>想想看：2023 年大家都在堆稠密 Transformer，2024 年 MoE 成为主流，2025 年状态空间模型异军突起，2026 年的今天谁也说不清下一代架构是什么。一颗从设计到量产需要 18 个月的芯片，面对的是一个每 6 个月就可能颠覆自己的行业。</p>
+
+      <p>这就是 Jalapeño 面临的悖论：它为 GPT 架构优化，但如果 GPT-6 采用了完全不同的架构怎么办？这 180 亿美元的投入会不会变成下一个 Itanium？</p>
+
+      <p>更微妙的是 OpenAI 和微软的关系。微软是 OpenAI 最大的投资者、最大的云服务商、最重要的分销渠道。但现在 OpenAI 要自己做芯片，本质上是在减少对英伟达的依赖，也是在减少对 Azure 的依赖——微软不可能看不透这一点。</p>
+
+      <p>"你要我花 70 多亿美元买你的芯片，来削弱我自己的云业务竞争力？"——微软的犹豫完全可以理解。</p>
+
+      <h2>真正的信号：不是芯片，是控制权</h2>
+
+      <p>但 Jalapeño 的意义，可能远不止于一颗芯片本身。</p>
+
+      <p>2026 年的 AI 行业正在进入一个新阶段：模型能力的差距在缩小，但基础设施的控制力在分化。谁掌握了算力，谁就掌握了模型迭代的速度；谁掌握了芯片，谁就掌握了算力的成本曲线。</p>
+
+      <p>OpenAI 不是在和英伟达竞争，它是在争夺自己命运的控制权。如果推理成本不能持续下降，Agent 时代的大规模商用就永远是 PPT 上的故事——你不可能让每个用户都花 20 美元/月来供养一个需要昂贵 GPU 才能运行的 Agent。</p>
+
+      <p>50% 的成本下降意味着什么？意味着原本需要 100 亿美元算力才能支撑的产品，现在只需要 50 亿。意味着 Agent 从"高端玩具"变成"大众工具"的临界点，可能因为这一颗芯片而提前到来。</p>
+
+      <p>这也是为什么资本市场虽然反应冷淡，但没有人敢真正看空。大家都在等一个信号：微软会不会签那张 70 亿美元的采购单。</p>
+
+      <p>签了，飞轮启动，AI 行业的成本曲线将被重新定义。不签，Jalapeño 可能就是另一颗耀眼但短暂的流星——就像过去十年里无数诞生于发布会、消失于量产线的"芯片颠覆者"一样。</p>
+
+      <h2>辣椒入菜，还需时日</h2>
+
+      <p>Jalapeño 发布后的 24 小时，AI 圈的讨论已经从"芯片性能"转向了"商业可行性"。这本身就是一个信号：AI 硬件正在从"技术叙事"进入"商业叙事"阶段。</p>
+
+      <p>9 个月流片确实是工程奇迹，成本减半确实足够诱人，功耗降低确实是数据中心运营商梦寐以求的。但半导体行业从来不缺奇迹，缺的是能持续赚钱的奇迹。</p>
+
+      <p>对于普通从业者和观察者来说，Jalapeño 真正值得关注的不是参数，而是时间线：如果一切顺利，这颗芯片将在 2027 年量产，2028 年大规模部署。那时候，GPT-6 可能已经发布，Agent 可能已经成为主流交互方式，AI 的竞争格局可能已经完全不同。</p>
+
+      <p>但无论如何，一个趋势已经清晰：AI 公司正在向上游延伸，从模型到芯片到数据中心，垂直整合正在成为头部玩家的标配。就像特斯拉不满足于买车、还要造电池、还要做自动驾驶芯片一样，OpenAI 也在构建自己的垂直帝国。</p>
+
+      <p>墨西哥辣椒很辣，但能不能辣到英伟达嘴里，还要看微软愿不愿意当这个"第一个吃辣椒的人"。</p>
+
+      <hr>
+
+      <p>明天见。</p>
+    </div>
+
+    <div class="article-page__footnote">
+      <p>本文基于 Dawn Vision 认知引擎处理的 11 个源信号自动生成，经编辑部人工审核。素材来源包括：OpenAI Jalapeño 发布会信息、博通财报分析、半导体行业研报、微软采购动态、Stargate 项目追踪。</p>
+      <p>相关入库笔记：<a href="#">AI 芯片自研潮全景</a> · <a href="#">谷歌 TPU 十三年启示录</a> · <a href="#">英伟达 CUDA 护城河解析</a> · <a href="#">OpenAI 垂直整合战略</a></p>
+      <p><a href="../articles.html">← 返回文章列表</a></p>
+    </div>
+
+  </div>
+</article>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__brand">Dawn Vision</div>
+    <div class="site-footer__meta">© 2026 · Daily at 16:30 CST · Weekdays Only</div>
+  </div>
+</footer>
+
+</body>
+</html>

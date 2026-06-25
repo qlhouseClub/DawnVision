@@ -32,21 +32,22 @@
 
   <main class="container">
 
-    <!-- Issue selector - simplified -->
+    <!-- Issue selector -->
     <div class="issue-selector">
-      <span class="issue-selector__current">Issue 001</span>
+      <span class="issue-selector__current">Issue 002</span>
       <select onchange="if(this.value) window.location.href=this.value">
-        <option value="articles.html" selected>2026.06.25</option>
+        <option value="articles.html" selected>2026.06.26</option>
+        <option value="issues/issue-001.html">2026.06.25 (Issue 001)</option>
       </select>
     </div>
 
     <!-- Focus · 焦点 (Cover Story) -->
     <section style="margin-bottom: clamp(48px, 6vw, 72px);">
       <h2 class="section-label">Focus <span>焦点</span></h2>
-      <a href="articles/2026-06-25-agent-not-chatbot.html" style="display: block; text-decoration: none; color: inherit; border-bottom: none;">
-        <h3 style="font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 900; letter-spacing: -0.8px; line-height: 1.15; margin-bottom: 16px; max-width: 860px; transition: color 0.2s;" onmouseover="this.style.color='var(--klein)'" onmouseout="this.style.color='var(--ink)'">Agent 不是聊天机器人：2026 年的范式转移</h3>
-        <p style="font-size: clamp(0.95rem, 1.4vw, 1.05rem); color: var(--gray-mid); line-height: 1.65; font-style: italic; font-family: var(--sans); max-width: 640px; margin-bottom: 16px;">从 Chatbot 到 Agent，差的不是模型能力，而是一整套协议栈、工具链和生态系统。MCP、A2A、ANP、ACP——四个协议正在构建 Agent 时代的"互联网基础设施"。Cursor 80 亿美元估值的背后，是 AI-Loop 的工作方式正在重新定义编程。</p>
-        <span style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gray-light); font-family: var(--serif-display); font-weight: 600;">Dawn Vision · 约 8 分钟阅读 <span style="color: var(--klein); margin-left: 6px;">→</span></span>
+      <a href="articles/2026-06-26-openai-jalapeno-chip.html" style="display: block; text-decoration: none; color: inherit; border-bottom: none;">
+        <h3 style="font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 900; letter-spacing: -0.8px; line-height: 1.15; margin-bottom: 16px; max-width: 860px; transition: color 0.2s;" onmouseover="this.style.color='var(--klein)'" onmouseout="this.style.color='var(--ink)'">OpenAI 的 Jalapeño：当模型开始定义芯片</h3>
+        <p style="font-size: clamp(0.95rem, 1.4vw, 1.05rem); color: var(--gray-mid); line-height: 1.65; font-style: italic; font-family: var(--sans); max-width: 640px; margin-bottom: 16px;">9个月流片、推理成本砍半、功耗降三成——但博通要微软先买40%才肯开工，资本市场用脚投票。"模型定义芯片"的时代真的来了吗？飞轮启动前，谁来为这颗辣椒买单？</p>
+        <span style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gray-light); font-family: var(--serif-display); font-weight: 600;">Dawn Vision · 约 9 分钟阅读 <span style="color: var(--klein); margin-left: 6px;">→</span></span>
       </a>
     </section>
 
@@ -54,28 +55,46 @@
     <section style="margin-bottom: clamp(48px, 6vw, 72px);">
       <h2 class="section-label">Brief <span>资讯</span></h2>
       <div class="article-grid">
-        <a href="articles/2026-06-25-cursor-8b-valuation.html" class="article-card">
-          <span class="article-card__tag">AI 编程 · 商业分析</span>
-          <h3 class="article-card__title">Cursor 80 亿美元估值背后：AI-Loop 正在重写编程范式</h3>
-          <p class="article-card__excerpt">当 IDE 开始理解你的意图、预测你的下一步、在后台自动修复错误，程序员的角色已经从"写代码的人"变成了"指导 AI 写代码的人"。</p>
+        <a href="articles/2026-06-26-accenture-layoffs.html" class="article-card">
+          <span class="article-card__tag">AI Agent · 就业市场</span>
+          <h3 class="article-card__title">埃森哲单日蒸发千亿：AI Agent "上岗"的残酷元年</h3>
+          <p class="article-card__excerpt">单日暴跌 18%、甲骨文裁员 2.1 万——当 AI Agent 开始按"任务"而非"人天"计费，咨询行业的百年商业模式正在坍塌。47比3的人员配比，不是效率提升，是岗位蒸发。</p>
         </a>
 
-        <a href="articles/2026-06-25-one-person-startup.html" class="article-card">
-          <span class="article-card__tag">一人公司 · 趋势观察</span>
-          <h3 class="article-card__title">2026 年，一人公司的黄金时代正在到来</h3>
-          <p class="article-card__excerpt">AI 让一个人拥有了过去需要十人团队才能完成的生产力。从设计到开发到运营，一个人就是一条产线。Agent 集群正在成为你的联合创始人。</p>
+        <a href="articles/2026-06-26-agent-runaway.html" class="article-card">
+          <span class="article-card__tag">AI 安全 · 治理</span>
+          <h3 class="article-card__title">54 起失控事件与 AWS 13 小时宕机：Agent 是超级员工还是危险盲盒？</h3>
+          <p class="article-card__excerpt">IBM 调研：企业年均遭遇 54 起 Agent 失控事件。AWS 宕机真相——元凶是自家 AI 助手绕过审批删了环境。60%想部署，17%真落地，治理能力已被远远甩在身后。</p>
         </a>
 
-        <a href="articles/2026-06-25-ai-ecommerce-pod.html" class="article-card">
-          <span class="article-card__tag">AI 电商 · 行业研究</span>
-          <h3 class="article-card__title">AI 电商的暗线："Pod"模式正在颠覆传统选品逻辑</h3>
-          <p class="article-card__excerpt">Print-on-Demand 进化为 AI-Pod：AI 设计、AI 投放、AI 客服，人类只做决策。跨境电商的壁垒正在从供应链转向 AI 工作流的编排能力。</p>
+        <a href="articles/2026-06-26-doubao-pricing.html" class="article-card">
+          <span class="article-card__tag">国产 AI · 商业化</span>
+          <h3 class="article-card__title">豆包 68 元/月、阿里云夜间 2 折：国产 AI 的价格屠夫时刻</h3>
+          <p class="article-card__excerpt">豆包三档订阅对标 ChatGPT 半价、阿里云首创算力分时定价夜间低至 2 折、Cursor 发布 Agent 专用 Git——AI 正在从"奢侈品"变成像电力一样的"公用事业"。</p>
         </a>
 
-        <a href="articles/2026-06-25-wechat-ai-a2a.html" class="article-card">
-          <span class="article-card__tag">微信生态 · A2A</span>
-          <h3 class="article-card__title">微信正在接入 A2A 协议：社交平台的 Agent 化意味着什么？</h3>
-          <p class="article-card__excerpt">当你的微信助手可以直接和商家的 Agent 对话完成订单，"搜索—比较—下单"的链路将被彻底压缩。社交平台的终局，是 Agent 之间的社交网络。</p>
+        <a href="articles/2026-06-26-model-arms-race.html" class="article-card">
+          <span class="article-card__tag">大模型 · 行业动态</span>
+          <h3 class="article-card__title">六月模型军备赛：GPT-5.6、Claude 4.8、Gemini 3.5 齐发</h3>
+          <p class="article-card__excerpt">三家顶级实验室罕见同一时间窗口发布旗舰模型，150万Token上下文、科学推理登顶、Qwen-AgentWorld 超越 GPT-5.4——史上最密集的模型神仙打架正在上演。</p>
+        </a>
+
+        <a href="articles/2026-06-26-ai-funding-boom.html" class="article-card">
+          <span class="article-card__tag">AI 创投 · 资本市场</span>
+          <h3 class="article-card__title">MirendilAI 2 亿、昆仑行 90 天三轮数十亿：AI 超级吸金进行时</h3>
+          <p class="article-card__excerpt">20人"AI复仇者联盟"拿下2亿美元融资，具身智能赛道90天数十亿，6月前两周中国AI融资超45亿——一级市场狂热，二级市场却已经开始"看数字不看故事"了。</p>
+        </a>
+
+        <a href="articles/2026-06-26-embodied-ai-boom.html" class="article-card">
+          <span class="article-card__tag">具身智能 · 机器人</span>
+          <h3 class="article-card__title">京东机器人销量涨10倍、华为发 CloudRobo：具身智能的2026夏天</h3>
+          <p class="article-card__excerpt">华为云边端一体化平台、英伟达Thor芯片本地算力提升7.5倍、特斯拉Optimus V3量产在即——AI正在从屏幕里走到现实世界中，物理世界的AI革命开始了。</p>
+        </a>
+
+        <a href="articles/2026-06-25-agent-not-chatbot.html" class="article-card">
+          <span class="article-card__tag">AI Agent · 范式转移</span>
+          <h3 class="article-card__title">Agent 不是聊天机器人：2026 年的范式转移</h3>
+          <p class="article-card__excerpt">从 Chatbot 到 Agent，差的不是模型能力，而是一整套协议栈、工具链和生态系统。MCP、A2A、ANP、ACP——四个协议正在构建 Agent 时代的"互联网基础设施"。</p>
         </a>
       </div>
     </section>
@@ -87,10 +106,10 @@
     <div class="container" style="padding-top: clamp(40px, 5vw, 56px); padding-bottom: clamp(40px, 5vw, 56px);">
       <div style="font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.45); font-family: var(--serif-display); font-weight: 700; margin-bottom: 24px;">Today's Rant</div>
       <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; color: #fff; letter-spacing: -1px; line-height: 1.1; margin-bottom: 16px; max-width: 640px;">Cao! <span style="font-weight: 400; font-size: 0.6em; font-style: italic; opacity: 0.5; font-family: var(--sans);">槽点!</span></h2>
-      <a href="cao/2026-06-25-ai-coding-fails.html" style="display: block; text-decoration: none; border-bottom: none;">
-        <h3 style="font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 700; color: rgba(255,255,255,0.95); line-height: 1.25; margin-bottom: 12px; letter-spacing: -0.3px; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.95)'">AI Coding 2026 翻车现场：Claude Code 删库、Codex 装死、Open Claw 胡说八道</h3>
-        <p style="font-size: 0.92rem; color: rgba(255,255,255,0.5); line-height: 1.6; font-style: italic; font-family: var(--sans); max-width: 560px; margin-bottom: 16px;">你的终端里跑着 Claude Code，IDE 里挂着 Codex，后台还蹲着个 Open Claw——它们互相打架、一起写 Bug、然后异口同声地告诉你"编译通过了"。</p>
-        <span style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.3); font-family: var(--serif-display); font-weight: 600;">约 5 分钟阅读 <span style="color: rgba(255,255,255,0.6); margin-left: 6px;">→</span></span>
+      <a href="cao/2026-06-26-llm-stock.html" style="display: block; text-decoration: none; border-bottom: none;">
+        <h3 style="font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 700; color: rgba(255,255,255,0.95); line-height: 1.25; margin-bottom: 12px; letter-spacing: -0.3px; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.95)'">"LLM" 上市了，但它是卖梅子的——溜溜梅暴涨 193% 始末</h3>
+        <p style="font-size: 0.92rem; color: rgba(255,255,255,0.5); line-height: 1.6; font-style: italic; font-family: var(--sans); max-width: 560px; margin-bottom: 16px;">卖青梅零食的溜溜梅港交所挂牌首日暴涨 193%，市值破百亿。原因很荒诞：股票简称叫"LLM"，和大语言模型缩写一模一样。AI 泡沫以最搞笑的方式照进了现实。</p>
+        <span style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.3); font-family: var(--serif-display); font-weight: 600;">约 4 分钟阅读 <span style="color: rgba(255,255,255,0.6); margin-left: 6px;">→</span></span>
       </a>
       <div style="margin-top: 20px;">
         <a href="cao.html" style="font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.4); font-family: var(--serif-display); font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.8)';this.style.borderColor='rgba(255,255,255,0.6)'" onmouseout="this.style.color='rgba(255,255,255,0.4)';this.style.borderColor='rgba(255,255,255,0.2)'">View All Cao! →</a>
