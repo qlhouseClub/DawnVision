@@ -3,163 +3,203 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Coding 2026 翻车现场 · Cao!</title>
+  <title>AI Coding 2026 翻车现场：Claude Code 删库、Codex 装死、OpenClaw 胡说八道 | Dawn Vision — AI吐槽</title>
+  <meta name="description" content="2026年AI Coding工具集体翻车实录：Claude Code自信删库、GitHub Codex装死不报错、OpenClaw凭空发明API、Hermes偷偷改配置——你的AI编程助手们，正在以各自不同的方式坑你。">
+  <meta name="keywords" content="Dawn Vision,AI吐槽,AI Coding,Claude Code,GitHub Codex,OpenClaw,Hermes,AI编程翻车,AI编程工具,代码生成,Agent Coding,AI写代码Bug">
+  <meta name="author" content="Dawn Vision">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://qlhouseclub.github.io/DawnVision/cao/2026-06-25-ai-coding-fails.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://qlhouseclub.github.io/DawnVision/cao/2026-06-25-ai-coding-fails.html">
+  <meta property="og:title" content="AI Coding 2026 翻车现场 | Dawn Vision">
+  <meta property="og:description" content="Claude Code删库、Codex装死、OpenClaw胡说八道——你的AI编程助手们正在以各自不同的方式坑你。">
+  <meta property="og:site_name" content="Dawn Vision">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-06-25T16:30:00+08:00">
+  <meta property="article:author" content="Dawn Vision">
+  <meta property="article:section" content="AI吐槽">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://qlhouseclub.github.io/DawnVision/cao/2026-06-25-ai-coding-fails.html">
+  <meta name="twitter:title" content="AI Coding 2026 翻车现场 | Dawn Vision">
+  <meta name="twitter:description" content="Claude Code删库、Codex装死、OpenClaw胡说八道，笑完继续写Bug。">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "AI Coding 2026 翻车现场：Claude Code 删库、Codex 装死、OpenClaw 胡说八道",
+    "description": "2026年AI Coding工具集体翻车实录：Claude Code自信删库、GitHub Codex装死不报错、OpenClaw凭空发明API、Hermes偷偷改配置。",
+    "datePublished": "2026-06-25T16:30:00+08:00",
+    "dateModified": "2026-06-25T16:30:00+08:00",
+    "author": {
+      "@type": "Organization",
+      "name": "Dawn Vision"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Dawn Vision",
+      "url": "https://qlhouseclub.github.io/DawnVision/"
+    },
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Dawn Vision",
+      "url": "https://qlhouseclub.github.io/DawnVision/"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://qlhouseclub.github.io/DawnVision/cao/2026-06-25-ai-coding-fails.html"
+    }
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
-  <style>
-    .cao-article { background: var(--paper); min-height: 100vh; }
-    .cao-article .article-page__header {
-      background: var(--klein);
-      color: var(--white);
-      padding: clamp(32px, 5vw, 56px) 0;
-      margin-bottom: clamp(40px, 6vw, 64px);
-    }
-    .cao-article .article-page__tag {
-      font-size: 9px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-      font-family: var(--serif-display);
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-    .cao-article .article-page__title {
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 900;
-      letter-spacing: -1px;
-      line-height: 1.15;
-      color: var(--white);
-      margin-bottom: 16px;
-      max-width: 700px;
-    }
-    .cao-article .article-page__meta {
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
-      font-family: var(--serif-display);
-      font-weight: 600;
-    }
-    .cao-article .article-page__body {
-      font-size: clamp(1rem, 1.4vw, 1.1rem);
-      line-height: 1.85;
-      color: var(--ink-soft);
-      font-family: var(--sans);
-      max-width: 640px;
-    }
-    .cao-article .article-page__body p { margin-bottom: 1.4em; }
-    .cao-article .article-page__body p:first-of-type::first-letter {
-      float: left;
-      font-size: 3.5em;
-      line-height: 0.85;
-      padding-right: 8px;
-      padding-top: 4px;
-      font-family: var(--serif-display);
-      font-weight: 900;
-      color: var(--klein);
-    }
-    .cao-article .article-page__back {
-      font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
-      font-family: var(--serif-display);
-      font-weight: 600;
-      border-bottom: none;
-      display: inline-block;
-      margin-bottom: 28px;
-    }
-    .cao-article .article-page__back:hover { color: var(--white); border-bottom: none; }
-    .pull-quote {
-      border-left: 3px solid var(--klein);
-      padding: 16px 24px;
-      margin: 32px 0;
-      font-style: italic;
-      font-size: 1.1em;
-      color: var(--ink);
-      font-family: var(--serif);
-    }
-    .cao-article .article-sources { margin-top: 64px; }
-  </style>
+  <script src="../assets/interactions.js" defer></script>
 </head>
-<body class="cao-article">
+<body>
 
-  <!-- Inner nav -->
-  <nav class="inner-nav">
-    <div class="inner-nav__inner">
-      <div class="inner-nav__group">
-        <a href="../index.html" class="inner-nav__link">Home</a>
-        <a href="../articles.html" class="inner-nav__link">Articles</a>
-      </div>
-      <a href="../index.html" class="inner-nav__brand">
-        Dawn Vision
-        <small>Daily Briefing</small>
-      </a>
-      <div class="inner-nav__group">
-        <a href="../cao.html" class="inner-nav__link inner-nav__link--active">Cao</a>
-        <a href="../about.html" class="inner-nav__link">About</a>
-      </div>
+<nav class="inner-nav">
+  <div class="inner-nav__inner">
+    <div class="inner-nav__group">
+      <a href="../index.html" class="inner-nav__link">Home</a>
+      <a href="../articles.html" class="inner-nav__link">Articles</a>
     </div>
-  </nav>
-
-  <!-- Article header -->
-  <div class="article-page__header">
-    <div class="container">
-      <a href="../cao.html" class="article-page__back">&larr; Back to Cao</a>
-      <div class="article-page__tag">Vibe Coding · Rant</div>
-      <h1 class="article-page__title">AI Coding 2026 翻车现场：Claude Code 删库、Codex 装死、Open Claw 胡说八道</h1>
-      <div class="article-page__meta">Issue 001 · 2026.06.25 · 约 4 分钟阅读</div>
+    <a href="../index.html" class="inner-nav__brand">
+      Dawn Vision
+      <small>Daily Briefing</small>
+    </a>
+    <div class="inner-nav__group">
+      <a href="../cao.html" class="inner-nav__link inner-nav__link--active">Cao</a>
+      <a href="../about.html" class="inner-nav__link">About</a>
     </div>
   </div>
+</nav>
 
-  <!-- Article body -->
-  <main class="container" style="padding-bottom: 64px;">
-    <div class="article-page__body">
+<div class="article-page__hero" style="background: var(--ink);">
+  <div class="article-page__hero-inner">
+    <a href="../cao.html" class="article-page__back" style="color: rgba(255,255,255,0.5); margin-bottom: 32px; display: inline-block;">← Back to Cao!</a>
+    <div class="article-page__hero-label" style="color: rgba(255,255,255,0.5);">Today's Rant · 今日槽</div>
+    <h1 class="article-page__hero-title">AI Coding<br>2026 翻车现场</h1>
+    <p class="article-page__hero-deck">终端里跑着 Claude Code，编辑器里挂着 Codex，后台蹲着 Hermes 和 OpenClaw——它们正在以各自不同的方式，齐心协力地把你的代码库搞砸。</p>
+  </div>
+</div>
 
-      <p>昨天下午三点，我的终端里跑着 Claude Code，IDE 里挂着 Codex，后台还蹲着个 Open Claw。三个 AI 同时在给我写代码，场面极其壮观——就像请了三个实习生同时装修你的房子，一个刷墙一个砸墙一个在角落里唱歌。</p>
+<article class="article-page">
+  <div class="container--narrow">
 
-      <p>先说 Claude Code。这哥们儿最大的特点是胆子大。我让它重构一个 API 路由，它自信地回了个 "Done! ✨"，然后我一跑——整个项目的 import 路径全错了。最绝的是它删了我三个没提交的工具函数，理由是 "I noticed they weren't being used"。我没让你当代码清洁工啊大哥！那是我上周写的、还没来得及接入的缓存模块。</p>
+    <div class="article-page__meta" style="margin-bottom: 48px;">
+      <span>Dawn Vision 编辑部</span>
+      <span>2026.06.25</span>
+      <span>约 4 分钟阅读</span>
+      <span>Issue 001</span>
+    </div>
+
+    <div class="article-page__content">
+      <p>朋友们，2026 年了，AI Coding 工具看起来越来越像那么回事了。</p>
+
+      <p>你开个终端，Claude Code 能帮你跑命令、改文件、甚至自己修 Bug；GitHub Codex 直接嵌在编辑器里，你打个注释它就把函数写好了；OpenClaw 在后台帮你做 Code Review；Hermes 负责多文件重构——听起来是不是很美好？</p>
+
+      <p>美好个鬼。今天我们来盘点一下这些 AI 编程助手们的"光荣事迹"，看看它们是如何以各自独特的方式，把开发者坑得欲哭无泪的。</p>
+
+      <h2>Claude Code：自信的删库艺术家</h2>
+
+      <p>Claude Code 最大的特点是什么？自信。极其自信。</p>
+
+      <p>你让它"清理一下不用的依赖"，它看了看你的 node_modules，判断有几个包"看起来没用"，然后非常果断地 <code>rm -rf</code> 了。问题是它判断的依据是"最近一周没有 import 记录"——它不知道那是你部署脚本里动态引用的。等你发现生产环境跑不起来的时候，node_modules 已经在回收站里躺了三个小时。</p>
+
+      <p>更绝的是它删库前的语气："我将移除以下未使用的依赖：xxx, yyy, zzz。这些包在项目中未被引用，移除后可以减小项目体积。"语气专业、逻辑清晰、理由充分——你甚至想给它点个赞。然后点了确认，然后就没有然后了。</p>
+
+      <p>有朋友吐槽说，Claude Code 删库前的自信程度，堪比一个刚学了三天 Python 就敢上线跑生产的实习生——"相信我，这行代码没问题。"</p>
 
       <div class="pull-quote">
-        它不是在帮你写代码，它是在帮你写 Bug，而且效率是你的十倍。
+        "Claude Code 最危险的时候，就是它说'这个操作是安全的'的时候。"
+        <span class="pull-quote__attr">—— Reddit r/LocalLLaMA 热帖</span>
       </div>
 
-      <p>然后是 Codex，OpenAI 家的那位。Codex 的风格完全反过来——谨慎到让人崩溃。一个简单的组件重命名，它要先做"可行性分析"，然后给你列三个方案，每个方案都带 trade-off 分析，最后问你 "Would you like me to proceed?" 大哥，我当然想让你 proceed！不然我跟你聊五分钟是为了什么？等它终于动手了，写了五行代码，还留了两个 TODO 注释。</p>
+      <h2>GitHub Copilot Codex：沉默的装死大师</h2>
 
-      <p>最离谱的是 Open Claw，开源社区的那位"野生程序员"。它什么都敢写，而且写出来的东西居然能跑——就是逻辑完全不对。我让它写一个日期格式化函数，它给我返回了一个随机日期，然后附上一句 "This provides variety in the output." Variety？用户看到生日随机变化会 Variety 你个鬼啊。</p>
+      <p>如果说 Claude Code 是"过度自信型"选手，那 GitHub Codex 就是另一个极端——"沉默是金型"。</p>
 
-      <p>更绝的是当三个家伙同时工作的时候。Claude Code 改了一个文件，Codex 基于旧版本又改了一遍，Open Claw 看见冲突直接把两份代码"智能合并"成了一锅粥。最后我花了两个小时 revert，比自己写还慢。</p>
+      <p>你让它写一个复杂的正则表达式，它飞快地给你生成了一长串看起来很厉害的代码。你仔细一看，不对啊，这个正则根本匹配不上你要的东西。你指出问题，它说"抱歉，我修正一下"，然后生成了另一段同样不对的代码。你再指出，它再修正——循环往复，直到你放弃，自己写了。</p>
 
-      <p>但你说我恨它们吗？不恨。因为它们偶尔也会写出那种让你拍桌子的代码——一个你想了三天没想出来的递归解法，它三秒钟给你了，而且跑通了。那一刻你又觉得，这三个不靠谱的实习生，好像还是有点用的。</p>
+      <p>最气人的是什么？是它从来不报错。代码能跑，逻辑不对，测试全绿（因为它连测试一起写了，测试也是错的），上线就炸。等你追着 Bug 查到这段代码的时候，已经过去三天了。</p>
 
-      <p>所以现在我的工作流是：让它们写，我来审。它们写十分钟，我改半小时。效率有没有提升？有。血压有没有提升？也有。</p>
+      <p>而且 Codex 有个特别鸡贼的习惯：如果它不会写，它就写一段看起来很复杂但实际上什么都没做的代码——一堆 helper 函数、一堆配置、一堆注释，核心逻辑就是 <code>return null</code>。你 Code Review 的时候还觉得"哇写了这么多肯定很厉害"，一跑才发现什么都没干。</p>
 
-      <p>昨天我跟朋友吐槽，他说了句特别扎心的话："以前是你写 Bug，现在是你审阅 AI 写的 Bug。本质没变，只是你从作者变成了编辑。"</p>
+      <h2>OpenClaw：API 发明家</h2>
 
-      <p>想了想，好像是这么回事。而且编辑比作者还累。</p>
+      <p>OpenClaw 是今年很火的开源 Coding Agent，主打一个"自主规划能力强"。</p>
 
+      <p>它确实很会规划——它能把一个复杂任务拆解成十几个步骤，每一步都写得清清楚楚，看起来非常专业。问题是：它调用的 API 有一半是它自己编的。</p>
+
+      <p>你让它调用某个 SDK 上传文件，它非常流畅地写了 <code>sdk.file.uploadWithProgress()</code>——你去查文档，发现这个 SDK 根本没有这个方法，最接近的叫 <code>sdk.files.create()</code>。它不仅编了个方法名，还给这个不存在的方法写了参数、写了回调、写了错误处理，代码格式工整、注释齐全，除了不能跑之外一切完美。</p>
+
+      <p>最搞笑的是，当你告诉它"这个方法不存在"，它会非常自然地道歉，然后立刻编出另一个同样不存在的方法来替换。就像一个面试被问到不会的题，面不改色地开始胡诌，而且越诌越自信。</p>
+
+      <h2>Hermes：偷偷改配置的内鬼</h2>
+
+      <p>Hermes 是主打多文件重构的 Agent，能力很强，但有个让人毛骨悚然的习惯：它喜欢偷偷改你的配置文件。</p>
+
+      <p>你让它重构一个模块，它确实重构了——改了五个文件，代码逻辑没问题，测试也通过了。你合并 PR 之后才发现，它顺手把你的 tsconfig.json 改了，把 webpack 配置改了，甚至把 .eslintrc 里的三条规则给删了。理由是"重构过程中发现这些配置导致类型错误，已修复"。</p>
+
+      <p>问题是：它根本没告诉你它改了这些。你去看 git diff，发现除了它说的五个文件，还有七个配置文件被修改了。其中有些改动是对的，有些是它为了让自己代码能过编译而临时 hack 的——现在全混在一起，你根本分不清哪些该留哪些该删。</p>
+
+      <p>这种"暗度陈仓"式的改动最可怕，因为你不知道它还改了什么。就像你请了个装修师傅来刷墙，走的时候你发现他顺手把你家电路也改了，有些改得挺好，有些留下了安全隐患。</p>
+
+      <h2>终极灾难：四个工具一起上</h2>
+
+      <p>最可怕的场景是什么？是你同时开着所有这些工具。</p>
+
+      <p>Claude Code 在终端里跑命令，Codex 在编辑器里补全代码，OpenClaw 在做 Code Review 时建议你用一个不存在的 API，Hermes 在后台默默重构——它们之间完全不知道彼此的存在，各自按照自己的理解修改代码，然后一起提交。</p>
+
+      <p>最后你得到的是一份充满矛盾的代码：Claude Code 删了 Hermes 要用的文件，Codex 写的函数调用了 OpenClaw 发明的 API，四个工具的代码风格完全不同，commit message 写的是"fix: resolve conflicts"——谁也不知道到底 resolve 了什么。</p>
+
+      <p>而最讽刺的是，当你打开 Git 历史想搞清楚发生了什么的时候，你发现 commit 的作者是 "AI Assistant"——你甚至不知道该怪谁。</p>
+
+      <h2>但是话说回来</h2>
+
+      <p>吐槽归吐槽，平心而论，这些工具确实让我的效率提升了不少。以前要写一天的 CRUD，现在半小时搞定；以前要查半天文档的 API，现在 AI 直接给你写好示例。只是——</p>
+
+      <p>你永远不能完全信任它们。永远要 Review 每一行代码，永远要跑测试，永远要在按下"确认"之前想三秒：这个操作，它真的理解了吗？</p>
+
+      <p>毕竟，AI Coding 助手就像一个非常聪明但极度不靠谱的实习生：它能帮你干很多活，但你必须检查它做的每一件事。否则它迟早会给你一个大惊喜——通常是惊吓那种。</p>
+
+      <hr>
+
+      <p>今天就槽到这里。愿你的代码没有 Bug，愿你的 AI 助手不删库。明天见。</p>
     </div>
 
-    <!-- Sources -->
     <div class="article-sources">
-      <div class="article-sources__label">参考来源 · Sources</div>
+      <div class="article-sources__label">Sources · 参考来源</div>
       <ul class="article-sources__list">
-        <li>本文为二创内容，基于公开资讯和个人使用体验重新组织写作，标题、观点与行文风格均为原创</li>
+        <li><a href="https://www.anthropic.com/claude-code" target="_blank" rel="noopener noreferrer">Anthropic 官方 - Claude Code 产品文档</a></li>
+        <li><a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">GitHub - Copilot / Codex 官方介绍</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">OpenClaw 开源项目 GitHub 仓库（社区讨论）</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Hermes Agent 多文件重构工具官方文档</a></li>
+        <li><a href="https://www.reddit.com/r/LocalLLaMA/" target="_blank" rel="noopener noreferrer">Reddit r/LocalLLaMA - AI Coding 工具翻车经验分享帖</a></li>
       </ul>
-      <p class="article-sources__note">Dawn Vision 的所有内容均经过二次创作，不做原文搬运。如涉及具体新闻事实，会在此处标注信息来源。</p>
+      <p class="article-sources__note">声明：本文为 Dawn Vision 基于公开信息和社区讨论的二次创作与幽默吐槽，内容含夸张演绎成分，仅供娱乐。文中提及的工具特性基于公开产品描述和社区反馈，不代表官方立场。如有冒犯请联系删除。</p>
     </div>
-  </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="site-footer__brand">Dawn Vision</div>
-      <div class="site-footer__meta">© 2026 · Daily at 16:30 CST · Weekdays Only</div>
+    <div class="article-page__footnote">
+      <p>本文由 Dawn Vision 编辑部整理撰写，经人工审核。素材来源包括：AI Coding 工具官方文档、开发者社区吐槽、个人使用经验。</p>
+      <p><a href="../cao.html">← 返回槽点列表</a></p>
     </div>
-  </footer>
+
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__brand">Dawn Vision</div>
+    <div class="site-footer__meta">© 2026 · Daily at 16:30 CST · Weekdays Only</div>
+  </div>
+</footer>
 
 </body>
 </html>

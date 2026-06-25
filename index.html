@@ -3,13 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dawn Vision</title>
-  <meta name="description" content="Dawn Vision — 穿越嘈杂，洞见留声。">
+  <title>Dawn Vision | 穿越嘈杂，洞见留声 — AI 深度观察日刊</title>
+  <meta name="description" content="Dawn Vision 是 AI 时代的深度阅读日刊。每个工作日，从海量 AI 资讯中去噪筛选、深度加工，输出独立完整的分析文章。关注 AI Agent、大模型、具身智能、AI 商业化、一人公司等前沿话题，穿越嘈杂，洞见留声。">
+  <meta name="keywords" content="Dawn Vision, AI资讯, AI日报, 人工智能, 大模型, AI Agent, GPT, Claude, 具身智能, AI商业化, 一人公司, AI编程, 深度分析, AI观察, LLM, AIGC">
+  <meta name="author" content="Dawn Vision">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://qlhouseclub.github.io/DawnVision/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://qlhouseclub.github.io/DawnVision/">
+  <meta property="og:title" content="Dawn Vision | 穿越嘈杂，洞见留声 — AI 深度观察日刊">
+  <meta property="og:description" content="在噪音中看见信号。每个工作日深度解读 AI 前沿：Agent 协议、大模型竞赛、AI 商业化、具身智能。不是信息搬运，是噪音中的信号过滤器。">
+  <meta property="og:site_name" content="Dawn Vision">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://qlhouseclub.github.io/DawnVision/">
+  <meta name="twitter:title" content="Dawn Vision | 穿越嘈杂，洞见留声">
+  <meta name="twitter:description" content="AI 时代的深度阅读日刊。每个工作日，深度加工 AI 前沿资讯，输出可以直接读完的完整文章。">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Dawn Vision",
+    "alternateName": "DawnVision",
+    "url": "https://qlhouseclub.github.io/DawnVision/",
+    "description": "穿越嘈杂，洞见留声。AI 时代的深度阅读日刊，每个工作日深度解读 AI 前沿。",
+    "inLanguage": "zh-CN",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Dawn Vision",
+      "url": "https://qlhouseclub.github.io/DawnVision/"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://qlhouseclub.github.io/DawnVision/articles.html?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script src="assets/interactions.js" defer></script>
 </head>
 <body class="home">
 
@@ -24,12 +68,12 @@
   </div>
 
   <!-- Navigation -->
-  <nav class="home__nav">
+  <nav class="home__nav" role="navigation" aria-label="主导航">
     <div class="home__nav-group">
-      <a href="index.html" class="home__nav-link home__nav-link--active">Home</a>
+      <a href="index.html" class="home__nav-link home__nav-link--active" aria-current="page">Home</a>
       <a href="articles.html" class="home__nav-link">Articles</a>
     </div>
-    <a href="index.html" class="home__nav-brand">
+    <a href="index.html" class="home__nav-brand" aria-label="Dawn Vision 首页">
       Dawn Vision
       <small>Daily Briefing</small>
     </a>
@@ -40,7 +84,7 @@
   </nav>
 
   <!-- Hero content -->
-  <div class="home__hero">
+  <main class="home__hero" role="main">
     <div class="home__brand">Dawn Vision · Est. 2026</div>
 
     <h1 class="home__title">
@@ -52,20 +96,23 @@
     <p class="home__tagline">穿越嘈杂，<br>洞见留声。</p>
 
     <!-- Today's cover teaser - white card -->
-    <div class="home__teaser">
+    <article class="home__teaser" itemscope itemtype="https://schema.org/NewsArticle">
       <div class="home__teaser-label">Focus · 焦点</div>
-      <h2 class="home__teaser-title">OpenAI 的 Jalapeño：当模型开始定义芯片</h2>
-      <p class="home__teaser-deck">9个月流片、推理成本砍半、功耗降三成——但博通要微软先买40%才肯开工。"模型定义芯片"的飞轮真能转起来吗？</p>
-      <a href="articles.html" class="btn-more">Read More <span class="arrow">→</span></a>
-    </div>
-  </div>
+      <h2 class="home__teaser-title" itemprop="headline">OpenAI 的 Jalapeño：当模型开始定义芯片</h2>
+      <p class="home__teaser-deck" itemprop="description">9个月流片、推理成本砍半、功耗降三成——但博通要微软先买40%才肯开工。"模型定义芯片"的飞轮真能转起来吗？</p>
+      <meta itemprop="datePublished" content="2026-06-26">
+      <meta itemprop="author" content="Dawn Vision 编辑部">
+      <meta itemprop="publisher" content="Dawn Vision">
+      <a href="articles.html" class="btn-more" itemprop="url">Read More <span class="arrow">→</span></a>
+    </article>
+  </main>
 
   <!-- Footer -->
-  <div class="home__footer">
+  <footer class="home__footer" role="contentinfo">
     <span>© 2026 Dawn Vision</span>
     <span>Weekdays · 16:30 CST</span>
     <span>GitHub Pages</span>
-  </div>
+  </footer>
 
 </body>
 </html>

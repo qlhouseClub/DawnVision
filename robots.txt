@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+
+Sitemap: https://qlhouseclub.github.io/DawnVision/sitemap.xml
+
+# Dawn Vision — AI 深度观察日刊
+# https://qlhouseclub.github.io/DawnVision/
+# 穿越嘈杂，洞见留声
