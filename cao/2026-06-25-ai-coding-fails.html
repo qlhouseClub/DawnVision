@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>我让AI帮我写代码，它给了我三份烂代码还互相甩锅 — Dawn Vision</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700;8..60,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  /* CAO articles get a slightly different tone - slightly more playful but still editorial */
+  .cao-badge {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: var(--dawn);
+    color: var(--paper);
+    padding: 3px 8px;
+    margin-bottom: 16px;
+    font-family: var(--sans);
+    font-weight: 700;
+  }
+  .article-page__content p { font-size: 1.02rem; }
+  .fun-quote {
+    margin: 1.5em 0;
+    padding: 12px 16px;
+    background: var(--paper-warm);
+    border-left: 3px solid var(--dawn);
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="container">
+    <div class="masthead__top"><span>Issue 001 · CAO</span><span>June 25, 2026</span></div>
+    <div class="masthead__brand"><a href="../index.html">Dawn Vision</a></div>
+    <p class="masthead__tagline">在噪音中看见信号 — AI时代的深度观察</p>
+  </div>
+</header>
+
+<article class="article-page">
+  <div class="container--narrow">
+    <a href="../index.html" class="article-page__back">&larr; 返回目录</a>
+    <header class="article-page__header">
+      <div class="cao-badge">槽 · CAO</div>
+      <h1 class="article-page__title">我让 AI 帮我写代码，它给了我三份烂代码还互相甩锅</h1>
+      <p class="article-page__deck">一个开发者试用了三款国产AI编程助手，结果得到了三段各有各离谱的bug。AI编程到底是生产力工具还是精神内耗新源泉？</p>
+      <div class="article-page__meta"><span>Dawn Vision · 槽点编辑部</span><span>2026年6月25日</span><span>阅读约 3 分钟</span></div>
+    </header>
+
+    <div class="article-page__content">
+      <p>事情是这样的。朋友小张，一个有五年经验的前端开发，最近被各种"AI编程效率提升10倍"的文章种草了，决定认真试一把国产AI编程助手。毕竟Cursor虽然好用但要花钱，万一国产的也能打呢？</p>
+
+      <p>他挑了三款口碑不错的，结果一上午下来，他只产出了一个结果：对人生的怀疑。</p>
+
+      <h2>第一份代码：看起来很美</h2>
+
+      <p>第一个助手很快给了他一段 React 组件代码，结构清晰，注释完整，变量命名规范，甚至还贴心地加了 TypeScript 类型定义。小张满意地点点头，复制粘贴，运行——然后页面白了。</p>
+
+      <p>报错说某个 hook 在条件语句里被调用了。行，这是常见错误，小张自己改了。改完运行，又报错——useEffect 的依赖数组少了一个依赖。加上。又报错——import 了一个不存在的函数。哦，那个函数是 AI 自己"发明"的，代码里根本没有，也没告诉我要装什么库。</p>
+
+      <div class="fun-quote">
+        "就像请了个简历很漂亮的实习生，写的代码看起来特别规范，但你跑一下就知道他根本没跑过。"
+      </div>
+
+      <h2>第二份代码：另起炉灶</h2>
+
+      <p>小张不服气，换了第二个助手。这次他把第一份代码的错误描述了一下，让AI重新写。</p>
+
+      <p>第二个助手确实没犯第一个的错误。它犯了全新的错误。</p>
+
+      <p>它把整个组件用 Class 组件重写了——2026 年了大哥，大家都用函数组件了。它引入了一个小张从未听说过的 UI 库，而且代码里用了这个库的一个不存在的版本的API。小张问它"这个API在文档里没有啊"，AI 自信地回复"这是该库的最新特性，请更新到最新版本"。小张去查了，那个库的最新版本是三年前更新的。</p>
+
+      <p>最绝的是，当小张指出问题时，AI 道了个歉，然后又给出了第三版代码——这版代码综合了前两版的所有bug，还加了几个新的。</p>
+
+      <h2>第三份代码：哲学大师</h2>
+
+      <p>第三个助手走的是完全不同的路线。它没有急着给代码，而是先问了小张五个问题："你的应用场景是什么？用户画像是什么？性能要求是什么？"小张耐着性子回答了，心想这挺专业啊。</p>
+
+      <p>然后 AI 给了他一段架构设计建议，从微前端讲到状态管理哲学，洋洋洒洒五百字，最后给了一段代码——这段代码实现的是一个计数器。</p>
+
+      <p>小张要做的是一个文件上传组件。</p>
+
+      <div class="fun-quote">
+        "三份烂代码，一个比一个离谱。第一个是没跑过的，第二个是活在平行宇宙的，第三个是跟你聊人生然后给你个hello world的。"
+      </div>
+
+      <h2>问题到底出在哪</h2>
+
+      <p>小张的经历不是个例。在开发者社区里，"AI编程翻车"已经成了一个固定的段子类型。核心问题其实很简单：很多 AI 编程工具还停留在"根据上下文预测下一个token"的阶段，它们擅长的是生成<strong>看起来像代码的文字</strong>，而不是<strong>能跑通的程序</strong>。</p>
+
+      <p>Cursor之所以好用，是因为它不只是生成代码——它能看到你的整个项目，能运行终端命令看报错，能根据错误自动修正。这是一个完整的循环，而不只是一个代码补全。</p>
+
+      <p>但那些只做了"套壳大模型+代码补全界面"的工具，就像是一个只会背面试题但从来没写过项目的候选人——你问他概念他对答如流，你让他写个能用的东西他就开始自由发挥。</p>
+
+      <hr>
+
+      <p>小张最后还是用回了 Cursor。他说他不怪国产工具，毕竟起步晚。但他给所有想用AI编程工具的人一个建议：</p>
+
+      <p><strong>"AI 写的代码，你一定要自己跑一遍。不要相信任何看起来完美的代码——它大概率在你看不见的地方藏着惊喜。"</strong></p>
+
+      <p>这话听起来像是废话，但你'd be surprised——有多少人是直接复制粘贴就提交了的。</p>
+
+      <p>至于那三段烂代码？小张说他存着了，"等这些工具真的好用了，我拿出来嘲笑它们。"</p>
+    </div>
+
+    <footer class="article-page__footnote">
+      <p>本文根据开发者社区真实吐槽整理，人物为化名，三段代码的故事经多源交叉验证（确实都很离谱）。如有雷同，说明你也用过这些工具。</p>
+    </footer>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">Dawn Vision</div>
+      <div class="site-footer__meta">&copy; 2026 · 在噪音中看见信号</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

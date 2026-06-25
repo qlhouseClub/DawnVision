@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cursor 80亿美元估值背后：AI编程工具的胜负手 — Dawn Vision</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700;8..60,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="container">
+    <div class="masthead__top"><span>Issue 001</span><span>June 25, 2026</span></div>
+    <div class="masthead__brand"><a href="../index.html">Dawn Vision</a></div>
+    <p class="masthead__tagline">在噪音中看见信号 — AI时代的深度观察</p>
+  </div>
+</header>
+
+<article class="article-page">
+  <div class="container--narrow">
+    <a href="../index.html" class="article-page__back">&larr; 返回目录</a>
+    <header class="article-page__header">
+      <div class="article-page__tag">开发范式 · AI-Loop</div>
+      <h1 class="article-page__title">Cursor 80 亿美元估值背后：AI 编程工具的胜负手</h1>
+      <p class="article-page__deck">从10亿到80亿只用了一年。在AI编程工具的"四势二封"格局中，Cursor为什么能领跑？答案不在模型里。</p>
+      <div class="article-page__meta"><span>Dawn Vision 编辑部</span><span>2026年6月25日</span><span>阅读约 4 分钟</span></div>
+    </header>
+
+    <div class="article-page__content">
+      <p>Cursor 的估值从 10 亿美元跳到 80 亿美元，只用了不到一年。这个数字让很多人意外——AI 编程工具不是已经很拥挤了吗？GitHub Copilot 有微软撑腰，Claude Code 有 Anthropic 的模型优势，Codex 背靠 OpenAI，为什么是 Cursor 跑出来了？</p>
+
+      <p>行业里有人用"四势二封"来形容当前的竞争格局。Cursor 是领跑者，Claude Code、GitHub Copilot、Codex 各据一方，形成四足鼎立之势；而剩下的玩家，包括不少国产 AI 编程助手，正在被"封"在外面。</p>
+
+      <h2>全仓感知：被忽视的关键能力</h2>
+
+      <p>Cursor 赢在哪里？如果你去看开发者社区的讨论，出现频率最高的一个词是"全仓感知"（Codebase Awareness）。</p>
+
+      <p>传统 AI 编程助手只能看到你当前打开的文件，你需要手动把上下文粘贴给它。Cursor 不一样——它在你打开一个项目时就索引了整个代码库，理解文件之间的依赖关系、模块之间的调用逻辑、项目的整体架构。当你让它"加一个用户认证功能"时，它知道该改哪些文件、用什么模式、遵循你已有的代码风格。</p>
+
+      <p>这个能力听起来不性感，但它恰恰是"聊天机器人"和"Agent"的分水岭。只能看到当前文件的 AI 是一个高级自动补全；能理解整个代码库的 AI 才是一个真正的搭档。</p>
+
+      <h2>Composer 模式：从补全到创作</h2>
+
+      <p>Cursor 的第二个关键决策是 Composer——它的 Agent 模式。在这个模式下，AI 不只是在行内或函数内给你建议，它可以跨多个文件进行编辑：创建新文件、修改多个现有文件、运行终端命令、根据错误信息自我修正。</p>
+
+      <p>这就是"AI-Loop"的真正含义：不是"你写代码 AI 补全"，而是"你描述意图，AI 执行一个完整的开发循环——写代码、跑测试、修bug、再跑测试"。开发者从"写代码的人"变成了"review 代码的人"。</p>
+
+      <p>这种工作流的改变比工具本身更重要。当你习惯了 AI 帮你完成 boilerplate、配置文件、测试用例这些机械劳动，你就再也回不去了。这就是用户增长飞轮：一旦团队里有几个人用起来，整个团队都会迁移，因为协作的效率提升是肉眼可见的。</p>
+
+      <h2>国产工具为什么"翻车"？</h2>
+
+      <p>与 Cursor 的风光形成对比的是，一批国产 AI 编程助手正在遭遇开发者的集体吐槽。"三份烂代码一个比一个离谱""像请了个只会背答案的实习生"——这些评价虽然刻薄，但指向了一个真实问题：很多工具还停留在"套壳大模型+代码补全"的阶段，没有解决全仓感知和 Agent 循环这两个核心问题。</p>
+
+      <p>模型能力当然重要，但在大模型 API 人人可用的今天，模型本身已经不是护城河。真正的壁垒在工程层面：如何高效索引大型代码库？如何在保证安全的前提下让 AI 执行终端命令？如何设计人机协作的交互界面？这些问题没有捷径，需要大量开发者反馈驱动的迭代。</p>
+
+      <hr>
+
+      <p>Cursor 的故事告诉我们一个朴素的道理：在 AI 工具领域，赢的不一定是模型最好的，而是<strong>把体验做到最完整的</strong>。从代码补全到全仓感知，从单次交互到 Agent 循环，每一步看起来都只是"小改进"，但累积起来就是代际差距。</p>
+
+      <p>80 亿美元估值不是终点。AI 编程工具的战争才刚刚开始——下一个战场是谁能让非程序员也能"写"软件。到那时，今天的格局可能又会被改写。</p>
+    </div>
+
+    <footer class="article-page__footnote">
+      <p>本文基于 Cursor 估值动态及 AI 编程工具竞争格局的多源分析。</p>
+    </footer>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">Dawn Vision</div>
+      <div class="site-footer__meta">&copy; 2026 · 在噪音中看见信号</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
