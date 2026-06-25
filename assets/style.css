@@ -891,8 +891,8 @@ main {
 .home__nav {
   position: relative;
   z-index: 1;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   padding: clamp(20px, 3vw, 32px) clamp(24px, 5vw, 64px);
   max-width: 1200px;
@@ -901,6 +901,7 @@ main {
 }
 
 .home__nav-group { display: flex; gap: clamp(24px, 4vw, 48px); align-items: center; }
+.home__nav-group:last-child { justify-content: flex-end; }
 
 .home__nav-link {
   font-size: 11px;
@@ -1065,8 +1066,8 @@ main {
 }
 
 .inner-nav__inner {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   padding: clamp(20px, 3vw, 32px) 0;
   max-width: 1200px;
@@ -1076,6 +1077,7 @@ main {
 }
 
 .inner-nav__group { display: flex; gap: clamp(24px, 4vw, 48px); align-items: center; }
+.inner-nav__group:last-child { justify-content: flex-end; }
 
 .inner-nav__link {
   font-size: 11px;
@@ -1415,21 +1417,21 @@ main {
    RESPONSIVE ADDITIONS
    ══════════════════════════════════════════ */
 @media (max-width: 700px) {
-  .home__nav { flex-wrap: wrap; gap: 12px; padding: 16px 24px; }
+  .home__nav { padding: 16px 20px; }
   .home__nav-group { gap: 16px; }
-  .home__nav-brand { font-size: 1rem; letter-spacing: 2px; order: -1; width: 100%; text-align: center; margin-bottom: 4px; }
+  .home__nav-brand { font-size: 1rem; letter-spacing: 2px; grid-column: 1 / -1; text-align: center; margin-bottom: 4px; }
   .home__nav-brand small { display: block; font-size: 0.5em; letter-spacing: 3px; margin-top: 2px; margin-left: 0; }
-  .home__nav-group:first-child { margin-right: auto; }
-  .home__nav-group:last-child { margin-left: auto; }
+  .home__nav-group:first-child { grid-column: 1; }
+  .home__nav-group:last-child { grid-column: 3; }
   .home__hero { padding: 24px; }
   .home__teaser { margin-top: 32px; }
   .home__footer { flex-direction: column; gap: 8px; text-align: center; padding: 16px 24px; }
-  .inner-nav__inner { flex-wrap: wrap; gap: 12px; padding: 16px 20px; }
+  .inner-nav__inner { padding: 16px 20px; }
   .inner-nav__group { gap: 16px; }
-  .inner-nav__group:first-child { margin-right: auto; }
-  .inner-nav__group:last-child { margin-left: auto; }
-  .inner-nav__brand { font-size: 1rem; letter-spacing: 2px; order: -1; width: 100%; text-align: center; }
+  .inner-nav__brand { font-size: 1rem; letter-spacing: 2px; grid-column: 1 / -1; text-align: center; }
   .inner-nav__brand small { display: block; font-size: 0.45em; letter-spacing: 4px; margin-top: 2px; margin-left: 0; }
+  .inner-nav__group:first-child { grid-column: 1; }
+  .inner-nav__group:last-child { grid-column: 3; }
   .issue-selector { gap: 8px; }
   .issue-selector__date { margin-left: 0; width: 100%; }
 }

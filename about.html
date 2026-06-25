@@ -57,43 +57,39 @@
       background: var(--klein);
       margin: 0 auto 24px;
     }
-    /* Contact pills - two in a row */
+    /* Contact - stacked layout, two columns */
     .about-contact {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
       margin-bottom: 28px;
-      flex-wrap: wrap;
+      max-width: 400px;
+      width: 100%;
     }
-    .about-contact__pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(0,47,167,0.06);
-      color: var(--klein);
-      font-size: 0.85rem;
-      font-family: var(--serif);
-      padding: 10px 20px;
-      border: 1px solid rgba(0,47,167,0.15);
+    .about-contact__item {
+      text-align: center;
       text-decoration: none;
-      transition: all 0.2s;
-      white-space: nowrap;
+      color: inherit;
+      transition: opacity 0.2s;
     }
-    .about-contact__pill:hover {
-      background: var(--klein);
-      color: var(--white);
-      border-color: var(--klein);
-    }
-    .about-contact__pill strong {
-      font-size: 8px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+    .about-contact__item:hover { opacity: 0.6; }
+    .about-contact__value {
+      font-size: 0.95rem;
       font-family: var(--serif-display);
       font-weight: 700;
-      opacity: 0.6;
-      margin-right: 4px;
+      color: var(--ink);
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
     }
-    /* Reward QR - smaller */
+    .about-contact__label {
+      font-size: 8px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--klein);
+      font-family: var(--serif-display);
+      font-weight: 700;
+    }
+    /* Reward QR - no border, larger */
     .about-reward {
       text-align: center;
     }
@@ -107,14 +103,11 @@
       margin-bottom: 10px;
     }
     .about-reward__img {
-      width: 120px;
-      height: 120px;
+      width: 135px;
+      height: 135px;
       object-fit: contain;
-      border: 1px solid var(--gray-rule);
       display: block;
       margin: 0 auto 6px;
-      padding: 6px;
-      background: white;
     }
     .about-reward__text {
       font-size: 0.75rem;
@@ -161,8 +154,14 @@
     <div class="about-compact__divider"></div>
 
     <div class="about-contact">
-      <a href="#" class="about-contact__pill" onclick="return false;"><strong>WeChat</strong>DawnVision88</a>
-      <a href="tel:18622454349" class="about-contact__pill"><strong>Phone</strong>18622454349</a>
+      <div class="about-contact__item">
+        <div class="about-contact__value">DawnVision88</div>
+        <div class="about-contact__label">WeChat</div>
+      </div>
+      <a href="tel:18622454349" class="about-contact__item">
+        <div class="about-contact__value">18622454349</div>
+        <div class="about-contact__label">Phone</div>
+      </a>
     </div>
 
     <div class="about-reward">
