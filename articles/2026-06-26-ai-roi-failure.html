@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>95% AI项目见不到ROI：瓶颈从来不是模型，是数据 | Dawn Vision</title>
+  <meta name="description" content="Gartner预测2026年60% AI项目将被放弃——不是模型不够好，是数据没准备好被AI消费。75%企业试点AI Agent，但仅15%考虑部署自主Agent。NL2SQL三大陷阱、数据消费者从人变Agent、统一语义层成为新护城河。">
+  <meta name="keywords" content="Dawn Vision, AI ROI, 数据平台, AI项目失败, NL2SQL, 腾讯云, Gartner, AI落地">
+  <meta name="author" content="Dawn Vision">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://qlhouseclub.github.io/DawnVision/articles/2026-06-26-ai-roi-failure.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://qlhouseclub.github.io/DawnVision/articles/2026-06-26-ai-roi-failure.html">
+  <meta property="og:title" content="95% AI项目见不到ROI：瓶颈从来不是模型，是数据">
+  <meta property="og:description" content="Gartner预测60% AI项目将被放弃，瓶颈不是模型是数据。">
+  <meta property="og:site_name" content="Dawn Vision">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.svg">
+  <meta property="article:published_time" content="2026-06-26T16:30:00+08:00">
+  <meta property="article:author" content="Dawn Vision">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="95% AI项目见不到ROI：瓶颈从来不是模型，是数据">
+  <meta name="twitter:description" content="Gartner预测60% AI项目将被放弃。">
+  <meta name="twitter:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.svg">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"NewsArticle","headline":"95% AI项目见不到ROI：瓶颈从来不是模型，是数据","description":"AI项目失败的核心原因不是模型能力不足，而是数据没有准备好被AI消费。","datePublished":"2026-06-26T16:30:00+08:00","author":{"@type":"Organization","name":"Dawn Vision"},"publisher":{"@type":"Organization","name":"Dawn Vision","url":"https://qlhouseclub.github.io/DawnVision/"},"inLanguage":"zh-CN","image":"https://qlhouseclub.github.io/DawnVision/assets/og-image.svg","wordCount":800}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
+  <script src="../assets/interactions.js" defer></script>
+</head>
+<body>
+<nav class="inner-nav" role="navigation">
+  <div class="inner-nav__inner">
+    <div class="inner-nav__group">
+      <a href="../index.html" class="inner-nav__link">Home</a>
+      <a href="../articles.html" class="inner-nav__link inner-nav__link--active">Articles</a>
+    </div>
+    <a href="../index.html" class="inner-nav__brand">Dawn Vision<small>Daily Briefing</small></a>
+    <div class="inner-nav__group">
+      <a href="../cao.html" class="inner-nav__link">Cao</a>
+      <a href="../about.html" class="inner-nav__link">About</a>
+    </div>
+  </div>
+</nav>
+<main role="main">
+<div class="article-page__hero">
+  <div class="article-page__hero-inner">
+    <a href="../articles.html" class="article-page__back" style="color: rgba(255,255,255,0.5); margin-bottom: 32px; display: inline-block;">← Back to Articles</a>
+    <div class="article-page__hero-label">Brief · 资讯</div>
+    <h1 class="article-page__hero-title">AI 项目的<br>真正瓶颈</h1>
+    <p class="article-page__hero-deck">Gartner预测2026年60% AI项目将被放弃——不是模型不够聪明，是数据没有准备好被AI消费。当数据平台的消费者从"人"变成"Agent"，整个数据栈都要重构。</p>
+  </div>
+</div>
+<article class="article-page">
+  <div class="container--narrow">
+    <div class="article-page__meta" style="margin-bottom: 48px;">
+      <span>Dawn Vision 编辑部</span>
+      <span>2026.06.26</span>
+      <span>约 5 分钟阅读</span>
+      <span>Issue 003</span>
+    </div>
+    <div class="article-page__content">
+      <p>AI行业有一个公开的秘密：大部分AI项目赚不回投入的钱。</p>
+      <p>Gartner的预测很残酷：2026年将有60%的AI项目被放弃。不是因为模型不够好——恰恰相反，模型能力已经远超大多数企业的使用能力——而是因为数据没有准备好被AI消费。</p>
+      <p>这是一个被严重低估的问题。所有人都在讨论模型、讨论Agent、讨论应用场景，但很少有人讨论：你的数据，Agent读得懂吗？</p>
+      <h2>消费者变了：从人到Agent</h2>
+      <p>过去三十年，数据平台的服务对象是人。数据分析师写SQL、BI分析师做报表、业务人员看仪表盘——人有常识、有上下文、有容错能力。你给我一张报表，某个字段口径变了，我能看出来；两个表JOIN错了，我能发现；数据延迟了半天，我能理解。</p>
+      <p>Agent不一样。</p>
+      <p>Agent没有常识，没有上下文，也不会"觉得哪里不对"。你告诉它"查一下上个月的销售额"，它会严格按照它理解的口径去查——如果"销售额"在不同表里有不同的定义，如果用户表和订单表的关联字段有歧义，如果某些订单的状态码含义变了但文档没更新，Agent会一本正经地给你一个错误的答案，而且自信满满。</p>
+      <p>这就是为什么75%的企业已经试点了AI Agent，但只有15%在考虑部署自主Agent。试点的时候，Agent说错了有人兜着；真让它自主决策，谁来为错误的结论买单？</p>
+      <div class="pull-quote">
+        "AI项目的ROI瓶颈不在模型层，在数据层。模型是发动机，数据是燃油——你加了劣质燃油，发动机再好也跑不起来。"
+        <span class="pull-quote__attr">—— 腾讯云AI产业应用大会核心观点</span>
+      </div>
+      <h2>NL2SQL的三个致命陷阱</h2>
+      <p>最典型的例子是NL2SQL（自然语言转SQL），这是目前企业AI应用最火热的场景之一，但也是翻车最多的场景。</p>
+      <p>第一个陷阱是指标歧义。你问"上个月的收入是多少"，Agent怎么知道"收入"指的是GMV、实际营收、还是税后利润？不同部门、不同报表里"收入"的定义可能完全不同。人会追问"你指的哪个收入"，Agent直接选一个它最"喜欢"的定义去查。</p>
+      <p>第二个陷阱是JOIN错乱。企业数据库动辄几百张表，表之间的关联关系错综复杂。一个字段名可能在多张表里出现，但含义不同；一个外键关系可能因为历史原因存在数据不一致。人类分析师踩过几次坑后会记住，但Agent每次都是"第一次"。</p>
+      <p>第三个陷阱是查询条件随意匹配。"最近30天"是自然日还是工作日？"高价值客户"的阈值是什么？"华北区"包不包括内蒙古？这些在企业里往往是"潜规则"——老员工知道，文档里没写，Agent当然也不知道。</p>
+      <h2>统一语义层：AI时代的新护城河</h2>
+      <p>腾讯云在最近的AI产业应用大会上发布了面向Agent升级的全栈数据平台，核心思路是三层架构：DataBuddy（Agent数据助手）+ WeData（数据治理）+ AI原生大数据底座。其中最关键的概念是"统一语义层"。</p>
+      <p>什么意思？就是把企业里所有指标的定义、口径、计算逻辑、关联关系全部统一管理起来，形成一个Agent可以直接消费的"数据字典"。Agent不需要自己去猜"收入"是什么意思，统一语义层会告诉它确切的定义、依赖的表、过滤条件、计算方式。</p>
+      <p>这看起来不性感，但这才是AI真正落地企业的护城河。模型可以换（今天GPT明天Claude后天DeepSeek），但企业的数据治理和语义层建设是需要时间、需要业务理解、需要踩坑积累的。谁先把这层建好了，谁的Agent才能真正跑出ROI。</p>
+      <p>腾讯云披露的数据：DataBuddy让数据工程重复开发降低了80%，研发效率提升5-10倍。这不是因为模型变聪明了，而是因为数据变"干净"了。</p>
+      <h2>给决策者的建议</h2>
+      <p>如果你正在或计划在企业里推AI项目，先别急着调模型API。先问自己三个问题：</p>
+      <p>第一，你的核心指标有统一的定义吗？还是每个部门各算各的？</p>
+      <p>第二，你的数据文档是写给人看的还是写给机器看的？Agent能理解你的表结构和字段含义吗？</p>
+      <p>第三，如果Agent给了一个错误的数据结论，你有机制发现吗？</p>
+      <p>这三个问题回答不好，再强的模型也救不了你的AI项目ROI。</p>
+      <hr>
+      <p>明天见。</p>
+    </div>
+    <div style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--color-border-light); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+      <a href="../articles.html" style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--color-brand); text-decoration: none;">← 返回文章列表</a>
+      <a href="2026-06-26-copilot-vs-cursor.html" style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--color-text-light); text-decoration: none;">下一篇 →</a>
+    </div>
+    <div class="article-sources">
+      <div class="article-sources__label">Sources · 参考来源</div>
+      <ul class="article-sources__list">
+        <li><a href="https://www.infoq.cn/article/wyjzqyE7A1Z3XSprDRq5" target="_blank" rel="noopener noreferrer nofollow">InfoQ - 95% AI项目跑不出ROI，腾讯云AI产业应用大会报道</a></li>
+        <li><span style="color:var(--color-text-light);text-decoration:underline;text-decoration-style:dotted;cursor:default;">Gartner - 2026年AI项目放弃率预测</span></li>
+      </ul>
+      <p class="article-sources__note">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，标题、观点、行文均为原创，仅供参考。</p>
+    </div>
+    <div class="article-page__footnote">
+      <p>本文基于 Dawn Vision 认知引擎处理的 4 个源信号生成，经编辑部人工审核。</p>
+      <p>相关入库笔记：<span style="color:var(--color-text-light);text-decoration:underline;text-decoration-style:dotted;cursor:default;">AI项目ROI瓶颈分析</span> · <span style="color:var(--color-text-light);text-decoration:underline;text-decoration-style:dotted;cursor:default;">统一语义层架构</span></p>
+    </div>
+  </div>
+</article>
+</main>
+<footer class="site-footer"><div class="container"><div class="site-footer__brand">Dawn Vision</div><div class="site-footer__meta">© 2026 · Daily at 16:30 CST · Weekdays Only</div></div></footer>
+</body>
+</html>

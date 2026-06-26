@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Issue 002 | 2026.06.25 | Dawn Vision — AI 深度观察</title>
+  <meta name="description" content="Dawn Vision 第002期（2026年6月25日）：OpenAI Jalapeño芯片、埃森哲千亿蒸发、Agent失控事件、豆包定价战、六月模型军备赛——7篇深度文章+1篇吐槽，一个工作日的AI前沿。">
+  <meta name="keywords" content="Dawn Vision,AI日报,Issue 002,AI芯片,OpenAI,Jalapeño,埃森哲裁员,AI Agent,豆包定价,大模型军备赛,具身智能,人工智能">
+  <meta name="author" content="Dawn Vision">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://qlhouseclub.github.io/DawnVision/issues/issue-002.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://qlhouseclub.github.io/DawnVision/issues/issue-002.html">
+  <meta property="og:title" content="Issue 002 | Dawn Vision">
+  <meta property="og:description" content="OpenAI Jalapeño芯片、埃森哲千亿蒸发、Agent失控、豆包定价战——Dawn Vision第002期。">
+  <meta property="og:site_name" content="Dawn Vision">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.svg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://qlhouseclub.github.io/DawnVision/issues/issue-002.html">
+  <meta name="twitter:title" content="Issue 002 | Dawn Vision">
+  <meta name="twitter:description" content="Dawn Vision 第002期，2026年6月25日。OpenAI芯片、埃森哲裁员、Agent失控、模型军备赛。">
+  <meta name="twitter:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Dawn Vision Issue 002 — 2026.06.25",
+    "description": "Dawn Vision 第002期（2026年6月25日）：OpenAI Jalapeño芯片、埃森哲千亿蒸发、Agent失控事件、豆包定价战、六月模型军备赛——7篇深度文章。",
+    "url": "https://qlhouseclub.github.io/DawnVision/issues/issue-002.html",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Dawn Vision",
+      "url": "https://qlhouseclub.github.io/DawnVision/"
+    },
+    "numberOfItems": 7,
+    "issueNumber": "002",
+    "datePublished": "2026-06-25",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Dawn Vision",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://qlhouseclub.github.io/DawnVision/assets/og-image.svg"
+      }
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首页",
+        "item": "https://qlhouseclub.github.io/DawnVision/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "深度文章",
+        "item": "https://qlhouseclub.github.io/DawnVision/articles.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Issue 002"
+      }
+    ]
+  }
+  </script>
+  <script src="../assets/interactions.js" defer></script>
+</head>
+<body>
+
+  <!-- Inner nav -->
+  <nav class="inner-nav" role="navigation" aria-label="主导航">
+    <div class="inner-nav__inner">
+      <div class="inner-nav__group">
+        <a href="../index.html" class="inner-nav__link">Home</a>
+        <a href="../articles.html" class="inner-nav__link inner-nav__link--active" aria-current="page">Articles</a>
+      </div>
+      <a href="../index.html" class="inner-nav__brand" aria-label="Dawn Vision 首页">
+        Dawn Vision
+        <small>Daily Briefing</small>
+      </a>
+      <div class="inner-nav__group">
+        <a href="../cao.html" class="inner-nav__link">Cao</a>
+        <a href="../about.html" class="inner-nav__link">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" role="main">
+    <h1 style="font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #888; font-family: Georgia, serif; font-weight: 700; padding: 12px 0 0; margin: 0;">Dawn Vision · Issue 002</h1>
+
+    <!-- Issue selector -->
+    <div class="issue-selector">
+      <span class="issue-selector__current">Issue 002</span>
+      <select onchange="if(this.value) window.location.href=this.value" aria-label="选择期刊">
+        <option value="../articles.html">Latest (Current Issue)</option>
+        <option value="issue-003.html">2026.06.26 (Issue 003)</option>
+        <option value="issue-002.html" selected>2026.06.25</option>
+        <option value="issue-001.html">2026.06.24 (Issue 001)</option>
+      </select>
+    </div>
+
+    <!-- Focus · 焦点 (Cover Story) -->
+    <section style="margin-bottom: clamp(48px, 6vw, 72px);">
+      <h2 class="section-label">Focus <span>焦点</span></h2>
+      <a href="../articles/2026-06-25-openai-jalapeno-chip.html" class="cover-story-link" itemscope itemtype="https://schema.org/NewsArticle">
+        <h3 class="cover-story-title" itemprop="headline">OpenAI 的 Jalapeño：当模型开始定义芯片</h3>
+        <p class="cover-story-deck" itemprop="description">9个月流片、推理成本砍半、功耗降三成——但博通要微软先买40%才肯开工，资本市场用脚投票。"模型定义芯片"的时代真的来了吗？飞轮启动前，谁来为这颗辣椒买单？</p>
+        <meta itemprop="datePublished" content="2026-06-25">
+        <span class="cover-story-byline">Dawn Vision · 约 9 分钟阅读 <span style="color: var(--klein); margin-left: 6px;">→</span></span>
+      </a>
+    </section>
+
+    <!-- Brief · 资讯 -->
+    <section style="margin-bottom: clamp(48px, 6vw, 72px);">
+      <h2 class="section-label">Brief <span>资讯</span></h2>
+      <div class="article-grid">
+        <a href="../articles/2026-06-25-accenture-layoffs.html" class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+          <span class="article-card__tag">AI Agent · 就业市场</span>
+          <h3 class="article-card__title" itemprop="headline">埃森哲单日蒸发千亿：AI Agent "上岗"的残酷元年</h3>
+          <p class="article-card__excerpt" itemprop="description">单日暴跌 18%、甲骨文裁员 2.1 万——当 AI Agent 开始按"任务"而非"人天"计费，咨询行业的百年商业模式正在坍塌。47比3的人员配比，不是效率提升，是岗位蒸发。</p>
+        </a>
+
+        <a href="../articles/2026-06-25-agent-runaway.html" class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+          <span class="article-card__tag">AI 安全 · 治理</span>
+          <h3 class="article-card__title" itemprop="headline">54 起失控事件与 AWS 13 小时宕机：Agent 是超级员工还是危险盲盒？</h3>
+          <p class="article-card__excerpt" itemprop="description">IBM 调研：企业年均遭遇 54 起 Agent 失控事件。AWS 宕机真相——元凶是自家 AI 助手绕过审批删了环境。60%想部署，17%真落地，治理能力已被远远甩在身后。</p>
+        </a>
+
+        <a href="../articles/2026-06-25-doubao-pricing.html" class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+          <span class="article-card__tag">国产 AI · 商业化</span>
+          <h3 class="article-card__title" itemprop="headline">豆包 68 元/月、阿里云夜间 2 折：国产 AI 的价格屠夫时刻</h3>
+          <p class="article-card__excerpt" itemprop="description">豆包三档订阅对标 ChatGPT 半价、阿里云首创算力分时定价夜间低至 2 折、Cursor 发布 Agent 专用 Git——AI 正在从"奢侈品"变成像电力一样的"公用事业"。</p>
+        </a>
+
+        <a href="../articles/2026-06-25-model-arms-race.html" class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+          <span class="article-card__tag">大模型 · 行业动态</span>
+          <h3 class="article-card__title" itemprop="headline">六月模型军备赛：GPT-5.6、Claude 4.8、Gemini 3.5 齐发</h3>
+          <p class="article-card__excerpt" itemprop="description">三家顶级实验室罕见同一时间窗口发布旗舰模型，150万Token上下文、科学推理登顶、Qwen-AgentWorld 超越 GPT-5.4——史上最密集的模型神仙打架正在上演。</p>
+        </a>
+
+        <a href="../articles/2026-06-25-ai-funding-boom.html" class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+          <span class="article-card__tag">AI 创投 · 资本市场</span>
+          <h3 class="article-card__title" itemprop="headline">MirendilAI 2 亿、昆仑行 90 天三轮数十亿：AI 超级吸金进行时</h3>
+          <p class="article-card__excerpt" itemprop="description">20人"AI复仇者联盟"拿下2亿美元融资，具身智能赛道90天数十亿，6月前两周中国AI融资超45亿——一级市场狂热，二级市场却已经开始"看数字不看故事"了。</p>
+        </a>
+
+        <a href="../articles/2026-06-25-embodied-ai-boom.html" class="article-card" itemscope itemtype="https://schema.org/NewsArticle">
+          <span class="article-card__tag">具身智能 · 机器人</span>
+          <h3 class="article-card__title" itemprop="headline">京东机器人销量涨10倍、华为发 CloudRobo：具身智能的 2026 夏天</h3>
+          <p class="article-card__excerpt" itemprop="description">京东机器人6月销量同比暴涨10倍，华为发布云边端一体化机器人生态CloudRobo，英伟达Jetson Thor算力7.5倍提升，特斯拉Optimus V3年底小规模量产——具身智能从PPT走进工厂仓库只用了半年。</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Cao! · 槽点! (today's piece - full bleed) -->
+  <div class="cao-section">
+    <div class="container" style="padding-top: clamp(40px, 5vw, 56px); padding-bottom: clamp(40px, 5vw, 56px);">
+      <div style="font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.45); font-family: var(--serif-display); font-weight: 700; margin-bottom: 24px;">Today's Rant</div>
+      <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; color: #fff; letter-spacing: -1px; line-height: 1.1; margin-bottom: 16px; max-width: 640px;">Cao! <span style="font-weight: 400; font-size: 0.6em; font-style: italic; opacity: 0.5; font-family: var(--sans);">槽点!</span></h2>
+      <a href="../cao/2026-06-25-llm-stock.html" class="cao-featured" itemscope itemtype="https://schema.org/NewsArticle">
+        <h3 style="font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 700; color: rgba(255,255,255,0.95); line-height: 1.25; margin-bottom: 12px; letter-spacing: -0.3px;" itemprop="headline">"LLM" 上市了，但它是卖梅子的——溜溜梅暴涨 193% 始末</h3>
+        <p style="font-size: 0.92rem; color: rgba(255,255,255,0.5); line-height: 1.6; font-style: italic; font-family: var(--sans); max-width: 560px; margin-bottom: 16px;" itemprop="description">卖青梅零食的溜溜梅港交所挂牌首日暴涨 193%，市值破百亿。原因很荒诞：股票简称叫"LLM"，和大语言模型缩写一模一样。AI 泡沫以最搞笑的方式照进了现实。</p>
+        <span style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.3); font-family: var(--serif-display); font-weight: 600;">约 4 分钟阅读 <span style="color: rgba(255,255,255,0.6); margin-left: 6px;">→</span></span>
+      </a>
+      <div style="margin-top: 20px;">
+        <a href="../cao.html" class="cao-more-link">View All Cao! →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer (flush with content) -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__brand">Dawn Vision</div>
+      <div class="site-footer__meta">© 2026 · Daily at 16:30 CST · Weekdays Only</div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A2A协议进入生产年：Google开源、阿里云落地、微信率先接入 | Dawn Vision</title>
+  <meta name="description" content="Google将A2A协议开源移交Linux基金会，v0.3.0支持四套SDK和三种交互模式；阿里云推出AgentRun生产级平台；微信基于A2A向手机厂商开放能力，荣耀率先落地。Agent间通信的TCP/IP时代正在到来。">
+  <meta name="keywords" content="Dawn Vision, A2A协议, Agent通信, Google开源, 阿里云AgentRun, Linux基金会, Agent互联网">
+  <meta name="author" content="Dawn Vision">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://qlhouseclub.github.io/DawnVision/articles/2026-06-26-a2a-production.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://qlhouseclub.github.io/DawnVision/articles/2026-06-26-a2a-production.html">
+  <meta property="og:title" content="A2A协议进入生产年：Agent间通信的TCP/IP时刻">
+  <meta property="og:description" content="Google开源、阿里云落地、微信接入——A2A协议从标准制定进入生产实践。">
+  <meta property="og:site_name" content="Dawn Vision">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.svg">
+  <meta property="article:published_time" content="2026-06-26T16:30:00+08:00">
+  <meta property="article:author" content="Dawn Vision">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="A2A协议进入生产年">
+  <meta name="twitter:description" content="Agent间通信的TCP/IP时刻正在到来。">
+  <meta name="twitter:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.svg">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"NewsArticle","headline":"A2A协议进入生产年：Google开源、阿里云落地、微信率先接入","description":"Agent-to-Agent协议从标准制定进入生产实践阶段。","datePublished":"2026-06-26T16:30:00+08:00","author":{"@type":"Organization","name":"Dawn Vision"},"publisher":{"@type":"Organization","name":"Dawn Vision","url":"https://qlhouseclub.github.io/DawnVision/"},"inLanguage":"zh-CN","image":"https://qlhouseclub.github.io/DawnVision/assets/og-image.svg","wordCount":750}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
+  <script src="../assets/interactions.js" defer></script>
+</head>
+<body>
+<nav class="inner-nav" role="navigation">
+  <div class="inner-nav__inner">
+    <div class="inner-nav__group">
+      <a href="../index.html" class="inner-nav__link">Home</a>
+      <a href="../articles.html" class="inner-nav__link inner-nav__link--active">Articles</a>
+    </div>
+    <a href="../index.html" class="inner-nav__brand">Dawn Vision<small>Daily Briefing</small></a>
+    <div class="inner-nav__group">
+      <a href="../cao.html" class="inner-nav__link">Cao</a>
+      <a href="../about.html" class="inner-nav__link">About</a>
+    </div>
+  </div>
+</nav>
+<main role="main">
+<div class="article-page__hero">
+  <div class="article-page__hero-inner">
+    <a href="../articles.html" class="article-page__back" style="color: rgba(255,255,255,0.5); margin-bottom: 32px; display: inline-block;">← Back to Articles</a>
+    <div class="article-page__hero-label">Brief · 资讯</div>
+    <h1 class="article-page__hero-title">A2A 协议<br>进入生产年</h1>
+    <p class="article-page__hero-deck">Google开源移交Linux基金会、阿里云推出生产级AgentRun平台、微信率先接入手机厂商——Agent之间的"普通话"正在从论文里走进生产环境。</p>
+  </div>
+</div>
+<article class="article-page">
+  <div class="container--narrow">
+    <div class="article-page__meta" style="margin-bottom: 48px;">
+      <span>Dawn Vision 编辑部</span>
+      <span>2026.06.26</span>
+      <span>约 4 分钟阅读</span>
+      <span>Issue 003</span>
+    </div>
+    <div class="article-page__content">
+      <p>互联网之所以能成为互联网，是因为所有计算机都说同一种"话"——TCP/IP。</p>
+      <p>Agent世界也在等待它的TCP/IP时刻。6月，这个时刻似乎更近了一步。</p>
+      <h2>从Google开源到Linux基金会</h2>
+      <p>Google正式将A2A（Agent-to-Agent）协议的开源仓库移交Linux基金会治理，最新版本v0.3.0已经具备了生产级协议的核心要素：基于JSON-RPC 2.0 over HTTP(S)的通信层、通过AgentCard实现的能力自描述与服务发现、Task生命周期管理（submitted/working/completed/failed）、TextPart/FilePart/DataPart三部分消息协议。</p>
+      <p>更重要的是官方SDK的覆盖：Python、JavaScript、Java、.NET四套官方SDK同时发布，意味着主流技术栈的开发者都可以直接接入，不需要自己从头实现协议细节。同步、异步、流式（SSE）三种交互模式也全部支持——从简单的问答到复杂的长周期协作任务都能覆盖。</p>
+      <h2>阿里云AgentRun：生产环境的第一道考题</h2>
+      <p>协议有了，真正难的是生产环境的工程问题。阿里云在6月16日发布的AgentRun平台，正面回答了这些问题。</p>
+      <p>多Agent协作在Demo里看起来很美——几个Agent聊聊天就把事办了。但到了生产环境，问题立刻来了：Agent怎么找到彼此？（注册中心/服务发现）跨Agent的调用怎么做鉴权？（API Key/HTTP Basic Auth）不同环境（开发/预发/生产）怎么隔离？（Workspace逻辑隔离）调用链出了问题怎么排查？（分布式链路追踪）</p>
+      <p>AgentRun给出了一套相对完整的解法：通过Discovery Endpoint按环境管理发现入口，内置凭证体系处理跨Agent鉴权，Workspace实现环境隔离。在"希希咖啡厅"的演示场景中，coffee_agent负责点单、delivery_agent负责配送，一个超级Agent（Orchestrator）负责意图拆解和子任务调度——整个流程通过A2A协议协同完成。</p>
+      <h2>微信率先接入，荣耀第一个落地</h2>
+      <p>最有信号意义的消息是：微信已经基于A2A协议向手机厂商开放Agent能力，荣耀成为第一个落地合作方。</p>
+      <p>这意味着什么？意味着你的手机系统助手（比如荣耀的YOYO）未来可以直接调用微信里的Agent能力——你不需要打开微信，对着手机说"帮我给张三发个消息说我晚到十分钟"，系统Agent通过A2A协议和微信Agent通信，直接完成任务。</p>
+      <div class="pull-quote">
+        "A2A之于Agent，就像HTTP之于Web。协议本身不产生价值，协议之上的生态才产生价值。"
+        <span class="pull-quote__attr">—— 云原生技术社区评论</span>
+      </div>
+      <h2>A2A和MCP的分工正在清晰</h2>
+      <p>很多人在问：已经有了MCP（Model Context Protocol），为什么还需要A2A？两者的定位正在变得清晰：</p>
+      <p>MCP解决的是"模型连接工具"的问题——Agent怎么调用数据库、怎么读文件、怎么操作API，它是单向的、无状态的、事务式的，就像浏览器和服务器之间的请求/响应。</p>
+      <p>A2A解决的是"Agent连接Agent"的问题——两个对等的Agent怎么协商任务、怎么分配工作、怎么同步状态，它是双向的、有状态的、协作式的，就像两个人之间的对话和分工。</p>
+      <p>两者不是竞争关系，而是互补关系。一个Agent通过MCP调用工具完成具体操作，通过A2A和其他Agent协作完成复杂任务。MCP是Agent的"手"，A2A是Agent的"嘴"。</p>
+      <p>协议的地基正在一层层打好。当Agent之间可以无障碍对话、协作、分工的时候，真正的"Agent互联网"才会从PPT走进现实。</p>
+      <hr>
+      <p>明天见。</p>
+    </div>
+    <div style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--color-border-light); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+      <a href="../articles.html" style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--color-brand); text-decoration: none;">← 返回文章列表</a>
+      <a href="../cao/2026-06-26-agent-db-apology.html" style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--color-text-light); text-decoration: none;">今日槽点 →</a>
+    </div>
+    <div class="article-sources">
+      <div class="article-sources__label">Sources · 参考来源</div>
+      <ul class="article-sources__list">
+        <li><a href="https://github.com/google/A2A" target="_blank" rel="noopener noreferrer nofollow">Google A2A协议官方开源仓库（Linux基金会）</a></li>
+        <li><a href="https://www.cnblogs.com/alisystemsoftware/p/20576963" target="_blank" rel="noopener noreferrer nofollow">阿里云云原生 - AgentRun生产级多Agent协作平台</a></li>
+        <li><span style="color:var(--color-text-light);text-decoration:underline;text-decoration-style:dotted;cursor:default;">36氪 - 微信A2A协议接入手机厂商报道</span></li>
+      </ul>
+      <p class="article-sources__note">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，标题、观点、行文均为原创，仅供参考。</p>
+    </div>
+    <div class="article-page__footnote">
+      <p>本文基于 Dawn Vision 认知引擎处理的 5 个源信号生成，经编辑部人工审核。</p>
+      <p>相关入库笔记：<span style="color:var(--color-text-light);text-decoration:underline;text-decoration-style:dotted;cursor:default;">A2A协议生产落地</span> · <span style="color:var(--color-text-light);text-decoration:underline;text-decoration-style:dotted;cursor:default;">MCP与A2A定位差异</span></p>
+    </div>
+  </div>
+</article>
+</main>
+<footer class="site-footer"><div class="container"><div class="site-footer__brand">Dawn Vision</div><div class="site-footer__meta">© 2026 · Daily at 16:30 CST · Weekdays Only</div></div></footer>
+</body>
+</html>
