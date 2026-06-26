@@ -1687,93 +1687,72 @@ main {
    RESPONSIVE — MOBILE (<=700px)
    ══════════════════════════════════════════ */
 @media (max-width: 700px) {
-  /* ── Home nav (blue background) ── */
-  .home__nav {
-    padding: 16px 20px;
+  /* ── Shared mobile nav layout: logo stacked top, 4 links evenly distributed below ── */
+  .home__nav,
+  .inner-nav__inner,
+  .nav {
+    padding: 16px 20px 14px;
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto;
-    gap: 8px 0;
+    gap: 14px 0;
+    align-items: center;
   }
-  .home__nav-group { gap: 16px; }
-  .home__nav-brand {
-    font-size: 1rem;
-    letter-spacing: 2px;
+  /* Brand: centered on row 1, Daily Briefing stacked below */
+  .home__nav-brand,
+  .inner-nav__brand,
+  .nav__brand {
     grid-column: 1 / -1;
     grid-row: 1;
     text-align: center;
-    margin-bottom: 4px;
-  }
-  .home__nav-brand small {
-    display: inline;
-    font-size: 0.5em;
+    font-size: 1.1rem;
     letter-spacing: 3px;
-    margin-left: 8px;
+    justify-self: center;
   }
-  .home__nav-group:first-child { grid-column: 1; grid-row: 2; justify-content: flex-start; }
-  .home__nav-group:last-child { grid-column: 3; grid-row: 2; justify-content: flex-end; }
+  .home__nav-brand small,
+  .inner-nav__brand small,
+  .nav__brand small {
+    display: block;
+    font-size: 0.42em;
+    letter-spacing: 5px;
+    margin-top: 4px;
+    margin-left: 0;
+    font-weight: 400;
+  }
+  /* Flatten link groups so individual links become grid items */
+  .home__nav-group,
+  .inner-nav__group,
+  .nav__group {
+    display: contents;
+  }
+  /* Each link occupies one column, centered */
+  .home__nav-link,
+  .inner-nav__link,
+  .nav__link {
+    grid-row: 2;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 2px;
+    justify-self: center;
+  }
+  /* Position each of the 4 links across the 4 columns */
+  .home__nav-group:first-child .home__nav-link:nth-child(1),
+  .inner-nav__group:first-child .inner-nav__link:nth-child(1),
+  .nav__group:first-child .nav__link:nth-child(1) { grid-column: 1; }
+  .home__nav-group:first-child .home__nav-link:nth-child(2),
+  .inner-nav__group:first-child .inner-nav__link:nth-child(2),
+  .nav__group:first-child .nav__link:nth-child(2) { grid-column: 2; }
+  .home__nav-group:last-child .home__nav-link:nth-child(1),
+  .inner-nav__group:last-child .inner-nav__link:nth-child(1),
+  .nav__group:last-child .nav__link:nth-child(1) { grid-column: 3; }
+  .home__nav-group:last-child .home__nav-link:nth-child(2),
+  .inner-nav__group:last-child .inner-nav__link:nth-child(2),
+  .nav__group:last-child .nav__link:nth-child(2) { grid-column: 4; }
+
+  /* ── Home hero ── */
   .home__hero { padding: 24px; }
   .home__teaser { margin-top: 32px; }
   .home__footer { flex-direction: column; gap: 8px; text-align: center; padding: 16px 24px; }
-
-  /* ── Inner nav (white background, legacy classes) ── */
-  .inner-nav__inner {
-    padding: 16px 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 8px 0;
-  }
-  .inner-nav__group { gap: 16px; }
-  .inner-nav__brand {
-    font-size: 1rem;
-    letter-spacing: 2px;
-    grid-column: 1 / -1;
-    grid-row: 1;
-    text-align: center;
-  }
-  .inner-nav__brand small {
-    display: inline;
-    font-size: 0.45em;
-    letter-spacing: 4px;
-    margin-top: 0;
-    margin-left: 8px;
-  }
-  .inner-nav__group:first-child { grid-column: 1; grid-row: 2; justify-content: flex-start; }
-  .inner-nav__group:last-child { grid-column: 2; grid-row: 2; justify-content: flex-end; }
-
-  /* ── New .nav component (mobile) ── */
-  .nav {
-    padding: 16px 20px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 8px 0;
-  }
-  .nav__brand {
-    font-size: 1rem;
-    letter-spacing: 2px;
-    grid-column: 1 / -1;
-    grid-row: 1;
-    text-align: center;
-    margin-bottom: 4px;
-  }
-  .nav__brand small {
-    display: inline;
-    font-size: 0.5em;
-    letter-spacing: 3px;
-    margin-left: 8px;
-    margin-top: 0;
-  }
-  .nav__group { gap: 16px; }
-  .nav__group:first-child { grid-column: 1; grid-row: 2; justify-content: flex-start; }
-  .nav__group:last-child { grid-column: 2; grid-row: 2; justify-content: flex-end; }
-  .nav--home {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    max-width: 100%;
-    padding: 16px 20px;
-  }
 
   /* ── Issue selector — redesigned for mobile ── */
   .issue-selector {
@@ -1872,7 +1851,6 @@ main {
   .home__title { font-size: 2.4rem; }
   .about-page__name { font-size: 2rem; }
   .masthead__title { font-size: 2.4rem; }
-  .nav__link, .inner-nav__link, .home__nav-link { font-size: 10px; letter-spacing: 2px; }
 }
 
 /* ══════════════════════════════════════════
