@@ -1,0 +1,199 @@
+{
+  "rss_feeds": [
+    {
+      "name": "36氪",
+      "url": "https://36kr.com/feed",
+      "category": "tech_media",
+      "language": "zh",
+      "priority": 1,
+      "keywords": ["AI", "人工智能", "大模型", "Agent", "GPT", "Claude", "OpenAI", "智能体", "LLM", "AIGC", "深度学习", "具身智能", "机器人", "自动驾驶", "芯片", "算力"]
+    },
+    {
+      "name": "极客公园",
+      "url": "https://www.geekpark.net/rss",
+      "category": "tech_media",
+      "language": "zh",
+      "priority": 2,
+      "keywords": ["AI", "人工智能", "大模型", "Agent", "OpenAI", "智能体"]
+    },
+    {
+      "name": "量子位",
+      "url": "https://www.qbitai.com/feed",
+      "category": "ai_media",
+      "language": "zh",
+      "priority": 1,
+      "keywords": ["AI", "大模型", "Agent", "GPT", "LLM", "具身智能", "机器人"]
+    },
+    {
+      "name": "新智元",
+      "url": "https://www.ixinwei.com/feed",
+      "category": "ai_media",
+      "language": "zh",
+      "priority": 2,
+      "keywords": ["AI", "大模型", "Agent", "GPT", "OpenAI"]
+    },
+    {
+      "name": "InfoQ中文",
+      "url": "https://www.infoq.cn/feed",
+      "category": "dev_media",
+      "language": "zh",
+      "priority": 2,
+      "keywords": ["AI", "Agent", "大模型", "AI编程", "开发工具"]
+    },
+    {
+      "name": "晚点LatePost",
+      "url": "https://www.latepost.com/rss/news",
+      "category": "tech_media",
+      "language": "zh",
+      "priority": 1,
+      "keywords": ["AI", "人工智能", "大模型", "科技", "融资"]
+    },
+    {
+      "name": "TechCrunch AI",
+      "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "category": "tech_media",
+      "language": "en",
+      "priority": 1,
+      "keywords": ["AI", "LLM", "Agent", "OpenAI", "funding", "startup"]
+    },
+    {
+      "name": "The Verge AI",
+      "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+      "category": "tech_media",
+      "language": "en",
+      "priority": 2,
+      "keywords": ["AI", "OpenAI", "Google", "Microsoft"]
+    },
+    {
+      "name": "Ars Technica AI",
+      "url": "https://feeds.arstechnica.com/arstechnica/technology-lab",
+      "category": "tech_media",
+      "language": "en",
+      "priority": 2,
+      "keywords": ["AI", "OpenAI", "algorithm"]
+    },
+    {
+      "name": "OpenAI Blog",
+      "url": "https://openai.com/blog/rss.xml",
+      "category": "official_blog",
+      "language": "en",
+      "priority": 1,
+      "keywords": []
+    },
+    {
+      "name": "Google AI Blog",
+      "url": "https://blog.google/technology/ai/rss/",
+      "category": "official_blog",
+      "language": "en",
+      "priority": 1,
+      "keywords": []
+    },
+    {
+      "name": "Anthropic News",
+      "url": "https://www.anthropic.com/feed.xml",
+      "category": "official_blog",
+      "language": "en",
+      "priority": 1,
+      "keywords": []
+    },
+    {
+      "name": "Google DeepMind",
+      "url": "https://deepmind.google/blog/rss.xml",
+      "category": "official_blog",
+      "language": "en",
+      "priority": 1,
+      "keywords": []
+    },
+    {
+      "name": "Microsoft AI Blog",
+      "url": "https://blogs.microsoft.com/ai/feed/",
+      "category": "official_blog",
+      "language": "en",
+      "priority": 2,
+      "keywords": []
+    },
+    {
+      "name": "GitHub Blog",
+      "url": "https://github.blog/feed/",
+      "category": "dev_tools",
+      "language": "en",
+      "priority": 2,
+      "keywords": ["Copilot", "AI", "coding"]
+    },
+    {
+      "name": "Hacker News",
+      "url": "https://hnrss.org/frontpage",
+      "category": "community",
+      "language": "en",
+      "priority": 2,
+      "keywords": ["AI", "LLM", "GPT", "Agent", "Claude", "OpenAI", "Cursor"]
+    }
+  ],
+
+  "x_accounts": [
+    {"handle": "@jer_crane", "note": "PocketOS创始人-AI编程事故"},
+    {"handle": "@aborruso", "note": "AI工具动态"},
+    {"handle": "@jimfan", "note": "AI Agent"},
+    {"handle": "@swyx", "note": "AI开发生态"},
+    {"handle": "@rohanpaul", "note": "AI投资"}
+  ],
+
+  "categories": {
+    "cover": {
+      "label_zh": "焦点",
+      "label_en": "Focus",
+      "description": "封面故事，当日最重要的AI事件，需要深度分析，约2000-2500字",
+      "word_count_range": [2000, 2800],
+      "read_time": "约 10 分钟阅读",
+      "source_count": [4, 7]
+    },
+    "brief": {
+      "label_zh": "资讯",
+      "label_en": "Brief",
+      "description": "Brief资讯，单篇聚焦一个话题，约700-900字",
+      "word_count_range": [700, 900],
+      "read_time": "约 5 分钟阅读",
+      "source_count": [2, 4],
+      "tags": [
+        {"zh": "大模型 · 商业分析", "en": "LLM · Business"},
+        {"zh": "AI 编程 · 工具竞争", "en": "AI Coding · Tools"},
+        {"zh": "AI Agent · 工程实践", "en": "AI Agent · Engineering"},
+        {"zh": "AI 商业化 · 行业观察", "en": "AI Biz · Industry"},
+        {"zh": "算力基建 · 国产替代", "en": "Compute · Infrastructure"},
+        {"zh": "Agent 协议 · 技术标准", "en": "Agent Protocol · Standards"},
+        {"zh": "具身智能 · 机器人", "en": "Embodied AI · Robotics"},
+        {"zh": "AI 监管 · 政策", "en": "AI Regulation · Policy"},
+        {"zh": "AI 视频 · 内容生成", "en": "AI Video · Generation"},
+        {"zh": "一人公司 · 创业", "en": "Solo Startup"},
+        {"zh": "微信生态 · A2A", "en": "WeChat Ecosystem"},
+        {"zh": "AI 电商 · 行业研究", "en": "AI E-commerce"}
+      ]
+    },
+    "cao": {
+      "label_zh": "槽点",
+      "label_en": "Cao!",
+      "description": "Cao槽点，幽默吐槽风格，约600-900字",
+      "word_count_range": [600, 900],
+      "read_time": "约 4 分钟阅读",
+      "source_count": [1, 3]
+    }
+  },
+
+  "filter": {
+    "min_signal_count": 8,
+    "cover_keywords": ["战争", "终局", "拐点", "时代", "革命", "首发", "重磅", "颠覆", "爆发", "发布", "开放", "上线", "暴涨", "暴跌"],
+    "exclude_keywords": ["股票推荐", "加群", "扫码领", "优惠券", "抽奖", "广告", "PR稿", "通稿", "软文"],
+    "dedup_similarity_threshold": 0.6,
+    "max_age_hours": 48,
+    "priority_categories": ["official_blog", "tech_media", "ai_media"],
+    "cover_preference": ["产品发布", "战略调整", "融资并购", "政策变化", "数据发布", "技术突破", "入口争夺", "生态变化"]
+  },
+
+  "schedule": {
+    "collect_time": "14:00",
+    "draft_deadline": "15:30",
+    "publish_time": "16:30",
+    "timezone": "Asia/Shanghai",
+    "workdays_only": true
+  }
+}
