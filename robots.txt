@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /assets/
+Disallow: /assets/interactions.js
 
 Sitemap: https://qlhouseclub.github.io/DawnVision/sitemap.xml
 
