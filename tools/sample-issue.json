@@ -1,0 +1,67 @@
+{
+  "issue": {
+    "number": "004",
+    "date": "2026-06-27",
+    "date_display": "2026.06.27"
+  },
+  "cover": {
+    "slug": "example-cover-story",
+    "title": "封面文章完整标题：这里是冒号后面的副标题部分",
+    "title_short": "封面文章短标题",
+    "title_break": "封面文章<br>完整标题",
+    "deck": "封面文章导语，概括核心论点，制造悬念，100字以内。要有数据点或冲突点，让读者想点进来。",
+    "keywords": "关键词1,关键词2,关键词3",
+    "og_description": "OG分享用简短描述，60字以内。",
+    "twitter_description": "Twitter卡片描述。",
+    "read_time": "约 10 分钟阅读",
+    "word_count": 2500,
+    "sources": [
+      {"text": "来源1 - 文章标题", "url": "https://example.com/1"},
+      {"text": "来源2 - 文章标题", "url": ""}
+    ],
+    "body_html": "      <p>开头段，用场景或数据切入，拒绝\"近日\"\"最近\"。</p>\n      <h2>第一个小节</h2>\n      <p>内容...<strong>关键数据加粗</strong>...</p>\n      <h2>第二个小节</h2>\n      <p>内容...</p>\n      <h2>终局判断</h2>\n      <p>给出判断或预测...</p>",
+    "pull_quote": {"text": "金句引用内容", "attr": "—— 出处"},
+    "cognitive_notes": "笔记1 · 笔记2 · 笔记3",
+    "source_summary": "本文基于 Dawn Vision 认知引擎处理的 X 个源信号自动生成，经编辑部人工审核。素材来源：...。"
+  },
+  "briefs": [
+    {
+      "slug": "example-brief-1",
+      "category": "分类标签",
+      "category_en": "Category",
+      "title": "Brief文章标题",
+      "title_break": "标题换行<br>位置",
+      "deck": "Brief导语，50字以内，一句话概括核心信息。",
+      "keywords": "关键词1,关键词2",
+      "og_description": "OG描述，60字以内。",
+      "read_time": "约 5 分钟阅读",
+      "word_count": 800,
+      "sources": [
+        {"text": "来源1", "url": "https://example.com/1"},
+        {"text": "来源2", "url": ""}
+      ],
+      "body_html": "      <p>Brief正文HTML开头段...</p>\n      <h2>小节标题</h2>\n      <p>内容...</p>",
+      "pull_quote": {"text": "引用内容", "attr": "—— 出处"},
+      "cognitive_notes": "笔记1 · 笔记2",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 X 个源信号生成，经编辑部人工审核。"
+    }
+  ],
+  "cao": {
+    "slug": "example-cao",
+    "title": "Cao文章标题",
+    "title_break": "标题换行<br>位置",
+    "deck": "Cao导语，幽默风格，80字以内。要有梗，有反差感。",
+    "keywords": "关键词1,关键词2",
+    "og_description": "OG描述。",
+    "read_time": "约 4 分钟阅读",
+    "word_count": 700,
+    "sources": [
+      {"text": "来源1", "url": "https://example.com/1"}
+    ],
+    "body_html": "      <p>朋友们，今天的槽点...</p>\n      <h2>吐槽核心</h2>\n      <p>内容...</p>\n      <h2>值得反思的细节</h2>\n      <p>内容...</p>\n      <p>最后说一句：...</p>",
+    "pull_quote": {"text": "金句引用", "attr": "—— Hacker News热评"},
+    "cognitive_notes": "笔记1 · 笔记2",
+    "source_summary": "本文基于 Dawn Vision 认知引擎处理的公开信息整理，素材来源：...。",
+    "footnote_tip": "温馨提示：实用提醒内容。"
+  }
+}
