@@ -6,15 +6,7 @@
       "category": "tech_media",
       "language": "zh",
       "priority": 1,
-      "keywords": ["AI", "人工智能", "大模型", "Agent", "GPT", "Claude", "OpenAI", "智能体", "LLM", "AIGC", "深度学习", "具身智能", "机器人", "自动驾驶", "芯片", "算力"]
-    },
-    {
-      "name": "极客公园",
-      "url": "https://www.geekpark.net/rss",
-      "category": "tech_media",
-      "language": "zh",
-      "priority": 2,
-      "keywords": ["AI", "人工智能", "大模型", "Agent", "OpenAI", "智能体"]
+      "keywords": ["AI", "人工智能", "大模型", "Agent", "GPT", "Claude", "OpenAI", "智能体", "LLM", "AIGC", "深度学习", "具身智能", "机器人", "自动驾驶", "芯片", "算力", "创业", "新媒体"]
     },
     {
       "name": "量子位",
@@ -22,15 +14,7 @@
       "category": "ai_media",
       "language": "zh",
       "priority": 1,
-      "keywords": ["AI", "大模型", "Agent", "GPT", "LLM", "具身智能", "机器人"]
-    },
-    {
-      "name": "新智元",
-      "url": "https://www.ixinwei.com/feed",
-      "category": "ai_media",
-      "language": "zh",
-      "priority": 2,
-      "keywords": ["AI", "大模型", "Agent", "GPT", "OpenAI"]
+      "keywords": ["AI", "大模型", "Agent", "GPT", "LLM", "具身智能", "机器人", "AI设计", "AI视频"]
     },
     {
       "name": "InfoQ中文",
@@ -41,12 +25,12 @@
       "keywords": ["AI", "Agent", "大模型", "AI编程", "开发工具"]
     },
     {
-      "name": "晚点LatePost",
-      "url": "https://www.latepost.com/rss/news",
+      "name": "爱范儿",
+      "url": "https://www.ifanr.com/feed",
       "category": "tech_media",
       "language": "zh",
-      "priority": 1,
-      "keywords": ["AI", "人工智能", "大模型", "科技", "融资"]
+      "priority": 2,
+      "keywords": ["AI", "人工智能", "AIGC", "AI设计", "AI产品"]
     },
     {
       "name": "TechCrunch AI",
@@ -54,7 +38,7 @@
       "category": "tech_media",
       "language": "en",
       "priority": 1,
-      "keywords": ["AI", "LLM", "Agent", "OpenAI", "funding", "startup"]
+      "keywords": ["AI", "LLM", "Agent", "OpenAI", "funding", "startup", "solopreneur"]
     },
     {
       "name": "The Verge AI",
@@ -105,14 +89,6 @@
       "keywords": []
     },
     {
-      "name": "Microsoft AI Blog",
-      "url": "https://blogs.microsoft.com/ai/feed/",
-      "category": "official_blog",
-      "language": "en",
-      "priority": 2,
-      "keywords": []
-    },
-    {
       "name": "GitHub Blog",
       "url": "https://github.blog/feed/",
       "category": "dev_tools",
@@ -126,7 +102,15 @@
       "category": "community",
       "language": "en",
       "priority": 2,
-      "keywords": ["AI", "LLM", "GPT", "Agent", "Claude", "OpenAI", "Cursor"]
+      "keywords": ["AI", "LLM", "GPT", "Agent", "Claude", "OpenAI", "Cursor", "indie hacker", "solopreneur"]
+    },
+    {
+      "name": "Indie Hackers",
+      "url": "https://www.indiehackers.com/feed.xml",
+      "category": "community",
+      "language": "en",
+      "priority": 2,
+      "keywords": ["AI", "startup", "solopreneur", "indie maker", "MRR"]
     }
   ],
 
@@ -135,14 +119,54 @@
     {"handle": "@aborruso", "note": "AI工具动态"},
     {"handle": "@jimfan", "note": "AI Agent"},
     {"handle": "@swyx", "note": "AI开发生态"},
-    {"handle": "@rohanpaul", "note": "AI投资"}
+    {"handle": "@rohanpaul", "note": "AI投资"},
+    {"handle": "@levelsio", "note": "独立开发者/AI轻创业"},
+    {"handle": "@pakpakpak", "note": "AI产品设计"}
   ],
+
+  "web_search_queries": {
+    "zh_core": [
+      "AI 人工智能 今日新闻 最新动态",
+      "大模型 Agent 智能体 最新进展",
+      "AI 创业 融资 最新"
+    ],
+    "en_core": [
+      "AI artificial intelligence news today",
+      "LLM AI agent latest announcement",
+      "AI startup funding launch this week"
+    ],
+    "ai_design": [
+      "AI设计 AI生成设计 最新",
+      "AI UI/UX design tools",
+      "AI生成图片 Midjourney Stable Diffusion 最新",
+      "AI video generation Sora Kling 最新"
+    ],
+    "ai_newmedia": [
+      "AI新媒体 AI内容创作 最新",
+      "AI写作 AI自媒体 案例",
+      "AI内容生成 公众号 短视频 AI"
+    ],
+    "ai_solopreneur": [
+      "AI一人公司 AI轻创业 案例",
+      "indie hacker AI solopreneur MRR",
+      "AI side project revenue",
+      "AI工具创业 独立开发者"
+    ],
+    "vertical": [
+      "AI编程 Cursor Copilot 最新",
+      "具身智能 机器人 最新突破",
+      "算力芯片 AI基建 国产",
+      "AI监管 政策法规 最新",
+      "A2A协议 MCP Agent协议 最新",
+      "微信支付宝 AI Agent 最新"
+    ]
+  },
 
   "categories": {
     "cover": {
       "label_zh": "焦点",
       "label_en": "Focus",
-      "description": "封面故事，当日最重要的AI事件，需要深度分析，约2000-2500字",
+      "description": "封面故事，当日最重要的AI事件，深度分析，约2000-2800字",
       "word_count_range": [2000, 2800],
       "read_time": "约 10 分钟阅读",
       "source_count": [4, 7]
@@ -163,8 +187,10 @@
         {"zh": "Agent 协议 · 技术标准", "en": "Agent Protocol · Standards"},
         {"zh": "具身智能 · 机器人", "en": "Embodied AI · Robotics"},
         {"zh": "AI 监管 · 政策", "en": "AI Regulation · Policy"},
-        {"zh": "AI 视频 · 内容生成", "en": "AI Video · Generation"},
-        {"zh": "一人公司 · 创业", "en": "Solo Startup"},
+        {"zh": "AI 新媒体 · 内容创作", "en": "AI New Media"},
+        {"zh": "AI 设计 · 创意工具", "en": "AI Design · Creative"},
+        {"zh": "AI 轻创业 · 一人公司", "en": "AI Solopreneur"},
+        {"zh": "AI 视频 · 多模态", "en": "AI Video · Multimodal"},
         {"zh": "微信生态 · A2A", "en": "WeChat Ecosystem"},
         {"zh": "AI 电商 · 行业研究", "en": "AI E-commerce"}
       ]
@@ -181,12 +207,12 @@
 
   "filter": {
     "min_signal_count": 8,
-    "cover_keywords": ["战争", "终局", "拐点", "时代", "革命", "首发", "重磅", "颠覆", "爆发", "发布", "开放", "上线", "暴涨", "暴跌"],
-    "exclude_keywords": ["股票推荐", "加群", "扫码领", "优惠券", "抽奖", "广告", "PR稿", "通稿", "软文"],
+    "cover_keywords": ["战争", "终局", "拐点", "时代", "革命", "首发", "重磅", "颠覆", "爆发", "发布", "开放", "上线", "暴涨", "暴跌", "融资", "收购", "开源", "突破"],
+    "exclude_keywords": ["股票推荐", "加群", "扫码领", "优惠券", "抽奖", "广告", "PR稿", "通稿", "软文", "微商", "代理"],
     "dedup_similarity_threshold": 0.6,
-    "max_age_hours": 48,
+    "max_age_hours": 72,
     "priority_categories": ["official_blog", "tech_media", "ai_media"],
-    "cover_preference": ["产品发布", "战略调整", "融资并购", "政策变化", "数据发布", "技术突破", "入口争夺", "生态变化"]
+    "cover_preference": ["产品发布", "战略调整", "融资并购", "政策变化", "数据发布", "技术突破", "入口争夺", "生态变化", "创业案例", "设计革新"]
   },
 
   "schedule": {
