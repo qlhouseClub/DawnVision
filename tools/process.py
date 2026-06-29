@@ -649,7 +649,7 @@ def build_index_page(issue, cover):
 
 
 def build_cao_page(issue, cao):
-    """更新cao.html，在cao-listing顶部插入新条目"""
+    """更新cao.html，在cao-listing顶部插入新条目（幂等：已存在则跳过）"""
     date = issue["date"]
     date_display = issue["date_display"]
     issue_num = issue["number"]
@@ -658,6 +658,14 @@ def build_cao_page(issue, cao):
     content = cao_path.read_text(encoding="utf-8")
 
     cao_url = f"cao/{date}-{cao['slug']}.html"
+
+    # 幂等检查：如果该cao条目URL已存在，先移除旧条目再重新插入（支持内容更新）
+    # 匹配整个 <a>...</a> 块
+    existing_pattern = re.compile(
+        r'\s*<a href="' + re.escape(cao_url) + r'" class="cao-list__item".*?</a>\s*',
+        re.DOTALL
+    )
+    content = existing_pattern.sub('\n', content)
 
     new_item = f'''      <a href="{cao_url}" class="cao-list__item" itemscope itemtype="https://schema.org/NewsArticle">
         <div class="cao-list__meta">Issue {issue_num} · {date_display}</div>
@@ -685,7 +693,7 @@ def build_cao_page(issue, cao):
 
 
 def update_sitemap(issue, cover, briefs, cao):
-    """更新sitemap.xml，添加新一期所有URL"""
+    """更新sitemap.xml，添加新一期所有URL（幂等：已存在则替换）"""
     date = issue["date"]
     issue_num = issue["number"]
     sitemap_path = SITE_ROOT / "sitemap.xml"
@@ -742,6 +750,13 @@ def update_sitemap(issue, cover, briefs, cao):
         r'\g<1>' + date,
         content
     )
+
+    # 幂等：先移除已存在的同期Issue URL块（防止重复插入）
+    issue_block_pattern = re.compile(
+        r'\n*  <!-- Issue ' + str(issue_num) + r' Articles.*?-->\s*(?:<url>.*?</url>\s*)+',
+        re.DOTALL
+    )
+    content = issue_block_pattern.sub('\n', content)
 
     # 在</urlset>前插入新URL块（按时间倒序，插在第一个<!-- Issue注释前面）
     date_display_formatted = issue["date_display"]
