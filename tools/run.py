@@ -140,12 +140,12 @@ def cmd_publish(args):
         cmd.append("--dry-run")
     run_step(cmd)
 
-    # 发布后构建知识网络关联
+    # 发布后构建知识网络关联（仅Obsidian MD）
     print(f"\n{'─'*60}")
-    print("▶ 发布后知识网络关联...")
+    print("▶ 发布后构建Obsidian知识网络...")
     print(f"{'─'*60}")
     run_step([sys.executable, str(TOOLS_DIR / "knowledge.py"), "--rebuild"], check=False)
-    print("\n✅ 知识网络已更新")
+    print("\n✅ Obsidian知识网络已更新")
 
 
 def cmd_knowledge(args):

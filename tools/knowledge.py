@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 """
-Dawn Vision 知识网络构建脚本
-=============================
+Dawn Vision 知识网络构建脚本（Obsidian专用）
+============================================
 用法: python tools/knowledge.py [--rebuild]
 
 功能:
   1. 扫描所有文章，提取cognitive_notes标签和元数据
   2. 将标签映射到知识主题（knowledge-topics.json）
-  3. 生成知识主题HTML页面到knowledge/目录
-  4. 生成知识索引页 knowledge/index.html
-  5. 更新文章中的"相关入库笔记"：将<span>转为可点击<a>链接
+  3. 生成Obsidian兼容的Markdown文件到knowledge/和notes/目录
+  4. 生成MOC索引文件 知识网络.md
+
+注意:
+  知识网络仅用于Obsidian本地知识库，不生成HTML、不发布到网站。
 """
 
 import json
@@ -247,7 +249,6 @@ def build_knowledge_page(topic, articles_in_topic, topic_map):
       </a>
       <div class="inner-nav__group">
         <a href="../cao.html" class="inner-nav__link">Cao</a>
-        <a href="../knowledge/index.html" class="inner-nav__link inner-nav__link--active" aria-current="page">Knowledge</a>
         <a href="../about.html" class="inner-nav__link">About</a>
       </div>
     </div>
@@ -353,7 +354,6 @@ def build_knowledge_index(topics, topic_articles, topic_map):
       </a>
       <div class="inner-nav__group">
         <a href="../cao.html" class="inner-nav__link">Cao</a>
-        <a href="../knowledge/index.html" class="inner-nav__link inner-nav__link--active" aria-current="page">Knowledge</a>
         <a href="../about.html" class="inner-nav__link">About</a>
       </div>
     </div>
@@ -709,36 +709,16 @@ def main():
         for tag, files in sorted(unmatched.items(), key=lambda x: -len(x[1])):
             print(f"   - {tag} ({len(files)}篇)")
 
-    # 生成知识页面
-    print(f"\n📝 生成知识页面...")
-    for t in topics:
-        slug = t["slug"]
-        arts = topic_articles.get(slug, [])
-        html = build_knowledge_page(t, arts, topic_map)
-        out = KNOWLEDGE_DIR / f"{slug}.html"
-        out.write_text(html, encoding="utf-8")
-        print(f"   ✅ {slug}.html ({len(arts)}篇)")
-
-    # 生成索引页
-    index_html = build_knowledge_index(topics, topic_articles, topic_map)
-    (KNOWLEDGE_DIR / "index.html").write_text(index_html, encoding="utf-8")
-    print(f"   ✅ index.html (知识网络索引)")
-
-    # 更新文章笔记链接
-    print(f"\n🔗 更新文章中的认知笔记链接...")
-    updated = update_article_notes_links(articles, tag_map, norm_tag_map, topic_map)
-    print(f"   ✅ 更新了 {updated} 篇文章的笔记链接")
-
-    # 生成Obsidian Markdown文件
+    # 生成Obsidian Markdown文件（知识网络仅用于Obsidian，不发布到网站）
     print(f"\n📓 生成Obsidian Markdown文件...")
     md_count = generate_markdown_files(topics, articles, topic_articles, topic_map, tag_map, norm_tag_map)
     print(f"   ✅ 生成了 {md_count} 个MD文件 (知识主题+文章笔记+MOC索引)")
 
     print(f"\n{'='*60}")
-    print(f"✅ 知识网络构建完成")
+    print(f"✅ 知识网络构建完成 (Obsidian MD模式)")
     print(f"   {len(topics)} 个知识节点, {matched_count} 条关联")
-    print(f"   网站索引: knowledge/index.html")
     print(f"   Obsidian入口: 知识网络.md")
+    print(f"   注意: 知识网络不发布到网站，仅用于Obsidian")
     print(f"{'='*60}")
 
 

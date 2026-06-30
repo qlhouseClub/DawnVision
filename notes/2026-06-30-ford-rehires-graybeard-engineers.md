@@ -15,8 +15,8 @@ Ford以"AI提效"为由裁掉一批被称为"gray beard"的资深工程师后，
 
 ## 入库知识
 
-- [[cao-ai-fails|AI 翻车现场 (Cao!)]]
 - [[ai-employment|AI 就业冲击]]
+- [[cao-ai-fails|AI 翻车现场 (Cao!)]]
 - [[ai-roi-implementation|AI 项目落地与ROI]]
 
 ## 认知笔记
