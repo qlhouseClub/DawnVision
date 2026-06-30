@@ -112,6 +112,7 @@ def build_nav(active="articles"):
     </a>
     <div class="inner-nav__group">
       <a href="../cao.html" class="inner-nav__link{active_class('cao')}"{active_aria('cao')}>Cao</a>
+      <a href="../knowledge/index.html" class="inner-nav__link{active_class('knowledge')}"{active_aria('knowledge')}>Knowledge</a>
       <a href="../about.html" class="inner-nav__link">About</a>
     </div>
   </div>
@@ -396,6 +397,7 @@ def build_cao_article(data, issue, last_brief_slug):
     </div>
     <div class="article-page__footnote">
       <p>{data["source_summary"]}</p>
+      <p>相关入库笔记：{data.get("cognitive_notes", "AI翻车现场 · Agent失控案例库")}</p>
       <p>{footnote_tip}</p>
     </div>
   </div>
@@ -561,6 +563,7 @@ def build_listing_page(issue, cover, briefs, cao, is_latest=False):
       </a>
       <div class="inner-nav__group">
         <a href="{prefix}cao.html" class="inner-nav__link">Cao</a>
+        <a href="{prefix}knowledge/index.html" class="inner-nav__link">Knowledge</a>
         <a href="{prefix}about.html" class="inner-nav__link">About</a>
       </div>
     </div>
@@ -913,6 +916,22 @@ def main():
         (SITE_ROOT / "sitemap.xml").write_text(sitemap_html, encoding="utf-8")
     generated_files.append("sitemap.xml")
     print(f"   ✅ sitemap.xml")
+
+    # 9. 构建知识网络关联
+    print("🔗 构建知识网络...")
+    if not args.dry_run:
+        try:
+            import subprocess
+            result = subprocess.run(
+                [sys.executable, str(TOOLS_DIR / "knowledge.py"), "--rebuild"],
+                capture_output=True, text=True, cwd=str(SITE_ROOT)
+            )
+            if result.returncode == 0:
+                print(f"   ✅ 知识网络已更新")
+            else:
+                print(f"   ⚠️  知识网络构建异常: {result.stderr[:200]}")
+        except Exception as e:
+            print(f"   ⚠️  知识网络构建失败: {e}")
 
     print()
     print(f"{'='*60}")

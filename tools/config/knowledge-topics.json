@@ -1,0 +1,306 @@
+{
+  "topics": [
+    {
+      "slug": "ai-agent-paradigm",
+      "title": "AI Agent 范式转移",
+      "title_en": "AI Agent Paradigm Shift",
+      "description": "从Chatbot到Agent的范式革命。Agent不是聊天机器人，而是能自主感知-规划-行动-反馈的智能实体。AI-Loop工作模式、Agent四大协议分层、从对话到行动的根本性转变。",
+      "keywords": ["Agent", "智能体", "范式转移", "AI-Loop", "自主行动"],
+      "tags": [
+        "Agent技术全景拆解", "Agent四大协议分层", "AI-Loop工作模式解析",
+        "Agent自主编码可靠性", "多智能体编排落地难点", "Agent集群工作流编排",
+        "从补全到Agent", "人机协作"
+      ],
+      "related": ["agent-protocols", "ai-coding-tools", "agent-production", "one-person-company"]
+    },
+    {
+      "slug": "agent-protocols",
+      "title": "Agent 通信协议：A2A / MCP",
+      "title_en": "Agent Protocols: A2A & MCP",
+      "description": "Agent互联网的TCP/IP时刻。A2A协议解决Agent间通信问题，MCP解决Agent与工具连接问题，ACP/ANP等多协议竞争与协作。",
+      "keywords": ["A2A", "MCP", "Agent协议", "Agent通信", "Linux基金会"],
+      "tags": [
+        "A2A协议深度拆解", "A2A协议与Agent互联网", "A2A协议生产落地",
+        "MCP与A2A定位差异", "Agent互联网的TCP/IP时刻", "Agent基础设施栈",
+        "微信AI与A2A落地"
+      ],
+      "related": ["ai-agent-paradigm", "super-app-agent", "wechat-a2a"]
+    },
+    {
+      "slug": "ai-coding-tools",
+      "title": "AI 编程工具竞争",
+      "title_en": "AI Coding Tools War",
+      "description": "Cursor、GitHub Copilot、Claude Code、Windsurf、Devin群雄逐鹿。从代码补全到Agent编程，从编辑器到全栈IDE的竞争格局演变。",
+      "keywords": ["Cursor", "Copilot", "Claude Code", "AI编程", "Vibe Coding", "AI IDE"],
+      "tags": [
+        "AI编程工具竞争格局", "Cursor产品深度拆解", "开发者生产力变革",
+        "Copilot token计费争议", "AI编程四雄争霸", "Cursor 500万MAU",
+        "Claude Code", "企业成本管控", "Cursor估值80亿"
+      ],
+      "related": ["ai-agent-paradigm", "agent-production", "copilot-pricing"]
+    },
+    {
+      "slug": "agent-production",
+      "title": "Agent 生产环境：错误与权限",
+      "title_en": "Agent in Production",
+      "description": "Agent进入生产环境后的残酷现实：17倍错误放大效应、删库事故、权限管控。40%团队半年内失败的深层原因。",
+      "keywords": ["Agent生产环境", "Agent事故", "错误放大", "权限管控", "Agent安全"],
+      "tags": [
+        "Agent生产环境错误放大效应", "Agent权限最小化原则",
+        "Agent失控案例库", "AI治理框架对比"
+      ],
+      "related": ["ai-coding-tools", "ai-agent-paradigm", "cao-ai-fails"]
+    },
+    {
+      "slug": "llm-pricing",
+      "title": "大模型定价与商业化",
+      "title_en": "LLM Pricing & Commercialization",
+      "description": "大模型定价两极分化：DeepSeek杀到1/35，Claude翻倍涨价。智能路由、分层定价、中间层死亡——价格战的终局在哪里？",
+      "keywords": ["大模型定价", "DeepSeek", "Claude", "API价格", "智能路由", "AI商业化"],
+      "tags": [
+        "大模型定价分层趋势", "智能路由架构", "大模型价格战降温",
+        "AI项目ROI瓶颈分析", "统一语义层架构", "国产大模型定价策略对比",
+        "AI算力公用事业化"
+      ],
+      "related": ["china-llm", "ai-chips-compute", "llm-arms-race"]
+    },
+    {
+      "slug": "china-llm",
+      "title": "国产大模型突围",
+      "title_en": "China LLM Independence",
+      "description": "豆包68元/月、DeepSeek独立战争、Qwen开源追赶。国产大模型在定价、开源、适配国产算力三条战线上的突围。",
+      "keywords": ["国产大模型", "豆包", "DeepSeek", "通义千问", "字节跳动"],
+      "tags": [
+        "国产大模型定价策略对比", "国产大模型突围路径", "开源模型生态全景",
+        "DeepSeek融资纪录", "中国AI独立路线", "五年锁定期耐心资本"
+      ],
+      "related": ["llm-pricing", "ai-chips-compute", "ai-geopolitics"]
+    },
+    {
+      "slug": "ai-chips-compute",
+      "title": "AI 芯片与算力基建",
+      "title_en": "AI Chips & Compute Infrastructure",
+      "description": "OpenAI造芯、谷歌TPU、英伟达CUDA护城河。东数西算工程、国产AI芯片替代率、算力南水北调、绿色数据中心。",
+      "keywords": ["AI芯片", "算力", "英伟达", "CUDA", "TPU", "东数西算", "昇腾", "博通"],
+      "tags": [
+        "AI芯片自研潮全景", "谷歌TPU十三年启示录", "英伟达CUDA护城河解析",
+        "OpenAI垂直整合战略", "国产算力适配", "算力缺口3倍",
+        "东数西算工程进展", "国产AI芯片替代率", "绿色数据中心成本"
+      ],
+      "related": ["openai-vertical", "llm-pricing", "china-llm"]
+    },
+    {
+      "slug": "embodied-ai",
+      "title": "具身智能与人形机器人",
+      "title_en": "Embodied AI & Humanoid Robots",
+      "description": "人形机器人量产元年：Optimus 7月投产、宇树IPO、上半年融资460亿。单价跌入万元级，世界模型让机器人学会预判。",
+      "keywords": ["具身智能", "人形机器人", "Optimus", "宇树科技", "机器人融资", "世界模型"],
+      "tags": [
+        "人形机器人量产元年", "Optimus 5万台", "具身智能融资460亿",
+        "具身智能融资爆发", "具身智能赛道深度", "具身智能产业链全景",
+        "单价跌入万元级", "世界模型", "宇树IPO", "千寻智能全球第一",
+        "人形机器人成本拆解", "AI+物理世界应用地图",
+        "华为CloudRobo", "京东机器人销量涨10倍"
+      ],
+      "related": ["ai-funding", "ai-chips-compute"]
+    },
+    {
+      "slug": "ai-video",
+      "title": "AI 视频生成与商业化",
+      "title_en": "AI Video Generation",
+      "description": "Sora关停25个月仅赚210万，可灵年入1.4亿美元。AI视频从玩具到工具，从成本曲线到商业闭环的残酷分水岭。",
+      "keywords": ["Sora", "可灵AI", "AI视频", "Kling", "Runway", "即梦", "Vidu", "AI短剧"],
+      "tags": [
+        "Sora关停商业失败", "Sora正式版能力拆解", "可灵1.4亿美元年收",
+        "AI视频商业化", "AI视频生成赛道竞争格局", "成本效率",
+        "场景深度", "模型聚合平台", "AI短剧免费化",
+        "内容生产成本曲线下移", "视频vs文本AI商业价值对比"
+      ],
+      "related": ["ai-design-creative", "ai-newmedia"]
+    },
+    {
+      "slug": "ai-design-creative",
+      "title": "AI 设计与创意工具",
+      "title_en": "AI Design & Creative Tools",
+      "description": "Figma代码层+Design Agent硬刚谷歌Stitch。Vibe Design时代到来，设计系统即上下文，Toggle Tax之争——增强专业者还是降低门槛？",
+      "keywords": ["Figma", "AI设计", "Design Agent", "Stitch", "Vibe Design", "创意工具"],
+      "tags": [
+        "Figma代码层更新", "Design Agent", "谷歌Stitch Vibe Design",
+        "Toggle Tax", "设计系统即上下文", "零门槛vs增强专业者"
+      ],
+      "related": ["ai-coding-tools", "ai-video"]
+    },
+    {
+      "slug": "ai-newmedia",
+      "title": "AI 新媒体与内容创作",
+      "title_en": "AI New Media & Content Creation",
+      "description": "AI重塑内容生产链路：从写作、配图、视频到投放的全栈AI化。公众号、短视频、自媒体的新工作流与新机会。",
+      "keywords": ["AI新媒体", "AI写作", "AI内容创作", "自媒体", "AI生成内容", "AIGC"],
+      "tags": [
+        "内容生产成本曲线下移", "AI广告投放优化"
+      ],
+      "related": ["ai-video", "ai-design-creative", "one-person-company"]
+    },
+    {
+      "slug": "one-person-company",
+      "title": "AI 轻创业与一人公司",
+      "title_en": "AI Solopreneur & One-Person Company",
+      "description": "\"一人公司月入200万\"背后：AI应用年留存仅21%的残酷真相。卖结果不卖工具，人机协作才是正道，幸存者偏差下的真实图景。",
+      "keywords": ["一人公司", "solopreneur", "AI创业", "独立开发者", "side project", "MRR"],
+      "tags": [
+        "一人公司元年", "一人公司方法论", "AI应用留存21%",
+        "RevenueCat数据", "高转化低留存", "卖结果不卖工具",
+        "幸存者偏差", "独立开发者工具栈2026", "Agent集群工作流编排"
+      ],
+      "related": ["ai-ecommerce", "ai-newmedia", "ai-agent-paradigm"]
+    },
+    {
+      "slug": "ai-ecommerce",
+      "title": "AI 电商与跨境新范式",
+      "title_en": "AI E-Commerce & Cross-border",
+      "description": "AI电商Pod模式：一个人用AI做跨境电商。Print-on-Demand、AI设计+AI投放+Shopify的最小闭环。",
+      "keywords": ["AI电商", "Pod模式", "跨境电商", "Print-on-Demand", "Shopify", "AI投放"],
+      "tags": [
+        "AI电商Pod模式拆解", "AI Pod电商实操指南", "跨境电商AI工具栈",
+        "一人公司电商案例集", "AI广告投放优化"
+      ],
+      "related": ["one-person-company", "ai-design-creative"]
+    },
+    {
+      "slug": "ai-regulation",
+      "title": "AI 监管与政策",
+      "title_en": "AI Regulation & Policy",
+      "description": "欧盟AI法案正式执行，全球最严监管落地。出口管制将前沿AI定性为国家战略资产，布鲁塞尔效应下的AI合规路径。",
+      "keywords": ["AI监管", "欧盟AI法案", "AI政策", "出口管制", "AI合规", "AI法案"],
+      "tags": [
+        "欧盟AI法案核心条款拆解", "全球AI监管对比图谱",
+        "中国AI公司欧洲合规路径", "布鲁塞尔效应与AI标准输出",
+        "前沿模型战略资产"
+      ],
+      "related": ["ai-geopolitics", "ai-safety-governance"]
+    },
+    {
+      "slug": "ai-geopolitics",
+      "title": "AI 地缘政治",
+      "title_en": "AI Geopolitics",
+      "description": "Anthropic遭出口管制、DeepSeek融资独立战争、硅谷三巨头同盟。AI成为大国博弈核心战场，市场巴尔干化加速。",
+      "keywords": ["AI地缘政治", "出口管制", "AI分裂", "科技冷战", "DeepSeek", "Anthropic"],
+      "tags": [
+        "AI地缘政治分裂", "AI地缘政治", "硅谷三巨头同盟",
+        "AI市场巴尔干化", "Anthropic出口管制", "模型蒸馏诉讼"
+      ],
+      "related": ["ai-regulation", "china-llm", "ai-chips-compute"]
+    },
+    {
+      "slug": "super-app-agent",
+      "title": "超级App的Agent化战争",
+      "title_en": "Super App Agent Wars",
+      "description": "微信与支付宝的Agent战争：16亿人的屏幕变成对话界面。入口第三次争夺战，授权体系与信任成为真正战场。",
+      "keywords": ["微信", "支付宝", "Agent战争", "超级App", "服务分发", "小微"],
+      "tags": [
+        "国民级应用Agent化战略", "服务分发权迁移史", "Agent时代授权体系设计",
+        "超级App的Agent转型", "微信AI生态路线图"
+      ],
+      "related": ["wechat-a2a", "agent-protocols", "ai-agent-paradigm"]
+    },
+    {
+      "slug": "ai-funding",
+      "title": "AI 融资与资本潮",
+      "title_en": "AI Funding & Investment",
+      "description": "DeepSeek 510亿首轮融资、具身智能46亿、MirendilAI 2亿。AI赛道超级吸金，但泡沫与真实价值的分界线在哪里？",
+      "keywords": ["AI融资", "风险投资", "AI投资", "a16z", "具身智能融资", "AI估值"],
+      "tags": [
+        "2026 AI融资全景", "具身智能赛道深度", "AI创业死亡清单",
+        "DeepSeek融资纪录", "五年锁定期耐心资本"
+      ],
+      "related": ["embodied-ai", "china-llm", "ai-employment"]
+    },
+    {
+      "slug": "ai-employment",
+      "title": "AI 就业冲击",
+      "title_en": "AI Employment Impact",
+      "description": "埃森哲单日蒸发千亿、咨询行业解构、AI Agent上岗的残酷元年。哪些工作先消失，哪些工作被增强？",
+      "keywords": ["AI就业", "裁员", "AI取代工作", "埃森哲", "咨询行业", "AI冲击"],
+      "tags": [
+        "AI Agent就业冲击报告", "咨询行业商业模式解构", "2026科技裁员全景"
+      ],
+      "related": ["ai-agent-paradigm", "ai-funding"]
+    },
+    {
+      "slug": "ai-roi-implementation",
+      "title": "AI 项目落地与ROI",
+      "title_en": "AI Implementation & ROI",
+      "description": "95% AI项目见不到ROI。瓶颈从来不是模型，是数据。统一语义层、数据基础设施决定AI成败。",
+      "keywords": ["AI落地", "ROI", "AI项目失败", "数据平台", "NL2SQL", "企业AI"],
+      "tags": [
+        "AI项目ROI瓶颈分析", "统一语义层架构"
+      ],
+      "related": ["llm-pricing", "agent-production"]
+    },
+    {
+      "slug": "llm-arms-race",
+      "title": "大模型军备赛",
+      "title_en": "LLM Arms Race",
+      "description": "GPT-5.6、Claude 4.8、Gemini 3.5齐发。2026年中模型能力盘点，开源闭源双线作战。",
+      "keywords": ["GPT-5", "Claude", "Gemini", "模型竞赛", "开源大模型", "模型能力"],
+      "tags": [
+        "2026年中模型能力对比", "开源模型生态全景", "国产大模型突围路径"
+      ],
+      "related": ["llm-pricing", "china-llm"]
+    },
+    {
+      "slug": "openai-vertical",
+      "title": "OpenAI 垂直整合战略",
+      "title_en": "OpenAI Vertical Integration",
+      "description": "OpenAI的Jalapeño芯片：当模型公司开始定义芯片。与Broadcom合作自研ASIC，从应用层到硅片层的全栈野心。",
+      "keywords": ["OpenAI", "Jalapeno", "自研芯片", "博通", "ASIC", "垂直整合"],
+      "tags": [
+        "OpenAI垂直整合战略", "AI芯片自研潮全景"
+      ],
+      "related": ["ai-chips-compute", "llm-arms-race"]
+    },
+    {
+      "slug": "ai-safety-governance",
+      "title": "AI 安全与治理",
+      "title_en": "AI Safety & Governance",
+      "description": "54起Agent失控事件、AWS 13小时宕机。Agent是超级员工还是危险盲盒？多智能体编排的治理难题。",
+      "keywords": ["AI安全", "AI治理", "Agent失控", "AI风险", "AI事故"],
+      "tags": [
+        "Agent失控案例库", "AI治理框架对比", "多智能体编排落地难点"
+      ],
+      "related": ["agent-production", "ai-regulation"]
+    },
+    {
+      "slug": "wechat-a2a",
+      "title": "微信生态与A2A落地",
+      "title_en": "WeChat Ecosystem & A2A",
+      "description": "微信率先接入A2A协议向手机厂商开放Agent能力，荣耀成为首个落地合作方。13亿人社交网络变成Agent互联网。",
+      "keywords": ["微信AI", "A2A", "微信Agent", "荣耀合作", "小微"],
+      "tags": [
+        "微信AI生态路线图", "微信AI与A2A落地", "超级App的Agent转型",
+        "A2A协议生产落地"
+      ],
+      "related": ["super-app-agent", "agent-protocols"]
+    },
+    {
+      "slug": "copilot-pricing",
+      "title": "Copilot 商业模式转折",
+      "title_en": "Copilot Pricing Backlash",
+      "description": "GitHub Copilot转token计费引开发者反弹：从无限订阅到按量付费，AI编程从补贴时代进入成本管控时代。",
+      "keywords": ["Copilot", "token计费", "订阅模式", "开发者成本", "AI编程定价"],
+      "tags": [
+        "Copilot token计费争议", "企业成本管控", "AI编程四雄争霸"
+      ],
+      "related": ["ai-coding-tools", "llm-pricing"]
+    },
+    {
+      "slug": "cao-ai-fails",
+      "title": "AI 翻车现场 (Cao!)",
+      "title_en": "AI Fails & Facepalms",
+      "description": "AI圈的荒诞与翻车：Agent删库9秒恢复30小时、福特请回灰胡子工程师、溜溜梅上市只因股票代码叫LLM。",
+      "keywords": ["AI翻车", "AI吐槽", "AI事故", "AI趣闻"],
+      "tags": ["AI翻车现场", "AI编程工具翻车", "Agent删库事故", "AI裁员打脸", "LLM股票乌龙"],
+      "related": ["agent-production", "ai-safety-governance"]
+    }
+  ]
+}

@@ -2,6 +2,10 @@
 
 > 用于指导大模型进行二创加工，保持全站风格统一。
 
+**关联知识库**：[[知识网络|知识网络 MOC]] · [[ai-agent-paradigm]] · [[ai-coding-tools]] · [[cao-ai-fails]]
+
+---
+
 ## 一、核心定位
 
 Dawn Vision 是 AI 深度观察日刊。slogan：**穿越嘈杂，洞见留声。**

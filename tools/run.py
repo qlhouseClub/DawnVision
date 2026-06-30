@@ -95,7 +95,7 @@ def cmd_draft(args):
 
 
 def cmd_process(args):
-    """生成HTML+预览"""
+    """生成HTML+预览+构建知识网络"""
     issue_num = args.issue_num or next_issue_number()
     issue_file = DATA_DIR / f"issue-{issue_num}.json"
 
@@ -116,6 +116,7 @@ def cmd_process(args):
     if args.no_preview:
         cmd.append("--no-preview")
     run_step(cmd)
+    # 知识网络在process.py中自动构建
 
 
 def cmd_verify(args):
@@ -125,7 +126,7 @@ def cmd_verify(args):
 
 
 def cmd_publish(args):
-    """验证+发布"""
+    """验证+发布+构建知识网络"""
     # 先验证
     result = run_step([sys.executable, str(TOOLS_DIR / "publish.py"), "--verify-only"], check=False)
     if result.returncode != 0:
@@ -138,6 +139,19 @@ def cmd_publish(args):
     if args.dry_run:
         cmd.append("--dry-run")
     run_step(cmd)
+
+    # 发布后构建知识网络关联
+    print(f"\n{'─'*60}")
+    print("▶ 发布后知识网络关联...")
+    print(f"{'─'*60}")
+    run_step([sys.executable, str(TOOLS_DIR / "knowledge.py"), "--rebuild"], check=False)
+    print("\n✅ 知识网络已更新")
+
+
+def cmd_knowledge(args):
+    """构建/重建知识网络"""
+    cmd = [sys.executable, str(TOOLS_DIR / "knowledge.py"), "--rebuild"]
+    run_step(cmd, check=False)
 
 
 def cmd_status(args):
@@ -272,6 +286,9 @@ def main():
     # verify
     sub.add_parser("verify", help="验证完整性")
 
+    # knowledge
+    sub.add_parser("knowledge", help="构建知识网络关联")
+
     # publish
     p_publish = sub.add_parser("publish", help="验证+发布")
     p_publish.add_argument("-m", "--message", help="commit message")
@@ -299,6 +316,7 @@ def main():
         "draft": cmd_draft,
         "process": cmd_process,
         "verify": cmd_verify,
+        "knowledge": cmd_knowledge,
         "publish": cmd_publish,
         "status": cmd_status,
         "full": cmd_full,

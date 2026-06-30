@@ -45,8 +45,117 @@
     <changefreq>never</changefreq>
     <priority>0.6</priority>
   </url>
-
-  <!-- Issue 004 Articles (2026.06.30) -->
+<!-- Issue 004 Articles (2026.06.30) -->
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-deepseek-50b-valuation-independence-war.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-anthropic-mythos-export-controls.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-copilot-token-pricing-backlash.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-humanoid-robot-mass-production.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-figma-stitch-agent-design-war.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-sora-shutdown-kling-140m.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-one-person-company-retention-myth.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/cao/2026-06-30-ford-rehires-graybeard-engineers.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/issues/issue-004.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+<!-- Issue 004 Articles (2026.06.30) -->
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-deepseek-50b-valuation-independence-war.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-anthropic-mythos-export-controls.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-copilot-token-pricing-backlash.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-humanoid-robot-mass-production.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-figma-stitch-agent-design-war.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-sora-shutdown-kling-140m.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-one-person-company-retention-myth.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/cao/2026-06-30-ford-rehires-graybeard-engineers.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/issues/issue-004.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+<!-- Issue 004 Articles (2026.06.30) -->
   <url>
     <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-deepseek-50b-valuation-independence-war.html</loc>
     <lastmod>2026-06-30</lastmod>
@@ -102,113 +211,57 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Issue 004 Articles (2026.06.30) -->
+  <!-- Issue 005 Articles (2026.06.30) -->
   <url>
-    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-deepseek-50b-valuation-independence-war.html</loc>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-jia-yangqing-leaves-nvidia-ai-infra-dilemma.html</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-anthropic-mythos-export-controls.html</loc>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-state-council-ai-policy-deployment.html</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-copilot-token-pricing-backlash.html</loc>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-agent-tooling-chain-explosion.html</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-humanoid-robot-mass-production.html</loc>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-global-compute-arms-race.html</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-figma-stitch-agent-design-war.html</loc>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-apple-microsoft-ai-price-hike-consumers-pay.html</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-sora-shutdown-kling-140m.html</loc>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-suno-spark-ai-short-drama-free-chatgpt-evidence.html</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-one-person-company-retention-myth.html</loc>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-wechat-xiaowei-agent-grey-test-harmonyos7.html</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://qlhouseclub.github.io/DawnVision/cao/2026-06-30-ford-rehires-graybeard-engineers.html</loc>
+    <loc>https://qlhouseclub.github.io/DawnVision/cao/2026-06-30-brown-university-ai-cheating-scandal.html</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://qlhouseclub.github.io/DawnVision/issues/issue-004.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Issue 004 Articles (2026.06.30) -->
-  <url>
-    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-deepseek-50b-valuation-independence-war.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-anthropic-mythos-export-controls.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-copilot-token-pricing-backlash.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-humanoid-robot-mass-production.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-figma-stitch-agent-design-war.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-sora-shutdown-kling-140m.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-one-person-company-retention-myth.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://qlhouseclub.github.io/DawnVision/cao/2026-06-30-ford-rehires-graybeard-engineers.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://qlhouseclub.github.io/DawnVision/issues/issue-004.html</loc>
+    <loc>https://qlhouseclub.github.io/DawnVision/issues/issue-005.html</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>never</changefreq>
     <priority>0.6</priority>
