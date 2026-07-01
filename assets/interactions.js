@@ -398,6 +398,9 @@
       if (prevMonth && availableMonths.includes(prevMonth)) {
         monthSel.value = prevMonth;
         sel.month = prevMonth;
+      } else if (monthOpts.length === 1) {
+        monthSel.value = monthOpts[0].value;
+        sel.month = monthOpts[0].value;
       } else {
         sel.month = monthSel.value;
       }
@@ -413,6 +416,9 @@
       if (prevHalf && availableHalves.includes(prevHalf)) {
         halfSel.value = prevHalf;
         sel.half = prevHalf;
+      } else if (halfOpts.length === 1) {
+        halfSel.value = halfOpts[0].value;
+        sel.half = halfOpts[0].value;
       } else {
         sel.half = halfSel.value;
       }
@@ -429,6 +435,8 @@
       updateOptions(issueSel, issueOpts, '期');
       if (prevIssue && issueOpts.some(function(o) { return o.value === prevIssue; })) {
         issueSel.value = prevIssue;
+      } else if (issueOpts.length >= 1 && !issueSel.value) {
+        issueSel.value = issueOpts[0].value;
       }
     }
 
