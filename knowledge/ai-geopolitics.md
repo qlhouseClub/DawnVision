@@ -16,6 +16,7 @@ Anthropic遭出口管制、DeepSeek融资独立战争、硅谷三巨头同盟。
 
 ## 相关文章
 
+- [[2026-07-01-mythos-export-controls-lifted-18-days|Mythos封禁18天AI封锁成纸老虎]] (2026-07-01 · Brief)
 - [[2026-06-30-anthropic-mythos-export-controls|72小时从发布到管制]] (2026-06-30 · Brief)
 - [[2026-06-30-deepseek-50b-valuation-independence-war|DeepSeek 510亿首轮融资]] (2026-06-30 · Brief)
 

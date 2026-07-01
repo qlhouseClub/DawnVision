@@ -15,8 +15,8 @@ source_url: https://qlhouseclub.github.io/DawnVision/articles/2026-06-25-openai-
 
 ## 入库知识
 
-- [[openai-vertical|OpenAI 垂直整合战略]]
 - [[ai-chips-compute|AI 芯片与算力基建]]
+- [[openai-vertical|OpenAI 垂直整合战略]]
 
 ## 认知笔记
 

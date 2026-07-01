@@ -21,7 +21,7 @@ _待关联_
 
 #note/微信小微Agent #note/企业微信大圆 #note/鸿蒙7Agent化 #note/苹果Siri系统级权限 #note/Agent入口战争 #note/行动界面vs聊天界面 #note/腾讯市值
 
-← [[2026-06-30-suno-spark-ai-short-drama-free-chatgpt-evidence]]
+← [[2026-06-30-suno-spark-ai-short-drama-free-chatgpt-evidence]] | [[2026-07-01-base44-self-built-model-vibe-coding]] →
 
 ---
 

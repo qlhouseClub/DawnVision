@@ -15,12 +15,12 @@ source_url: https://qlhouseclub.github.io/DawnVision/articles/2026-06-30-deepsee
 
 ## 入库知识
 
-- [[ai-geopolitics|AI 地缘政治]]
-- [[ai-funding|AI 融资与资本潮]]
-- [[llm-pricing|大模型定价与商业化]]
-- [[embodied-ai|具身智能与人形机器人]]
 - [[china-llm|国产大模型突围]]
+- [[embodied-ai|具身智能与人形机器人]]
 - [[ai-chips-compute|AI 芯片与算力基建]]
+- [[ai-funding|AI 融资与资本潮]]
+- [[ai-geopolitics|AI 地缘政治]]
+- [[llm-pricing|大模型定价与商业化]]
 
 ## 认知笔记
 

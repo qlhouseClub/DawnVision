@@ -15,8 +15,8 @@ source_url: https://qlhouseclub.github.io/DawnVision/articles/2026-06-24-cursor-
 
 ## 入库知识
 
-- [[ai-coding-tools|AI 编程工具竞争]]
 - [[ai-agent-paradigm|AI Agent 范式转移]]
+- [[ai-coding-tools|AI 编程工具竞争]]
 
 ## 认知笔记
 

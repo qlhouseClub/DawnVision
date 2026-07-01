@@ -15,8 +15,8 @@ source_url: https://qlhouseclub.github.io/DawnVision/articles/2026-06-24-one-per
 
 ## 入库知识
 
-- [[one-person-company|AI 轻创业与一人公司]]
 - [[ai-ecommerce|AI 电商与跨境新范式]]
+- [[one-person-company|AI 轻创业与一人公司]]
 
 ## 认知笔记
 

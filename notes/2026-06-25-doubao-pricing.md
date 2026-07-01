@@ -15,9 +15,9 @@ source_url: https://qlhouseclub.github.io/DawnVision/articles/2026-06-25-doubao-
 
 ## 入库知识
 
-- [[llm-pricing|大模型定价与商业化]]
 - [[china-llm|国产大模型突围]]
 - [[agent-protocols|Agent 通信协议：A2A / MCP]]
+- [[llm-pricing|大模型定价与商业化]]
 
 ## 认知笔记
 
