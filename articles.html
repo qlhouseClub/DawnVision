@@ -41,7 +41,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
-  <script src="assets/interactions.js" defer></script>
+  <script src="assets/interactions.js?v=3" defer></script>
 </head>
 <body>
 
@@ -62,23 +62,49 @@
     </div>
   </nav>
 
-  <main class="container" role="main">
+  <main role="main">
+    <div class="container">
     <h1 style="font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #888; font-family: Georgia, serif; font-weight: 700; padding: 12px 0 0; margin: 0;">Dawn Vision · 深度文章</h1>
 
-    <div class="issue-selector">
-      <span class="issue-selector__current">Issue 006</span>
-      <select onchange="if(this.value) window.location.href=this.value" aria-label="选择期刊">
-        <option value="articles.html" selected>Latest (Current Issue)</option>
-<option value="articles.html" selected>2026.07.01</option>
-<option value="issues/issue-005.html">2026.06.30 (Issue 005)</option>
-<option value="issues/issue-004.html">2026.06.30 (Issue 004)</option>
-<option value="issues/issue-003.html">2026.06.26 (Issue 003)</option>
-<option value="issues/issue-002.html">2026.06.25 (Issue 002)</option>
-<option value="issues/issue-001.html">2026.06.24 (Issue 001)</option>
-      </select>
+    <div class="issue-filter" data-issues='[{"num": "001", "date": "2026-06-24", "date_display": "2026.06.24", "year": "2026", "month": "06", "day": "24", "half": "H2", "url": "issues/issue-001.html", "is_latest": false}, {"num": "002", "date": "2026-06-25", "date_display": "2026.06.25", "year": "2026", "month": "06", "day": "25", "half": "H2", "url": "issues/issue-002.html", "is_latest": false}, {"num": "003", "date": "2026-06-26", "date_display": "2026.06.26", "year": "2026", "month": "06", "day": "26", "half": "H2", "url": "issues/issue-003.html", "is_latest": false}, {"num": "004", "date": "2026-06-30", "date_display": "2026.06.30", "year": "2026", "month": "06", "day": "30", "half": "H2", "url": "issues/issue-004.html", "is_latest": false}, {"num": "005", "date": "2026-06-30", "date_display": "2026.06.30", "year": "2026", "month": "06", "day": "30", "half": "H2", "url": "issues/issue-005.html", "is_latest": false}, {"num": "006", "date": "2026-07-01", "date_display": "2026.07.01", "year": "2026", "month": "07", "day": "01", "half": "H1", "url": "articles.html", "is_latest": true}]' data-current="006">
+      <span class="issue-filter__current">Issue 6</span>
+      <div class="issue-filter__row">
+        <select class="issue-filter__select" data-filter="year" aria-label="选择年份">
+          <option value="">年</option>
+          <option value="2026" selected>2026</option>
+        </select>
+        <select class="issue-filter__select" data-filter="month" aria-label="选择月份">
+          <option value="">月</option>
+          <option value="01">1月</option><option value="02">2月</option><option value="03">3月</option><option value="04">4月</option><option value="05">5月</option><option value="06">6月</option><option value="07" selected>7月</option><option value="08">8月</option><option value="09">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option>
+        </select>
+        <select class="issue-filter__select" data-filter="half" aria-label="选择上/下半">
+          <option value="">半</option>
+          <option value="H1" selected>上半月</option><option value="H2">下半月</option>
+        </select>
+        <select class="issue-filter__select" data-filter="issue" aria-label="选择期数">
+          <option value="">期</option>
+        </select>
+      </div>
+    </div>
     </div>
 
-    <section style="margin-bottom: clamp(48px, 6vw, 72px);">
+  <div class="cao-section">
+    <div class="container" style="padding-top: clamp(40px, 5vw, 56px); padding-bottom: clamp(40px, 5vw, 56px);">
+      <div style="font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.45); font-family: var(--serif-display); font-weight: 700; margin-bottom: 24px;">Today's Rant</div>
+      <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; color: #fff; letter-spacing: -1px; line-height: 1.1; margin-bottom: 16px; max-width: 640px;">Cao! <span style="font-weight: 400; font-size: 0.6em; font-style: italic; opacity: 0.5; font-family: var(--sans);">槽点!</span></h2>
+      <a href="cao/2026-07-01-claude-code-steganography-watermark.html" class="cao-featured" itemscope itemtype="https://schema.org/NewsArticle">
+        <h3 style="font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 700; color: rgba(255,255,255,0.95); line-height: 1.25; margin-bottom: 12px; letter-spacing: -0.3px;" itemprop="headline">Claude Code偷偷在你Prompt里打小报告？隐写术标记炸出开发者信任地震</h3>
+        <p style="font-size: 0.92rem; color: rgba(255,255,255,0.5); line-height: 1.6; font-style: italic; font-family: var(--sans); max-width: 560px; margin-bottom: 16px;" itemprop="description">开发者发现Claude Code在系统提示里用肉眼看不见的Unicode字符做隐写标记，专门检测亚洲时区和中国AI公司域名。主打“AI安全”的Anthropic，在隐私问题上翻了车。</p>
+        <span style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.3); font-family: var(--serif-display); font-weight: 600;">约 4 分钟阅读 <span style="color: rgba(255,255,255,0.6); margin-left: 6px;">→</span></span>
+      </a>
+      <div style="margin-top: 20px;">
+        <a href="cao.html" class="cao-more-link">View All Cao! →</a>
+      </div>
+    </div>
+  </div>
+
+    <div class="container">
+    <section style="margin-top: clamp(48px, 6vw, 72px); margin-bottom: clamp(48px, 6vw, 72px);">
       <h2 class="section-label">Focus <span>焦点</span></h2>
       <a href="articles/2026-07-01-claude-sonnet-5-agent-parity-price.html" class="cover-story-link" itemscope itemtype="https://schema.org/NewsArticle">
         <h3 class="cover-story-title" itemprop="headline">Claude Sonnet 5 把Opus级Agent能力打到$2/MTok：AI自动化的成本临界点被击穿</h3>
@@ -124,22 +150,15 @@
       </div>
     </section>
 
-  </main>
-
-  <div class="cao-section">
-    <div class="container" style="padding-top: clamp(40px, 5vw, 56px); padding-bottom: clamp(40px, 5vw, 56px);">
-      <div style="font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.45); font-family: var(--serif-display); font-weight: 700; margin-bottom: 24px;">Today's Rant</div>
-      <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; color: #fff; letter-spacing: -1px; line-height: 1.1; margin-bottom: 16px; max-width: 640px;">Cao! <span style="font-weight: 400; font-size: 0.6em; font-style: italic; opacity: 0.5; font-family: var(--sans);">槽点!</span></h2>
-      <a href="cao/2026-07-01-claude-code-steganography-watermark.html" class="cao-featured" itemscope itemtype="https://schema.org/NewsArticle">
-        <h3 style="font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 700; color: rgba(255,255,255,0.95); line-height: 1.25; margin-bottom: 12px; letter-spacing: -0.3px;" itemprop="headline">Claude Code偷偷在你Prompt里打小报告？隐写术标记炸出开发者信任地震</h3>
-        <p style="font-size: 0.92rem; color: rgba(255,255,255,0.5); line-height: 1.6; font-style: italic; font-family: var(--sans); max-width: 560px; margin-bottom: 16px;" itemprop="description">开发者发现Claude Code在系统提示里用肉眼看不见的Unicode字符做隐写标记，专门检测亚洲时区和中国AI公司域名。主打“AI安全”的Anthropic，在隐私问题上翻了车。</p>
-        <span style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.3); font-family: var(--serif-display); font-weight: 600;">约 4 分钟阅读 <span style="color: rgba(255,255,255,0.6); margin-left: 6px;">→</span></span>
-      </a>
-      <div style="margin-top: 20px;">
-        <a href="cao.html" class="cao-more-link">View All Cao! →</a>
+    <nav class="pagination" role="navigation" aria-label="期数分页">
+      <a href="issues/issue-005.html" class="pagination__nav pagination__nav--prev">← Issue 5</a>
+      <div class="pagination__pages">
+        <a href="issues/issue-001.html" class="pagination__num">1</a><a href="issues/issue-002.html" class="pagination__num">2</a><a href="issues/issue-003.html" class="pagination__num">3</a><a href="issues/issue-004.html" class="pagination__num">4</a><a href="issues/issue-005.html" class="pagination__num">5</a><a href="articles.html" class="pagination__num pagination__num--active">6</a>
       </div>
+      <span class="pagination__nav pagination__nav--disabled">已是最新 →</span>
+    </nav>
     </div>
-  </div>
+  </main>
 
   <footer class="site-footer" role="contentinfo">
     <div class="container">

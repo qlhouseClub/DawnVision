@@ -314,10 +314,197 @@
     });
   }
 
+  // ── Issue filter cascading dropdowns ──
+  function initIssueFilter() {
+    const filterEl = document.querySelector('.issue-filter');
+    if (!filterEl) return;
+
+    let issues = [];
+    try {
+      issues = JSON.parse(filterEl.dataset.issues || '[]');
+    } catch(e) { return; }
+
+    if (!issues.length) return;
+
+    const yearSel = filterEl.querySelector('[data-filter="year"]');
+    const monthSel = filterEl.querySelector('[data-filter="month"]');
+    const halfSel = filterEl.querySelector('[data-filter="half"]');
+    const issueSel = filterEl.querySelector('[data-filter="issue"]');
+    const selects = [yearSel, monthSel, halfSel, issueSel];
+
+    function getSelected() {
+      return {
+        year: yearSel.value,
+        month: monthSel.value,
+        half: halfSel.value,
+        issue: issueSel.value
+      };
+    }
+
+    function filterIssues(filters) {
+      return issues.filter(function(i) {
+        if (filters.year && i.year !== filters.year) return false;
+        if (filters.month && i.month !== filters.month) return false;
+        if (filters.half && i.half !== filters.half) return false;
+        return true;
+      });
+    }
+
+    function updateOptions(sel, options, placeholder) {
+      var currentVal = sel.value;
+      sel.innerHTML = '<option value="">' + placeholder + '</option>';
+      options.forEach(function(opt) {
+        var optEl = document.createElement('option');
+        optEl.value = opt.value;
+        optEl.textContent = opt.label;
+        if (opt.value === currentVal) optEl.selected = true;
+        sel.appendChild(optEl);
+      });
+      // Disable if no options besides placeholder
+      sel.disabled = options.length === 0;
+    }
+
+    function cascade(changedLevel) {
+      var sel = getSelected();
+
+      // If year changed, reset month/half/issue
+      if (changedLevel === 'year') {
+        monthSel.value = '';
+        halfSel.value = '';
+        issueSel.value = '';
+      }
+      // If month changed, reset half/issue
+      if (changedLevel === 'month') {
+        halfSel.value = '';
+        issueSel.value = '';
+      }
+      // If half changed, reset issue
+      if (changedLevel === 'half') {
+        issueSel.value = '';
+      }
+
+      sel = getSelected();
+
+      // Update month options based on year
+      var monthIssues = filterIssues({year: sel.year});
+      var availableMonths = [...new Set(monthIssues.map(function(i) { return i.month; }))].sort();
+      var monthOpts = availableMonths.map(function(m) {
+        return {value: m, label: parseInt(m) + '月'};
+      });
+      // Preserve current month selection before rebuilding
+      var prevMonth = sel.month;
+      updateOptions(monthSel, monthOpts, '月');
+      // Restore month if still valid
+      if (prevMonth && availableMonths.includes(prevMonth)) {
+        monthSel.value = prevMonth;
+        sel.month = prevMonth;
+      } else {
+        sel.month = monthSel.value;
+      }
+
+      // Update half options based on year+month
+      var halfIssues = filterIssues({year: sel.year, month: sel.month});
+      var availableHalves = [...new Set(halfIssues.map(function(i) { return i.half; }))].sort();
+      var halfOpts = availableHalves.map(function(h) {
+        return {value: h, label: h === 'H1' ? '上半月' : '下半月'};
+      });
+      var prevHalf = sel.half;
+      updateOptions(halfSel, halfOpts, '半');
+      if (prevHalf && availableHalves.includes(prevHalf)) {
+        halfSel.value = prevHalf;
+        sel.half = prevHalf;
+      } else {
+        sel.half = halfSel.value;
+      }
+
+      // Update issue options based on year+month+half
+      var issueIssues = filterIssues({year: sel.year, month: sel.month, half: sel.half});
+      issueIssues.sort(function(a, b) { return parseInt(b.num) - parseInt(a.num); });
+      var issueOpts = issueIssues.map(function(i) {
+        var label = 'Issue ' + parseInt(i.num);
+        if (i.is_latest) label += ' (最新)';
+        return {value: i.num, label: label};
+      });
+      var prevIssue = sel.issue;
+      updateOptions(issueSel, issueOpts, '期');
+      if (prevIssue && issueOpts.some(function(o) { return o.value === prevIssue; })) {
+        issueSel.value = prevIssue;
+      }
+    }
+
+    // Event listeners
+    yearSel.addEventListener('change', function() { cascade('year'); });
+    monthSel.addEventListener('change', function() { cascade('month'); });
+    halfSel.addEventListener('change', function() { cascade('half'); });
+    issueSel.addEventListener('change', function() {
+      var num = issueSel.value;
+      if (!num) return;
+      var match = issues.find(function(i) { return i.num === num; });
+      if (match) {
+        window.location.href = match.url;
+      }
+    });
+
+    // Initial cascade: populate dependent dropdowns, preserving pre-selected values
+    // Don't call cascade('year') which would reset - instead manually populate down
+    (function initCascade() {
+      var sel = getSelected();
+
+      // 1. Populate months based on selected year
+      var monthIssues = filterIssues({year: sel.year});
+      var availableMonths = [...new Set(monthIssues.map(function(i) { return i.month; }))].sort();
+      var monthOpts = availableMonths.map(function(m) {
+        return {value: m, label: parseInt(m) + '月'};
+      });
+      // Save current month before rebuilding
+      var curMonth = sel.month;
+      updateOptions(monthSel, monthOpts, '月');
+      if (curMonth && availableMonths.includes(curMonth)) {
+        monthSel.value = curMonth;
+      }
+
+      // 2. Populate halves based on year+month
+      sel = getSelected();
+      var halfIssues = filterIssues({year: sel.year, month: sel.month});
+      var availableHalves = [...new Set(halfIssues.map(function(i) { return i.half; }))].sort();
+      var halfOpts = availableHalves.map(function(h) {
+        return {value: h, label: h === 'H1' ? '上半月' : '下半月'};
+      });
+      var curHalf = sel.half;
+      updateOptions(halfSel, halfOpts, '半');
+      if (curHalf && availableHalves.includes(curHalf)) {
+        halfSel.value = curHalf;
+      }
+
+      // 3. Populate issues based on year+month+half
+      sel = getSelected();
+      var issueIssues = filterIssues({year: sel.year, month: sel.month, half: sel.half});
+      issueIssues.sort(function(a, b) { return parseInt(b.num) - parseInt(a.num); });
+      var issueOpts = issueIssues.map(function(i) {
+        var label = 'Issue ' + parseInt(i.num);
+        if (i.is_latest) label += ' (最新)';
+        return {value: i.num, label: label};
+      });
+      updateOptions(issueSel, issueOpts, '期');
+
+      // Auto-select: prefer current issue from data-current, otherwise first option
+      var currentNum = filterEl.dataset.current || '';
+      if (issueOpts.length >= 1) {
+        var matchOpt = issueOpts.find(function(o) { return o.value === currentNum; });
+        if (matchOpt) {
+          issueSel.value = matchOpt.value;
+        } else if (!issueSel.value) {
+          issueSel.value = issueOpts[0].value;
+        }
+      }
+    })();
+  }
+
   // ── DOM Ready ──
   function init() {
     initArticleInteractions();
     initListingPage();
+    initIssueFilter();
   }
 
   if (document.readyState === 'loading') {

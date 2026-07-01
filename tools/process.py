@@ -92,7 +92,7 @@ def build_article_head(title, description, keywords, canonical_url, og_title, og
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
-  <script src="../assets/interactions.js" defer></script>
+  <script src="../assets/interactions.js?v=3" defer></script>
 </head>'''
 
 
@@ -412,63 +412,209 @@ def build_cao_article(data, issue, last_brief_slug):
 # 列表页生成函数
 # ============================================================
 
-def get_all_issues():
-    """获取所有期数信息，返回 [(num, date_display), ...] 按新到旧排序"""
+def get_all_issues_structured(current_num=None, current_date=None):
+    """获取所有期数的结构化数据，返回列表按旧到新排序
+    每项: {num, date, date_display, year, month, day, half, url, is_latest}
+    half: 'H1'=上半月(1-15日), 'H2'=下半月(16-31日)
+    注意：current_num/current_date用于在生成流程中标识当前正在处理的期数，
+    最新一期的URL设为articles.html。
+    """
     issues = []
-    if not ISSUES_DIR.exists():
-        return issues
-    for issue_file in sorted(ISSUES_DIR.glob("issue-*.html"), reverse=True):
-        num = issue_file.stem.split("-")[1]
-        try:
-            content = issue_file.read_text(encoding="utf-8")
-            date_match = re.search(r'Issue\s+(\d+)\s*\|\s*(\d{4}\.\d{2}\.\d{2})', content)
-            if date_match:
-                n, d = date_match.groups()
-                issues.append((n, d))
-            else:
-                issues.append((num, ""))
-        except:
-            issues.append((num, ""))
+    if ISSUES_DIR.exists():
+        for issue_file in sorted(ISSUES_DIR.glob("issue-*.html")):
+            num = issue_file.stem.split("-")[1]
+            try:
+                content = issue_file.read_text(encoding="utf-8")
+                date_match = re.search(r'Issue\s+(\d+)\s*\|\s*(\d{4})\.(\d{2})\.(\d{2})', content)
+                if date_match:
+                    n, y, m, d = date_match.groups()
+                    date_str = f"{y}.{m}.{d}"
+                    day = int(d)
+                    half = "H1" if day <= 15 else "H2"
+                    issues.append({
+                        "num": n.zfill(3),
+                        "date": f"{y}-{m}-{d}",
+                        "date_display": date_str,
+                        "year": y,
+                        "month": m,
+                        "day": d,
+                        "half": half,
+                        "url": f"issues/issue-{n}.html",
+                        "is_latest": False,
+                    })
+            except:
+                pass
+
+    # 如果提供了当前期信息，更新或添加
+    if current_num and current_date:
+        y, m, d = current_date.split(".")
+        cur_n = str(current_num).zfill(3)
+        day = int(d)
+        half = "H1" if day <= 15 else "H2"
+        found = False
+        for i in issues:
+            if i["num"] == cur_n:
+                # 更新已有期数据
+                i["date"] = current_date.replace(".", "-")
+                i["date_display"] = current_date
+                i["year"] = y
+                i["month"] = m
+                i["day"] = d
+                i["half"] = half
+                found = True
+                break
+        if not found:
+            issues.append({
+                "num": cur_n,
+                "date": current_date.replace(".", "-"),
+                "date_display": current_date,
+                "year": y,
+                "month": m,
+                "day": d,
+                "half": half,
+                "url": "articles.html",
+                "is_latest": True,
+            })
+
+    # 最新一期URL指向articles.html
+    if issues:
+        latest = max(issues, key=lambda x: int(x["num"]))
+        latest["url"] = "articles.html"
+        latest["is_latest"] = True
+        # 确保归档页中不是最新的都指向issues/
+        for i in issues:
+            if i["num"] != latest["num"]:
+                i["url"] = f"issues/issue-{int(i['num'])}.html"
+                i["is_latest"] = False
+
+    # 按期数排序（旧→新）
+    issues.sort(key=lambda x: int(x["num"]))
     return issues
 
 
-def build_issue_selector(current_issue_num, current_date_display, is_latest=False, prefix=""):
-    """生成期数选择器HTML，与现有页面完全一致"""
-    # 获取所有现有期数
-    existing_issues = get_all_issues()
+def build_issue_filter(current_issue_num, current_date_display, is_latest=False, prefix=""):
+    """生成四级联动期数筛选器：年/月/上半下半/期数"""
+    # 获取所有期数数据
+    all_issues = get_all_issues_structured(current_issue_num, current_date_display)
 
-    # 构建options列表：Latest + 当前期 + 已有期数（去重）
-    options = []
-    options.append(f'<option value="{prefix}articles.html"{" selected" if is_latest else ""}>Latest (Current Issue)</option>')
+    # 当前期的元数据
+    cur_num = str(current_issue_num).zfill(3)
+    cur = None
+    for i in all_issues:
+        if i["num"] == cur_num:
+            cur = i
+            break
+    if not cur:
+        # fallback
+        y, m, d = current_date_display.split(".")
+        cur = {"year": y, "month": m, "half": "H1" if int(d) <= 15 else "H2", "num": cur_num, "url": "articles.html" if is_latest else f"issues/issue-{cur_num}.html"}
 
-    # 当前期（最新）
-    if is_latest:
-        options.append(f'<option value="{prefix}articles.html" selected>{current_date_display}</option>')
-    else:
-        options.append(f'<option value="{prefix}issues/issue-{current_issue_num}.html" selected>{current_date_display}</option>')
+    # 收集所有年份、月份（从数据中）
+    years = sorted(set(i["year"] for i in all_issues), reverse=True)
+    months = [f"{mm:02d}" for mm in range(1, 13)]
+    halves = [("H1", "上半月"), ("H2", "下半月")]
 
-    # 已有期数（排除当前期）
-    for num, date_disp in existing_issues:
-        if num == current_issue_num:
-            continue
-        options.append(f'<option value="{prefix}issues/issue-{num}.html">{date_disp} (Issue {num})</option>')
+    # 构建期数JSON数据供JS使用（URL加前缀）
+    issues_for_json = []
+    for i in all_issues:
+        item = dict(i)
+        if prefix and not item["url"].startswith(prefix):
+            item["url"] = prefix + item["url"]
+        issues_for_json.append(item)
+    issues_json = json.dumps(issues_for_json, ensure_ascii=False)
 
-    return f'''    <div class="issue-selector">
-      <span class="issue-selector__current">Issue {current_issue_num}</span>
-      <select onchange="if(this.value) window.location.href=this.value" aria-label="选择期刊">
-        {chr(10).join(options)}
-      </select>
+    return f'''    <div class="issue-filter" data-issues='{issues_json}' data-current="{cur_num}">
+      <span class="issue-filter__current">Issue {cur_num}</span>
+      <div class="issue-filter__row">
+        <select class="issue-filter__select" data-filter="year" aria-label="选择年份">
+          <option value="">年</option>
+          {"".join(f'<option value="{y}"{" selected" if y == cur["year"] else ""}>{y}</option>' for y in years)}
+        </select>
+        <select class="issue-filter__select" data-filter="month" aria-label="选择月份">
+          <option value="">月</option>
+          {"".join(f'<option value="{m}"{" selected" if m == cur["month"] else ""}>{int(m)}月</option>' for m in months)}
+        </select>
+        <select class="issue-filter__select" data-filter="half" aria-label="选择上/下半">
+          <option value="">半</option>
+          {"".join(f'<option value="{h}"{" selected" if h == cur["half"] else ""}>{label}</option>' for h, label in halves)}
+        </select>
+        <select class="issue-filter__select" data-filter="issue" aria-label="选择期数">
+          <option value="">期</option>
+        </select>
+      </div>
     </div>'''
 
 
+def build_pagination(all_issues, current_num, prefix=""):
+    """生成底部分页：上一期/下一期 + 页码列表"""
+    cur_idx = None
+    for idx, i in enumerate(all_issues):
+        if i["num"] == str(current_num).zfill(3):
+            cur_idx = idx
+            break
+
+    if cur_idx is None:
+        return ""
+
+    total = len(all_issues)
+    prev_issue = all_issues[cur_idx - 1] if cur_idx > 0 else None
+    next_issue = all_issues[cur_idx + 1] if cur_idx < total - 1 else None
+
+    # 构建分页按钮
+    page_items = []
+    if total <= 7:
+        # 少量页面全部显示
+        for idx in range(total):
+            i = all_issues[idx]
+            active = ' pagination__num--active' if idx == cur_idx else ''
+            page_items.append(f'<a href="{prefix}{i["url"]}" class="pagination__num{active}" aria-label="Issue {i["num"]}">{int(i["num"])}</a>')
+    else:
+        start = max(0, cur_idx - 2)
+        end = min(total, cur_idx + 3)
+        if start > 0:
+            first = all_issues[0]
+            page_items.append(f'<a href="{prefix}{first["url"]}" class="pagination__num" aria-label="Issue {first["num"]}">{int(first["num"])}</a>')
+            if start > 1:
+                page_items.append('<span class="pagination__ellipsis">…</span>')
+        for idx in range(start, end):
+            i = all_issues[idx]
+            active = ' pagination__num--active' if idx == cur_idx else ''
+            page_items.append(f'<a href="{prefix}{i["url"]}" class="pagination__num{active}" aria-label="Issue {i["num"]}">{int(i["num"])}</a>')
+        if end < total:
+            if end < total - 1:
+                page_items.append('<span class="pagination__ellipsis">…</span>')
+            last = all_issues[-1]
+            page_items.append(f'<a href="{prefix}{last["url"]}" class="pagination__num" aria-label="Issue {last["num"]}">{int(last["num"])}</a>')
+
+    prev_html = ''
+    if prev_issue:
+        prev_html = f'<a href="{prefix}{prev_issue["url"]}" class="pagination__nav pagination__nav--prev" aria-label="上一期 Issue {prev_issue["num"]}">← Issue {int(prev_issue["num"])}</a>'
+    else:
+        prev_html = '<span class="pagination__nav pagination__nav--disabled">← 已是最早</span>'
+
+    next_html = ''
+    if next_issue:
+        next_html = f'<a href="{prefix}{next_issue["url"]}" class="pagination__nav pagination__nav--next" aria-label="下一期 Issue {next_issue["num"]}">Issue {int(next_issue["num"])} →</a>'
+    else:
+        next_html = '<span class="pagination__nav pagination__nav--disabled">已是最新 →</span>'
+
+    return f'''    <nav class="pagination" role="navigation" aria-label="期数分页">
+      {prev_html}
+      <div class="pagination__pages">
+        {"".join(page_items)}
+      </div>
+      {next_html}
+    </nav>'''
+
+
 def build_listing_page(issue, cover, briefs, cao, is_latest=False):
-    """生成文章列表页（articles.html或issue-NNN.html），与现有设计完全一致"""
+    """生成文章列表页（articles.html或issue-NNN.html）"""
     date = issue["date"]
     date_display = issue["date_display"]
     issue_num = issue["number"]
     prefix = "" if is_latest else "../"
 
-    # Brief卡片HTML（使用article-card，与现有页面一致）
+    # Brief卡片HTML
     brief_cards = []
     for b in briefs:
         article_url = f"articles/{date}-{b['slug']}.html" if is_latest else f"../articles/{date}-{b['slug']}.html"
@@ -501,7 +647,12 @@ def build_listing_page(issue, cover, briefs, cao, is_latest=False):
         og_url = f"{BASE_URL}/issues/issue-{issue_num}.html"
         jsonld_name = f"Dawn Vision Issue {issue_num} — {date_display}"
 
-    issue_selector_html = build_issue_selector(issue_num, date_display, is_latest, prefix)
+    # 四级联动筛选器
+    issue_filter_html = build_issue_filter(issue_num, date_display, is_latest, prefix)
+
+    # 获取所有期数用于分页
+    all_issues = get_all_issues_structured(issue_num, date_display)
+    pagination_html = build_pagination(all_issues, issue_num, prefix)
 
     html = f'''<!DOCTYPE html>
 <html lang="zh-CN">
@@ -546,7 +697,7 @@ def build_listing_page(issue, cover, briefs, cao, is_latest=False):
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{prefix}assets/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
-  <script src="{prefix}assets/interactions.js" defer></script>
+  <script src="{prefix}assets/interactions.js?v=3" defer></script>
 </head>
 <body>
 
@@ -567,12 +718,31 @@ def build_listing_page(issue, cover, briefs, cao, is_latest=False):
     </div>
   </nav>
 
-  <main class="container" role="main">
+  <main role="main">
+    <div class="container">
     <h1 style="font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #888; font-family: Georgia, serif; font-weight: 700; padding: 12px 0 0; margin: 0;">{page_h1}</h1>
 
-{issue_selector_html}
+{issue_filter_html}
+    </div>
 
-    <section style="margin-bottom: clamp(48px, 6vw, 72px);">
+  <!-- Cao! 槽点区前置到封面文章上方 -->
+  <div class="cao-section">
+    <div class="container" style="padding-top: clamp(40px, 5vw, 56px); padding-bottom: clamp(40px, 5vw, 56px);">
+      <div style="font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.45); font-family: var(--serif-display); font-weight: 700; margin-bottom: 24px;">Today's Rant</div>
+      <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; color: #fff; letter-spacing: -1px; line-height: 1.1; margin-bottom: 16px; max-width: 640px;">Cao! <span style="font-weight: 400; font-size: 0.6em; font-style: italic; opacity: 0.5; font-family: var(--sans);">槽点!</span></h2>
+      <a href="{cao_url}" class="cao-featured" itemscope itemtype="https://schema.org/NewsArticle">
+        <h3 style="font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 700; color: rgba(255,255,255,0.95); line-height: 1.25; margin-bottom: 12px; letter-spacing: -0.3px;" itemprop="headline">{cao["title"]}</h3>
+        <p style="font-size: 0.92rem; color: rgba(255,255,255,0.5); line-height: 1.6; font-style: italic; font-family: var(--sans); max-width: 560px; margin-bottom: 16px;" itemprop="description">{cao["deck"]}</p>
+        <span style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.3); font-family: var(--serif-display); font-weight: 600;">{cao["read_time"]} <span style="color: rgba(255,255,255,0.6); margin-left: 6px;">→</span></span>
+      </a>
+      <div style="margin-top: 20px;">
+        <a href="{cao_list_url}" class="cao-more-link">View All Cao! →</a>
+      </div>
+    </div>
+  </div>
+
+    <div class="container">
+    <section style="margin-bottom: clamp(48px, 6vw, 72px); margin-top: clamp(48px, 6vw, 72px);">
       <h2 class="section-label">Focus <span>焦点</span></h2>
       <a href="{cover_url}" class="cover-story-link" itemscope itemtype="https://schema.org/NewsArticle">
         <h3 class="cover-story-title" itemprop="headline">{cover["title"]}</h3>
@@ -589,22 +759,9 @@ def build_listing_page(issue, cover, briefs, cao, is_latest=False):
       </div>
     </section>
 
-  </main>
-
-  <div class="cao-section">
-    <div class="container" style="padding-top: clamp(40px, 5vw, 56px); padding-bottom: clamp(40px, 5vw, 56px);">
-      <div style="font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.45); font-family: var(--serif-display); font-weight: 700; margin-bottom: 24px;">Today's Rant</div>
-      <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; color: #fff; letter-spacing: -1px; line-height: 1.1; margin-bottom: 16px; max-width: 640px;">Cao! <span style="font-weight: 400; font-size: 0.6em; font-style: italic; opacity: 0.5; font-family: var(--sans);">槽点!</span></h2>
-      <a href="{cao_url}" class="cao-featured" itemscope itemtype="https://schema.org/NewsArticle">
-        <h3 style="font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 700; color: rgba(255,255,255,0.95); line-height: 1.25; margin-bottom: 12px; letter-spacing: -0.3px;" itemprop="headline">{cao["title"]}</h3>
-        <p style="font-size: 0.92rem; color: rgba(255,255,255,0.5); line-height: 1.6; font-style: italic; font-family: var(--sans); max-width: 560px; margin-bottom: 16px;" itemprop="description">{cao["deck"]}</p>
-        <span style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.3); font-family: var(--serif-display); font-weight: 600;">{cao["read_time"]} <span style="color: rgba(255,255,255,0.6); margin-left: 6px;">→</span></span>
-      </a>
-      <div style="margin-top: 20px;">
-        <a href="{cao_list_url}" class="cao-more-link">View All Cao! →</a>
-      </div>
+{pagination_html}
     </div>
-  </div>
+  </main>
 
   <footer class="site-footer" role="contentinfo">
     <div class="container">
