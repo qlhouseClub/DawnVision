@@ -1,70 +1,51 @@
 /**
- * Dawn Vision — Interaction Script v16
+ * Dawn Vision — Interaction Script v17
  * Handles: read count (busuanzi + local fallback), like count (localStorage), tip modal,
- *          i18n UI labels, browser translation hint, new content notification
+ *          i18n UI labels, on-demand Google Translate, new content notification
  *
  * Translation strategy:
- * - The page declares lang="zh-CN" so Chrome/Edge auto-detect Chinese and offer built-in translation
- * - We translate fixed UI labels (nav, buttons, meta) ourselves via dictionary
- * - Article body translation is handled entirely by the browser's native translate feature
- * - NO external translation scripts are loaded (avoids CORS/blank page/redirect issues)
+ * - Default: Chinese, <html lang="zh-CN">, button shows "EN"
+ * - User clicks "EN": load Google Translate widget on demand, translate to English, button shows "中"
+ * - User clicks "中": restore to Chinese via GT restore, button shows "EN"
+ * - GT widget is hidden (we use our own button); no auto-load, no auto-redirect
  */
 
-// ===== SAFETY GUARD: Immediately block any Google Translate widget from redirecting or injecting =====
+// ===== Safety guard: remove any stale GT elements; redirect blocking is in inline head script =====
 (function() {
-  // Remove any pre-existing Google Translate elements (from cached scripts/extensions)
   function cleanGTElements() {
-    var ids = ['google_translate_element', 'gt-nvframe', ':1.container', 'gt-c'];
-    ids.forEach(function(id) {
-      var el = document.getElementById(id);
-      if (el && el.parentNode) el.parentNode.removeChild(el);
-    });
-    var frames = document.querySelectorAll('iframe[src*="translate.google"], iframe[src*="translate.googleapis"]');
+    var frames = document.querySelectorAll('iframe[src*="translate.google"], iframe.goog-te-banner-frame');
     frames.forEach(function(f) { if (f.parentNode) f.parentNode.removeChild(f); });
-    var scripts = document.querySelectorAll('script[src*="translate.google"], script[src*="translate.googleapis"]');
-    scripts.forEach(function(s) { if (s.parentNode) s.parentNode.removeChild(s); });
+    var gadgets = document.querySelectorAll('.goog-te-banner-frame, .goog-te-gadget, .goog-te-spinner-pos');
+    gadgets.forEach(function(g) { if (g.parentNode) g.parentNode.removeChild(g); });
+    // Reset body top padding that GT adds
+    document.body.style.top = '';
+    document.documentElement.style.top = '';
   }
-  cleanGTElements();
-  // Watch for any future injections and remove immediately
   if (typeof MutationObserver !== 'undefined') {
-    var observer = new MutationObserver(function(mutations) {
-      var needsClean = false;
-      mutations.forEach(function(m) {
-        if (m.addedNodes && m.addedNodes.length) needsClean = true;
+    var obs = new MutationObserver(function(muts) {
+      muts.forEach(function(m) {
+        m.addedNodes.forEach(function(n) {
+          if (n.nodeType === 1) {
+            if (n.id === 'goog-gt-tt' || (n.classList && (n.classList.contains('goog-te-banner-frame') || n.classList.contains('goog-te-gadget-icon')))) {
+              // Let GT work if user triggered it, but remove the banner frame
+              if (n.classList && n.classList.contains('goog-te-banner-frame')) {
+                n.style.display = 'none';
+                document.body.style.top = '0';
+              }
+            }
+          }
+        });
       });
-      if (needsClean) cleanGTElements();
     });
-    observer.observe(document.documentElement, { childList: true, subtree: true });
+    obs.observe(document.documentElement, { childList: true, subtree: true });
   }
-  // Block any attempt to navigate to translate.google.com (from leftover cached scripts)
-  var origAssign = window.location.assign;
-  var origReplace = window.location.replace;
-  var origOpen = window.open;
-  function isTranslateURL(u) {
-    return typeof u === 'string' && /translate\.google(apis)?\.com/.test(u);
-  }
-  window.location.assign = function(u) {
-    if (isTranslateURL(u)) return;
-    return origAssign.call(window.location, u);
-  };
-  window.location.replace = function(u) {
-    if (isTranslateURL(u)) return;
-    return origReplace.call(window.location, u);
-  };
-  window.open = function(u) {
-    if (isTranslateURL(u)) return null;
-    return origOpen.apply(window, arguments);
-  };
-  // Neutralize GT init callback (already done in inline head guard, reinforced here)
-  window.googleTranslateElementInit = function() { /* disabled */ };
 })();
+
 (function() {
   'use strict';
 
   // ══════════════════════════════════════════
   // i18n — UI Label Translation
-  // Body content is NOT translated by us. Browsers (Chrome/Edge/Safari) auto-detect
-  // Chinese via <html lang="zh-CN"> and offer their native translation bar.
   // ══════════════════════════════════════════
   const I18N = {
     zh: {
@@ -85,22 +66,17 @@
       tip_desc: '如果这篇文章对你有帮助，欢迎随意打赏。感谢支持！',
       tip_scan: '微信扫码 · <strong>谢谢老板</strong>',
       tip_close: '关闭',
-      banner_title: '🌐 翻译提示',
-      banner_text_chrome: '本站为中文内容。请点击浏览器地址栏右侧的翻译图标，将页面翻译为您的语言。',
-      banner_text_edge: '本站为中文内容。请点击浏览器地址栏右侧的翻译图标，或右键页面选择"翻译"。',
-      banner_got_it: '知道了',
-      banner_never: '不再提示',
       lang_switch_en: 'EN',
       lang_switch_zh: '中',
-      lang_switch_to_en: '切换界面为英文',
-      lang_switch_to_zh: '切换界面为中文',
+      lang_switch_to_en: 'Translate to English',
+      lang_switch_to_zh: '切回中文',
+      lang_translating: '...',
       reads_local_title: '本地计数（统计服务暂不可用）',
       reads_title: function(n) { return '总阅读量 ' + n; },
       new_content_title: '有新内容发布',
       new_content_desc: '网站已更新，点击刷新查看最新文章。',
       new_content_refresh: '刷新页面',
       new_content_dismiss: '稍后',
-      tooltip_translate_hint: '正文翻译请使用浏览器自带翻译功能',
     },
     en: {
       meta_editorial: 'Dawn Vision Editorial',
@@ -120,28 +96,24 @@
       tip_desc: 'If this article helped you, feel free to send a tip. Thanks for your support!',
       tip_scan: 'WeChat QR · <strong>Thanks!</strong>',
       tip_close: 'Close',
-      banner_title: '🌐 Translate',
-      banner_text_chrome: 'This site is in Chinese. Click the translate icon in your browser address bar to read in your language.',
-      banner_text_edge: 'This site is in Chinese. Click the translate icon in the address bar, or right-click and select "Translate".',
-      banner_got_it: 'Got it',
-      banner_never: "Don't show again",
       lang_switch_en: 'EN',
       lang_switch_zh: '中',
-      lang_switch_to_en: 'Switch UI to English',
-      lang_switch_to_zh: 'Switch UI to Chinese',
+      lang_switch_to_en: 'Translate to English',
+      lang_switch_to_zh: 'Back to Chinese',
+      lang_translating: '...',
       reads_local_title: 'Local count (analytics unavailable)',
       reads_title: function(n) { return n + ' total reads'; },
       new_content_title: 'New content available',
       new_content_desc: 'The site has been updated. Click refresh to see the latest articles.',
       new_content_refresh: 'Refresh',
       new_content_dismiss: 'Later',
-      tooltip_translate_hint: 'Use your browser\'s built-in translate for article content',
     }
   };
 
   let currentLang = 'zh';
+  let gtLoaded = false;
+  let gtLoading = false;
   const STORAGE_LANG_KEY = 'dawnvision_lang';
-  const STORAGE_BANNER_KEY = 'dawnvision_banner_dismissed';
   const STORAGE_VERSION_KEY = 'dawnvision_last_version';
 
   function detectLang() {
@@ -149,18 +121,7 @@
       const saved = localStorage.getItem(STORAGE_LANG_KEY);
       if (saved === 'en' || saved === 'zh') return saved;
     } catch(e) {}
-    const navLang = (navigator.language || navigator.userLanguage || 'zh').toLowerCase();
-    if (navLang.startsWith('zh')) return 'zh';
-    return 'en';
-  }
-
-  function detectBrowser() {
-    const ua = navigator.userAgent;
-    if (ua.indexOf('Edg') > -1) return 'edge';
-    if (ua.indexOf('Chrome') > -1 && ua.indexOf('Edg') === -1) return 'chrome';
-    if (ua.indexOf('Safari') > -1 && ua.indexOf('Chrome') === -1) return 'safari';
-    if (ua.indexOf('Firefox') > -1) return 'firefox';
-    return 'other';
+    return 'zh'; // Default to Chinese per user requirement
   }
 
   function t(key) {
@@ -172,10 +133,8 @@
 
   function applyUITranslations() {
     const dict = I18N[currentLang];
-    // Always keep lang="zh-CN" so browsers auto-detect and offer translation
-    document.documentElement.lang = 'zh-CN';
+    document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
 
-    // data-i18n elements
     document.querySelectorAll('[data-i18n]').forEach(function(el) {
       const key = el.getAttribute('data-i18n');
       const val = dict[key];
@@ -231,110 +190,167 @@
     }
   }
 
-  function setLang(lang) {
-    currentLang = lang;
-    try { localStorage.setItem(STORAGE_LANG_KEY, lang); } catch(e) {}
+  // ── Google Translate on-demand loading ──
+  function loadGoogleTranslate(onReady) {
+    if (gtLoaded) { onReady && onReady(); return; }
+    if (gtLoading) {
+      // Wait for it
+      var check = setInterval(function() {
+        if (gtLoaded) { clearInterval(check); onReady && onReady(); }
+      }, 100);
+      return;
+    }
+    gtLoading = true;
+
+    // Allow GT to work (unblock guard)
+    window.__dvAllowTranslate = true;
+
+    // Create hidden container for GT widget
+    var container = document.getElementById('google_translate_element');
+    if (!container) {
+      container = document.createElement('div');
+      container.id = 'google_translate_element';
+      container.style.cssText = 'position:fixed;top:-9999px;left:-9999px;width:0;height:0;overflow:hidden;opacity:0;pointer-events:none;';
+      document.body.appendChild(container);
+    }
+
+    // Define GT init callback
+    window.googleTranslateElementInit = function() {
+      try {
+        new window.google.translate.TranslateElement({
+          pageLanguage: 'zh-CN',
+          includedLanguages: 'en,zh-CN',
+          autoDisplay: false,
+          multilanguagePage: false,
+          layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+        gtLoaded = true;
+        gtLoading = false;
+        // Hide GT's own UI elements
+        hideGTChrome();
+        onReady && onReady();
+      } catch(e) {
+        gtLoading = false;
+        console.warn('GT init failed', e);
+      }
+    };
+
+    // Load GT script
+    var script = document.createElement('script');
+    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    script.async = true;
+    script.onerror = function() {
+      gtLoading = false;
+      window.__dvAllowTranslate = false;
+      console.warn('GT script failed to load');
+    };
+    document.head.appendChild(script);
+  }
+
+  function hideGTChrome() {
+    // Hide GT banner, gadget icon, and any top bar
+    var style = document.getElementById('dv-gt-hide-style');
+    if (!style) {
+      style = document.createElement('style');
+      style.id = 'dv-gt-hide-style';
+      style.textContent =
+        '.goog-te-banner-frame{display:none!important;}' +
+        '.goog-te-gadget{display:none!important;}' +
+        '.goog-te-gadget-icon{display:none!important;}' +
+        '.goog-te-spinner-pos{display:none!important;}' +
+        'body{top:0!important;}' +
+        'html{top:0!important;}' +
+        '.goog-tooltip{display:none!important;}' +
+        '.goog-tooltip:hover{display:none!important;}' +
+        '.goog-text-highlight{background-color:transparent!important;border:none!important;box-shadow:none!important;}' +
+        '#goog-gt-tt{display:none!important;}';
+      document.head.appendChild(style);
+    }
+    document.body.style.top = '0';
+    document.documentElement.style.top = '0';
+    // Remove any banner iframe that already exists
+    var banner = document.querySelector('iframe.goog-te-banner-frame');
+    if (banner) banner.style.display = 'none';
+  }
+
+  function selectGTLanguage(lang) {
+    // Wait for the combo box to appear
+    var attempts = 0;
+    function trySelect() {
+      var combo = document.querySelector('.goog-te-combo');
+      if (combo) {
+        combo.value = lang;
+        combo.dispatchEvent(new Event('change'));
+        hideGTChrome();
+        return true;
+      }
+      if (attempts < 40) {
+        attempts++;
+        setTimeout(trySelect, 150);
+      }
+      return false;
+    }
+    trySelect();
+  }
+
+  function switchToEnglish() {
+    var sw = document.getElementById('dv-lang-switch');
+    if (sw) sw.textContent = t('lang_translating');
+    loadGoogleTranslate(function() {
+      selectGTLanguage('en');
+      currentLang = 'en';
+      try { localStorage.setItem(STORAGE_LANG_KEY, 'en'); } catch(e) {}
+      applyUITranslations();
+      updateLangSwitch();
+      hideGTChrome();
+    });
+  }
+
+  function switchToChinese() {
+    currentLang = 'zh';
+    try { localStorage.setItem(STORAGE_LANG_KEY, 'zh'); } catch(e) {}
+    // Restore via GT combo
+    var combo = document.querySelector('.goog-te-combo');
+    if (combo) {
+      combo.value = 'zh-CN';
+      combo.dispatchEvent(new Event('change'));
+    } else {
+      // If GT combo not found, try the "show original" link
+      var restoreLinks = document.querySelectorAll('a[href*="prev"], .goog-te-menu-value span');
+    }
+    hideGTChrome();
     applyUITranslations();
     updateLangSwitch();
   }
 
+  function setLang(lang) {
+    if (lang === 'en' && currentLang !== 'en') {
+      switchToEnglish();
+    } else if (lang === 'zh' && currentLang !== 'zh') {
+      switchToChinese();
+    }
+  }
+
   function createLangSwitch() {
     if (document.getElementById('dv-lang-switch')) return;
-    const switch_ = document.createElement('button');
-    switch_.id = 'dv-lang-switch';
-    switch_.className = 'dv-lang-switch';
-    switch_.type = 'button';
-    switch_.setAttribute('aria-label', 'Switch UI language');
-    switch_.addEventListener('click', function() {
+    var sw = document.createElement('button');
+    sw.id = 'dv-lang-switch';
+    sw.className = 'dv-lang-switch';
+    sw.type = 'button';
+    sw.setAttribute('aria-label', 'Language');
+    sw.addEventListener('click', function() {
+      if (gtLoading) return;
       setLang(currentLang === 'zh' ? 'en' : 'zh');
-      showLangTooltip(switch_);
     });
-    document.body.appendChild(switch_);
+    document.body.appendChild(sw);
     updateLangSwitch();
   }
 
-  function showLangTooltip(anchor) {
-    const existing = document.getElementById('dv-lang-tooltip');
-    if (existing) existing.remove();
-
-    const tip = document.createElement('div');
-    tip.id = 'dv-lang-tooltip';
-    tip.className = 'dv-lang-tooltip';
-    tip.textContent = t('tooltip_translate_hint');
-    document.body.appendChild(tip);
-
-    var rect = anchor.getBoundingClientRect();
-    tip.style.bottom = (window.innerHeight - rect.top + 10) + 'px';
-    tip.style.right = '16px';
-
-    requestAnimationFrame(function() { tip.classList.add('dv-lang-tooltip--show'); });
-    setTimeout(function() {
-      tip.classList.remove('dv-lang-tooltip--show');
-      setTimeout(function() { tip.remove(); }, 300);
-    }, 3500);
-  }
-
   function updateLangSwitch() {
-    const sw = document.getElementById('dv-lang-switch');
+    var sw = document.getElementById('dv-lang-switch');
     if (!sw) return;
     sw.textContent = currentLang === 'zh' ? I18N.zh.lang_switch_en : I18N.en.lang_switch_zh;
     sw.title = currentLang === 'zh' ? t('lang_switch_to_en') : t('lang_switch_to_zh');
-  }
-
-  function shouldShowBanner() {
-    if (currentLang !== 'en') return false;
-    try {
-      return localStorage.getItem(STORAGE_BANNER_KEY) !== '1';
-    } catch(e) { return true; }
-  }
-
-  function dismissBanner(never) {
-    if (never) {
-      try { localStorage.setItem(STORAGE_BANNER_KEY, '1'); } catch(e) {}
-    }
-    const banner = document.getElementById('dv-translate-banner');
-    if (banner) {
-      banner.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-      banner.style.opacity = '0';
-      banner.style.transform = 'translateY(-10px)';
-      document.body.classList.remove('dv-banner-visible');
-      setTimeout(function() { banner.remove(); }, 300);
-    }
-  }
-
-  function createTranslateBanner() {
-    if (!shouldShowBanner()) return;
-    if (document.getElementById('dv-translate-banner')) return;
-    setTimeout(function() {
-      if (!shouldShowBanner()) return;
-      const browser = detectBrowser();
-      var bannerText = (browser === 'edge') ? t('banner_text_edge') : t('banner_text_chrome');
-
-      const banner = document.createElement('div');
-      banner.id = 'dv-translate-banner';
-      banner.className = 'dv-translate-banner';
-      banner.innerHTML =
-        '<div class="dv-translate-banner__inner">' +
-          '<div class="dv-translate-banner__text">' +
-            '<strong>' + t('banner_title') + '</strong> ' + bannerText +
-          '</div>' +
-          '<div class="dv-translate-banner__actions">' +
-            '<button class="dv-translate-banner__btn" data-action="dismiss">' + t('banner_got_it') + '</button>' +
-            '<button class="dv-translate-banner__btn dv-translate-banner__btn--dismiss" data-action="never">' + t('banner_never') + '</button>' +
-          '</div>' +
-        '</div>';
-      document.body.appendChild(banner);
-      document.body.classList.add('dv-banner-visible');
-      requestAnimationFrame(function() { banner.classList.add('dv-translate-banner--show'); });
-
-      banner.addEventListener('click', function(e) {
-        const btn = e.target.closest('[data-action]');
-        if (!btn) return;
-        const action = btn.getAttribute('data-action');
-        if (action === 'dismiss') { dismissBanner(false); }
-        if (action === 'never') { dismissBanner(true); }
-      });
-    }, 2000);
   }
 
   window.DV_I18N = { t: t, setLang: setLang, currentLang: function() { return currentLang; } };
@@ -771,7 +787,7 @@
     container.innerHTML = html;
   }
 
-  // ── New Content Notification ──
+  // ── New Content Notification (redesigned with star SVG + glowing border) ──
   function getVersionJsonUrl() {
     var path = window.location.pathname;
     if (path.match(/\/(articles|cao|issues)\//)) return '../version.json';
@@ -803,14 +819,27 @@
     });
   }
 
+  // Four-pointed sparkle star SVG in brand color
+  var STAR_SVG = '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+    '<defs>' +
+      '<filter id="dv-star-glow" x="-50%" y="-50%" width="200%" height="200%">' +
+        '<feGaussianBlur stdDeviation="2" result="blur"/>' +
+        '<feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>' +
+      '</filter>' +
+    '</defs>' +
+    '<path d="M14 1 L16.5 11.5 L27 14 L16.5 16.5 L14 27 L11.5 16.5 L1 14 L11.5 11.5 Z" fill="#002FA7" filter="url(#dv-star-glow)"/>' +
+    '<path d="M14 5 L15.5 12.5 L23 14 L15.5 15.5 L14 23 L12.5 15.5 L5 14 L12.5 12.5 Z" fill="#3B6CF6" opacity="0.6"/>' +
+    '</svg>';
+
   function showNewContentBanner(data) {
     if (document.getElementById('dv-new-content')) return;
     const el = document.createElement('div');
     el.id = 'dv-new-content';
     el.className = 'dv-new-content';
     el.innerHTML =
+      '<div class="dv-new-content__border"></div>' +
       '<div class="dv-new-content__inner">' +
-        '<div class="dv-new-content__icon">✨</div>' +
+        '<div class="dv-new-content__icon">' + STAR_SVG + '</div>' +
         '<div class="dv-new-content__body">' +
           '<div class="dv-new-content__title">' + t('new_content_title') + '</div>' +
           '<div class="dv-new-content__desc">' + t('new_content_desc') + '</div>' +
@@ -833,7 +862,7 @@
       if (action === 'refresh') location.reload();
       if (action === 'dismiss') {
         el.classList.remove('dv-new-content--show');
-        setTimeout(function() { el.remove(); }, 400);
+        setTimeout(function() { el.remove(); }, 500);
       }
     });
   }
@@ -844,7 +873,10 @@
     document.documentElement.lang = 'zh-CN';
     createLangSwitch();
     applyUITranslations();
-    createTranslateBanner();
+    // If saved preference is English, auto-translate
+    if (currentLang === 'en') {
+      setTimeout(switchToEnglish, 300);
+    }
     checkForNewContent();
     initArticleInteractions();
     initListingPage();
