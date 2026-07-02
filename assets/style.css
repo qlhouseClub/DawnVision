@@ -3049,38 +3049,29 @@ main {
   box-shadow: 0 4px 20px rgba(0,47,167,0.25);
 }
 
-/* Language switch tooltip */
-.dv-lang-tooltip {
+/* Translate hint toast */
+.dv-translate-hint {
   position: fixed;
+  bottom: 80px;
+  right: 16px;
   z-index: 920;
-  background: rgba(30,30,30,0.92);
+  background: rgba(30,30,30,0.9);
   color: #fff;
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-size: 11px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 12px;
   font-family: var(--font-sans);
   line-height: 1.4;
-  max-width: 220px;
-  text-align: center;
+  max-width: 260px;
   pointer-events: none;
   opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
 }
-.dv-lang-tooltip::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  right: 20px;
-  width: 10px;
-  height: 10px;
-  background: rgba(30,30,30,0.92);
-  transform: rotate(45deg);
-}
-.dv-lang-tooltip--show {
+.dv-translate-hint--show {
   opacity: 1;
   transform: translateY(0);
 }
