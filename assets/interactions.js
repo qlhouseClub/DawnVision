@@ -14,24 +14,42 @@
 (function() {
   var s = document.createElement('style');
   s.textContent =
-    '.goog-te-banner-frame{display:none!important;}' +
+    /* Hide all GT UI chrome */
+    '.goog-te-banner-frame{display:none!important;visibility:hidden!important;}' +
     '.goog-te-gadget{display:none!important;}' +
     '.goog-te-gadget-icon{display:none!important;}' +
     '.goog-te-gadget-simple{display:none!important;}' +
     '.goog-te-spinner-pos{display:none!important;}' +
+    '.goog-te-spinner{display:none!important;}' +
+    '.goog-te-menu-frame{display:none!important;}' +
+    '.goog-te-balloon-frame{display:none!important;}' +
     'body{top:0!important;}' +
     'html{top:0!important;}' +
     '.goog-text-highlight{background-color:transparent!important;border:none!important;box-shadow:none!important;}' +
     '#goog-gt-tt{display:none!important;}' +
     '.goog-tooltip{display:none!important;}' +
-    'iframe.goog-te-banner-frame{display:none!important;}';
+    'iframe.goog-te-banner-frame{display:none!important;visibility:hidden!important;height:0!important;width:0!important;}';
   document.head.appendChild(s);
-  // Continuously reset body top that GT adds
-  setInterval(function() {
-    if (document.body.style.top && document.body.style.top !== '0px') {
-      document.body.style.top = '0';
-    }
-  }, 500);
+  // Aggressively remove GT banner iframe and reset body top whenever it appears
+  function killGTChrome() {
+    var frames = document.querySelectorAll('iframe.goog-te-banner-frame, iframe[src*="translate_pidget"]');
+    frames.forEach(function(f) {
+      f.style.display = 'none';
+      f.style.visibility = 'hidden';
+      f.style.height = '0';
+      f.style.width = '0';
+      if (f.parentNode) f.parentNode.removeChild(f);
+    });
+    document.body.style.top = '0';
+    document.documentElement.style.top = '0';
+    document.body.style.position = '';
+  }
+  killGTChrome();
+  setInterval(killGTChrome, 200);
+  if (typeof MutationObserver !== 'undefined') {
+    var mo = new MutationObserver(killGTChrome);
+    mo.observe(document.documentElement, { childList: true, subtree: true, attributes: true });
+  }
 })();
 
 (function() {
@@ -60,9 +78,9 @@
       tip_scan: '微信扫码 · <strong>谢谢老板</strong>',
       tip_close: '关闭',
       lang_switch_en: 'EN',
-      lang_switch_zh: '中',
+      lang_switch_zh: 'CN',
       lang_switch_to_en: 'Translate to English',
-      lang_switch_to_zh: '切回中文',
+      lang_switch_to_zh: 'Back to Chinese',
       reads_local_title: '本地计数（统计服务暂不可用）',
       reads_title: function(n) { return '总阅读量 ' + n; },
       new_content_title: '有新内容发布',
@@ -91,7 +109,7 @@
       tip_scan: 'WeChat QR · <strong>Thanks!</strong>',
       tip_close: 'Close',
       lang_switch_en: 'EN',
-      lang_switch_zh: '中',
+      lang_switch_zh: 'CN',
       lang_switch_to_en: 'Translate to English',
       lang_switch_to_zh: 'Back to Chinese',
       reads_local_title: 'Local count (analytics unavailable)',
@@ -349,8 +367,9 @@
     if (document.getElementById('dv-lang-switch')) return;
     var sw = document.createElement('button');
     sw.id = 'dv-lang-switch';
-    sw.className = 'dv-lang-switch';
+    sw.className = 'dv-lang-switch notranslate';
     sw.type = 'button';
+    sw.setAttribute('translate', 'no');
     sw.setAttribute('aria-label', 'Language');
     sw.addEventListener('click', function() {
       if (currentLang === 'zh') {
@@ -569,7 +588,8 @@
 
     const initialLikes = getLikes(articleId);
     const bar = document.createElement('div');
-    bar.className = 'article-interactions';
+    bar.className = 'article-interactions notranslate';
+    bar.setAttribute('translate', 'no');
     bar.innerHTML =
       '<div class="article-interactions__stats">' +
         '<div class="article-interactions__stat">' +
@@ -851,7 +871,8 @@
     if (document.getElementById('dv-new-content')) return;
     const el = document.createElement('div');
     el.id = 'dv-new-content';
-    el.className = 'dv-new-content';
+    el.className = 'dv-new-content notranslate';
+    el.setAttribute('translate', 'no');
     el.innerHTML =
       '<div class="dv-new-content__inner">' +
         '<div class="dv-new-content__icon">' + STAR_SVG + '</div>' +
