@@ -123,6 +123,12 @@
 
   function detectLang() {
     try {
+      // Reset any broken language pref from v19/v20 (GT widget versions)
+      var resetKey = 'dawnvision_lang_reset_v21';
+      if (!localStorage.getItem(resetKey)) {
+        localStorage.setItem(STORAGE_LANG_KEY, 'zh');
+        localStorage.setItem(resetKey, '1');
+      }
       const saved = localStorage.getItem(STORAGE_LANG_KEY);
       if (saved === 'en' || saved === 'zh') return saved;
     } catch(e) {}
