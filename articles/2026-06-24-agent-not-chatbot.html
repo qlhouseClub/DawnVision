@@ -2,7 +2,20 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script>
+/* Anti-redirect guard: block Google Translate widget from hijacking the page */
+(function(){
+  /* Neutralize GT init callback before any external script can call it */
+  window.googleTranslateElementInit = function(){ /* disabled */ };
+  var isGT = function(u){ return typeof u==='string' && /translate\.google(apis)?\.com/.test(u); };
+  var _a=window.location.assign, _r=window.location.replace, _o=window.open;
+  window.location.assign = function(u){ if(isGT(u)){ console.warn('[DawnVision] Blocked GT redirect:',u); return; } return _a.call(window.location,u); };
+  window.location.replace = function(u){ if(isGT(u)){ console.warn('[DawnVision] Blocked GT redirect:',u); return; } return _r.call(window.location,u); };
+  window.open = function(){ if(isGT(arguments[0])){ console.warn('[DawnVision] Blocked GT popup:',arguments[0]); return null; } return _o.apply(window,arguments); };
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agent 不是聊天机器人：2026 年的范式转移 | Dawn Vision — AI深度观察</title>
   <meta name="description" content="2026年AI竞争主战场从模型层转移到协议层和工具层。MCP/A2A/ACP/ANP四大协议构建Agent互联网栈，AI-Loop重写工作模式，一人公司崛起，微信接入A2A开启Agent社交——AI正从"回答问题"进化到"完成任务"。">
   <meta name="keywords" content="Dawn Vision, AI, 人工智能, 大模型, AI Agent, 智能体, MCP协议, A2A协议, ACP协议, ANP协议, AI-Loop, Cursor, 一人公司, 微信AI, 范式转移, Agent协议, AI Agent协议栈, MCP协议详解">
@@ -103,9 +116,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/style.css?v=15">
+  <link rel="stylesheet" href="../assets/style.css?v=16">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
-  <script src="../assets/interactions.js?v=15" defer></script>
+  <script src="../assets/interactions.js?v=16" defer></script>
 </head>
 <body>
 

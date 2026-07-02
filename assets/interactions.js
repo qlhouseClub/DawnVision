@@ -1,5 +1,5 @@
 /**
- * Dawn Vision — Interaction Script v15
+ * Dawn Vision — Interaction Script v16
  * Handles: read count (busuanzi + local fallback), like count (localStorage), tip modal,
  *          i18n UI labels, browser translation hint, new content notification
  *
@@ -7,8 +7,57 @@
  * - The page declares lang="zh-CN" so Chrome/Edge auto-detect Chinese and offer built-in translation
  * - We translate fixed UI labels (nav, buttons, meta) ourselves via dictionary
  * - Article body translation is handled entirely by the browser's native translate feature
- * - No external translation scripts are loaded (avoids CORS/blank page issues)
+ * - NO external translation scripts are loaded (avoids CORS/blank page/redirect issues)
  */
+
+// ===== SAFETY GUARD: Immediately block any Google Translate widget from redirecting or injecting =====
+(function() {
+  // Remove any pre-existing Google Translate elements (from cached scripts/extensions)
+  function cleanGTElements() {
+    var ids = ['google_translate_element', 'gt-nvframe', ':1.container', 'gt-c'];
+    ids.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el && el.parentNode) el.parentNode.removeChild(el);
+    });
+    var frames = document.querySelectorAll('iframe[src*="translate.google"], iframe[src*="translate.googleapis"]');
+    frames.forEach(function(f) { if (f.parentNode) f.parentNode.removeChild(f); });
+    var scripts = document.querySelectorAll('script[src*="translate.google"], script[src*="translate.googleapis"]');
+    scripts.forEach(function(s) { if (s.parentNode) s.parentNode.removeChild(s); });
+  }
+  cleanGTElements();
+  // Watch for any future injections and remove immediately
+  if (typeof MutationObserver !== 'undefined') {
+    var observer = new MutationObserver(function(mutations) {
+      var needsClean = false;
+      mutations.forEach(function(m) {
+        if (m.addedNodes && m.addedNodes.length) needsClean = true;
+      });
+      if (needsClean) cleanGTElements();
+    });
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+  }
+  // Block any attempt to navigate to translate.google.com (from leftover cached scripts)
+  var origAssign = window.location.assign;
+  var origReplace = window.location.replace;
+  var origOpen = window.open;
+  function isTranslateURL(u) {
+    return typeof u === 'string' && /translate\.google(apis)?\.com/.test(u);
+  }
+  window.location.assign = function(u) {
+    if (isTranslateURL(u)) return;
+    return origAssign.call(window.location, u);
+  };
+  window.location.replace = function(u) {
+    if (isTranslateURL(u)) return;
+    return origReplace.call(window.location, u);
+  };
+  window.open = function(u) {
+    if (isTranslateURL(u)) return null;
+    return origOpen.apply(window, arguments);
+  };
+  // Neutralize GT init callback (already done in inline head guard, reinforced here)
+  window.googleTranslateElementInit = function() { /* disabled */ };
+})();
 (function() {
   'use strict';
 

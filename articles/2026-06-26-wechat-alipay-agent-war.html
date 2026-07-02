@@ -2,7 +2,20 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script>
+/* Anti-redirect guard: block Google Translate widget from hijacking the page */
+(function(){
+  /* Neutralize GT init callback before any external script can call it */
+  window.googleTranslateElementInit = function(){ /* disabled */ };
+  var isGT = function(u){ return typeof u==='string' && /translate\.google(apis)?\.com/.test(u); };
+  var _a=window.location.assign, _r=window.location.replace, _o=window.open;
+  window.location.assign = function(u){ if(isGT(u)){ console.warn('[DawnVision] Blocked GT redirect:',u); return; } return _a.call(window.location,u); };
+  window.location.replace = function(u){ if(isGT(u)){ console.warn('[DawnVision] Blocked GT redirect:',u); return; } return _r.call(window.location,u); };
+  window.open = function(){ if(isGT(arguments[0])){ console.warn('[DawnVision] Blocked GT popup:',arguments[0]); return null; } return _o.apply(window,arguments); };
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>微信与支付宝的Agent战争：当16亿人的屏幕变成对话界面 | Dawn Vision — AI深度观察</title>
   <meta name="description" content="6月16日AI版支付宝内测，6月20日微信AI助手"小微"灰度测试——两大国民级应用在5天内先后亮剑Agent战略。这不是一次普通的功能更新，而是互联网入口的第三次争夺战。从点击图标到对话完成，服务分发的规则正在被重写。">
   <meta name="keywords" content="Dawn Vision, AI, 人工智能, 微信AI, 支付宝AI, AI Agent, 小微, 服务分发, 超级入口, Agent战争, 国民级应用, 自然语言交互, AI助手, 微信支付, 蚂蚁集团">
@@ -101,9 +114,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/style.css?v=15">
+  <link rel="stylesheet" href="../assets/style.css?v=16">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
-  <script src="../assets/interactions.js?v=15" defer></script>
+  <script src="../assets/interactions.js?v=16" defer></script>
 </head>
 <body>
 

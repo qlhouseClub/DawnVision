@@ -2,7 +2,20 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script>
+/* Anti-redirect guard: block Google Translate widget from hijacking the page */
+(function(){
+  /* Neutralize GT init callback before any external script can call it */
+  window.googleTranslateElementInit = function(){ /* disabled */ };
+  var isGT = function(u){ return typeof u==='string' && /translate\.google(apis)?\.com/.test(u); };
+  var _a=window.location.assign, _r=window.location.replace, _o=window.open;
+  window.location.assign = function(u){ if(isGT(u)){ console.warn('[DawnVision] Blocked GT redirect:',u); return; } return _a.call(window.location,u); };
+  window.location.replace = function(u){ if(isGT(u)){ console.warn('[DawnVision] Blocked GT redirect:',u); return; } return _r.call(window.location,u); };
+  window.open = function(){ if(isGT(arguments[0])){ console.warn('[DawnVision] Blocked GT popup:',arguments[0]); return null; } return _o.apply(window,arguments); };
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>17倍错误放大：为什么86%的团队用了Agent，40%在半年内失败 | Dawn Vision</title>
   <meta name="description" content="Anthropic调研：86%团队已在生产用AI Agent，但40%在6个月内失败。核心发现是17倍错误放大效应——单步95%可靠，20步串联后成功率仅35.8%。AI销售Agent擅自打5折、5名工程师3个月写连接器失败损失50万美金。">
   <meta name="keywords" content="Dawn Vision, AI Agent, 生产环境, 错误放大, Agent安全, 权限管控, AI落地">
@@ -31,9 +44,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/style.css?v=15">
+  <link rel="stylesheet" href="../assets/style.css?v=16">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
-  <script src="../assets/interactions.js?v=15" defer></script>
+  <script src="../assets/interactions.js?v=16" defer></script>
 </head>
 <body>
 <nav class="inner-nav" role="navigation">

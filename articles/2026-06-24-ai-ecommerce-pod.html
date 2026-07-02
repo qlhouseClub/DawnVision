@@ -2,7 +2,20 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script>
+/* Anti-redirect guard: block Google Translate widget from hijacking the page */
+(function(){
+  /* Neutralize GT init callback before any external script can call it */
+  window.googleTranslateElementInit = function(){ /* disabled */ };
+  var isGT = function(u){ return typeof u==='string' && /translate\.google(apis)?\.com/.test(u); };
+  var _a=window.location.assign, _r=window.location.replace, _o=window.open;
+  window.location.assign = function(u){ if(isGT(u)){ console.warn('[DawnVision] Blocked GT redirect:',u); return; } return _a.call(window.location,u); };
+  window.location.replace = function(u){ if(isGT(u)){ console.warn('[DawnVision] Blocked GT redirect:',u); return; } return _r.call(window.location,u); };
+  window.open = function(){ if(isGT(arguments[0])){ console.warn('[DawnVision] Blocked GT popup:',arguments[0]); return null; } return _o.apply(window,arguments); };
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI 电商 Pod 模式：一个人用 AI 做跨境电商的新范式 | Dawn Vision — AI深度观察</title>
   <meta name="description" content="Print-on-Demand加AI正在重塑跨境电商：AI设计产品图案、AI生成广告素材、AI投放优化、AI客服处理售后，人类只做选品决策和资金管理。从选品到交付全链路AI化，跨境电商竞争壁垒从供应链转向AI工作流编排。">
   <meta name="keywords" content="Dawn Vision, AI, 人工智能, 大模型, AI电商, Print-on-Demand, Pod模式, 跨境电商, AI设计, AI投放, AI客服, Shopify, 独立站, Dropshipping, AI营销, 电商自动化, AI跨境电商, 一人公司Shopify">
@@ -103,9 +116,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/style.css?v=15">
+  <link rel="stylesheet" href="../assets/style.css?v=16">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
-  <script src="../assets/interactions.js?v=15" defer></script>
+  <script src="../assets/interactions.js?v=16" defer></script>
 </head>
 <body>
 
