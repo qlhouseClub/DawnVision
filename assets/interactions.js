@@ -1,15 +1,21 @@
 /**
- * Dawn Vision — Interaction Script v14
+ * Dawn Vision — Interaction Script v15
  * Handles: read count (busuanzi + local fallback), like count (localStorage), tip modal,
- *          i18n/translation (Google Translate Element), new content notification
+ *          i18n UI labels, browser translation hint, new content notification
+ *
+ * Translation strategy:
+ * - The page declares lang="zh-CN" so Chrome/Edge auto-detect Chinese and offer built-in translation
+ * - We translate fixed UI labels (nav, buttons, meta) ourselves via dictionary
+ * - Article body translation is handled entirely by the browser's native translate feature
+ * - No external translation scripts are loaded (avoids CORS/blank page issues)
  */
 (function() {
   'use strict';
 
   // ══════════════════════════════════════════
-  // i18n — Real Translation System
-  // Uses Google Translate Element widget (hidden) for actual content translation.
-  // UI labels are translated via our own dictionary; article body via Google.
+  // i18n — UI Label Translation
+  // Body content is NOT translated by us. Browsers (Chrome/Edge/Safari) auto-detect
+  // Chinese via <html lang="zh-CN"> and offer their native translation bar.
   // ══════════════════════════════════════════
   const I18N = {
     zh: {
@@ -30,20 +36,22 @@
       tip_desc: '如果这篇文章对你有帮助，欢迎随意打赏。感谢支持！',
       tip_scan: '微信扫码 · <strong>谢谢老板</strong>',
       tip_close: '关闭',
-      banner_title: '翻译',
-      banner_text: '本站内容为中文。点击下方按钮可将整页翻译为英文阅读。',
-      banner_translate: '翻译成英文',
-      banner_dismiss: '知道了',
+      banner_title: '🌐 翻译提示',
+      banner_text_chrome: '本站为中文内容。请点击浏览器地址栏右侧的翻译图标，将页面翻译为您的语言。',
+      banner_text_edge: '本站为中文内容。请点击浏览器地址栏右侧的翻译图标，或右键页面选择"翻译"。',
+      banner_got_it: '知道了',
+      banner_never: '不再提示',
       lang_switch_en: 'EN',
       lang_switch_zh: '中',
-      lang_switch_to_en: 'Translate to English',
-      lang_switch_to_zh: '切换为中文',
+      lang_switch_to_en: '切换界面为英文',
+      lang_switch_to_zh: '切换界面为中文',
       reads_local_title: '本地计数（统计服务暂不可用）',
       reads_title: function(n) { return '总阅读量 ' + n; },
       new_content_title: '有新内容发布',
       new_content_desc: '网站已更新，点击刷新查看最新文章。',
       new_content_refresh: '刷新页面',
       new_content_dismiss: '稍后',
+      tooltip_translate_hint: '正文翻译请使用浏览器自带翻译功能',
     },
     en: {
       meta_editorial: 'Dawn Vision Editorial',
@@ -63,27 +71,26 @@
       tip_desc: 'If this article helped you, feel free to send a tip. Thanks for your support!',
       tip_scan: 'WeChat QR · <strong>Thanks!</strong>',
       tip_close: 'Close',
-      banner_title: 'Translate',
-      banner_text: 'This site is written in Chinese. Click below to translate the entire page to English.',
-      banner_translate: 'Translate to English',
-      banner_dismiss: 'Dismiss',
+      banner_title: '🌐 Translate',
+      banner_text_chrome: 'This site is in Chinese. Click the translate icon in your browser address bar to read in your language.',
+      banner_text_edge: 'This site is in Chinese. Click the translate icon in the address bar, or right-click and select "Translate".',
+      banner_got_it: 'Got it',
+      banner_never: "Don't show again",
       lang_switch_en: 'EN',
       lang_switch_zh: '中',
-      lang_switch_to_en: 'Translate to English',
-      lang_switch_to_zh: 'Back to Chinese',
+      lang_switch_to_en: 'Switch UI to English',
+      lang_switch_to_zh: 'Switch UI to Chinese',
       reads_local_title: 'Local count (analytics unavailable)',
       reads_title: function(n) { return n + ' total reads'; },
       new_content_title: 'New content available',
       new_content_desc: 'The site has been updated. Click refresh to see the latest articles.',
       new_content_refresh: 'Refresh',
       new_content_dismiss: 'Later',
+      tooltip_translate_hint: 'Use your browser\'s built-in translate for article content',
     }
   };
 
   let currentLang = 'zh';
-  let gtInitialized = false;
-  let gtReady = false;
-  let gtTranslating = false;
   const STORAGE_LANG_KEY = 'dawnvision_lang';
   const STORAGE_BANNER_KEY = 'dawnvision_banner_dismissed';
   const STORAGE_VERSION_KEY = 'dawnvision_last_version';
@@ -98,6 +105,15 @@
     return 'en';
   }
 
+  function detectBrowser() {
+    const ua = navigator.userAgent;
+    if (ua.indexOf('Edg') > -1) return 'edge';
+    if (ua.indexOf('Chrome') > -1 && ua.indexOf('Edg') === -1) return 'chrome';
+    if (ua.indexOf('Safari') > -1 && ua.indexOf('Chrome') === -1) return 'safari';
+    if (ua.indexOf('Firefox') > -1) return 'firefox';
+    return 'other';
+  }
+
   function t(key) {
     const dict = I18N[currentLang] || I18N.zh;
     const val = dict[key];
@@ -107,9 +123,10 @@
 
   function applyUITranslations() {
     const dict = I18N[currentLang];
-    document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
+    // Always keep lang="zh-CN" so browsers auto-detect and offer translation
+    document.documentElement.lang = 'zh-CN';
 
-    // Translate data-i18n elements
+    // data-i18n elements
     document.querySelectorAll('[data-i18n]').forEach(function(el) {
       const key = el.getAttribute('data-i18n');
       const val = dict[key];
@@ -128,15 +145,28 @@
       if (typeof val === 'string') el.innerHTML = val;
     });
 
-    // Translate article interactions bar
-    const readsLabel = document.querySelector('.article-interactions__stat-label');
-    if (readsLabel) readsLabel.textContent = t('reads');
-    const likesLabels = document.querySelectorAll('.article-interactions__stat:nth-child(2) .article-interactions__stat-label');
-    likesLabels.forEach(function(el) { el.textContent = t('likes'); });
+    // Article interactions bar labels
+    document.querySelectorAll('.article-interactions__stat:nth-child(1) .article-interactions__stat-label').forEach(function(el) {
+      el.textContent = t('reads');
+    });
+    document.querySelectorAll('.article-interactions__stat:nth-child(2) .article-interactions__stat-label').forEach(function(el) {
+      el.textContent = t('likes');
+    });
     const likeBtnLabel = document.querySelector('.like-btn__label');
     if (likeBtnLabel) likeBtnLabel.textContent = t('like_btn');
 
-    // Translate tip modal if it exists
+    // Meta editorial label
+    document.querySelectorAll('.article-page__meta-row span').forEach(function(el) {
+      const txt = el.textContent.trim();
+      if (txt === 'Dawn Vision 编辑部' && currentLang === 'en') {
+        el.textContent = t('meta_editorial');
+      }
+      if (txt === 'Dawn Vision Editorial' && currentLang === 'zh') {
+        el.textContent = t('meta_editorial');
+      }
+    });
+
+    // Tip modal
     const modal = document.getElementById('tip-modal');
     if (modal) {
       const closeBtn = modal.querySelector('.tip-modal__close');
@@ -152,181 +182,11 @@
     }
   }
 
-  // ── Google Translate Element Integration ──
-  function initGoogleTranslate() {
-    if (gtInitialized) return;
-    gtInitialized = true;
-
-    // Create hidden container for Google Translate widget
-    const gtContainer = document.createElement('div');
-    gtContainer.id = 'google_translate_element';
-    gtContainer.style.cssText = 'position:fixed;top:-9999px;left:-9999px;opacity:0;pointer-events:none;height:0;width:0;overflow:hidden;';
-    document.body.appendChild(gtContainer);
-
-    // Define global callback
-    window.googleTranslateElementInit = function() {
-      try {
-        new window.google.translate.TranslateElement({
-          pageLanguage: 'zh-CN',
-          includedLanguages: 'en,zh-CN',
-          autoDisplay: false,
-          multilanguagePage: false,
-          layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE
-        }, 'google_translate_element');
-
-        injectGTHideCSS();
-        gtReady = true;
-
-        // If saved language is English, auto-translate
-        if (currentLang === 'en') {
-          setTimeout(function() { doGTranslate('en'); }, 300);
-        }
-      } catch(e) {
-        console.warn('Google Translate init failed:', e);
-      }
-    };
-
-    // Load the script with HTTPS (works in both Chrome and Edge)
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.async = true;
-    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-    script.onerror = function() {
-      console.warn('Google Translate script failed to load');
-      gtInitialized = false;
-    };
-    document.head.appendChild(script);
-  }
-
-  function injectGTHideCSS() {
-    if (document.getElementById('dv-gt-hide-css')) return;
-    const style = document.createElement('style');
-    style.id = 'dv-gt-hide-css';
-    style.textContent = [
-      '.goog-te-banner-frame{display:none!important;visibility:hidden!important;}',
-      '.goog-te-menu-frame{display:none!important;}',
-      '.goog-te-balloon-frame{display:none!important;}',
-      '.goog-tooltip{display:none!important;}',
-      'body{top:0!important;min-height:100%!important;}',
-      '.goog-text-highlight{background:transparent!important;box-shadow:none!important;}',
-      '#goog-gt-tt{display:none!important;}',
-      '.goog-te-gadget{display:none!important;font-size:0!important;}',
-      '.goog-te-gadget-icon{display:none!important;}',
-      '.goog-te-gadget-simple{display:none!important;}',
-      '.goog-te-spinner-pos{display:none!important;}',
-      '.VIpgJd-ZVi9od-aZ2wEe-wOHMyf{display:none!important;}',
-      '.VIpgJd-ZVi9od-aZ2wEe-OiiCO{display:none!important;}',
-      '.VIpgJd-ZVi9od-aZ2wEe{display:none!important;}',
-      '.skiptranslate{display:none!important;}',
-      '#goog-gt-vt{display:none!important;}',
-      '.goog-logo-link{display:none!important;}',
-      '.goog-te-gadget span{display:none!important;}',
-    ].join('\n');
-    document.head.appendChild(style);
-  }
-
-  function doGTranslate(targetLang) {
-    if (targetLang === 'zh' || targetLang === 'zh-CN') {
-      // Restore Chinese original
-      restoreTranslation();
-      return;
-    }
-
-    gtTranslating = true;
-    const sw = document.getElementById('dv-lang-switch');
-    if (sw) { sw.textContent = '...'; sw.disabled = true; }
-
-    function attemptTranslate(attempts) {
-      // Find the Google Translate combo box and set it to English
-      const combos = document.querySelectorAll('.goog-te-combo');
-      if (combos.length > 0) {
-        combos.forEach(function(combo) {
-          combo.value = 'en';
-          // Trigger change event
-          const evt = document.createEvent('HTMLEvents');
-          evt.initEvent('change', true, true);
-          combo.dispatchEvent(evt);
-          // Also try click + change
-          combo.click();
-        });
-        setTimeout(function() {
-          gtTranslating = false;
-          updateLangSwitch();
-          if (sw) sw.disabled = false;
-        }, 2000);
-      } else if (attempts > 0) {
-        setTimeout(function() { attemptTranslate(attempts - 1); }, 600);
-      } else {
-        gtTranslating = false;
-        updateLangSwitch();
-        if (sw) sw.disabled = false;
-        // Fallback: open Google Translate in new tab
-        if (targetLang === 'en') {
-          window.open('https://translate.google.com/translate?sl=zh-CN&tl=en&u=' + encodeURIComponent(location.href), '_blank', 'noopener');
-        }
-      }
-    }
-    attemptTranslate(15);
-  }
-
-  function restoreTranslation() {
-    // Try to find and click the "Show original" button / restore link
-    try {
-      // Method 1: Try the combo box set to zh-CN
-      const combos = document.querySelectorAll('.goog-te-combo');
-      combos.forEach(function(combo) {
-        combo.value = 'zh-CN';
-        const evt = document.createEvent('HTMLEvents');
-        evt.initEvent('change', true, true);
-        combo.dispatchEvent(evt);
-      });
-
-      // Method 2: Look for restore button in Google banner (hidden but exists in DOM)
-      const iframes = document.querySelectorAll('iframe.goog-te-banner-frame');
-      iframes.forEach(function(iframe) {
-        try {
-          const idoc = iframe.contentDocument || iframe.contentWindow.document;
-          const restoreBtn = idoc.querySelector('button[id*="restore"], a[href*="prev"], button[title*="original"], button[title*="Original"]');
-          if (restoreBtn) restoreBtn.click();
-        } catch(e) {}
-      });
-
-      // Method 3: Remove translated font tags and reload as last resort
-      setTimeout(function() {
-        const translatedFonts = document.querySelectorAll('font[style*="vertical-align"]');
-        if (translatedFonts.length > 0) {
-          // Translation is still active - reload page
-          location.reload();
-        }
-      }, 1500);
-    } catch(e) {
-      location.reload();
-    }
-  }
-
   function setLang(lang) {
-    if (gtTranslating) return;
-    const prevLang = currentLang;
     currentLang = lang;
     try { localStorage.setItem(STORAGE_LANG_KEY, lang); } catch(e) {}
     applyUITranslations();
     updateLangSwitch();
-
-    if (lang === 'en' && prevLang !== 'en') {
-      // Switching to English - initialize and translate
-      if (!gtInitialized) {
-        initGoogleTranslate();
-      }
-      if (gtReady) {
-        doGTranslate('en');
-      }
-      // If GT not ready yet, the initGoogleTranslate callback will auto-translate
-    } else if (lang === 'zh' && prevLang !== 'zh') {
-      // Switching back to Chinese
-      if (gtReady) {
-        doGTranslate('zh');
-      }
-    }
   }
 
   function createLangSwitch() {
@@ -335,39 +195,54 @@
     switch_.id = 'dv-lang-switch';
     switch_.className = 'dv-lang-switch';
     switch_.type = 'button';
-    switch_.setAttribute('aria-label', 'Switch language');
+    switch_.setAttribute('aria-label', 'Switch UI language');
     switch_.addEventListener('click', function() {
-      if (gtTranslating) return;
       setLang(currentLang === 'zh' ? 'en' : 'zh');
+      showLangTooltip(switch_);
     });
     document.body.appendChild(switch_);
     updateLangSwitch();
   }
 
+  function showLangTooltip(anchor) {
+    const existing = document.getElementById('dv-lang-tooltip');
+    if (existing) existing.remove();
+
+    const tip = document.createElement('div');
+    tip.id = 'dv-lang-tooltip';
+    tip.className = 'dv-lang-tooltip';
+    tip.textContent = t('tooltip_translate_hint');
+    document.body.appendChild(tip);
+
+    var rect = anchor.getBoundingClientRect();
+    tip.style.bottom = (window.innerHeight - rect.top + 10) + 'px';
+    tip.style.right = '16px';
+
+    requestAnimationFrame(function() { tip.classList.add('dv-lang-tooltip--show'); });
+    setTimeout(function() {
+      tip.classList.remove('dv-lang-tooltip--show');
+      setTimeout(function() { tip.remove(); }, 300);
+    }, 3500);
+  }
+
   function updateLangSwitch() {
     const sw = document.getElementById('dv-lang-switch');
     if (!sw) return;
-    if (gtTranslating) {
-      sw.textContent = '...';
-      return;
-    }
     sw.textContent = currentLang === 'zh' ? I18N.zh.lang_switch_en : I18N.en.lang_switch_zh;
     sw.title = currentLang === 'zh' ? t('lang_switch_to_en') : t('lang_switch_to_zh');
   }
 
   function shouldShowBanner() {
     if (currentLang !== 'en') return false;
-    if (gtTranslating) return false;
-    // Don't show if already translated
-    const translatedFonts = document.querySelectorAll('font[style*="vertical-align"]');
-    if (translatedFonts.length > 0) return false;
     try {
       return localStorage.getItem(STORAGE_BANNER_KEY) !== '1';
     } catch(e) { return true; }
   }
 
-  function dismissBanner() {
-    try { localStorage.setItem(STORAGE_BANNER_KEY, '1'); } catch(e) {}
+  function dismissBanner(never) {
+    if (never) {
+      try { localStorage.setItem(STORAGE_BANNER_KEY, '1'); } catch(e) {}
+    }
     const banner = document.getElementById('dv-translate-banner');
     if (banner) {
       banner.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
@@ -381,20 +256,22 @@
   function createTranslateBanner() {
     if (!shouldShowBanner()) return;
     if (document.getElementById('dv-translate-banner')) return;
-    // Delay banner slightly to not interfere with page load
     setTimeout(function() {
       if (!shouldShowBanner()) return;
+      const browser = detectBrowser();
+      var bannerText = (browser === 'edge') ? t('banner_text_edge') : t('banner_text_chrome');
+
       const banner = document.createElement('div');
       banner.id = 'dv-translate-banner';
       banner.className = 'dv-translate-banner';
       banner.innerHTML =
         '<div class="dv-translate-banner__inner">' +
           '<div class="dv-translate-banner__text">' +
-            '<strong>' + t('banner_title') + '</strong> ' + t('banner_text') +
+            '<strong>' + t('banner_title') + '</strong> ' + bannerText +
           '</div>' +
           '<div class="dv-translate-banner__actions">' +
-            '<button class="dv-translate-banner__btn" data-action="translate">' + t('banner_translate') + '</button>' +
-            '<button class="dv-translate-banner__btn dv-translate-banner__btn--dismiss" data-action="dismiss">' + t('banner_dismiss') + '</button>' +
+            '<button class="dv-translate-banner__btn" data-action="dismiss">' + t('banner_got_it') + '</button>' +
+            '<button class="dv-translate-banner__btn dv-translate-banner__btn--dismiss" data-action="never">' + t('banner_never') + '</button>' +
           '</div>' +
         '</div>';
       document.body.appendChild(banner);
@@ -405,109 +282,23 @@
         const btn = e.target.closest('[data-action]');
         if (!btn) return;
         const action = btn.getAttribute('data-action');
-        if (action === 'dismiss') { dismissBanner(); }
-        if (action === 'translate') {
-          setLang('en');
-          dismissBanner();
-        }
+        if (action === 'dismiss') { dismissBanner(false); }
+        if (action === 'never') { dismissBanner(true); }
       });
-    }, 1500);
+    }, 2000);
   }
 
-  // ── New Content Notification ──
-  function getVersionJsonUrl() {
-    // Determine root-relative path based on current page depth
-    var path = window.location.pathname;
-    if (path.match(/\/(articles|cao|issues)\//)) return '../version.json';
-    return 'version.json';
-  }
-
-  function checkForNewContent() {
-    var vUrl = getVersionJsonUrl();
-    function doCheck() {
-      fetch(vUrl + '?t=' + Date.now(), { cache: 'no-store' })
-        .then(function(r) {
-          if (!r.ok) throw new Error('not found');
-          return r.json();
-        })
-        .then(function(data) {
-          try {
-            const lastVer = localStorage.getItem(STORAGE_VERSION_KEY);
-            if (lastVer && lastVer !== data.version) {
-              showNewContentBanner(data);
-            }
-            localStorage.setItem(STORAGE_VERSION_KEY, data.version);
-          } catch(e) {}
-        })
-        .catch(function() {});
-    }
-    // Record current version on load (don't notify for first visit)
-    fetch(vUrl + '?t=' + Date.now(), { cache: 'no-store' })
-      .then(function(r) { return r.json(); })
-      .then(function(data) {
-        try { localStorage.setItem(STORAGE_VERSION_KEY, data.version); } catch(e) {}
-      })
-      .catch(function() {});
-
-    // Check every 5 minutes
-    setInterval(doCheck, 5 * 60 * 1000);
-    // Check when tab becomes visible again
-    document.addEventListener('visibilitychange', function() {
-      if (!document.hidden) {
-        setTimeout(doCheck, 2000);
-      }
-    });
-  }
-
-  function showNewContentBanner(data) {
-    if (document.getElementById('dv-new-content')) return;
-    const el = document.createElement('div');
-    el.id = 'dv-new-content';
-    el.className = 'dv-new-content';
-    el.innerHTML =
-      '<div class="dv-new-content__inner">' +
-        '<div class="dv-new-content__icon">✨</div>' +
-        '<div class="dv-new-content__body">' +
-          '<div class="dv-new-content__title">' + t('new_content_title') + '</div>' +
-          '<div class="dv-new-content__desc">' + t('new_content_desc') + '</div>' +
-        '</div>' +
-        '<div class="dv-new-content__actions">' +
-          '<button class="dv-new-content__btn dv-new-content__btn--primary" data-action="refresh">' + t('new_content_refresh') + '</button>' +
-          '<button class="dv-new-content__btn dv-new-content__btn--ghost" data-action="dismiss">' + t('new_content_dismiss') + '</button>' +
-        '</div>' +
-        '<button class="dv-new-content__close" data-action="dismiss" aria-label="close">×</button>' +
-      '</div>';
-    document.body.appendChild(el);
-    // Animate in after a small delay
-    setTimeout(function() {
-      requestAnimationFrame(function() { el.classList.add('dv-new-content--show'); });
-    }, 100);
-
-    el.addEventListener('click', function(e) {
-      const btn = e.target.closest('[data-action]');
-      if (!btn) return;
-      const action = btn.getAttribute('data-action');
-      if (action === 'refresh') {
-        location.reload();
-      }
-      if (action === 'dismiss') {
-        el.classList.remove('dv-new-content--show');
-        setTimeout(function() { el.remove(); }, 400);
-      }
-    });
-  }
-
-  // Expose i18n globally
   window.DV_I18N = { t: t, setLang: setLang, currentLang: function() { return currentLang; } };
 
 
-
+  // ══════════════════════════════════════════
+  // Analytics & Interactions
+  // ══════════════════════════════════════════
   const STORAGE_KEY = 'dawnvision_analytics';
   const STORAGE_VERSION = 2;
   const TIP_MODAL_ID = 'tip-modal';
   const BUSUANZI_TIMEOUT = 6000;
 
-  // ── Storage migration ──
   function migrateStorage() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
@@ -539,9 +330,7 @@
       const d = raw ? JSON.parse(raw) : { __v: STORAGE_VERSION };
       if (!d.__v) d.__v = STORAGE_VERSION;
       return d;
-    } catch(e) {
-      return { __v: STORAGE_VERSION };
-    }
+    } catch(e) { return { __v: STORAGE_VERSION }; }
   }
 
   function saveData(data) {
@@ -560,7 +349,6 @@
     return n.toString();
   }
 
-  // ── Likes ──
   function getLikes(articleId) {
     const data = getData();
     return (data[articleId] && typeof data[articleId].likes === 'number') ? data[articleId].likes : 0;
@@ -574,7 +362,6 @@
     return data[articleId].likes;
   }
 
-  // ── Local view tracking ──
   function getLocalView(articleId) {
     const data = getData();
     if (!data[articleId]) data[articleId] = {};
@@ -587,7 +374,6 @@
     return data[articleId].localViews || 1;
   }
 
-  // ── Busuanzi real page view counter ──
   function initBusuanzi(articleId, onCount) {
     const hiddenSpan = document.createElement('span');
     hiddenSpan.id = 'busuanzi_value_page_pv';
@@ -601,8 +387,7 @@
       if (resolved) return;
       resolved = true;
       if (checkInterval) clearInterval(checkInterval);
-      const localViews = getLocalView(articleId);
-      onCount(localViews, true);
+      onCount(getLocalView(articleId), true);
     }
 
     function resolveRemote(count) {
@@ -643,10 +428,8 @@
     document.head.appendChild(script);
   }
 
-  // ── Tip Modal ──
   function createTipModal() {
     if (document.getElementById(TIP_MODAL_ID)) return;
-
     const overlay = document.createElement('div');
     overlay.id = TIP_MODAL_ID;
     overlay.className = 'tip-modal-overlay';
@@ -680,7 +463,7 @@
 
   function openTipModal() {
     createTipModal();
-    applyUITranslations(); // Refresh with current language
+    applyUITranslations();
     const overlay = document.getElementById(TIP_MODAL_ID);
     requestAnimationFrame(function() {
       overlay.classList.add('tip-modal-overlay--open');
@@ -692,22 +475,17 @@
     const overlay = document.getElementById(TIP_MODAL_ID);
     if (overlay) {
       overlay.classList.remove('tip-modal-overlay--open');
-      setTimeout(function() {
-        document.body.style.overflow = '';
-      }, 300);
+      setTimeout(function() { document.body.style.overflow = ''; }, 300);
     }
   }
 
-  // ── Article interactions ──
   function initArticleInteractions() {
     const articleId = getArticleId();
     if (!articleId) return;
-
     const container = document.querySelector('.article-page__footnote');
     if (!container) return;
 
     const initialLikes = getLikes(articleId);
-
     const bar = document.createElement('div');
     bar.className = 'article-interactions';
     bar.innerHTML =
@@ -730,8 +508,7 @@
           '<span class="like-btn__count" id="dv-like-count">' + formatNumber(initialLikes) + '</span>' +
         '</button>' +
         '<button class="tip-btn" id="dv-tip-btn" type="button" aria-label="打赏">' +
-          '<span>☕</span>' +
-          '<span>' + t('tip_btn') + '</span>' +
+          '<span>☕</span><span>' + t('tip_btn') + '</span>' +
         '</button>' +
       '</div>';
 
@@ -764,35 +541,25 @@
       likeBtn.classList.remove('like-btn--burst');
       void likeBtn.offsetWidth;
       likeBtn.classList.add('like-btn--burst', 'like-btn--liked');
-      setTimeout(function() {
-        likeBtn.classList.remove('like-btn--burst');
-      }, 400);
+      setTimeout(function() { likeBtn.classList.remove('like-btn--burst'); }, 400);
     });
 
     const tipBtn = document.getElementById('dv-tip-btn');
     tipBtn.addEventListener('click', openTipModal);
   }
 
-  // ── Listing page tip buttons ──
   function initListingPage() {
     document.addEventListener('click', function(e) {
       const btn = e.target.closest('[data-tip-btn]');
-      if (btn) {
-        e.preventDefault();
-        openTipModal();
-      }
+      if (btn) { e.preventDefault(); openTipModal(); }
     });
   }
 
-  // ── Issue filter cascading dropdowns ──
   function initIssueFilter() {
     const filterEl = document.querySelector('.issue-filter');
     if (!filterEl) return;
-
     let issues = [];
-    try {
-      issues = JSON.parse(filterEl.dataset.issues || '[]');
-    } catch(e) { return; }
+    try { issues = JSON.parse(filterEl.dataset.issues || '[]'); } catch(e) { return; }
     if (!issues.length) return;
 
     const yearSel = filterEl.querySelector('[data-filter="year"]');
@@ -803,7 +570,6 @@
     function getSelected() {
       return { year: yearSel.value, month: monthSel.value, half: halfSel.value, issue: issueSel.value };
     }
-
     function filterIssues(filters) {
       return issues.filter(function(i) {
         if (filters.year && i.year !== filters.year) return false;
@@ -812,7 +578,6 @@
         return true;
       });
     }
-
     function updateOptions(sel, options, placeholder) {
       var currentVal = sel.value;
       sel.innerHTML = '<option value="">' + placeholder + '</option>';
@@ -909,13 +674,11 @@
     })();
   }
 
-  // ── CAO List Pagination ──
   function initCaoPagination() {
     var container = document.querySelector('.cao-pagination');
     if (!container) return;
     var items = document.querySelectorAll('.cao-list__item');
     if (!items.length) return;
-
     var PER_PAGE = 8;
     var total = items.length;
     var totalPages = Math.ceil(total / PER_PAGE);
@@ -959,18 +722,79 @@
     container.innerHTML = html;
   }
 
+  // ── New Content Notification ──
+  function getVersionJsonUrl() {
+    var path = window.location.pathname;
+    if (path.match(/\/(articles|cao|issues)\//)) return '../version.json';
+    return 'version.json';
+  }
+
+  function checkForNewContent() {
+    var vUrl = getVersionJsonUrl();
+    function doCheck() {
+      fetch(vUrl + '?t=' + Date.now(), { cache: 'no-store' })
+        .then(function(r) { if (!r.ok) throw new Error(); return r.json(); })
+        .then(function(data) {
+          try {
+            const lastVer = localStorage.getItem(STORAGE_VERSION_KEY);
+            if (lastVer && lastVer !== data.version) showNewContentBanner(data);
+            localStorage.setItem(STORAGE_VERSION_KEY, data.version);
+          } catch(e) {}
+        })
+        .catch(function() {});
+    }
+    fetch(vUrl + '?t=' + Date.now(), { cache: 'no-store' })
+      .then(function(r) { return r.json(); })
+      .then(function(data) { try { localStorage.setItem(STORAGE_VERSION_KEY, data.version); } catch(e) {} })
+      .catch(function() {});
+
+    setInterval(doCheck, 5 * 60 * 1000);
+    document.addEventListener('visibilitychange', function() {
+      if (!document.hidden) setTimeout(doCheck, 2000);
+    });
+  }
+
+  function showNewContentBanner(data) {
+    if (document.getElementById('dv-new-content')) return;
+    const el = document.createElement('div');
+    el.id = 'dv-new-content';
+    el.className = 'dv-new-content';
+    el.innerHTML =
+      '<div class="dv-new-content__inner">' +
+        '<div class="dv-new-content__icon">✨</div>' +
+        '<div class="dv-new-content__body">' +
+          '<div class="dv-new-content__title">' + t('new_content_title') + '</div>' +
+          '<div class="dv-new-content__desc">' + t('new_content_desc') + '</div>' +
+        '</div>' +
+        '<div class="dv-new-content__actions">' +
+          '<button class="dv-new-content__btn dv-new-content__btn--primary" data-action="refresh">' + t('new_content_refresh') + '</button>' +
+          '<button class="dv-new-content__btn dv-new-content__btn--ghost" data-action="dismiss">' + t('new_content_dismiss') + '</button>' +
+        '</div>' +
+        '<button class="dv-new-content__close" data-action="dismiss" aria-label="close">×</button>' +
+      '</div>';
+    document.body.appendChild(el);
+    setTimeout(function() {
+      requestAnimationFrame(function() { el.classList.add('dv-new-content--show'); });
+    }, 100);
+
+    el.addEventListener('click', function(e) {
+      const btn = e.target.closest('[data-action]');
+      if (!btn) return;
+      const action = btn.getAttribute('data-action');
+      if (action === 'refresh') location.reload();
+      if (action === 'dismiss') {
+        el.classList.remove('dv-new-content--show');
+        setTimeout(function() { el.remove(); }, 400);
+      }
+    });
+  }
+
   // ── DOM Ready ──
   function init() {
     currentLang = detectLang();
-    document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
+    document.documentElement.lang = 'zh-CN';
     createLangSwitch();
     applyUITranslations();
-
-    // If user language is English, init Google Translate early (but don't auto-translate unless saved pref says so)
-    if (currentLang === 'en') {
-      initGoogleTranslate();
-    }
-
     createTranslateBanner();
     checkForNewContent();
     initArticleInteractions();
