@@ -15,8 +15,8 @@ source_url: https://qlhouseclub.github.io/DawnVision/articles/2026-06-26-wechat-
 
 ## 入库知识
 
-- [[super-app-agent|超级App的Agent化战争]]
 - [[agent-protocols|Agent 通信协议：A2A / MCP]]
+- [[super-app-agent|超级App的Agent化战争]]
 
 ## 认知笔记
 

@@ -15,14 +15,17 @@
   <meta property="og:description" content="Agent开发工具链集体爆发，从概念验证进入工程化阶段。">
   <meta property="og:site_name" content="Dawn Vision">
   <meta property="og:locale" content="zh_CN">
-  <meta property="og:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.svg">
+  <meta property="og:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
   <meta property="article:published_time" content="2026-06-30T16:30:00+08:00">
   <meta property="article:author" content="Dawn Vision">
   <meta property="article:section" content="AI Agent · 工程实践">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Agent工具链集体爆发：AWS Blocks开源+Herdr登HN热榜+BrowserBC克隆人类点击">
   <meta name="twitter:description" content="Agent开发工具链集体爆发，从概念验证进入工程化阶段。">
-  <meta name="twitter:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.svg">
+  <meta name="twitter:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.png">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -36,19 +39,19 @@
       "@type": "Organization",
       "name": "Dawn Vision",
       "url": "https://qlhouseclub.github.io/DawnVision/",
-      "logo": {"@type": "ImageObject", "url": "https://qlhouseclub.github.io/DawnVision/assets/og-image.svg"}
+      "logo": {"@type": "ImageObject", "url": "https://qlhouseclub.github.io/DawnVision/assets/og-image.png"}
     },
     "inLanguage": "zh-CN",
-    "image": "https://qlhouseclub.github.io/DawnVision/assets/og-image.svg",
+    "image": "https://qlhouseclub.github.io/DawnVision/assets/og-image.png",
     "wordCount": 800
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/style.css?v=13">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
-  <script src="../assets/interactions.js" defer></script>
+  <script src="../assets/interactions.js?v=13" defer></script>
 </head>
 <body>
 <nav class="inner-nav" role="navigation" aria-label="主导航">
@@ -69,22 +72,35 @@
 </nav>
 <main role="main">
 <div class="article-page__hero">
+<div class="bg-blobs">
+    <div class="bg-blob bg-blob--1"></div>
+    <div class="bg-blob bg-blob--2"></div>
+    <div class="bg-blob bg-blob--3"></div>
+    <div class="bg-blob bg-blob--4"></div>
+    <div class="bg-blob bg-blob--5"></div>
+  </div>
   <div class="article-page__hero-inner">
-    <a href="../articles.html" class="article-page__back" style="color: rgba(255,255,255,0.5); margin-bottom: 32px; display: inline-block;">← Back to Articles</a>
+    <a href="../articles.html" class="article-page__back">← Back to Articles</a>
     <div class="article-page__hero-label">AI Agent · Engineering · AI Agent · 工程实践</div>
-    <div class="article-page__hero-meta" style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.7; margin-bottom: 16px;">2026.06.30 · Issue 005</div>
+    <div class="article-page__hero-meta">2026.06.30 · Issue 005</div>
     <h1 class="article-page__hero-title">Agent工具链<br>集体爆发</h1>
     <p class="article-page__hero-deck">一周内AWS开源Agent后端框架Blocks、Herdr终端Agent多路复用器登HN热榜、BrowserBC实现人类点击一次克隆所有Agent学会。Agent开发正在从"写Prompt"进化到"工程化工具链"阶段。</p>
   </div>
 </div>
 <article class="article-page">
   <div class="container--narrow">
-    <div class="article-page__meta" style="margin-bottom: 48px;">
+    <div class="article-page__meta">
+    <div class="article-page__meta-row">
       <span>Dawn Vision 编辑部</span>
-      <span>2026.06.30</span>
       <span>约 5 分钟阅读</span>
-      <span>Issue 005</span>
     </div>
+    <div class="article-page__meta-row article-page__meta-row--tags">
+<span class="article-page__meta-tag">AI Agent</span><span class="article-page__meta-tag">Engineering</span><span class="article-page__meta-tag">AI Agent</span><span class="article-page__meta-tag">工程实践</span>
+    </div>
+    <div class="article-page__meta-row article-page__meta-row--issue">
+      <span>2026.06.30 · Issue 005</span>
+    </div>
+  </div>
     <div class="article-page__content">
       <p>55个点赞，19条评论，登Hacker News首页前20。</p>
       <p>这是Herdr上线第一天的数据。一个跑在终端里的Agent多路复用器——简单说，你可以在命令行里同时调用多个AI Agent（Claude Code、Cursor Agent、Codex等），让它们并行处理同一个任务的不同部分，然后对比结果择优采纳。<strong>像指挥一个AI团队一样指挥你的终端</strong>。</p>

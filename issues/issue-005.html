@@ -15,11 +15,14 @@
   <meta property="og:description" content="7亿美元收购仅1年2个月，Caffe/TensorFlow核心创作者贾扬清被曝离开英伟达。承诺开源的200亿参数模型未见踪影，核心产品DGX Lepton未达预">
   <meta property="og:site_name" content="Dawn Vision">
   <meta property="og:locale" content="zh_CN">
-  <meta property="og:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.svg">
+  <meta property="og:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Issue 005 | Dawn Vision">
   <meta name="twitter:description" content="穿越嘈杂，洞见留声。">
-  <meta name="twitter:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.svg">
+  <meta name="twitter:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.png">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -32,16 +35,16 @@
     "publisher": {
       "@type": "Organization",
       "name": "Dawn Vision",
-      "logo": {"@type": "ImageObject", "url": "https://qlhouseclub.github.io/DawnVision/assets/og-image.svg"}
+      "logo": {"@type": "ImageObject", "url": "https://qlhouseclub.github.io/DawnVision/assets/og-image.png"}
     }
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/style.css?v=5">
+  <link rel="stylesheet" href="../assets/style.css?v=13">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
-  <script src="../assets/interactions.js?v=4" defer></script>
+  <script src="../assets/interactions.js?v=13" defer></script>
 </head>
 <body>
 
@@ -64,8 +67,6 @@
 
   <main role="main">
     <div class="container">
-    <h1 style="font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #888; font-family: Georgia, serif; font-weight: 700; padding: 12px 0 0; margin: 0;">Dawn Vision · Issue 005</h1>
-
     <div class="issue-filter" data-issues='[{"num": "001", "date": "2026-06-24", "date_display": "2026.06.24", "year": "2026", "month": "06", "day": "24", "half": "H2", "url": "../issues/issue-001.html", "is_latest": false}, {"num": "002", "date": "2026-06-25", "date_display": "2026.06.25", "year": "2026", "month": "06", "day": "25", "half": "H2", "url": "../issues/issue-002.html", "is_latest": false}, {"num": "003", "date": "2026-06-26", "date_display": "2026.06.26", "year": "2026", "month": "06", "day": "26", "half": "H2", "url": "../issues/issue-003.html", "is_latest": false}, {"num": "004", "date": "2026-06-30", "date_display": "2026.06.30", "year": "2026", "month": "06", "day": "30", "half": "H2", "url": "../issues/issue-004.html", "is_latest": false}, {"num": "005", "date": "2026-06-30", "date_display": "2026.06.30", "year": "2026", "month": "06", "day": "30", "half": "H2", "url": "../issues/issue-005.html", "is_latest": false}, {"num": "006", "date": "2026-07-01", "date_display": "2026.07.01", "year": "2026", "month": "07", "day": "01", "half": "H1", "url": "../articles.html", "is_latest": true}]' data-current="005">
       <span class="issue-filter__current">Issue 5</span>
       <div class="issue-filter__row">
@@ -89,12 +90,19 @@
     </div>
 
   <div class="cao-section">
+<div class="bg-blobs">
+    <div class="bg-blob bg-blob--1"></div>
+    <div class="bg-blob bg-blob--2"></div>
+    <div class="bg-blob bg-blob--3"></div>
+    <div class="bg-blob bg-blob--4"></div>
+    <div class="bg-blob bg-blob--5"></div>
+  </div>
     <div class="container" style="padding-top: clamp(40px, 5vw, 56px); padding-bottom: clamp(40px, 5vw, 56px);">
       <div style="font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.45); font-family: var(--serif-display); font-weight: 700; margin-bottom: 24px;">Today's Rant</div>
-      <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; color: #fff; letter-spacing: -1px; line-height: 1.1; margin-bottom: 16px; max-width: 640px;">Cao! <span style="font-weight: 400; font-size: 0.6em; font-style: italic; opacity: 0.5; font-family: var(--sans);">槽点!</span></h2>
+      <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; color: #fff; letter-spacing: -1px; line-height: 1.2; margin-bottom: 16px; max-width: 560px;">Cao! <span style="font-weight: 400; font-size: 0.6em; font-style: italic; opacity: 0.5; font-family: var(--sans);">槽点!</span></h2>
       <a href="../cao/2026-06-30-brown-university-ai-cheating-scandal.html" class="cao-featured" itemscope itemtype="https://schema.org/NewsArticle">
-        <h3 style="font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 700; color: rgba(255,255,255,0.95); line-height: 1.25; margin-bottom: 12px; letter-spacing: -0.3px;" itemprop="headline">布朗大学AI作弊案：居家闭卷考均分96分，博弈论教授怒斥"学术诚信已死"</h3>
-        <p style="font-size: 0.92rem; color: rgba(255,255,255,0.5); line-height: 1.6; font-style: italic; font-family: var(--sans); max-width: 560px; margin-bottom: 16px;" itemprop="description">常春藤布朗大学一门经济学课的居家闭卷考试，班级均分高达96分——历史平均是60-70分。博弈论教授Roberto Serrano公开谴责大规模AI作弊，AI教育的遮羞布被撕得粉碎。</p>
+        <h3 style="font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 700; color: rgba(255,255,255,0.95); line-height: 1.2; max-width: 560px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 12px; letter-spacing: -0.3px;" itemprop="headline">布朗大学AI作弊案：居家闭卷考均分96分，博弈论教授怒斥"学术诚信已死"</h3>
+        <p style="font-size: 0.92rem; color: rgba(255,255,255,0.5); line-height: 1.6; font-style: italic; font-family: var(--sans); max-width: 560px; margin-bottom: 16px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;" itemprop="description">常春藤布朗大学一门经济学课的居家闭卷考试，班级均分高达96分——历史平均是60-70分。博弈论教授Roberto Serrano公开谴责大规模AI作弊，AI教育的遮羞布被撕得粉碎。</p>
         <span style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.3); font-family: var(--serif-display); font-weight: 600;">约 4 分钟阅读 <span style="color: rgba(255,255,255,0.6); margin-left: 6px;">→</span></span>
       </a>
       <div style="margin-top: 20px;">

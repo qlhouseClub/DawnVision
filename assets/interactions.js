@@ -1,12 +1,288 @@
 /**
  * Dawn Vision — Interaction Script
- * Handles: read count (busuanzi + local fallback), like count (localStorage), tip modal
+ * Handles: read count (busuanzi + local fallback), like count (localStorage), tip modal,
+ *          i18n/language detection, translation banner
  *
  * 阅读量：使用不蒜子(busuanzi)提供跨用户真实统计，加载失败时降级为localStorage本地计数
  * 点赞：localStorage本地存储，从0开始，点击即+1
+ * 翻译：检测浏览器语言，非中文时显示翻译提示；固定UI元素提供中英双语切换；正文交给浏览器原生翻译
  */
 (function() {
   'use strict';
+
+  // ══════════════════════════════════════════
+  // i18n — Translation System
+  // ══════════════════════════════════════════
+  const I18N = {
+    zh: {
+      nav_home: 'Home',
+      nav_articles: 'Articles',
+      nav_cao: 'Cao',
+      nav_about: 'About',
+      nav_brand_sub: 'Daily Briefing',
+      back_articles: '← Back to Articles',
+      back_cao: '← Back to Cao!',
+      meta_editorial: 'Dawn Vision 编辑部',
+      meta_issue_date: function(date, issue) { return date + ' · Issue ' + issue; },
+      sources_label: 'Sources · 参考来源',
+      sources_note: '声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，标题、观点、行文均为原创，仅供参考，不构成任何投资建议或决策依据。如有侵权请联系删除。',
+      sources_note_cao: '声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，以幽默吐槽风格呈现，标题、观点、行文均为原创，仅供娱乐参考，不构成任何技术建议或决策依据。如有侵权请联系删除。',
+      tomorrow: '明天见。',
+      cao_end: '今天就槽到这里，明天继续。',
+      prev_article: '← 上一篇',
+      next_article: '下一篇 →',
+      next_cao: '槽点 →',
+      back_to_articles: '深度文章 →',
+      prev_cover: '← 上一期封面',
+      founding_issue: '创刊号',
+      reads: 'Reads',
+      likes: 'Likes',
+      like_btn: 'Like',
+      tip_btn: 'Tip',
+      tip_jar: 'Tip Jar',
+      tip_title: '请作者喝杯奶茶',
+      tip_desc: '如果这篇文章对你有帮助，欢迎随意打赏。感谢支持！',
+      tip_scan: '微信扫码 · <strong>谢谢老板</strong>',
+      tip_close: '关闭',
+      banner_title: '🌐 Translate',
+      banner_text: 'This site is in Chinese. Use your browser\'s translate feature to read in your language, or switch UI language below.',
+      banner_use_translate: 'Use Browser Translation',
+      banner_ui_en: 'UI: English',
+      banner_ui_zh: '界面: 中文',
+      banner_dismiss: 'Dismiss',
+      lang_switch_en: 'EN',
+      lang_switch_zh: '中',
+      footer_copy: '© 2026 · Daily at 16:30 CST · Weekdays Only',
+      view_all_cao: 'View All Cao! →',
+      cao_more: 'View All Cao! →',
+      select_year: '年',
+      select_month: '月',
+      select_half: '半',
+      select_issue: '期',
+      half_h1: '上半月',
+      half_h2: '下半月',
+      latest_issue: ' (最新)',
+      pagination_prev: '← 上一页',
+      pagination_next: '下一页 →',
+      reads_local_title: '本地计数（统计服务暂不可用）',
+      reads_title: function(n) { return '总阅读量 ' + n; },
+    },
+    en: {
+      nav_home: 'Home',
+      nav_articles: 'Articles',
+      nav_cao: 'Cao',
+      nav_about: 'About',
+      nav_brand_sub: 'Daily Briefing',
+      back_articles: '← Back to Articles',
+      back_cao: '← Back to Cao!',
+      meta_editorial: 'Dawn Vision Editorial',
+      meta_issue_date: function(date, issue) { return 'Issue ' + issue + ' · ' + date; },
+      sources_label: 'Sources',
+      sources_note: 'Disclaimer: This article is original analysis by Dawn Vision based on public information. All views are our own. For reference only, not investment advice.',
+      sources_note_cao: 'Disclaimer: This is a humor/rant piece by Dawn Vision. Original satire for entertainment purposes only.',
+      tomorrow: 'See you tomorrow.',
+      cao_end: 'That\'s all for today. More rants tomorrow.',
+      prev_article: '← Previous',
+      next_article: 'Next →',
+      next_cao: 'Rant →',
+      back_to_articles: 'Articles →',
+      prev_cover: '← Previous Cover',
+      founding_issue: 'Inaugural Issue',
+      reads: 'Reads',
+      likes: 'Likes',
+      like_btn: 'Like',
+      tip_btn: 'Tip',
+      tip_jar: 'Tip Jar',
+      tip_title: 'Buy the author a coffee',
+      tip_desc: 'If this article helped you, feel free to send a tip. Thanks for your support!',
+      tip_scan: 'WeChat QR · <strong>Thanks!</strong>',
+      tip_close: 'Close',
+      banner_title: '🌐 Translate',
+      banner_text: 'This site is written in Chinese. Right-click anywhere and select "Translate" to read in your language.',
+      banner_use_translate: 'How to translate',
+      banner_ui_en: 'UI: English',
+      banner_ui_zh: 'UI: 中文',
+      banner_dismiss: 'Dismiss',
+      lang_switch_en: 'EN',
+      lang_switch_zh: '中',
+      footer_copy: '© 2026 · Daily at 16:30 CST · Weekdays Only',
+      view_all_cao: 'View All Cao! →',
+      cao_more: 'View All Cao! →',
+      select_year: 'Year',
+      select_month: 'Month',
+      select_half: 'Half',
+      select_issue: 'Issue',
+      half_h1: '1st Half',
+      half_h2: '2nd Half',
+      latest_issue: ' (Latest)',
+      pagination_prev: '← Prev',
+      pagination_next: 'Next →',
+      reads_local_title: 'Local count (analytics unavailable)',
+      reads_title: function(n) { return n + ' total reads'; },
+    }
+  };
+
+  let currentLang = 'zh';
+  const STORAGE_LANG_KEY = 'dawnvision_lang';
+  const STORAGE_BANNER_KEY = 'dawnvision_banner_dismissed';
+
+  function detectLang() {
+    // Check saved preference
+    try {
+      const saved = localStorage.getItem(STORAGE_LANG_KEY);
+      if (saved && (saved === 'zh' || saved === 'en')) return saved;
+    } catch(e) {}
+    // Detect from browser
+    const navLang = (navigator.language || navigator.userLanguage || 'zh').toLowerCase();
+    if (navLang.startsWith('zh')) return 'zh';
+    return 'en';
+  }
+
+  function t(key) {
+    const dict = I18N[currentLang] || I18N.zh;
+    const val = dict[key];
+    if (typeof val === 'function') return val.apply(null, Array.prototype.slice.call(arguments, 1));
+    return val || key;
+  }
+
+  function applyTranslations() {
+    const dict = I18N[currentLang];
+    document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
+
+    // Translate elements with data-i18n
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+      const key = el.getAttribute('data-i18n');
+      const val = dict[key];
+      if (typeof val === 'string') {
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+          el.placeholder = val;
+        } else {
+          el.textContent = val;
+        }
+      }
+    });
+
+    // Translate elements with data-i18n-html
+    document.querySelectorAll('[data-i18n-html]').forEach(function(el) {
+      const key = el.getAttribute('data-i18n-html');
+      const val = dict[key];
+      if (typeof val === 'string') el.innerHTML = val;
+    });
+
+    // Update select placeholders
+    document.querySelectorAll('select[data-filter]').forEach(function(sel) {
+      const filter = sel.getAttribute('data-filter');
+      const placeholderMap = { year: 'select_year', month: 'select_month', half: 'select_half', issue: 'select_issue' };
+      const phKey = placeholderMap[filter];
+      if (phKey && dict[phKey]) {
+        const firstOpt = sel.querySelector('option[value=""]');
+        if (firstOpt) firstOpt.textContent = dict[phKey];
+      }
+    });
+  }
+
+  function setLang(lang) {
+    currentLang = lang;
+    try { localStorage.setItem(STORAGE_LANG_KEY, lang); } catch(e) {}
+    applyTranslations();
+    updateLangSwitch();
+    // Rebuild tip modal if open
+    const modal = document.getElementById('tip-modal');
+    if (modal) {
+      const closeBtn = modal.querySelector('.tip-modal__close');
+      if (closeBtn) closeBtn.setAttribute('aria-label', t('tip_close'));
+      const label = modal.querySelector('.tip-modal__label');
+      if (label) label.textContent = t('tip_jar');
+      const title = modal.querySelector('.tip-modal__title');
+      if (title) title.textContent = t('tip_title');
+      const desc = modal.querySelector('.tip-modal__desc');
+      if (desc) desc.textContent = t('tip_desc');
+      const text = modal.querySelector('.tip-modal__text');
+      if (text) text.innerHTML = t('tip_scan');
+    }
+  }
+
+  function createLangSwitch() {
+    if (document.getElementById('dv-lang-switch')) return;
+    const switch_ = document.createElement('button');
+    switch_.id = 'dv-lang-switch';
+    switch_.className = 'dv-lang-switch';
+    switch_.type = 'button';
+    switch_.setAttribute('aria-label', 'Switch language');
+    switch_.addEventListener('click', function() {
+      setLang(currentLang === 'zh' ? 'en' : 'zh');
+    });
+    document.body.appendChild(switch_);
+    updateLangSwitch();
+  }
+
+  function updateLangSwitch() {
+    const sw = document.getElementById('dv-lang-switch');
+    if (!sw) return;
+    sw.textContent = currentLang === 'zh' ? I18N.zh.lang_switch_en : I18N.en.lang_switch_zh;
+    sw.title = currentLang === 'zh' ? 'Switch to English' : '切换到中文';
+  }
+
+  function shouldShowBanner() {
+    if (currentLang === 'zh') return false;
+    try {
+      return localStorage.getItem(STORAGE_BANNER_KEY) !== '1';
+    } catch(e) { return true; }
+  }
+
+  function dismissBanner() {
+    try { localStorage.setItem(STORAGE_BANNER_KEY, '1'); } catch(e) {}
+    const banner = document.getElementById('dv-translate-banner');
+    if (banner) {
+      banner.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+      banner.style.opacity = '0';
+      banner.style.transform = 'translateY(-10px)';
+      setTimeout(function() { banner.remove(); }, 300);
+    }
+  }
+
+  function createTranslateBanner() {
+    if (!shouldShowBanner()) return;
+    if (document.getElementById('dv-translate-banner')) return;
+    const banner = document.createElement('div');
+    banner.id = 'dv-translate-banner';
+    banner.className = 'dv-translate-banner';
+    banner.innerHTML =
+      '<div class="dv-translate-banner__inner">' +
+        '<div class="dv-translate-banner__text">' +
+          '<strong>' + t('banner_title') + '</strong> ' + t('banner_text') +
+        '</div>' +
+        '<div class="dv-translate-banner__actions">' +
+          '<button class="dv-translate-banner__btn" data-action="ui-toggle">' + t('banner_ui_en') + '</button>' +
+          '<button class="dv-translate-banner__btn dv-translate-banner__btn--dismiss" data-action="dismiss">' + t('banner_dismiss') + '</button>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(banner);
+    requestAnimationFrame(function() { banner.classList.add('dv-translate-banner--show'); });
+
+    banner.addEventListener('click', function(e) {
+      const btn = e.target.closest('[data-action]');
+      if (!btn) return;
+      const action = btn.getAttribute('data-action');
+      if (action === 'dismiss') { dismissBanner(); }
+      if (action === 'ui-toggle') { setLang(currentLang === 'zh' ? 'en' : 'zh'); dismissBanner(); }
+    });
+  }
+
+  function markNoTranslate() {
+    // Mark brand names as not translatable
+    const brandNames = ['Dawn Vision'];
+    document.querySelectorAll('a, span, strong, small, div').forEach(function(el) {
+      if (el.children.length === 0 && brandNames.some(function(b) { return el.textContent.trim() === b; })) {
+        el.setAttribute('translate', 'no');
+      }
+    });
+  }
+
+  // Expose i18n globally for other scripts
+  window.DV_I18N = { t: t, setLang: setLang, currentLang: function() { return currentLang; } };
+
+
 
   const STORAGE_KEY = 'dawnvision_analytics';
   const STORAGE_VERSION = 2; // 升级版本号，清除v1的假种子数据
@@ -508,11 +784,80 @@
     })();
   }
 
+  // ── CAO List Pagination (8 per page) ──
+  function initCaoPagination() {
+    var container = document.querySelector('.cao-pagination');
+    if (!container) return;
+    var items = document.querySelectorAll('.cao-list__item');
+    if (!items.length) return;
+
+    var PER_PAGE = 8;
+    var total = items.length;
+    var totalPages = Math.ceil(total / PER_PAGE);
+    if (totalPages <= 1) {
+      container.style.display = 'none';
+      return;
+    }
+
+    // Get current page from URL ?page=N
+    var params = new URLSearchParams(window.location.search);
+    var currentPage = parseInt(params.get('page') || '1', 10);
+    if (isNaN(currentPage) || currentPage < 1) currentPage = 1;
+    if (currentPage > totalPages) currentPage = totalPages;
+
+    // Show/hide items
+    var start = (currentPage - 1) * PER_PAGE;
+    var end = start + PER_PAGE;
+    for (var i = 0; i < total; i++) {
+      items[i].style.display = (i >= start && i < end) ? '' : 'none';
+    }
+
+    // Build pagination HTML
+    function buildPageUrl(p) {
+      var url = window.location.pathname;
+      if (p > 1) url += '?page=' + p;
+      return url;
+    }
+
+    var html = '<nav class="pagination" role="navigation" aria-label="槽点分页">';
+
+    // Prev button
+    if (currentPage > 1) {
+      html += '<a href="' + buildPageUrl(currentPage - 1) + '" class="pagination__nav pagination__nav--prev">← 上一页</a>';
+    } else {
+      html += '<span class="pagination__nav pagination__nav--disabled">← 上一页</span>';
+    }
+
+    // Page numbers
+    html += '<div class="pagination__pages">';
+    for (var p = 1; p <= totalPages; p++) {
+      var active = (p === currentPage) ? ' pagination__num--active' : '';
+      html += '<a href="' + buildPageUrl(p) + '" class="pagination__num' + active + '">' + p + '</a>';
+    }
+    html += '</div>';
+
+    // Next button
+    if (currentPage < totalPages) {
+      html += '<a href="' + buildPageUrl(currentPage + 1) + '" class="pagination__nav pagination__nav--next">下一页 →</a>';
+    } else {
+      html += '<span class="pagination__nav pagination__nav--disabled">下一页 →</span>';
+    }
+
+    html += '</nav>';
+    container.innerHTML = html;
+  }
+
   // ── DOM Ready ──
   function init() {
+    currentLang = detectLang();
+    markNoTranslate();
+    createLangSwitch();
+    applyTranslations();
+    createTranslateBanner();
     initArticleInteractions();
     initListingPage();
     initIssueFilter();
+    initCaoPagination();
   }
 
   if (document.readyState === 'loading') {

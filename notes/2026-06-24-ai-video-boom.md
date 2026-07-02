@@ -15,8 +15,8 @@ source_url: https://qlhouseclub.github.io/DawnVision/articles/2026-06-24-ai-vide
 
 ## 入库知识
 
-- [[ai-newmedia|AI 新媒体与内容创作]]
 - [[ai-video|AI 视频生成与商业化]]
+- [[ai-newmedia|AI 新媒体与内容创作]]
 
 ## 认知笔记
 

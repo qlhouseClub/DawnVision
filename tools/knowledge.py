@@ -210,11 +210,14 @@ def build_knowledge_page(topic, articles_in_topic, topic_map):
   <meta property="og:description" content="{desc[:100]}">
   <meta property="og:site_name" content="Dawn Vision">
   <meta property="og:locale" content="zh_CN">
-  <meta property="og:image" content="{BASE_URL}/assets/og-image.svg">
+  <meta property="og:image" content="{BASE_URL}/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{title} | Dawn Vision">
   <meta name="twitter:description" content="{desc[:80]}">
-  <meta name="twitter:image" content="{BASE_URL}/assets/og-image.svg">
+  <meta name="twitter:image" content="{BASE_URL}/assets/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
@@ -319,11 +322,14 @@ def build_knowledge_index(topics, topic_articles, topic_map):
   <meta property="og:description" content="按主题聚合AI深度文章，建立概念间的关联，形成可追溯的认知图谱。">
   <meta property="og:site_name" content="Dawn Vision">
   <meta property="og:locale" content="zh_CN">
-  <meta property="og:image" content="{BASE_URL}/assets/og-image.svg">
+  <meta property="og:image" content="{BASE_URL}/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="知识网络 | Dawn Vision">
   <meta name="twitter:description" content="按主题聚合AI深度文章">
-  <meta name="twitter:image" content="{BASE_URL}/assets/og-image.svg">
+  <meta name="twitter:image" content="{BASE_URL}/assets/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">

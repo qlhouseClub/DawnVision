@@ -16,6 +16,7 @@ Cursor、GitHub Copilot、Claude Code、Windsurf、Devin群雄逐鹿。从代码
 
 ## 相关文章
 
+- [[2026-07-02-opensquilla-040-self-verification-ai-coding-trust|OpenSquilla自我验证AI编码进入证据链时代]] (2026-07-02 · Brief)
 - [[2026-07-01-claude-code-steganography-watermark|Claude Code偷偷在Prompt里打小报告]] (2026-07-01 · Cao!)
 - [[2026-06-30-copilot-token-pricing-backlash|Copilot转token计费引众怒]] (2026-06-30 · Brief)
 - [[2026-06-26-copilot-vs-cursor|AI编程工具战国时代]] (2026-06-26 · Brief)

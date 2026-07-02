@@ -16,6 +16,7 @@ url: https://qlhouseclub.github.io/DawnVision/knowledge/embodied-ai.html
 
 ## 相关文章
 
+- [[2026-07-02-nvidia-aspire-robot-skill-library-paradigm-shift|英伟达开源ASPIRE具身智能范式变了]] (2026-07-02 · Brief)
 - [[2026-06-30-deepseek-50b-valuation-independence-war|DeepSeek 510亿首轮融资]] (2026-06-30 · Brief)
 - [[2026-06-30-humanoid-robot-mass-production|人形机器人量产元年]] (2026-06-30 · Brief)
 - [[2026-06-25-embodied-ai-boom|具身智能的2026 夏天]] (2026-06-25 · Brief)

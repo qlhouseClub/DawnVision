@@ -40,6 +40,14 @@ LOCAL_PORT = 8080
 # HTML 模板生成函数
 # ============================================================
 
+BG_BLOBS = '''<div class="bg-blobs">
+    <div class="bg-blob bg-blob--1"></div>
+    <div class="bg-blob bg-blob--2"></div>
+    <div class="bg-blob bg-blob--3"></div>
+    <div class="bg-blob bg-blob--4"></div>
+    <div class="bg-blob bg-blob--5"></div>
+  </div>'''
+
 def build_article_head(title, description, keywords, canonical_url, og_title, og_desc, twitter_desc, published_time, article_type="NewsArticle", section="AI深度观察", word_count=800):
     """生成文章页面的<head>部分"""
     return f'''<!DOCTYPE html>
@@ -59,14 +67,17 @@ def build_article_head(title, description, keywords, canonical_url, og_title, og
   <meta property="og:description" content="{og_desc}">
   <meta property="og:site_name" content="Dawn Vision">
   <meta property="og:locale" content="zh_CN">
-  <meta property="og:image" content="{BASE_URL}/assets/og-image.svg">
+  <meta property="og:image" content="{BASE_URL}/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
   <meta property="article:published_time" content="{published_time}">
   <meta property="article:author" content="Dawn Vision">
   <meta property="article:section" content="{section}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{og_title}">
   <meta name="twitter:description" content="{twitter_desc}">
-  <meta name="twitter:image" content="{BASE_URL}/assets/og-image.svg">
+  <meta name="twitter:image" content="{BASE_URL}/assets/og-image.png">
   <script type="application/ld+json">
   {{
     "@context": "https://schema.org",
@@ -80,19 +91,19 @@ def build_article_head(title, description, keywords, canonical_url, og_title, og
       "@type": "Organization",
       "name": "Dawn Vision",
       "url": "{BASE_URL}/",
-      "logo": {{"@type": "ImageObject", "url": "{BASE_URL}/assets/og-image.svg"}}
+      "logo": {{"@type": "ImageObject", "url": "{BASE_URL}/assets/og-image.png"}}
     }},
     "inLanguage": "zh-CN",
-    "image": "{BASE_URL}/assets/og-image.svg",
+    "image": "{BASE_URL}/assets/og-image.png",
     "wordCount": {word_count}
   }}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/style.css?v=5">
+  <link rel="stylesheet" href="../assets/style.css?v=13">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
-  <script src="../assets/interactions.js?v=4" defer></script>
+  <script src="../assets/interactions.js?v=13" defer></script>
 </head>'''
 
 
@@ -187,22 +198,27 @@ def build_cover_article(data, issue, prev_cover_slug=None):
 {build_nav("articles")}
 <main role="main">
 <div class="article-page__hero">
+{BG_BLOBS}
   <div class="article-page__hero-inner">
-    <a href="../articles.html" class="article-page__back" style="color: rgba(255,255,255,0.5); margin-bottom: 32px; display: inline-block;">← Back to Articles</a>
-    <div class="article-page__hero-label">{hero_label}</div>
-    <div class="article-page__hero-meta" style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.7; margin-bottom: 16px;">{date_display} · Issue {issue_num}</div>
+    <a href="../articles.html" class="article-page__back">← Back to Articles</a>
     <h1 class="article-page__hero-title">{data["title_break"]}</h1>
     <p class="article-page__hero-deck">{data["deck"]}</p>
   </div>
 </div>
 <article class="article-page">
   <div class="container--narrow">
-    <div class="article-page__meta" style="margin-bottom: 48px;">
+    <div class="article-page__meta">
+    <div class="article-page__meta-row">
       <span>Dawn Vision 编辑部</span>
-      <span>{date_display}</span>
       <span>{data["read_time"]}</span>
-      <span>Issue {issue_num}</span>
     </div>
+    <div class="article-page__meta-row article-page__meta-row--tags">
+      {' '.join(f'<span class="article-page__meta-tag">{t.strip()}</span>' for t in hero_label.split('·') if t.strip())}
+    </div>
+    <div class="article-page__meta-row article-page__meta-row--issue">
+      <span>{date_display} · Issue {issue_num}</span>
+    </div>
+  </div>
     <div class="article-page__content">
 {data["body_html"]}
 {pull_quote_html}
@@ -283,22 +299,27 @@ def build_brief_article(data, issue, idx, total_briefs, prev_slug, next_slug):
 {build_nav("articles")}
 <main role="main">
 <div class="article-page__hero">
+{BG_BLOBS}
   <div class="article-page__hero-inner">
-    <a href="../articles.html" class="article-page__back" style="color: rgba(255,255,255,0.5); margin-bottom: 32px; display: inline-block;">← Back to Articles</a>
-    <div class="article-page__hero-label">{hero_label}</div>
-    <div class="article-page__hero-meta" style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.7; margin-bottom: 16px;">{date_display} · Issue {issue_num}</div>
+    <a href="../articles.html" class="article-page__back">← Back to Articles</a>
     <h1 class="article-page__hero-title">{data["title_break"]}</h1>
     <p class="article-page__hero-deck">{data["deck"]}</p>
   </div>
 </div>
 <article class="article-page">
   <div class="container--narrow">
-    <div class="article-page__meta" style="margin-bottom: 48px;">
+    <div class="article-page__meta">
+    <div class="article-page__meta-row">
       <span>Dawn Vision 编辑部</span>
-      <span>{date_display}</span>
       <span>{data["read_time"]}</span>
-      <span>Issue {issue_num}</span>
     </div>
+    <div class="article-page__meta-row article-page__meta-row--tags">
+      {' '.join(f'<span class="article-page__meta-tag">{t.strip()}</span>' for t in hero_label.split('·') if t.strip())}
+    </div>
+    <div class="article-page__meta-row article-page__meta-row--issue">
+      <span>{date_display} · Issue {issue_num}</span>
+    </div>
+  </div>
     <div class="article-page__content">
 {data["body_html"]}
 {pull_quote_html}
@@ -362,20 +383,23 @@ def build_cao_article(data, issue, last_brief_slug):
 {build_nav("cao")}
 <main role="main">
 <div class="article-page__hero">
+{BG_BLOBS}
   <div class="article-page__hero-inner">
-    <a href="../cao.html" class="article-page__back" style="color: rgba(255,255,255,0.5); margin-bottom: 32px; display: inline-block;">← Back to Cao!</a>
-    <div class="article-page__hero-label" style="color: rgba(255,255,255,0.5);">Today's Rant · 今日槽</div>
+    <a href="../cao.html" class="article-page__back">← Back to Cao!</a>
     <h1 class="article-page__hero-title">{data["title_break"]}</h1>
     <p class="article-page__hero-deck">{data["deck"]}</p>
   </div>
 </div>
 <article class="article-page">
   <div class="container--narrow">
-    <div class="article-page__meta" style="margin-bottom: 48px;">
-      <span>Dawn Vision 编辑部</span>
-      <span>{date_display}</span>
-      <span>{data["read_time"]}</span>
-      <span>Issue {issue_num}</span>
+    <div class="article-page__meta">
+      <div class="article-page__meta-row">
+        <span>Dawn Vision 编辑部</span>
+        <span>{data["read_time"]}</span>
+      </div>
+      <div class="article-page__meta-row article-page__meta-row--issue">
+        <span>{date_display} · Issue {issue_num}</span>
+      </div>
     </div>
     <div class="article-page__content">
 {data["body_html"]}
@@ -671,11 +695,14 @@ def build_listing_page(issue, cover, briefs, cao, is_latest=False):
   <meta property="og:description" content="{'每个工作日深度解读AI前沿，去噪筛选，深度加工。' if is_latest else cover['deck'][:80]}">
   <meta property="og:site_name" content="Dawn Vision">
   <meta property="og:locale" content="zh_CN">
-  <meta property="og:image" content="{BASE_URL}/assets/og-image.svg">
+  <meta property="og:image" content="{BASE_URL}/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{'AI 深度文章 | Dawn Vision' if is_latest else f'Issue {issue_num} | Dawn Vision'}">
   <meta name="twitter:description" content="穿越嘈杂，洞见留声。">
-  <meta name="twitter:image" content="{BASE_URL}/assets/og-image.svg">
+  <meta name="twitter:image" content="{BASE_URL}/assets/og-image.png">
   <script type="application/ld+json">
   {{
     "@context": "https://schema.org",
@@ -688,16 +715,16 @@ def build_listing_page(issue, cover, briefs, cao, is_latest=False):
     "publisher": {{
       "@type": "Organization",
       "name": "Dawn Vision",
-      "logo": {{"@type": "ImageObject", "url": "{BASE_URL}/assets/og-image.svg"}}
+      "logo": {{"@type": "ImageObject", "url": "{BASE_URL}/assets/og-image.png"}}
     }}
   }}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{prefix}assets/style.css?v=5">
+  <link rel="stylesheet" href="{prefix}assets/style.css?v=13">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
-  <script src="{prefix}assets/interactions.js?v=4" defer></script>
+  <script src="{prefix}assets/interactions.js?v=13" defer></script>
 </head>
 <body>
 
@@ -720,22 +747,20 @@ def build_listing_page(issue, cover, briefs, cao, is_latest=False):
 
   <main role="main">
     <div class="container">
-    <h1 style="font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #888; font-family: Georgia, serif; font-weight: 700; padding: 12px 0 0; margin: 0;">{page_h1}</h1>
-
 {issue_filter_html}
     </div>
 
   <!-- Cao! 槽点区前置到封面文章上方 -->
   <div class="cao-section">
-    <div class="container" style="padding-top: clamp(40px, 5vw, 56px); padding-bottom: clamp(40px, 5vw, 56px);">
-      <div style="font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.45); font-family: var(--serif-display); font-weight: 700; margin-bottom: 24px;">Today's Rant</div>
-      <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; color: #fff; letter-spacing: -1px; line-height: 1.1; margin-bottom: 16px; max-width: 640px;">Cao! <span style="font-weight: 400; font-size: 0.6em; font-style: italic; opacity: 0.5; font-family: var(--sans);">槽点!</span></h2>
+    {BG_BLOBS}
+    <div class="cao-section__inner">
+      <h2 class="cao-section__title">Cao! <span>槽点!</span></h2>
       <a href="{cao_url}" class="cao-featured" itemscope itemtype="https://schema.org/NewsArticle">
-        <h3 style="font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 700; color: rgba(255,255,255,0.95); line-height: 1.25; margin-bottom: 12px; letter-spacing: -0.3px;" itemprop="headline">{cao["title"]}</h3>
-        <p style="font-size: 0.92rem; color: rgba(255,255,255,0.5); line-height: 1.6; font-style: italic; font-family: var(--sans); max-width: 560px; margin-bottom: 16px;" itemprop="description">{cao["deck"]}</p>
-        <span style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.3); font-family: var(--serif-display); font-weight: 600;">{cao["read_time"]} <span style="color: rgba(255,255,255,0.6); margin-left: 6px;">→</span></span>
+        <h3 class="cao-section__article-title" itemprop="headline">{cao["title"]}</h3>
+        <p class="cao-section__article-deck" itemprop="description">{cao["deck"]}</p>
+        <span class="cao-section__article-meta">{cao["read_time"]} <span class="arrow">→</span></span>
       </a>
-      <div style="margin-top: 20px;">
+      <div class="cao-section__more">
         <a href="{cao_list_url}" class="cao-more-link">View All Cao! →</a>
       </div>
     </div>

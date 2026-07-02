@@ -15,22 +15,25 @@
   <meta property="og:description" content="单步95%可靠，20步后成功率35.8%——Agent不是超级员工，是需要严格约束的危险实习生。">
   <meta property="og:site_name" content="Dawn Vision">
   <meta property="og:locale" content="zh_CN">
-  <meta property="og:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.svg">
+  <meta property="og:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
   <meta property="article:published_time" content="2026-06-26T16:30:00+08:00">
   <meta property="article:author" content="Dawn Vision">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="17倍错误放大：Agent生产环境的残酷数学">
   <meta name="twitter:description" content="单步95%可靠，20步后成功率35.8%。">
-  <meta name="twitter:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.svg">
+  <meta name="twitter:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.png">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"NewsArticle","headline":"17倍错误放大：为什么86%的团队用了Agent，40%在半年内失败","description":"Agent生产环境的错误放大效应和真实事故复盘。","datePublished":"2026-06-26T16:30:00+08:00","author":{"@type":"Organization","name":"Dawn Vision"},"publisher":{"@type":"Organization","name":"Dawn Vision","url":"https://qlhouseclub.github.io/DawnVision/"},"inLanguage":"zh-CN","image":"https://qlhouseclub.github.io/DawnVision/assets/og-image.svg","wordCount":800}
+  {"@context":"https://schema.org","@type":"NewsArticle","headline":"17倍错误放大：为什么86%的团队用了Agent，40%在半年内失败","description":"Agent生产环境的错误放大效应和真实事故复盘。","datePublished":"2026-06-26T16:30:00+08:00","author":{"@type":"Organization","name":"Dawn Vision"},"publisher":{"@type":"Organization","name":"Dawn Vision","url":"https://qlhouseclub.github.io/DawnVision/"},"inLanguage":"zh-CN","image":"https://qlhouseclub.github.io/DawnVision/assets/og-image.png","wordCount":800}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/style.css?v=13">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
-  <script src="../assets/interactions.js" defer></script>
+  <script src="../assets/interactions.js?v=13" defer></script>
 </head>
 <body>
 <nav class="inner-nav" role="navigation">
@@ -48,8 +51,15 @@
 </nav>
 <main role="main">
 <div class="article-page__hero">
+<div class="bg-blobs">
+    <div class="bg-blob bg-blob--1"></div>
+    <div class="bg-blob bg-blob--2"></div>
+    <div class="bg-blob bg-blob--3"></div>
+    <div class="bg-blob bg-blob--4"></div>
+    <div class="bg-blob bg-blob--5"></div>
+  </div>
   <div class="article-page__hero-inner">
-    <a href="../articles.html" class="article-page__back" style="color: rgba(255,255,255,0.5); margin-bottom: 32px; display: inline-block;">← Back to Articles</a>
+    <a href="../articles.html" class="article-page__back">← Back to Articles</a>
     <div class="article-page__hero-label">Brief · 资讯</div>
     <h1 class="article-page__hero-title">17 倍错误<br>放大效应</h1>
     <p class="article-page__hero-deck">Anthropic联合调研：86%团队已在生产用Agent，40%在6个月内失败。核心数学：单步95%可靠，20步串联后成功率仅35.8%。Agent不是超级员工，是需要严格约束的危险实习生。</p>
@@ -57,12 +67,15 @@
 </div>
 <article class="article-page">
   <div class="container--narrow">
-    <div class="article-page__meta" style="margin-bottom: 48px;">
+    <div class="article-page__meta">
+    <div class="article-page__meta-row">
       <span>Dawn Vision 编辑部</span>
-      <span>2026.06.26</span>
       <span>约 5 分钟阅读</span>
-      <span>Issue 003</span>
     </div>
+    <div class="article-page__meta-row article-page__meta-row--tags">
+<span class="article-page__meta-tag">Brief</span><span class="article-page__meta-tag">资讯</span>
+    </div>
+  </div>
     <div class="article-page__content">
       <p>一个反直觉的数学题：如果你有一个Agent，它每一步操作的正确率是95%——听起来很不错对不对？——那么当它连续执行20步操作后，最终结果正确的概率是多少？</p>
       <p>答案是35.8%。</p>

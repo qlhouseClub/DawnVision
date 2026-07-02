@@ -3,19 +3,19 @@
   <!-- Main pages -->
   <url>
     <loc>https://qlhouseclub.github.io/DawnVision/</loc>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://qlhouseclub.github.io/DawnVision/articles.html</loc>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://qlhouseclub.github.io/DawnVision/cao.html</loc>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -265,8 +265,7 @@
     <changefreq>never</changefreq>
     <priority>0.6</priority>
   </url>
-
-  <!-- Issue 006 Articles (2026.07.01) -->
+<!-- Issue 006 Articles (2026.07.01) -->
   <url>
     <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-07-01-claude-sonnet-5-agent-parity-price.html</loc>
     <lastmod>2026-07-01</lastmod>
@@ -318,6 +317,62 @@
   <url>
     <loc>https://qlhouseclub.github.io/DawnVision/issues/issue-006.html</loc>
     <lastmod>2026-07-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Issue 007 Articles (2026.07.02) -->
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-07-02-nvidia-aspire-robot-skill-library-paradigm-shift.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-07-02-opensquilla-040-self-verification-ai-coding-trust.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-07-02-x-mcp-server-official-agent-protocol-social-platform.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-07-02-cloudflare-ai-crawler-policy-september-15-content-payment.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-07-02-venice-ai-unicorn-privacy-ai-profitable-70m-arr.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-07-02-alibaba-qoderwork-wukong-mulerun-merge-enterprise-agent.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/articles/2026-07-02-google-nano-banana-2-lite-gemini-omni-flash-creator-tools.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/cao/2026-07-02-netflix-ai-gene-wilder-voice-willy-wonka-celebrity-ethics.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qlhouseclub.github.io/DawnVision/issues/issue-007.html</loc>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>never</changefreq>
     <priority>0.6</priority>
   </url>

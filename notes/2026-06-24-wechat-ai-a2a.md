@@ -15,8 +15,8 @@ source_url: https://qlhouseclub.github.io/DawnVision/articles/2026-06-24-wechat-
 
 ## 入库知识
 
-- [[agent-protocols|Agent 通信协议：A2A / MCP]]
 - [[wechat-a2a|微信生态与A2A落地]]
+- [[agent-protocols|Agent 通信协议：A2A / MCP]]
 
 ## 认知笔记
 

@@ -15,8 +15,8 @@ source_url: https://qlhouseclub.github.io/DawnVision/cao/2026-06-24-ai-coding-fa
 
 ## 入库知识
 
-- [[cao-ai-fails|AI 翻车现场 (Cao!)]]
 - [[agent-production|Agent 生产环境：错误与权限]]
+- [[cao-ai-fails|AI 翻车现场 (Cao!)]]
 - [[ai-coding-tools|AI 编程工具竞争]]
 
 ## 认知笔记

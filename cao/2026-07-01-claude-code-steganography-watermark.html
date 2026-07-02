@@ -15,14 +15,17 @@
   <meta property="og:description" content="Claude Code被爆用隐写术标记Prompt，检测中国AI域名和亚洲时区，开发者信任危机爆发。">
   <meta property="og:site_name" content="Dawn Vision">
   <meta property="og:locale" content="zh_CN">
-  <meta property="og:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.svg">
+  <meta property="og:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
   <meta property="article:published_time" content="2026-07-01T16:30:00+08:00">
   <meta property="article:author" content="Dawn Vision">
   <meta property="article:section" content="Cao槽点">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Claude Code偷偷在你Prompt里打小报告？隐写术标记炸出开发者信任地震">
   <meta name="twitter:description" content="Claude Code被爆用隐写术标记Prompt，检测中国AI域名和亚洲时区，开发者信任危机爆发。">
-  <meta name="twitter:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.svg">
+  <meta name="twitter:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.png">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -36,19 +39,19 @@
       "@type": "Organization",
       "name": "Dawn Vision",
       "url": "https://qlhouseclub.github.io/DawnVision/",
-      "logo": {"@type": "ImageObject", "url": "https://qlhouseclub.github.io/DawnVision/assets/og-image.svg"}
+      "logo": {"@type": "ImageObject", "url": "https://qlhouseclub.github.io/DawnVision/assets/og-image.png"}
     },
     "inLanguage": "zh-CN",
-    "image": "https://qlhouseclub.github.io/DawnVision/assets/og-image.svg",
+    "image": "https://qlhouseclub.github.io/DawnVision/assets/og-image.png",
     "wordCount": 750
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/style.css?v=13">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
-  <script src="../assets/interactions.js" defer></script>
+  <script src="../assets/interactions.js?v=13" defer></script>
 </head>
 <body>
 <nav class="inner-nav" role="navigation" aria-label="主导航">
@@ -69,21 +72,30 @@
 </nav>
 <main role="main">
 <div class="article-page__hero">
+<div class="bg-blobs">
+    <div class="bg-blob bg-blob--1"></div>
+    <div class="bg-blob bg-blob--2"></div>
+    <div class="bg-blob bg-blob--3"></div>
+    <div class="bg-blob bg-blob--4"></div>
+    <div class="bg-blob bg-blob--5"></div>
+  </div>
   <div class="article-page__hero-inner">
-    <a href="../cao.html" class="article-page__back" style="color: rgba(255,255,255,0.5); margin-bottom: 32px; display: inline-block;">← Back to Cao!</a>
-    <div class="article-page__hero-label" style="color: rgba(255,255,255,0.5);">Today's Rant · 今日槽</div>
+    <a href="../cao.html" class="article-page__back">← Back to Cao!</a>
     <h1 class="article-page__hero-title">Claude Code偷偷<br>在Prompt里打小报告</h1>
     <p class="article-page__hero-deck">开发者发现Claude Code在系统提示里用肉眼看不见的Unicode字符做隐写标记，专门检测亚洲时区和中国AI公司域名。主打“AI安全”的Anthropic，在隐私问题上翻了车。</p>
   </div>
 </div>
 <article class="article-page">
   <div class="container--narrow">
-    <div class="article-page__meta" style="margin-bottom: 48px;">
+    <div class="article-page__meta">
+    <div class="article-page__meta-row">
       <span>Dawn Vision 编辑部</span>
-      <span>2026.07.01</span>
       <span>约 4 分钟阅读</span>
-      <span>Issue 006</span>
     </div>
+    <div class="article-page__meta-row article-page__meta-row--issue">
+        <span>2026.07.01 · Issue 006</span>
+      </div>
+  </div>
     <div class="article-page__content">
       <p>朋友们，今天这个AI翻车故事，精彩程度可以写进《2026年AI工具迷惑行为大赏》。</p>
       <p>事情是这样的。一位开发者出于隐私考虑，检查了自己本地安装的Claude Code（v2.1.196）二进制文件——毕竟这东西有文件系统权限、能执行shell命令、能操作git，权限大得吓人，检查一下是应该的。</p>

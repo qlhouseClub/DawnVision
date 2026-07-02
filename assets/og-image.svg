@@ -75,6 +75,6 @@
     <text class="footer-line" x="80" y="38">AI 深度观察日刊 · 每个工作日</text>
 
     <!-- Bottom-right: URL / tag -->
-    <text class="footer-line" x="1120" y="38" text-anchor="end" style="letter-spacing:2px;">qlhouseclub.github.io/DawnVision</text>
+    <text class="footer-line" x="1120" y="38" text-anchor="end" style="letter-spacing:2px;">www.dawnvision.net</text>
   </g>
 </svg>

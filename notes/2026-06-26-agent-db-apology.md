@@ -15,8 +15,8 @@ PocketOS创始人让Cursor跑数据库迁移，Agent 9秒删光生产库连Railw
 
 ## 入库知识
 
-- [[cao-ai-fails|AI 翻车现场 (Cao!)]]
 - [[agent-production|Agent 生产环境：错误与权限]]
+- [[cao-ai-fails|AI 翻车现场 (Cao!)]]
 
 ## 认知笔记
 

@@ -16,6 +16,7 @@ Agent互联网的TCP/IP时刻。A2A协议解决Agent间通信问题，MCP解决A
 
 ## 相关文章
 
+- [[2026-07-02-x-mcp-server-official-agent-protocol-social-platform|X官方MCP上线社交平台接入Agent协议]] (2026-07-02 · Brief)
 - [[2026-07-01-x-mcp-server-agent-protocol|X上线MCPAgent互联再下一城]] (2026-07-01 · Brief)
 - [[2026-06-26-a2a-production|A2A 协议进入生产年]] (2026-06-26 · Brief)
 - [[2026-06-26-wechat-alipay-agent-war|微信与支付宝的Agent 战争]] (2026-06-26 · Brief)

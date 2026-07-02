@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenSquilla 0.4.0发布自我验证：AI写代码从"我改好了"到"我证明改对了" | Dawn Vision</title>
+  <meta name="description" content="红绿回归测试三关全过才交付，AI编码评判标准从"它声称改对了"转向"它能否自证改对了"。常规场景成本直降60-80%。">
+  <meta name="keywords" content="Dawn Vision, Dawn Vision, OpenSquilla, AI编程, 自我验证, 红绿测试, Agent Harness">
+  <meta name="author" content="Dawn Vision">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://qlhouseclub.github.io/DawnVision/articles/2026-07-02-opensquilla-040-self-verification-ai-coding-trust.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://qlhouseclub.github.io/DawnVision/articles/2026-07-02-opensquilla-040-self-verification-ai-coding-trust.html">
+  <meta property="og:title" content="OpenSquilla 0.4.0发布自我验证：AI写代码从"我改好了"到"我证明改对了"">
+  <meta property="og:description" content="OpenSquilla 0.4.0推自我验证机制，AI写代码需自证正确，成本降60-80%。">
+  <meta property="og:site_name" content="Dawn Vision">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="article:published_time" content="2026-07-02T16:30:00+08:00">
+  <meta property="article:author" content="Dawn Vision">
+  <meta property="article:section" content="AI 编程 · 工具竞争">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="OpenSquilla 0.4.0发布自我验证：AI写代码从"我改好了"到"我证明改对了"">
+  <meta name="twitter:description" content="OpenSquilla 0.4.0推自我验证机制，AI写代码需自证正确，成本降60-80%。">
+  <meta name="twitter:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "OpenSquilla 0.4.0发布自我验证：AI写代码从"我改好了"到"我证明改对了"",
+    "description": "OpenSquilla 0.4.0推自我验证机制，AI写代码需自证正确，成本降60-80%。",
+    "datePublished": "2026-07-02T16:30:00+08:00",
+    "dateModified": "2026-07-02T16:30:00+08:00",
+    "author": {"@type": "Organization", "name": "Dawn Vision"},
+    "publisher": {
+      "@type": "Organization",
+      "name": "Dawn Vision",
+      "url": "https://qlhouseclub.github.io/DawnVision/",
+      "logo": {"@type": "ImageObject", "url": "https://qlhouseclub.github.io/DawnVision/assets/og-image.png"}
+    },
+    "inLanguage": "zh-CN",
+    "image": "https://qlhouseclub.github.io/DawnVision/assets/og-image.png",
+    "wordCount": 800
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css?v=13">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
+  <script src="../assets/interactions.js?v=13" defer></script>
+</head>
+<body>
+<nav class="inner-nav" role="navigation" aria-label="主导航">
+  <div class="inner-nav__inner">
+    <div class="inner-nav__group">
+      <a href="../index.html" class="inner-nav__link">Home</a>
+      <a href="../articles.html" class="inner-nav__link inner-nav__link--active" aria-current="page">Articles</a>
+    </div>
+    <a href="../index.html" class="inner-nav__brand" aria-label="Dawn Vision 首页">
+      Dawn Vision
+      <small>Daily Briefing</small>
+    </a>
+    <div class="inner-nav__group">
+      <a href="../cao.html" class="inner-nav__link">Cao</a>
+      <a href="../about.html" class="inner-nav__link">About</a>
+    </div>
+  </div>
+</nav>
+<main role="main">
+<div class="article-page__hero">
+<div class="bg-blobs">
+    <div class="bg-blob bg-blob--1"></div>
+    <div class="bg-blob bg-blob--2"></div>
+    <div class="bg-blob bg-blob--3"></div>
+    <div class="bg-blob bg-blob--4"></div>
+    <div class="bg-blob bg-blob--5"></div>
+  </div>
+  <div class="article-page__hero-inner">
+    <a href="../articles.html" class="article-page__back">← Back to Articles</a>
+    <h1 class="article-page__hero-title">OpenSquilla自我验证<br>AI编码进入证据链时代</h1>
+    <p class="article-page__hero-deck">红绿回归测试三关全过才交付，AI编码评判标准从"它声称改对了"转向"它能否自证改对了"。常规场景成本直降60-80%。</p>
+  </div>
+</div>
+<article class="article-page">
+  <div class="container--narrow">
+    <div class="article-page__meta">
+    <div class="article-page__meta-row">
+      <span>Dawn Vision 编辑部</span>
+      <span>约 5 分钟阅读</span>
+    </div>
+    <div class="article-page__meta-row article-page__meta-row--tags">
+      <span class="article-page__meta-tag">AI Coding</span> <span class="article-page__meta-tag">Tools</span> <span class="article-page__meta-tag">AI 编程</span> <span class="article-page__meta-tag">工具竞争</span>
+    </div>
+    <div class="article-page__meta-row article-page__meta-row--issue">
+      <span>2026.07.02 · Issue 007</span>
+    </div>
+  </div>
+    <div class="article-page__content">
+      <p>"我改好了，你看看。"</p>
+      <p>过去一年，每个用AI写代码的开发者都听过太多次这句话。Agent运行两分钟，信心满满提交结果，你拉下来一看——编译不过、测试全红、边缘情况完全没考虑。<strong>"能写"不等于"能信"</strong>，这是AI编码至今无法真正无人值守、规模化进入生产环境的核心瓶颈。</p>
+      <p>7月1日，开源AI Agent项目OpenSquilla发布0.4.0版本，给出了一个直接的解决方案：AI不再止步于"我改好了"的口头交付，而是在交回结果前，先用测试为自己跑出一份可复核的证据链。</p>
+
+      <h2>红绿回归三关，过不了自动重改</h2>
+      <p>OpenSquilla的"自我验证"机制是一条独立的红绿回归证据链，分三步走。</p>
+      <p>第一关：<strong>红测试定性</strong>。AI先写一个注定失败的测试，精准复现要修复的bug或要新增的功能。这个测试跑不过，才说明它真的理解了问题所在，而不是在瞎改。第二关：<strong>绿测试验证</strong>。AI实现功能或修复bug，让刚才写的测试从红转绿，证明问题确实被解决了。第三关：<strong>回归测试兜底</strong>。跑一遍项目原有测试套件，确认新改动没有弄坏其他地方。</p>
+      <p>三关全过才算交付，任一不过直接打回自动重改，直到通过为止。配套机制还包括隔离施工——所有改动都在隔离副本里进行，验收合格才落回源码，避免Agent手滑删了你的生产代码。</p>
+      <p>官方演示用了Andrej Karpathy的micrograd项目做例子：AI需要给这个极简自动微分库新增"计算正确梯度"的功能——而梯度算错不会报错也不会崩溃，只会让模型悄悄越学越偏，是最难靠肉眼发现的那类bug。OpenSquilla走完红→绿→回归三关后，团队把结果和PyTorch在同一道题上并排比对，<strong>前向值与每一个梯度小数点后10位完全一致</strong>。不是"AI自己说对"，而是"它和官方标准答案分毫不差"。</p>
+
+      <h2>成本降9倍，Agent Harness赛道升温</h2>
+      <p>除了自我验证，OpenSquilla主打的另一个卖点是性价比。在主流Agent框架普遍推高模型调用、token成本节节攀升的背景下，它通过本地智能路由——按任务复杂度自动选模型、技能按需加载、记忆按需检索、工具结果预处理——在"调用前"就压降成本。</p>
+      <p>官方数据显示，其智能路由相比通用网关OpenRouter，路由精度高约<strong>4.4个百分点</strong>、成本低约<strong>75%</strong>；与旗舰模型跑同类任务质量基本持平、成本相差约<strong>9倍</strong>。常规场景内测综合成本可下降60-80%。上线数周内GitHub star增至数千量级，公司成立数月即完成首轮融资。</p>
+      <p>OpenSquilla不是孤例。过去三个月，Agent Harness——即"给Agent提供执行环境、验证机制、工具链的基础设施层"——正在成为AI编程赛道的新热点。从Cursor的Agent模式到Claude Code的命令行工具，从Devin的全自动DevOps到各类开源Agent框架，大家都在解决同一个问题：<strong>怎么让Agent在没有人盯着的情况下，可靠地完成真实世界的工程任务</strong>。</p>
+      <p>Hacker News当天登上首页的Senior SWE-Bench也在指向同一个方向——新的基准测试不再考Agent解决LeetCode题目的能力，而是评估它作为"高级工程师"在真实代码库中的表现。这意味着行业的评判标准已经从"生成质量"转向了"交付可靠性"。</p>
+      <p>AI编程工具战争打到2026年下半年，单纯拼模型能力已经不够了。谁能建立起可靠的验证闭环、谁能把幻觉和错误率压到生产可用的水平、谁能在保证质量的前提下把成本打下来——谁才是真正能帮开发者干活的工具，而不是一个需要人随时盯着擦屁股的"实习生"。</p>
+      <div class="pull-quote">
+        "多数编码Agent改完即交，对错仍要人逐行复核。把验证内化进Agent自身，意味着行业评判AI编码的标准正在改变。"
+        <span class="pull-quote__attr">—— OpenSquilla团队</span>
+      </div>
+      <hr>
+      <p>明天见。</p>
+    </div>
+    <div style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--color-border-light); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+      <a href="2026-07-02-nvidia-aspire-robot-skill-library-paradigm-shift.html" style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--color-text-light); text-decoration: none;">← 上一篇</a>
+      <a href="2026-07-02-x-mcp-server-official-agent-protocol-social-platform.html" style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--color-text-light); text-decoration: none;">下一篇 →</a>
+    </div>
+    <div class="article-sources">
+      <div class="article-sources__label">Sources · 参考来源</div>
+      <ul class="article-sources__list">
+        <li><a href="https://www.qbitai.com/2026/07/441240.html" target="_blank" rel="noopener noreferrer nofollow">量子位 - OpenSquilla发布0.4.0：AI写代码首次能"自我验证"</a></li>
+        <li><a href="https://www.infoq.cn/article/lgKWA0PHN4zsOkB4C4Pv" target="_blank" rel="noopener noreferrer nofollow">InfoQ中文 - 8人起家年入上亿美元，推出自研大模型对战Cursor</a></li>
+        <li><a href="https://senior-swe-bench.snorkel.ai/" target="_blank" rel="noopener noreferrer nofollow">Hacker News - Senior SWE-Bench: open-source benchmark</a></li>
+      </ul>
+      <p class="article-sources__note">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，标题、观点、行文均为原创，仅供参考。</p>
+    </div>
+    <div class="article-page__footnote">
+      <p>本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：量子位、InfoQ中文、Hacker News。</p>
+      <p>相关入库笔记：OpenSquilla 0.4.0 · 自我验证 · 红绿测试 · AI编程 · Agent Harness · 成本优化</p>
+    </div>
+  </div>
+</article>
+</main>
+<footer class="site-footer"><div class="container"><div class="site-footer__brand">Dawn Vision</div><div class="site-footer__meta">© 2026 · Daily at 16:30 CST · Weekdays Only</div></div></footer>
+</body>
+</html>

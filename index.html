@@ -17,18 +17,21 @@
   <meta property="og:description" content="在噪音中看见信号。每个工作日深度解读 AI 前沿：Agent 协议、大模型竞赛、AI 商业化、具身智能。不是信息搬运，是噪音中的信号过滤器。">
   <meta property="og:site_name" content="Dawn Vision">
   <meta property="og:locale" content="zh_CN">
-  <meta property="og:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.svg">
+  <meta property="og:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://qlhouseclub.github.io/DawnVision/">
   <meta name="twitter:title" content="Dawn Vision | 穿越嘈杂，洞见留声">
   <meta name="twitter:description" content="AI 时代的深度阅读日刊。每个工作日，深度加工 AI 前沿资讯，输出可以直接读完的完整文章。">
-  <meta name="twitter:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.svg">
+  <meta name="twitter:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/style.css?v=13">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
 
   <!-- JSON-LD Structured Data -->
@@ -47,7 +50,7 @@
       "url": "https://qlhouseclub.github.io/DawnVision/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://qlhouseclub.github.io/DawnVision/assets/og-image.svg",
+        "url": "https://qlhouseclub.github.io/DawnVision/assets/og-image.png",
         "width": 1200,
         "height": 630
       }
@@ -65,12 +68,12 @@
     "@type": "Organization",
     "name": "Dawn Vision",
     "url": "https://qlhouseclub.github.io/DawnVision/",
-    "logo": "https://qlhouseclub.github.io/DawnVision/assets/og-image.svg",
+    "logo": "https://qlhouseclub.github.io/DawnVision/assets/og-image.png",
     "description": "AI 深度观察日刊，每个工作日从海量AI资讯中去噪筛选、深度加工，输出独立完整的分析文章。",
     "foundingDate": "2026-06-24"
   }
   </script>
-  <script src="assets/interactions.js" defer></script>
+  <script src="assets/interactions.js?v=13" defer></script>
 </head>
 <body class="home">
 
@@ -102,7 +105,16 @@
 
   <!-- Hero content -->
   <main class="home__hero" role="main">
-    <div class="home__brand">Dawn Vision · Est. 2026</div>
+    <!-- Today's cover teaser - white card -->
+    <article class="home__teaser" itemscope itemtype="https://schema.org/NewsArticle">
+      <div class="home__teaser-label">Focus · 焦点</div>
+      <h2 class="home__teaser-title" itemprop="headline">英伟达开源机器人技能库</h2>
+      <p class="home__teaser-deck" itemprop="description">双臂交接任务成功率从20%飙升至92%，机器人完成第100个任务时不再像第1个任务那样一无所知。英伟达用Skill Library告诉行业：训练产物不该只是浮点权重。</p>
+      <meta itemprop="datePublished" content="2026-07-02">
+      <meta itemprop="author" content="Dawn Vision 编辑部">
+      <meta itemprop="publisher" content="Dawn Vision">
+      <a href="articles.html" class="btn-more" itemprop="url">Read More <span class="arrow">→</span></a>
+    </article>
 
     <h1 class="home__title">
       Through the Clamor,<br>
@@ -113,17 +125,6 @@
     <p class="home__tagline">穿越嘈杂，<br>洞见留声。</p>
 
     <h2 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Dawn Vision — AI 深度观察日刊，每个工作日深度解读 AI 前沿资讯：AI Agent、大模型、具身智能、AI 商业化、一人公司</h2>
-
-    <!-- Today's cover teaser - white card -->
-    <article class="home__teaser" itemscope itemtype="https://schema.org/NewsArticle">
-      <div class="home__teaser-label">Focus · 焦点</div>
-      <h2 class="home__teaser-title" itemprop="headline">Agent平价时代降临</h2>
-      <p class="home__teaser-deck" itemprop="description">输入$2/百万token、输出$10/百万token（8月31日前促销价），Agent编码能力63.2%追平Opus 4.8的69.2%，知识工作基准反超Opus。当跑一个自主Agent的成本降到此前</p>
-      <meta itemprop="datePublished" content="2026-07-01">
-      <meta itemprop="author" content="Dawn Vision 编辑部">
-      <meta itemprop="publisher" content="Dawn Vision">
-      <a href="articles.html" class="btn-more" itemprop="url">Read More <span class="arrow">→</span></a>
-    </article>
   </main>
 
   <!-- Footer -->

@@ -15,8 +15,8 @@ Claude Mythos 5发布仅72小时即被白宫以国家安全为由下达出口管
 
 ## 入库知识
 
-- [[ai-geopolitics|AI 地缘政治]]
 - [[ai-regulation|AI 监管与政策]]
+- [[ai-geopolitics|AI 地缘政治]]
 
 ## 认知笔记
 
