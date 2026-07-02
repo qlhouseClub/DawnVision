@@ -196,7 +196,7 @@
     if (!container) {
       container = document.createElement('div');
       container.id = 'google_translate_element';
-      container.style.cssText = 'position:fixed;top:0;left:0;width:0;height:0;overflow:hidden;opacity:0;pointer-events:none;z-index:-1;';
+      container.style.cssText = 'position:absolute;left:-9999px;top:-9999px;width:200px;height:50px;overflow:hidden;opacity:0;pointer-events:none;';
       document.body.appendChild(container);
     }
 
