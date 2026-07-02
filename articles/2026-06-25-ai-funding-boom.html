@@ -2,6 +2,103 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
+
+  <script>
+/* ===== GT BANNER SUPPRESSION (runs before any other script) ===== */
+(function(){
+  /* 1. Inject CSS that hides all GT chrome before any GT element exists */
+  var _s=document.createElement('style');
+  _s.textContent='.goog-te-banner-frame,.goog-te-gadget,.goog-te-gadget-icon,.goog-te-gadget-simple,.goog-te-spinner-pos,.goog-te-spinner,.goog-te-menu-frame,.goog-te-balloon-frame,.goog-tooltip,#goog-gt-tt{display:none!important;visibility:hidden!important;height:0!important;width:0!important;opacity:0!important;pointer-events:none!important;position:absolute!important;top:-9999px!important;left:-9999px!important;}body,html{top:0!important;margin-top:0!important;}';
+  (document.head||document.getElementsByTagName('head')[0]).appendChild(_s);
+
+  /* 2. Function to check if a node is a GT banner element */
+  function isGTBanner(n){
+    if(!n||n.nodeType!==1)return false;
+    var t=n.tagName;
+    var c=(n.className&&typeof n.className==='string')?n.className:'';
+    var i=(n.id&&typeof n.id==='string')?n.id:'';
+    var a=(n.getAttribute&&n.getAttribute('src'))||'';
+    if(t==='IFRAME'&&(/goog-te-banner/.test(c)||/goog-te-banner/.test(i)||/translate\.google\.com\/translate/.test(a))){
+      /* Allow if inside our hidden container */
+      var p=n.parentNode;
+      while(p){if(p.id==='google_translate_element')return false;p=p.parentNode;}
+      return true;
+    }
+    if(t==='DIV'&&(/goog-te-spinner/.test(c)||/goog-te-banner/.test(c)||/goog-te-balloon/.test(c)))return true;
+    if(i==='goog-gt-tt')return true;
+    return false;
+  }
+
+  /* 3. Patch appendChild/insertBefore on Node.prototype to intercept GT */
+  var _ac=Node.prototype.appendChild;
+  var _ib=Node.prototype.insertBefore;
+  function wrapInsert(orig){
+    return function(node){
+      if(isGTBanner(node)){
+        /* Silently swallow the insertion */
+        try{node.style.cssText+='display:none!important;height:0!important;width:0!important;position:absolute!important;top:-9999px!important;';}catch(e){}
+        return node;
+      }
+      return orig.apply(this,arguments);
+    };
+  }
+  Node.prototype.appendChild=wrapInsert(_ac);
+  Node.prototype.insertBefore=wrapInsert(_ib);
+
+  /* 4. Continuous cleanup every 50ms */
+  function killGT(){
+    if(!document.body)return;
+    var fc=document.body.firstChild;
+    while(fc){
+      var next=fc.nextSibling;
+      if(fc.nodeType===1&&isGTBanner(fc)&&fc.parentNode){
+        fc.parentNode.removeChild(fc);
+      }
+      fc=next;
+    }
+    /* Also check all iframes */
+    var ifs=document.querySelectorAll('iframe.goog-te-banner-frame');
+    for(var i=0;i<ifs.length;i++){
+      var inContainer=false;var p=ifs[i].parentNode;
+      while(p){if(p.id==='google_translate_element'){inContainer=true;break;}p=p.parentNode;}
+      if(!inContainer&&ifs[i].parentNode)ifs[i].parentNode.removeChild(ifs[i]);
+    }
+    /* Reset body styles */
+    document.body.style.top='0';
+    document.body.style.marginTop='0';
+    if(document.documentElement){document.documentElement.style.top='0';document.documentElement.style.marginTop='0';}
+  }
+  setInterval(killGT,50);
+
+  /* 5. MutationObserver for instant removal */
+  function startObserver(){
+    if(!document.body)return;
+    if(window.__dvGTObs)return;
+    var obs=new MutationObserver(function(muts){
+      var needKill=false;
+      for(var i=0;i<muts.length;i++){
+        var m=muts[i];
+        if(m.addedNodes){
+          for(var j=0;j<m.addedNodes.length;j++){
+            if(isGTBanner(m.addedNodes[j])){needKill=true;break;}
+          }
+        }
+        if(m.type==='attributes'&&(m.attributeName==='style'||m.attributeName==='class'))needKill=true;
+        if(needKill)break;
+      }
+      if(needKill){requestAnimationFrame(killGT);setTimeout(killGT,16);setTimeout(killGT,100);}
+    });
+    obs.observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['style','class']});
+    obs.observe(document.documentElement,{childList:true,attributes:true,attributeFilter:['style','class']});
+    window.__dvGTObs=obs;
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',startObserver);
+  }else{startObserver();}
+  /* Also try to start early */
+  var _iv=setInterval(function(){if(document.body){startObserver();clearInterval(_iv);}},5);
+})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MirendilAI 2亿、昆仑行90天三轮数十亿：AI赛道超级吸金进行时 | Dawn Vision — AI深度观察</title>
   <meta name="description" content="MirendilAI 20人团队拿下2亿美元融资，昆仑行90天三轮数十亿刷新纪录，6月前两周中国AI融资超45亿。资本正以前所未有速度涌入AI，具身智能赛道最火，但二级市场已从"听故事"进入"看数字"阶段。">
@@ -103,9 +200,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/style.css?v=22">
+  <link rel="stylesheet" href="../assets/style.css?v=23">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
-  <script src="../assets/interactions.js?v=22" defer></script>
+  <script src="../assets/interactions.js?v=23" defer></script>
 </head>
 <body>
 
