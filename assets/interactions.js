@@ -1,138 +1,35 @@
 /**
- * Dawn Vision — Interaction Script v20
+ * Dawn Vision — Interaction Script v21
  *
- * Translation strategy:
- * - Default Chinese; button shows "EN"
- * - GT script is preloaded, but widget is NOT initialized until user clicks EN
- * - Click EN → initialize GT widget → immediately select 'en' → page translates
- * - Click CN → select 'zh-CN' in GT combo → page restores to Chinese
- * - All GT UI (banner, spinner, gadget) is aggressively removed via MutationObserver
- * - Button shows "..." during translation
- * - If GT fails, fallback hint is shown
+ * Translation strategy (browser-native, zero third-party scripts):
+ * - No Google Translate widget, no external translation scripts, no redirects
+ * - Page declares lang="zh-CN"; Chrome/Edge offer native translation via address bar icon / right-click menu
+ * - EN/CN button toggles our own UI labels (nav, buttons, meta text) via dictionary
+ * - Clicking EN for the first time shows a floating guide bubble explaining how to translate article body
+ * - Guide is browser-specific (Chrome vs Edge instructions)
+ * - Non-Chinese browser users see a dismissible suggestion banner on page load
+ * - User's UI language preference is saved to localStorage
  */
-
-// ══ AGGRESSIVE GT UI SUPPRESSION ══
-(function() {
-  // CSS to hide every known GT UI element
-  var s = document.createElement('style');
-  s.id = 'dv-gt-suppress';
-  s.textContent =
-    '.goog-te-banner-frame{display:none!important;visibility:hidden!important;height:0!important;width:0!important;position:absolute!important;top:-9999px!important;left:-9999px!important;opacity:0!important;pointer-events:none!important;}' +
-    '.goog-te-gadget,.goog-te-gadget-icon,.goog-te-gadget-simple,.goog-te-gadget span{display:none!important;}' +
-    '.goog-te-spinner-pos,.goog-te-spinner{display:none!important;visibility:hidden!important;}' +
-    '.goog-te-menu-frame,.goog-te-balloon-frame{display:none!important;}' +
-    '.goog-tooltip,.goog-tooltip:hover{display:none!important;}' +
-    '.goog-text-highlight{background-color:transparent!important;border:none!important;box-shadow:none!important;}' +
-    '#goog-gt-tt{display:none!important;}' +
-    'body{top:0!important;margin-top:0!important;position:static!important;}' +
-     'html{top:0!important;margin-top:0!important;}' +
-     'iframe.goog-te-banner-frame{display:none!important;}';
-  document.head.appendChild(s);
-
-  // Immediately and continuously rip out any GT banner iframe and reset body styles
-  function killGTStuff() {
-    // Remove GT banner iframe (direct child of body with goog-te-banner-frame class)
-    var toRemove = [];
-    // 1. By class name — most reliable
-    var bannerFrames = document.querySelectorAll('iframe.goog-te-banner-frame');
-    for (var i = 0; i < bannerFrames.length; i++) {
-      toRemove.push(bannerFrames[i]);
-    }
-    // 2. Any iframe that is a direct child of body with translate in src (GT injects banner as body first child)
-    if (document.body) {
-      var bodyChildren = document.body.children;
-      for (var j = 0; j < bodyChildren.length; j++) {
-        var child = bodyChildren[j];
-        if (child.tagName === 'IFRAME' && child.id !== 'google_translate_element') {
-          var srcAttr = child.getAttribute('src') || '';
-          var clsAttr = child.className || '';
-          if (/translate\.google/.test(srcAttr) || /goog-te/.test(clsAttr) || /goog-te/.test(child.id)) {
-            // Check it's NOT inside our container
-            var inside = false;
-            var node = child.parentNode;
-            while (node) {
-              if (node.id === 'google_translate_element') { inside = true; break; }
-              node = node.parentNode;
-            }
-            if (!inside) toRemove.push(child);
-          }
-        }
-        // Also remove any GT spinner divs that are direct body children
-        if (child.tagName === 'DIV') {
-          var cCls = child.className || '';
-          if (typeof cCls === 'string' && /goog-te-spinner|goog-te-banner/.test(cCls)) {
-            toRemove.push(child);
-          }
-        }
-      }
-    }
-    for (var k = 0; k < toRemove.length; k++) {
-      var el = toRemove[k];
-      if (el.parentNode) el.parentNode.removeChild(el);
-    }
-    // Force-reset body/html styles that GT sets
-    if (document.body) {
-      document.body.style.top = '0';
-      document.body.style.marginTop = '0';
-      document.body.style.position = '';
-    }
-    if (document.documentElement) {
-      document.documentElement.style.top = '0';
-      document.documentElement.style.marginTop = '0';
-    }
-  }
-
-  // Run immediately and continuously
-  killGTStuff();
-  setInterval(killGTStuff, 100);
-  window.__dvKillGT = killGTStuff;
-
-  // MutationObserver to catch GT injections the instant they happen
-  if (typeof MutationObserver !== 'undefined') {
-    var mo = new MutationObserver(function(mutations) {
-      var needsKill = false;
-      for (var i = 0; i < mutations.length; i++) {
-        var m = mutations[i];
-        if (m.addedNodes && m.addedNodes.length) {
-          for (var j = 0; j < m.addedNodes.length; j++) {
-            var n = m.addedNodes[j];
-            if (n.nodeType === 1) {
-              var tag = n.tagName;
-              var cls = n.className || '';
-              var id = n.id || '';
-              var src = n.src || '';
-              if (tag === 'IFRAME' ||
-                  (typeof cls === 'string' && /goog-te-banner|goog-te-spinner/.test(cls)) ||
-                  (typeof id === 'string' && /goog-gt-tt/.test(id))) {
-                needsKill = true;
-                break;
-              }
-            }
-          }
-        }
-        if (m.type === 'attributes' && (m.attributeName === 'style' || m.attributeName === 'class')) {
-          needsKill = true;
-        }
-        if (needsKill) break;
-      }
-      if (needsKill) {
-        // Use rAF to kill after GT finishes its DOM mutation
-        requestAnimationFrame(killGTStuff);
-        setTimeout(killGTStuff, 50);
-        setTimeout(killGTStuff, 200);
-      }
-    });
-    mo.observe(document.documentElement, {
-      childList: true,
-      subtree: true,
-      attributes: true,
-      attributeFilter: ['style', 'class']
-    });
-  }
-})();
 
 (function() {
   'use strict';
+
+  // ══════════════════════════════════════════
+  // Browser detection
+  // ══════════════════════════════════════════
+  function detectBrowser() {
+    var ua = navigator.userAgent;
+    if (ua.indexOf('Edg/') > -1) return 'edge';
+    if (ua.indexOf('Chrome/') > -1 && ua.indexOf('Edg/') === -1) return 'chrome';
+    if (ua.indexOf('Safari/') > -1 && ua.indexOf('Chrome/') === -1) return 'safari';
+    if (ua.indexOf('Firefox/') > -1) return 'firefox';
+    return 'other';
+  }
+
+  function isChineseBrowser() {
+    var lang = (navigator.language || navigator.userLanguage || 'zh-CN').toLowerCase();
+    return lang.indexOf('zh') === 0;
+  }
 
   // ══════════════════════════════════════════
   // i18n — UI Label Translation
@@ -157,17 +54,25 @@
       tip_scan: '微信扫码 · <strong>谢谢老板</strong>',
       tip_close: '关闭',
       lang_switch_en: 'EN',
-      lang_switch_zh: 'CN',
-      lang_switch_to_en: 'Translate to English',
-      lang_switch_to_zh: 'Back to Chinese',
+      lang_switch_cn: 'CN',
+      lang_switch_to_en: '切换为英文界面',
+      lang_switch_to_cn: '切换为中文界面',
       reads_local_title: '本地计数（统计服务暂不可用）',
       reads_title: function(n) { return '总阅读量 ' + n; },
       new_content_title: '有新内容发布',
       new_content_desc: '网站已更新，点击刷新查看最新文章。',
       new_content_refresh: '刷新页面',
       new_content_dismiss: '稍后',
-      translate_hint: '翻译加载中，如长时间未响应请右键页面选择"翻译"',
-      translate_failed: '翻译服务暂不可用，请使用浏览器右键翻译功能',
+      translate_guide_title: '翻译正文为英文',
+      translate_guide_chrome: '点击浏览器地址栏右侧的 <strong>翻译图标</strong>（文A/A），选择 English 即可翻译全文。',
+      translate_guide_edge: '右键页面空白处，选择 <strong>"翻译为 English"</strong>；或点击地址栏右侧的翻译图标。',
+      translate_guide_other: '请使用浏览器自带的翻译功能（右键菜单或地址栏翻译图标）将页面翻译为英文。',
+      translate_guide_gotit: '知道了',
+      translate_guide_dontshow: '不再提示',
+      translate_banner_title: 'Translate this page?',
+      translate_banner_desc_chrome: 'Click the translate icon in the address bar to read in English.',
+      translate_banner_desc_edge: 'Right-click anywhere and select "Translate to English".',
+      translate_banner_cta: 'Got it',
     },
     en: {
       meta_editorial: 'Dawn Vision Editorial',
@@ -188,27 +93,32 @@
       tip_scan: 'WeChat QR · <strong>Thanks!</strong>',
       tip_close: 'Close',
       lang_switch_en: 'EN',
-      lang_switch_zh: 'CN',
-      lang_switch_to_en: 'Translate to English',
-      lang_switch_to_zh: 'Back to Chinese',
+      lang_switch_cn: 'CN',
+      lang_switch_to_en: 'Switch to English UI',
+      lang_switch_to_cn: 'Switch to Chinese UI',
       reads_local_title: 'Local count (analytics unavailable)',
       reads_title: function(n) { return n + ' total reads'; },
       new_content_title: 'New content available',
       new_content_desc: 'The site has been updated. Click refresh to see the latest articles.',
       new_content_refresh: 'Refresh',
       new_content_dismiss: 'Later',
-      translate_hint: 'Loading translation...',
-      translate_failed: 'Translation unavailable, please use browser translate',
+      translate_guide_title: 'Translate article body',
+      translate_guide_chrome: 'Click the <strong>translate icon</strong> (文A/A) in the address bar and select your language.',
+      translate_guide_edge: 'Right-click anywhere on the page and select <strong>"Translate"</strong>, or click the translate icon in the address bar.',
+      translate_guide_other: 'Use your browser\'s built-in translation (right-click menu or address bar icon) to translate the page.',
+      translate_guide_gotit: 'Got it',
+      translate_guide_dontshow: "Don't show again",
+      translate_banner_title: '翻译页面？',
+      translate_banner_desc_chrome: '点击地址栏右侧的翻译图标即可将页面翻译为中文。',
+      translate_banner_desc_edge: '右键页面空白处，选择"翻译为中文"。',
+      translate_banner_cta: '知道了',
     }
   };
 
   let currentLang = 'zh';
-  let gtScriptLoaded = false;  // script tag loaded
-  let gtWidgetReady = false;   // TranslateElement initialized and combo available
-  let gtInitInProgress = false;
-  let gtLoadFailed = false;
-  let translatePending = false; // waiting to translate after init
   const STORAGE_LANG_KEY = 'dawnvision_lang';
+  const STORAGE_GUIDE_KEY = 'dawnvision_translate_guide_dismissed';
+  const STORAGE_BANNER_KEY = 'dawnvision_translate_banner_dismissed';
   const STORAGE_VERSION_KEY = 'dawnvision_last_version';
 
   function detectLang() {
@@ -228,7 +138,7 @@
 
   function applyUITranslations() {
     const dict = I18N[currentLang];
-    document.documentElement.lang = 'zh-CN'; // Always keep zh-CN for GT compatibility
+    document.documentElement.lang = 'zh-CN'; // Always zh-CN for browser translation detection
 
     document.querySelectorAll('[data-i18n]').forEach(function(el) {
       const key = el.getAttribute('data-i18n');
@@ -259,10 +169,10 @@
 
     document.querySelectorAll('.article-page__meta-row span').forEach(function(el) {
       const txt = el.textContent.trim();
-      if (txt === 'Dawn Vision 编辑部' && currentLang === 'en') {
+      if ((txt === 'Dawn Vision 编辑部' || txt === 'Dawn Vision Editorial') && currentLang === 'en') {
         el.textContent = t('meta_editorial');
       }
-      if (txt === 'Dawn Vision Editorial' && currentLang === 'zh') {
+      if ((txt === 'Dawn Vision 编辑部' || txt === 'Dawn Vision Editorial') && currentLang === 'zh') {
         el.textContent = t('meta_editorial');
       }
     });
@@ -282,237 +192,9 @@
     }
   }
 
-  // ── Google Translate: preload SCRIPT only (no widget init until user clicks) ──
-
-  function ensureGTContainer() {
-    var container = document.getElementById('google_translate_element');
-    if (!container) {
-      container = document.createElement('div');
-      container.id = 'google_translate_element';
-      container.style.cssText = 'position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;';
-      document.body.appendChild(container);
-    }
-    return container;
-  }
-
-  function preloadGTScript(callback) {
-    if (gtScriptLoaded) {
-      callback && callback();
-      return;
-    }
-    if (window.google && window.google.translate && window.google.translate.TranslateElement) {
-      gtScriptLoaded = true;
-      callback && callback();
-      return;
-    }
-    window.__dvAllowTranslate = true;
-    window.googleTranslateElementInit = function() {
-      gtScriptLoaded = true;
-      callback && callback();
-    };
-    var script = document.createElement('script');
-    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-    script.async = true;
-    script.onerror = function() {
-      gtLoadFailed = true;
-      setButtonLoading(false);
-      showTranslateHint(true);
-    };
-    document.head.appendChild(script);
-    // 15s timeout
-    setTimeout(function() {
-      if (!gtScriptLoaded && !gtLoadFailed) {
-        gtLoadFailed = true;
-        setButtonLoading(false);
-        showTranslateHint(true);
-      }
-    }, 15000);
-  }
-
-  function initGTWidget(targetLang, callback) {
-    if (gtWidgetReady) {
-      // Widget already exists, just select the language
-      selectGTLanguage(targetLang, callback);
-      return;
-    }
-    if (gtInitInProgress) {
-      translatePending = true;
-      return;
-    }
-    gtInitInProgress = true;
-    ensureGTContainer();
-
-    try {
-      new window.google.translate.TranslateElement({
-        pageLanguage: 'zh-CN',
-        includedLanguages: 'en,zh-CN',
-        autoDisplay: false,
-        multilanguagePage: false,
-        layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE
-      }, 'google_translate_element');
-
-      // Wait for the combo to appear
-      var attempts = 0;
-      var waitCombo = setInterval(function() {
-        attempts++;
-        var combo = document.querySelector('.goog-te-combo');
-        if (combo) {
-          clearInterval(waitCombo);
-          gtWidgetReady = true;
-          gtInitInProgress = false;
-          // Immediately select target language
-          combo.value = targetLang;
-          combo.dispatchEvent(new Event('change'));
-          // Kill any GT banner that appeared during init
-          setTimeout(killGTStuff, 50);
-          setTimeout(killGTStuff, 200);
-          setTimeout(killGTStuff, 500);
-          callback && callback(true);
-        } else if (attempts > 60) {
-          clearInterval(waitCombo);
-          gtInitInProgress = false;
-          gtLoadFailed = true;
-          setButtonLoading(false);
-          callback && callback(false);
-        }
-      }, 100);
-    } catch(e) {
-      console.warn('GT widget init error:', e);
-      gtInitInProgress = false;
-      gtLoadFailed = true;
-      setButtonLoading(false);
-      callback && callback(false);
-    }
-  }
-
-  function selectGTLanguage(lang, callback) {
-    var combo = document.querySelector('.goog-te-combo');
-    if (combo) {
-      combo.value = lang;
-      combo.dispatchEvent(new Event('change'));
-      setTimeout(killGTStuff, 50);
-      setTimeout(killGTStuff, 200);
-      callback && callback(true);
-      return;
-    }
-    // Combo not found yet, wait
-    var attempts = 0;
-    var waitCombo = setInterval(function() {
-      attempts++;
-      combo = document.querySelector('.goog-te-combo');
-      if (combo) {
-        clearInterval(waitCombo);
-        combo.value = lang;
-        combo.dispatchEvent(new Event('change'));
-        setTimeout(killGTStuff, 50);
-        setTimeout(killGTStuff, 200);
-        callback && callback(true);
-      } else if (attempts > 30) {
-        clearInterval(waitCombo);
-        callback && callback(false);
-      }
-    }, 100);
-  }
-
-  function setButtonLoading(loading) {
-    var sw = document.getElementById('dv-lang-switch');
-    if (!sw) return;
-    if (loading) {
-      sw.textContent = '...';
-      sw.disabled = true;
-      sw.style.opacity = '0.6';
-      sw.style.cursor = 'wait';
-    } else {
-      sw.disabled = false;
-      sw.style.opacity = '';
-      sw.style.cursor = '';
-      updateLangSwitch();
-    }
-  }
-
-  function switchToEnglish() {
-    if (gtLoadFailed) {
-      showTranslateHint(true);
-      return;
-    }
-    currentLang = 'en';
-    try { localStorage.setItem(STORAGE_LANG_KEY, 'en'); } catch(e) {}
-    applyUITranslations();
-    setButtonLoading(true);
-
-    if (gtWidgetReady) {
-      // Widget already exists, just switch
-      selectGTLanguage('en', function(ok) {
-        setButtonLoading(false);
-        if (!ok) { gtLoadFailed = true; showTranslateHint(true); }
-      });
-      return;
-    }
-
-    // Need to load script + init widget
-    preloadGTScript(function() {
-      initGTWidget('en', function(ok) {
-        setButtonLoading(false);
-        if (ok) {
-          updateLangSwitch();
-        } else {
-          gtLoadFailed = true;
-          showTranslateHint(true);
-        }
-      });
-    });
-  }
-
-  function switchToChinese() {
-    currentLang = 'zh';
-    try { localStorage.setItem(STORAGE_LANG_KEY, 'zh'); } catch(e) {}
-    applyUITranslations();
-    setButtonLoading(true);
-
-    if (gtWidgetReady) {
-      selectGTLanguage('zh-CN', function() {
-        setButtonLoading(false);
-        updateLangSwitch();
-      });
-    } else {
-      // Widget was never initialized (user never went to English), just stay Chinese
-      setButtonLoading(false);
-      updateLangSwitch();
-    }
-  }
-
-  function autoTranslateToEnglish() {
-    // Called on page load when saved lang is 'en'
-    if (gtLoadFailed) return;
-    setButtonLoading(true);
-    preloadGTScript(function() {
-      initGTWidget('en', function(ok) {
-        setButtonLoading(false);
-        if (ok) {
-          currentLang = 'en';
-          applyUITranslations();
-          updateLangSwitch();
-        } else {
-          gtLoadFailed = true;
-        }
-      });
-    });
-  }
-
-  function showTranslateHint(isError) {
-    var existing = document.getElementById('dv-translate-hint');
-    if (existing) existing.remove();
-    var hint = document.createElement('div');
-    hint.id = 'dv-translate-hint';
-    hint.className = 'dv-translate-hint';
-    hint.textContent = isError ? t('translate_failed') : t('translate_hint');
-    document.body.appendChild(hint);
-    requestAnimationFrame(function() { hint.classList.add('dv-translate-hint--show'); });
-    setTimeout(function() {
-      hint.classList.remove('dv-translate-hint--show');
-      setTimeout(function() { hint.remove(); }, 300);
-    }, isError ? 4000 : 2000);
-  }
+  // ══════════════════════════════════════════
+  // Language Switch + Browser Translation Guide
+  // ══════════════════════════════════════════
 
   function createLangSwitch() {
     if (document.getElementById('dv-lang-switch')) return;
@@ -523,12 +205,7 @@
     sw.setAttribute('translate', 'no');
     sw.setAttribute('aria-label', 'Language');
     sw.addEventListener('click', function() {
-      if (sw.disabled) return;
-      if (currentLang === 'zh') {
-        switchToEnglish();
-      } else {
-        switchToChinese();
-      }
+      toggleLang();
     });
     document.body.appendChild(sw);
     updateLangSwitch();
@@ -537,14 +214,122 @@
   function updateLangSwitch() {
     var sw = document.getElementById('dv-lang-switch');
     if (!sw) return;
-    sw.textContent = currentLang === 'zh' ? I18N.zh.lang_switch_en : I18N.en.lang_switch_zh;
-    sw.title = currentLang === 'zh' ? t('lang_switch_to_en') : t('lang_switch_to_zh');
+    sw.textContent = currentLang === 'zh' ? I18N.zh.lang_switch_en : I18N.en.lang_switch_cn;
+    sw.title = currentLang === 'zh' ? t('lang_switch_to_en') : t('lang_switch_to_cn');
   }
 
-  // Reference killGTStuff for the inner scope (defined in outer IIFE, exposed globally)
-  var killGTStuff = window.__dvKillGT || function(){};
+  function toggleLang() {
+    if (currentLang === 'zh') {
+      currentLang = 'en';
+      try { localStorage.setItem(STORAGE_LANG_KEY, 'en'); } catch(e) {}
+      applyUITranslations();
+      updateLangSwitch();
+      // Show guide bubble for article body translation
+      showTranslateGuide();
+    } else {
+      currentLang = 'zh';
+      try { localStorage.setItem(STORAGE_LANG_KEY, 'zh'); } catch(e) {}
+      applyUITranslations();
+      updateLangSwitch();
+      hideTranslateGuide();
+    }
+  }
 
-  window.DV_I18N = { t: t, setLang: function(l) { if (l==='en') switchToEnglish(); else switchToChinese(); }, currentLang: function() { return currentLang; } };
+  function showTranslateGuide() {
+    // Don't show if user dismissed it
+    try {
+      if (localStorage.getItem(STORAGE_GUIDE_KEY) === '1') return;
+    } catch(e) {}
+
+    hideTranslateGuide();
+    var browser = detectBrowser();
+    var descKey = 'translate_guide_' + browser;
+    if (!I18N.en[descKey]) descKey = 'translate_guide_other';
+
+    var guide = document.createElement('div');
+    guide.id = 'dv-translate-guide';
+    guide.className = 'dv-translate-guide notranslate';
+    guide.setAttribute('translate', 'no');
+    guide.innerHTML =
+      '<div class="dv-translate-guide__arrow"></div>' +
+      '<div class="dv-translate-guide__title">' + t('translate_guide_title') + '</div>' +
+      '<div class="dv-translate-guide__desc">' + t(descKey) + '</div>' +
+      '<div class="dv-translate-guide__actions">' +
+        '<button class="dv-translate-guide__btn dv-translate-guide__btn--primary" data-action="gotit">' + t('translate_guide_gotit') + '</button>' +
+        '<button class="dv-translate-guide__btn dv-translate-guide__btn--ghost" data-action="dontshow">' + t('translate_guide_dontshow') + '</button>' +
+      '</div>';
+    document.body.appendChild(guide);
+
+    requestAnimationFrame(function() {
+      guide.classList.add('dv-translate-guide--show');
+    });
+
+    guide.addEventListener('click', function(e) {
+      var btn = e.target.closest('[data-action]');
+      if (!btn) return;
+      var action = btn.getAttribute('data-action');
+      if (action === 'dontshow') {
+        try { localStorage.setItem(STORAGE_GUIDE_KEY, '1'); } catch(ex) {}
+      }
+      hideTranslateGuide();
+    });
+  }
+
+  function hideTranslateGuide() {
+    var guide = document.getElementById('dv-translate-guide');
+    if (guide) {
+      guide.classList.remove('dv-translate-guide--show');
+      setTimeout(function() { if (guide.parentNode) guide.parentNode.removeChild(guide); }, 300);
+    }
+  }
+
+  // ── Banner for non-Chinese browser users ──
+  function showTranslateSuggestionBanner() {
+    if (isChineseBrowser()) return;
+    try {
+      if (localStorage.getItem(STORAGE_BANNER_KEY) === '1') return;
+    } catch(e) {}
+    if (document.getElementById('dv-translate-suggest')) return;
+
+    var browser = detectBrowser();
+    var descKey = 'translate_banner_desc_' + browser;
+    if (!I18N.en[descKey]) descKey = 'translate_banner_desc_chrome';
+
+    var banner = document.createElement('div');
+    banner.id = 'dv-translate-suggest';
+    banner.className = 'dv-translate-suggest notranslate';
+    banner.setAttribute('translate', 'no');
+    banner.innerHTML =
+      '<div class="dv-translate-suggest__icon">🌐</div>' +
+      '<div class="dv-translate-suggest__body">' +
+        '<div class="dv-translate-suggest__title">' + t('translate_banner_title') + '</div>' +
+        '<div class="dv-translate-suggest__desc">' + t(descKey) + '</div>' +
+      '</div>' +
+      '<button class="dv-translate-suggest__btn" data-action="dismiss">' + t('translate_banner_cta') + '</button>';
+    document.body.appendChild(banner);
+
+    setTimeout(function() {
+      requestAnimationFrame(function() { banner.classList.add('dv-translate-suggest--show'); });
+    }, 1500);
+
+    banner.addEventListener('click', function(e) {
+      var btn = e.target.closest('[data-action]');
+      if (!btn) return;
+      try { localStorage.setItem(STORAGE_BANNER_KEY, '1'); } catch(ex) {}
+      banner.classList.remove('dv-translate-suggest--show');
+      setTimeout(function() { if (banner.parentNode) banner.parentNode.removeChild(banner); }, 400);
+    });
+
+    // Auto-dismiss after 12 seconds
+    setTimeout(function() {
+      if (banner.parentNode) {
+        banner.classList.remove('dv-translate-suggest--show');
+        setTimeout(function() { if (banner.parentNode) banner.parentNode.removeChild(banner); }, 400);
+      }
+    }, 12000);
+  }
+
+  window.DV_I18N = { t: t, toggleLang: toggleLang, currentLang: function() { return currentLang; } };
 
 
   // ══════════════════════════════════════════
@@ -1065,16 +850,16 @@
     createLangSwitch();
     applyUITranslations();
 
-    // If user previously selected English, auto-translate after a short delay
-    if (currentLang === 'en') {
-      setTimeout(autoTranslateToEnglish, 400);
-    }
-
     checkForNewContent();
     initArticleInteractions();
     initListingPage();
     initIssueFilter();
     initCaoPagination();
+
+    // Show translation suggestion for non-Chinese browsers
+    if (!isChineseBrowser()) {
+      setTimeout(showTranslateSuggestionBanner, 1000);
+    }
   }
 
   if (document.readyState === 'loading') {
