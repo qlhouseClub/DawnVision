@@ -478,7 +478,7 @@ def get_all_issues_structured(current_num=None, current_date=None):
                         "month": m,
                         "day": d,
                         "half": half,
-                        "url": f"issues/issue-{n}.html",
+                        "url": f"issues/issue-{n.zfill(3)}.html",
                         "is_latest": False,
                     })
             except:
@@ -523,7 +523,7 @@ def get_all_issues_structured(current_num=None, current_date=None):
         # 确保归档页中不是最新的都指向issues/
         for i in issues:
             if i["num"] != latest["num"]:
-                i["url"] = f"issues/issue-{int(i['num'])}.html"
+                i["url"] = f"issues/issue-{i['num']}.html"
                 i["is_latest"] = False
 
     # 按期数排序（旧→新）
