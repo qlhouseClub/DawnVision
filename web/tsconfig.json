@@ -10,7 +10,8 @@
       "@layouts/*": ["src/layouts/*"],
       "@lib/*": ["src/lib/*"],
       "@styles/*": ["src/styles/*"],
-      "@content/*": ["src/content/*"]
+      "@content/*": ["src/content/*"],
+      "@scripts/*": ["src/scripts/*"]
     }
   },
   "include": ["src/**/*", "astro.config.mjs"],

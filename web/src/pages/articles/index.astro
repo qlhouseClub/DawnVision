@@ -1,0 +1,109 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import ArticleCard from '@components/ArticleCard.astro';
+import IssueFilter from '@components/IssueFilter.astro';
+import { getAllIssues, getIssueByNumber } from '@lib/issues';
+import '@styles/pages/articles.css';
+
+// Get issue filter from query params
+const url = new URL(Astro.request.url);
+const filterIssue = url.searchParams.get('issue');
+
+const allIssues = await getAllIssues();
+let displayIssues = allIssues;
+let pageTitle = 'Articles';
+let pageDescription = 'Dawn Vision 全部文章列表 — AI深度观察，每个工作日更新。';
+
+if (filterIssue) {
+  const filtered = await getIssueByNumber(filterIssue);
+  if (filtered) {
+    displayIssues = [filtered];
+    pageTitle = `No.${filterIssue} — ${filtered.data.issue.date_display}`;
+    pageDescription = `Dawn Vision 第${filterIssue}期，${filtered.data.issue.date_display}。`;
+  }
+}
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Articles — Dawn Vision",
+  "description": pageDescription,
+  "url": "https://www.dawnvision.net/articles",
+  "isPartOf": { "@type": "WebSite", "name": "Dawn Vision", "url": "https://www.dawnvision.net/" }
+});
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  navVariant="inner"
+  activeNav="articles"
+  footerVariant="site"
+  structuredData={jsonLd}
+>
+  <Fragment slot="main">
+    <div class="articles-page">
+      <div class="container--wide">
+        <header class="articles-page__header">
+          <div class="articles-page__eyebrow">Archive · 全部文章</div>
+          <h1 class="articles-page__title">Articles</h1>
+          <p class="articles-page__subtitle">每个工作日，从海量AI资讯中去噪、筛选、深度加工，输出可以直接读完的完整文章。</p>
+        </header>
+
+        <IssueFilter />
+
+        {displayIssues.map((issue) => (
+          <section class="issue-section" id={`issue-${issue.data.issue.number}`}>
+            <div class="issue-section__header">
+              <span class="issue-section__number">No.{issue.data.issue.number}</span>
+              <span class="issue-section__date">{issue.data.issue.date_display}</span>
+            </div>
+
+            <ul class="issue-section__list">
+              {/* Cover article */}
+              <li>
+                <ArticleCard
+                  variant="cover"
+                  article={issue.data.cover}
+                  issueNum={issue.data.issue.number}
+                  issueDate={issue.data.issue.date_display}
+                />
+              </li>
+
+              {/* Brief articles */}
+              {issue.data.briefs.map((brief) => (
+                <li>
+                  <ArticleCard
+                    variant="brief"
+                    article={brief}
+                    issueNum={issue.data.issue.number}
+                    issueDate={issue.data.issue.date_display}
+                  />
+                </li>
+              ))}
+
+              {/* Cao article (if present) */}
+              {issue.data.cao && (
+                <li>
+                  <ArticleCard
+                    variant="cao"
+                    article={issue.data.cao}
+                    issueNum={issue.data.issue.number}
+                    issueDate={issue.data.issue.date_display}
+                    href={`/articles/${issue.data.cao.slug}`}
+                  />
+                </li>
+              )}
+            </ul>
+          </section>
+        ))}
+
+        {displayIssues.length === 0 && (
+          <p style="padding: 80px 0; text-align: center; color: var(--color-text-muted); font-style: italic;">
+            未找到该期内容
+          </p>
+        )}
+      </div>
+    </div>
+  </Fragment>
+</BaseLayout>

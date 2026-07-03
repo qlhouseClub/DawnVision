@@ -1,0 +1,305 @@
+{
+  "issue": {
+    "number": "005",
+    "date": "2026-06-30",
+    "date_display": "2026.06.30"
+  },
+  "cover": {
+    "slug": "jia-yangqing-leaves-nvidia-ai-infra-dilemma",
+    "title": "贾扬清出走英伟达：7亿美元收购一年即决裂，AI Infra创业的开源理想撞上商业铜墙",
+    "title_short": "贾扬清出走英伟达",
+    "title_break": "贾扬清<br>出走英伟达",
+    "deck": "7亿美元收购仅1年2个月，Caffe/TensorFlow核心创作者贾扬清被曝离开英伟达。承诺开源的200亿参数模型未见踪影，核心产品DGX Lepton未达预期，黄仁勋不满运营效果。这不是一个人的去留——这是整代AI Infra创业者的集体困境。",
+    "keywords": "Dawn Vision, 贾扬清, 英伟达, LeptonAI, AI Infra, 开源模型, 7亿美元收购, DGX Lepton, 创业退出",
+    "og_description": "贾扬清离开英伟达，7亿美元收购一年决裂背后，AI Infra创业的梦醒时分。",
+    "twitter_description": "贾扬清出走英伟达：当开源理想撞上商业铜墙，AI Infra创业者的集体困境。",
+    "read_time": "约 10 分钟阅读",
+    "word_count": 2500,
+    "sources": [
+      {
+        "text": "SemiAnalysis - Jia Yangqing leaves NVIDIA after Lepton AI acquisition",
+        "url": "https://semianalysis.com/"
+      },
+      {
+        "text": "InfoQ - 收购仅一年即决裂！贾扬清出走英伟达",
+        "url": "https://www.infoq.cn/article/VceiPBYzkY9lSAOubvtP"
+      },
+      {
+        "text": "头条 - 贾扬清离开英伟达，二十年开源信仰撞上商业壁垒",
+        "url": "http://m.toutiao.com/group/7656940810893640243/"
+      },
+      {
+        "text": "36氪 - OpenAI Jalapeño芯片是Big Tech最辣的去英伟达化动作",
+        "url": "https://techcrunch.com/video/why-everyone-from-openai-to-spacex-is-building-their-own-chips-and-turning-up-the-heat-on-nvidia/"
+      },
+      {
+        "text": "TechCrunch - Apple Vision Pro exec leaving for OpenAI hardware team",
+        "url": "https://techcrunch.com/2026/06/27/apple-vision-pro-exec-is-reportedly-leaving-for-openai/"
+      },
+      {
+        "text": "InfoQ - AWS推出开源框架Blocks面向AI智能体后端开发",
+        "url": "https://www.infoq.cn/article/ZdA3CGtWNFGAoalSeiu8"
+      }
+    ],
+    "body_html": "      <p>7亿美元。</p>\n      <p>这是2025年4月黄仁勋为收购LeptonAI开出的价码。一个只有<strong>20个人</strong>的创业公司，人均收购价3500万美元——在当时被传为AI Infra领域的天价收购神话。LeptonAI创始人贾扬清，这位Caffe框架的缔造者、TensorFlow的核心作者、前阿里云VP，带着团队和光环进入英伟达，出任系统软件副总裁。</p>\n      <p>1年零2个月后，神话碎了。</p>\n      <p>6月29日，半导体研究机构SemiAnalysis的一条推文在AI圈炸开：贾扬清已经从英伟达离职。消息传出当天，LeptonAI的开源社区页面访问量暴涨400%，开发者们涌入GitHub查看当初承诺开源的模型权重——什么都没有。那个被英伟达官方宣传为\"将改变AI推理格局\"的200亿参数开源模型，始终没有露面。核心产品DGX Lepton在英伟达的产品矩阵中几乎隐身，没有成为预期中的AI Infra标杆。</p>\n      <p>据多方信源透露，黄仁勋对LeptonAI的运营效果不满已久。收购时承诺的\"保持独立运营+开源路线\"在英伟达庞大的商业机器中逐渐被消解，贾扬清的开源信仰与英伟达闭源生态的商业逻辑之间的矛盾，最终到了不可调和的地步。</p>\n      <p>这不是一个人的离职故事。这是过去两年AI Infra创业浪潮的一个缩影——当所有创业者都在做\"AI基础设施\"，真正赚到钱的只有卖铲子的人。</p>\n\n      <h2>被寄予厚望的7亿美元：为什么是LeptonAI</h2>\n      <p>要理解这次收购为什么在当时引发轰动，需要先理解贾扬清在AI圈的地位。</p>\n      <p>贾扬清是框架时代的开创者之一。2013年在UC Berkeley读博期间，他写出了Caffe——那个开启了深度学习框架时代的开源项目。毕业后加入Google Brain，成为TensorFlow的核心作者之一。之后转战Facebook，领导Caffe2和PyTorch 1.0的开发。2019年回国加入阿里巴巴，出任阿里云智能事业群副总裁，负责AI平台和大数据计算。</p>\n      <p>2023年，他离开阿里创立LeptonAI，定位是\"AI原生基础设施\"——用云原生的方式做大模型推理和部署。在当时的AI Infra赛道上，LeptonAI不是融资最多的，也不是声量最大的，但它的团队配置堪称豪华：20人左右的核心团队几乎全是来自Google、Meta、阿里的资深基础设施工程师。</p>\n      <p>英伟达为什么愿意花7亿美元买一个20人的公司？表面原因是LeptonAI在推理优化和模型服务上的技术积累，但更深层的原因是<strong>英伟达需要在软件层加固自己的护城河</strong>。</p>\n      <p>2025年初，英伟达正面临一个微妙的时刻：硬件层面，AMD MI400系列开始在训练场景抢单，Google TPU v6在自家数据中心里跑满负荷，亚马逊Trainium2部署规模超10万芯片；软件层面，PyTorch虽然仍是主流，但各种推理引擎（vLLM、TensorRT-LLM、SGLang）百花齐放，英伟达对软件栈的控制力正在被稀释。LeptonAI的模型服务能力如果整合进DGX产品线，可以让英伟达的\"硬件+软件\"捆绑更紧。</p>\n      <p>而且贾扬清身上有英伟达最看重的一个标签：<strong>开源社区号召力</strong>。英伟达需要一个在开源社区有足够声望的人来弥合其商业闭源策略与开源社区之间的裂痕。收购时，英伟达官方明确表态：LeptonAI的开源项目将继续维护，承诺开源的200亿参数模型将按计划发布。</p>\n      <p>这个承诺，成了后来最大的争议点。</p>\n\n      <div class=\"pull-quote\">\n        \"英伟达收购LeptonAI的时候，大家以为这是开源的胜利。现在才发现，这是开源被收编的开始。\"\n        <span class=\"pull-quote__attr\">—— 一位不愿具名的AI Infra创业者</span>\n      </div>\n\n      <h2>一年之痒：开源承诺如何被商业机器吞噬</h2>\n      <p>被收购后的LeptonAI，经历了典型的大公司整合综合征。</p>\n      <p>首先是战略方向的偏移。贾扬清原本的计划是：以LeptonAI的推理平台为基础，构建一个跨硬件的中立模型服务层——类似AI时代的Nginx，不绑定任何芯片厂商。但进入英伟达后，这个定位与公司\"卖更多DGX\"的核心目标产生了根本冲突。你不能一边卖DGX，一边做一个让客户在AMD/Google芯片上也能跑同样好的中立平台。</p>\n      <p>DGX Lepton的产品化走得异常艰难。据前员工透露，团队花了大量时间适配英伟达最新的硬件和CUDA版本，但对非英伟达硬件的支持被反复延后。那个承诺开源的200亿参数模型，在内部优先级不断被下调——因为一个真正开源、能在多种芯片上高效运行的模型，对英伟达的硬件绑定策略未必是好事。</p>\n      <p>其次是人才和文化的冲突。LeptonAI的团队是典型的开源文化：快速迭代、公开讨论、社区驱动。而英伟达是一家以销售为导向的硬件公司，决策链条长，保密文化极强，对外发布任何开源项目都需要层层法务审批。一位加入英伟达的前LeptonAI工程师私下吐槽：\"在Lepton时我们每周发布，在这里一个release note要走六周审批。\"</p>\n      <p>但最核心的矛盾，还是<strong>开源与闭源的根本分歧</strong>。</p>\n      <p>英伟达的商业模型建立在CUDA生态的锁定效应上——开发者用CUDA写代码，就离不开英伟达的GPU。它的软件栈越开放，硬件锁定效应反而越强（因为更多人用），但真正底层的性能优化和硬件细节，英伟达是绝对不会开源的。贾扬清的开源理想——让AI基础设施更普惠、更中立——在这个商业逻辑里找不到位置。</p>\n      <p>这不是英伟达的错，也不是贾扬清的错。这是两种根本不同的商业哲学之间的冲突：一个相信开放生态能把蛋糕做大，一个相信垂直整合能把利润做高。在AI算力供不应求的2025-2026年，后者显然更有话语权。</p>\n\n      <h2>不只是贾扬清：AI Infra创业的集体困境</h2>\n      <p>把视角从贾扬清个人拉到整个AI Infra赛道，你会发现他的困境不是个例。</p>\n      <p>过去两年，AI Infra是融资最热的赛道之一。推理优化、模型部署、向量数据库、Agent编排、特征平台、LLM网关……每个细分领域都挤进来几十家创业公司。但走到2026年中，一个残酷的现实浮现：<strong>绝大多数AI Infra公司都没有找到可持续的商业模式。</strong></p>\n      <p>原因很简单：AI Infra的付费方主要是大模型公司和云厂商，而这两类客户都在自己做基础设施。</p>\n      <p>OpenAI在自研芯片Jalapeño——9个月完成流片，与Broadcom合作，计划年底规模化部署，直接挑战英伟达的推理市场。Google、Microsoft、Amazon、Meta甚至SpaceX都在走自研芯片的路线。<strong>从OpenAI到SpaceX，大科技公司集体\"去英伟达化\"</strong>，这已经不是秘密。大模型公司方面，Anthropic构建了自己的推理引擎和部署栈，DeepSeek从成立第一天起就自己做推理优化，字节、阿里、百度全都有自己的Infra团队。</p>\n      <p>当你的潜在客户都在自己做你做的东西时，你卖给谁？</p>\n      <p>向量数据库是一个典型例子。2023-2024年，几十家向量数据库公司拿了融资，但到2026年，PostgreSQL的pgvector扩展已经能满足80%的使用场景，各大云厂商（AWS、GCP、阿里云）都把向量搜索作为数据库的标配功能。独立向量数据库公司的生存空间被急剧压缩。</p>\n      <p>Agent编排框架也是如此。LangChain曾经是这个赛道的明星，但2026年开发者越来越倾向于直接用模型原生的function calling和各大平台自带的Agent工具。AWS推出开源框架Blocks，GitLab 19.0把Agentic AI嵌入合并请求和供应链安全，苹果推出Core AI框架为自研芯片优化端侧AI——<strong>当平台方把Agent能力做进基础设施，中间层的创业公司就被架空了。</strong></p>\n\n      <h2>被收购之外，AI Infra创业者还有出路吗</h2>\n      <p>贾扬清的结局容易给人一种错觉：AI Infra创业的终点就是被大公司收购然后被同化。但事实并非如此。</p>\n      <p>2026年跑出来的AI Infra公司，走的是完全不同的路。</p>\n      <p>一类是\"深度垂直\"。它们不做通用平台，而是扎进某个具体行业的AI基础设施。比如医疗AI的推理合规平台、金融AI的实时决策引擎、制造业AI的边缘部署方案。这些领域的门槛不在技术有多先进，而在对行业know-how的理解和合规认证的积累——这些是大公司不愿意做也做不好的。</p>\n      <p>另一类是\"开源社区+商业服务\"。它们不是靠卖软件许可证赚钱，而是靠开源项目建立社区和标准，然后通过企业版、托管服务、技术支持变现。Hugging Face是这个模式的代表，但它的挑战在于如何在巨头环伺下保持独立性。更小众的例子包括一些做AI可观测性和AI安全的创业公司，它们通过开源工具建立开发者心智，再向企业销售合规和治理方案。</p>\n      <p>第三类是\"反方向下注\"。当所有人都在做\"让大模型跑得更快\"的基础设施时，一些创业者开始做\"让大模型更省\"的工具——模型压缩、边缘推理、国产芯片适配、混合精度调度。在算力成本持续上涨的背景下（Kimi B端负责人黄震昕坦言\"所有模型厂商都在涨价，核心原因是算力成本上涨\"），<strong>帮客户省钱的工具比帮客户花钱的工具更有生命力</strong>。</p>\n\n      <div class=\"pull-quote\">\n        \"AI Infra的黄金时代不是做平台的时代，而是做螺丝的时代。你不需要成为下一个英伟达，你只需要成为某一颗不可替代的螺丝。\"\n        <span class=\"pull-quote__attr\">—— 一位连续成功退出的AI创业者在内部交流中的判断</span>\n      </div>\n\n      <h2>框架一代的退场与Agent一代的登场</h2>\n      <p>贾扬清的离开，也标志着一个时代的结束。</p>\n      <p>他是\"框架一代\"的代表人物——Caffe、TensorFlow、PyTorch这一代深度学习框架，奠定了今天AI发展的基础。那一代工程师相信开源的力量，相信好的技术标准能统一生态，相信\"让更多人用上好工具\"是技术人的使命。</p>\n      <p>但AI竞争已经进入了一个新阶段。模型能力越来越强，框架的抽象层越来越高，大多数开发者不再需要理解底层的CUDA kernel或分布式训练细节。Agent时代的开发者关心的不是\"怎么让模型跑快5%\"，而是\"怎么让Agent可靠地完成任务\"。<strong>基础设施正在从\"面向模型开发者\"转向\"面向Agent构建者\"</strong>。</p>\n      <p>这种转变从近期的产品发布中可以看得很清楚：AWS的Blocks是面向Agent的后端框架，Herdr是终端里的Agent多路复用器，BrowserBC让人类一次点击就能教会所有Agent操作网页，Lore让coding agent记住团队的决策历史。这些工具的目标用户不是训练模型的工程师，而是构建Agent应用的开发者。</p>\n      <p>框架一代完成了他们的历史使命——把深度学习从实验室带到了产业界。但AI基础设施的故事不会停在这里。贾扬清的下一站还没有公布，但可以确定的是，像他这样的基础设施天才不会离开这个领域太久。</p>\n      <p>7亿美元的收购不算失败，但它确实没有达到任何一方的预期。英伟达没有得到期望中的开源社区影响力和软件生态加固，贾扬清没有实现他的开源普惠理想，LeptonAI的产品没有在英伟达体系中大放异彩。这是一个三输的结局，但也是一个有价值的教训：<strong>在AI这个赢家通吃的市场里，独立的基础设施公司如果不能建立不可替代的纵深，被收购不是终点，而是消解的开始。</strong></p>\n      <p>对于正在AI Infra赛道上的创业者来说，贾扬清的故事是一面镜子。它照出了一个残酷的真相：在这个算力为王的时代，光有技术理想主义是不够的。你要么找到一个大公司不愿意做、也做不好的细分领域扎下去，要么建立足够强大的社区和生态让自己无法被轻易收购和同化，要么——你就得接受被整合然后被同化的命运。</p>\n      <p>这不是悲观，这是现实。</p>",
+    "pull_quote": {
+      "text": "英伟达收购LeptonAI的时候，大家以为这是开源的胜利。现在才发现，这是开源被收编的开始。",
+      "attr": "—— 一位不愿具名的AI Infra创业者"
+    },
+    "cognitive_notes": "贾扬清离职英伟达 · LeptonAI 7亿美元收购 · AI Infra创业困境 · 开源vs闭源 · 大公司收购整合 · 自研芯片趋势 · Agent基础设施兴起 · 框架时代结束",
+    "source_summary": "本文基于 Dawn Vision 认知引擎处理的 10 个源信号自动生成，经编辑部人工审核。素材来源：SemiAnalysis爆料、InfoQ/头条报道、TechCrunch芯片自研分析、AWS/GitLab产品发布信息。"
+  },
+  "briefs": [
+    {
+      "slug": "state-council-ai-policy-deployment",
+      "category": "AI 监管 · 政策",
+      "category_en": "AI Regulation · Policy",
+      "title": "国常会定调AI下半场：智算集群+\"人工智能+\"行动，2.1万亿算力网格落地提速",
+      "title_break": "国常会<br>AI定调",
+      "deck": "6月29日国常会专门听取AI发展汇报，要求加力推进创新突破、超大规模智算集群建设、\"人工智能+\"行动。最高层级政策信号释放，中国AI从\"跟跑\"转入有组织的\"并跑\"阶段。",
+      "keywords": "Dawn Vision, 国常会, AI政策, 智算集群, 人工智能+, 算力网格, 2.1万亿, 国产芯片",
+      "og_description": "国常会部署AI高质量发展，智算集群和人工智能+行动成为政策重心。",
+      "read_time": "约 5 分钟阅读",
+      "word_count": 800,
+      "sources": [
+        {
+          "text": "新华社 - 李强主持召开国务院常务会议听取人工智能发展情况汇报",
+          "url": "https://news.smm.cn/live/detail/103977827"
+        },
+        {
+          "text": "东方财富 - 国常会刚定调！AI行情下半场真正的机会在哪",
+          "url": "https://caifuhao.eastmoney.com/news/20260630110022588850330"
+        },
+        {
+          "text": "中财网 - 国常会最新部署：加快超大规模智算集群建设",
+          "url": "http://sj.cfi.cn/newspage.aspx?client=phone&id=20260630000066"
+        },
+        {
+          "text": "Tom's Hardware - China drafts $295B national AI data center grid plan",
+          "url": "https://www.tomshardware.com/tech-industry/china-drafts-295-billion-plan-to-build-a-national-ai-data-center-grid-running-on-80-percent-domestic-chips"
+        }
+      ],
+      "body_html": "      <p>\"加力推进人工智能创新突破，加快关键技术攻关和超大规模智算集群建设，深入实施'人工智能+'行动，守牢安全底线。\"</p>\n      <p>6月29日，国务院总理李强主持召开国常会，专题听取人工智能发展情况汇报。这段话，是当天通稿中关于AI的核心表述。<strong>52个字</strong>，但每一个词都有分量。</p>\n      <p>这不是国务院第一次提AI，但这次的时机和语境都不同寻常。Anthropic的Mythos模型发布72小时即遭美国出口管制，H20芯片\"无限期\"禁售余波未平，DeepSeek刚完成510亿元创纪录融资，全球算力缺口约3倍——在这个节点上，最高层级的专题汇报释放的信号，远比普通文件有力。</p>\n\n      <h2>智算集群：从\"鼓励建设\"到\"加快建设\"</h2>\n      <p>最值得关注的表述变化是\"超大规模智算集群\"。</p>\n      <p>此前政策文件中关于算力建设的表述多为\"统筹布局\"\"鼓励建设\"，这次直接用了<strong>\"加快建设\"</strong>。用词升级背后，是算力供需矛盾已经到了必须国家层面出手的程度。</p>\n      <p>根据此前Tom's Hardware援引知情人士报道，中国正在起草一份约<strong>2950亿美元（约2.1万亿人民币）</strong>的国家级AI数据中心网格建设计划，目标使用<strong>80%国产芯片</strong>。6月29日首届全球太空算力大会在北京中关村开幕，揭牌北京太空算力创新中心，配套三年50亿产业资金。国家数据局此前已发布方案，提出探索词元（Token）交易等新型交易模式——这是全球首次有国家层面提出以Token为基础构建数据价值体系。</p>\n      <p>海光芯正6月29日在港交所上市提供了一个观察窗口：开盘涨<strong>74.56%</strong>，报199港元，市值约102亿港元。国产算力芯片公司在资本市场受到的热捧，与政策方向形成了明确共振。</p>\n\n      <h2>\"人工智能+\"：从技术突破到产业落地</h2>\n      <p>另一个关键词是\"深入实施'人工智能+'行动\"。</p>\n      <p>\"人工智能+\"不是新概念，但这次加了\"深入实施\"四个字，意味着政策重心从\"出文件\"转向\"看效果\"。会议特别提到要\"发挥我国产业体系完备、应用场景丰富等优势，促进智能产品和服务加快规模化应用\"。</p>\n      <p>翻译成人话：不要再在实验室里刷榜了，到真实产业场景里去解决问题。</p>\n      <p>这个导向与近期的产业数据吻合。高盛6月29日发布报告称，AI基础设施类股票预计将在Q2贡献标普500指数约<strong>60%</strong>的每股收益增长，其中美光科技和英伟达合计占40%以上。但中国的AI应用落地有自己的路径优势：制造业场景丰富、消费互联网用户基数大、政府数字化基础好。彭博经济研究预计AI未来十年每年可为德国经济贡献0.2-0.7个百分点，对应累计产出最高3680亿美元——中国的应用场景体量是德国的数倍。</p>\n\n      <h2>安全底线与发展主动权</h2>\n      <p>通稿中还有一句容易被忽略但非常关键的话：\"完善支持政策和治理体系，牢牢掌握发展主动权。\"</p>\n      <p>\"发展主动权\"五个字，在当前中美AI博弈背景下意味深长。它既指向算力自主（国产芯片替代），也指向模型安全（内容治理和对齐），还指向数据主权（Token交易和数据要素化）。这不是保守的安全观，而是在开放和自主之间寻找平衡——用好全球资源，但关键环节不能被卡脖子。</p>\n      <p>6月30日A股的反应已经说明了市场对政策的解读：沪指逼近4000点，创业板指持续创阶段新高，AI板块领涨。但需要冷静的是，政策暖风不等于所有AI公司都能雨露均沾。国常会的信号很清晰：奖励真正做技术攻关和产业落地的，淘汰讲故事炒概念的。</p>\n      <p>下半场开始了。</p>",
+      "pull_quote": null,
+      "cognitive_notes": "国常会AI部署 · 超大规模智算集群 · 人工智能+行动 · 2.1万亿算力网格 · 80%国产芯片 · 发展主动权 · Token交易",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 7 个源信号生成，经编辑部人工审核。素材来源：新华社国常会通稿、东方财富/中财网政策解读、Tom's Hardware中国算力网格计划报道。"
+    },
+    {
+      "slug": "agent-tooling-chain-explosion",
+      "category": "AI Agent · 工程实践",
+      "category_en": "AI Agent · Engineering",
+      "title": "Agent工具链集体爆发：AWS Blocks开源+Herdr登HN热榜+BrowserBC克隆人类点击",
+      "title_break": "Agent工具链<br>集体爆发",
+      "deck": "一周内AWS开源Agent后端框架Blocks、Herdr终端Agent多路复用器登HN热榜、BrowserBC实现人类点击一次克隆所有Agent学会。Agent开发正在从\"写Prompt\"进化到\"工程化工具链\"阶段。",
+      "keywords": "Dawn Vision, AI Agent, AWS Blocks, Herdr, BrowserBC, Agent工具链, MCP, Agent工程化",
+      "og_description": "Agent开发工具链集体爆发，从概念验证进入工程化阶段。",
+      "read_time": "约 5 分钟阅读",
+      "word_count": 800,
+      "sources": [
+        {
+          "text": "InfoQ - AWS推出开源框架Blocks面向AI智能体后端开发",
+          "url": "https://www.infoq.cn/article/ZdA3CGtWNFGAoalSeiu8"
+        },
+        {
+          "text": "Hacker News - Herdr: Agent multiplexer that lives in your terminal",
+          "url": "https://github.com/ogulcancelik/herdr"
+        },
+        {
+          "text": "量子位 - BrowserBC：克隆人类点击让一次网页操作转化为所有Agent的能力",
+          "url": "https://www.qbitai.com/2026/06/439393.html"
+        },
+        {
+          "text": "Hacker News - Lore: Give your coding agent the decisions your team made",
+          "url": "https://github.com/itsthelore/rac-core"
+        },
+        {
+          "text": "InfoQ - GitLab 19.0将Agentic AI嵌入凭证、合并请求与供应链安全",
+          "url": "https://www.infoq.cn/article/ICdHZotGllYog0ocIrxA"
+        }
+      ],
+      "body_html": "      <p>55个点赞，19条评论，登Hacker News首页前20。</p>\n      <p>这是Herdr上线第一天的数据。一个跑在终端里的Agent多路复用器——简单说，你可以在命令行里同时调用多个AI Agent（Claude Code、Cursor Agent、Codex等），让它们并行处理同一个任务的不同部分，然后对比结果择优采纳。<strong>像指挥一个AI团队一样指挥你的终端</strong>。</p>\n      <p>Herdr不是这周唯一冒出来的Agent工具。</p>\n      <p>AWS发布了开源框架Blocks，定位是\"面向AI智能体的后端开发工具\"——帮开发者快速构建Agent的状态管理、工具调用、记忆检索等后端基础设施。量子位报道了BrowserBC：人类在网页上操作一次，系统就能克隆出对应的Agent行为模式，一次录制所有Agent学会。GitLab 19.0直接把Agentic AI嵌入了凭证管理、合并请求和供应链安全——AI不再是代码补全工具，而是变成了开发流程的原生参与者。Lore项目在HN上获得29个点赞，它的功能是把团队的技术决策喂给coding agent，让AI理解\"为什么这么做\"而不仅仅是\"代码是什么\"。</p>\n      <p>这些产品集中在一周内涌现，不是巧合。</p>\n\n      <h2>从Prompt工程到工具链工程</h2>\n      <p>2024-2025年，Agent开发的主流范式是\"Prompt工程\"——写一段好的system prompt，加几轮few-shot示例，再配上function calling，一个Agent就\"能用\"了。但\"能用\"和\"好用\"之间隔着一条巨大的鸿沟：Agent经常在多步骤任务中跑偏，不会处理异常状态，无法复用之前的经验，团队协作场景下更是一团糟。</p>\n      <p>2026年中，Agent开发正在进入一个新的阶段：<strong>工程化</strong>。开发者们开始意识到，Agent不是一个更聪明的Chatbot，而是一个需要完整工具链支撑的新型软件形态。它需要版本控制（Lore）、需要多路调度（Herdr）、需要行为克隆（BrowserBC）、需要后端框架（Blocks）、需要深度集成进开发流程（GitLab 19.0）。</p>\n      <p>这个转变和移动互联网早期的发展轨迹很像。2008年App Store刚上线时，一个人花一周就能写出一个iOS App；但到2015年，一个正经的移动应用需要完整的CI/CD、A/B测试、埋点分析、崩溃监控、推送系统——基础设施越来越厚，门槛越来越高，但产品质量也越来越可靠。</p>\n\n      <h2>Agent的\"操作系统\"正在形成</h2>\n      <p>如果把这些工具拼在一起看，你会发现一个Agent开发的\"操作系统\"轮廓正在浮现：</p>\n      <p><strong>底层是后端框架</strong>（AWS Blocks），处理状态、记忆、工具调用等基础能力；<strong>中间是编排和调度层</strong>（Herdr），负责多个Agent的分工协作和结果比对；<strong>上层是能力获取层</strong>（BrowserBC），让Agent通过观察人类快速习得新技能；<strong>集成层</strong>（GitLab 19.0）把Agent嵌入已有工作流；<strong>知识层</strong>（Lore）让Agent理解组织上下文。</p>\n      <p>MCP（Model Context Protocol）在这个体系中扮演了\"USB-C接口\"的角色——Anthropic推出的MCP协议月下载量已达<strong>9700万次</strong>，成为Agent工具互联的事实标准。当Agent有了标准的接口、完整的工具链、可靠的工程实践，\"生产级Agent\"才从一个口号变成现实。</p>\n\n      <div class=\"pull-quote\">\n        \"2024年是Agent的'Hello World'年，2025年是'Demo年'，2026年是'生产年'。区别在于：生产年的标志不是更多Demo，而是更多基础设施。\"\n        <span class=\"pull-quote__attr\">—— API7.ai创始人温铭在InfoQ访谈中的判断</span>\n      </div>\n\n      <h2>独立开发者的机会窗口</h2>\n      <p>值得注意的是，这批Agent工具链产品大多来自独立开发者和小团队，而非大公司。Herdr是个人项目，BrowserBC来自小团队，Lore也是开源社区项目。</p>\n      <p>这符合一个规律：基础设施的范式转移期，往往是小团队创新最活跃的窗口。大公司有存量包袱——AWS当然可以做Blocks，但它不会做一个帮你同时调度多个竞争对手模型的工具（Herdr）；GitLab可以把Agent嵌入合并请求，但它不会做一个跨平台的Agent行为克隆工具。</p>\n      <p>API7.ai创始人温铭最近总结了烧了几百亿Token用AI重写生产级网关的6条经验，其中一条是：<strong>\"Agent不是要替代工程师，而是要求工程师升级为Agent的管理者和教练。\"</strong>当工具链越来越完善，一个人指挥一个Agent团队完成复杂任务的时代正在到来。</p>\n      <p>但别忘了，工具只是工具。17倍错误放大的研究数据还在耳边——86%的团队用了Agent，40%在半年内失败。工具链降低了入门门槛，但能不能用好Agent，归根结底取决于使用工具的人是否理解问题本身。</p>\n      ",
+      "pull_quote": null,
+      "cognitive_notes": "Agent工具链 · AWS Blocks · Herdr · BrowserBC · Lore · Agent工程化 · MCP协议 · 从Prompt到工程",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：InfoQ AWS Blocks/GitLab 19.0报道、Hacker News Herdr/Lore项目页、量子位BrowserBC报道。"
+    },
+    {
+      "slug": "global-compute-arms-race",
+      "category": "算力基建 · 国产替代",
+      "category_en": "Compute · Infrastructure",
+      "title": "全球算力军备赛白热化：三星11万亿押注+海光芯正IPO涨74%+Jalapeño9个月流片",
+      "title_break": "算力军备赛<br>白热化",
+      "deck": "三星宣布2655万亿韩元（约11.68万亿人民币）投资半导体和AI算力；海光芯正港股上市开盘涨74%；OpenAI Jalapeño芯片9个月流片。算力正成为大国竞争和企业战略的核心战场。",
+      "keywords": "Dawn Vision, 算力基建, 三星投资, 海光芯正IPO, OpenAI Jalapeño, 自研芯片, 国产替代, 算力缺口",
+      "og_description": "全球算力军备竞赛白热化，三星11万亿、海光IPO、OpenAI自研芯片同步加速。",
+      "read_time": "约 5 分钟阅读",
+      "word_count": 800,
+      "sources": [
+        {
+          "text": "36氪 - 三星正式宣布2655万亿韩元投资计划涉及半导体AI算力",
+          "url": "https://36kr.com/newsflashes/3873950707733767"
+        },
+        {
+          "text": "36氪 - 海光芯正IPO背后卖铲生意为何越做越亏",
+          "url": "https://36kr.com/p/3873681978840071"
+        },
+        {
+          "text": "TechCrunch - OpenAI's Jalapeño chip is Big Tech's spiciest move away from Nvidia",
+          "url": "https://techcrunch.com/podcast/openais-jalapeno-chip-is-big-techs-spiciest-move-away-from-nvidia/"
+        },
+        {
+          "text": "SemiAnalysis - US Grid Constraints: Towards 40GW+ of Behind-the-Meter Datacenter",
+          "url": "https://newsletter.semianalysis.com/p/us-grid-constraints-towards-40gw"
+        },
+        {
+          "text": "TechCrunch - Why Wall Street thinks Micron is the next Nvidia",
+          "url": "https://techcrunch.com/2026/06/28/why-wall-street-thinks-us-memory-maker-micron-is-the-next-nvidia/"
+        }
+      ],
+      "body_html": "      <p>2655万亿韩元。</p>\n      <p>约合<strong>11.68万亿元人民币</strong>。这是三星6月29日正式宣布的未来十年投资总额，其中2030万亿韩元投向韩国龙仁和平泽的半导体产业集群，重点覆盖半导体制造、AI算力数据中心和物理AI领域。</p>\n      <p>同一天，北京海光芯正在港交所敲钟上市。开盘涨<strong>74.56%</strong>，报199港元，市值约102亿港元（约13亿美元），募资净额约14.15亿港元。一家AI芯片公司在港股如此受追捧，上一次还是2024年。</p>\n      <p>同样是6月底，OpenAI的自研推理芯片Jalapeño（与Broadcom合作）被确认已完成流片——从立项到流片仅用了<strong>9个月</strong>，计划2026年底规模化部署。Google、Apple、Meta、Microsoft、Amazon、SpaceX——TechCrunch在一篇报道中列出的自研芯片名单越来越长。</p>\n      <p>三条新闻同一天刷屏，不是巧合。2026年夏天，全球算力军备竞赛进入了白热化阶段。</p>\n\n      <h2>所有人都在造芯片：英伟达的\"朋友\"和\"敌人\"</h2>\n      <p>三星的投资计划是目前全球半导体领域最大规模的单笔承诺。11.68万亿人民币是什么概念？相当于中国2025年全年GDP的约0.9%，相当于英伟达2025财年营收的近4倍。这笔钱砸下去，目标只有一个：在AI芯片制造领域缩小与台积电的差距，同时在HBM（高带宽内存）等关键部件上巩固领先地位。</p>\n      <p>华尔街已经开始寻找\"下一个英伟达\"。TechCrunch报道，美光科技（Micron）正在被资金热捧——HBM是AI GPU的关键组件，美光是全球三大HBM供应商之一。高盛报告称美光和英伟达将合计贡献Q2标普500指数<strong>40%以上</strong>的EPS增长。从卖GPU的到卖内存的，AI算力产业链的每一个环节都在被资本重估。</p>\n      <p>但最让英伟达紧张的不是三星或美光，而是它的客户们集体\"造反\"。OpenAI的Jalapeño是一个明确的信号：当AI公司的算力开支达到每年数十亿美元级别时，自研芯片的ROI就开始变得非常有吸引力。Jalapeño定位是推理芯片——推理市场是英伟达目前利润率最高、增速最快的板块。如果OpenAI在自己的产品里大规模使用Jalapeño替代英伟达GPU，对英伟达的冲击将是直接的。</p>\n\n      <h2>国产算力：从\"能用\"到\"好用\"的关键一跃</h2>\n      <p>海光芯正的IPO是观察国产算力进展的一个有趣样本。</p>\n      <p>它的招股书揭示了一个矛盾的现实：一方面，AI芯片需求爆发，公司营收高速增长；另一方面，<strong>卖铲生意越做越亏</strong>——研发投入巨大、价格战压力、客户集中度高。国产算力芯片公司在\"技术追赶\"和\"商业可持续\"之间走钢丝。</p>\n      <p>但趋势是明确的。DeepSeek-V4-Pro已经在国产算力集群上完成了全参数后训练（深圳河套学院/深智城算网），这是业界首个第三方机构做到这一点。中国正在推进的2.1万亿国家级AI数据中心网格计划明确提出<strong>80%国产芯片</strong>的目标。当需求确定、政策确定、资金确定，国产芯片从\"能用\"到\"好用\"只是时间问题。</p>\n\n      <h2>电比芯片更稀缺：算力的终极瓶颈</h2>\n      <p>比芯片更根本的瓶颈是电。</p>\n      <p>SemiAnalysis的一篇深度报告测算，到2028年，美国表后数据中心（Behind-the-Meter Datacenter）的装机容量将达到<strong>40GW以上</strong>。这是什么概念？一个大型核电站的装机容量约1GW，40GW相当于40个核电站。电网的扩容速度远远跟不上数据中心的建设速度。</p>\n      <p>中国的情况同样紧张。多地已经出现数据中心用电指标紧张的情况，这也是\"东数西算\"和太空算力（卫星数据中心）被提上日程的原因之一。当算力成为AI时代的石油，电力就是算力时代的石油。</p>\n      <p>军备竞赛没有停下的迹象。但历史告诉我们，军备竞赛的终局往往不是某一方彻底胜出，而是新的均衡格局形成。在这个新格局里，英伟达不会倒下，但它\"一家独大\"的时代正在结束；国产芯片不会一夜超车，但它的市场份额会持续提升；电力和散热可能成为比芯片设计更难攻克的瓶颈。</p>\n      <p>谁能算清这笔账，谁就能在算力战争中活到最后。</p>\n      ",
+      "pull_quote": null,
+      "cognitive_notes": "算力军备赛 · 三星11万亿投资 · 海光芯正IPO · OpenAI Jalapeño · 自研芯片趋势 · 40GW数据中心用电 · 国产算力80%目标",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 9 个源信号生成，经编辑部人工审核。素材来源：36氪三星/海光报道、TechCrunch Jalapeño/Micron分析、SemiAnalysis电网约束报告。"
+    },
+    {
+      "slug": "apple-microsoft-ai-price-hike-consumers-pay",
+      "category": "AI商业化·行业观察",
+      "category_en": "AI Commercialization",
+      "title": "苹果微软同日涨价：AI军备竞赛的第一张账单，寄到了消费者手里",
+      "title_break": "苹果微软同日涨价：<br>AI军备竞赛的第一张账单，<br>寄到了消费者手里",
+      "deck": "6月25日苹果Mac/iPad全球涨价最高500美元，微软Xbox第三次涨价。同一个理由：AI数据中心抢光内存产能，成本扛不住了。AI通胀已经印在你的价格标签上。",
+      "keywords": [
+        "苹果涨价",
+        "AI通胀",
+        "内存短缺",
+        "微软Xbox",
+        "AI成本",
+        "消费电子"
+      ],
+      "og_description": "苹果微软同日宣布全球硬件涨价，AI数据中心抢光内存产能。MacBook Pro涨500美元，iPad Air涨25%，Xbox累计涨300美元。AI军备竞赛的第一张账单，寄到了消费者手里。",
+      "read_time": "约 5 分钟阅读",
+      "word_count": 830,
+      "sources": [
+        {
+          "text": "华尔街见闻 - 苹果微软同一天涨价，库克承认\"40年来前所未见\"",
+          "url": "http://m.toutiao.com/group/7655522517511127567/"
+        },
+        {
+          "text": "新浪科技 - 苹果大幅上调硬件价格，AI内存需求是主因",
+          "url": "https://news.sina.cn/ai/2026-06-30/detail-inifcvty4916334.d.html"
+        },
+        {
+          "text": "亿邦动力 - 苹果涨价先被\"砍一刀\"，一夜蒸发超万亿市值",
+          "url": "https://m.ebrun.com/684936.html"
+        },
+        {
+          "text": "头条 - AI数据中心买光内存，手机电脑涨价潮开始",
+          "url": "http://m.toutiao.com/group/7655643624893366836/"
+        }
+      ],
+      "body_html": "      <p>MacBook Pro涨<strong>500美元</strong>，iPad Air涨<strong>150美元</strong>，Apple TV涨54%，Xbox第三次涨价150美元。</p>\n      <p>6月25日，苹果和微软在同一天宣布全球硬件涨价。这不是巧合。两家公司的声明中出现了同一个关键词：<strong>AI数据中心</strong>。</p>\n      <p>苹果发言人的措辞直白得惊人：\"AI数据中心的快速扩张造成内存和存储器需求超常规激增，公司从未见过零部件价格涨得如此之快、如此之多。\"库克此前在接受《华尔街日报》专访时用了一个更极端的比喻——\"百年一遇的洪水\"，在超过40年的从业经历中，从未见过类似情况。</p>\n      <p>消息公布当天，苹果股价收跌6.15%，微软跌3.45%，合计蒸发市值超万亿人民币。市场用脚投票的逻辑很简单：如果连苹果和微软都扛不住成本压力，那AI通胀的影响才刚刚开始。</p>\n\n      <h2>AI是怎么让你的电脑变贵的</h2>\n      <p>涨价链条清晰得令人窒息。</p>\n      <p>第一步，五大科技巨头（Alphabet、亚马逊、Meta、微软、Oracle）今年资本支出预计达<strong>7410亿美元</strong>，同比增长75%，绝大部分砸向AI数据中心。AI服务器对高带宽内存（HBM）的胃口是普通服务器的6-8倍，而HBM产能高度集中在三星、SK海力士和美光三家。</p>\n      <p>第二步，内存厂商把产能优先供给AI服务器客户——单价高、订单大、付款痛快。Counterpoint Research数据显示，过去三个季度内存和存储价格翻了<strong>四倍</strong>。美光最新季度毛利率从一年前的39%跃升至<strong>84.9%</strong>，超过英伟达和Meta，创下历史新高。</p>\n      <p>第三步，消费电子厂商（苹果、微软、索尼、任天堂）发现自己在内存市场上被AI公司挤到了角落，只能以更高价格争夺剩余产能。Xbox首席执行官Asha Sharma在内部邮件中披露，预计到2027年假日季，微软为存储与内存元件支付的费用将是2024年的<strong>五倍</strong>。</p>\n      <p>第四步，成本转嫁给你。MacBook Air从1099美元涨到1299美元（涨18%），16寸MacBook Pro从2499跳到2999美元，iPad Air从599到749美元（涨25%），入门iPad从349到449美元，Apple TV从129到199美元（涨54%）。Xbox Series X将在8月1日迎来第三次涨价，累计涨幅300美元。索尼PlayStation已多次调价，任天堂Switch 2将于9月升至500美元，Valve Steam Machine突破1000美元。</p>\n\n      <h2>\"AI通胀\"从论文走进现实</h2>\n      <p>华尔街日报直接将其定性为<strong>\"AI基建热潮正在制造美国第三波通胀\"</strong>。</p>\n      <p>宏观数据已经在印证这个判断。美国劳工部数据显示，今年5月消费级电脑软件及配件价格同比上涨约<strong>15%</strong>，批发电子元件及配件价格同比飙升<strong>27%</strong>。高盛预计数据中心将占美国2030年前新增电力需求的近一半，2026-2027年消费者电价将以每年约<strong>6%</strong>的速度上涨。全美商业经济协会（NABE）的调查显示，<strong>81%</strong>的受访者认为AI基础设施建设将在未来一年内推高通胀。</p>\n      <p>这形成了一个讽刺的悖论：AI长期被宣传为\"通缩力量\"——美联储主席沃什去年11月曾撰文称\"AI将提升生产率，每年1个百分点的生产率提升能在一代人时间内使生活水平翻倍\"。但瑞银经济学家指出，从当前建设热潮到AI真正压低价格，中间至少还有几年的时间差。在AI的生产率红利兑现之前，普通人先要为AI的建设成本买单。</p>\n      <p>Counterpoint研究总监Tarun Pathak估计，更高的零部件成本可能使每部iPhone的成本增加约<strong>200美元</strong>，苹果整体产品线将出现150至200美元的提价。苹果声明中的措辞已经留了后手——\"到了需要开始对多款产品提价的时候\"。注意\"开始\"两个字。iPhone没涨，不代表以后不涨。</p>\n      <p>AI的故事讲了这么久，普通人第一次直接感受到了它的价格——不是在ChatGPT的订阅费里，而是在买电脑、买手机、交电费的账单上。技术革命的成本从来不是均匀分布的，大公司融资建厂的每一分钱，最终都会以某种方式传导到终端。区别只是：之前你没注意到，现在它写在价格标签上了。</p>",
+      "pull_quote": null,
+      "cognitive_notes": "苹果涨价 · 微软Xbox涨价 · AI通胀 · 内存短缺 · HBM产能 · 美光84.9%毛利率 · 7410亿资本支出 · 成本转嫁消费者 · AI第三波通胀",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 4 个源信号生成，经编辑部人工审核。素材来源：华尔街见闻/新浪科技/亿邦动力等报道、Counterpoint Research数据、高盛/NABE宏观研究。"
+    },
+    {
+      "slug": "suno-spark-ai-short-drama-free-chatgpt-evidence",
+      "category": "AI 新媒体 · 内容创作",
+      "category_en": "AI New Media",
+      "title": "Suno孵化器+AI短剧免费+ChatGPT成呈堂证供：AI内容的商业化春与法律冬",
+      "title_break": "AI内容的<br>春与冬",
+      "deck": "Suno推出Spark独立音乐人孵化器提供资助和发行支持；AI短剧制作工具宣布免费；ChatGPT对话日志首次被检察官用作野火案庭审证据。AI内容创作的商业化春天和法律冬天同时到来。",
+      "keywords": "Dawn Vision, Suno Spark, AI短剧, AI内容创作, ChatGPT证据, AI法律, 新媒体, 独立音乐人",
+      "og_description": "Suno孵化器、AI短剧免费、ChatGPT成呈堂证供——AI内容产业的双面一周。",
+      "read_time": "约 5 分钟阅读",
+      "word_count": 800,
+      "sources": [
+        {
+          "text": "The Verge - Suno launches Spark incubator program for independent artists",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/958801/suno-launches-spark-incubator-program-to-feed-independent-artists-to-its-ai-machine"
+        },
+        {
+          "text": "量子位 - 做AI短剧可以免费免费免费了！我反手做了个修仙爽剧",
+          "url": "https://www.qbitai.com/2026/06/439750.html"
+        },
+        {
+          "text": "The Verge - Prosecutors used ChatGPT logs as evidence in the Palisades fire trial",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/958751/prosecutors-chatgpt-palisades-wildfire-arson-mistrial"
+        },
+        {
+          "text": "36氪 - 消息称快手社科线两位技术高管转岗可灵事业部或为上市做准备",
+          "url": "https://36kr.com/newsflashes/3873959791613185"
+        }
+      ],
+      "body_html": "      <p>资助金、导师指导、营销推广、发行渠道——但有一个条件：你要用Suno创作音乐，而且你的训练数据会反哺Suno的AI模型。</p>\n      <p>这是Suno 6月29日推出的Spark孵化器计划的核心条款。面向未签约的独立音乐人，提供资金和资源支持，帮助他们用AI工具创作和发行音乐。Suno的野心不止于做一个\"AI写歌玩具\"，它想成为AI时代的独立音乐厂牌和流媒体平台。</p>\n      <p>同一天，量子位报道国内AI短剧制作工具宣布<strong>免费开放</strong>——用户可以零成本生成AI短剧，\"反手就能做个修仙爽剧\"。AI视频和内容创作的门槛正在被快速踩平。</p>\n      <p>还是同一天，大西洋彼岸传来一条性质完全不同的消息：在洛杉矶Palisades野火纵火案的审判中，检察官将被告人的<strong>ChatGPT对话日志作为证据</strong>提交法庭。Jonathan Rinderknecht被控在2025年元旦纵火，导致洛杉矶史上最致命的野火之一。他的ChatGPT对话记录、iPhone位置数据和监控录像一起，成为控方构建证据链的一部分。</p>\n      <p>三件事放在同一天看，你会发现AI内容产业正在经历一个奇特的双重时刻：商业化的春天和法律风险的冬天同时降临。</p>\n\n      <h2>AI创作工具的\"平台化\"野心</h2>\n      <p>Suno的Spark计划值得关注，因为它标志着AI创作工具从\"工具\"向\"平台\"的转型。</p>\n      <p>过去的AI创作工具（包括Suno自己）的商业模式很简单：订阅制，用户付费使用AI生成内容。但Spark计划展示了更激进的野心：<strong>Suno不想做工具，它想做唱片公司+流媒体平台+经纪公司</strong>。通过孵化器签约独立音乐人，Suno可以获取优质的人类创作数据来训练模型，同时通过发行和分成获得持续收入。</p>\n      <p>可灵AI也在走类似的路。6月29日消息，快手社区科学线两位核心技术高管李晗、洪立印转岗可灵AI事业部，直接增强可灵在底层大模型、视频生成、商业算法等板块的技术实力。业内分析认为这是为可灵冲刺资本市场做关键技术底盘补强——两位推荐与电商算法领域的核心大将同时调入，意味着可灵的商业化路径已经清晰。</p>\n      <p>AI短剧免费化是另一个信号。当工具免费，竞争就从\"谁的工具更好用\"转向\"谁的平台能更好地分发和变现内容\"。这和短视频平台的发展路径一模一样——先做免费的创作工具降低门槛，再通过平台分发和广告分成赚钱。</p>\n\n      <h2>ChatGPT日志成证据：AI时代的隐私红线</h2>\n      <p>ChatGPT日志被用作法庭证据，这是一个里程碑式的事件。</p>\n      <p>此前，AI对话记录的法律地位一直模糊不清。它算私人通信吗？算搜索记录吗？算创作草稿吗？Palisades野火案给出了一个清晰的信号：<strong>如果你在AI对话中暴露了犯罪意图，这些对话记录可以成为呈堂证供。</strong></p>\n      <p>这对AI内容创作者有直接影响。如果你用ChatGPT或其他AI工具辅助创作商业内容，你的对话记录中可能包含未发布的产品信息、商业机密、客户数据等敏感内容。这些数据理论上可能在法律纠纷中被调取。</p>\n      <p>更广泛的影响在言论自由层面。Hacker News上一条获得<strong>398个点赞、214条评论</strong>的热帖指出：年龄验证只是言论自动归因的前兆。如果每一次AI对话都可以被追踪到个人并作为法律证据，人们在AI面前说真话的意愿将大幅降低。</p>\n\n      <h2>创作者的新机遇和新风险</h2>\n      <p>对内容创作者来说，2026年中是最好的时代，也是最需要警惕的时代。</p>\n      <p>好消息是：创作工具的成本趋近于零。AI写歌、AI做视频、AI写剧本、AI做设计——一个人就能完成过去需要一个团队才能完成的内容生产。Suno Spark这类平台还提供了从创作到发行的全链路支持。彭青云的故事已经被广泛报道：被AI干掉的设计师，靠AI短剧月入数万，4个人的小团队人均月入几万元。</p>\n      <p>需要警惕的是：法律和伦理的边界正在被快速重新定义。AI生成内容的版权归属、训练数据的合规性、AI对话记录的隐私权、AI生成内容的标识义务——这些问题都还没有定论，但执法已经开始。Margaret Atwood最近在葡萄牙文学节上直言不讳：AI的问题是\"垃圾进，垃圾出\"——但她只说对了一半，垃圾进的后果不只是垃圾出，还可能是法律风险出。</p>\n      <p>AI创作的门槛在降低，但AI创作的责任门槛在升高。享受工具红利的同时，别忘了你在AI面前说过的每一句话，都可能被记录下来。</p>\n      ",
+      "pull_quote": null,
+      "cognitive_notes": "Suno Spark孵化器 · AI短剧免费 · ChatGPT法庭证据 · AI内容平台化 · AI隐私红线 · 可灵上市准备 · AI创作法律风险",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 7 个源信号生成，经编辑部人工审核。素材来源：The Verge Suno/ChatGPT证据报道、量子位AI短剧免费报道、36氪可灵高管转岗消息。"
+    },
+    {
+      "slug": "wechat-xiaowei-agent-grey-test-harmonyos7",
+      "category": "微信生态 · A2A",
+      "category_en": "WeChat Ecosystem",
+      "title": "微信\"小微\"灰测+企业微信\"大圆\"+鸿蒙7 Agent化：16亿用户屏幕的Agent入口战",
+      "title_break": "微信Agent<br>入口争夺战",
+      "deck": "微信AI Agent\"小微\"开启灰测可打通通讯录/消息/朋友圈/小程序，企业微信推出\"大圆\"AI Agent，腾讯尾盘涨超3%。华为鸿蒙7完成Agent化改造，小艺成为跨生态超级智能体。国民级应用的Agent战争进入产品落地阶段。",
+      "keywords": "Dawn Vision, 微信小微, 企业微信大圆, AI Agent, 鸿蒙7, 微信生态, 腾讯市值, Agent入口",
+      "og_description": "微信Agent灰测、企业微信大圆内测、鸿蒙7 Agent化——国民应用Agent入口争夺战升级。",
+      "read_time": "约 5 分钟阅读",
+      "word_count": 800,
+      "sources": [
+        {
+          "text": "头条 - 港股异动：腾讯尾盘涨超3%微信Agent灰测开启",
+          "url": "http://m.toutiao.com/group/7657086639772041791/"
+        },
+        {
+          "text": "头条 - 微信小微开启内测 手机厂商将重构Agent赛道格局",
+          "url": "http://m.toutiao.com/group/7655639131413840434/"
+        },
+        {
+          "text": "头条 - 从被动响应到主动供给：鸿蒙7的Agent化改造意味着什么",
+          "url": "http://m.toutiao.com/group/7656068039967818291/"
+        },
+        {
+          "text": "头条 - 没测微信小微，但亲测了腾讯投放Agent：AI终于开始干活了",
+          "url": "http://m.toutiao.com/group/7657027582374609451/"
+        }
+      ],
+      "body_html": "      <p>3%。</p>\n      <p>这是6月30日腾讯控股在港股尾盘的涨幅。消息面上，微信AI Agent<strong>\"小微\"</strong>开启灰测的消息在科技圈和投资圈同时发酵。据测试用户反馈，小微可以打通通讯录、消息、朋友圈，能发消息，能调小程序——简单说，微信里终于有了一个能\"替你操作微信\"的AI。</p>\n      <p>紧随其后，企业微信也被曝出即将推出名为<strong>\"大圆\"</strong>的AI Agent，目前已进入内测阶段。国盛证券研报指出：\"就Agent而言，生态构建是核心竞争壁垒之一。\"</p>\n      <p>微信+企业微信双线布局Agent不是孤立事件。华为在6月12日HDC 2026上发布鸿蒙7，余承东宣布这是\"首个完成AI化改造的操作系统\"，从\"万物互联\"正式迈进\"Agent时代\"，小艺成为能跨生态调度的超级智能体。苹果全新Siri AI拿到系统级权限，具备多模态屏幕感知能力。豆包虽然否认了内测社交功能的传闻，但承认在企业办公场景与飞书有协同尝试。</p>\n      <p>16亿月活用户的微信，加上鸿蒙、iOS、Android的系统级Agent化——一场关于AI入口的终局战争，正在你每天解锁几十次的那块屏幕上打响。</p>\n\n      <h2>\"小微\"为什么重要：微信里的Agent是另一个物种</h2>\n      <p>市场上AI助手已经很多了，但微信里的Agent是一个完全不同的物种。</p>\n      <p>原因在于微信不是一个App，它是一个<strong>操作系统级别的生态</strong>。16亿用户的社交关系、支付、小程序、公众号、视频号、企业服务全部在里面。一个能在微信生态内自由操作的Agent，意味着它可以帮你回消息、发朋友圈、订外卖、处理工作审批、管理群聊、调用小程序完成各种服务——所有这些都不需要跳转到其他App。</p>\n      <p>亲测过腾讯投放Agent的用户评价说得好：\"普通大模型只能回答问题，Agent要解决问题。\"微信小微的关键不是\"更聪明的聊天\"，而是<strong>能在真实业务系统里干活</strong>。当Agent能调用小程序、能完成支付、能操作企业微信的审批流程，它就从一个玩具变成了一个真正的生产力工具。</p>\n      <p>企业微信\"大圆\"的逻辑更直接：B端场景里，Agent的价值更容易量化。自动回复客户咨询、自动生成会议纪要、自动审批常规流程、自动分析销售数据——这些都是能直接算ROI的场景。</p>\n\n      <h2>操作系统Agent化：谁控制入口谁控制AI时代</h2>\n      <p>微信做Agent是应用层的入口争夺，华为鸿蒙7和苹果Siri是系统层的入口争夺。</p>\n      <p>鸿蒙7的\"Agent亲和系统架构\"把Agent作为一等公民——小艺不再是一个语音助手，而是能跨设备、跨应用调度的超级智能体。你对小艺说\"帮我把昨天会议的PPT整理一下发给张总\"，它会自动找到PPT应用、打开文件、提取要点、通过邮件或微信发送。这需要系统级权限和跨应用调度能力，是独立App做不到的。</p>\n      <p>苹果的策略类似但更封闭。全新Siri AI获得了系统级多模态屏幕感知能力，能直接完成系统级操作。苹果因AI投入而涨价——16寸MacBook Pro涨$300，iPad Air从$599涨到$749——Tim Cook说价格上涨\"不可避免\"。消费者在为AI入口买单。</p>\n\n      <div class=\"pull-quote\">\n        \"PC时代的入口是浏览器，移动时代的入口是超级App，AI时代的入口是Agent。谁控制了Agent的入口，谁就控制了AI时代的流量分发。\"\n        <span class=\"pull-quote__attr\">—— 国盛证券研报观点</span>\n      </div>\n\n      <h2>Agent战争的终局：从聊天界面到行动界面</h2>\n      <p>把微信小微、企业微信大圆、鸿蒙小艺、苹果Siri、豆包飞书协同放在一起看，一个清晰的趋势浮现：<strong>AI的交互界面正在从\"聊天界面\"转向\"行动界面\"。</strong></p>\n      <p>ChatGPT代表的是\"聊天界面\"范式：你问，AI答，所有行动都需要你自己完成。微信小微代表的是\"行动界面\"范式：你说，AI做，它直接在你的生态里完成操作。这是一个根本性的交互范式转移。</p>\n      <p>这个转移对所有AI公司都有深远影响。如果你做的AI产品只是一个聊天框，你将面临超级App和操作系统的双重夹击——它们有用户、有场景、有数据、有系统权限，独立聊天App很难竞争。但如果你做的是垂直领域的Agent能力（比如帮小微更好地处理医疗咨询、帮大圆更好地做销售分析），你就有机会成为Agent生态里的\"插件\"。</p>\n      <p>腾讯市值单日波动几百亿港元的背后，是资本对Agent入口价值的重估。微信上一次引发这种级别的市值反应，还是视频号崛起的时候。Agent可能是视频号之后，微信生态最大的一次变量。</p>\n      <p>16亿人的屏幕，正在变成对话界面。而谁拥有这个对话界面的第一句话权，谁就拥有了AI时代的船票。</p>\n      ",
+      "pull_quote": null,
+      "cognitive_notes": "微信小微Agent · 企业微信大圆 · 鸿蒙7 Agent化 · 苹果Siri系统级权限 · Agent入口战争 · 行动界面vs聊天界面 · 腾讯市值",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 6 个源信号生成，经编辑部人工审核。素材来源：头条/港股腾讯Agent灰测报道、鸿蒙7 Agent化分析、腾讯投放Agent亲测。"
+    }
+  ],
+  "cao": {
+    "slug": "brown-university-ai-cheating-scandal",
+    "title": "布朗大学AI作弊案：居家闭卷考均分96分，博弈论教授怒斥\"学术诚信已死\"",
+    "title_break": "布朗大学<br>96分丑闻",
+    "deck": "常春藤布朗大学一门经济学课的居家闭卷考试，班级均分高达96分——历史平均是60-70分。博弈论教授Roberto Serrano公开谴责大规模AI作弊，AI教育的遮羞布被撕得粉碎。",
+    "keywords": "Dawn Vision, 布朗大学, AI作弊, 学术诚信, ChatGPT教育, AI考试, 居家考试",
+    "og_description": "布朗大学大规模AI作弊：居家闭卷考均分96分，教授愤怒谴责。",
+    "read_time": "约 4 分钟阅读",
+    "word_count": 700,
+    "sources": [
+      {
+        "text": "El Pais - Professor denounces mass AI fraud on an exam at Brown",
+        "url": "https://english.elpais.com/education/2026-06-28/ai-fraud-at-brown-university-academic-integrity-is-at-risk.html"
+      },
+      {
+        "text": "Hacker News - Professor denounces mass AI fraud on an exam at Brown (393 points, 517 comments)",
+        "url": "https://news.ycombinator.com/item?id=48708991"
+      },
+      {
+        "text": "头条 - 布朗大学教授曝学生疑似大规模AI作弊：居家闭卷考均分高达96",
+        "url": "http://m.toutiao.com/group/7657075083973870123/"
+      }
+    ],
+    "body_html": "      <p>朋友们，今天的AI翻车故事，可以直接写进《2026年AI教育事故大全》的第一章。</p>\n      <p>常春藤名校布朗大学，经济学教授、著名博弈论经济学家Roberto Serrano，最近被一门课的考试成绩气得差点掀桌子。什么课呢？一门高年级经济学课程。什么考试形式呢？<strong>居家闭卷考</strong>。</p>\n      <p>按说居家闭卷考，学生应该自觉对吧？布朗大学啊，藤校啊，美国精英中的精英啊，学术诚信应该刻在骨子里对吧？</p>\n      <p>结果你猜怎么着？班级平均分<strong>96分</strong>。</p>\n      <p>96分什么概念？这门课历史平均分是60到70分。一个班几十个学生，几乎人人接近满分。Serrano教授教了这么多年书，什么场面没见过，但这个分数分布——他用了一个词：\"statistically impossible\"（统计上不可能）。</p>\n      <p>你品你细品。一个平时均分六七十的班，突然人人九十四五，是全班同学突然基因突变集体开窍了？还是考试那天刚好文曲星集体下凡？</p>\n      <p>Serrano教授的判断很直接：<strong>大规模AI作弊</strong>。居家考试，没有监考，学生直接把题目喂给ChatGPT或者Claude，然后把答案抄回来。96分不是他们自己的水平，是AI的水平。</p>\n\n      <h2>AI作弊的军备竞赛</h2>\n      <p>这个新闻在Hacker News上炸了，<strong>393个点赞，517条评论</strong>，冲上热榜前三。</p>\n      <p>评论区里一片\"人间真实\"。有教授现身说法：\"我去年就放弃居家考试了，线上考试的平均分比线下高15-20分，而且答案里那种AI特有的'正确但空洞'的腔调，一眼就能看出来。\"有学生坦承：\"不是我们想作弊，是如果别人都用AI你不用，你就会被curve掉（成绩按曲线调整后吃亏）。\"还有人吐槽：\"最讽刺的是，教授用AI检测工具查作弊，学生就用更厉害的AI绕开检测，这根本就是一场军备竞赛，而且防守方永远落后一步。\"</p>\n      <p>朋友们，这就是AI时代教育的尴尬现状：<strong>检测AI作弊的技术，永远追不上用AI作弊的技术。</strong>道高一尺，魔高一丈，而且魔比道更新快。</p>\n      <p>更绝的是，有些学生甚至不是直接抄AI答案，而是让AI给出答案框架，自己再改写一遍——这样连AI检测器都查不出来。Serrano教授面对的就是这种情况：答案看起来像是人写的，但分数分布就是不对。</p>\n\n      <h2>教育的终极问题：考的到底是什么</h2>\n      <p>布朗大学这件事，表面是作弊问题，深层是教育评价体系的问题。</p>\n      <p>当AI能比绝大多数学生更快更准地回答考试题，我们考的到底是什么？是记忆力？是解题速度？还是在AI不擅长的领域——批判性思维、创造性思考、复杂问题拆解、跨领域综合判断？</p>\n      <p>苹果把AI数据中心抢内存的成本直接加到了MacBook的价签上——AI的账单总是有人付的，区别只是谁付而已。教育也是一样：如果考试只考AI能回答的问题，那考试本身就失去了意义。</p>\n      <p>当然，这不是给作弊找借口。作弊就是作弊，学术诚信就是学术诚信。但大学也需要反思：在AI可以随时调用的时代，什么样的考核方式才能真正检验学生的能力？闭卷考回到考场？开卷考但要求口头答辩？项目制考核代替考试？这些都是正在被讨论的方向，但目前没有标准答案。</p>\n",
+    "pull_quote": {
+      "text": "我去年就放弃居家考试了。线上考试的平均分比线下高15-20分，而且答案里那种AI特有的'正确但空洞'的腔调，一眼就能看出来。",
+      "attr": "—— Hacker News上一位教授的评论"
+    },
+    "cognitive_notes": "布朗大学AI作弊 · 96分均分 · 学术诚信 · AI教育危机 · 作弊军备竞赛 · 教育评价体系",
+    "source_summary": "本文基于 Dawn Vision 认知引擎处理的 5 个源信号整理，素材来源：El Pais布朗大学作弊报道、Hacker News热帖讨论、头条中文报道。",
+    "footnote_tip": "温馨提示：1. 学生别用AI作弊，骗的是自己；2. 老师该重新设计考核方式了；3. 家长看到成绩突飞猛进先别着急高兴。"
+  }
+}

@@ -1,40 +1,66 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
-import { getLatestIssue, getAllIssues } from '@lib/issues';
+import { getLatestIssue } from '@lib/issues';
+import '@styles/pages/home.css';
 
 const latest = await getLatestIssue();
-const allIssues = await getAllIssues();
+const cover = latest.data.cover;
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Dawn Vision",
+  "alternateName": "DawnVision",
+  "url": "https://www.dawnvision.net/",
+  "description": "穿越嘈杂，洞见留声。AI时代的深度阅读日刊，每个工作日深度解读AI前沿。",
+  "inLanguage": "zh-CN",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Dawn Vision",
+    "url": "https://www.dawnvision.net/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.dawnvision.net/images/og-image.png",
+      "width": 1200,
+      "height": 630
+    }
+  }
+});
 ---
 
-<BaseLayout>
-  <main id="main-content" slot="main">
-    <div class="container" style="padding-top: 80px; padding-bottom: 80px;">
-      <h1 style="font-size: clamp(2.6rem, 7vw, 5rem); font-weight: 900; letter-spacing: -1.5px; line-height: 0.95; color: var(--color-brand); text-transform: uppercase; margin-bottom: 16px;">
-        Dawn Vision
+<BaseLayout
+  title="Dawn Vision"
+  description="Dawn Vision — AI深度观察日刊，每日精选AI行业焦点，穿透信息噪声，穿越嘈杂，洞见留声。"
+  navVariant="home"
+  activeNav="home"
+  footerVariant="home"
+  structuredData={jsonLd}
+>
+  <Fragment slot="main">
+    <div class="home-page__hero">
+      <!-- Today's cover teaser card -->
+      <article class="home-page__teaser" itemscope itemtype="https://schema.org/NewsArticle">
+        <div class="home-page__teaser-label">Focus · 焦点</div>
+        <h2 class="home-page__teaser-title" itemprop="headline">{cover.title}</h2>
+        <p class="home-page__teaser-deck" itemprop="description">{cover.deck}</p>
+        <meta itemprop="datePublished" content={latest.data.issue.date} />
+        <meta itemprop="author" content="Dawn Vision 编辑部" />
+        <a href={`/articles/${cover.slug}`} class="home-page__teaser-link" itemprop="url">
+          Read More <span class="arrow">→</span>
+        </a>
+      </article>
+
+      <h1 class="home-page__title">
+        Through the Clamor,<br>
+        Insight Echoes.<br>
+        Read.
       </h1>
-      <p style="font-size: clamp(0.95rem, 1.8vw, 1.15rem); color: var(--color-text-muted); font-style: italic; margin-bottom: 48px;">
-        穿越嘈杂，洞见留声 — AI深度观察日刊
-      </p>
-      <div style="padding: 24px; background: var(--color-brand-soft); border-left: 4px solid var(--color-brand); margin-bottom: 48px;">
-        <p style="margin: 0; font-size: 0.9rem;">
-          <strong>重构进行中</strong>：当前为Astro + React + TypeScript新版本骨架。<br>
-          最新一期：Issue {latest.data.issue.number} · {latest.data.issue.date_display}<br>
-          封面文章：{latest.data.cover.title}
-        </p>
-      </div>
-      <h2 style="font-size: 1.2rem; margin-bottom: 16px; letter-spacing: 2px; text-transform: uppercase; color: var(--color-text-muted); font-size: 10px;">All Issues</h2>
-      <ul style="list-style: none; padding: 0;">
-        {allIssues.map(issue => (
-          <li style="padding: 12px 0; border-bottom: 1px solid var(--color-border-light);">
-            <a href={`/issues/${issue.data.issue.number}`} style="font-weight: 600; font-size: 1rem;">
-              Issue {issue.data.issue.number}
-            </a>
-            <span style="color: var(--color-text-faint); font-size: 0.85rem; margin-left: 12px; font-style: italic;">
-              {issue.data.issue.date_display}
-            </span>
-          </li>
-        ))}
-      </ul>
+
+      <p class="home-page__tagline">穿越嘈杂，<br>洞见留声。</p>
+
+      <h2 class="sr-only">
+        Dawn Vision — AI 深度观察日刊，每个工作日深度解读 AI 前沿资讯：AI Agent、大模型、具身智能、AI 商业化、一人公司
+      </h2>
     </div>
-  </main>
+  </Fragment>
 </BaseLayout>

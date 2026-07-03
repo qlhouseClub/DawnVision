@@ -1,0 +1,17 @@
+---
+/**
+ * SectionHeader — Klein蓝块标签
+ * @param en 英文标签（如 "Focus", "Brief", "Cao!"）
+ * @param zh 中文标签（如 "焦点", "资讯", "槽点!"）
+ */
+import '@styles/components/section-label.css';
+
+export interface Props {
+  en: string;
+  zh: string;
+}
+
+const { en, zh } = Astro.props;
+---
+
+<h2 class="section-label">{en} <span>{zh}</span></h2>

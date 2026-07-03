@@ -19,6 +19,16 @@ export default defineConfig({
     format: 'directory',
   },
   vite: {
+    resolve: {
+      alias: {
+        '@components': '/src/components',
+        '@layouts': '/src/layouts',
+        '@lib': '/src/lib',
+        '@styles': '/src/styles',
+        '@content': '/src/content',
+        '@scripts': '/src/scripts',
+      },
+    },
     css: {
       devSourcemap: true,
     },

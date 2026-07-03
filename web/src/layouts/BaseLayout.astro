@@ -1,6 +1,9 @@
 ---
 import '@styles/global.css';
 import { siteConfig } from '@lib/config';
+import Nav from '@components/Nav.astro';
+import Footer from '@components/Footer.astro';
+import BackgroundBlobs from '@components/BackgroundBlobs.astro';
 
 export interface Props {
   title?: string;
@@ -9,6 +12,14 @@ export interface Props {
   canonical?: string;
   type?: 'website' | 'article';
   noindex?: boolean;
+  /** Nav variant: 'home' for Klein bg hero, 'inner' for white sticky */
+  navVariant?: 'home' | 'inner';
+  /** Active nav item */
+  activeNav?: 'home' | 'articles' | 'cao' | 'about';
+  /** Footer variant */
+  footerVariant?: 'home' | 'site';
+  /** JSON-LD structured data strings */
+  structuredData?: string | string[];
 }
 
 const {
@@ -18,10 +29,21 @@ const {
   canonical,
   type = 'website',
   noindex = false,
+  navVariant = 'inner',
+  activeNav,
+  footerVariant = 'site',
+  structuredData,
 } = Astro.props;
 
-const fullTitle = title === siteConfig.name ? title : `${title} — ${siteConfig.name}`;
+const fullTitle = title === siteConfig.name
+  ? `${title} | ${siteConfig.tagline} — AI 深度观察日刊`
+  : `${title} — ${siteConfig.name}`;
 const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site ?? siteConfig.url).toString();
+const ogImageURL = new URL(ogImage, Astro.site ?? siteConfig.url).toString();
+
+const jsonLdArray = structuredData
+  ? Array.isArray(structuredData) ? structuredData : [structuredData]
+  : [];
 ---
 
 <!DOCTYPE html>
@@ -29,10 +51,24 @@ const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site ?? site
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {/* Anti-redirect guard: block cached old GT scripts from auto-redirecting */}
+  <script is:inline>
+  (function(){
+    window.__dvAllowTranslate = true;
+    window.googleTranslateElementInit = function(){ /* overridden by interactions */ };
+    var isGT = function(u){ return typeof u==='string' && /translate\.google(apis)?\.com/.test(u); };
+    var _a=window.location.assign, _r=window.location.replace, _o=window.open;
+    window.location.assign = function(u){ if(isGT(u) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT redirect'); return; } return _a.call(window.location,u); };
+    window.location.replace = function(u){ if(isGT(u) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT redirect'); return; } return _r.call(window.location,u); };
+    window.open = function(){ if(isGT(arguments[0]) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT popup'); return null; } return _o.apply(window,arguments); };
+  })();
+  </script>
 
   <title>{fullTitle}</title>
   <meta name="description" content={description}>
+  <meta name="author" content={siteConfig.author}>
+  <meta name="keywords" content="Dawn Vision, AI资讯, AI日报, 人工智能, 大模型, AI Agent, GPT, Claude, 具身智能, AI商业化, 一人公司, AI编程, 深度分析, AI观察, LLM, AIGC">
 
   {/* Canonical */}
   <link rel="canonical" href={canonicalURL}>
@@ -43,62 +79,129 @@ const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site ?? site
   {/* Fonts Preconnect */}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
   {/* Open Graph */}
   <meta property="og:type" content={type}>
   <meta property="og:title" content={fullTitle}>
   <meta property="og:description" content={description}>
   <meta property="og:url" content={canonicalURL}>
-  <meta property="og:image" content={new URL(ogImage, Astro.site ?? siteConfig.url).toString()}>
+  <meta property="og:image" content={ogImageURL}>
   <meta property="og:site_name" content={siteConfig.name}>
   <meta property="og:locale" content="zh_CN">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
 
   {/* Twitter Card */}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content={fullTitle}>
   <meta name="twitter:description" content={description}>
-  <meta name="twitter:image" content={new URL(ogImage, Astro.site ?? siteConfig.url).toString()}>
+  <meta name="twitter:image" content={ogImageURL}>
 
   {/* Robots */}
-  {noindex ? <meta name="robots" content="noindex, nofollow"> : <meta name="robots" content="index, follow">}
+  {noindex
+    ? <meta name="robots" content="noindex, nofollow">
+    : <meta name="robots" content="index, follow">
+  }
 
-  {/* SEO Verification Meta (placeholders, fill in after domain verification) */}
-  {siteConfig.seo.baiduVerify && <meta name="baidu-site-verification" content={siteConfig.seo.baiduVerify}>}
+  {/* Baidu mobile friendly */}
+  <meta name="applicable-device" content="pc,mobile">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="baidu-site-verification" content={siteConfig.seo.baiduVerify}>
   {siteConfig.seo.sogouVerify && <meta name="sogou_site_verification" content={siteConfig.seo.sogouVerify}>}
   {siteConfig.seo.so360Verify && <meta name="360-site-verification" content={siteConfig.seo.so360Verify}>}
   {siteConfig.seo.bingVerify && <meta name="msvalidate.01" content={siteConfig.seo.bingVerify}>}
   {siteConfig.seo.googleVerify && <meta name="google-site-verification" content={siteConfig.seo.googleVerify}>}
 
-  {/* Mobile friendly for Baidu */}
-  <meta name="applicable-device" content="pc,mobile">
-  <meta name="format-detection" content="telephone=no">
+  {/* JSON-LD Structured Data */}
+  {jsonLdArray.map(ld => (
+    <script type="application/ld+json" set:html={ld} />
+  ))}
 
   {/* Analytics: Cloudflare Web Analytics */}
   {siteConfig.analytics.cloudflareBeaconToken && (
-    <script defer src={`https://static.cloudflareinsights.com/beacon.min.js`} data-cf-beacon={`{"token": "${siteConfig.analytics.cloudflareBeaconToken}"}`}></script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon={`{"token": "${siteConfig.analytics.cloudflareBeaconToken}"}`}
+    />
   )}
 
   {/* Analytics: Baidu Tongji */}
   {siteConfig.analytics.baiduTongjiId && (
-    <script>
+    <script is:inline>
       var _hmt = _hmt || [];
       (function() {
         var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?" + "{siteConfig.analytics.baiduTongjiId}";
+        hm.src = "https://hm.baidu.com/hm.js?" + BAIDU_TONGJI_ID;
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
       })();
     </script>
   )}
 
+  {/* GT UI Hiding CSS — injected before body renders to prevent flash */}
+  <style is:inline>
+    iframe.goog-te-banner-frame,
+    iframe[class*="goog-te-banner"],
+    iframe[id*="goog-te-banner"],
+    .goog-te-gadget, .goog-te-gadget-icon, .goog-te-gadget-simple,
+    .goog-te-gadget span, #google_translate_element, #google_translate_element *,
+    .goog-te-spinner-pos, .goog-te-spinner,
+    img[src*="translate_spinner"], img[src*="loading"],
+    .goog-te-menu-frame, .goog-te-menu-value,
+    .goog-te-balloon-frame, .goog-text-highlight,
+    #goog-gt-tt, .goog-tooltip,
+    iframe[src*="translate.google.com"],
+    iframe[src*="translate.googleapis.com"],
+    iframe[src*="translate_p"], iframe[src*="element/"],
+    a[href*="goog-te"], .VIiyi, .JLqJ4b,
+    .skiptranslate {
+      display:none!important; visibility:hidden!important; opacity:0!important;
+      width:0!important; height:0!important; max-width:0!important; max-height:0!important;
+      overflow:hidden!important; pointer-events:none!important; position:absolute!important;
+      top:-9999px!important; left:-9999px!important;
+      margin:0!important; padding:0!important; border:0!important;
+    }
+    body, html { top:0!important; margin-top:0!important; }
+  </style>
+
   <slot name="head" />
 </head>
-<body>
+<body class={navVariant === 'home' ? 'home' : ''}>
+  {navVariant === 'home' && (
+    <style is:inline>
+      body.home { background: var(--color-brand); color: var(--color-white); position: relative; min-height: 100vh; }
+    </style>
+  )}
   <a href="#main-content" class="skip-link">跳至主要内容</a>
-  <slot />
-  <main id="main-content">
-    <slot name="main" />
-  </main>
+
+  {navVariant === 'home' ? (
+    <Fragment>
+      <BackgroundBlobs variant="home" />
+      <Nav variant="home" active={activeNav} />
+      <main id="main-content">
+        <slot name="main" />
+      </main>
+      <Footer variant="home" />
+    </Fragment>
+  ) : (
+    <Fragment>
+      <Nav variant="inner" active={activeNav} />
+      <main id="main-content">
+        <slot name="main" />
+      </main>
+      <Footer variant="site" />
+    </Fragment>
+  )}
+
+  {/* Hidden GT element container */}
+  <div id="google_translate_element" style="position:absolute;left:-9999px;top:-9999px;width:0;height:0;overflow:hidden;opacity:0;pointer-events:none;"></div>
+
+  {/* Client interactions */}
+  <script>
+    import '@scripts/interactions';
+  </script>
 </body>
 </html>

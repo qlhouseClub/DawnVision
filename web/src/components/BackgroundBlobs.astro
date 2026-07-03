@@ -1,0 +1,20 @@
+---
+/**
+ * BackgroundBlobs — 动态渐变背景球
+ * @param variant 'home' | 'section' — 首页全屏版或深色区块版
+ */
+import '@styles/components/blobs.css';
+
+export interface Props {
+  variant?: 'home' | 'section';
+}
+
+const { variant = 'section' } = Astro.props;
+const count = variant === 'home' ? 6 : 5;
+---
+
+<div class={`blobs blobs--${variant}`} aria-hidden="true">
+  {Array.from({ length: count }, (_, i) => (
+    <div class={`blob blob--${i + 1}`}></div>
+  ))}
+</div>

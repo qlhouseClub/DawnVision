@@ -1,0 +1,88 @@
+/* ═══════════════════════════════════════════
+   Issue Filter — Four-level cascade filter
+   Year → Month → H1/H2 → Issue
+   ═══════════════════════════════════════════ */
+
+.issue-filter {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-border-light);
+  margin-bottom: var(--space-2);
+}
+
+.issue-filter__group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.issue-filter__select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  padding: 6px 28px 6px 10px;
+  font-size: 10px;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  color: var(--color-text);
+  cursor: pointer;
+  border-radius: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23002FA7' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  transition: border-color var(--duration-fast);
+}
+
+.issue-filter__select:hover {
+  border-color: var(--color-brand);
+}
+
+.issue-filter__select:focus {
+  outline: none;
+  border-color: var(--color-brand);
+}
+
+.issue-filter__select:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.issue-filter__divider {
+  width: 1px;
+  height: 16px;
+  background: var(--color-border-light);
+}
+
+.issue-filter__latest {
+  margin-left: auto;
+  font-size: 9px;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+}
+
+/* ── Mobile ── */
+@media (max-width: 700px) {
+  .issue-filter {
+    gap: var(--space-2);
+  }
+
+  .issue-filter__select {
+    font-size: 9px;
+    padding: 5px 22px 5px 8px;
+  }
+
+  .issue-filter__latest {
+    width: 100%;
+    margin-left: 0;
+    margin-top: var(--space-1);
+  }
+}

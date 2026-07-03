@@ -1,0 +1,96 @@
+---
+/**
+ * ArticleCard — 文章卡片
+ * @param variant 'cover' | 'brief' | 'cao' | 'cao-item'
+ * @param article 文章数据 (title, deck, slug, category, read_time, etc.)
+ * @param issueNum 期数号
+ * @param issueDate 期数日期显示
+ */
+import '@styles/components/article-card.css';
+
+export interface Props {
+  variant?: 'cover' | 'brief' | 'cao' | 'cao-item';
+  article: {
+    slug: string;
+    title: string;
+    deck: string;
+    category?: string;
+    category_en?: string;
+    read_time?: string;
+  };
+  issueNum?: string;
+  issueDate?: string;
+  href?: string;
+}
+
+const {
+  variant = 'brief',
+  article,
+  issueNum,
+  issueDate,
+  href = `/articles/${article.slug}`,
+} = Astro.props;
+
+const categoryText = article.category_en || article.category || '';
+---
+
+<article class={`card card--${variant}`}>
+  {variant === 'brief' ? (
+    <Fragment>
+      {categoryText && (
+        <div class="card__category">{categoryText}</div>
+      )}
+      <div class="card__body">
+        <h3 class="card__title">
+          <a href={href}>{article.title}</a>
+        </h3>
+        <p class="card__deck">{article.deck}</p>
+        <div class="card__meta">
+          {issueNum && <span class="card__issue">No.{issueNum}</span>}
+          {issueDate && <span>{issueDate}</span>}
+          {article.read_time && <span class="card__read-time">{article.read_time}</span>}
+        </div>
+      </div>
+    </Fragment>
+  ) : variant === 'cao' ? (
+    <Fragment>
+      <div class="card__category">Cao! · 操蛇之神</div>
+      <h3 class="card__title">
+        <a href={href} set:html={article.title} />
+      </h3>
+      <p class="card__deck">{article.deck}</p>
+      <div class="card__meta">
+        {issueNum && <span class="card__issue">No.{issueNum}</span>}
+        {issueDate && <span>{issueDate}</span>}
+        {article.read_time && <span class="card__read-time">{article.read_time}</span>}
+      </div>
+    </Fragment>
+  ) : variant === 'cao-item' ? (
+    <Fragment>
+      <h3 class="card__title">
+        <a href={href}>{article.title}</a>
+      </h3>
+      <p class="card__deck">{article.deck}</p>
+      <div class="card__meta">
+        {issueNum && <span class="card__issue">No.{issueNum}</span>}
+        {issueDate && <span>{issueDate}</span>}
+        {article.read_time && <span class="card__read-time">{article.read_time}</span>}
+      </div>
+    </Fragment>
+  ) : (
+    <Fragment>
+      {categoryText && (
+        <div class="card__category">{categoryText}</div>
+      )}
+      <h3 class="card__title">
+        <a href={href} set:html={article.title} />
+      </h3>
+      <p class="card__deck">{article.deck}</p>
+      <div class="card__meta">
+        {issueNum && <span class="card__issue">No.{issueNum}</span>}
+        {issueDate && <span>{issueDate}</span>}
+        {article.read_time && <span class="card__read-time">{article.read_time}</span>}
+      </div>
+    </Fragment>
+  )}
+</article>

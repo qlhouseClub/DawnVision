@@ -1,0 +1,215 @@
+/* ═══════════════════════════════════════════
+   Article Card — List view card component
+   ═══════════════════════════════════════════ */
+
+/* ── Cover Card (large, featured) ── */
+.card--cover {
+  padding: clamp(28px, 4vw, 48px) 0;
+  border-bottom: 2px solid var(--color-text);
+  margin-bottom: var(--space-4);
+}
+
+.card--cover:last-child {
+  border-bottom: none;
+}
+
+.card__category {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-max);
+  text-transform: uppercase;
+  color: var(--color-brand);
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  margin-bottom: var(--space-3);
+}
+
+.card__category--cao {
+  color: var(--color-text);
+}
+
+.card__title {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-black);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  margin-bottom: var(--space-3);
+  color: var(--color-text);
+  font-style: italic;
+}
+
+.card__title a {
+  color: var(--color-text);
+  border-bottom: none;
+}
+
+.card__title a:hover {
+  color: var(--color-brand);
+  border-bottom: none;
+}
+
+.card__deck {
+  font-size: var(--text-deck);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-bottom: var(--space-4);
+  max-width: 640px;
+}
+
+.card__meta {
+  display: flex;
+  gap: var(--space-5);
+  align-items: center;
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  flex-wrap: wrap;
+}
+
+.card__issue {
+  color: var(--color-text-muted);
+}
+
+.card__read-time {
+  color: var(--color-text-faint);
+}
+
+/* ── Brief Card (compact) ── */
+.card--brief {
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--color-border-light);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.card--brief:last-child {
+  border-bottom: none;
+}
+
+.card--brief .card__category {
+  font-size: 9px;
+  margin-bottom: 0;
+  white-space: nowrap;
+  padding-top: 4px;
+}
+
+.card--brief .card__body {
+  min-width: 0;
+}
+
+.card--brief .card__title {
+  font-size: var(--text-card);
+  font-weight: var(--weight-bold);
+  font-style: normal;
+  letter-spacing: var(--tracking-tight);
+  margin-bottom: var(--space-2);
+}
+
+.card--brief .card__deck {
+  font-size: var(--text-base);
+  font-style: normal;
+  margin-bottom: var(--space-3);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+}
+
+.card--brief .card__meta {
+  gap: var(--space-4);
+  font-size: 9px;
+}
+
+/* ── Cao Card (dark, featured) ── */
+.card--cao {
+  background: var(--color-brand);
+  color: var(--color-white);
+  padding: clamp(28px, 4vw, 48px);
+  position: relative;
+  overflow: hidden;
+  margin: var(--space-8) 0;
+}
+
+.card--cao::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: rgba(255,255,255,0.3);
+}
+
+.card--cao .card__category {
+  color: rgba(255,255,255,0.5);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-max);
+}
+
+.card--cao .card__title {
+  color: var(--color-white);
+  font-size: var(--text-xl);
+  font-style: italic;
+}
+
+.card--cao .card__title a {
+  color: var(--color-white);
+}
+
+.card--cao .card__title a:hover {
+  color: rgba(255,255,255,0.8);
+}
+
+.card--cao .card__deck {
+  color: rgba(255,255,255,0.65);
+}
+
+.card--cao .card__meta {
+  color: rgba(255,255,255,0.4);
+}
+
+.card--cao .card__issue {
+  color: rgba(255,255,255,0.5);
+}
+
+/* ── Cao List Item (compact for Cao page) ── */
+.card--cao-item {
+  padding: var(--space-5) 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.card--cao-item:last-child {
+  border-bottom: none;
+}
+
+.card--cao-item .card__title {
+  font-size: var(--text-lg);
+  font-style: normal;
+  font-weight: var(--weight-bold);
+  margin-bottom: var(--space-2);
+}
+
+.card--cao-item .card__deck {
+  font-size: var(--text-base);
+  font-style: normal;
+  margin-bottom: var(--space-2);
+}
+
+/* ── Mobile ── */
+@media (max-width: 700px) {
+  .card--brief {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .card--brief .card__category {
+    padding-top: 0;
+  }
+
+  .card--cao {
+    padding: var(--space-6) var(--space-5);
+  }
+}

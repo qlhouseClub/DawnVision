@@ -1,0 +1,29 @@
+---
+/**
+ * Footer — 页脚
+ * @param variant 'home' | 'site' — 首页版（透明）或内页版（Klein蓝块）
+ */
+import '@styles/components/footer.css';
+
+export interface Props {
+  variant?: 'home' | 'site';
+}
+
+const { variant = 'site' } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer class={`footer footer--${variant}`} role="contentinfo">
+  {variant === 'site' ? (
+    <div class="footer__container">
+      <div class="footer__brand">Dawn Vision</div>
+      <div class="footer__meta">© {year} · Daily at 16:30 CST · Weekdays Only</div>
+    </div>
+  ) : (
+    <Fragment>
+      <span>© {year} Dawn Vision</span>
+      <span>Weekdays · 16:30 CST</span>
+      <span>Cloudflare Pages</span>
+    </Fragment>
+  )}
+</footer>

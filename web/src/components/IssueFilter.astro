@@ -1,0 +1,185 @@
+---
+/**
+ * IssueFilter — 期数四级联动筛选器
+ * 年 → 月 → 上/下旬 → 期数
+ * 纯静态HTML，客户端交互由is:inline脚本处理
+ */
+import '@styles/components/issue-filter.css';
+import { buildIssueFilterData } from '@lib/issues';
+
+const filterData = await buildIssueFilterData();
+const { tree, flat } = filterData;
+
+// Serialize data for client script
+const filterDataJson = JSON.stringify({ tree, flat });
+---
+
+<div class="issue-filter" id="issue-filter" data-filter={filterDataJson}>
+  <div class="issue-filter__group">
+    <select class="issue-filter__select" id="filter-year" aria-label="选择年份">
+      <option value="">Year</option>
+      {tree.map(y => (
+        <option value={y.year}>{y.year}</option>
+      ))}
+    </select>
+  </div>
+
+  <div class="issue-filter__divider" aria-hidden="true"></div>
+
+  <div class="issue-filter__group">
+    <select class="issue-filter__select" id="filter-month" aria-label="选择月份" disabled>
+      <option value="">Month</option>
+    </select>
+  </div>
+
+  <div class="issue-filter__divider" aria-hidden="true"></div>
+
+  <div class="issue-filter__group">
+    <select class="issue-filter__select" id="filter-half" aria-label="选择上旬/下旬" disabled>
+      <option value="">Half</option>
+    </select>
+  </div>
+
+  <div class="issue-filter__divider" aria-hidden="true"></div>
+
+  <div class="issue-filter__group">
+    <select class="issue-filter__select" id="filter-issue" aria-label="选择期数" disabled>
+      <option value="">Issue</option>
+    </select>
+  </div>
+
+  <span class="issue-filter__latest">Latest: No.{flat[0]?.num}</span>
+</div>
+
+<script is:inline>
+(function() {
+  const container = document.getElementById('issue-filter');
+  if (!container) return;
+
+  let data;
+  try {
+    data = JSON.parse(container.getAttribute('data-filter') || '{}');
+  } catch(_) { return; }
+
+  const yearSel = document.getElementById('filter-year');
+  const monthSel = document.getElementById('filter-month');
+  const halfSel = document.getElementById('filter-half');
+  const issueSel = document.getElementById('filter-issue');
+
+  const monthNames = {
+    '01': 'Jan', '02': 'Feb', '03': 'Mar', '04': 'Apr',
+    '05': 'May', '06': 'Jun', '07': 'Jul', '08': 'Aug',
+    '09': 'Sep', '10': 'Oct', '11': 'Nov', '12': 'Dec'
+  };
+
+  function clearSelect(sel, placeholder) {
+    sel.innerHTML = `<option value="">${placeholder}</option>`;
+    sel.disabled = true;
+  }
+
+  function populateSelect(sel, options, placeholder) {
+    sel.innerHTML = `<option value="">${placeholder}</option>`;
+    options.forEach(opt => {
+      const o = document.createElement('option');
+      o.value = opt.value;
+      o.textContent = opt.label;
+      sel.appendChild(o);
+    });
+    sel.disabled = options.length === 0;
+  }
+
+  function onYearChange() {
+    const year = yearSel.value;
+    clearSelect(monthSel, 'Month');
+    clearSelect(halfSel, 'Half');
+    clearSelect(issueSel, 'Issue');
+    if (!year) return;
+
+    const yearData = data.tree.find(y => y.year === year);
+    if (!yearData) return;
+
+    const months = yearData.months.map(m => ({
+      value: m.month,
+      label: monthNames[m.month] || m.month
+    }));
+    populateSelect(monthSel, months, 'Month');
+  }
+
+  function onMonthChange() {
+    const year = yearSel.value;
+    const month = monthSel.value;
+    clearSelect(halfSel, 'Half');
+    clearSelect(issueSel, 'Issue');
+    if (!year || !month) return;
+
+    const yearData = data.tree.find(y => y.year === year);
+    if (!yearData) return;
+    const monthData = yearData.months.find(m => m.month === month);
+    if (!monthData) return;
+
+    const halves = monthData.halves.map(h => ({
+      value: h.half,
+      label: h.half === 'H1' ? 'Early' : 'Late'
+    }));
+    populateSelect(halfSel, halves, 'Half');
+  }
+
+  function onHalfChange() {
+    const year = yearSel.value;
+    const month = monthSel.value;
+    const half = halfSel.value;
+    clearSelect(issueSel, 'Issue');
+    if (!year || !month || !half) return;
+
+    const yearData = data.tree.find(y => y.year === year);
+    if (!yearData) return;
+    const monthData = yearData.months.find(m => m.month === month);
+    if (!monthData) return;
+    const halfData = monthData.halves.find(h => h.half === half);
+    if (!halfData) return;
+
+    const issues = halfData.issues.map(num => ({
+      value: num,
+      label: 'No.' + num
+    }));
+    populateSelect(issueSel, issues, 'Issue');
+  }
+
+  function onIssueChange() {
+    const num = issueSel.value;
+    if (!num) return;
+    window.location.href = '/articles?issue=' + num;
+  }
+
+  yearSel.addEventListener('change', onYearChange);
+  monthSel.addEventListener('change', onMonthChange);
+  halfSel.addEventListener('change', onHalfChange);
+  issueSel.addEventListener('change', onIssueChange);
+
+  // Check URL for pre-selected issue
+  const urlParams = new URLSearchParams(window.location.search);
+  const preIssue = urlParams.get('issue');
+  if (preIssue) {
+    const issue = data.flat.find(f => f.num === preIssue);
+    if (issue) {
+      const [y, m] = issue.date.split('-');
+      const day = parseInt(issue.date.split('-')[2]);
+      const h = day <= 15 ? 'H1' : 'H2';
+
+      yearSel.value = y;
+      onYearChange();
+      setTimeout(() => {
+        monthSel.value = m;
+        onMonthChange();
+        setTimeout(() => {
+          halfSel.value = h;
+          onHalfChange();
+          setTimeout(() => {
+            issueSel.value = preIssue;
+          }, 50);
+        }, 50);
+      }, 50);
+    }
+  }
+})();
+</script>

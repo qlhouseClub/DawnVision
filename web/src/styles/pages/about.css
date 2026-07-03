@@ -1,0 +1,85 @@
+/* ═══════════════════════════════════════════
+   About Page — About Dawn Vision
+   ═══════════════════════════════════════════ */
+
+.about-page {
+  min-height: 100vh;
+}
+
+.about-page__hero {
+  padding: clamp(60px, 10vw, 100px) 0 clamp(40px, 6vw, 60px);
+  border-bottom: 2px solid var(--color-text);
+}
+
+.about-page__eyebrow {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-max);
+  text-transform: uppercase;
+  color: var(--color-brand);
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  margin-bottom: var(--space-4);
+}
+
+.about-page__title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: var(--weight-black);
+  letter-spacing: var(--tracking-tightest);
+  line-height: var(--leading-tight);
+  font-style: italic;
+  margin-bottom: var(--space-4);
+}
+
+.about-page__content {
+  padding: var(--space-12) 0;
+  max-width: 640px;
+}
+
+.about-page__content p {
+  font-size: var(--text-body);
+  line-height: var(--leading-loose);
+  margin-bottom: var(--space-5);
+  color: var(--color-text-soft);
+}
+
+.about-page__content h2 {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-4);
+  color: var(--color-text);
+  letter-spacing: var(--tracking-tight);
+}
+
+.about-page__tagline {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-black);
+  font-style: italic;
+  color: var(--color-brand);
+  line-height: var(--leading-snug);
+  margin: var(--space-8) 0;
+  padding: var(--space-6) 0;
+  border-top: 2px solid var(--color-brand);
+  border-bottom: 2px solid var(--color-brand);
+  text-align: center;
+  letter-spacing: var(--tracking-tight);
+}
+
+.about-page__list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-4) 0;
+}
+
+.about-page__list li {
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border-light);
+  font-size: var(--text-base);
+  color: var(--color-text-soft);
+  line-height: var(--leading-relaxed);
+}
+
+.about-page__list li strong {
+  color: var(--color-brand);
+  font-weight: var(--weight-bold);
+}

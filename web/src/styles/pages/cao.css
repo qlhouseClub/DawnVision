@@ -1,0 +1,65 @@
+/* ═══════════════════════════════════════════
+   Cao Page — "操蛇之神" column
+   ═══════════════════════════════════════════ */
+
+.cao-page {
+  min-height: 100vh;
+}
+
+/* ── Cao Hero (dark Klein section) ── */
+.cao-hero {
+  background: var(--color-brand);
+  color: var(--color-white);
+  padding: clamp(60px, 10vw, 120px) 0 clamp(48px, 8vw, 72px);
+  position: relative;
+  overflow: hidden;
+}
+
+.cao-hero__label {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-max);
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  margin-bottom: var(--space-4);
+}
+
+.cao-hero__title {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: var(--weight-black);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tightest);
+  font-style: italic;
+  margin-bottom: var(--space-4);
+}
+
+.cao-hero__subtitle {
+  font-size: var(--text-deck);
+  line-height: var(--leading-relaxed);
+  color: rgba(255,255,255,0.65);
+  max-width: 560px;
+  font-style: italic;
+}
+
+/* ── Cao Latest Article ── */
+.cao-latest {
+  padding: var(--space-12) 0;
+}
+
+/* ── Cao Archive ── */
+.cao-archive {
+  padding: var(--space-8) 0 var(--space-16);
+}
+
+.cao-archive__header {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-max);
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-2);
+}

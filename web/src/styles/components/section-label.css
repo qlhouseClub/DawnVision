@@ -1,0 +1,37 @@
+/* ═══════════════════════════════════════════
+   Section Label — Klein blue label header
+   ═══════════════════════════════════════════ */
+
+.section-label {
+  display: block;
+  width: 100%;
+  font-size: 12px;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-max);
+  text-transform: uppercase;
+  color: var(--color-white);
+  background: var(--color-brand);
+  padding: 16px 24px;
+  margin-bottom: 36px;
+  margin-top: 8px;
+  font-family: var(--font-display);
+}
+
+.section-label span {
+  font-weight: var(--weight-regular);
+  color: rgba(255,255,255,0.6);
+  font-style: italic;
+  font-family: var(--font-sans);
+  margin-left: 14px;
+  font-size: 0.85em;
+  letter-spacing: var(--tracking-wide);
+}
+
+/* ── Mobile ── */
+@media (max-width: 700px) {
+  .section-label {
+    padding: 14px 20px;
+    font-size: 11px;
+    letter-spacing: 4px;
+  }
+}

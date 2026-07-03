@@ -1,0 +1,160 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import BackgroundBlobs from '@components/BackgroundBlobs.astro';
+import { getArticleBySlug, getAllIssues } from '@lib/issues';
+import '@styles/components/article.css';
+
+export async function getStaticPaths() {
+  const issues = await getAllIssues();
+  const paths: { params: { slug: string }; props: any }[] = [];
+
+  for (const issue of issues) {
+    // Cover
+    paths.push({
+      params: { slug: issue.data.cover.slug },
+      props: {
+        article: issue.data.cover,
+        type: 'cover' as const,
+        issueNum: issue.data.issue.number,
+        issueDate: issue.data.issue.date_display,
+        category: 'Focus · 焦点',
+      }
+    });
+
+    // Briefs
+    for (const brief of issue.data.briefs) {
+      paths.push({
+        params: { slug: brief.slug },
+        props: {
+          article: brief,
+          type: 'brief' as const,
+          issueNum: issue.data.issue.number,
+          issueDate: issue.data.issue.date_display,
+          category: brief.category_en || brief.category,
+        }
+      });
+    }
+
+    // Cao
+    if (issue.data.cao) {
+      paths.push({
+        params: { slug: issue.data.cao.slug },
+        props: {
+          article: issue.data.cao,
+          type: 'cao' as const,
+          issueNum: issue.data.issue.number,
+          issueDate: issue.data.issue.date_display,
+          category: 'Cao! · 操蛇之神',
+        }
+      });
+    }
+  }
+
+  return paths;
+}
+
+const { article, type, issueNum, issueDate, category } = Astro.props;
+const isCao = type === 'cao';
+
+const pageTitle = article.title_short || article.title;
+const pageDescription = article.og_description || article.deck;
+const pageUrl = new URL(Astro.url.pathname, Astro.site ?? 'https://www.dawnvision.net').toString();
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": article.title,
+  "description": article.deck,
+  "datePublished": issueDate,
+  "author": { "@type": "Organization", "name": "Dawn Vision 编辑部" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Dawn Vision",
+    "url": "https://www.dawnvision.net/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.dawnvision.net/images/og-image.png",
+      "width": 1200, "height": 630
+    }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
+  "inLanguage": "zh-CN",
+  "articleSection": category,
+  "keywords": article.keywords,
+  "wordCount": article.word_count,
+});
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  navVariant="inner"
+  activeNav={isCao ? 'cao' : 'articles'}
+  footerVariant="site"
+  type="article"
+  canonical={pageUrl}
+  structuredData={jsonLd}
+>
+  <Fragment slot="main">
+    {/* Article Hero */}
+    <section class={`article-hero ${isCao ? 'article-hero--cao' : ''}`}>
+      <BackgroundBlobs variant="section" />
+      <div class="container--narrow" style="position:relative;z-index:1;">
+        <div class="article-hero__category">{category}</div>
+        <h1 class="article-hero__title" set:html={article.title_break || article.title}></h1>
+        <p class="article-hero__deck">{article.deck}</p>
+        <div class="article-hero__meta">
+          <span class="article-hero__issue">No.{issueNum}</span>
+          <span>{issueDate}</span>
+          <span>{article.read_time}</span>
+        </div>
+      </div>
+    </section>
+
+    {/* Article Body */}
+    <article class="container--narrow" style="padding-top: clamp(40px, 6vw, 64px); padding-bottom: clamp(48px, 8vw, 80px);">
+      <div class="article-body" set:html={article.body_html}></div>
+
+      {/* Pull Quote */}
+      {article.pull_quote && (
+        <blockquote class="article-pull-quote">
+          <p class="article-pull-quote__text">{article.pull_quote.text}</p>
+          {article.pull_quote.attr && (
+            <cite class="article-pull-quote__attr">{article.pull_quote.attr}</cite>
+          )}
+        </blockquote>
+      )}
+
+      {/* Cao Footnote Tip */}
+      {isCao && article.footnote_tip && (
+        <div class="article-cao-tip">{article.footnote_tip}</div>
+      )}
+
+      {/* Cognitive Notes */}
+      {article.cognitive_notes && (
+        <div class="article-cognitive">{article.cognitive_notes}</div>
+      )}
+
+      {/* Sources */}
+      {article.sources && article.sources.length > 0 && (
+        <div class="article-sources">
+          <div class="article-sources__title">Sources · 信源</div>
+          <ul class="article-sources__list">
+            {article.sources.map((source: { text: string; url: string }) => (
+              <li class="article-sources__item">
+                {source.url ? (
+                  <a href={source.url} target="_blank" rel="noopener noreferrer">{source.text}</a>
+                ) : (
+                  source.text
+                )}
+              </li>
+            ))}
+          </ul>
+          {article.source_summary && (
+            <p class="article-source-summary">{article.source_summary}</p>
+          )}
+        </div>
+      )}
+    </article>
+  </Fragment>
+</BaseLayout>

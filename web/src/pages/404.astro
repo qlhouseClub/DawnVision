@@ -1,0 +1,20 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="404 — Page Not Found"
+  description="页面未找到"
+  navVariant="inner"
+  footerVariant="site"
+  noindex={true}
+>
+  <Fragment slot="main">
+    <div class="container--narrow" style="padding: clamp(80px, 15vw, 160px) 0; text-align: center;">
+      <div style="font-size: clamp(4rem, 12vw, 8rem); font-weight: 900; font-style: italic; color: var(--color-brand); line-height: 1; letter-spacing: -2px; margin-bottom: 24px;">404</div>
+      <h1 style="font-size: clamp(1.2rem, 3vw, 1.6rem); font-weight: 700; font-style: italic; margin-bottom: 16px; color: var(--color-text);">页面走丢了</h1>
+      <p style="font-size: var(--text-deck); color: var(--color-text-muted); font-style: italic; margin-bottom: 32px;">你访问的页面不存在，或许已经被移走了。</p>
+      <a href="/" style="display: inline-block; padding: 12px 32px; background: var(--color-brand); color: var(--color-white); font-size: 11px; letter-spacing: var(--tracking-wider); text-transform: uppercase; font-family: var(--font-display); font-weight: var(--weight-bold); border-bottom: none;">Back to Home</a>
+    </div>
+  </Fragment>
+</BaseLayout>
