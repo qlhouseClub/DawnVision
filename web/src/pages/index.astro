@@ -1,0 +1,40 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { getLatestIssue, getAllIssues } from '@lib/issues';
+
+const latest = await getLatestIssue();
+const allIssues = await getAllIssues();
+---
+
+<BaseLayout>
+  <main id="main-content" slot="main">
+    <div class="container" style="padding-top: 80px; padding-bottom: 80px;">
+      <h1 style="font-size: clamp(2.6rem, 7vw, 5rem); font-weight: 900; letter-spacing: -1.5px; line-height: 0.95; color: var(--color-brand); text-transform: uppercase; margin-bottom: 16px;">
+        Dawn Vision
+      </h1>
+      <p style="font-size: clamp(0.95rem, 1.8vw, 1.15rem); color: var(--color-text-muted); font-style: italic; margin-bottom: 48px;">
+        穿越嘈杂，洞见留声 — AI深度观察日刊
+      </p>
+      <div style="padding: 24px; background: var(--color-brand-soft); border-left: 4px solid var(--color-brand); margin-bottom: 48px;">
+        <p style="margin: 0; font-size: 0.9rem;">
+          <strong>重构进行中</strong>：当前为Astro + React + TypeScript新版本骨架。<br>
+          最新一期：Issue {latest.data.issue.number} · {latest.data.issue.date_display}<br>
+          封面文章：{latest.data.cover.title}
+        </p>
+      </div>
+      <h2 style="font-size: 1.2rem; margin-bottom: 16px; letter-spacing: 2px; text-transform: uppercase; color: var(--color-text-muted); font-size: 10px;">All Issues</h2>
+      <ul style="list-style: none; padding: 0;">
+        {allIssues.map(issue => (
+          <li style="padding: 12px 0; border-bottom: 1px solid var(--color-border-light);">
+            <a href={`/issues/${issue.data.issue.number}`} style="font-weight: 600; font-size: 1rem;">
+              Issue {issue.data.issue.number}
+            </a>
+            <span style="color: var(--color-text-faint); font-size: 0.85rem; margin-left: 12px; font-style: italic;">
+              {issue.data.issue.date_display}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </main>
+</BaseLayout>

@@ -1,0 +1,151 @@
+/* ═══════════════════════════════════════════
+   Dawn Vision — Design Tokens
+   ═══════════════════════════════════════════
+   从现有 style.css v3 精确迁移
+   ═══════════════════════════════════════════ */
+
+:root {
+  /* ── Colors: Brand ── */
+  --color-brand:        #002FA7;   /* International Klein Blue · 主色 */
+  --color-brand-deep:   #001a5c;   /* Deep Klein · hover深色 */
+  --color-brand-bright: #1a3fd4;   /* Bright Klein · 亮蓝 */
+  --color-brand-soft:   rgba(0, 47, 167, 0.06); /* 主色浅底 */
+  --color-brand-faint:  rgba(0, 47, 167, 0.08); /* 更浅的品牌色背景 */
+
+  /* ── Colors: Text ── */
+  --color-text:         #0a0a0a;   /* 正文主色 */
+  --color-text-soft:    #2a2a2a;   /* 正文次色 */
+  --color-text-muted:   #6b6b6b;   /* 弱化文字 (deck/摘要) */
+  --color-text-faint:   #999999;   /* 辅助文字 (meta/时间) */
+  --color-text-inverse: #ffffff;   /* 深色底白字 */
+
+  /* ── Colors: Background ── */
+  --color-bg:           #ffffff;   /* 页面底色 */
+  --color-bg-warm:      #fafafa;   /* 暖白 */
+  --color-bg-dark:      #0a0a0a;   /* 深色底 */
+  --color-bg-brand:     #002FA7;   /* 主色块底 */
+
+  /* ── Colors: Border / Rule ── */
+  --color-border:       #d4d4d4;   /* 分割线 */
+  --color-border-light: #e8e8e8;   /* 浅分割线 */
+  --color-border-brand: #002FA7;   /* 主色分割线 */
+
+  /* ── Colors: Semantic ── */
+  --color-white:        #ffffff;
+  --color-black:        #000000;
+
+  /* ── Typography: Font Families ── */
+  --font-serif:    'Source Serif 4', 'Noto Serif SC', Georgia, 'Times New Roman', serif;
+  --font-display:  'Source Serif 4', 'Noto Serif SC', Georgia, serif;
+  --font-sans:     'PT Serif', Georgia, serif;
+
+  /* ── Typography: Font Sizes (clamp for responsive) ── */
+  --text-xs:       9px;                   /* 栏目标签/大写eyebrow */
+  --text-sm:       10px;                  /* meta/byline */
+  --text-tag:      11px;                  /* 标签 */
+  --text-base:     0.92rem;               /* 卡片摘要/正文 */
+  --text-body:     1rem;                  /* 文章正文 */
+  --text-deck:     clamp(0.95rem, 1.4vw, 1.05rem); /* 封面deck */
+  --text-card:     1.2rem;                /* 卡片标题 */
+  --text-lg:       clamp(1.1rem, 2vw, 1.4rem);    /* CAO列表标题 */
+  --text-xl:       clamp(1.2rem, 2.5vw, 1.6rem);  /* CAO精选标题 */
+  --text-2xl:      clamp(1.6rem, 3.5vw, 2.4rem);  /* 封面大标题 */
+  --text-3xl:      clamp(2rem, 4vw, 2.8rem);      /* CAO区块标题 */
+  --text-hero:     clamp(2.2rem, 6vw, 4rem);      /* 文章详情hero */
+  --text-masthead: clamp(2.6rem, 7vw, 5rem);      /* 首页大标题 */
+
+  /* ── Typography: Weights ── */
+  --weight-regular: 400;
+  --weight-medium:  600;
+  --weight-bold:    700;
+  --weight-black:   900;
+
+  /* ── Typography: Line Heights ── */
+  --leading-tight:  0.95;
+  --leading-snug:   1.15;
+  --leading-normal: 1.5;
+  --leading-relaxed:1.65;
+  --leading-loose:  1.7;
+
+  /* ── Typography: Letter Spacing ── */
+  --tracking-tight:  -0.3px;
+  --tracking-tighter:-0.8px;
+  --tracking-tightest:-1.5px;
+  --tracking-wide:   2px;
+  --tracking-wider:  3px;
+  --tracking-widest: 4px;
+  --tracking-max:    5px;
+
+  /* ── Spacing Scale (4px base) ── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-7:  28px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-30: 120px;
+
+  /* ── Spacing: Semantic ── */
+  --gap-sm:   clamp(16px, 2vw, 24px);
+  --gap-md:   clamp(24px, 3.5vw, 40px);
+  --gap-lg:   clamp(28px, 4vw, 56px);
+  --gap-xl:   clamp(40px, 5vw, 64px);
+  --gap-2xl:  clamp(48px, 6vw, 72px);
+  --gap-3xl:  clamp(64px, 10vw, 120px);
+
+  /* ── Layout: Constraints ── */
+  --max-width:      1100px;  /* 内容区最大宽 */
+  --max-width-wide: 1200px;  /* 导航/hero最大宽 */
+  --max-width-text: 640px;   /* 正文阅读宽度 (measure) */
+  --padding-x:      clamp(24px, 5vw, 64px); /* 左右内边距 */
+  --padding-x-narrow: clamp(24px, 5vw, 48px);
+
+  /* ── Motion ── */
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 0.15s;
+  --duration-base: 0.25s;
+  --duration-slow: 0.3s;
+  --transition: all var(--duration-base) var(--ease-out);
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+  --shadow-cao: 0 8px 32px rgba(0,0,0,0.3);
+
+  /* ── Legacy aliases (backward compatibility with existing markup) ── */
+  --klein:        var(--color-brand);
+  --klein-deep:   var(--color-brand-deep);
+  --klein-bright: var(--color-brand-bright);
+  --ink:          var(--color-text);
+  --ink-soft:     var(--color-text-soft);
+  --gray-mid:     var(--color-text-muted);
+  --gray-light:   var(--color-text-faint);
+  --gray-rule:    var(--color-border);
+  --paper:        var(--color-bg);
+  --paper-warm:   var(--color-bg-warm);
+  --white:        var(--color-white);
+  --measure:      var(--max-width-text);
+  --serif:        var(--font-serif);
+  --serif-display:var(--font-display);
+  --sans:         var(--font-sans);
+
+  /* ── Radius ── */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  /* ── Z-index scale ── */
+  --z-nav: 100;
+  --z-modal: 200;
+  --z-toast: 300;
+}

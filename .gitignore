@@ -1,6 +1,24 @@
 __pycache__/
 *.pyc
 .DS_Store
-tools/data/
 *.log
+
+# 内容生产中间产物（raw signals和prompt临时文件）
+tools/data/raw-signals-*.json
+tools/data/prompt-*.md
+
+# Obsidian本地知识库（不发布）
+knowledge/
+notes/
+知识网络.md
+
+# Astro构建产物和依赖
+web/dist/
+web/node_modules/
+web/.astro/
+
+# 复盘文档（本地）
+DawnVision_*_retrospective.*
+
+# 本地HTML提取产物
 knowledge/*.html

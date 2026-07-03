@@ -1,0 +1,104 @@
+---
+import '@styles/global.css';
+import { siteConfig } from '@lib/config';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  canonical?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+}
+
+const {
+  title = siteConfig.name,
+  description = siteConfig.description,
+  ogImage = '/images/og-image.png',
+  canonical,
+  type = 'website',
+  noindex = false,
+} = Astro.props;
+
+const fullTitle = title === siteConfig.name ? title : `${title} — ${siteConfig.name}`;
+const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site ?? siteConfig.url).toString();
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{fullTitle}</title>
+  <meta name="description" content={description}>
+
+  {/* Canonical */}
+  <link rel="canonical" href={canonicalURL}>
+
+  {/* Favicon */}
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  {/* Fonts Preconnect */}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
+
+  {/* Open Graph */}
+  <meta property="og:type" content={type}>
+  <meta property="og:title" content={fullTitle}>
+  <meta property="og:description" content={description}>
+  <meta property="og:url" content={canonicalURL}>
+  <meta property="og:image" content={new URL(ogImage, Astro.site ?? siteConfig.url).toString()}>
+  <meta property="og:site_name" content={siteConfig.name}>
+  <meta property="og:locale" content="zh_CN">
+
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={fullTitle}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={new URL(ogImage, Astro.site ?? siteConfig.url).toString()}>
+
+  {/* Robots */}
+  {noindex ? <meta name="robots" content="noindex, nofollow"> : <meta name="robots" content="index, follow">}
+
+  {/* SEO Verification Meta (placeholders, fill in after domain verification) */}
+  {siteConfig.seo.baiduVerify && <meta name="baidu-site-verification" content={siteConfig.seo.baiduVerify}>}
+  {siteConfig.seo.sogouVerify && <meta name="sogou_site_verification" content={siteConfig.seo.sogouVerify}>}
+  {siteConfig.seo.so360Verify && <meta name="360-site-verification" content={siteConfig.seo.so360Verify}>}
+  {siteConfig.seo.bingVerify && <meta name="msvalidate.01" content={siteConfig.seo.bingVerify}>}
+  {siteConfig.seo.googleVerify && <meta name="google-site-verification" content={siteConfig.seo.googleVerify}>}
+
+  {/* Mobile friendly for Baidu */}
+  <meta name="applicable-device" content="pc,mobile">
+  <meta name="format-detection" content="telephone=no">
+
+  {/* Analytics: Cloudflare Web Analytics */}
+  {siteConfig.analytics.cloudflareBeaconToken && (
+    <script defer src={`https://static.cloudflareinsights.com/beacon.min.js`} data-cf-beacon={`{"token": "${siteConfig.analytics.cloudflareBeaconToken}"}`}></script>
+  )}
+
+  {/* Analytics: Baidu Tongji */}
+  {siteConfig.analytics.baiduTongjiId && (
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?" + "{siteConfig.analytics.baiduTongjiId}";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  )}
+
+  <slot name="head" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">跳至主要内容</a>
+  <slot />
+  <main id="main-content">
+    <slot name="main" />
+  </main>
+</body>
+</html>
