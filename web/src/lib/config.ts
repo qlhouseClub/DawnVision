@@ -2,7 +2,7 @@ export const siteConfig = {
   name: 'Dawn Vision',
   tagline: '穿越嘈杂，洞见留声',
   englishTagline: 'AI Insight Daily',
-  description: 'Dawn Vision — AI深度观察日刊，每日精选AI行业焦点，穿透信息噪声',
+  description: 'Dawn Vision — AI深度观察日刊，每日精选AI行业焦点，穿透信息噪声。焦点资讯+槽点吐槽，AI news & tech rant.',
   url: 'https://www.dawnvision.net',
   defaultLocale: 'zh-CN',
   author: 'Dawn Vision 编辑部',
