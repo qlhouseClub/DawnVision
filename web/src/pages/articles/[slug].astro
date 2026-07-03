@@ -1,16 +1,19 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import BackgroundBlobs from '@components/BackgroundBlobs.astro';
-import { getArticleBySlug, getAllIssues } from '@lib/issues';
+import { getAllIssues } from '@lib/issues';
 import '@styles/components/article.css';
 
 export async function getStaticPaths() {
   const issues = await getAllIssues();
   const paths: { params: { slug: string }; props: any }[] = [];
 
+  // Build a flat list of all articles in order (newest first) for prev/next
+  const allArticles: { slug: string; title: string; type: string }[] = [];
+
   for (const issue of issues) {
     // Cover
-    paths.push({
+    const coverPath = {
       params: { slug: issue.data.cover.slug },
       props: {
         article: issue.data.cover,
@@ -19,7 +22,9 @@ export async function getStaticPaths() {
         issueDate: issue.data.issue.date_display,
         category: 'Focus · 焦点',
       }
-    });
+    };
+    paths.push(coverPath);
+    allArticles.push({ slug: issue.data.cover.slug, title: issue.data.cover.title, type: 'cover' });
 
     // Briefs
     for (const brief of issue.data.briefs) {
@@ -33,6 +38,7 @@ export async function getStaticPaths() {
           category: brief.category_en || brief.category,
         }
       });
+      allArticles.push({ slug: brief.slug, title: brief.title, type: 'brief' });
     }
 
     // Cao
@@ -47,13 +53,22 @@ export async function getStaticPaths() {
           category: 'Cao! · 操蛇之神',
         }
       });
+      allArticles.push({ slug: issue.data.cao.slug, title: issue.data.cao.title, type: 'cao' });
     }
+  }
+
+  // Add prev/next to each path's props
+  for (const p of paths) {
+    const idx = allArticles.findIndex(a => a.slug === p.params.slug);
+    // In reading order (newest first): prev = older article (idx+1), next = newer article (idx-1)
+    p.props.prevArticle = idx < allArticles.length - 1 ? allArticles[idx + 1] : null;
+    p.props.nextArticle = idx > 0 ? allArticles[idx - 1] : null;
   }
 
   return paths;
 }
 
-const { article, type, issueNum, issueDate, category } = Astro.props;
+const { article, type, issueNum, issueDate, category, prevArticle, nextArticle } = Astro.props;
 const isCao = type === 'cao';
 
 const pageTitle = article.title_short || article.title;
@@ -100,20 +115,20 @@ const jsonLd = JSON.stringify({
     <section class={`article-hero ${isCao ? 'article-hero--cao' : ''}`}>
       <BackgroundBlobs variant="section" />
       <div class="container--narrow" style="position:relative;z-index:1;">
-        <div class="article-hero__category">{category}</div>
-        <h1 class="article-hero__title" set:html={article.title_break || article.title}></h1>
+        <div class="article-hero__category" data-pagefind-meta="category">{category}</div>
+        <h1 class="article-hero__title" data-pagefind-meta="title" set:html={article.title_break || article.title}></h1>
         <p class="article-hero__deck">{article.deck}</p>
         <div class="article-hero__meta">
           <span class="article-hero__issue">No.{issueNum}</span>
-          <span>{issueDate}</span>
+          <span data-pagefind-meta="date">{issueDate}</span>
           <span>{article.read_time}</span>
         </div>
       </div>
     </section>
 
     {/* Article Body */}
-    <article class="container--narrow" style="padding-top: clamp(40px, 6vw, 64px); padding-bottom: clamp(48px, 8vw, 80px);">
-      <div class="article-body" set:html={article.body_html}></div>
+    <article class="container--narrow" style="padding-top: clamp(40px, 6vw, 64px); padding-bottom: 0;">
+      <div class="article-body" data-pagefind-body set:html={article.body_html}></div>
 
       {/* Pull Quote */}
       {article.pull_quote && (
@@ -155,6 +170,22 @@ const jsonLd = JSON.stringify({
           )}
         </div>
       )}
+
+      {/* Prev / Next Navigation */}
+      <nav class="article-nav" aria-label="文章导航">
+        {prevArticle ? (
+          <a href={`/articles/${prevArticle.slug}`} class="article-nav__item article-nav__item--prev">
+            <div class="article-nav__label">上一篇</div>
+            <div class="article-nav__title">{prevArticle.title}</div>
+          </a>
+        ) : <div></div>}
+        {nextArticle ? (
+          <a href={`/articles/${nextArticle.slug}`} class="article-nav__item article-nav__item--next">
+            <div class="article-nav__label">下一篇</div>
+            <div class="article-nav__title">{nextArticle.title}</div>
+          </a>
+        ) : <div></div>}
+      </nav>
     </article>
   </Fragment>
 </BaseLayout>

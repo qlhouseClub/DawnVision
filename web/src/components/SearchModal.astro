@@ -1,0 +1,39 @@
+---
+/**
+ * SearchModal — Pagefind搜索模态框
+ * 支持 Cmd/Ctrl+K 快捷键触发，键盘导航（↑↓选择、Enter打开、Esc关闭）
+ */
+import '@styles/components/search.css';
+---
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="搜索文章" hidden>
+  <div class="search-modal" role="document">
+    <div class="search-modal__input-wrap">
+      <svg class="search-modal__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input
+        type="search"
+        class="search-modal__input"
+        id="search-input"
+        placeholder="搜索文章、关键词、作者..."
+        autocomplete="off"
+        spellcheck="false"
+        aria-label="搜索关键词"
+      />
+      <span class="search-modal__close-hint">ESC</span>
+    </div>
+    <div class="search-modal__results" id="search-results">
+      <div class="search-modal__empty">输入关键词开始搜索</div>
+    </div>
+    <div class="search-modal__footer">
+      <span><kbd>↑</kbd><kbd>↓</kbd> 选择</span>
+      <span><kbd>↵</kbd> 打开</span>
+      <span><kbd>⌘K</kbd> 搜索</span>
+    </div>
+  </div>
+</div>
+
+<!-- Reading progress bar (shown on article pages) -->
+<div class="reading-progress" id="reading-progress" hidden></div>

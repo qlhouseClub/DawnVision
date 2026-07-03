@@ -1,10 +1,16 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import ArticleCard from '@components/ArticleCard.astro';
+import BackgroundBlobs from '@components/BackgroundBlobs.astro';
 import { getLatestIssue } from '@lib/issues';
 import '@styles/pages/home.css';
 
 const latest = await getLatestIssue();
 const cover = latest.data.cover;
+const briefs = latest.data.briefs;
+const cao = latest.data.cao;
+const issueNum = latest.data.issue.number;
+const issueDate = latest.data.issue.date_display;
 
 const jsonLd = JSON.stringify({
   "@context": "https://schema.org",
@@ -37,7 +43,8 @@ const jsonLd = JSON.stringify({
   structuredData={jsonLd}
 >
   <Fragment slot="main">
-    <div class="home-page__hero">
+    <div class="home-page__hero" style="position:relative;overflow:hidden;">
+      <BackgroundBlobs variant="home" />
       <!-- Today's cover teaser card -->
       <article class="home-page__teaser" itemscope itemtype="https://schema.org/NewsArticle">
         <div class="home-page__teaser-label">Focus · 焦点</div>
@@ -62,5 +69,44 @@ const jsonLd = JSON.stringify({
         Dawn Vision — AI 深度观察日刊，每个工作日深度解读 AI 前沿资讯：AI Agent、大模型、具身智能、AI 商业化、一人公司
       </h2>
     </div>
+
+    {/* Today's Issue — White section below hero */}
+    <section class="home-page__today">
+      <div class="container--wide">
+        <header class="home-page__today-header">
+          <span class="home-page__today-label">Today · No.{issueNum}</span>
+          <span class="home-page__today-date">{issueDate}</span>
+        </header>
+
+        <ul class="home-page__briefs">
+          {briefs.map((brief) => (
+            <li>
+              <ArticleCard
+                variant="brief"
+                article={brief}
+                issueNum={issueNum}
+                issueDate={issueDate}
+              />
+            </li>
+          ))}
+        </ul>
+
+        {cao && (
+          <ArticleCard
+            variant="cao"
+            article={cao}
+            issueNum={issueNum}
+            issueDate={issueDate}
+            href={`/articles/${cao.slug}`}
+          />
+        )}
+
+        <div class="home-page__more">
+          <a href="/articles" class="home-page__more-link">
+            View All Articles <span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
   </Fragment>
 </BaseLayout>

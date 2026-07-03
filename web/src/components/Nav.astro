@@ -13,9 +13,11 @@ export interface Props {
 
 const { variant = 'inner', active } = Astro.props;
 const isHome = variant === 'home';
+
+const searchSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>`;
 ---
 
-<nav class={`nav nav--${variant}`} role="navigation" aria-label="主导航">
+<nav class={`nav nav--${variant}`} role="navigation" aria-label="主导航" data-pagefind-ignore>
   {isHome ? (
     <Fragment>
       <div class="nav__group">
@@ -29,6 +31,7 @@ const isHome = variant === 'home';
       <div class="nav__group">
         <a href="/cao" class={`nav__link ${active === 'cao' ? 'nav__link--active' : ''}`} aria-current={active === 'cao' ? 'page' : undefined}>Cao</a>
         <a href="/about" class={`nav__link ${active === 'about' ? 'nav__link--active' : ''}`} aria-current={active === 'about' ? 'page' : undefined}>About</a>
+        <button class="nav__search-btn" id="nav-search-btn" title="搜索 (⌘K)" set:html={searchSvg}></button>
         <button class="nav__translate-btn" id="translate-btn" title="翻译">EN</button>
       </div>
     </Fragment>
@@ -45,6 +48,7 @@ const isHome = variant === 'home';
       <div class="nav__group">
         <a href="/cao" class={`nav__link ${active === 'cao' ? 'nav__link--active' : ''}`} aria-current={active === 'cao' ? 'page' : undefined}>Cao</a>
         <a href="/about" class={`nav__link ${active === 'about' ? 'nav__link--active' : ''}`} aria-current={active === 'about' ? 'page' : undefined}>About</a>
+        <button class="nav__search-btn" id="nav-search-btn" title="搜索 (⌘K)" set:html={searchSvg}></button>
         <button class="nav__translate-btn" id="translate-btn" title="翻译">EN</button>
       </div>
     </div>

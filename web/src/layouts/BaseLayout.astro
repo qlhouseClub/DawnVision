@@ -3,7 +3,7 @@ import '@styles/global.css';
 import { siteConfig } from '@lib/config';
 import Nav from '@components/Nav.astro';
 import Footer from '@components/Footer.astro';
-import BackgroundBlobs from '@components/BackgroundBlobs.astro';
+import SearchModal from '@components/SearchModal.astro';
 
 export interface Props {
   title?: string;
@@ -172,19 +172,18 @@ const jsonLdArray = structuredData
 <body class={navVariant === 'home' ? 'home' : ''}>
   {navVariant === 'home' && (
     <style is:inline>
-      body.home { background: var(--color-brand); color: var(--color-white); position: relative; min-height: 100vh; }
+      body.home { background: var(--color-brand); color: var(--color-white); }
     </style>
   )}
   <a href="#main-content" class="skip-link">跳至主要内容</a>
 
   {navVariant === 'home' ? (
     <Fragment>
-      <BackgroundBlobs variant="home" />
       <Nav variant="home" active={activeNav} />
       <main id="main-content">
         <slot name="main" />
       </main>
-      <Footer variant="home" />
+      <Footer variant="site" />
     </Fragment>
   ) : (
     <Fragment>
@@ -198,6 +197,9 @@ const jsonLdArray = structuredData
 
   {/* Hidden GT element container */}
   <div id="google_translate_element" style="position:absolute;left:-9999px;top:-9999px;width:0;height:0;overflow:hidden;opacity:0;pointer-events:none;"></div>
+
+  {/* Search Modal + Reading Progress */}
+  <SearchModal />
 
   {/* Client interactions */}
   <script>

@@ -13,7 +13,7 @@ const { variant = 'site' } = Astro.props;
 const year = new Date().getFullYear();
 ---
 
-<footer class={`footer footer--${variant}`} role="contentinfo">
+<footer class={`footer footer--${variant}`} role="contentinfo" data-pagefind-ignore>
   {variant === 'site' ? (
     <div class="footer__container">
       <div class="footer__brand">Dawn Vision</div>
