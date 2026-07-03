@@ -1,37 +1,14 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
-import ArticleCard from '@components/ArticleCard.astro';
 import BackgroundBlobs from '@components/BackgroundBlobs.astro';
 import { getLatestIssue } from '@lib/issues';
+import { buildWebsiteJsonLd } from '@lib/seo';
 import '@styles/pages/home.css';
 
 const latest = await getLatestIssue();
 const cover = latest.data.cover;
-const briefs = latest.data.briefs;
-const cao = latest.data.cao;
-const issueNum = latest.data.issue.number;
-const issueDate = latest.data.issue.date_display;
 
-const jsonLd = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Dawn Vision",
-  "alternateName": "DawnVision",
-  "url": "https://www.dawnvision.net/",
-  "description": "穿越嘈杂，洞见留声。AI时代的深度阅读日刊，每个工作日深度解读AI前沿。",
-  "inLanguage": "zh-CN",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Dawn Vision",
-    "url": "https://www.dawnvision.net/",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.dawnvision.net/images/og-image.png",
-      "width": 1200,
-      "height": 630
-    }
-  }
-});
+const jsonLd = JSON.stringify(buildWebsiteJsonLd());
 ---
 
 <BaseLayout
@@ -39,74 +16,47 @@ const jsonLd = JSON.stringify({
   description="Dawn Vision — AI深度观察日刊，每日精选AI行业焦点，穿透信息噪声，穿越嘈杂，洞见留声。"
   navVariant="home"
   activeNav="home"
-  footerVariant="home"
   structuredData={jsonLd}
 >
   <Fragment slot="main">
-    <div class="home-page__hero" style="position:relative;overflow:hidden;">
+    <div class="home-page__hero" style="position:relative;">
       <BackgroundBlobs variant="home" />
-      <!-- Today's cover teaser card -->
-      <article class="home-page__teaser" itemscope itemtype="https://schema.org/NewsArticle">
-        <div class="home-page__teaser-label">Focus · 焦点</div>
-        <h2 class="home-page__teaser-title" itemprop="headline">{cover.title}</h2>
-        <p class="home-page__teaser-deck" itemprop="description">{cover.deck}</p>
-        <meta itemprop="datePublished" content={latest.data.issue.date} />
-        <meta itemprop="author" content="Dawn Vision 编辑部" />
-        <a href={`/articles/${cover.slug}`} class="home-page__teaser-link" itemprop="url">
-          Read More <span class="arrow">→</span>
-        </a>
-      </article>
 
-      <h1 class="home-page__title">
-        Through the Clamor,<br>
-        Insight Echoes.<br>
-        Read.
-      </h1>
+      <div class="home-page__content">
+        <!-- Search trigger button above cover -->
+        <button class="home-page__search-trigger notranslate" id="home-search-btn" aria-label="Search articles" translate="no">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <span>Search</span>
+          <kbd>⌘K</kbd>
+        </button>
 
-      <p class="home-page__tagline">穿越嘈杂，<br>洞见留声。</p>
-
-      <h2 class="sr-only">
-        Dawn Vision — AI 深度观察日刊，每个工作日深度解读 AI 前沿资讯：AI Agent、大模型、具身智能、AI 商业化、一人公司
-      </h2>
-    </div>
-
-    {/* Today's Issue — White section below hero */}
-    <section class="home-page__today">
-      <div class="container--wide">
-        <header class="home-page__today-header">
-          <span class="home-page__today-label">Today · No.{issueNum}</span>
-          <span class="home-page__today-date">{issueDate}</span>
-        </header>
-
-        <ul class="home-page__briefs">
-          {briefs.map((brief) => (
-            <li>
-              <ArticleCard
-                variant="brief"
-                article={brief}
-                issueNum={issueNum}
-                issueDate={issueDate}
-              />
-            </li>
-          ))}
-        </ul>
-
-        {cao && (
-          <ArticleCard
-            variant="cao"
-            article={cao}
-            issueNum={issueNum}
-            issueDate={issueDate}
-            href={`/articles/${cao.slug}`}
-          />
-        )}
-
-        <div class="home-page__more">
-          <a href="/articles" class="home-page__more-link">
-            View All Articles <span class="arrow">→</span>
+        <!-- Today's cover teaser card -->
+        <article class="home-page__teaser" itemscope itemtype="https://schema.org/NewsArticle">
+          <div class="home-page__teaser-label notranslate" translate="no">Focus · 焦点</div>
+          <h2 class="home-page__teaser-title" itemprop="headline">{cover.title_short || cover.title}</h2>
+          <p class="home-page__teaser-deck" itemprop="description">{cover.deck}</p>
+          <meta itemprop="datePublished" content={latest.data.issue.date} />
+          <meta itemprop="author" content="Dawn Vision 编辑部" />
+          <a href={`/articles/${cover.slug}`} class="home-page__teaser-btn notranslate" itemprop="url" translate="no">
+            Read More <span class="arrow">→</span>
           </a>
-        </div>
+        </article>
+
+        <h1 class="home-page__title notranslate" translate="no">
+          Through the Clamor,<br>
+          Insight Echoes.<br>
+          Read.
+        </h1>
+
+        <p class="home-page__tagline">穿越嘈杂，<br>洞见留声。</p>
+
+        <h2 class="sr-only">
+          Dawn Vision — AI 深度观察日刊，每个工作日深度解读 AI 前沿资讯：AI Agent、大模型、具身智能、AI 商业化、一人公司
+        </h2>
       </div>
-    </section>
+    </div>
   </Fragment>
 </BaseLayout>

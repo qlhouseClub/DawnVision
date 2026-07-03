@@ -1,0 +1,56 @@
+---
+/**
+ * Pagination — 期数分页器（按钮样式，匹配线上）
+ * @param currentIssueNum 当前期数
+ * @param issueNumbers 所有期数数组（升序: 1,2,3...最新）
+ * @param prevIssueNum 上一期（更早）期数，null表示没有更早
+ * @param isLatest 是否最新一期
+ */
+import '@styles/components/pagination.css';
+
+export interface Props {
+  currentIssueNum: string | number;
+  issueNumbers: (string | number)[];
+  prevIssueNum?: string | number | null;
+  isLatest?: boolean;
+}
+
+const {
+  currentIssueNum,
+  issueNumbers,
+  prevIssueNum = null,
+  isLatest = false,
+} = Astro.props;
+
+function pad(n: string | number) {
+  return String(n).padStart(3, '0');
+}
+---
+
+<nav class="pagination" aria-label="期数分页" data-pagination>
+  {prevIssueNum ? (
+    <a href={`/articles?issue=${prevIssueNum}`} class="pagination__nav pagination__nav--prev notranslate" translate="no" data-issue={prevIssueNum}>
+      ← Issue {pad(prevIssueNum)}
+    </a>
+  ) : (
+    <span class="pagination__nav pagination__nav--disabled">← 创刊号</span>
+  )}
+  <div class="pagination__pages">
+    {issueNumbers.map(num => (
+      <a
+        href={`/articles?issue=${num}`}
+        class={`pagination__page ${String(num) === String(currentIssueNum) ? 'is-active' : ''}`}
+        data-issue={num}
+      >
+        {parseInt(String(num))}
+      </a>
+    ))}
+  </div>
+  {isLatest ? (
+    <span class="pagination__nav pagination__nav--disabled">已是最新 →</span>
+  ) : (
+    <a href="/articles" class="pagination__nav pagination__nav--next" data-issue="latest">
+      最新一期 →
+    </a>
+  )}
+</nav>

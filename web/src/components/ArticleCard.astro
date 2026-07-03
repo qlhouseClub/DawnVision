@@ -1,15 +1,19 @@
 ---
 /**
  * ArticleCard — 文章卡片
- * @param variant 'cover' | 'brief' | 'cao' | 'cao-item'
- * @param article 文章数据 (title, deck, slug, category, read_time, etc.)
+ * @param variant 'cover' | 'grid' | 'brief' | 'cao-item'
+ *   - cover: Focus封面大卡片
+ *   - grid: Brief网格卡片（标签tag显示中文分类）
+ *   - cao-item: Cao列表项
+ * @param article 文章数据
  * @param issueNum 期数号
  * @param issueDate 期数日期显示
+ * @param showCategory 是否显示分类标签
  */
 import '@styles/components/article-card.css';
 
 export interface Props {
-  variant?: 'cover' | 'brief' | 'cao' | 'cao-item';
+  variant?: 'cover' | 'grid' | 'brief' | 'cao-item';
   article: {
     slug: string;
     title: string;
@@ -18,79 +22,75 @@ export interface Props {
     category_en?: string;
     read_time?: string;
   };
-  issueNum?: string;
+  issueNum?: string | number;
   issueDate?: string;
   href?: string;
+  showCategory?: boolean;
 }
 
 const {
-  variant = 'brief',
+  variant = 'grid',
   article,
   issueNum,
   issueDate,
   href = `/articles/${article.slug}`,
+  showCategory = true,
 } = Astro.props;
 
-const categoryText = article.category_en || article.category || '';
+function pad(n: string | number) {
+  return String(n).padStart(3, '0');
+}
+
+// Format date as YYYY.MM.DD for display
+function formatDate(dateStr?: string) {
+  if (!dateStr) return '';
+  return dateStr.replace(/-/g, '.');
+}
+
+// Chinese-only category for grid cards (translation support)
+const categoryText = article.category || '';
 ---
 
 <article class={`card card--${variant}`}>
-  {variant === 'brief' ? (
+  {variant === 'grid' ? (
     <Fragment>
-      {categoryText && (
-        <div class="card__category">{categoryText}</div>
+      {showCategory && categoryText && (
+        <span class="card__tag">{categoryText}</span>
       )}
-      <div class="card__body">
-        <h3 class="card__title">
-          <a href={href}>{article.title}</a>
-        </h3>
-        <p class="card__deck">{article.deck}</p>
-        <div class="card__meta">
-          {issueNum && <span class="card__issue">No.{issueNum}</span>}
-          {issueDate && <span>{issueDate}</span>}
-          {article.read_time && <span class="card__read-time">{article.read_time}</span>}
-        </div>
-      </div>
-    </Fragment>
-  ) : variant === 'cao' ? (
-    <Fragment>
-      <div class="card__category">Cao! · 操蛇之神</div>
       <h3 class="card__title">
         <a href={href} set:html={article.title} />
       </h3>
       <p class="card__deck">{article.deck}</p>
-      <div class="card__meta">
-        {issueNum && <span class="card__issue">No.{issueNum}</span>}
-        {issueDate && <span>{issueDate}</span>}
-        {article.read_time && <span class="card__read-time">{article.read_time}</span>}
-      </div>
     </Fragment>
   ) : variant === 'cao-item' ? (
     <Fragment>
+      <div class="card__meta notranslate" translate="no">
+        {issueNum && <span>Issue {pad(issueNum)} · {formatDate(issueDate)}</span>}
+      </div>
       <h3 class="card__title">
-        <a href={href}>{article.title}</a>
+        <a href={href} set:html={article.title} />
       </h3>
       <p class="card__deck">{article.deck}</p>
-      <div class="card__meta">
-        {issueNum && <span class="card__issue">No.{issueNum}</span>}
-        {issueDate && <span>{issueDate}</span>}
-        {article.read_time && <span class="card__read-time">{article.read_time}</span>}
+    </Fragment>
+  ) : variant === 'cover' ? (
+    <Fragment>
+      <h3 class="card__title">
+        <a href={href} set:html={article.title} />
+      </h3>
+      <p class="card__deck">{article.deck}</p>
+      <div class="card__byline">
+        <a href={href}>Dawn Vision · {article.read_time} →</a>
       </div>
     </Fragment>
   ) : (
     <Fragment>
-      {categoryText && (
+      {showCategory && categoryText && (
         <div class="card__category">{categoryText}</div>
       )}
       <h3 class="card__title">
         <a href={href} set:html={article.title} />
       </h3>
       <p class="card__deck">{article.deck}</p>
-      <div class="card__meta">
-        {issueNum && <span class="card__issue">No.{issueNum}</span>}
-        {issueDate && <span>{issueDate}</span>}
-        {article.read_time && <span class="card__read-time">{article.read_time}</span>}
-      </div>
     </Fragment>
   )}
 </article>

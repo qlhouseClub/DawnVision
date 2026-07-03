@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="zh-CN"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script>
+  (function(){
+    window.__dvAllowTranslate = true;
+    window.googleTranslateElementInit = function(){ /* overridden by interactions */ };
+    var isGT = function(u){ return typeof u==='string' && /translate\.google(apis)?\.com/.test(u); };
+    var _a=window.location.assign, _r=window.location.replace, _o=window.open;
+    window.location.assign = function(u){ if(isGT(u) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT redirect'); return; } return _a.call(window.location,u); };
+    window.location.replace = function(u){ if(isGT(u) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT redirect'); return; } return _r.call(window.location,u); };
+    window.open = function(){ if(isGT(arguments[0]) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT popup'); return null; } return _o.apply(window,arguments); };
+  })();
+  </script><title>微信接入A2A 之后 — Dawn Vision</title><meta name="description" content="微信测试A2A协议接入，Agent将在微信里直接对话完成订位、售后、挂号。社交平台终极形态可能是Agent和Agent社交。"><meta name="author" content="Dawn Vision 编辑部"><meta name="keywords" content="Dawn Vision, AI资讯, AI日报, 人工智能, 大模型, AI Agent, GPT, Claude, 具身智能, AI商业化, 一人公司, AI编程, 深度分析, AI观察, LLM, AIGC"><link rel="canonical" href="https://www.dawnvision.net/articles/wechat-ai-a2a/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="apple-touch-icon" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet"><meta property="og:type" content="article"><meta property="og:title" content="微信接入A2A 之后 — Dawn Vision"><meta property="og:description" content="微信测试A2A协议接入，Agent将在微信里直接对话完成订位、售后、挂号。社交平台终极形态可能是Agent和Agent社交。"><meta property="og:url" content="https://www.dawnvision.net/articles/wechat-ai-a2a/"><meta property="og:image" content="https://www.dawnvision.net/images/og-image.png"><meta property="og:site_name" content="Dawn Vision"><meta property="og:locale" content="zh_CN"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="微信接入A2A 之后 — Dawn Vision"><meta name="twitter:description" content="微信测试A2A协议接入，Agent将在微信里直接对话完成订位、售后、挂号。社交平台终极形态可能是Agent和Agent社交。"><meta name="twitter:image" content="https://www.dawnvision.net/images/og-image.png"><meta name="robots" content="index, follow"><meta name="applicable-device" content="pc,mobile"><meta name="format-detection" content="telephone=no"><meta name="baidu-site-verification" content><script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"微信接入A2A 之后","description":"微信测试A2A协议接入，Agent将在微信里直接对话完成订位、售后、挂号。社交平台终极形态可能是Agent和Agent社交。","datePublished":"2026-06-24","dateModified":"2026-06-24","author":{"@type":"Organization","name":"Dawn Vision 编辑部"},"publisher":{"@type":"Organization","name":"Dawn Vision","url":"https://www.dawnvision.net/","logo":{"@type":"ImageObject","url":"https://www.dawnvision.net/images/og-image.png","width":1200,"height":630}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.dawnvision.net/articles/wechat-ai-a2a"},"url":"https://www.dawnvision.net/articles/wechat-ai-a2a","inLanguage":"zh-CN","articleSection":"A2A","keywords":"微信AI, A2A协议, Agent社交, 微信Agent, 智能体通信, 超级App, AI入口, Agent互联网","wordCount":2100}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://www.dawnvision.net/"},{"@type":"ListItem","position":2,"name":"文章","item":"https://www.dawnvision.net/articles"},{"@type":"ListItem","position":3,"name":"微信接入A2A 之后"}]}</script><style>
+    iframe.goog-te-banner-frame,
+    iframe[class*="goog-te-banner"],
+    iframe[id*="goog-te-banner"],
+    .goog-te-gadget, .goog-te-gadget-icon, .goog-te-gadget-simple,
+    .goog-te-gadget span, #google_translate_element, #google_translate_element *,
+    .goog-te-spinner-pos, .goog-te-spinner,
+    img[src*="translate_spinner"], img[src*="loading"],
+    .goog-te-menu-frame, .goog-te-menu-value,
+    .goog-te-balloon-frame, .goog-text-highlight,
+    #goog-gt-tt, .goog-tooltip,
+    iframe[src*="translate.google.com"],
+    iframe[src*="translate.googleapis.com"],
+    iframe[src*="translate_p"], iframe[src*="element/"],
+    a[href*="goog-te"], .VIiyi, .JLqJ4b,
+    .skiptranslate {
+      display:none!important; visibility:hidden!important; opacity:0!important;
+      width:0!important; height:0!important; max-width:0!important; max-height:0!important;
+      overflow:hidden!important; pointer-events:none!important; position:absolute!important;
+      top:-9999px!important; left:-9999px!important;
+      margin:0!important; padding:0!important; border:0!important;
+    }
+    body, html { top:0!important; margin-top:0!important; }
+
+    /* Floating language switch button */
+    .dv-lang-switch {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 900;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: none;
+      background: #ffffff;
+      color: #002FA7;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .dv-lang-switch:hover {
+      background: #002FA7;
+      color: #fff;
+      transform: scale(1.08);
+      box-shadow: 0 4px 24px rgba(0,47,167,0.3);
+    }
+    .dv-lang-switch:disabled {
+      opacity: 0.6;
+      cursor: wait;
+      transform: none;
+    }
+    @media (max-width: 700px) {
+      .dv-lang-switch {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+        font-size: 10px;
+      }
+    }
+  </style><link rel="stylesheet" href="/_astro/502.CT2I6p4t.css">
+<style>@keyframes blobFloat{0%,to{transform:translate(0) scale(1)}33%{transform:translate(3vw,4vh) scale(1.05)}66%{transform:translate(-2vw,-3vh) scale(.97)}}.blobs--home{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--home .blob{position:absolute;border-radius:50%;filter:blur(120px);opacity:.5;animation:blobFloat 25s ease-in-out infinite;will-change:transform}.blobs--home .blob--1{width:50vw;height:50vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-5%;left:-5%;animation-delay:0s;animation-duration:30s}.blobs--home .blob--2{width:55vw;height:55vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-10s;animation-duration:28s;opacity:.6}.blobs--home .blob--3{width:40vw;height:40vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:30%;right:5%;animation-delay:-15s;animation-duration:32s;opacity:.4}.blobs--home .blob--4{width:35vw;height:35vw;background:radial-gradient(circle,rgba(80,130,255,.3) 0%,transparent 70%);top:0%;left:25%;animation-delay:-5s;animation-duration:35s;opacity:.35}.blobs--home .blob--5,.blobs--home .blob--6{display:none}.blobs--section{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--section .blob{position:absolute;border-radius:50%;filter:blur(100px);opacity:.45;animation:blobFloat 28s ease-in-out infinite;will-change:transform}.blobs--section .blob--1{width:45vw;height:45vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-10%;left:-8%;animation-delay:0s;animation-duration:30s}.blobs--section .blob--2{width:50vw;height:50vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-8s;animation-duration:26s;opacity:.55}.blobs--section .blob--3{width:35vw;height:35vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:20%;right:5%;animation-delay:-14s;animation-duration:32s}.blobs--section .blob--4,.blobs--section .blob--5{display:none}@media(max-width:700px){.blobs--home .blob{filter:blur(80px)}.blobs--section .blob{filter:blur(60px)}}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.Bhjd0_8r.css"></head> <body class>  <a href="#main-content" class="skip-link">跳至主要内容</a>  <nav class="nav nav--inner notranslate" role="navigation" aria-label="主导航" data-pagefind-ignore translate="no"> <div class="nav__inner"> <div class="nav__group"> <a href="/" class="nav__link ">Home</a> <a href="/articles" class="nav__link nav__link--active" aria-current="page">Articles</a> </div> <a href="/" class="nav__brand" aria-label="Dawn Vision 首页" translate="no">
+Dawn Vision
+<small>Daily Briefing</small> </a> <div class="nav__group"> <a href="/cao" class="nav__link ">Cao</a> <a href="/about" class="nav__link ">About</a> </div> </div> </nav> <main id="main-content"> <section class="article-hero "> <div class="blobs blobs--section" aria-hidden="true"> <div class="blob blob--1"></div><div class="blob blob--2"></div><div class="blob blob--3"></div><div class="blob blob--4"></div><div class="blob blob--5"></div> </div> <div class="container--narrow" style="position:relative;z-index:1;"> <div class="article-hero__category notranslate" data-pagefind-meta="category" translate="no">A2A</div> <h1 class="article-hero__title" data-pagefind-meta="title">微信接入<br/>A2A 之后</h1> <p class="article-hero__deck">当 13 亿人的超级 App 开始支持 Agent 间通信，微信不再只是聊天工具——它可能成为 Agent 互联网的 TCP/IP 层。</p> <div class="article-hero__meta"> <span class="article-hero__issue notranslate" translate="no">No.001</span> <span>2026.06.24</span> <span>约 7 分钟阅读</span> </div> </div> </section> <article class="container--narrow" style="padding-top: clamp(40px, 6vw, 64px); padding-bottom: 0;"> <div class="article-body" data-pagefind-body><p>本周一个被大多数人忽略的消息，可能是今年 AI 领域最重要的信号之一。</p>
+<p>据多个信源透露，微信正在内测 A2A（Agent-to-Agent）协议的接入能力。简单说：未来在微信里，你的个人 AI Agent 可以直接和商家、服务商、机构的 Agent 对话，完成预订、购买、售后、挂号等各种事务——你不需要打开任何其他 App，不需要填写任何表单，甚至不需要亲自打字。</p>
+<p>这个变化听起来不起眼，但它可能重新定义"互联网入口"这个概念。</p>
+<h2>A2A 是什么？为什么重要？</h2>
+<p>A2A（Agent-to-Agent Protocol）是 Google 在 2025 年初联合 50 多家企业推出的开放协议，目标是让不同平台、不同公司开发的 AI Agent 能够互相"说话"、互相协作。你可以把它理解为 Agent 世界的 HTTP——在 HTTP 出现之前，不同的计算机网络互不连通；HTTP 统一了通信标准之后，互联网才真正诞生。</p>
+<p>A2A 要做的事情一样：让 Anthropic 的 Agent 能和 Google 的 Agent 协作，让企业的客服 Agent 能和用户的个人 Agent 对话，让不同生态系统里的 Agent 打破围墙。</p>
+<p>Google 推动 A2A 是有战略意图的——它想成为 Agent 互联网的"标准制定者"，就像它在 Android 生态做的那样。但 A2A 最大的变量不是 Google，而是微信。</p>
+<h2>微信的独特位置</h2>
+<p>Google 有 Android 和 Google Assistant，但它没有一个 13 亿月活、深度嵌入日常生活的超级 App。微信有。</p>
+<p>想想看，微信已经承载了中国人日常生活的多少场景：聊天（社交）、公众号（内容）、小程序（服务）、支付（交易）、视频号（媒体）。从约饭到挂号到交水电费到办签证，几乎没有什么事情是微信做不了的。</p>
+<p>但微信也有一个致命的体验问题：服务太多但入口太深。你想在微信里挂号，需要找到对应的医院小程序、注册、选择科室、选择时间、填写信息——每一步都有流失率，每一步都有用户因为"太麻烦"而放弃。小程序用完即走的理念是好的，但"找到小程序"本身就是一个门槛。</p>
+<p>A2A 协议完美解决了这个问题。</p>
+<h2>Agent 社交场景：想象一下</h2>
+<p>接入 A2A 之后，微信里的体验会变成什么样？</p>
+<p><strong>场景一：订餐厅</strong>。你对你的微信 Agent 说"周六晚上七点，帮我在公司附近找一家人均 200 左右的日料，四个人"。你的 Agent 直接在微信里和大众点评/美团的餐厅 Agent 对话，查询空位、确认时间、用微信支付付定金——你只需要在最后确认一下就行。不需要打开大众点评，不需要筛选，不需要手动填信息。</p>
+<p><strong>场景二：电商售后</strong>。你买的耳机有问题，你的 Agent 直接和京东/淘宝的客服 Agent 对话，说明问题、提供订单号、要求退换货。如果是常见问题，两个 Agent 在几秒内就达成解决方案；如果是复杂问题，才升级到人类客服。不需要你自己打字描述问题、等客服回复、反复沟通。</p>
+<p><strong>场景三：日程协调</strong>。你想约三个朋友周末打球。你的 Agent 直接和三个朋友的 Agent 对话，比对四个人的日程、找合适的场地、确认时间——全部自动协商，最后给你一个确认通知。不需要在群里来来回回讨论"周六行不行""周日呢""三点怎么样"。</p>
+<p><strong>场景四：差旅安排</strong>。你的 Agent 和航司 Agent 对话查机票，和酒店 Agent 对话订房间，和滴滴 Agent 预约接送机，和公司报销 Agent 同步行程——整个差旅安排在几分钟内自动完成，你只需要说"帮我安排下周三去上海的出差"。</p>
+<div class="pull-quote">
+        "互联网的第一次革命是'人找信息'（搜索），第二次是'信息找人'（推荐），第三次可能是'Agent 替人办事'。"
+        <span class="pull-quote__attr">—— 某互联网产品老兵</span>
+</div>
+<h2>为什么是微信，不是其他 App？</h2>
+<p>支付宝、美团、抖音都在做 AI Agent，但它们有一个共同的问题：它们都是"单领域"的 App。支付宝管钱，美团管本地生活，抖音管内容娱乐——你的 Agent 在这些 App 里只能做一类事情。</p>
+<p>微信不同。微信是一个"通用通信层"——它不做所有事情，但它连接所有做事情的人（和服务）。公众号连接内容创作者，小程序连接服务商，微信支付连接交易，企业微信连接 B 端。微信天然就是一个"Agent 与 Agent 之间对话的场所"。</p>
+<p>更关键的是社交关系链。Agent 之间的协作不是纯机器对机器的——它需要人的授权、人的社交关系、人的信任网络。你让你的 Agent 去和餐厅 Agent 订位，背后是你和朋友的社交关系、你对餐厅品牌的信任、你的支付习惯——这些数据全部在微信里。</p>
+<h2>对行业的影响</h2>
+<p>如果微信真的全面接入 A2A，几个深远的变化可能发生：</p>
+<p>第一，小程序的形态会变。现在的小程序是"人操作的界面"，未来的小程序可能进化为"Agent 调用的接口"。开发者不再需要做精美的 UI，而是需要提供标准化的 Agent 接口——就像从网站时代到 API 时代的转变一样。</p>
+<p>第二，App 的价值会被重新定义。如果所有服务都可以通过 Agent 在微信里完成，用户为什么还要下载独立 App？这对所有非超级 App 都是巨大的威胁，但对微信来说是巨大的机会——它可能成为 Agent 时代的"操作系统"。</p>
+<p>第三，新的商业生态会出现。Agent 之间的交易怎么分成？Agent 推荐服务的佣金模型是什么？Agent 的"身份认证"怎么做？这些都是全新的问题，也是全新的商业机会。</p>
+<h2>还远吗？</h2>
+<p>A2A 协议还在早期阶段，微信的接入也在内测阶段。安全问题（Agent 能不能替你花钱？）、隐私问题（Agent 之间的对话数据归谁？）、标准化问题（不同平台的 Agent 真的能顺畅对话吗？）都还没有完美答案。</p>
+<p>但方向是清晰的：未来的互联网，不只是人在上网，Agent 也在上网。人负责决策和享受结果，Agent 负责沟通和执行。微信作为中国最大的"通信层"，在这个转变中拥有得天独厚的优势。</p>
+<p>十年前我们说"微信连接一切"，那时候连接的是人和人、人和信息、人和服务。下一个十年，微信可能连接的是 Agent 和 Agent——而那才是真正的"万物互联"。</p>
+<hr/>
+<p>明天见。</p></div>  <blockquote class="article-pull-quote"> <p class="article-pull-quote__text">互联网的第一次革命是&#39;人找信息&#39;（搜索），第二次是&#39;信息找人&#39;（推荐），第三次可能是&#39;Agent 替人办事&#39;。</p> <cite class="article-pull-quote__attr">—— 某互联网产品老兵</cite> </blockquote>    <div class="article-cognitive">A2A 协议深度拆解 · 微信 AI 生态路线图 · Agent 互联网的 TCP/IP 时刻 · 超级 App 的 Agent 转型</div>  <div class="article-sources"> <div class="article-sources__title notranslate" translate="no">Sources · 信源</div> <ul class="article-sources__list"> <li class="article-sources__item"> <a href="https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/" target="_blank" rel="noopener noreferrer">Google Developers - A2A (Agent-to-Agent) 协议官方公告</a> </li><li class="article-sources__item"> <a href="https://a2a-protocol.org/" target="_blank" rel="noopener noreferrer">A2A Protocol 官方网站与协议规范</a> </li><li class="article-sources__item"> 微信公开课 - 微信 AI 能力与生态开放计划 </li><li class="article-sources__item"> 36氪 - 微信内测 A2A 协议接入报道 </li><li class="article-sources__item"> 极客公园 - 超级 App 的 AI 转型与 Agent 生态分析 </li> </ul> <p class="article-source-summary">本文基于 Dawn Vision 认知引擎处理的 10 个源信号自动生成，经编辑部人工审核。素材来源包括：A2A 协议规范、微信生态开放动态、Agent 通信技术分析、超级 App 竞争格局。</p> </div>  <div class="article-actions"> <button class="article-action-btn article-action-btn--like" id="article-like-btn" data-slug="wechat-ai-a2a" aria-label="喜欢这篇文章"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path> </svg> <span class="article-action-btn__label">喜欢</span> <span class="article-action-btn__count" id="like-count">0</span> </button> <button class="article-action-btn article-action-btn--tip" id="article-tip-btn" aria-label="打赏"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon> </svg> <span class="article-action-btn__label">打赏</span> </button> </div>  <nav class="article-nav" aria-label="文章导航"> <a href="/articles/ai-video-boom" class="article-nav__item article-nav__item--prev"> <div class="article-nav__label">上一篇</div> <div class="article-nav__title">Sora 正式开放视频生成跨过门槛</div> </a> <a href="/articles/ai-ecommerce-pod" class="article-nav__item article-nav__item--next"> <div class="article-nav__label">下一篇</div> <div class="article-nav__title">AI 电商Pod 模式</div> </a> </nav> </article>  </main> <footer class="footer footer--site" role="contentinfo" data-pagefind-ignore> <div class="footer__container"> <div class="footer__brand notranslate" translate="no">Dawn Vision</div> <div class="footer__meta notranslate" translate="no">© 2026 · Daily at 16:30 CST · Weekdays Only</div> </div> </footer>   <div id="google_translate_element" style="position:absolute;left:-9999px;top:-9999px;width:0;height:0;overflow:hidden;opacity:0;pointer-events:none;"></div>  <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="搜索文章" hidden> <div class="search-modal" role="document"> <div class="search-modal__input-wrap"> <svg class="search-modal__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="11" cy="11" r="8"></circle> <line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> <input type="search" class="search-modal__input" id="search-input" placeholder="搜索文章、关键词、作者..." autocomplete="off" spellcheck="false" aria-label="搜索关键词"> <span class="search-modal__close-hint">ESC</span> </div> <div class="search-modal__results" id="search-results"> <div class="search-modal__empty">输入关键词开始搜索</div> </div> <div class="search-modal__footer"> <span><kbd>↑</kbd><kbd>↓</kbd> 选择</span> <span><kbd>↵</kbd> 打开</span> <span><kbd>⌘K</kbd> 搜索</span> </div> </div> </div> <!-- Reading progress bar (shown on article pages) --> <div class="reading-progress" id="reading-progress" hidden></div>  <div class="tip-modal" id="tip-modal" hidden> <div class="tip-modal__overlay" data-tip-close></div> <div class="tip-modal__content" role="dialog" aria-modal="true" aria-label="打赏支持"> <button class="tip-modal__close" data-tip-close aria-label="关闭">×</button> <h3 class="tip-modal__title notranslate" translate="no">Tip Jar</h3> <p class="tip-modal__desc">谢谢老板请我喝奶茶 ☕</p> <div class="tip-modal__qr-wrap"> <img src="/images/reward-qr.webp" alt="打赏二维码" class="tip-modal__qr" width="200" height="200"> </div> <p class="tip-modal__thanks">微信扫码打赏，你的支持是持续创作的动力。</p> </div> </div>  <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.ByegvZaa.js"></script>  <script>
+  (function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') { bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'; }
+    else { bp.src = 'http://push.zhanzhang.baidu.com/push.js'; }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+  </script> </body> </html>

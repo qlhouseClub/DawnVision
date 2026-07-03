@@ -1,8 +1,10 @@
 ---
 /**
  * Nav — 顶部导航栏
- * @param variant 'home' | 'inner' — 首页版（Klein蓝底白字）或内页版（白底磨砂玻璃）
+ * @param variant 'home' | 'inner' — 首页版（Klein蓝底白字）或内页版（白底磨砂玻璃吸顶）
  * @param active 当前激活的导航项: 'home' | 'articles' | 'cao' | 'about'
+ *
+ * 注意: 导航文本固定为英文，不翻译 (Home/Articles/Cao/About/Dawn Vision/Daily Briefing)
  */
 import '@styles/components/nav.css';
 
@@ -13,26 +15,22 @@ export interface Props {
 
 const { variant = 'inner', active } = Astro.props;
 const isHome = variant === 'home';
-
-const searchSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>`;
 ---
 
-<nav class={`nav nav--${variant}`} role="navigation" aria-label="主导航" data-pagefind-ignore>
+<nav class={`nav nav--${variant} notranslate`} role="navigation" aria-label="主导航" data-pagefind-ignore translate="no">
   {isHome ? (
     <Fragment>
       <div class="nav__group">
         <a href="/" class={`nav__link ${active === 'home' ? 'nav__link--active' : ''}`} aria-current={active === 'home' ? 'page' : undefined}>Home</a>
         <a href="/articles" class={`nav__link ${active === 'articles' ? 'nav__link--active' : ''}`} aria-current={active === 'articles' ? 'page' : undefined}>Articles</a>
       </div>
-      <a href="/" class="nav__brand" aria-label="Dawn Vision 首页">
+      <a href="/" class="nav__brand" aria-label="Dawn Vision 首页" translate="no">
         Dawn Vision
         <small>Daily Briefing</small>
       </a>
       <div class="nav__group">
         <a href="/cao" class={`nav__link ${active === 'cao' ? 'nav__link--active' : ''}`} aria-current={active === 'cao' ? 'page' : undefined}>Cao</a>
         <a href="/about" class={`nav__link ${active === 'about' ? 'nav__link--active' : ''}`} aria-current={active === 'about' ? 'page' : undefined}>About</a>
-        <button class="nav__search-btn" id="nav-search-btn" title="搜索 (⌘K)" set:html={searchSvg}></button>
-        <button class="nav__translate-btn" id="translate-btn" title="翻译">EN</button>
       </div>
     </Fragment>
   ) : (
@@ -41,15 +39,13 @@ const searchSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
         <a href="/" class={`nav__link ${active === 'home' ? 'nav__link--active' : ''}`} aria-current={active === 'home' ? 'page' : undefined}>Home</a>
         <a href="/articles" class={`nav__link ${active === 'articles' ? 'nav__link--active' : ''}`} aria-current={active === 'articles' ? 'page' : undefined}>Articles</a>
       </div>
-      <a href="/" class="nav__brand" aria-label="Dawn Vision 首页">
+      <a href="/" class="nav__brand" aria-label="Dawn Vision 首页" translate="no">
         Dawn Vision
         <small>Daily Briefing</small>
       </a>
       <div class="nav__group">
         <a href="/cao" class={`nav__link ${active === 'cao' ? 'nav__link--active' : ''}`} aria-current={active === 'cao' ? 'page' : undefined}>Cao</a>
         <a href="/about" class={`nav__link ${active === 'about' ? 'nav__link--active' : ''}`} aria-current={active === 'about' ? 'page' : undefined}>About</a>
-        <button class="nav__search-btn" id="nav-search-btn" title="搜索 (⌘K)" set:html={searchSvg}></button>
-        <button class="nav__translate-btn" id="translate-btn" title="翻译">EN</button>
       </div>
     </div>
   )}

@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="zh-CN"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script>
+  (function(){
+    window.__dvAllowTranslate = true;
+    window.googleTranslateElementInit = function(){ /* overridden by interactions */ };
+    var isGT = function(u){ return typeof u==='string' && /translate\.google(apis)?\.com/.test(u); };
+    var _a=window.location.assign, _r=window.location.replace, _o=window.open;
+    window.location.assign = function(u){ if(isGT(u) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT redirect'); return; } return _a.call(window.location,u); };
+    window.location.replace = function(u){ if(isGT(u) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT redirect'); return; } return _r.call(window.location,u); };
+    window.open = function(){ if(isGT(arguments[0]) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT popup'); return null; } return _o.apply(window,arguments); };
+  })();
+  </script><title>天工3.2给Agent发&quot;工牌&quot;：AReaL 2.0开源，智能体从工具变同事 — Dawn Vision</title><meta name="description" content="天工3.2发布Agent工牌功能，AReaL 2.0开源RL基础设施，Agent进入自演进阶段。"><meta name="author" content="Dawn Vision 编辑部"><meta name="keywords" content="Dawn Vision, AI资讯, AI日报, 人工智能, 大模型, AI Agent, GPT, Claude, 具身智能, AI商业化, 一人公司, AI编程, 深度分析, AI观察, LLM, AIGC"><link rel="canonical" href="https://www.dawnvision.net/articles/skywork-3-2-tags-agent-work-id-areal-2-rl/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="apple-touch-icon" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet"><meta property="og:type" content="article"><meta property="og:title" content="天工3.2给Agent发&#34;工牌&#34;：AReaL 2.0开源，智能体从工具变同事 — Dawn Vision"><meta property="og:description" content="天工3.2发布Agent工牌功能，AReaL 2.0开源RL基础设施，Agent进入自演进阶段。"><meta property="og:url" content="https://www.dawnvision.net/articles/skywork-3-2-tags-agent-work-id-areal-2-rl/"><meta property="og:image" content="https://www.dawnvision.net/images/og-image.png"><meta property="og:site_name" content="Dawn Vision"><meta property="og:locale" content="zh_CN"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="天工3.2给Agent发&#34;工牌&#34;：AReaL 2.0开源，智能体从工具变同事 — Dawn Vision"><meta name="twitter:description" content="天工3.2发布Agent工牌功能，AReaL 2.0开源RL基础设施，Agent进入自演进阶段。"><meta name="twitter:image" content="https://www.dawnvision.net/images/og-image.png"><meta name="robots" content="index, follow"><meta name="applicable-device" content="pc,mobile"><meta name="format-detection" content="telephone=no"><meta name="baidu-site-verification" content><script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"天工3.2给Agent发\"工牌\"：AReaL 2.0开源，智能体从工具变同事","description":"天工3.2发布Agent工牌功能，AReaL 2.0开源RL基础设施，Agent进入自演进阶段。","datePublished":"2026-07-03","dateModified":"2026-07-03","author":{"@type":"Organization","name":"Dawn Vision 编辑部"},"publisher":{"@type":"Organization","name":"Dawn Vision","url":"https://www.dawnvision.net/","logo":{"@type":"ImageObject","url":"https://www.dawnvision.net/images/og-image.png","width":1200,"height":630}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.dawnvision.net/articles/skywork-3-2-tags-agent-work-id-areal-2-rl"},"url":"https://www.dawnvision.net/articles/skywork-3-2-tags-agent-work-id-areal-2-rl","inLanguage":"zh-CN","articleSection":"AI Agent · Engineering","keywords":"Dawn Vision,天工3.2,Skywork Tags,AI Agent,AReaL 2.0,强化学习,智能体,数字员工","wordCount":760}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://www.dawnvision.net/"},{"@type":"ListItem","position":2,"name":"文章","item":"https://www.dawnvision.net/articles"},{"@type":"ListItem","position":3,"name":"天工3.2给Agent发\"工牌\"：AReaL 2.0开源，智能体从工具变同事"}]}</script><style>
+    iframe.goog-te-banner-frame,
+    iframe[class*="goog-te-banner"],
+    iframe[id*="goog-te-banner"],
+    .goog-te-gadget, .goog-te-gadget-icon, .goog-te-gadget-simple,
+    .goog-te-gadget span, #google_translate_element, #google_translate_element *,
+    .goog-te-spinner-pos, .goog-te-spinner,
+    img[src*="translate_spinner"], img[src*="loading"],
+    .goog-te-menu-frame, .goog-te-menu-value,
+    .goog-te-balloon-frame, .goog-text-highlight,
+    #goog-gt-tt, .goog-tooltip,
+    iframe[src*="translate.google.com"],
+    iframe[src*="translate.googleapis.com"],
+    iframe[src*="translate_p"], iframe[src*="element/"],
+    a[href*="goog-te"], .VIiyi, .JLqJ4b,
+    .skiptranslate {
+      display:none!important; visibility:hidden!important; opacity:0!important;
+      width:0!important; height:0!important; max-width:0!important; max-height:0!important;
+      overflow:hidden!important; pointer-events:none!important; position:absolute!important;
+      top:-9999px!important; left:-9999px!important;
+      margin:0!important; padding:0!important; border:0!important;
+    }
+    body, html { top:0!important; margin-top:0!important; }
+
+    /* Floating language switch button */
+    .dv-lang-switch {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 900;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: none;
+      background: #ffffff;
+      color: #002FA7;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .dv-lang-switch:hover {
+      background: #002FA7;
+      color: #fff;
+      transform: scale(1.08);
+      box-shadow: 0 4px 24px rgba(0,47,167,0.3);
+    }
+    .dv-lang-switch:disabled {
+      opacity: 0.6;
+      cursor: wait;
+      transform: none;
+    }
+    @media (max-width: 700px) {
+      .dv-lang-switch {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+        font-size: 10px;
+      }
+    }
+  </style><link rel="stylesheet" href="/_astro/502.CT2I6p4t.css">
+<style>@keyframes blobFloat{0%,to{transform:translate(0) scale(1)}33%{transform:translate(3vw,4vh) scale(1.05)}66%{transform:translate(-2vw,-3vh) scale(.97)}}.blobs--home{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--home .blob{position:absolute;border-radius:50%;filter:blur(120px);opacity:.5;animation:blobFloat 25s ease-in-out infinite;will-change:transform}.blobs--home .blob--1{width:50vw;height:50vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-5%;left:-5%;animation-delay:0s;animation-duration:30s}.blobs--home .blob--2{width:55vw;height:55vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-10s;animation-duration:28s;opacity:.6}.blobs--home .blob--3{width:40vw;height:40vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:30%;right:5%;animation-delay:-15s;animation-duration:32s;opacity:.4}.blobs--home .blob--4{width:35vw;height:35vw;background:radial-gradient(circle,rgba(80,130,255,.3) 0%,transparent 70%);top:0%;left:25%;animation-delay:-5s;animation-duration:35s;opacity:.35}.blobs--home .blob--5,.blobs--home .blob--6{display:none}.blobs--section{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--section .blob{position:absolute;border-radius:50%;filter:blur(100px);opacity:.45;animation:blobFloat 28s ease-in-out infinite;will-change:transform}.blobs--section .blob--1{width:45vw;height:45vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-10%;left:-8%;animation-delay:0s;animation-duration:30s}.blobs--section .blob--2{width:50vw;height:50vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-8s;animation-duration:26s;opacity:.55}.blobs--section .blob--3{width:35vw;height:35vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:20%;right:5%;animation-delay:-14s;animation-duration:32s}.blobs--section .blob--4,.blobs--section .blob--5{display:none}@media(max-width:700px){.blobs--home .blob{filter:blur(80px)}.blobs--section .blob{filter:blur(60px)}}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.Bhjd0_8r.css"></head> <body class>  <a href="#main-content" class="skip-link">跳至主要内容</a>  <nav class="nav nav--inner notranslate" role="navigation" aria-label="主导航" data-pagefind-ignore translate="no"> <div class="nav__inner"> <div class="nav__group"> <a href="/" class="nav__link ">Home</a> <a href="/articles" class="nav__link nav__link--active" aria-current="page">Articles</a> </div> <a href="/" class="nav__brand" aria-label="Dawn Vision 首页" translate="no">
+Dawn Vision
+<small>Daily Briefing</small> </a> <div class="nav__group"> <a href="/cao" class="nav__link ">Cao</a> <a href="/about" class="nav__link ">About</a> </div> </div> </nav> <main id="main-content"> <section class="article-hero "> <div class="blobs blobs--section" aria-hidden="true"> <div class="blob blob--1"></div><div class="blob blob--2"></div><div class="blob blob--3"></div><div class="blob blob--4"></div><div class="blob blob--5"></div> </div> <div class="container--narrow" style="position:relative;z-index:1;"> <div class="article-hero__category notranslate" data-pagefind-meta="category" translate="no">AI Agent · Engineering</div> <h1 class="article-hero__title" data-pagefind-meta="title">天工3.2给Agent发"工牌"<br>智能体从工具变同事</h1> <p class="article-hero__deck">天工3.2上线Skywork Tags让Agent以&quot;数字员工&quot;身份加入工作群，AReaL 2.0开源打造自演进Agent的RL基础设施。Agent从被动工具进化为可成长的协作伙伴。</p> <div class="article-hero__meta"> <span class="article-hero__issue notranslate" translate="no">No.008</span> <span>2026.07.03</span> <span>约 5 分钟阅读</span> </div> </div> </section> <article class="container--narrow" style="padding-top: clamp(40px, 6vw, 64px); padding-bottom: 0;"> <div class="article-body" data-pagefind-body>      <p>你在工作群里@的同事，可能很快就不是人类了。</p>
+      <p>7月2日，昆仑万维发布天工3.2大模型升级，核心功能是<strong>Skywork Tags</strong>——给AI Agent发一张"工牌"，让它以正式"数字员工"的身份加入企业工作群聊，和人并肩工作。这不是一个聊天机器人，而是一个有身份、有角色、有任务边界的Agent，可以被@、被指派任务、被追踪绩效。同一天，AReaL 2.0开源发布，为自演进智能体提供强化学习基础设施——让Agent在使用中越变越强。</p>
+
+      <h2>从工具到同事：Agent的身份进化</h2>
+      <p>Skywork Tags的本质是Agent身份系统。在此之前，企业用AI大多是"打开一个对话框问问题"的模式——AI是工具，人是使用者，用完就走。Skywork Tags改变了这个关系：Agent有了工号、有了角色（如"数据分析专员""客服助理"）、有权限边界，可以存在于飞书/钉钉/企业微信的群聊里，像一个真正的员工一样被@、被分配任务、汇报工作。</p>
+      <p>爱范儿报道的飞书AI助手展示了类似趋势：<strong>从"打开一个AI对话框"到"在群里直接@AI"</strong>，交互方式从"人找AI"变成"AI在工作流中随时待命"。钉钉的A1录音卡也入选了Gartner AI可穿戴设备报告，说明AI硬件+工作场景的结合正在加速。</p>
+      <p>这个变化看似只是交互方式的调整，实际上是企业对Agent认知的根本转变：AI不再是一个"高级搜索引擎"，而是一个可以承担特定职责的"虚拟员工"。这意味着Agent需要的不只是更强的模型能力，还需要<strong>身份管理、权限控制、任务追踪、绩效评估</strong>等一整套"人力资源管理"基础设施。</p>
+
+      <h2>让Agent越用越强：RL基础设施补位</h2>
+      <p>但一个"数字员工"如果永远停留在入职第一天的水平，是没有价值的。这就是AReaL 2.0要解决的问题。</p>
+      <p>AReaL 2.0是一个面向自演进智能体的开源强化学习（RL）基础设施。简单说，它让Agent可以在与环境的交互中持续学习、自我优化，而不是每次都依赖人工标注和重新训练。<strong>传统的大模型训练是"一次性"的——训练完成后模型能力就固定了；而AReaL的目标是让Agent在使用过程中持续进化</strong>，像一个新员工从入职到熟练的过程。</p>
+      <p>InfoQ的分析指出，Agent规模化落地的一大痛点就是"越用越笨"——在固定的模型权重下，Agent无法从成功和失败中学习，同样的错误会一犯再犯。AReaL 2.0提供的RL基础设施，让Agent可以从环境反馈中学习，逐步优化策略。这对于企业场景尤其重要：一个客服Agent如果每次遇到新问题都要人工介入才能解决，那就不叫自动化。</p>
+      <p>这两条新闻放在一起，勾勒出Agent发展的下一个阶段：<strong>从"能用"到"好用"再到"越用越好"</strong>。天工Skywork Tags解决了Agent"进入工作场景"的身份问题，AReaL 2.0解决了Agent"持续成长"的能力问题。当Agent可以像人一样有身份、有角色、能学习、会进步，它就真正从工具变成了同事。</p>
+      <p>当然，Agent"入职"也带来新问题：谁来管理这些数字员工？它们的绩效怎么考核？犯了错谁负责？这些问题目前还没有答案，但方向已经清晰了——<strong>未来的工作群里，人类和AI会混在一起，你可能分不清谁是谁</strong>。</p></div>  <blockquote class="article-pull-quote"> <p class="article-pull-quote__text">未来你在工作群@同事时，最好先确认一下它是不是人类。</p> <cite class="article-pull-quote__attr">—— 一位产品经理的调侃</cite> </blockquote>    <div class="article-cognitive">AI Agent · 天工3.2 · Skywork Tags · AReaL 2.0 · 强化学习 · 数字员工 · Agent身份系统 · 自演进智能体</div>  <div class="article-sources"> <div class="article-sources__title notranslate" translate="no">Sources · 信源</div> <ul class="article-sources__list"> <li class="article-sources__item"> <a href="https://www.qbitai.com/2026/07/442030.html" target="_blank" rel="noopener noreferrer">量子位 - 天工3.2重磅升级：Skywork Tags上线，给Agent一张工牌</a> </li><li class="article-sources__item"> <a href="https://www.qbitai.com/2026/07/442134.html" target="_blank" rel="noopener noreferrer">量子位 - 让Agent越用越强：AReaL 2.0开源，面向自演进智能体的RL基础设施</a> </li><li class="article-sources__item"> <a href="https://www.infoq.cn/article/IeXGCZqbv5WQ5zFQXoup" target="_blank" rel="noopener noreferrer">InfoQ - 让Agent越用越强：AReaL 2.0开源，给智能体装上&quot;成长系统&quot;</a> </li><li class="article-sources__item"> <a href="https://www.ifanr.com/1670632" target="_blank" rel="noopener noreferrer">爱范儿 - 从疯狂翻表到群里直接@AI：飞书来了个新同事</a> </li> </ul> <p class="article-source-summary">本文基于 Dawn Vision 认知引擎处理的 10 个源信号生成，经编辑部人工审核。素材来源：量子位、InfoQ、爱范儿。</p> </div>  <div class="article-actions"> <button class="article-action-btn article-action-btn--like" id="article-like-btn" data-slug="skywork-3-2-tags-agent-work-id-areal-2-rl" aria-label="喜欢这篇文章"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path> </svg> <span class="article-action-btn__label">喜欢</span> <span class="article-action-btn__count" id="like-count">0</span> </button> <button class="article-action-btn article-action-btn--tip" id="article-tip-btn" aria-label="打赏"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon> </svg> <span class="article-action-btn__label">打赏</span> </button> </div>  <nav class="article-nav" aria-label="文章导航"> <a href="/articles/alibaba-damo-ai-superconductor-discovery-elementsclaw" class="article-nav__item article-nav__item--prev"> <div class="article-nav__label">上一篇</div> <div class="article-nav__title">达摩院AI发现4种全新超导材料：6.8万候选已实验验证，科研范式真变了</div> </a> <a href="/articles/anthropic-samsung-custom-ai-chip-nvidia-independence" class="article-nav__item article-nav__item--next"> <div class="article-nav__label">下一篇</div> <div class="article-nav__title">Anthropic找三星造芯：OpenAI Jalapeño之后，AI公司集体逃离英伟达</div> </a> </nav> </article>  </main> <footer class="footer footer--site" role="contentinfo" data-pagefind-ignore> <div class="footer__container"> <div class="footer__brand notranslate" translate="no">Dawn Vision</div> <div class="footer__meta notranslate" translate="no">© 2026 · Daily at 16:30 CST · Weekdays Only</div> </div> </footer>   <div id="google_translate_element" style="position:absolute;left:-9999px;top:-9999px;width:0;height:0;overflow:hidden;opacity:0;pointer-events:none;"></div>  <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="搜索文章" hidden> <div class="search-modal" role="document"> <div class="search-modal__input-wrap"> <svg class="search-modal__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="11" cy="11" r="8"></circle> <line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> <input type="search" class="search-modal__input" id="search-input" placeholder="搜索文章、关键词、作者..." autocomplete="off" spellcheck="false" aria-label="搜索关键词"> <span class="search-modal__close-hint">ESC</span> </div> <div class="search-modal__results" id="search-results"> <div class="search-modal__empty">输入关键词开始搜索</div> </div> <div class="search-modal__footer"> <span><kbd>↑</kbd><kbd>↓</kbd> 选择</span> <span><kbd>↵</kbd> 打开</span> <span><kbd>⌘K</kbd> 搜索</span> </div> </div> </div> <!-- Reading progress bar (shown on article pages) --> <div class="reading-progress" id="reading-progress" hidden></div>  <div class="tip-modal" id="tip-modal" hidden> <div class="tip-modal__overlay" data-tip-close></div> <div class="tip-modal__content" role="dialog" aria-modal="true" aria-label="打赏支持"> <button class="tip-modal__close" data-tip-close aria-label="关闭">×</button> <h3 class="tip-modal__title notranslate" translate="no">Tip Jar</h3> <p class="tip-modal__desc">谢谢老板请我喝奶茶 ☕</p> <div class="tip-modal__qr-wrap"> <img src="/images/reward-qr.webp" alt="打赏二维码" class="tip-modal__qr" width="200" height="200"> </div> <p class="tip-modal__thanks">微信扫码打赏，你的支持是持续创作的动力。</p> </div> </div>  <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.ByegvZaa.js"></script>  <script>
+  (function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') { bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'; }
+    else { bp.src = 'http://push.zhanzhang.baidu.com/push.js'; }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+  </script> </body> </html>

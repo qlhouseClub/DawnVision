@@ -1,11 +1,6 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
-import { getAllIssues } from '@lib/issues';
 import '@styles/pages/about.css';
-
-const issues = await getAllIssues();
-const issueCount = issues.length;
-const latestIssue = issues[0];
 
 const jsonLd = JSON.stringify({
   "@context": "https://schema.org",
@@ -26,57 +21,50 @@ const jsonLd = JSON.stringify({
   description="关于Dawn Vision——在噪音中看见信号，AI时代的深度观察日刊。"
   navVariant="inner"
   activeNav="about"
-  footerVariant="site"
   structuredData={jsonLd}
 >
   <Fragment slot="main">
     <div class="about-page">
-      <div class="container--narrow">
-        <header class="about-page__hero">
-          <div class="about-page__eyebrow">About · 关于</div>
-          <h1 class="about-page__title">Dawn Vision</h1>
-        </header>
+      <!-- Title -->
+      <h1 class="about-page__title notranslate" translate="no">Dawn Vision</h1>
+      <div class="about-page__eyebrow notranslate" translate="no">About the Author</div>
 
-        <div class="about-page__content">
-          <p>Dawn Vision 是一个每日更新的 AI 资讯深度阅读站点。</p>
+      <!-- Author tags (italic, gray, centered) -->
+      <ul class="about-page__tags">
+        <li>水瓶座、天马行空的设计师</li>
+        <li class="notranslate" translate="no">INFP (MBTI)、MUM (SBTI)</li>
+        <li>认错超快叛逆不改气人天赋高超的心理砖家</li>
+        <li>视角独特且薄学的不才写手</li>
+        <li>仗势AI冲浪的技术小白</li>
+      </ul>
 
-          <div class="about-page__tagline">
-            穿越嘈杂，<br>洞见留声。
-          </div>
+      <!-- Blue divider -->
+      <div class="about-page__divider"></div>
 
-          <p>每个工作日，我们从海量 AI 资讯中去噪、筛选、深度加工，输出可以直接读完的完整文章。不做信息搬运工，做噪音中的信号过滤器。</p>
+      <!-- Description paragraph -->
+      <p class="about-page__desc">
+        Dawn Vision 是一份 AI 深度观察日刊，每个工作日从海量 AI 资讯中去噪筛选、深度加工，输出独立完整的分析文章。关注 AI Agent、大模型、具身智能、AI 商业化、一人公司等前沿话题。不是信息搬运，是噪音中的信号过滤器。
+      </p>
 
-          <h2>我们做什么</h2>
-
-          <ul class="about-page__list">
-            <li><strong>Focus · 焦点</strong> — 每日一篇封面深度，聚焦当天最重要的AI事件</li>
-            <li><strong>Briefs · 资讯</strong> — 6篇精简短讯，覆盖大模型、AI编程、Agent、具身智能、商业化等维度</li>
-            <li><strong>Cao! · 操蛇之神</strong> — 不定期吐槽专栏，用最刻薄的眼光看AI圈最魔幻的故事</li>
-          </ul>
-
-          <h2>为什么叫 Dawn Vision</h2>
-
-          <p>Dawn 是黎明。每天下午16:30（北京时间），在信息噪音最密集的时刻，我们送上一份经过深度加工的日刊。不是新闻聚合，不是标题罗列，而是真正值得花10分钟读完的内容。</p>
-
-          <p>Vision 是洞察力。在AI发展日新月异的2026年，每天有数百条AI新闻、数十篇论文、无数产品发布。绝大多数都是噪音。我们的工作，就是在噪音中帮你看见信号。</p>
-
-          <h2>更新频率</h2>
-
-          <p>每个工作日（周一至周五）16:30 CST 更新。周末和法定节假日休息。</p>
-
-          <h2>内容原则</h2>
-
-          <ul class="about-page__list">
-            <li><strong>不做搬运工</strong> — 每篇文章都经过认知引擎处理和编辑部人工审核，不是简单翻译或摘要</li>
-            <li><strong>有观点</strong> — 我们不假装中立。好就是好，坏就是坏，泡沫就是泡沫</li>
-            <li><strong>可读完</strong> — 每篇文章控制在可一次读完的长度，不注水、不堆砌</li>
-            <li><strong>有来源</strong> — 所有信源公开可查，文末附Sources</li>
-          </ul>
-
-          <p style="margin-top: 48px; color: var(--color-text-faint); font-size: var(--text-sm); letter-spacing: var(--tracking-wide); text-transform: uppercase; font-family: var(--font-display); font-weight: var(--weight-bold);">
-            © {new Date().getFullYear()} Dawn Vision · Weekdays · 16:30 CST
-          </p>
+      <!-- Contact -->
+      <div class="about-page__contact">
+        <div class="about-page__contact-item">
+          <div class="about-page__contact-value notranslate" translate="no">DawnVision88</div>
+          <div class="about-page__contact-label notranslate" translate="no">Wechat</div>
         </div>
+        <div class="about-page__contact-item">
+          <a href="tel:18622454349" class="about-page__contact-value about-page__contact-value--link notranslate" translate="no">18622454349</a>
+          <div class="about-page__contact-label notranslate" translate="no">Phone</div>
+        </div>
+      </div>
+
+      <!-- Tip Jar -->
+      <div class="about-page__tipjar">
+        <div class="about-page__tipjar-label notranslate" translate="no">Tip Jar</div>
+        <div class="about-page__qr-wrap">
+          <img src="/images/reward-qr.webp" alt="谢谢老板请我喝奶茶" class="about-page__qr" width="220" height="220" loading="lazy" />
+        </div>
+        <p class="about-page__tipjar-quote">"谢谢老板请我喝奶茶"</p>
       </div>
     </div>
   </Fragment>

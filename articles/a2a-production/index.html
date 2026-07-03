@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="zh-CN"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script>
+  (function(){
+    window.__dvAllowTranslate = true;
+    window.googleTranslateElementInit = function(){ /* overridden by interactions */ };
+    var isGT = function(u){ return typeof u==='string' && /translate\.google(apis)?\.com/.test(u); };
+    var _a=window.location.assign, _r=window.location.replace, _o=window.open;
+    window.location.assign = function(u){ if(isGT(u) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT redirect'); return; } return _a.call(window.location,u); };
+    window.location.replace = function(u){ if(isGT(u) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT redirect'); return; } return _r.call(window.location,u); };
+    window.open = function(){ if(isGT(arguments[0]) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT popup'); return null; } return _o.apply(window,arguments); };
+  })();
+  </script><title>A2A 协议进入生产年 — Dawn Vision</title><meta name="description" content="Google开源、阿里云落地、微信接入——A2A协议从标准制定进入生产实践。"><meta name="author" content="Dawn Vision 编辑部"><meta name="keywords" content="Dawn Vision, AI资讯, AI日报, 人工智能, 大模型, AI Agent, GPT, Claude, 具身智能, AI商业化, 一人公司, AI编程, 深度分析, AI观察, LLM, AIGC"><link rel="canonical" href="https://www.dawnvision.net/articles/a2a-production/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="apple-touch-icon" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet"><meta property="og:type" content="article"><meta property="og:title" content="A2A 协议进入生产年 — Dawn Vision"><meta property="og:description" content="Google开源、阿里云落地、微信接入——A2A协议从标准制定进入生产实践。"><meta property="og:url" content="https://www.dawnvision.net/articles/a2a-production/"><meta property="og:image" content="https://www.dawnvision.net/images/og-image.png"><meta property="og:site_name" content="Dawn Vision"><meta property="og:locale" content="zh_CN"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="A2A 协议进入生产年 — Dawn Vision"><meta name="twitter:description" content="Google开源、阿里云落地、微信接入——A2A协议从标准制定进入生产实践。"><meta name="twitter:image" content="https://www.dawnvision.net/images/og-image.png"><meta name="robots" content="index, follow"><meta name="applicable-device" content="pc,mobile"><meta name="format-detection" content="telephone=no"><meta name="baidu-site-verification" content><script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"A2A 协议进入生产年","description":"Google开源、阿里云落地、微信接入——A2A协议从标准制定进入生产实践。","datePublished":"2026-06-26","dateModified":"2026-06-26","author":{"@type":"Organization","name":"Dawn Vision 编辑部"},"publisher":{"@type":"Organization","name":"Dawn Vision","url":"https://www.dawnvision.net/","logo":{"@type":"ImageObject","url":"https://www.dawnvision.net/images/og-image.png","width":1200,"height":630}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.dawnvision.net/articles/a2a-production"},"url":"https://www.dawnvision.net/articles/a2a-production","inLanguage":"zh-CN","articleSection":"Agent 协议","keywords":"Dawn Vision, A2A协议, Agent通信, Google开源, 阿里云AgentRun, Linux基金会, Agent互联网","wordCount":750}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://www.dawnvision.net/"},{"@type":"ListItem","position":2,"name":"文章","item":"https://www.dawnvision.net/articles"},{"@type":"ListItem","position":3,"name":"A2A 协议进入生产年"}]}</script><style>
+    iframe.goog-te-banner-frame,
+    iframe[class*="goog-te-banner"],
+    iframe[id*="goog-te-banner"],
+    .goog-te-gadget, .goog-te-gadget-icon, .goog-te-gadget-simple,
+    .goog-te-gadget span, #google_translate_element, #google_translate_element *,
+    .goog-te-spinner-pos, .goog-te-spinner,
+    img[src*="translate_spinner"], img[src*="loading"],
+    .goog-te-menu-frame, .goog-te-menu-value,
+    .goog-te-balloon-frame, .goog-text-highlight,
+    #goog-gt-tt, .goog-tooltip,
+    iframe[src*="translate.google.com"],
+    iframe[src*="translate.googleapis.com"],
+    iframe[src*="translate_p"], iframe[src*="element/"],
+    a[href*="goog-te"], .VIiyi, .JLqJ4b,
+    .skiptranslate {
+      display:none!important; visibility:hidden!important; opacity:0!important;
+      width:0!important; height:0!important; max-width:0!important; max-height:0!important;
+      overflow:hidden!important; pointer-events:none!important; position:absolute!important;
+      top:-9999px!important; left:-9999px!important;
+      margin:0!important; padding:0!important; border:0!important;
+    }
+    body, html { top:0!important; margin-top:0!important; }
+
+    /* Floating language switch button */
+    .dv-lang-switch {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 900;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: none;
+      background: #ffffff;
+      color: #002FA7;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .dv-lang-switch:hover {
+      background: #002FA7;
+      color: #fff;
+      transform: scale(1.08);
+      box-shadow: 0 4px 24px rgba(0,47,167,0.3);
+    }
+    .dv-lang-switch:disabled {
+      opacity: 0.6;
+      cursor: wait;
+      transform: none;
+    }
+    @media (max-width: 700px) {
+      .dv-lang-switch {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+        font-size: 10px;
+      }
+    }
+  </style><link rel="stylesheet" href="/_astro/502.CT2I6p4t.css">
+<style>@keyframes blobFloat{0%,to{transform:translate(0) scale(1)}33%{transform:translate(3vw,4vh) scale(1.05)}66%{transform:translate(-2vw,-3vh) scale(.97)}}.blobs--home{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--home .blob{position:absolute;border-radius:50%;filter:blur(120px);opacity:.5;animation:blobFloat 25s ease-in-out infinite;will-change:transform}.blobs--home .blob--1{width:50vw;height:50vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-5%;left:-5%;animation-delay:0s;animation-duration:30s}.blobs--home .blob--2{width:55vw;height:55vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-10s;animation-duration:28s;opacity:.6}.blobs--home .blob--3{width:40vw;height:40vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:30%;right:5%;animation-delay:-15s;animation-duration:32s;opacity:.4}.blobs--home .blob--4{width:35vw;height:35vw;background:radial-gradient(circle,rgba(80,130,255,.3) 0%,transparent 70%);top:0%;left:25%;animation-delay:-5s;animation-duration:35s;opacity:.35}.blobs--home .blob--5,.blobs--home .blob--6{display:none}.blobs--section{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--section .blob{position:absolute;border-radius:50%;filter:blur(100px);opacity:.45;animation:blobFloat 28s ease-in-out infinite;will-change:transform}.blobs--section .blob--1{width:45vw;height:45vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-10%;left:-8%;animation-delay:0s;animation-duration:30s}.blobs--section .blob--2{width:50vw;height:50vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-8s;animation-duration:26s;opacity:.55}.blobs--section .blob--3{width:35vw;height:35vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:20%;right:5%;animation-delay:-14s;animation-duration:32s}.blobs--section .blob--4,.blobs--section .blob--5{display:none}@media(max-width:700px){.blobs--home .blob{filter:blur(80px)}.blobs--section .blob{filter:blur(60px)}}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.Bhjd0_8r.css"></head> <body class>  <a href="#main-content" class="skip-link">跳至主要内容</a>  <nav class="nav nav--inner notranslate" role="navigation" aria-label="主导航" data-pagefind-ignore translate="no"> <div class="nav__inner"> <div class="nav__group"> <a href="/" class="nav__link ">Home</a> <a href="/articles" class="nav__link nav__link--active" aria-current="page">Articles</a> </div> <a href="/" class="nav__brand" aria-label="Dawn Vision 首页" translate="no">
+Dawn Vision
+<small>Daily Briefing</small> </a> <div class="nav__group"> <a href="/cao" class="nav__link ">Cao</a> <a href="/about" class="nav__link ">About</a> </div> </div> </nav> <main id="main-content"> <section class="article-hero "> <div class="blobs blobs--section" aria-hidden="true"> <div class="blob blob--1"></div><div class="blob blob--2"></div><div class="blob blob--3"></div><div class="blob blob--4"></div><div class="blob blob--5"></div> </div> <div class="container--narrow" style="position:relative;z-index:1;"> <div class="article-hero__category notranslate" data-pagefind-meta="category" translate="no">Agent 协议</div> <h1 class="article-hero__title" data-pagefind-meta="title">A2A 协议<br/>进入生产年</h1> <p class="article-hero__deck">Google开源移交Linux基金会、阿里云推出生产级AgentRun平台、微信率先接入手机厂商——Agent之间的&quot;普通话&quot;正在从论文里走进生产环境。</p> <div class="article-hero__meta"> <span class="article-hero__issue notranslate" translate="no">No.003</span> <span>2026.06.26</span> <span>约 4 分钟阅读</span> </div> </div> </section> <article class="container--narrow" style="padding-top: clamp(40px, 6vw, 64px); padding-bottom: 0;"> <div class="article-body" data-pagefind-body><p>互联网之所以能成为互联网，是因为所有计算机都说同一种"话"——TCP/IP。</p>
+<p>Agent世界也在等待它的TCP/IP时刻。6月，这个时刻似乎更近了一步。</p>
+<h2>从Google开源到Linux基金会</h2>
+<p>Google正式将A2A（Agent-to-Agent）协议的开源仓库移交Linux基金会治理，最新版本v0.3.0已经具备了生产级协议的核心要素：基于JSON-RPC 2.0 over HTTP(S)的通信层、通过AgentCard实现的能力自描述与服务发现、Task生命周期管理（submitted/working/completed/failed）、TextPart/FilePart/DataPart三部分消息协议。</p>
+<p>更重要的是官方SDK的覆盖：Python、JavaScript、Java、.NET四套官方SDK同时发布，意味着主流技术栈的开发者都可以直接接入，不需要自己从头实现协议细节。同步、异步、流式（SSE）三种交互模式也全部支持——从简单的问答到复杂的长周期协作任务都能覆盖。</p>
+<h2>阿里云AgentRun：生产环境的第一道考题</h2>
+<p>协议有了，真正难的是生产环境的工程问题。阿里云在6月16日发布的AgentRun平台，正面回答了这些问题。</p>
+<p>多Agent协作在Demo里看起来很美——几个Agent聊聊天就把事办了。但到了生产环境，问题立刻来了：Agent怎么找到彼此？（注册中心/服务发现）跨Agent的调用怎么做鉴权？（API Key/HTTP Basic Auth）不同环境（开发/预发/生产）怎么隔离？（Workspace逻辑隔离）调用链出了问题怎么排查？（分布式链路追踪）</p>
+<p>AgentRun给出了一套相对完整的解法：通过Discovery Endpoint按环境管理发现入口，内置凭证体系处理跨Agent鉴权，Workspace实现环境隔离。在"希希咖啡厅"的演示场景中，coffee_agent负责点单、delivery_agent负责配送，一个超级Agent（Orchestrator）负责意图拆解和子任务调度——整个流程通过A2A协议协同完成。</p>
+<h2>微信率先接入，荣耀第一个落地</h2>
+<p>最有信号意义的消息是：微信已经基于A2A协议向手机厂商开放Agent能力，荣耀成为第一个落地合作方。</p>
+<p>这意味着什么？意味着你的手机系统助手（比如荣耀的YOYO）未来可以直接调用微信里的Agent能力——你不需要打开微信，对着手机说"帮我给张三发个消息说我晚到十分钟"，系统Agent通过A2A协议和微信Agent通信，直接完成任务。</p>
+<div class="pull-quote">
+        "A2A之于Agent，就像HTTP之于Web。协议本身不产生价值，协议之上的生态才产生价值。"
+        <span class="pull-quote__attr">—— 云原生技术社区评论</span>
+</div>
+<h2>A2A和MCP的分工正在清晰</h2>
+<p>很多人在问：已经有了MCP（Model Context Protocol），为什么还需要A2A？两者的定位正在变得清晰：</p>
+<p>MCP解决的是"模型连接工具"的问题——Agent怎么调用数据库、怎么读文件、怎么操作API，它是单向的、无状态的、事务式的，就像浏览器和服务器之间的请求/响应。</p>
+<p>A2A解决的是"Agent连接Agent"的问题——两个对等的Agent怎么协商任务、怎么分配工作、怎么同步状态，它是双向的、有状态的、协作式的，就像两个人之间的对话和分工。</p>
+<p>两者不是竞争关系，而是互补关系。一个Agent通过MCP调用工具完成具体操作，通过A2A和其他Agent协作完成复杂任务。MCP是Agent的"手"，A2A是Agent的"嘴"。</p>
+<p>协议的地基正在一层层打好。当Agent之间可以无障碍对话、协作、分工的时候，真正的"Agent互联网"才会从PPT走进现实。</p>
+<hr/>
+<p>明天见。</p></div>  <blockquote class="article-pull-quote"> <p class="article-pull-quote__text">A2A之于Agent，就像HTTP之于Web。协议本身不产生价值，协议之上的生态才产生价值。</p> <cite class="article-pull-quote__attr">—— 云原生技术社区评论</cite> </blockquote>    <div class="article-cognitive">A2A协议生产落地 · MCP与A2A定位差异</div>  <div class="article-sources"> <div class="article-sources__title notranslate" translate="no">Sources · 信源</div> <ul class="article-sources__list"> <li class="article-sources__item"> <a href="https://github.com/google/A2A" target="_blank" rel="noopener noreferrer">Google A2A协议官方开源仓库（Linux基金会）</a> </li><li class="article-sources__item"> <a href="https://www.cnblogs.com/alisystemsoftware/p/20576963" target="_blank" rel="noopener noreferrer">阿里云云原生 - AgentRun生产级多Agent协作平台</a> </li><li class="article-sources__item"> 36氪 - 微信A2A协议接入手机厂商报道 </li> </ul> <p class="article-source-summary">本文基于 Dawn Vision 认知引擎处理的 5 个源信号生成，经编辑部人工审核。</p> </div>  <div class="article-actions"> <button class="article-action-btn article-action-btn--like" id="article-like-btn" data-slug="a2a-production" aria-label="喜欢这篇文章"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path> </svg> <span class="article-action-btn__label">喜欢</span> <span class="article-action-btn__count" id="like-count">0</span> </button> <button class="article-action-btn article-action-btn--tip" id="article-tip-btn" aria-label="打赏"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon> </svg> <span class="article-action-btn__label">打赏</span> </button> </div>  <nav class="article-nav" aria-label="文章导航"> <a href="/articles/agent-db-apology" class="article-nav__item article-nav__item--prev"> <div class="article-nav__label">上一篇</div> <div class="article-nav__title">Agent 删库 9 秒，道歉信写了满分——Cursor 闯祸后的文学时刻</div> </a> <a href="/articles/china-compute-grid" class="article-nav__item article-nav__item--next"> <div class="article-nav__label">下一篇</div> <div class="article-nav__title">算力也要&quot;南水北调&quot;</div> </a> </nav> </article>  </main> <footer class="footer footer--site" role="contentinfo" data-pagefind-ignore> <div class="footer__container"> <div class="footer__brand notranslate" translate="no">Dawn Vision</div> <div class="footer__meta notranslate" translate="no">© 2026 · Daily at 16:30 CST · Weekdays Only</div> </div> </footer>   <div id="google_translate_element" style="position:absolute;left:-9999px;top:-9999px;width:0;height:0;overflow:hidden;opacity:0;pointer-events:none;"></div>  <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="搜索文章" hidden> <div class="search-modal" role="document"> <div class="search-modal__input-wrap"> <svg class="search-modal__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="11" cy="11" r="8"></circle> <line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> <input type="search" class="search-modal__input" id="search-input" placeholder="搜索文章、关键词、作者..." autocomplete="off" spellcheck="false" aria-label="搜索关键词"> <span class="search-modal__close-hint">ESC</span> </div> <div class="search-modal__results" id="search-results"> <div class="search-modal__empty">输入关键词开始搜索</div> </div> <div class="search-modal__footer"> <span><kbd>↑</kbd><kbd>↓</kbd> 选择</span> <span><kbd>↵</kbd> 打开</span> <span><kbd>⌘K</kbd> 搜索</span> </div> </div> </div> <!-- Reading progress bar (shown on article pages) --> <div class="reading-progress" id="reading-progress" hidden></div>  <div class="tip-modal" id="tip-modal" hidden> <div class="tip-modal__overlay" data-tip-close></div> <div class="tip-modal__content" role="dialog" aria-modal="true" aria-label="打赏支持"> <button class="tip-modal__close" data-tip-close aria-label="关闭">×</button> <h3 class="tip-modal__title notranslate" translate="no">Tip Jar</h3> <p class="tip-modal__desc">谢谢老板请我喝奶茶 ☕</p> <div class="tip-modal__qr-wrap"> <img src="/images/reward-qr.webp" alt="打赏二维码" class="tip-modal__qr" width="200" height="200"> </div> <p class="tip-modal__thanks">微信扫码打赏，你的支持是持续创作的动力。</p> </div> </div>  <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.ByegvZaa.js"></script>  <script>
+  (function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') { bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'; }
+    else { bp.src = 'http://push.zhanzhang.baidu.com/push.js'; }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+  </script> </body> </html>

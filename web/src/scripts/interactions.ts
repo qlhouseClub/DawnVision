@@ -200,24 +200,41 @@ function waitForComboAndSelect(lang: string, callback: (ok: boolean) => void, at
   }
 }
 
+function getOrCreateTranslateBtn(): HTMLButtonElement | null {
+  let btn = document.getElementById('dv-lang-switch') as HTMLButtonElement | null;
+  if (btn) return btn;
+  // Create floating button dynamically
+  btn = document.createElement('button');
+  btn.id = 'dv-lang-switch';
+  btn.className = 'dv-lang-switch notranslate';
+  btn.setAttribute('aria-label', 'Switch language');
+  btn.setAttribute('title', 'Switch language');
+  btn.setAttribute('translate', 'no');
+  btn.type = 'button';
+  btn.textContent = currentLang === 'zh' ? I18N.zh.lang_en : I18N.en.lang_zh;
+  btn.addEventListener('click', () => {
+    if (isTranslating) return;
+    if (currentLang === 'zh') switchToEnglish();
+    else switchToChinese();
+  });
+  document.body.appendChild(btn);
+  return btn;
+}
+
 function finishTranslating() {
   isTranslating = false;
   updateTranslateBtn();
 }
 
 function updateTranslateBtn() {
-  const btn = document.getElementById('translate-btn') as HTMLButtonElement | null;
+  const btn = getOrCreateTranslateBtn();
   if (!btn) return;
   if (isTranslating) {
     btn.textContent = t('translating');
     btn.disabled = true;
-    btn.style.opacity = '0.7';
-    btn.style.cursor = 'wait';
   } else {
     btn.textContent = currentLang === 'zh' ? I18N.zh.lang_en : I18N.en.lang_zh;
     btn.disabled = false;
-    btn.style.opacity = '';
-    btn.style.cursor = '';
   }
 }
 
@@ -612,14 +629,14 @@ function initSearch() {
   // Input event
   searchInput.addEventListener('input', handleSearchInput);
 
-  // Search button in nav
-  const searchBtn = document.getElementById('nav-search-btn');
-  if (searchBtn) {
-    searchBtn.addEventListener('click', (e) => {
+  // Search buttons/triggers (multiple possible)
+  const searchBtns = document.querySelectorAll('[data-search-trigger], #nav-search-btn, #home-search-btn');
+  searchBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
       e.preventDefault();
       openSearch();
     });
-  }
+  });
 
   // Click on result to navigate (delegated)
   searchResultsEl.addEventListener('click', (e) => {
@@ -658,21 +675,117 @@ function initReadingProgress() {
 function init() {
   currentLang = detectLang();
   document.documentElement.lang = 'zh-CN';
-  updateTranslateBtn();
 
-  const translateBtn = document.getElementById('translate-btn');
-  if (translateBtn) {
-    translateBtn.addEventListener('click', () => {
-      if (isTranslating) return;
-      if (currentLang === 'zh') switchToEnglish();
-      else switchToChinese();
-    });
-  }
+  // Create floating translate button immediately
+  getOrCreateTranslateBtn();
+  updateTranslateBtn();
 
   initGoogleTranslate();
   checkForNewContent();
   initSearch();
   initReadingProgress();
+  initLikeButton();
+  initTipModal();
+}
+
+// ══════════════════════════════════════════════
+// Like Button — localStorage-based, prevents duplicate likes
+// ══════════════════════════════════════════════
+const STORAGE_LIKES_KEY = 'dawnvision_likes';
+
+function getLikedArticles(): Set<string> {
+  try {
+    const raw = localStorage.getItem(STORAGE_LIKES_KEY);
+    return raw ? new Set(JSON.parse(raw)) : new Set();
+  } catch (_) {
+    return new Set();
+  }
+}
+
+function saveLikedArticles(liked: Set<string>) {
+  try {
+    localStorage.setItem(STORAGE_LIKES_KEY, JSON.stringify([...liked]));
+  } catch (_) { /* noop */ }
+}
+
+function initLikeButton() {
+  const btn = document.getElementById('article-like-btn') as HTMLButtonElement | null;
+  if (!btn) return;
+
+  const slug = btn.getAttribute('data-slug');
+  if (!slug) return;
+
+  const countEl = document.getElementById('like-count');
+  const liked = getLikedArticles();
+
+  // Restore liked state
+  if (liked.has(slug)) {
+    btn.classList.add('is-liked');
+    const svg = btn.querySelector('svg');
+    if (svg) svg.setAttribute('fill', 'currentColor');
+  }
+
+  // Initialize count (localStorage-based demo count)
+  let count = liked.has(slug) ? 1 : Math.floor(Math.random() * 5) + 1;
+  if (countEl) countEl.textContent = String(count);
+
+  btn.addEventListener('click', () => {
+    const likedNow = getLikedArticles();
+    const label = btn.querySelector('.article-action-btn__label');
+    if (likedNow.has(slug)) {
+      // Unlike
+      likedNow.delete(slug);
+      btn.classList.remove('is-liked');
+      const svg = btn.querySelector('svg');
+      if (svg) svg.setAttribute('fill', 'none');
+      count = Math.max(0, count - 1);
+      if (label) label.textContent = '喜欢';
+    } else {
+      // Like
+      likedNow.add(slug);
+      btn.classList.add('is-liked');
+      const svg = btn.querySelector('svg');
+      if (svg) svg.setAttribute('fill', 'currentColor');
+      count++;
+      if (label) label.textContent = '已喜欢';
+    }
+    if (countEl) countEl.textContent = String(count);
+    saveLikedArticles(likedNow);
+  });
+}
+
+// ══════════════════════════════════════════════
+// Tip Modal
+// ══════════════════════════════════════════════
+function initTipModal() {
+  const modal = document.getElementById('tip-modal');
+  const openBtn = document.getElementById('article-tip-btn');
+  if (!modal || !openBtn) return;
+
+  function openModal() {
+    modal.hidden = false;
+    requestAnimationFrame(() => modal.classList.add('is-open'));
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    setTimeout(() => { modal.hidden = true; }, 200);
+    document.body.style.overflow = '';
+  }
+
+  openBtn.addEventListener('click', openModal);
+
+  modal.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    if (target.hasAttribute('data-tip-close')) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.hidden) closeModal();
+  });
 }
 
 if (document.readyState === 'loading') {

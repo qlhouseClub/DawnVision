@@ -3,15 +3,23 @@
  * SectionHeader — Klein蓝块标签
  * @param en 英文标签（如 "Focus", "Brief", "Cao!"）
  * @param zh 中文标签（如 "焦点", "资讯", "槽点!"）
+ * @param variant 'default' | 'fullbleed' — 默认内边距版或全出血版（用于文章列表页）
  */
 import '@styles/components/section-label.css';
 
 export interface Props {
   en: string;
   zh: string;
+  variant?: 'default' | 'fullbleed';
 }
 
-const { en, zh } = Astro.props;
+const { en, zh, variant = 'default' } = Astro.props;
 ---
 
-<h2 class="section-label">{en} <span>{zh}</span></h2>
+{variant === 'fullbleed' ? (
+  <div class={`section-label section-label--fullbleed notranslate`} translate="no">
+    {en} <span>{zh}</span>
+  </div>
+) : (
+  <h2 class={`section-label notranslate`} translate="no">{en} <span>{zh}</span></h2>
+)}

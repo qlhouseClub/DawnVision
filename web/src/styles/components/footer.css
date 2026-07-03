@@ -1,19 +1,20 @@
 /* ═══════════════════════════════════════════
    Footer — Footer Component Styles
-   Supports home (transparent on Klein bg) and site (Klein block)
+   home: transparent on Klein bg (three spans, spaced)
+   site: Klein blue block footer
    ═══════════════════════════════════════════ */
 
 /* ── Home variant (transparent, on Klein bg) ── */
 .footer--home {
   position: relative;
   z-index: 1;
-  padding: clamp(16px, 2vw, 24px) clamp(24px, 5vw, 64px);
-  max-width: var(--max-width-wide);
-  margin: 0 auto;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: clamp(16px, 2vw, 24px) clamp(24px, 5vw, 64px);
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
   font-size: 9px;
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
@@ -27,12 +28,11 @@
   background: var(--color-brand);
   color: var(--color-white);
   padding: clamp(28px, 4vw, 40px) 0 clamp(24px, 3vw, 32px);
-  margin-top: 0;
   flex-shrink: 0;
 }
 
 .footer--site .footer__container {
-  max-width: var(--max-width-wide);
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 clamp(24px, 5vw, 64px);
   display: flex;
@@ -49,8 +49,8 @@
   text-transform: uppercase;
 }
 
-.footer--home .footer__brand {
-  color: rgba(255,255,255,0.3);
+.footer--site .footer__brand {
+  color: var(--color-white);
 }
 
 .footer__meta {
@@ -65,11 +65,7 @@
   color: rgba(255,255,255,0.6);
 }
 
-.footer--home .footer__meta {
-  color: rgba(255,255,255,0.3);
-}
-
-/* ── Mobile responsive ── */
+/* ── Mobile ── */
 @media (max-width: 700px) {
   .footer--home {
     flex-direction: column;

@@ -1,65 +1,86 @@
 /* ═══════════════════════════════════════════
-   Cao Page — "操蛇之神" column
+   Cao Page — "槽点" column (matches live site)
+   Container: 1080px, flat list, no archive split
    ═══════════════════════════════════════════ */
+
+:root {
+  --cao-max: 1080px;
+  --cao-px: clamp(24px, 5vw, 64px);
+}
 
 .cao-page {
   min-height: 100vh;
 }
 
-/* ── Cao Hero (dark Klein section) ── */
+/* ── Container ── */
+.cao-page__container {
+  max-width: var(--cao-max);
+  margin: 0 auto;
+  padding-left: var(--cao-px);
+  padding-right: var(--cao-px);
+}
+
+/* ── Cao Hero (Klein blue full-bleed) ── */
 .cao-hero {
   background: var(--color-brand);
   color: var(--color-white);
-  padding: clamp(60px, 10vw, 120px) 0 clamp(48px, 8vw, 72px);
+  padding: clamp(48px, 7vw, 72px) 0 clamp(40px, 6vw, 56px);
   position: relative;
   overflow: hidden;
 }
 
-.cao-hero__label {
-  font-size: var(--text-xs);
-  letter-spacing: var(--tracking-max);
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
-  font-family: var(--font-display);
-  font-weight: var(--weight-bold);
-  margin-bottom: var(--space-4);
-}
-
 .cao-hero__title {
-  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: var(--weight-black);
-  line-height: var(--leading-tight);
+  line-height: 1;
   letter-spacing: var(--tracking-tightest);
   font-style: italic;
   margin-bottom: var(--space-4);
 }
 
+.cao-hero__title em {
+  font-style: italic;
+  font-weight: var(--weight-regular);
+  opacity: 0.5;
+  font-size: 0.4em;
+  letter-spacing: var(--tracking-wide);
+  font-family: var(--font-serif);
+  margin-left: var(--space-2);
+}
+
 .cao-hero__subtitle {
   font-size: var(--text-deck);
   line-height: var(--leading-relaxed);
-  color: rgba(255,255,255,0.65);
-  max-width: 560px;
+  color: rgba(255,255,255,0.6);
   font-style: italic;
-}
-
-/* ── Cao Latest Article ── */
-.cao-latest {
-  padding: var(--space-12) 0;
-}
-
-/* ── Cao Archive ── */
-.cao-archive {
-  padding: var(--space-8) 0 var(--space-16);
-}
-
-.cao-archive__header {
-  font-size: var(--text-xs);
-  letter-spacing: var(--tracking-max);
-  text-transform: uppercase;
-  color: var(--color-text-faint);
-  font-family: var(--font-display);
-  font-weight: var(--weight-bold);
-  padding-bottom: var(--space-3);
-  border-bottom: 1px solid var(--color-border);
+  font-family: var(--font-serif);
   margin-bottom: var(--space-2);
+  max-width: 560px;
+}
+
+.cao-hero__subtitle-en {
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: rgba(255,255,255,0.4);
+  font-style: italic;
+  font-family: var(--font-serif);
+  max-width: 560px;
+  margin-bottom: 0;
+}
+
+/* ── Cao List Body ── */
+.cao-page__body {
+  padding: clamp(40px, 5vw, 64px) 0 clamp(64px, 8vw, 96px);
+}
+
+.cao-list {
+  /* Articles are rendered via card--cao-item component */
+}
+
+/* ── Mobile ── */
+@media (max-width: 700px) {
+  .cao-page__container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

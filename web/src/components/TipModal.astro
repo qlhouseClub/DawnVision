@@ -1,0 +1,19 @@
+---
+/**
+ * TipModal — 打赏二维码弹窗
+ * 由 article action 按钮触发，客户端交互在 interactions.ts 中处理
+ */
+---
+
+<div class="tip-modal" id="tip-modal" hidden>
+  <div class="tip-modal__overlay" data-tip-close></div>
+  <div class="tip-modal__content" role="dialog" aria-modal="true" aria-label="打赏支持">
+    <button class="tip-modal__close" data-tip-close aria-label="关闭">×</button>
+    <h3 class="tip-modal__title notranslate" translate="no">Tip Jar</h3>
+    <p class="tip-modal__desc">谢谢老板请我喝奶茶 ☕</p>
+    <div class="tip-modal__qr-wrap">
+      <img src="/images/reward-qr.webp" alt="打赏二维码" class="tip-modal__qr" width="200" height="200" />
+    </div>
+    <p class="tip-modal__thanks">微信扫码打赏，你的支持是持续创作的动力。</p>
+  </div>
+</div>

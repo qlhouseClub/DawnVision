@@ -1,0 +1,100 @@
+/* ═══════════════════════════════════════════
+   Pagination — Issue navigation (button style, matches live site)
+   ═══════════════════════════════════════════ */
+
+.pagination {
+  max-width: var(--articles-max, 1080px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.pagination__nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 16px;
+  font-size: 10px;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  white-space: nowrap;
+  transition: all var(--duration-fast);
+  text-decoration: none;
+}
+
+.pagination__nav:hover {
+  border-color: var(--color-brand);
+  color: var(--color-brand);
+}
+
+.pagination__nav--disabled {
+  color: var(--color-text-faint);
+  border-color: var(--color-border-light);
+  background: var(--color-bg);
+  cursor: default;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.pagination__pages {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.pagination__page {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-size: 11px;
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-text-muted);
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  border: 1px solid transparent;
+  background: transparent;
+  transition: all var(--duration-fast);
+  text-decoration: none;
+}
+
+.pagination__page:hover {
+  color: var(--color-brand);
+  border-color: var(--color-border);
+}
+
+.pagination__page.is-active {
+  color: var(--color-white);
+  background: var(--color-brand);
+  border-color: var(--color-brand);
+}
+
+/* ── Mobile ── */
+@media (max-width: 700px) {
+  .pagination {
+    gap: var(--space-2);
+    padding: 0 20px;
+  }
+
+  .pagination__nav {
+    height: 32px;
+    padding: 0 12px;
+    font-size: 9px;
+  }
+
+  .pagination__page {
+    width: 32px;
+    height: 32px;
+    font-size: 10px;
+  }
+}

@@ -1,8 +1,7 @@
 User-agent: *
 Allow: /
-Disallow: /assets/interactions.js
 
-Sitemap: https://www.dawnvision.net/sitemap-index.xml
+Sitemap: https://www.dawnvision.net/sitemap.xml
 
 # Dawn Vision — AI 深度观察日刊
 # https://www.dawnvision.net

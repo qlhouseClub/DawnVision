@@ -121,6 +121,15 @@ main {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+
+  /* Stop bg-blobs animations entirely */
+  .blobs--home .blob,
+  .blobs--section .blob,
+  .articles-page__cao-blob,
+  .dv-new-content__icon {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 /* ── Utility: Visually Hidden (screen reader only) ── */

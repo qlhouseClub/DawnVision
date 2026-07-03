@@ -1,14 +1,12 @@
 /* ═══════════════════════════════════════════
-   Background Blobs — Animated gradient blobs
-   Two variants: home (full page) and section (for dark sections)
+   Background Blobs — Subtle gradient glows
+   Matches live site: Klein blue base with soft lighter-blue glows
    ═══════════════════════════════════════════ */
 
 @keyframes blobFloat {
   0%, 100% { transform: translate(0, 0) scale(1); }
-  20% { transform: translate(5vw, 8vh) scale(1.1); }
-  40% { transform: translate(-3vw, -5vh) scale(0.95); }
-  60% { transform: translate(8vw, -3vh) scale(1.05); }
-  80% { transform: translate(-5vw, 6vh) scale(0.98); }
+  33% { transform: translate(3vw, 4vh) scale(1.05); }
+  66% { transform: translate(-2vw, -3vh) scale(0.97); }
 }
 
 /* ── Home variant (full viewport background) ── */
@@ -23,77 +21,65 @@
 .blobs--home .blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.65;
-  animation: blobFloat 20s ease-in-out infinite;
+  filter: blur(120px);
+  opacity: 0.5;
+  animation: blobFloat 25s ease-in-out infinite;
   will-change: transform;
 }
 
+/* Lighter blue glow top-left */
 .blobs--home .blob--1 {
-  width: 55vw;
-  height: 55vw;
-  background: radial-gradient(circle, #4a7dff 0%, transparent 70%);
-  top: -10%;
-  left: -8%;
-  animation-delay: 0s;
-  animation-duration: 25s;
-}
-
-.blobs--home .blob--2 {
   width: 50vw;
   height: 50vw;
-  background: radial-gradient(circle, #000a2e 0%, transparent 70%);
-  bottom: -8%;
-  right: -5%;
-  animation-delay: -7s;
-  animation-duration: 22s;
-  opacity: 0.75;
-}
-
-.blobs--home .blob--3 {
-  width: 42vw;
-  height: 42vw;
-  background: radial-gradient(circle, #1535b8 0%, transparent 70%);
-  top: 25%;
-  right: 8%;
-  animation-delay: -14s;
-  animation-duration: 28s;
-}
-
-.blobs--home .blob--4 {
-  width: 45vw;
-  height: 45vw;
-  background: radial-gradient(circle, #6b3fff 0%, transparent 70%);
-  bottom: 15%;
-  left: -8%;
-  animation-delay: -4s;
+  background: radial-gradient(circle, rgba(60,110,230,0.6) 0%, transparent 70%);
+  top: -5%;
+  left: -5%;
+  animation-delay: 0s;
   animation-duration: 30s;
-  opacity: 0.5;
 }
 
-.blobs--home .blob--5 {
-  width: 32vw;
-  height: 32vw;
-  background: radial-gradient(circle, #0066ff 0%, transparent 70%);
-  top: 8%;
-  left: 35%;
+/* Darker blue bottom-right */
+.blobs--home .blob--2 {
+  width: 55vw;
+  height: 55vw;
+  background: radial-gradient(circle, rgba(0,10,60,0.7) 0%, transparent 70%);
+  bottom: -10%;
+  right: -8%;
   animation-delay: -10s;
-  animation-duration: 35s;
-  opacity: 0.55;
+  animation-duration: 28s;
+  opacity: 0.6;
 }
 
-.blobs--home .blob--6 {
-  width: 28vw;
-  height: 28vw;
-  background: radial-gradient(circle, #e09540 0%, transparent 70%);
-  top: 55%;
-  right: 12%;
-  animation-delay: -18s;
+/* Soft medium blue right-middle */
+.blobs--home .blob--3 {
+  width: 40vw;
+  height: 40vw;
+  background: radial-gradient(circle, rgba(30,70,200,0.4) 0%, transparent 70%);
+  top: 30%;
+  right: 5%;
+  animation-delay: -15s;
   animation-duration: 32s;
   opacity: 0.4;
 }
 
-/* ── Section variant (for dark Klein sections like Cao, article hero) ── */
+/* Subtle glow top-center */
+.blobs--home .blob--4 {
+  width: 35vw;
+  height: 35vw;
+  background: radial-gradient(circle, rgba(80,130,255,0.3) 0%, transparent 70%);
+  top: 0%;
+  left: 25%;
+  animation-delay: -5s;
+  animation-duration: 35s;
+  opacity: 0.35;
+}
+
+.blobs--home .blob--5,
+.blobs--home .blob--6 {
+  display: none;
+}
+
+/* ── Section variant (for dark Klein sections like Cao) ── */
 .blobs--section {
   position: absolute;
   inset: 0;
@@ -105,71 +91,50 @@
 .blobs--section .blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(90px);
-  opacity: 0.5;
-  animation: blobFloat 24s ease-in-out infinite;
+  filter: blur(100px);
+  opacity: 0.45;
+  animation: blobFloat 28s ease-in-out infinite;
   will-change: transform;
 }
 
 .blobs--section .blob--1 {
-  width: 50vw;
-  height: 50vw;
-  background: radial-gradient(circle, rgba(74,125,255,0.8) 0%, transparent 70%);
-  top: -15%;
-  left: -10%;
-  animation-delay: 0s;
-  animation-duration: 28s;
-}
-
-.blobs--section .blob--2 {
   width: 45vw;
   height: 45vw;
-  background: radial-gradient(circle, rgba(0,10,60,0.9) 0%, transparent 70%);
-  bottom: -10%;
-  right: -8%;
-  animation-delay: -8s;
-  animation-duration: 24s;
-  opacity: 0.6;
-}
-
-.blobs--section .blob--3 {
-  width: 38vw;
-  height: 38vw;
-  background: radial-gradient(circle, rgba(30,70,220,0.7) 0%, transparent 70%);
-  top: 20%;
-  right: 5%;
-  animation-delay: -15s;
+  background: radial-gradient(circle, rgba(60,110,230,0.6) 0%, transparent 70%);
+  top: -10%;
+  left: -8%;
+  animation-delay: 0s;
   animation-duration: 30s;
 }
 
-.blobs--section .blob--4 {
-  width: 40vw;
-  height: 40vw;
-  background: radial-gradient(circle, rgba(107,63,255,0.5) 0%, transparent 70%);
-  bottom: 10%;
-  left: -5%;
-  animation-delay: -5s;
-  animation-duration: 32s;
-  opacity: 0.4;
+.blobs--section .blob--2 {
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(0,10,60,0.7) 0%, transparent 70%);
+  bottom: -10%;
+  right: -8%;
+  animation-delay: -8s;
+  animation-duration: 26s;
+  opacity: 0.55;
 }
 
+.blobs--section .blob--3 {
+  width: 35vw;
+  height: 35vw;
+  background: radial-gradient(circle, rgba(30,70,200,0.4) 0%, transparent 70%);
+  top: 20%;
+  right: 5%;
+  animation-delay: -14s;
+  animation-duration: 32s;
+}
+
+.blobs--section .blob--4,
 .blobs--section .blob--5 {
-  width: 28vw;
-  height: 28vw;
-  background: radial-gradient(circle, rgba(0,102,255,0.5) 0%, transparent 70%);
-  top: 5%;
-  left: 30%;
-  animation-delay: -12s;
-  animation-duration: 36s;
-  opacity: 0.45;
+  display: none;
 }
 
 /* ── Mobile: reduce blur for performance ── */
 @media (max-width: 700px) {
+  .blobs--home .blob { filter: blur(80px); }
   .blobs--section .blob { filter: blur(60px); }
-  .blobs--section .blob--1,
-  .blobs--section .blob--2 { width: 70vw; height: 70vw; }
-  .blobs--section .blob--3,
-  .blobs--section .blob--4 { width: 60vw; height: 60vw; }
-  .blobs--section .blob--5 { width: 50vw; height: 50vw; }
 }

@@ -37,7 +37,7 @@
   /* ── Typography: Font Families ── */
   --font-serif:    'Source Serif 4', 'Noto Serif SC', Georgia, 'Times New Roman', serif;
   --font-display:  'Source Serif 4', 'Noto Serif SC', Georgia, serif;
-  --font-sans:     'PT Serif', Georgia, serif;
+  --font-sans:     'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   /* ── Typography: Font Sizes (clamp for responsive) ── */
   --text-xs:       9px;                   /* 栏目标签/大写eyebrow */

@@ -1,153 +1,109 @@
-﻿<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  
-  
-  
-  <script>
-/* Anti-redirect guard: block cached old GT scripts from auto-redirecting */
-(function(){
-  window.__dvAllowTranslate = true; /* we load GT ourselves */
-  window.googleTranslateElementInit = function(){ /* placeholder, overridden by interactions.js */ };
-  var isGT = function(u){ return typeof u==='string' && /translate\.google(apis)?\.com/.test(u); };
-  var _a=window.location.assign, _r=window.location.replace, _o=window.open;
-  window.location.assign = function(u){ if(isGT(u) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT redirect'); return; } return _a.call(window.location,u); };
-  window.location.replace = function(u){ if(isGT(u) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT redirect'); return; } return _r.call(window.location,u); };
-  window.open = function(){ if(isGT(arguments[0]) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT popup'); return null; } return _o.apply(window,arguments); };
-})();
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dawn Vision | 穿越嘈杂，洞见留声 — AI 深度观察日刊</title>
-  <meta name="description" content="Dawn Vision 是 AI 时代的深度阅读日刊。每个工作日，从海量 AI 资讯中去噪筛选、深度加工，输出独立完整的分析文章。关注 AI Agent、大模型、具身智能、AI 商业化、一人公司等前沿话题，穿越嘈杂，洞见留声。">
-  <meta name="keywords" content="Dawn Vision, AI资讯, AI日报, 人工智能, 大模型, AI Agent, GPT, Claude, 具身智能, AI商业化, 一人公司, AI编程, 深度分析, AI观察, LLM, AIGC, AI日报推荐, AI前沿资讯, AI新闻解读, 大模型最新动态, AI Agent发展趋势, 2026 AI行业分析, AI深度阅读, 人工智能每日简报, AI商业化洞察, 具身智能最新进展">
-  <meta name="author" content="Dawn Vision">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://qlhouseclub.github.io/DawnVision/">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://qlhouseclub.github.io/DawnVision/">
-  <meta property="og:title" content="Dawn Vision | 穿越嘈杂，洞见留声 — AI 深度观察日刊">
-  <meta property="og:description" content="在噪音中看见信号。每个工作日深度解读 AI 前沿：Agent 协议、大模型竞赛、AI 商业化、具身智能。不是信息搬运，是噪音中的信号过滤器。">
-  <meta property="og:site_name" content="Dawn Vision">
-  <meta property="og:locale" content="zh_CN">
-  <meta property="og:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:type" content="image/png">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://qlhouseclub.github.io/DawnVision/">
-  <meta name="twitter:title" content="Dawn Vision | 穿越嘈杂，洞见留声">
-  <meta name="twitter:description" content="AI 时代的深度阅读日刊。每个工作日，深度加工 AI 前沿资讯，输出可以直接读完的完整文章。">
-  <meta name="twitter:image" content="https://qlhouseclub.github.io/DawnVision/assets/og-image.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css?v=24">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23002FA7' width='100' height='100'/><text y='75' font-size='80' fill='white' font-family='serif'>D</text></svg>">
-
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Dawn Vision",
-    "alternateName": "DawnVision",
-    "url": "https://qlhouseclub.github.io/DawnVision/",
-    "description": "穿越嘈杂，洞见留声。AI时代的深度阅读日刊，每个工作日深度解读AI前沿。",
-    "inLanguage": "zh-CN",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Dawn Vision",
-      "url": "https://qlhouseclub.github.io/DawnVision/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://qlhouseclub.github.io/DawnVision/assets/og-image.png",
-        "width": 1200,
-        "height": 630
-      }
-    },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://qlhouseclub.github.io/DawnVision/articles.html?q={search_term_string}",
-      "query-input": "required name=search_term_string"
+<!DOCTYPE html><html lang="zh-CN"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script>
+  (function(){
+    window.__dvAllowTranslate = true;
+    window.googleTranslateElementInit = function(){ /* overridden by interactions */ };
+    var isGT = function(u){ return typeof u==='string' && /translate\.google(apis)?\.com/.test(u); };
+    var _a=window.location.assign, _r=window.location.replace, _o=window.open;
+    window.location.assign = function(u){ if(isGT(u) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT redirect'); return; } return _a.call(window.location,u); };
+    window.location.replace = function(u){ if(isGT(u) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT redirect'); return; } return _r.call(window.location,u); };
+    window.open = function(){ if(isGT(arguments[0]) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT popup'); return null; } return _o.apply(window,arguments); };
+  })();
+  </script><title>Dawn Vision | 穿越嘈杂，洞见留声 — AI 深度观察日刊</title><meta name="description" content="Dawn Vision — AI深度观察日刊，每日精选AI行业焦点，穿透信息噪声，穿越嘈杂，洞见留声。"><meta name="author" content="Dawn Vision 编辑部"><meta name="keywords" content="Dawn Vision, AI资讯, AI日报, 人工智能, 大模型, AI Agent, GPT, Claude, 具身智能, AI商业化, 一人公司, AI编程, 深度分析, AI观察, LLM, AIGC"><link rel="canonical" href="https://www.dawnvision.net/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="apple-touch-icon" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet"><meta property="og:type" content="website"><meta property="og:title" content="Dawn Vision | 穿越嘈杂，洞见留声 — AI 深度观察日刊"><meta property="og:description" content="Dawn Vision — AI深度观察日刊，每日精选AI行业焦点，穿透信息噪声，穿越嘈杂，洞见留声。"><meta property="og:url" content="https://www.dawnvision.net/"><meta property="og:image" content="https://www.dawnvision.net/images/og-image.png"><meta property="og:site_name" content="Dawn Vision"><meta property="og:locale" content="zh_CN"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Dawn Vision | 穿越嘈杂，洞见留声 — AI 深度观察日刊"><meta name="twitter:description" content="Dawn Vision — AI深度观察日刊，每日精选AI行业焦点，穿透信息噪声，穿越嘈杂，洞见留声。"><meta name="twitter:image" content="https://www.dawnvision.net/images/og-image.png"><meta name="robots" content="index, follow"><meta name="applicable-device" content="pc,mobile"><meta name="format-detection" content="telephone=no"><meta name="baidu-site-verification" content><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Dawn Vision","alternateName":"DawnVision","url":"https://www.dawnvision.net/","description":"Dawn Vision — AI深度观察日刊，每日精选AI行业焦点，穿透信息噪声","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"Dawn Vision","url":"https://www.dawnvision.net/","logo":{"@type":"ImageObject","url":"https://www.dawnvision.net/images/og-image.png","width":1200,"height":630}},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.dawnvision.net/articles?search={search_term_string}"},"query-input":"required name=search_term_string"}}</script><style>
+    iframe.goog-te-banner-frame,
+    iframe[class*="goog-te-banner"],
+    iframe[id*="goog-te-banner"],
+    .goog-te-gadget, .goog-te-gadget-icon, .goog-te-gadget-simple,
+    .goog-te-gadget span, #google_translate_element, #google_translate_element *,
+    .goog-te-spinner-pos, .goog-te-spinner,
+    img[src*="translate_spinner"], img[src*="loading"],
+    .goog-te-menu-frame, .goog-te-menu-value,
+    .goog-te-balloon-frame, .goog-text-highlight,
+    #goog-gt-tt, .goog-tooltip,
+    iframe[src*="translate.google.com"],
+    iframe[src*="translate.googleapis.com"],
+    iframe[src*="translate_p"], iframe[src*="element/"],
+    a[href*="goog-te"], .VIiyi, .JLqJ4b,
+    .skiptranslate {
+      display:none!important; visibility:hidden!important; opacity:0!important;
+      width:0!important; height:0!important; max-width:0!important; max-height:0!important;
+      overflow:hidden!important; pointer-events:none!important; position:absolute!important;
+      top:-9999px!important; left:-9999px!important;
+      margin:0!important; padding:0!important; border:0!important;
     }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Dawn Vision",
-    "url": "https://qlhouseclub.github.io/DawnVision/",
-    "logo": "https://qlhouseclub.github.io/DawnVision/assets/og-image.png",
-    "description": "AI 深度观察日刊，每个工作日从海量AI资讯中去噪筛选、深度加工，输出独立完整的分析文章。",
-    "foundingDate": "2026-06-24"
-  }
-  </script>
-  <script src="assets/interactions.js?v=24" defer></script>
-</head>
-<body class="home">
+    body, html { top:0!important; margin-top:0!important; }
 
-  <!-- Fluid gradient blobs -->
-  <div class="home__gradient">
-    <div class="home__blob home__blob--1"></div>
-    <div class="home__blob home__blob--2"></div>
-    <div class="home__blob home__blob--3"></div>
-    <div class="home__blob home__blob--4"></div>
-    <div class="home__blob home__blob--5"></div>
-    <div class="home__blob home__blob--6"></div>
-  </div>
-
-  <!-- Navigation -->
-  <nav class="home__nav" role="navigation" aria-label="主导航">
-    <div class="home__nav-group">
-      <a href="index.html" class="home__nav-link home__nav-link--active" aria-current="page">Home</a>
-      <a href="articles.html" class="home__nav-link">Articles</a>
-    </div>
-    <a href="index.html" class="home__nav-brand" aria-label="Dawn Vision 首页">
-      Dawn Vision
-      <small>Daily Briefing</small>
-    </a>
-    <div class="home__nav-group">
-      <a href="cao.html" class="home__nav-link">Cao</a>
-      <a href="about.html" class="home__nav-link">About</a>
-    </div>
-  </nav>
-
-  <!-- Hero content -->
-  <main class="home__hero" role="main">
-    <!-- Today's cover teaser - white card -->
-    <article class="home__teaser" itemscope itemtype="https://schema.org/NewsArticle">
-      <div class="home__teaser-label">Focus · 焦点</div>
-      <h2 class="home__teaser-title" itemprop="headline">英伟达开源机器人技能库</h2>
-      <p class="home__teaser-deck" itemprop="description">双臂交接任务成功率从20%飙升至92%，机器人完成第100个任务时不再像第1个任务那样一无所知。英伟达用Skill Library告诉行业：训练产物不该只是浮点权重。</p>
-      <meta itemprop="datePublished" content="2026-07-02">
-      <meta itemprop="author" content="Dawn Vision 编辑部">
-      <meta itemprop="publisher" content="Dawn Vision">
-      <a href="articles.html" class="btn-more" itemprop="url">Read More <span class="arrow">→</span></a>
-    </article>
-
-    <h1 class="home__title">
-      Through the Clamor,<br>
-      Insight Echoes.<br>
-      Read.
-    </h1>
-
-    <p class="home__tagline">穿越嘈杂，<br>洞见留声。</p>
-
-    <h2 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Dawn Vision — AI 深度观察日刊，每个工作日深度解读 AI 前沿资讯：AI Agent、大模型、具身智能、AI 商业化、一人公司</h2>
-  </main>
-
-  <!-- Footer -->
-  <footer class="home__footer" role="contentinfo">
-    <span>© 2026 Dawn Vision</span>
-    <span>Weekdays · 16:30 CST</span>
-    <span>GitHub Pages</span>
-  </footer>
-
-</body>
-</html>
+    /* Floating language switch button */
+    .dv-lang-switch {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 900;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: none;
+      background: #ffffff;
+      color: #002FA7;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .dv-lang-switch:hover {
+      background: #002FA7;
+      color: #fff;
+      transform: scale(1.08);
+      box-shadow: 0 4px 24px rgba(0,47,167,0.3);
+    }
+    .dv-lang-switch:disabled {
+      opacity: 0.6;
+      cursor: wait;
+      transform: none;
+    }
+    @media (max-width: 700px) {
+      .dv-lang-switch {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+        font-size: 10px;
+      }
+    }
+  </style><link rel="stylesheet" href="/_astro/502.CT2I6p4t.css">
+<style>@keyframes blobFloat{0%,to{transform:translate(0) scale(1)}33%{transform:translate(3vw,4vh) scale(1.05)}66%{transform:translate(-2vw,-3vh) scale(.97)}}.blobs--home{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--home .blob{position:absolute;border-radius:50%;filter:blur(120px);opacity:.5;animation:blobFloat 25s ease-in-out infinite;will-change:transform}.blobs--home .blob--1{width:50vw;height:50vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-5%;left:-5%;animation-delay:0s;animation-duration:30s}.blobs--home .blob--2{width:55vw;height:55vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-10s;animation-duration:28s;opacity:.6}.blobs--home .blob--3{width:40vw;height:40vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:30%;right:5%;animation-delay:-15s;animation-duration:32s;opacity:.4}.blobs--home .blob--4{width:35vw;height:35vw;background:radial-gradient(circle,rgba(80,130,255,.3) 0%,transparent 70%);top:0%;left:25%;animation-delay:-5s;animation-duration:35s;opacity:.35}.blobs--home .blob--5,.blobs--home .blob--6{display:none}.blobs--section{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--section .blob{position:absolute;border-radius:50%;filter:blur(100px);opacity:.45;animation:blobFloat 28s ease-in-out infinite;will-change:transform}.blobs--section .blob--1{width:45vw;height:45vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-10%;left:-8%;animation-delay:0s;animation-duration:30s}.blobs--section .blob--2{width:50vw;height:50vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-8s;animation-duration:26s;opacity:.55}.blobs--section .blob--3{width:35vw;height:35vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:20%;right:5%;animation-delay:-14s;animation-duration:32s}.blobs--section .blob--4,.blobs--section .blob--5{display:none}@media(max-width:700px){.blobs--home .blob{filter:blur(80px)}.blobs--section .blob{filter:blur(60px)}}
+.home-page__hero{position:relative;z-index:1;flex:1;display:flex;align-items:center;padding:clamp(20px,3vw,40px) clamp(24px,5vw,64px);width:100%;min-height:0}.home-page__content{max-width:1200px;margin:0 auto;width:100%;text-align:left}.home-page__search-trigger{display:inline-flex;align-items:center;gap:8px;background:#ffffff14;border:1px solid rgba(255,255,255,.15);color:#fff9;padding:7px 12px;border-radius:6px;font-size:10px;font-family:var(--font-display);letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;margin-bottom:20px;transition:all .2s ease}.home-page__search-trigger:hover{background:#ffffff26;color:var(--color-white);border-color:#ffffff4d}.home-page__search-trigger kbd{font-family:var(--font-display);font-size:9px;background:#ffffff1f;padding:1px 4px;border-radius:3px;letter-spacing:.5px;margin-left:4px}.home-page__teaser{background:var(--color-white);color:var(--color-text);padding:clamp(28px,3.5vw,44px) clamp(28px,3.5vw,48px);margin-bottom:clamp(28px,4vw,48px);max-width:70%;width:100%;text-align:left;position:relative}.home-page__teaser-label{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--color-brand);font-family:var(--font-display);font-weight:var(--weight-bold);margin-bottom:16px}.home-page__teaser-title{font-size:clamp(1.3rem,2.2vw,1.7rem);font-weight:var(--weight-bold);line-height:1.3;margin-bottom:14px;color:var(--color-text)}.home-page__teaser-deck{font-size:clamp(.95rem,1.4vw,1.1rem);line-height:1.7;color:var(--color-text-muted);font-style:italic;margin-bottom:24px;font-family:var(--font-serif);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.home-page__teaser-btn{display:inline-flex;align-items:center;gap:8px;background:var(--color-brand);color:var(--color-white);padding:14px 32px;font-size:10px;letter-spacing:3px;text-transform:uppercase;font-family:var(--font-display);font-weight:var(--weight-bold);border:none;cursor:pointer;text-decoration:none;transition:background var(--duration-fast)}.home-page__teaser-btn:hover{background:#002580;color:var(--color-white);text-decoration:none}.home-page__teaser-btn .arrow{transition:transform var(--duration-fast)}.home-page__teaser-btn:hover .arrow{transform:translate(3px)}.home-page__title{font-size:clamp(2.5rem,6.5vw,4.8rem);font-weight:var(--weight-black);letter-spacing:-1px;line-height:.95;text-transform:uppercase;color:var(--color-white);margin-bottom:clamp(14px,2vw,20px);font-style:italic;font-family:var(--font-display)}.home-page__tagline{font-size:clamp(1.1rem,2vw,1.4rem);font-weight:var(--weight-regular);letter-spacing:2px;color:#ffffff73;font-family:var(--font-serif);font-style:italic;margin-top:0;line-height:1.6}@media(max-width:700px){.home-page__hero{padding:24px 20px 20px}.home-page__teaser{max-width:100%;padding:24px 20px;margin-bottom:32px}.home-page__search-trigger{font-size:9px;padding:6px 10px;margin-bottom:16px;letter-spacing:1px}.home-page__search-trigger kbd{display:none}}
+</style></head> <body class="home"> <style>
+      body.home {
+        min-height: 100vh;
+        background: var(--color-brand);
+        color: var(--color-white);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+    </style> <a href="#main-content" class="skip-link">跳至主要内容</a>  <nav class="nav nav--home notranslate" role="navigation" aria-label="主导航" data-pagefind-ignore translate="no">  <div class="nav__group"> <a href="/" class="nav__link nav__link--active" aria-current="page">Home</a> <a href="/articles" class="nav__link ">Articles</a> </div> <a href="/" class="nav__brand" aria-label="Dawn Vision 首页" translate="no">
+Dawn Vision
+<small>Daily Briefing</small> </a> <div class="nav__group"> <a href="/cao" class="nav__link ">Cao</a> <a href="/about" class="nav__link ">About</a> </div>  </nav> <main id="main-content" style="flex:1; position:relative; z-index:1;">  <div class="home-page__hero" style="position:relative;"> <div class="blobs blobs--home" aria-hidden="true"> <div class="blob blob--1"></div><div class="blob blob--2"></div><div class="blob blob--3"></div><div class="blob blob--4"></div><div class="blob blob--5"></div><div class="blob blob--6"></div> </div> <div class="home-page__content"> <!-- Search trigger button above cover --> <button class="home-page__search-trigger notranslate" id="home-search-btn" aria-label="Search articles" translate="no"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="11" cy="11" r="8"></circle> <line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> <span>Search</span> <kbd>⌘K</kbd> </button> <!-- Today's cover teaser card --> <article class="home-page__teaser" itemscope itemtype="https://schema.org/NewsArticle"> <div class="home-page__teaser-label notranslate" translate="no">Focus · 焦点</div> <h2 class="home-page__teaser-title" itemprop="headline">大厂AI落地军备竞赛</h2> <p class="home-page__teaser-deck" itemprop="description">微软投25亿美元成立6000人AI部署公司，亚马逊砸10亿跟进，Meta承认Agent进展不及预期转而卖算力——AI产业从炼模型进入拼交付的新阶段。</p> <meta itemprop="datePublished" content="2026-07-03"> <meta itemprop="author" content="Dawn Vision 编辑部"> <a href="/articles/ai-deployment-arms-race-meta-sell-compute-microsoft-frontier" class="home-page__teaser-btn notranslate" itemprop="url" translate="no">
+Read More <span class="arrow">→</span> </a> </article> <h1 class="home-page__title notranslate" translate="no">
+Through the Clamor,<br>
+Insight Echoes.<br>
+Read.
+</h1> <p class="home-page__tagline">穿越嘈杂，<br>洞见留声。</p> <h2 class="sr-only">
+Dawn Vision — AI 深度观察日刊，每个工作日深度解读 AI 前沿资讯：AI Agent、大模型、具身智能、AI 商业化、一人公司
+</h2> </div> </div>  </main> <footer class="footer footer--home" role="contentinfo" data-pagefind-ignore>  <span class="notranslate" translate="no">© 2026 Dawn Vision</span> <span class="notranslate" translate="no">Weekdays · 16:30 CST</span> <span class="notranslate" translate="no">Github Page</span>  </footer>   <div id="google_translate_element" style="position:absolute;left:-9999px;top:-9999px;width:0;height:0;overflow:hidden;opacity:0;pointer-events:none;"></div>  <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="搜索文章" hidden> <div class="search-modal" role="document"> <div class="search-modal__input-wrap"> <svg class="search-modal__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="11" cy="11" r="8"></circle> <line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> <input type="search" class="search-modal__input" id="search-input" placeholder="搜索文章、关键词、作者..." autocomplete="off" spellcheck="false" aria-label="搜索关键词"> <span class="search-modal__close-hint">ESC</span> </div> <div class="search-modal__results" id="search-results"> <div class="search-modal__empty">输入关键词开始搜索</div> </div> <div class="search-modal__footer"> <span><kbd>↑</kbd><kbd>↓</kbd> 选择</span> <span><kbd>↵</kbd> 打开</span> <span><kbd>⌘K</kbd> 搜索</span> </div> </div> </div> <!-- Reading progress bar (shown on article pages) --> <div class="reading-progress" id="reading-progress" hidden></div>  <div class="tip-modal" id="tip-modal" hidden> <div class="tip-modal__overlay" data-tip-close></div> <div class="tip-modal__content" role="dialog" aria-modal="true" aria-label="打赏支持"> <button class="tip-modal__close" data-tip-close aria-label="关闭">×</button> <h3 class="tip-modal__title notranslate" translate="no">Tip Jar</h3> <p class="tip-modal__desc">谢谢老板请我喝奶茶 ☕</p> <div class="tip-modal__qr-wrap"> <img src="/images/reward-qr.webp" alt="打赏二维码" class="tip-modal__qr" width="200" height="200"> </div> <p class="tip-modal__thanks">微信扫码打赏，你的支持是持续创作的动力。</p> </div> </div>  <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.ByegvZaa.js"></script>  <script>
+  (function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') { bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'; }
+    else { bp.src = 'http://push.zhanzhang.baidu.com/push.js'; }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+  </script> </body> </html>

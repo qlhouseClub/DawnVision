@@ -3,7 +3,7 @@ __pycache__/
 .DS_Store
 *.log
 
-# 内容生产中间产物（raw signals和prompt临时文件）
+# 内容生产中间产物
 tools/data/raw-signals-*.json
 tools/data/prompt-*.md
 
@@ -12,13 +12,10 @@ knowledge/
 notes/
 知识网络.md
 
-# Astro构建产物和依赖
+# Astro构建产物
 web/dist/
 web/node_modules/
 web/.astro/
 
 # 复盘文档（本地）
 DawnVision_*_retrospective.*
-
-# 本地HTML提取产物
-knowledge/*.html

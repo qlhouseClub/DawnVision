@@ -1,0 +1,123 @@
+<!DOCTYPE html><html lang="zh-CN"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script>
+  (function(){
+    window.__dvAllowTranslate = true;
+    window.googleTranslateElementInit = function(){ /* overridden by interactions */ };
+    var isGT = function(u){ return typeof u==='string' && /translate\.google(apis)?\.com/.test(u); };
+    var _a=window.location.assign, _r=window.location.replace, _o=window.open;
+    window.location.assign = function(u){ if(isGT(u) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT redirect'); return; } return _a.call(window.location,u); };
+    window.location.replace = function(u){ if(isGT(u) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT redirect'); return; } return _r.call(window.location,u); };
+    window.open = function(){ if(isGT(arguments[0]) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT popup'); return null; } return _o.apply(window,arguments); };
+  })();
+  </script><title>英伟达开源机器人技能库 — Dawn Vision</title><meta name="description" content="英伟达开源ASPIRE机器人技能库，具身智能训练范式从梯度下降转向技能积累，双臂任务成功率从20%升至92%。"><meta name="author" content="Dawn Vision 编辑部"><meta name="keywords" content="Dawn Vision, AI资讯, AI日报, 人工智能, 大模型, AI Agent, GPT, Claude, 具身智能, AI商业化, 一人公司, AI编程, 深度分析, AI观察, LLM, AIGC"><link rel="canonical" href="https://www.dawnvision.net/articles/nvidia-aspire-robot-skill-library-paradigm-shift/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="apple-touch-icon" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet"><meta property="og:type" content="article"><meta property="og:title" content="英伟达开源机器人技能库 — Dawn Vision"><meta property="og:description" content="英伟达开源ASPIRE机器人技能库，具身智能训练范式从梯度下降转向技能积累，双臂任务成功率从20%升至92%。"><meta property="og:url" content="https://www.dawnvision.net/articles/nvidia-aspire-robot-skill-library-paradigm-shift/"><meta property="og:image" content="https://www.dawnvision.net/images/og-image.png"><meta property="og:site_name" content="Dawn Vision"><meta property="og:locale" content="zh_CN"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="英伟达开源机器人技能库 — Dawn Vision"><meta name="twitter:description" content="英伟达开源ASPIRE机器人技能库，具身智能训练范式从梯度下降转向技能积累，双臂任务成功率从20%升至92%。"><meta name="twitter:image" content="https://www.dawnvision.net/images/og-image.png"><meta name="robots" content="index, follow"><meta name="applicable-device" content="pc,mobile"><meta name="format-detection" content="telephone=no"><meta name="baidu-site-verification" content><script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"英伟达开源ASPIRE机器人技能库：具身智能从炼权重到攒技能，Jim Fan说范式变了","description":"英伟达开源ASPIRE机器人技能库，具身智能训练范式从梯度下降转向技能积累，双臂任务成功率从20%升至92%。","datePublished":"2026-07-02","dateModified":"2026-07-02","author":{"@type":"Organization","name":"Dawn Vision 编辑部"},"publisher":{"@type":"Organization","name":"Dawn Vision","url":"https://www.dawnvision.net/","logo":{"@type":"ImageObject","url":"https://www.dawnvision.net/images/og-image.png","width":1200,"height":630}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.dawnvision.net/articles/nvidia-aspire-robot-skill-library-paradigm-shift"},"url":"https://www.dawnvision.net/articles/nvidia-aspire-robot-skill-library-paradigm-shift","inLanguage":"zh-CN","articleSection":"Focus · 焦点","keywords":"Dawn Vision, 英伟达, ASPIRE, 具身智能, 机器人技能库, Jim Fan, Code as Policy","wordCount":2400}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://www.dawnvision.net/"},{"@type":"ListItem","position":2,"name":"文章","item":"https://www.dawnvision.net/articles"},{"@type":"ListItem","position":3,"name":"英伟达开源机器人技能库"}]}</script><style>
+    iframe.goog-te-banner-frame,
+    iframe[class*="goog-te-banner"],
+    iframe[id*="goog-te-banner"],
+    .goog-te-gadget, .goog-te-gadget-icon, .goog-te-gadget-simple,
+    .goog-te-gadget span, #google_translate_element, #google_translate_element *,
+    .goog-te-spinner-pos, .goog-te-spinner,
+    img[src*="translate_spinner"], img[src*="loading"],
+    .goog-te-menu-frame, .goog-te-menu-value,
+    .goog-te-balloon-frame, .goog-text-highlight,
+    #goog-gt-tt, .goog-tooltip,
+    iframe[src*="translate.google.com"],
+    iframe[src*="translate.googleapis.com"],
+    iframe[src*="translate_p"], iframe[src*="element/"],
+    a[href*="goog-te"], .VIiyi, .JLqJ4b,
+    .skiptranslate {
+      display:none!important; visibility:hidden!important; opacity:0!important;
+      width:0!important; height:0!important; max-width:0!important; max-height:0!important;
+      overflow:hidden!important; pointer-events:none!important; position:absolute!important;
+      top:-9999px!important; left:-9999px!important;
+      margin:0!important; padding:0!important; border:0!important;
+    }
+    body, html { top:0!important; margin-top:0!important; }
+
+    /* Floating language switch button */
+    .dv-lang-switch {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 900;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: none;
+      background: #ffffff;
+      color: #002FA7;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .dv-lang-switch:hover {
+      background: #002FA7;
+      color: #fff;
+      transform: scale(1.08);
+      box-shadow: 0 4px 24px rgba(0,47,167,0.3);
+    }
+    .dv-lang-switch:disabled {
+      opacity: 0.6;
+      cursor: wait;
+      transform: none;
+    }
+    @media (max-width: 700px) {
+      .dv-lang-switch {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+        font-size: 10px;
+      }
+    }
+  </style><link rel="stylesheet" href="/_astro/502.CT2I6p4t.css">
+<style>@keyframes blobFloat{0%,to{transform:translate(0) scale(1)}33%{transform:translate(3vw,4vh) scale(1.05)}66%{transform:translate(-2vw,-3vh) scale(.97)}}.blobs--home{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--home .blob{position:absolute;border-radius:50%;filter:blur(120px);opacity:.5;animation:blobFloat 25s ease-in-out infinite;will-change:transform}.blobs--home .blob--1{width:50vw;height:50vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-5%;left:-5%;animation-delay:0s;animation-duration:30s}.blobs--home .blob--2{width:55vw;height:55vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-10s;animation-duration:28s;opacity:.6}.blobs--home .blob--3{width:40vw;height:40vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:30%;right:5%;animation-delay:-15s;animation-duration:32s;opacity:.4}.blobs--home .blob--4{width:35vw;height:35vw;background:radial-gradient(circle,rgba(80,130,255,.3) 0%,transparent 70%);top:0%;left:25%;animation-delay:-5s;animation-duration:35s;opacity:.35}.blobs--home .blob--5,.blobs--home .blob--6{display:none}.blobs--section{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--section .blob{position:absolute;border-radius:50%;filter:blur(100px);opacity:.45;animation:blobFloat 28s ease-in-out infinite;will-change:transform}.blobs--section .blob--1{width:45vw;height:45vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-10%;left:-8%;animation-delay:0s;animation-duration:30s}.blobs--section .blob--2{width:50vw;height:50vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-8s;animation-duration:26s;opacity:.55}.blobs--section .blob--3{width:35vw;height:35vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:20%;right:5%;animation-delay:-14s;animation-duration:32s}.blobs--section .blob--4,.blobs--section .blob--5{display:none}@media(max-width:700px){.blobs--home .blob{filter:blur(80px)}.blobs--section .blob{filter:blur(60px)}}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.Bhjd0_8r.css"></head> <body class>  <a href="#main-content" class="skip-link">跳至主要内容</a>  <nav class="nav nav--inner notranslate" role="navigation" aria-label="主导航" data-pagefind-ignore translate="no"> <div class="nav__inner"> <div class="nav__group"> <a href="/" class="nav__link ">Home</a> <a href="/articles" class="nav__link nav__link--active" aria-current="page">Articles</a> </div> <a href="/" class="nav__brand" aria-label="Dawn Vision 首页" translate="no">
+Dawn Vision
+<small>Daily Briefing</small> </a> <div class="nav__group"> <a href="/cao" class="nav__link ">Cao</a> <a href="/about" class="nav__link ">About</a> </div> </div> </nav> <main id="main-content"> <section class="article-hero "> <div class="blobs blobs--section" aria-hidden="true"> <div class="blob blob--1"></div><div class="blob blob--2"></div><div class="blob blob--3"></div><div class="blob blob--4"></div><div class="blob blob--5"></div> </div> <div class="container--narrow" style="position:relative;z-index:1;"> <div class="article-hero__category notranslate" data-pagefind-meta="category" translate="no">Focus · 焦点</div> <h1 class="article-hero__title" data-pagefind-meta="title">英伟达开源ASPIRE<br>具身智能范式变了</h1> <p class="article-hero__deck">双臂交接任务成功率从20%飙升至92%，机器人完成第100个任务时不再像第1个任务那样一无所知。英伟达用Skill Library告诉行业：训练产物不该只是浮点权重。</p> <div class="article-hero__meta"> <span class="article-hero__issue notranslate" translate="no">No.007</span> <span>2026.07.02</span> <span>约 10 分钟阅读</span> </div> </div> </section> <article class="container--narrow" style="padding-top: clamp(40px, 6vw, 64px); padding-bottom: 0;"> <div class="article-body" data-pagefind-body>      <p>92%。</p>
+      <p>这是英伟达最新开源的ASPIRE系统在双臂物体交接任务上的成功率。在它之前，基于Code as Policy范式的方法只能做到<strong>20%</strong>。4.6倍的提升，不是靠更大的模型、更多的GPU数据，而是靠一套会"记笔记"的机制。</p>
+      <p>7月1日，英伟达机器人研究主管Jim Fan在X上宣布ASPIRE正式开源，原话很直接："范式变了。"当机器人完成第100个任务时，它终于不再像完成第1个任务时那样一无所知——这句话点出了当前具身智能最大的痛点：每次都从零开始。</p>
+
+      <h2>机器人也有了"成长系统"</h2>
+      <p>ASPIRE的全称是Agentic Skill Programming through Iterative Robot Exploration，翻译成大白话：让Agent通过反复试错自己给机器人写技能。它的核心逻辑和Coding Agent如出一辙——程序员用Cursor写代码，跑测试，看报错，改bug，最后把修好的代码提交；机器人用ASPIRE也是一样，只不过它review的不是代码仓库，而是物理世界里的执行轨迹。</p>
+      <p>具体来说分三步。第一步是<strong>执行引擎</strong>：机器人每次执行任务时，系统会完整记录感知结果、导航路径、抓取动作、碰撞检测、运动规划的全部输入输出和视觉证据。就像工程师调机器人时会一帧一帧回放视频看哪里出了问题，ASPIRE把这个过程自动化了。</p>
+      <p>第二步是<strong>技能提炼</strong>。任务失败后，背后的GPT/Claude会像资深研究员一样分析多模态轨迹：是识别错了？抓取没抓稳？路径规划撞到障碍物了？还是某个恢复动作没接上？找到问题后修改控制程序，重新测试；如果跑通了，就把这次验证过的修复经验沉淀成一条可复用的Skill，写进不断增长的技能库。</p>
+      <p>举个具体例子：机器人想拿起桌上的收音机，明明识别到了目标，机械臂却死活靠不近。ASPIRE分析后发现，不是视觉识别的锅，而是规划器给出的目标点全落在障碍物的碰撞缓冲区内。于是它总结出一条Skill：遇到规划失败时，尝试从45度、90度、180度等不同角度重新接近目标，直到找到无碰撞路径。这条经验一旦入库，下次不管目标是收音机、微波炉还是马克杯，都能直接调用。</p>
+      <p>第三步是<strong>进化搜索</strong>。系统不会只沿着一条修复路径死磕，而是同时生成多条候选控制程序，放进执行环境里跑，再根据幸存者和失败轨迹继续迭代。这本质上是把软件工程里"写代码→跑测试→看trace→改bug"的循环搬进了物理世界。</p>
+
+      <h2>训练不再是炼权重，而是攒技能</h2>
+      <p>ASPIRE真正激进的地方，在于它对"训练"这件事的重新定义。</p>
+      <p>过去十年，深度学习的范式非常统一：收集数据→梯度下降→更新模型权重→部署。不管是大语言模型还是具身智能VLA模型，产物都是一堆几十GB几百GB的浮点权重。你打开权重文件，什么也看不懂；模型为什么做出这个决策，很难追溯；想给模型增加一个新技能，最稳妥的办法是重新采集数据、重新训练、重新微调。</p>
+      <p>ASPIRE给出了另一条路：<strong>训练产物不再是权重，而是一个可解释、可积累、可迁移的技能库</strong>。训练过程不再是闭门炼丹式的梯度下降，而是Skill Refinement——不断打磨一条条具体的技能。分布式训练也不再是几百张卡同步算梯度，而是一群Agent各自在不同场景练习不同技能，再把经验汇总到同一个技能库里。</p>
+      <p>这个思路的背后，是Code as Policy范式的成熟。传统VLA模型让神经网络直接输出电机动作，行为完全黑箱化；而Code as Policy让大模型写可执行的机器人控制程序，程序里调用感知模块、规划API和控制原语。代码是白箱的，能被Agent检查、修改、调试、版本化——这是Skill Library能够成立的前提。</p>
+      <p>论文里的泛化实验很能说明问题。研究团队先在LIBERO-90任务集上不断积累Skill Library，然后直接迁移到从未见过的LIBERO-Pro Long长任务上，中间没有针对新任务继续训练，也没有更新技能库。结果显示，随着技能库越来越丰富，机器人在新任务上的成功率从几乎不会做，一路提升到<strong>31%</strong>。这意味着Skill Library越厚，机器人迁移到新场景的能力就越强——这正是人类工程师的工作方式：你调过一百个机器人之后，遇到第一百零一个新场景，不会从零开始，而是会调出脑子里的"经验库"。</p>
+
+      <h2>具身智能的"App Store"时刻？</h2>
+      <p>开源ASPIRE的时机值得玩味。</p>
+      <p>就在上周，北航机器人所团队创业的航墨科技完成近亿元天使轮融资，主打智能变刚度关节技术；硅羽科技半年连获四轮数亿元融资，做通用空中智能体；VAST完成超10亿元A3轮融资，巨人网络参投，专注AI 3D大模型和通用世界模型。国内具身智能赛道的融资热度丝毫不减。</p>
+      <p>而在芯片侧，英伟达的竞争对手Etched刚刚拿下<strong>50亿美元估值</strong>，手里已经握有10亿美元的AI芯片订单。具身智能对算力的需求是无底洞，但光有算力堆不出能用的机器人——这是整个行业的共识。英伟达此时开源ASPIRE，与其说是做慈善，不如说是在建立具身智能时代的"开发者生态"。</p>
+      <p>想象一下：如果Skill Library的模式跑通了，未来可能会出现一个机器人技能的"App Store"——某家公司训练出了特别擅长开抽屉的Skill，另一家公司打磨出了处理透明玻璃杯的Skill，大家可以交易、组合、复用这些技能，而不是每家都从零开始采集数据、训练模型。这比单纯卖GPU的想象空间大得多。</p>
+      <p>当然，这个愿景离落地还有距离。ASPIRE目前的实验主要在仿真环境中完成，Sim2Real的迁移仍然是具身智能最大的拦路虎之一。物理世界的复杂度远超过仿真——光照变化、物体材质差异、传感器噪声、机械臂磨损，这些都是代码里难以完全覆盖的变量。但方向是清晰的：<strong>让机器人像人类工程师一样在实践中积累经验，而不是每次都重新投胎</strong>。</p>
+
+      <h2>终局判断</h2>
+      <p>AI编程领域过去一年发生的事情，正在具身智能身上重演。</p>
+      <p>2025年大家还在比谁的模型补全代码更准；2026年，Cursor、Claude Code、Devin这些产品已经开始跑完整的工程循环——理解需求、写代码、跑测试、看报错、修bug、提交PR。核心竞争力从"单次生成质量"转向了"闭环迭代能力"。</p>
+      <p>具身智能正在走同样的路。比谁的VLA模型在benchmark上分数高是一回事，能不能在真实环境里持续学习、积累经验、不犯重复错误是另一回事。ASPIRE的价值，在于它把机器人从"每次都从零开始的小白"变成了"会记笔记、会复盘、会成长的学徒"。</p>
+      <p>Jim Fan说"范式变了"，不是夸张。当训练的目标从产出一组权重变成沉淀一个可积累的技能库，当分布式训练从同步梯度变成多Agent并行探索汇总经验，当机器人的能力提升不再只靠炼大模型而是靠Skill Library越积越厚——具身智能的游戏规则确实在改写。</p>
+      <p>92%的双臂交接成功率是一个漂亮的数字，但更值得记住的是数字背后的方法论转变。毕竟，人类能从手工作坊走到工业革命，靠的从来不是某一代人天生更聪明，而是每一代人都能站在前人的肩膀上——知识和技能的可积累、可传递，才是文明进步的核心。机器人，终于也开始学会这件事了。</p></div>  <blockquote class="article-pull-quote"> <p class="article-pull-quote__text">当机器人完成第100个任务时，它终于不再像完成第1个任务时那样一无所知。</p> <cite class="article-pull-quote__attr">—— 英伟达机器人主管 Jim Fan</cite> </blockquote>    <div class="article-cognitive">英伟达ASPIRE · 具身智能 · 机器人技能库 · Code as Policy · Skill Library · Jim Fan · 持续学习范式</div>  <div class="article-sources"> <div class="article-sources__title notranslate" translate="no">Sources · 信源</div> <ul class="article-sources__list"> <li class="article-sources__item"> <a href="https://www.qbitai.com/2026/07/441396.html" target="_blank" rel="noopener noreferrer">量子位 - 具身智能Skill时刻！英伟达开源机器人技能库，Jim Fan：范式变了</a> </li><li class="article-sources__item"> 英伟达官方 - ASPIRE: Agentic Skill Programming through Iterative Robot Exploration </li><li class="article-sources__item"> <a href="https://techcrunch.com/2026/06/30/nvidia-competitor-etched-hits-5b-valuation-1b-in-sales-for-ai-chip/" target="_blank" rel="noopener noreferrer">TechCrunch - Nvidia competitor Etched hits $5B valuation</a> </li><li class="article-sources__item"> <a href="https://36kr.com/p/3877060559433984?f=rss" target="_blank" rel="noopener noreferrer">36氪 - 北航机器人所团队创业，首创智能变刚度关节，完成近亿元天使轮融资</a> </li><li class="article-sources__item"> <a href="https://www.infoq.cn/article/rHiSH66JZwoQG5Dfvv6x" target="_blank" rel="noopener noreferrer">InfoQ中文 - 前后端一起消失：AI Coding正在改写大厂工程师分工</a> </li> </ul> <p class="article-source-summary">本文基于 Dawn Vision 认知引擎处理的 12 个源信号自动生成，经编辑部人工审核。素材来源：量子位、英伟达官方、TechCrunch、36氪、InfoQ中文。</p> </div>  <div class="article-actions"> <button class="article-action-btn article-action-btn--like" id="article-like-btn" data-slug="nvidia-aspire-robot-skill-library-paradigm-shift" aria-label="喜欢这篇文章"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path> </svg> <span class="article-action-btn__label">喜欢</span> <span class="article-action-btn__count" id="like-count">0</span> </button> <button class="article-action-btn article-action-btn--tip" id="article-tip-btn" aria-label="打赏"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon> </svg> <span class="article-action-btn__label">打赏</span> </button> </div>  <nav class="article-nav" aria-label="文章导航"> <a href="/articles/opensquilla-040-self-verification-ai-coding-trust" class="article-nav__item article-nav__item--prev"> <div class="article-nav__label">上一篇</div> <div class="article-nav__title">OpenSquilla 0.4.0发布自我验证：AI写代码从&quot;我改好了&quot;到&quot;我证明改对了&quot;</div> </a> <a href="/articles/jersey-mikes-ipo-ai-hype-sandwich" class="article-nav__item article-nav__item--next"> <div class="article-nav__label">下一篇</div> <div class="article-nav__title">三明治店IPO狂提AI 22次：比被雷劈的风险还值得写进S-1？</div> </a> </nav> </article>  </main> <footer class="footer footer--site" role="contentinfo" data-pagefind-ignore> <div class="footer__container"> <div class="footer__brand notranslate" translate="no">Dawn Vision</div> <div class="footer__meta notranslate" translate="no">© 2026 · Daily at 16:30 CST · Weekdays Only</div> </div> </footer>   <div id="google_translate_element" style="position:absolute;left:-9999px;top:-9999px;width:0;height:0;overflow:hidden;opacity:0;pointer-events:none;"></div>  <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="搜索文章" hidden> <div class="search-modal" role="document"> <div class="search-modal__input-wrap"> <svg class="search-modal__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="11" cy="11" r="8"></circle> <line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> <input type="search" class="search-modal__input" id="search-input" placeholder="搜索文章、关键词、作者..." autocomplete="off" spellcheck="false" aria-label="搜索关键词"> <span class="search-modal__close-hint">ESC</span> </div> <div class="search-modal__results" id="search-results"> <div class="search-modal__empty">输入关键词开始搜索</div> </div> <div class="search-modal__footer"> <span><kbd>↑</kbd><kbd>↓</kbd> 选择</span> <span><kbd>↵</kbd> 打开</span> <span><kbd>⌘K</kbd> 搜索</span> </div> </div> </div> <!-- Reading progress bar (shown on article pages) --> <div class="reading-progress" id="reading-progress" hidden></div>  <div class="tip-modal" id="tip-modal" hidden> <div class="tip-modal__overlay" data-tip-close></div> <div class="tip-modal__content" role="dialog" aria-modal="true" aria-label="打赏支持"> <button class="tip-modal__close" data-tip-close aria-label="关闭">×</button> <h3 class="tip-modal__title notranslate" translate="no">Tip Jar</h3> <p class="tip-modal__desc">谢谢老板请我喝奶茶 ☕</p> <div class="tip-modal__qr-wrap"> <img src="/images/reward-qr.webp" alt="打赏二维码" class="tip-modal__qr" width="200" height="200"> </div> <p class="tip-modal__thanks">微信扫码打赏，你的支持是持续创作的动力。</p> </div> </div>  <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.ByegvZaa.js"></script>  <script>
+  (function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') { bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'; }
+    else { bp.src = 'http://push.zhanzhang.baidu.com/push.js'; }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+  </script> </body> </html>

@@ -59,15 +59,15 @@ def build_article_head(title, description, keywords, canonical_url, og_title, og
   
   <script>
 /* Anti-redirect guard: block cached old GT scripts from auto-redirecting */
-(function(){
+(function(){{
   window.__dvAllowTranslate = true; /* we load GT ourselves */
-  window.googleTranslateElementInit = function(){ /* placeholder, overridden by interactions.js */ };
-  var isGT = function(u){ return typeof u==='string' && /translate\.google(apis)?\.com/.test(u); };
+  window.googleTranslateElementInit = function(){{ /* placeholder, overridden by interactions.js */ }};
+  var isGT = function(u){{ return typeof u==='string' && /translate\.google(apis)?\.com/.test(u); }};
   var _a=window.location.assign, _r=window.location.replace, _o=window.open;
-  window.location.assign = function(u){ if(isGT(u) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT redirect'); return; } return _a.call(window.location,u); };
-  window.location.replace = function(u){ if(isGT(u) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT redirect'); return; } return _r.call(window.location,u); };
-  window.open = function(){ if(isGT(arguments[0]) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT popup'); return null; } return _o.apply(window,arguments); };
-})();
+  window.location.assign = function(u){{ if(isGT(u) && !window.__dvAllowTranslate){{ console.warn('[DV] Blocked auto GT redirect'); return; }} return _a.call(window.location,u); }};
+  window.location.replace = function(u){{ if(isGT(u) && !window.__dvAllowTranslate){{ console.warn('[DV] Blocked auto GT redirect'); return; }} return _r.call(window.location,u); }};
+  window.open = function(){{ if(isGT(arguments[0]) && !window.__dvAllowTranslate){{ console.warn('[DV] Blocked auto GT popup'); return null; }} return _o.apply(window,arguments); }};
+}})();
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title} | Dawn Vision</title>
@@ -1035,15 +1035,26 @@ def main():
     cover_slug = cover["slug"]
     cao_slug = cao["slug"]
     cover["cao_slug"] = cao_slug
+    cover["next_article_slug"] = briefs[0]["slug"] if briefs else ""
     for i, b in enumerate(briefs):
         b["cover_slug"] = cover_slug
         b["cao_slug"] = cao_slug
 
     generated_files = []
 
-    # 1. 生成封面文章
+    # 1. 生成封面文章（查找上一期封面slug）
+    prev_cover_slug = None
+    prev_num = str(int(issue_num) - 1).zfill(3)
+    prev_issue_path = TOOLS_DIR / "data" / f"issue-{prev_num}.json"
+    if prev_issue_path.exists():
+        try:
+            with open(prev_issue_path, "r", encoding="utf-8") as f:
+                prev_data = json.load(f)
+                prev_cover_slug = prev_data.get("cover", {}).get("slug")
+        except:
+            pass
     print("📝 生成封面文章...")
-    cover_filename, cover_html = build_cover_article(cover, issue)
+    cover_filename, cover_html = build_cover_article(cover, issue, prev_cover_slug)
     if not args.dry_run:
         (ARTICLES_DIR / cover_filename).write_text(cover_html, encoding="utf-8")
     generated_files.append(f"articles/{cover_filename}")

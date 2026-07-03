@@ -2,83 +2,62 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import ArticleCard from '@components/ArticleCard.astro';
 import BackgroundBlobs from '@components/BackgroundBlobs.astro';
-import { getAllCaos, getLatestIssue } from '@lib/issues';
+import { getAllCaos } from '@lib/issues';
 import '@styles/pages/cao.css';
 
 const caos = await getAllCaos();
-const latest = caos.length > 0 ? caos[0] : null;
-const archive = caos.slice(1);
-
-const latestIssue = await getLatestIssue();
 
 const jsonLd = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Cao! · 操蛇之神 — Dawn Vision",
-  "description": "操蛇之神——Dawn Vision的吐槽专栏。用最刻薄的眼光看AI圈最魔幻的故事。",
+  "name": "Cao! 槽点 — Dawn Vision",
+  "description": "每天一点槽，笑完继续搞。A little rant a day keeps the sanity away.",
   "url": "https://www.dawnvision.net/cao",
   "isPartOf": { "@type": "WebSite", "name": "Dawn Vision", "url": "https://www.dawnvision.net/" }
 });
 ---
 
 <BaseLayout
-  title="Cao! · 操蛇之神"
-  description="操蛇之神——Dawn Vision的吐槽专栏。用最刻薄的眼光看AI圈最魔幻的故事。"
+  title="Cao! 槽点"
+  description="每天一点槽，笑完继续搞。Dawn Vision吐槽专栏。"
   navVariant="inner"
   activeNav="cao"
-  footerVariant="site"
   structuredData={jsonLd}
 >
   <Fragment slot="main">
     <div class="cao-page">
-      {/* Cao Hero */}
+      {/* Cao Hero (full-bleed Klein blue, matching articles page Cao section) */}
       <section class="cao-hero">
         <BackgroundBlobs variant="section" />
-        <div class="container--narrow" style="position:relative;z-index:1;">
-          <div class="cao-hero__label">Column · 专栏</div>
-          <h1 class="cao-hero__title">Cao!</h1>
-          <p class="cao-hero__subtitle">操蛇之神——用最刻薄的眼光，看AI圈最魔幻的故事。不中立、不客观、不客气。</p>
+        <div class="cao-page__container" style="position:relative;z-index:1;">
+          <h1 class="cao-hero__title notranslate" translate="no">Cao! <em>槽点!</em></h1>
+          <p class="cao-hero__subtitle">每天一点槽，笑完继续搞。</p>
+          <p class="cao-hero__subtitle-en notranslate" translate="no">A little rant a day keeps the sanity away. We roast AI so you don't have to.</p>
         </div>
       </section>
 
-      {/* Latest Cao */}
-      {latest && (
-        <section class="cao-latest">
-          <div class="container--narrow">
-            <ArticleCard
-              variant="cover"
-              article={latest}
-              issueNum={latest.issueNum}
-              issueDate={latest.issueDate}
-              href={`/articles/${latest.slug}`}
-            />
-          </div>
-        </section>
-      )}
-
-      {/* Cao Archive */}
-      {archive.length > 0 && (
-        <section class="cao-archive">
-          <div class="container--narrow">
-            <div class="cao-archive__header">Archive · 往期</div>
-            {archive.map((cao) => (
-              <ArticleCard
-                variant="cao-item"
-                article={cao}
-                issueNum={cao.issueNum}
-                issueDate={cao.issueDate}
-                href={`/articles/${cao.slug}`}
-              />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {caos.length === 0 && (
-        <div class="container--narrow" style="padding: 80px 0; text-align: center; color: var(--color-text-muted); font-style: italic;">
-          暂无Cao专栏内容
+      {/* Cao Article List (flat list, no latest/archive split) */}
+      <div class="cao-page__body">
+        <div class="cao-page__container">
+          {caos.length > 0 ? (
+            <div class="cao-list">
+              {caos.map((cao) => (
+                <ArticleCard
+                  variant="cao-item"
+                  article={cao}
+                  issueNum={cao.issueNum}
+                  issueDate={cao.issueDate}
+                  href={`/articles/${cao.slug}`}
+                />
+              ))}
+            </div>
+          ) : (
+            <div style="padding: 80px 0; text-align: center; color: var(--color-text-muted); font-style: italic;">
+              暂无Cao专栏内容
+            </div>
+          )}
         </div>
-      )}
+      </div>
     </div>
   </Fragment>
 </BaseLayout>

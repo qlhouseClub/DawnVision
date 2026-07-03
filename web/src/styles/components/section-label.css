@@ -21,10 +21,17 @@
   font-weight: var(--weight-regular);
   color: rgba(255,255,255,0.6);
   font-style: italic;
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   margin-left: 14px;
   font-size: 0.85em;
   letter-spacing: var(--tracking-wide);
+}
+
+/* ── Fullbleed variant (edge-to-edge for article list page) ── */
+.section-label--fullbleed {
+  padding: 16px clamp(24px, 5vw, 64px);
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 /* ── Mobile ── */
@@ -33,5 +40,9 @@
     padding: 14px 20px;
     font-size: 11px;
     letter-spacing: 4px;
+  }
+
+  .section-label--fullbleed {
+    padding: 14px 20px;
   }
 }

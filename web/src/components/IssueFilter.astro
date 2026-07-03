@@ -3,6 +3,8 @@
  * IssueFilter — 期数四级联动筛选器
  * 年 → 月 → 上/下旬 → 期数
  * 纯静态HTML，客户端交互由is:inline脚本处理
+ * 
+ * 注意：选择框不包含无效占位选项，首项即为有效选项。
  */
 import '@styles/components/issue-filter.css';
 import { buildIssueFilterData } from '@lib/issues';
@@ -14,41 +16,29 @@ const { tree, flat } = filterData;
 const filterDataJson = JSON.stringify({ tree, flat });
 ---
 
-<div class="issue-filter" id="issue-filter" data-filter={filterDataJson}>
+<div class="issue-filter notranslate" id="issue-filter" data-filter={filterDataJson} translate="no">
   <div class="issue-filter__group">
     <select class="issue-filter__select" id="filter-year" aria-label="选择年份">
-      <option value="">Year</option>
       {tree.map(y => (
         <option value={y.year}>{y.year}</option>
       ))}
     </select>
   </div>
 
-  <div class="issue-filter__divider" aria-hidden="true"></div>
-
   <div class="issue-filter__group">
     <select class="issue-filter__select" id="filter-month" aria-label="选择月份" disabled>
-      <option value="">Month</option>
     </select>
   </div>
-
-  <div class="issue-filter__divider" aria-hidden="true"></div>
 
   <div class="issue-filter__group">
     <select class="issue-filter__select" id="filter-half" aria-label="选择上旬/下旬" disabled>
-      <option value="">Half</option>
     </select>
   </div>
-
-  <div class="issue-filter__divider" aria-hidden="true"></div>
 
   <div class="issue-filter__group">
     <select class="issue-filter__select" id="filter-issue" aria-label="选择期数" disabled>
-      <option value="">Issue</option>
     </select>
   </div>
-
-  <span class="issue-filter__latest">Latest: No.{flat[0]?.num}</span>
 </div>
 
 <script is:inline>
@@ -67,32 +57,40 @@ const filterDataJson = JSON.stringify({ tree, flat });
   const issueSel = document.getElementById('filter-issue');
 
   const monthNames = {
-    '01': 'Jan', '02': 'Feb', '03': 'Mar', '04': 'Apr',
-    '05': 'May', '06': 'Jun', '07': 'Jul', '08': 'Aug',
-    '09': 'Sep', '10': 'Oct', '11': 'Nov', '12': 'Dec'
+    '01': '1月', '02': '2月', '03': '3月', '04': '4月',
+    '05': '5月', '06': '6月', '07': '7月', '08': '8月',
+    '09': '9月', '10': '10月', '11': '11月', '12': '12月'
   };
 
-  function clearSelect(sel, placeholder) {
-    sel.innerHTML = `<option value="">${placeholder}</option>`;
+  function pad(n) { return String(n).padStart(3, '0'); }
+
+  function clearSelect(sel) {
+    sel.innerHTML = '';
     sel.disabled = true;
   }
 
-  function populateSelect(sel, options, placeholder) {
-    sel.innerHTML = `<option value="">${placeholder}</option>`;
+  function populateSelect(sel, options) {
+    const frag = document.createDocumentFragment();
     options.forEach(opt => {
       const o = document.createElement('option');
       o.value = opt.value;
       o.textContent = opt.label;
-      sel.appendChild(o);
+      frag.appendChild(o);
     });
+    sel.innerHTML = '';
+    sel.appendChild(frag);
     sel.disabled = options.length === 0;
+    // Auto-select first option
+    if (options.length > 0) {
+      sel.value = options[0].value;
+    }
   }
 
   function onYearChange() {
     const year = yearSel.value;
-    clearSelect(monthSel, 'Month');
-    clearSelect(halfSel, 'Half');
-    clearSelect(issueSel, 'Issue');
+    clearSelect(monthSel);
+    clearSelect(halfSel);
+    clearSelect(issueSel);
     if (!year) return;
 
     const yearData = data.tree.find(y => y.year === year);
@@ -102,14 +100,15 @@ const filterDataJson = JSON.stringify({ tree, flat });
       value: m.month,
       label: monthNames[m.month] || m.month
     }));
-    populateSelect(monthSel, months, 'Month');
+    populateSelect(monthSel, months);
+    if (months.length > 0) onMonthChange();
   }
 
   function onMonthChange() {
     const year = yearSel.value;
     const month = monthSel.value;
-    clearSelect(halfSel, 'Half');
-    clearSelect(issueSel, 'Issue');
+    clearSelect(halfSel);
+    clearSelect(issueSel);
     if (!year || !month) return;
 
     const yearData = data.tree.find(y => y.year === year);
@@ -119,16 +118,17 @@ const filterDataJson = JSON.stringify({ tree, flat });
 
     const halves = monthData.halves.map(h => ({
       value: h.half,
-      label: h.half === 'H1' ? 'Early' : 'Late'
+      label: h.half === 'H1' ? '上半月' : '下半月'
     }));
-    populateSelect(halfSel, halves, 'Half');
+    populateSelect(halfSel, halves);
+    if (halves.length > 0) onHalfChange();
   }
 
   function onHalfChange() {
     const year = yearSel.value;
     const month = monthSel.value;
     const half = halfSel.value;
-    clearSelect(issueSel, 'Issue');
+    clearSelect(issueSel);
     if (!year || !month || !half) return;
 
     const yearData = data.tree.find(y => y.year === year);
@@ -138,17 +138,21 @@ const filterDataJson = JSON.stringify({ tree, flat });
     const halfData = monthData.halves.find(h => h.half === half);
     if (!halfData) return;
 
-    const issues = halfData.issues.map(num => ({
-      value: num,
-      label: 'No.' + num
-    }));
-    populateSelect(issueSel, issues, 'Issue');
+    const issues = halfData.issues.map(num => {
+      const isLatest = data.flat[0] && data.flat[0].num === num;
+      return {
+        value: num,
+        label: isLatest ? `Issue ${pad(num)} (最新)` : `Issue ${pad(num)}`
+      };
+    });
+    populateSelect(issueSel, issues);
   }
 
   function onIssueChange() {
     const num = issueSel.value;
     if (!num) return;
-    window.location.href = '/articles?issue=' + num;
+    // Dispatch custom event with source='filter' to avoid loop
+    document.dispatchEvent(new CustomEvent('issue-changed', { detail: { issue: num, source: 'filter' } }));
   }
 
   yearSel.addEventListener('change', onYearChange);
@@ -156,30 +160,52 @@ const filterDataJson = JSON.stringify({ tree, flat });
   halfSel.addEventListener('change', onHalfChange);
   issueSel.addEventListener('change', onIssueChange);
 
-  // Check URL for pre-selected issue
-  const urlParams = new URLSearchParams(window.location.search);
-  const preIssue = urlParams.get('issue');
-  if (preIssue) {
-    const issue = data.flat.find(f => f.num === preIssue);
-    if (issue) {
-      const [y, m] = issue.date.split('-');
-      const day = parseInt(issue.date.split('-')[2]);
-      const h = day <= 15 ? 'H1' : 'H2';
-
-      yearSel.value = y;
-      onYearChange();
-      setTimeout(() => {
-        monthSel.value = m;
-        onMonthChange();
-        setTimeout(() => {
-          halfSel.value = h;
-          onHalfChange();
-          setTimeout(() => {
-            issueSel.value = preIssue;
-          }, 50);
-        }, 50);
-      }, 50);
+  // Initial setup
+  function init() {
+    // Check URL for pre-selected issue
+    const urlParams = new URLSearchParams(window.location.search);
+    const preIssue = urlParams.get('issue');
+    if (preIssue) {
+      setIssue(preIssue);
+    } else {
+      // Select latest issue by default
+      if (yearSel.value) onYearChange();
     }
   }
+
+  // Externally set issue (used by pagination/init to sync dropdowns)
+  function setIssue(num) {
+    const issue = data.flat.find(f => f.num === num);
+    if (!issue) return;
+    const [y, m] = issue.date.split('-');
+    const day = parseInt(issue.date.split('-')[2]);
+    const h = day <= 15 ? 'H1' : 'H2';
+
+    yearSel.value = y;
+    onYearChange();
+    setTimeout(() => {
+      monthSel.value = m;
+      onMonthChange();
+      setTimeout(() => {
+        halfSel.value = h;
+        onHalfChange();
+        setTimeout(() => {
+          issueSel.value = num;
+          // Update issue label
+          const label = document.getElementById('issue-label');
+          if (label) label.textContent = 'Issue ' + pad(num);
+        }, 50);
+      }, 50);
+    }, 50);
+  }
+
+  // Listen for external issue changes (from pagination clicks) - sync dropdowns only
+  document.addEventListener('issue-changed', function(e) {
+    if (e.detail && e.detail.issue && e.detail.source !== 'filter') {
+      setIssue(e.detail.issue);
+    }
+  });
+
+  init();
 })();
 </script>
