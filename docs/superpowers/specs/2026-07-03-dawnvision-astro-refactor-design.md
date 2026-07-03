@@ -124,6 +124,8 @@ DawnVision/
 │   │   │   ├── CoverCard.astro
 │   │   │   ├── CaoCard.astro
 │   │   │   ├── IssueSelector.tsx   # 期数选择器（React，替代四级筛选）
+│   │   │   ├── SearchTrigger.astro # 搜索入口（静态按钮）
+│   │   │   ├── SearchDialog.tsx    # 全文搜索面板（React，懒加载）
 │   │   │   ├── Pagination.astro
 │   │   │   ├── PullQuote.astro
 │   │   │   ├── ArticleSources.astro
@@ -132,6 +134,7 @@ DawnVision/
 │   │   │   ├── LikeButton.tsx      # 点赞按钮（React）
 │   │   │   ├── TipModal.tsx        # 打赏弹窗（React）
 │   │   │   ├── NewContentNotify.tsx# 新内容通知（React）
+│   │   │   ├── AdSlot.astro        # [预留] 广告位插槽（默认不渲染）
 │   │   │   └── SectionHeader.astro
 │   │   ├── styles/
 │   │   │   ├── tokens.css          # Design Tokens（CSS变量）
@@ -139,24 +142,30 @@ DawnVision/
 │   │   │   └── typography.css      # 排版系统
 │   │   ├── lib/
 │   │   │   ├── issues.ts           # 内容加载/查询工具函数
-│   │   │   └── i18n.ts             # 国际化字典
-│   │   └── pages/
-│   │       ├── index.astro         # 首页
-│   │       ├── articles/
-│   │       │   └── index.astro     # 最新期文章列表
-│   │       ├── article/[...slug].astro  # 文章详情页（cover/brief统一）
-│   │       ├── cao/
-│   │       │   ├── index.astro     # Cao槽点列表
-│   │       │   └── [...slug].astro # Cao详情页
-│   │       ├── issues/
-│   │       │   └── [number].astro  # Issue归档页
-│   │       ├── about.astro         # 关于页
-│   │       ├── knowledge/
-│   │       │   ├── index.astro     # 知识网络索引
-│   │       │   └── [slug].astro    # 知识主题页
-│   │       ├── 404.astro           # 404页
-│   │       ├── 500.astro           # 服务器错误页
-│   │       └── 503.astro           # 服务不可用页
+│   │   │   ├── i18n.ts             # 国际化字典
+│   │   │   ├── config.ts           # 站点配置/功能开关
+│   │   │   ├── env.ts              # 环境变量schema校验
+│   │   │   ├── db.ts               # [预留] 数据库客户端
+│   │   │   └── auth.ts             # [预留] 认证工具
+│   │   ├── pages/
+│   │   │   ├── api/                # [预留] API Routes（SSR时启用）
+│   │   │   │   └── subscribe.ts    # [预留] 邮件订阅API
+│   │   │   ├── index.astro         # 首页
+│   │   │   ├── articles/
+│   │   │   │   └── index.astro     # 最新期文章列表
+│   │   │   ├── article/[...slug].astro  # 文章详情页（cover/brief统一）
+│   │   │   ├── cao/
+│   │   │   │   ├── index.astro     # Cao槽点列表
+│   │   │   │   └── [...slug].astro # Cao详情页
+│   │   │   ├── issues/
+│   │   │   │   └── [number].astro  # Issue归档页
+│   │   │   ├── about.astro         # 关于页
+│   │   │   ├── knowledge/
+│   │   │   │   ├── index.astro     # 知识网络索引
+│   │   │   │   └── [slug].astro    # 知识主题页
+│   │   │   ├── 404.astro           # 404页
+│   │   │   ├── 500.astro           # 服务器错误页
+│   │   │   └── 503.astro           # 服务不可用页
 │   └── dist/                       # 构建输出（gitignore，部署用）
 │
 ├── knowledge/                      # Obsidian知识网络（本地，不发布）
@@ -245,6 +254,7 @@ validate.py（schema校验）
 | 组件 | 职责 | JS体积估算 |
 |------|------|-----------|
 | IssueSelector.tsx | **替代四级联动筛选器**：单一下拉选择器，列出所有期数（"Issue 007 · 2026.07.02"），选择后跳转 | ~2KB |
+| SearchDialog.tsx | 全文搜索面板（懒加载），Pagefind驱动，支持中文、结果高亮、键盘导航 | ~22KB（含Pagefind UI，懒加载） |
 | LangButton.tsx | 语言切换按钮，浏览器原生翻译触发，显示翻译中状态，EN/CN切换 | ~3KB |
 | LikeButton.tsx | 点赞/喜欢按钮，本地存储已赞状态，无虚假计数，点击动画 | ~1KB |
 | TipModal.tsx | 打赏弹窗，focus trap，ESC关闭，二维码显示 | ~2KB |
@@ -521,14 +531,16 @@ DawnVision_*_retrospective.*
 - [ ] Read More直接链接封面文章
 - [ ] 验证：首页视觉与现有版本一致
 
-### Phase 3：列表页（预计1天）
+### Phase 3：列表页 + 搜索（预计1.5天）
 - [ ] ArticleCard.astro + CoverCard.astro + CaoCard.astro
 - [ ] Pagination.astro
 - [ ] IssueSelector.tsx（新的单一下拉选择器，替代四级筛选）
+- [ ] SearchDialog.tsx（Pagefind全文搜索，懒加载）
+- [ ] 集成Pagefind，配置中文分词
 - [ ] ListingLayout.astro
 - [ ] articles/index.astro（最新期列表）
 - [ ] issues/[number].astro（归档页）
-- [ ] 验证：列表页功能完整，期数切换正常
+- [ ] 验证：列表页功能完整，期数切换和搜索正常
 
 ### Phase 4：文章详情页（预计1天）
 - [ ] ArticleLayout.astro
@@ -683,7 +695,133 @@ Issue 001-003仅有生成的HTML文件，需要反向提取内容生成JSON。
 
 ---
 
-## 15. 技术选型理由
+## 15. 全文搜索
+
+### 15.1 方案选择：Pagefind
+
+采用 **Pagefind** 作为全文搜索方案，这是Astro官方推荐的静态搜索库：
+- 构建时自动索引所有页面内容，生成静态索引文件
+- 零后端、零服务、零API费用，完全客户端运行
+- 支持中文分词（需配置中文分词器）
+- 搜索结果高亮、片段预览
+- JS体积约20KB gzip，按需加载（用户点击搜索框才加载）
+- 完美支持纯静态部署
+
+### 15.2 搜索UI位置
+
+在期数选择器**右侧**添加搜索框，设计为：
+- 顶部导航区域：`[IssueSelector下拉] [🔍 搜索文章...]` 同一行排列
+- 点击搜索框展开搜索面板（模态框或下拉面板）
+- 输入关键词即时显示结果（标题、摘要高亮、期号/日期标签）
+- 支持按内容类型筛选（焦点/Brief/Cao/知识）
+- 键盘支持：`/` 快捷键聚焦搜索框，`↑↓` 选择结果，`Enter` 跳转，`Esc` 关闭
+
+### 15.3 组件设计
+
+| 组件 | 类型 | 职责 |
+|------|------|------|
+| SearchDialog.tsx | React（懒加载） | 搜索面板/模态框，输入框+结果列表+键盘导航 |
+| SearchTrigger.astro | Astro | 搜索按钮/输入框（静态），点击后加载SearchDialog |
+
+Pagefind在`astro build`后自动运行索引，无需额外配置。
+
+---
+
+## 16. WebApp演进路径与架构预留
+
+### 16.1 核心原则：渐进式演进
+
+Astro不是"纯静态站点生成器"，它支持**混合渲染（Hybrid Rendering）**——同一项目中部分页面静态生成（SSG）、部分页面服务端渲染（SSR），配合API Routes处理后端逻辑。这意味着不需要换框架就能从内容站演进为WebApp。
+
+**当前阶段（Phase 1-10）**：全静态SSG，可部署到GitHub Pages
+**未来阶段**：按需开启SSR和API Routes，部署到Vercel/Netlify
+
+### 16.2 功能演进路线图
+
+| 阶段 | 功能 | 渲染模式 | 技术方案 | 部署要求 |
+|------|------|---------|---------|---------|
+| 现在 | 内容阅读、期数切换、搜索、翻译、点赞、打赏 | SSG静态 | Astro + React岛屿 + Pagefind | GitHub Pages |
+| Phase 11 | 邮件订阅 | SSR + API Route | Astro API Route + Resend/SendGrid | Vercel（免费额度足够） |
+| Phase 12 | 广告位管理 | SSG + SSR混合 | 静态页面中预留广告位插槽，广告配置通过API/头注入 | Vercel |
+| Phase 13 | 用户系统（注册/登录/收藏） | SSR + API Route | Astro SSR + Lucia Auth/Clerk + 数据库(D1/Postgres) | Vercel + Cloudflare D1 |
+| Phase 14 | 个人ization（推荐、阅读历史） | SSR + 边缘计算 | 基于用户数据的内容推荐 | Vercel Edge Functions |
+| Phase 15 | 评论/社区 | SSR + API Route | Giscus/GitHub Discussions 或自建 | Vercel |
+
+### 16.3 架构预留设计
+
+虽然当前是静态站，但代码结构上提前做好以下预留，确保未来加功能时不需要重构：
+
+**目录结构预留**：
+```
+web/src/
+├── pages/
+│   ├── api/              # [预留] API Routes（当前为空，SSR时启用）
+│   │   ├── subscribe.ts  # 邮件订阅API
+│   │   └── auth/         # 认证相关API
+│   └── ...
+├── lib/
+│   ├── db.ts             # [预留] 数据库客户端接口（当前为空实现）
+│   ├── auth.ts           # [预留] 认证工具函数
+│   └── config.ts         # 站点配置（广告位开关、功能开关等）
+└── middleware.ts         # [预留] Astro中间件（当前为空，未来用于auth等）
+```
+
+**环境变量预留**：
+```typescript
+// web/src/env.ts
+// 使用Astro的env schema验证，当前所有变量可选，未来必填
+export const env = {
+  SITE_URL: import.meta.env.SITE_URL ?? 'https://dawnvision.site',
+  RESEND_API_KEY: import.meta.env.RESEND_API_KEY, // 邮件订阅时启用
+  DATABASE_URL: import.meta.env.DATABASE_URL,      // 用户系统时启用
+  CLERK_PUBLISHABLE_KEY: import.meta.env.CLERK_PUBLISHABLE_KEY, // Auth时启用
+  AD_ENABLED: import.meta.env.AD_ENABLED === 'true', // 广告开关
+}
+```
+
+**组件预留广告位插槽**：
+```astro
+<!-- 列表页和文章页预留广告位，但默认不显示 -->
+{env.AD_ENABLED && <AdSlot position="between-cards" />}
+```
+
+**页面渲染模式预配置**：
+- 所有内容页默认 `export const prerender = true`（静态生成）
+- 未来需要SSR的页面添加 `export const prerender = false`
+- 这种方式叫"Opt-in to SSR"，默认静态，按需开启动态
+
+### 16.4 部署平台迁移策略
+
+| 阶段 | 部署平台 | 原因 |
+|------|---------|------|
+| 现在→Phase 10 | GitHub Pages | 零配置、免费、当前工作流不变 |
+| Phase 11+（邮件订阅开始） | Vercel | 免费额度足够个人项目、自动HTTPS/CDN、原生支持Astro SSR/API Routes、Preview Deployments、更好的性能（全球边缘节点） |
+
+迁移到Vercel非常简单：
+1. 将仓库连接到Vercel
+2. 配置build command为 `astro build`
+3. 配置output directory为 `dist`
+4. DNS从GitHub Pages切换到Vercel（零停机）
+
+### 16.5 为什么仍然选Astro不选Next.js？
+
+即使未来要做WebApp，Astro仍然比Next.js更适合DawnVision：
+
+| 对比维度 | Astro（混合模式） | Next.js |
+|---------|------------------|---------|
+| 内容页性能 | 零JS，最快 | 强制加载React runtime（~42KB gzip） |
+| 交互页性能 | React岛屿按需加载 | 全页React hydration |
+| SSR支持 | 支持（Vercel/Netlify/Cloudflare adapter） | 支持 |
+| API Routes | 支持 | 支持 |
+| 渐进式采用 | 静态优先，按需开SSR | 全功能框架，SSR/SSG混合更复杂 |
+| 学习曲线 | 类HTML，简单 | 较重，App Router新概念多 |
+| 适合场景 | 内容为主+少量交互→渐进到WebApp | 全功能WebApp |
+
+核心判断：DawnVision的本质是**内容产品**，阅读体验永远是第一位的。即使未来加用户系统、广告、订阅，内容页仍然是流量主体（>95%的PV），这些页面用Astro零JS输出比Next.js全React hydration性能好得多。需要动态功能的页面（用户中心、订阅管理等）占比很小，用Astro SSR按需处理即可。
+
+---
+
+## 17. 技术选型理由
 
 ### 为什么选Astro而非Next.js/Nuxt？
 
