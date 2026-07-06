@@ -104,7 +104,7 @@
   /* ── Layout: Constraints ── */
   --max-width:      1100px;  /* 内容区最大宽 */
   --max-width-wide: 1200px;  /* 导航/hero最大宽 */
-  --max-width-text: 640px;   /* 正文阅读宽度 (measure) */
+  --max-width-text: 720px;   /* 正文阅读宽度 (measure) */
   --padding-x:      clamp(24px, 5vw, 64px); /* 左右内边距 */
   --padding-x-narrow: clamp(24px, 5vw, 48px);
 

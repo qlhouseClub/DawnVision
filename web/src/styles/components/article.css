@@ -183,7 +183,7 @@
   font-size: var(--text-deck);
   line-height: var(--leading-relaxed);
   color: rgba(255,255,255,0.75);
-  max-width: 640px;
+  max-width: var(--max-width-text);
   margin-bottom: var(--space-6);
   font-style: italic;
 }

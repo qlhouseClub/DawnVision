@@ -54,7 +54,7 @@ export async function getStaticPaths() {
           issueNum: issue.data.issue.number,
           issueDate: issue.data.issue.date_display,
           issueDateIso: issue.data.issue.date,
-          category: 'Cao! · 操蛇之神',
+          category: 'Cao! · 来吐槽吧',
         }
       });
       allArticles.push({ slug: issue.data.cao.slug, title: issue.data.cao.title, type: 'cao' });
@@ -108,7 +108,8 @@ const jsonLdArray = [articleLd, breadcrumbLd];
     <section class={`article-hero ${isCao ? 'article-hero--cao' : ''}`}>
       <BackgroundBlobs variant="section" />
       <div class="container--narrow" style="position:relative;z-index:1;">
-        <div class="article-hero__category notranslate" data-pagefind-meta="category" translate="no">{category}</div>
+        {/* Visually hidden but indexable by Pagefind for search results */}
+        <div data-pagefind-meta="category" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">{category}</div>
         <h1 class="article-hero__title" data-pagefind-meta="title" set:html={article.title_break || article.title}></h1>
         <p class="article-hero__deck">{article.deck}</p>
         <div class="article-hero__meta">
