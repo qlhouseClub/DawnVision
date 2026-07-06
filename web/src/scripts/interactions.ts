@@ -367,8 +367,7 @@ function initGoogleTranslate() {
 // New Content Notification
 // ══════════════════════════════════════════════
 function getVersionJsonUrl(): string {
-  const path = window.location.pathname;
-  if (path.match(/\/(articles|cao|issues|article)\//)) return '../version.json';
+  // Always use absolute path — directory-based routing (/articles/slug/) makes relative paths unreliable
   return '/version.json';
 }
 
@@ -418,26 +417,32 @@ function showNewContentBanner(_data: any) {
 
 function checkForNewContent() {
   const vUrl = getVersionJsonUrl();
+
   function doCheck() {
     fetch(vUrl + '?t=' + Date.now(), { cache: 'no-store' })
       .then((r) => { if (!r.ok) throw new Error(); return r.json(); })
       .then((data) => {
         try {
           const lastVer = localStorage.getItem(STORAGE_VERSION_KEY);
-          if (lastVer && lastVer !== data.version) showNewContentBanner(data);
-          localStorage.setItem(STORAGE_VERSION_KEY, data.version);
+          if (lastVer && lastVer !== String(data.version)) showNewContentBanner(data);
+          localStorage.setItem(STORAGE_VERSION_KEY, String(data.version));
         } catch (_) { /* noop */ }
       })
       .catch(() => { /* noop */ });
   }
-  // Initial check to record current version
+
+  // Record current version immediately (so we can detect changes later)
   fetch(vUrl + '?t=' + Date.now(), { cache: 'no-store' })
     .then((r) => r.json())
-    .then((data) => { try { localStorage.setItem(STORAGE_VERSION_KEY, data.version); } catch (_) { /* noop */ } })
+    .then((data) => { try { localStorage.setItem(STORAGE_VERSION_KEY, String(data.version)); } catch (_) { /* noop */ } })
     .catch(() => { /* noop */ });
-  setInterval(doCheck, 5 * 60 * 1000);
+
+  // Poll every 2 minutes (more responsive than 5min)
+  setInterval(doCheck, 2 * 60 * 1000);
+
+  // Check immediately when tab becomes visible again
   document.addEventListener('visibilitychange', () => {
-    if (!document.hidden) setTimeout(doCheck, 2000);
+    if (!document.hidden) setTimeout(doCheck, 1000);
   });
 }
 
@@ -715,11 +720,8 @@ function init() {
     initGoogleTranslate();
   }
 
-  // Defer non-critical features to after page load
-  window.addEventListener('load', () => {
-    // Delay version check to avoid competing with critical resources
-    setTimeout(() => checkForNewContent(), 2000);
-  }, { once: true });
+  // Record current version immediately (needed for change detection)
+  checkForNewContent();
 
   initSearch();
   initReadingProgress();

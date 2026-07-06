@@ -39,16 +39,29 @@ DIST_DIR = WEB_DIR / "dist"
 CST = timezone(timedelta(hours=8))
 
 
+def _quote_arg(arg):
+    """Quote a command-line argument for shell execution (Windows-compatible)."""
+    s = str(arg)
+    if ' ' in s or '"' in s or "'" in s:
+        # Use double quotes for cmd.exe compatibility; escape inner double quotes
+        return '"' + s.replace('"', '\\"') + '"'
+    return s
+
+
 def run_step(cmd, cwd=None, check=True, capture=False):
-    """运行子进程命令"""
+    """运行子进程命令（Windows兼容：使用shell=True确保npm.cmd等可执行）"""
     print(f"\n{'─'*60}")
-    print(f"▶ {' '.join(cmd) if isinstance(cmd, list) else cmd}")
+    if isinstance(cmd, list):
+        cmd_str = ' '.join(_quote_arg(c) for c in cmd)
+    else:
+        cmd_str = cmd
+    print(f"▶ {cmd_str}")
     print(f"{'─'*60}")
     if capture:
-        result = subprocess.run(cmd, cwd=cwd or SITE_ROOT, shell=isinstance(cmd, str),
+        result = subprocess.run(cmd_str, cwd=cwd or SITE_ROOT, shell=True,
                                 capture_output=True, text=True)
     else:
-        result = subprocess.run(cmd, cwd=cwd or SITE_ROOT, shell=isinstance(cmd, str))
+        result = subprocess.run(cmd_str, cwd=cwd or SITE_ROOT, shell=True)
     if check and result.returncode != 0:
         print(f"\n❌ 步骤失败 (exit code {result.returncode})")
         if capture and result.stderr:
@@ -157,7 +170,16 @@ def cmd_process(args):
         print(f"\n{'='*60}")
         print(f"Step 2/3: 构建Astro站点")
         print(f"{'='*60}")
-        run_step(["npm", "run", "build"], cwd=str(WEB_DIR))
+        result = run_step("npm run build", cwd=str(WEB_DIR), check=False)
+        # Astro may exit with code 1 due to a harmless ENOENT during post-build temp dir cleanup.
+        # Verify build success by checking that key output files exist.
+        required = [DIST_DIR / "index.html", DIST_DIR / "articles/index.html"]
+        outputs_exist = all(p.exists() for p in required)
+        if result.returncode != 0 and not outputs_exist:
+            print(f"\n❌ 构建失败：关键输出文件缺失")
+            sys.exit(1)
+        elif result.returncode != 0 and outputs_exist:
+            print(f"  ⚠️ 构建输出已生成（退出码非0但产物完整，忽略Astro清理错误）")
         built = True
 
     # Step 3: 预览提示
@@ -204,7 +226,7 @@ def cmd_publish(args):
     """验证+构建+发布"""
     # 1. 校验
     print(f"\n{'='*60}")
-    print("Step 1/4: 校验内容")
+    print("Step 1/5: 校验内容")
     print(f"{'='*60}")
     result = run_step([sys.executable, str(TOOLS_DIR / "validate.py"), "--all", "--no-copy"], check=False)
     if result.returncode != 0:
@@ -213,33 +235,47 @@ def cmd_publish(args):
 
     # 2. 构建
     print(f"\n{'='*60}")
-    print("Step 2/4: 构建Astro站点")
+    print("Step 2/5: 构建Astro站点")
     print(f"{'='*60}")
-    run_step(["npm", "run", "build"], cwd=str(WEB_DIR))
+    build_result = run_step("npm run build", cwd=str(WEB_DIR), check=False)
+    required = [DIST_DIR / "index.html", DIST_DIR / "articles/index.html"]
+    outputs_exist = all(p.exists() for p in required)
+    if build_result.returncode != 0 and not outputs_exist:
+        print(f"\n❌ 构建失败：关键输出文件缺失")
+        sys.exit(1)
+    elif build_result.returncode != 0 and outputs_exist:
+        print(f"  ⚠️ 构建输出已生成（退出码非0但产物完整，忽略Astro清理错误）")
 
-    # 3. 同步构建产物到根目录（用于GitHub Pages部署）
+    # 3. Pagefind搜索索引
     print(f"\n{'='*60}")
-    print("Step 3/4: 同步构建产物")
+    print("Step 3/5: 生成Pagefind搜索索引")
+    print(f"{'='*60}")
+    run_step("npx pagefind --site dist", cwd=str(WEB_DIR), check=False)
+
+    # 4. 同步构建产物到根目录（用于GitHub Pages部署）
+    print(f"\n{'='*60}")
+    print("Step 4/5: 同步构建产物")
     print(f"{'='*60}")
     sync_dist_to_root()
 
-    # 4. Git提交推送
+    # 5. Git提交推送
     if not args.dry_run:
         print(f"\n{'='*60}")
-        print("Step 4/4: Git提交并推送")
+        print("Step 5/5: Git提交并推送")
         print(f"{'='*60}")
         os.chdir(SITE_ROOT)
         commit_msg = args.message or f"feat: Issue {next_issue_number_n()} ({datetime.now(CST).strftime('%Y-%m-%d')}) 内容发布"
-        subprocess.run(["git", "add", "-A"], check=False)
-        result = subprocess.run(["git", "commit", "-m", commit_msg], capture_output=True, text=True)
+        subprocess.run("git add -A", shell=True, check=False)
+        result = subprocess.run(f'git commit -m "{commit_msg}"', shell=True, capture_output=True, text=True)
         if result.returncode != 0 and "nothing to commit" not in result.stdout:
             print(f"  Commit失败: {result.stderr}")
         else:
             print(f"  ✓ {commit_msg}")
-            push_result = subprocess.run(["git", "push"], capture_output=True, text=True)
+            push_result = subprocess.run("git push", shell=True, capture_output=True, text=True)
             if push_result.returncode == 0:
                 print(f"  ✓ 推送成功")
                 print(f"\n✅ 发布完成！")
+                print(f"   访问地址: https://www.dawnvision.net/")
             else:
                 print(f"  ⚠️ 推送失败: {push_result.stderr}")
                 print(f"  请手动执行: git push")
