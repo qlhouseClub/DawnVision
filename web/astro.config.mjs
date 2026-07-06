@@ -1,14 +1,9 @@
 import { defineConfig } from 'astro/config';
-import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.dawnvision.net',
-  integrations: [
-    react(),
-  ],
   // GitHub Pages: 保持根路径部署（Cloudflare CDN指向根域）
-  // 如需子路径部署，设置 base: '/DawnVision/'
   build: {
     format: 'directory',
   },
@@ -22,9 +17,6 @@ export default defineConfig({
         '@content': '/src/content',
         '@scripts': '/src/scripts',
       },
-    },
-    css: {
-      devSourcemap: true,
     },
   },
 });

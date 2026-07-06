@@ -51,7 +51,7 @@ function hideGTNodes() {
   forceBodyReset();
 }
 
-setInterval(hideGTNodes, 50);
+setInterval(hideGTNodes, 200);
 
 if (typeof MutationObserver !== 'undefined') {
   const mo = new MutationObserver((mutations) => {
@@ -214,8 +214,15 @@ function getOrCreateTranslateBtn(): HTMLButtonElement | null {
   btn.textContent = currentLang === 'zh' ? I18N.zh.lang_en : I18N.en.lang_zh;
   btn.addEventListener('click', () => {
     if (isTranslating) return;
-    if (currentLang === 'zh') switchToEnglish();
-    else switchToChinese();
+    if (currentLang === 'zh') {
+      // Lazy-load GT only when user first clicks to switch to English
+      if (!gtLoadAttempted && !gtReady) {
+        initGoogleTranslate();
+      }
+      switchToEnglish();
+    } else {
+      switchToChinese();
+    }
   });
   document.body.appendChild(btn);
   return btn;
@@ -697,14 +704,23 @@ function initReadingProgress() {
 // ══════════════════════════════════════════════
 function init() {
   currentLang = detectLang();
-  document.documentElement.lang = 'zh-CN';
+  document.documentElement.lang = currentLang === 'en' ? 'en' : 'zh-CN';
 
   // Create floating translate button immediately
   getOrCreateTranslateBtn();
   updateTranslateBtn();
 
-  initGoogleTranslate();
-  checkForNewContent();
+  // Only load Google Translate if user previously selected English
+  if (currentLang === 'en') {
+    initGoogleTranslate();
+  }
+
+  // Defer non-critical features to after page load
+  window.addEventListener('load', () => {
+    // Delay version check to avoid competing with critical resources
+    setTimeout(() => checkForNewContent(), 2000);
+  }, { once: true });
+
   initSearch();
   initReadingProgress();
   initLikeButton();

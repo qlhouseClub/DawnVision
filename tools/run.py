@@ -265,13 +265,20 @@ def sync_dist_to_root():
         print(f"  ⚠️ 构建产物目录不存在: {DIST_DIR}")
         return
 
-    # 清理根目录下旧的HTML文件和目录
+    # 跳过Astro构建出错时残留的服务端产物目录（非静态文件）
+    skip_dirs = {"chunks", "pages"}
+
+    # 清理根目录下旧的构建产物（目录和文件）
+    # 这些都是 web/dist 构建输出的内容，同步前需要清理旧版本，避免哈希文件残留
     old_items = [
-        "articles", "cao", "issues", "assets",
+        # 目录
+        "_astro", "articles", "about", "cao", "issues", "assets",
+        "images", "pagefind", "502", "503", "504", "chunks", "pages",
+        # 文件
         "index.html", "articles.html", "cao.html", "about.html",
         "404.html", "500.html", "502.html", "503.html", "504.html",
-        "sitemap.xml", "robots.txt", "favicon.svg", "CNAME", "version.json",
-        "pagefind"
+        "sitemap.xml", "rss.xml", "robots.txt", "favicon.svg",
+        "CNAME", "version.json", ".nojekyll",
     ]
     for item in old_items:
         p = SITE_ROOT / item
@@ -282,13 +289,25 @@ def sync_dist_to_root():
             p.unlink()
             print(f"  清理旧文件: {item}")
 
+    # 先清理dist中的非静态产物目录
+    for skip_name in skip_dirs:
+        skip_path = DIST_DIR / skip_name
+        if skip_path.exists():
+            shutil.rmtree(skip_path, ignore_errors=True)
+            print(f"  跳过构建残留: {skip_name}/")
+
     # 复制dist内容到根目录
     for item in DIST_DIR.iterdir():
+        if item.name in skip_dirs:
+            continue
         dest = SITE_ROOT / item.name
-        if item.is_dir():
-            shutil.copytree(item, dest, dirs_exist_ok=True)
-        else:
-            shutil.copy2(item, dest)
+        try:
+            if item.is_dir():
+                shutil.copytree(item, dest, dirs_exist_ok=True)
+            else:
+                shutil.copy2(item, dest)
+        except Exception as e:
+            print(f"  ⚠️ 复制 {item.name} 时出错: {e}")
     print(f"  ✓ 已同步 web/dist/ → 根目录")
 
 
