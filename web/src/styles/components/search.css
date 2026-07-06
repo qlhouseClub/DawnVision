@@ -254,7 +254,7 @@
 }
 
 .article-nav__title {
-  font-size: var(--text-card);
+  font-size: 1rem;
   font-weight: var(--weight-bold);
   color: var(--color-text);
   line-height: var(--leading-snug);

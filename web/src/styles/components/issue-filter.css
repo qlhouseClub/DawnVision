@@ -38,11 +38,11 @@
   transition: border-color var(--duration-fast);
 }
 
-/* Specific widths for each select */
-#filter-year { width: 72px; }
-#filter-month { width: 64px; }
-#filter-half { width: 80px; }
-#filter-issue { width: 120px; }
+/* Specific widths for each select - all 144px for consistency */
+#filter-year { width: 144px; }
+#filter-month { width: 144px; }
+#filter-half { width: 144px; }
+#filter-issue { width: 144px; }
 
 .issue-filter__select:hover {
   border-color: var(--color-brand);
@@ -95,13 +95,14 @@
     padding: 6px 20px 6px 8px;
   }
 
-  #filter-year { width: 60px; }
-  #filter-month { width: 56px; }
-  #filter-half { width: 72px; }
-  #filter-issue { width: 100px; }
+  #filter-year { width: calc(50% - 3px); }
+  #filter-month { width: calc(50% - 3px); }
+  #filter-half { width: calc(50% - 3px); }
+  #filter-issue { width: calc(50% - 3px); }
 
   .articles-search-btn {
     width: 30px;
     height: 30px;
+    margin-left: auto;
   }
 }

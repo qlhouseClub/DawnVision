@@ -171,7 +171,7 @@
 }
 
 .article-hero__title {
-  font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+  font-size: clamp(1.55rem, 3.8vw, 2.85rem);
   font-weight: var(--weight-black);
   line-height: 1.2;
   letter-spacing: var(--tracking-tight);
