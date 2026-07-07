@@ -165,8 +165,8 @@
 }
 
 .card--grid .card__deck {
-  font-size: var(--text-sm);
-  line-height: var(--leading-relaxed);
+  font-size: 14px;
+  line-height: 1.7;
   color: var(--color-text-muted);
   font-style: italic;
   font-family: var(--font-serif);
@@ -235,8 +235,8 @@
 }
 
 .card--cao-item .card__deck {
-  font-size: var(--text-sm);
-  line-height: var(--leading-relaxed);
+  font-size: 14px;
+  line-height: 1.7;
   color: var(--color-text-muted);
   font-style: italic;
   font-family: var(--font-serif);
@@ -297,5 +297,10 @@
 @media (max-width: 700px) {
   .card--grid .card__title {
     font-size: 1.05rem;
+  }
+  .card--grid .card__deck,
+  .card--cao-item .card__deck {
+    font-size: 12px;
+    line-height: 1.65;
   }
 }
