@@ -6,6 +6,7 @@
 /* ── Stretched link (whole card clickable) ── */
 .card {
   cursor: pointer;
+  position: relative;
 }
 .card .card__title a {
   position: static;

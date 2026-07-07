@@ -146,14 +146,21 @@ const filterDataJson = JSON.stringify({ tree, flat });
       };
     });
     populateSelect(issueSel, issues);
+    // Auto-switch to first issue in this half when user manually changes filters
+    if (!suppressChange && issues.length > 0) {
+      onIssueChange();
+    }
   }
 
   function onIssueChange() {
+    if (suppressChange) return;
     const num = issueSel.value;
     if (!num) return;
     // Dispatch custom event with source='filter' to avoid loop
     document.dispatchEvent(new CustomEvent('issue-changed', { detail: { issue: num, source: 'filter' } }));
   }
+
+  let suppressChange = false;
 
   yearSel.addEventListener('change', onYearChange);
   monthSel.addEventListener('change', onMonthChange);
@@ -178,9 +185,10 @@ const filterDataJson = JSON.stringify({ tree, flat });
     const issue = data.flat.find(f => f.num === num);
     if (!issue) return;
     const [y, m] = issue.date.split('-');
-    const day = parseInt(issue.date.split('-')[2]);
+    const day = parseInt(issue.date.split('-')[2], 10);
     const h = day <= 15 ? 'H1' : 'H2';
 
+    suppressChange = true;
     yearSel.value = y;
     onYearChange();
     setTimeout(() => {
@@ -194,6 +202,7 @@ const filterDataJson = JSON.stringify({ tree, flat });
           // Update issue label
           const label = document.getElementById('issue-label');
           if (label) label.textContent = 'Issue ' + pad(num);
+          suppressChange = false;
         }, 50);
       }, 50);
     }, 50);

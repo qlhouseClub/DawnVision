@@ -178,117 +178,110 @@ const jsonLdArray = [breadcrumbLd];
         </div>
       </div>
     </div>
-  </Fragment>
 
-  <script>
+    <script is:inline>
     // Client-side issue switching for static site
     (function() {
       const page = document.getElementById('articles-page');
       if (!page) return;
 
-      const issuesData = JSON.parse(page.dataset.issues || '[]');
-      const issuesMap: Record<string, typeof issuesData[0]> = {};
-      issuesData.forEach((iss: typeof issuesData[0]) => {
+      const issuesData = JSON.parse(page.getAttribute('data-issues') || '[]');
+      const issuesMap = {};
+      issuesData.forEach(function(iss) {
         issuesMap[iss.num] = iss;
       });
       const latestNum = issuesData[0]?.num;
 
-      function pad(n: string | number) {
+      function pad(n) {
         return String(n).padStart(3, '0');
       }
 
       // Escape HTML helper
-      function esc(s: string): string {
+      function esc(s) {
         const d = document.createElement('div');
         d.textContent = s;
         return d.innerHTML;
       }
 
       // Render Cao section
-      function renderCao(issue: typeof issuesData[0]): string {
+      function renderCao(issue) {
         if (!issue.cao) return '';
         const hasEn = !!(issue.cao.title_en && issue.cao.deck_en);
-        return `
-          <h2 class="articles-page__cao-title notranslate">Cao! <em class="dv-zh">槽点!</em></h2>
-          <article class="articles-page__cao-article">
-            <h3 class="articles-page__cao-article-title">
-              <a href="/articles/${issue.cao.slug}/">
-                <span class="dv-zh">${issue.cao.title}</span>
-                ${hasEn ? `<span class="dv-en">${issue.cao.title_en}</span>` : ''}
-              </a>
-            </h3>
-            <p class="articles-page__cao-deck dv-zh">${esc(issue.cao.deck)}</p>
-            ${hasEn ? `<p class="articles-page__cao-deck dv-en">${esc(issue.cao.deck_en)}</p>` : ''}
-            ${issue.cao.read_time ? `<div class="articles-page__cao-meta"><a href="/articles/${issue.cao.slug}/"><span class="dv-zh">${esc(issue.cao.read_time)} →</span>${hasEn && issue.cao.read_time_en ? `<span class="dv-en">${esc(issue.cao.read_time_en)} →</span>` : ''}</a></div>` : ''}
-          </article>
-          <a href="/cao/" class="articles-page__cao-all notranslate">View All Cao! →</a>
-        `;
+        return '<h2 class="articles-page__cao-title notranslate">Cao! <em class="dv-zh">槽点!</em></h2>' +
+          '<article class="articles-page__cao-article">' +
+            '<h3 class="articles-page__cao-article-title">' +
+              '<a href="/articles/' + issue.cao.slug + '/">' +
+                '<span class="dv-zh">' + issue.cao.title + '</span>' +
+                (hasEn ? '<span class="dv-en">' + issue.cao.title_en + '</span>' : '') +
+              '</a>' +
+            '</h3>' +
+            '<p class="articles-page__cao-deck dv-zh">' + esc(issue.cao.deck) + '</p>' +
+            (hasEn ? '<p class="articles-page__cao-deck dv-en">' + esc(issue.cao.deck_en) + '</p>' : '') +
+            (issue.cao.read_time ? '<div class="articles-page__cao-meta"><a href="/articles/' + issue.cao.slug + '/"><span class="dv-zh">' + esc(issue.cao.read_time) + ' →</span>' + (hasEn && issue.cao.read_time_en ? '<span class="dv-en">' + esc(issue.cao.read_time_en) + ' →</span>' : '') + '</a></div>' : '') +
+          '</article>' +
+          '<a href="/cao/" class="articles-page__cao-all notranslate">View All Cao! →</a>';
       }
 
       // Render Focus cover card
-      function renderCover(issue: typeof issuesData[0]): string {
+      function renderCover(issue) {
         const c = issue.cover;
         const hasEn = !!(c.title_en && c.deck_en);
-        return `
-          <article class="card card--cover">
-            <h3 class="card__title">
-              <a href="/articles/${c.slug}/">
-                <span class="dv-zh">${c.title}</span>
-                ${hasEn ? `<span class="dv-en">${c.title_en}</span>` : ''}
-              </a>
-            </h3>
-            <p class="card__deck dv-zh">${esc(c.deck)}</p>
-            ${hasEn ? `<p class="card__deck dv-en">${esc(c.deck_en)}</p>` : ''}
-            <div class="card__byline">
-              <a href="/articles/${c.slug}/">
-                <span class="dv-zh">Dawn Vision · ${esc(c.read_time || '')} →</span>
-                ${hasEn && c.read_time_en ? `<span class="dv-en">Dawn Vision · ${esc(c.read_time_en)} →</span>` : ''}
-              </a>
-            </div>
-          </article>
-        `;
+        return '<article class="card card--cover">' +
+            '<h3 class="card__title">' +
+              '<a href="/articles/' + c.slug + '/">' +
+                '<span class="dv-zh">' + c.title + '</span>' +
+                (hasEn ? '<span class="dv-en">' + c.title_en + '</span>' : '') +
+              '</a>' +
+            '</h3>' +
+            '<p class="card__deck dv-zh">' + esc(c.deck) + '</p>' +
+            (hasEn ? '<p class="card__deck dv-en">' + esc(c.deck_en) + '</p>' : '') +
+            '<div class="card__byline">' +
+              '<a href="/articles/' + c.slug + '/">' +
+                '<span class="dv-zh">Dawn Vision · ' + esc(c.read_time || '') + ' →</span>' +
+                (hasEn && c.read_time_en ? '<span class="dv-en">Dawn Vision · ' + esc(c.read_time_en) + ' →</span>' : '') +
+              '</a>' +
+            '</div>' +
+          '</article>';
       }
 
       // Render Brief grid cards
-      function renderBriefs(issue: typeof issuesData[0]): string {
-        return issue.briefs.map((b: typeof issue.briefs[0]) => {
+      function renderBriefs(issue) {
+        return issue.briefs.map(function(b) {
           const hasEn = !!(b.title_en && b.deck_en);
-          return `
-            <article class="card card--grid">
-              <span class="card__tag dv-zh">${esc(b.category || '')}</span>
-              ${hasEn && b.category_en ? `<span class="card__tag dv-en">${esc(b.category_en)}</span>` : ''}
-              <h3 class="card__title">
-                <a href="/articles/${b.slug}/">
-                  <span class="dv-zh">${b.title}</span>
-                  ${hasEn ? `<span class="dv-en">${b.title_en}</span>` : ''}
-                </a>
-              </h3>
-              <p class="card__deck dv-zh">${esc(b.deck)}</p>
-              ${hasEn ? `<p class="card__deck dv-en">${esc(b.deck_en)}</p>` : ''}
-            </article>
-          `;
+          return '<article class="card card--grid">' +
+              '<span class="card__tag dv-zh">' + esc(b.category || '') + '</span>' +
+              (hasEn && b.category_en ? '<span class="card__tag dv-en">' + esc(b.category_en) + '</span>' : '') +
+              '<h3 class="card__title">' +
+                '<a href="/articles/' + b.slug + '/">' +
+                  '<span class="dv-zh">' + b.title + '</span>' +
+                  (hasEn ? '<span class="dv-en">' + b.title_en + '</span>' : '') +
+                '</a>' +
+              '</h3>' +
+              '<p class="card__deck dv-zh">' + esc(b.deck) + '</p>' +
+              (hasEn ? '<p class="card__deck dv-en">' + esc(b.deck_en) + '</p>' : '') +
+            '</article>';
         }).join('');
       }
 
       // Render pagination
-      function renderPagination(currentNum: string): string {
-        const idx = issuesData.findIndex((i: typeof issuesData[0]) => i.num === currentNum);
+      function renderPagination(currentNum) {
+        const idx = issuesData.findIndex(function(i) { return i.num === currentNum; });
         const isLat = currentNum === latestNum;
         const prevNum = idx < issuesData.length - 1 ? issuesData[idx + 1]?.num : null;
-        const numsAsc = issuesData.map((i: typeof issuesData[0]) => i.num).reverse();
+        const numsAsc = issuesData.map(function(i) { return i.num; }).reverse();
 
         let html = '<nav class="pagination" aria-label="期数分页" data-pagination>';
 
         if (prevNum) {
-          html += `<a href="/articles/?issue=${prevNum}" class="pagination__nav pagination__nav--prev notranslate" translate="no" data-issue="${prevNum}">← Issue ${pad(prevNum)}</a>`;
+          html += '<a href="/articles/?issue=' + prevNum + '" class="pagination__nav pagination__nav--prev notranslate" translate="no" data-issue="' + prevNum + '">← Issue ' + pad(prevNum) + '</a>';
         } else {
           html += '<span class="pagination__nav pagination__nav--disabled">← 创刊号</span>';
         }
 
         html += '<div class="pagination__pages">';
-        numsAsc.forEach((num: string) => {
+        numsAsc.forEach(function(num) {
           const active = num === currentNum ? ' is-active' : '';
-          html += `<a href="/articles/?issue=${num}" class="pagination__page${active}" data-issue="${num}">${parseInt(num)}</a>`;
+          html += '<a href="/articles/?issue=' + num + '" class="pagination__page' + active + '" data-issue="' + num + '">' + parseInt(num, 10) + '</a>';
         });
         html += '</div>';
 
@@ -304,7 +297,7 @@ const jsonLdArray = [breadcrumbLd];
 
       let switching = false;
 
-      function switchIssue(num: string, source?: string) {
+      function switchIssue(num, source) {
         if (switching) return;
         switching = true;
 
@@ -314,9 +307,12 @@ const jsonLdArray = [breadcrumbLd];
         const issueNum = issue.num;
         const isLat = issueNum === latestNum;
 
+        // Update page title
+        document.title = 'Issue ' + pad(issueNum) + ' — Articles — Dawn Vision';
+
         // Update issue label
         const label = document.getElementById('issue-label');
-        if (label) label.textContent = `Issue ${pad(issueNum)}`;
+        if (label) label.textContent = 'Issue ' + pad(issueNum);
 
         // Update Cao
         const caoContent = document.getElementById('cao-content');
@@ -351,11 +347,11 @@ const jsonLdArray = [breadcrumbLd];
         if (paginationWrap) paginationWrap.innerHTML = renderPagination(issueNum);
 
         // Update URL without reload
-        const url = isLat ? '/articles/' : `/articles/?issue=${issueNum}`;
+        const url = isLat ? '/articles/' : '/articles/?issue=' + issueNum;
         history.pushState({ issue: issueNum }, '', url);
 
-        // Notify filter to sync dropdowns (skip if source is filter or init - filter already set)
-        if (source === 'pagination' || source === 'navigation') {
+        // Notify filter to sync dropdowns
+        if (source === 'pagination' || source === 'navigation' || source === 'init') {
           document.dispatchEvent(new CustomEvent('issue-changed', { detail: { issue: issueNum, source: 'pagination' } }));
         }
 
@@ -371,40 +367,49 @@ const jsonLdArray = [breadcrumbLd];
       function bindPaginationLinks() {
         const paginationEl = page.querySelector('[data-pagination]');
         if (!paginationEl) return;
-        const links = paginationEl.querySelectorAll<HTMLAnchorElement>('a[data-issue]');
-        links.forEach(link => {
-          link.addEventListener('click', (e) => {
+        const links = paginationEl.querySelectorAll('a[data-issue]');
+        links.forEach(function(link) {
+          link.addEventListener('click', function(e) {
             e.preventDefault();
-            const num = link.dataset.issue || 'latest';
+            const num = link.getAttribute('data-issue') || 'latest';
             switchIssue(num, 'pagination');
           });
         });
       }
 
       // Handle browser back/forward
-      window.addEventListener('popstate', (e) => {
+      window.addEventListener('popstate', function() {
         const params = new URLSearchParams(window.location.search);
         const issue = params.get('issue') || 'latest';
         switchIssue(issue, 'navigation');
       });
 
-      // Initial bind
-      bindPaginationLinks();
-
       // Listen for issue filter changes (from IssueFilter component)
-      document.addEventListener('issue-changed', ((e: CustomEvent) => {
+      document.addEventListener('issue-changed', function(e) {
         if (e.detail && e.detail.issue && e.detail.source === 'filter') {
           switchIssue(e.detail.issue, 'filter');
         }
-      }) as EventListener);
+      });
 
-      // Check URL for pre-selected issue on page load (IssueFilter init handles dropdown sync)
-      const initialParams = new URLSearchParams(window.location.search);
-      const initialIssue = initialParams.get('issue');
-      if (initialIssue && issuesMap[initialIssue] && initialIssue !== latestNum) {
-        // Defer to let IssueFilter init first
-        setTimeout(() => switchIssue(initialIssue, 'init'), 200);
+      // Initial bind
+      bindPaginationLinks();
+
+      // Check URL for pre-selected issue on page load
+      function initFromUrl() {
+        const initialParams = new URLSearchParams(window.location.search);
+        const initialIssue = initialParams.get('issue');
+        if (initialIssue && issuesMap[initialIssue] && initialIssue !== latestNum) {
+          switchIssue(initialIssue, 'init');
+        }
+      }
+
+      // Wait for DOM and filter script to be ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() { setTimeout(initFromUrl, 100); });
+      } else {
+        setTimeout(initFromUrl, 100);
       }
     })();
-  </script>
+    </script>
+  </Fragment>
 </BaseLayout>
