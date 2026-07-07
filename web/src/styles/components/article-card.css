@@ -3,6 +3,26 @@
    Variants: cover (Focus), grid (Brief grid), cao-item (Cao list)
    ═══════════════════════════════════════════ */
 
+/* ── Stretched link (whole card clickable) ── */
+.card {
+  cursor: pointer;
+}
+.card .card__title a {
+  position: static;
+}
+.card .card__title a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+/* Secondary links (byline etc.) must sit above the stretch overlay */
+.card .card__byline a,
+.card a.card__stretch-link {
+  position: relative;
+  z-index: 2;
+}
+
 /* ── Cover Card (Focus featured story) ── */
 .card--cover {
   padding: clamp(28px, 4vw, 40px) 0 clamp(32px, 5vw, 48px);
@@ -144,7 +164,7 @@
 }
 
 .card--grid .card__deck {
-  font-size: clamp(0.75rem, 1.2vw, 0.875rem);
+  font-size: var(--text-sm);
   line-height: var(--leading-relaxed);
   color: var(--color-text-muted);
   font-style: italic;
@@ -214,7 +234,7 @@
 }
 
 .card--cao-item .card__deck {
-  font-size: clamp(0.75rem, 1.2vw, 0.875rem);
+  font-size: var(--text-sm);
   line-height: var(--leading-relaxed);
   color: var(--color-text-muted);
   font-style: italic;

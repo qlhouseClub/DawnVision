@@ -17,14 +17,17 @@
 }
 
 .article-body p:first-of-type {
-  font-size: var(--text-deck);
+  font-size: var(--text-lg);
   color: var(--color-text);
   text-indent: 0;
-  margin-bottom: var(--space-6);
-  font-weight: var(--weight-medium);
-  line-height: var(--leading-relaxed);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-8);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
   border-left: 3px solid var(--color-brand);
   padding-left: var(--space-4);
+  font-family: var(--font-display);
 }
 
 /* ── Headings ── */
