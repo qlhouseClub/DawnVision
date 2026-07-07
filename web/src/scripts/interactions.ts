@@ -1,130 +1,56 @@
 /**
  * Dawn Vision — Client Interactions (TypeScript)
  *
- * Phase 1: Core translation (GT) + new content notification
- * Future phases will add: article interactions, issue filter, search, etc.
+ * Native bilingual toggle (CN/EN) + new content notification + search + reading progress
  */
 
 // ══════════════════════════════════════════════
-// GT Chrome Hiding — continuously suppress GT UI
-// ══════════════════════════════════════════════
-function forceBodyReset() {
-  if (document.body) {
-    document.body.style.setProperty('top', '0', 'important');
-    document.body.style.setProperty('margin-top', '0', 'important');
-    document.body.style.setProperty('position', 'static', 'important');
-  }
-  if (document.documentElement) {
-    document.documentElement.style.setProperty('top', '0', 'important');
-    document.documentElement.style.setProperty('margin-top', '0', 'important');
-  }
-}
-
-function hideGTNodes() {
-  const iframes = document.querySelectorAll('iframe');
-  for (let i = 0; i < iframes.length; i++) {
-    const f = iframes[i];
-    const src = (f.src || '').toLowerCase();
-    const cls = (f.className || '').toLowerCase();
-    const id = (f.id || '').toLowerCase();
-    if (
-      cls.indexOf('goog-te') > -1 || id.indexOf('goog-te') > -1 ||
-      src.indexOf('translate.google') > -1 || src.indexOf('translate.googleapis') > -1 ||
-      src.indexOf('translate_p') > -1
-    ) {
-      f.style.setProperty('display', 'none', 'important');
-      f.style.setProperty('visibility', 'hidden', 'important');
-      f.style.setProperty('opacity', '0', 'important');
-      f.style.setProperty('width', '0', 'important');
-      f.style.setProperty('height', '0', 'important');
-      f.style.setProperty('position', 'absolute', 'important');
-      f.style.setProperty('top', '-9999px', 'important');
-      f.style.setProperty('left', '-9999px', 'important');
-      f.style.setProperty('pointer-events', 'none', 'important');
-    }
-  }
-  const skip = document.querySelectorAll('.skiptranslate, .goog-te-spinner-pos, .goog-te-spinner');
-  for (let j = 0; j < skip.length; j++) {
-    (skip[j] as HTMLElement).style.setProperty('display', 'none', 'important');
-    (skip[j] as HTMLElement).style.setProperty('visibility', 'hidden', 'important');
-  }
-  forceBodyReset();
-}
-
-setInterval(hideGTNodes, 200);
-
-if (typeof MutationObserver !== 'undefined') {
-  const mo = new MutationObserver((mutations) => {
-    let needsWork = false;
-    for (const m of mutations) {
-      if (m.type === 'childList' && m.addedNodes && m.addedNodes.length) {
-        for (let n = 0; n < m.addedNodes.length; n++) {
-          const node = m.addedNodes[n] as Element;
-          if (node.nodeType === 1) {
-            const tag = node.tagName;
-            const cls2 = (node.className || '').toString().toLowerCase();
-            const id2 = (node.id || '').toString().toLowerCase();
-            const src2 = ((node as HTMLIFrameElement).src || '').toString().toLowerCase();
-            if (
-              tag === 'IFRAME' || cls2.indexOf('goog-te') > -1 || id2.indexOf('goog-te') > -1 ||
-              src2.indexOf('translate.google') > -1 || src2.indexOf('translate.googleapis') > -1
-            ) {
-              needsWork = true;
-              break;
-            }
-          }
-        }
-      }
-      if (m.type === 'attributes' && (m.target === document.body || m.target === document.documentElement)) {
-        needsWork = true;
-      }
-      if (needsWork) break;
-    }
-    if (needsWork) hideGTNodes();
-  });
-  mo.observe(document.documentElement, {
-    childList: true,
-    subtree: true,
-    attributes: true,
-    attributeFilter: ['style', 'class'],
-  });
-}
-
-window.addEventListener('load', hideGTNodes);
-
-// ══════════════════════════════════════════════
-// i18n — Language Switch via Google Translate
+// i18n — Native Bilingual Toggle (no Google Translate)
 // ══════════════════════════════════════════════
 const I18N = {
   zh: {
     lang_en: 'EN',
-    lang_zh: 'CN',
-    translating: '···',
-    hint: '翻译加载中，如长时间未响应请右键页面选择"翻译"',
-    failed: '翻译服务暂不可用，请使用浏览器右键翻译功能',
+    lang_zh: '中',
     new_title: '有新内容发布',
     new_desc: '网站已更新，点击刷新查看最新文章。',
     new_refresh: '刷新页面',
     new_dismiss: '稍后',
+    search_placeholder: '搜索文章...',
+    search_empty: '输入关键词开始搜索',
+    search_no_results: '未找到相关文章',
+    search_loading: '搜索中...',
+    search_error: '搜索出错',
+    like: '喜欢',
+    liked: '已喜欢',
+    tip: '打赏',
+    prev_article: '上一篇',
+    next_article: '下一篇',
+    sources: '信源',
+    close: '关闭',
   },
   en: {
     lang_en: 'EN',
-    lang_zh: 'CN',
-    translating: '···',
-    hint: 'Loading translation...',
-    failed: 'Translation unavailable, please use browser translate',
+    lang_zh: '中',
     new_title: 'New content available',
-    new_desc: 'The site has been updated.',
+    new_desc: 'The site has been updated. Click to refresh.',
     new_refresh: 'Refresh',
     new_dismiss: 'Later',
+    search_placeholder: 'Search articles...',
+    search_empty: 'Type to search',
+    search_no_results: 'No results found',
+    search_loading: 'Searching...',
+    search_error: 'Search error',
+    like: 'Like',
+    liked: 'Liked',
+    tip: 'Tip',
+    prev_article: 'Previous',
+    next_article: 'Next',
+    sources: 'Sources',
+    close: 'Close',
   },
 };
 
 let currentLang: 'zh' | 'en' = 'zh';
-let isTranslating = false;
-let gtReady = false;
-let gtLoadAttempted = false;
-let gtLoadFailed = false;
 const STORAGE_LANG_KEY = 'dawnvision_lang';
 const STORAGE_VERSION_KEY = 'dawnvision_last_version';
 
@@ -141,233 +67,64 @@ function detectLang(): 'zh' | 'en' {
   return 'zh';
 }
 
-function getGTCombo(): HTMLSelectElement | null {
-  return document.querySelector('.goog-te-combo');
+function applyLanguage(lang: 'zh' | 'en') {
+  currentLang = lang;
+  const html = document.documentElement;
+  html.setAttribute('data-lang', lang);
+  html.setAttribute('lang', lang === 'en' ? 'en' : 'zh-CN');
+  try { localStorage.setItem(STORAGE_LANG_KEY, lang); } catch (_) { /* noop */ }
+  updateLangSwitchBtn();
+  updateDynamicContent();
 }
 
-function selectGTLanguage(lang: string): boolean {
-  const combo = getGTCombo();
-  if (combo) {
-    combo.value = lang;
-    let evt: Event;
-    try {
-      evt = new Event('change', { bubbles: true });
-    } catch (_) {
-      evt = document.createEvent('HTMLEvents');
-      (evt as any).initEvent('change', true, true);
+function updateLangSwitchBtn() {
+  const btn = document.getElementById('dv-lang-switch') as HTMLButtonElement | null;
+  if (btn) {
+    btn.textContent = currentLang === 'zh' ? 'EN' : '中';
+    btn.setAttribute('aria-label', currentLang === 'zh' ? 'Switch to English' : '切换到中文');
+    btn.setAttribute('title', currentLang === 'zh' ? 'Switch to English' : '切换到中文');
+  }
+}
+
+function updateDynamicContent() {
+  // Update elements with data-i18n attributes
+  document.querySelectorAll<HTMLElement>('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n') as keyof typeof I18N.zh;
+    if (key && I18N[currentLang][key]) {
+      el.textContent = I18N[currentLang][key];
     }
-    combo.dispatchEvent(evt);
-    return true;
-  }
-  return false;
-}
-
-function waitForTranslationComplete(callback: (ok: boolean) => void) {
-  let checks = 0;
-  const maxChecks = 100;
-  let foundTranslatedClass = false;
-  function check() {
-    checks++;
-    const html = document.documentElement;
-    const cls = html.className || '';
-    const hasTransClass = cls.indexOf('translated-') > -1;
-    if (hasTransClass) {
-      if (!foundTranslatedClass) {
-        foundTranslatedClass = true;
-        setTimeout(() => callback && callback(true), 800);
-        return;
-      }
+  });
+  // Update placeholder attributes
+  document.querySelectorAll<HTMLElement>('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder') as keyof typeof I18N.zh;
+    if (key && I18N[currentLang][key]) {
+      (el as HTMLInputElement).placeholder = I18N[currentLang][key];
     }
-    if (checks >= maxChecks) {
-      callback && callback(true);
-      return;
-    }
-    setTimeout(check, 100);
-  }
-  setTimeout(check, 200);
+  });
 }
 
-function waitForComboAndSelect(lang: string, callback: (ok: boolean) => void, attempts?: number) {
-  attempts = attempts || 0;
-  if (selectGTLanguage(lang)) {
-    waitForTranslationComplete(callback);
-    return;
-  }
-  if (attempts < 60) {
-    setTimeout(() => waitForComboAndSelect(lang, callback, attempts! + 1), 150);
-  } else {
-    callback && callback(false);
-  }
-}
-
-function getOrCreateTranslateBtn(): HTMLButtonElement | null {
+function getOrCreateLangSwitchBtn(): HTMLButtonElement | null {
   let btn = document.getElementById('dv-lang-switch') as HTMLButtonElement | null;
   if (btn) return btn;
-  // Create floating button dynamically
   btn = document.createElement('button');
   btn.id = 'dv-lang-switch';
-  btn.className = 'dv-lang-switch notranslate';
+  btn.className = 'dv-lang-switch';
   btn.setAttribute('aria-label', 'Switch language');
   btn.setAttribute('title', 'Switch language');
-  btn.setAttribute('translate', 'no');
   btn.type = 'button';
-  btn.textContent = currentLang === 'zh' ? I18N.zh.lang_en : I18N.en.lang_zh;
+  btn.textContent = currentLang === 'zh' ? 'EN' : '中';
   btn.addEventListener('click', () => {
-    if (isTranslating) return;
-    if (currentLang === 'zh') {
-      // Lazy-load GT only when user first clicks to switch to English
-      if (!gtLoadAttempted && !gtReady) {
-        initGoogleTranslate();
-      }
-      switchToEnglish();
-    } else {
-      switchToChinese();
-    }
+    const newLang = currentLang === 'zh' ? 'en' : 'zh';
+    applyLanguage(newLang);
   });
   document.body.appendChild(btn);
   return btn;
-}
-
-function finishTranslating() {
-  isTranslating = false;
-  updateTranslateBtn();
-}
-
-function updateTranslateBtn() {
-  const btn = getOrCreateTranslateBtn();
-  if (!btn) return;
-  if (isTranslating) {
-    btn.textContent = t('translating');
-    btn.disabled = true;
-  } else {
-    btn.textContent = currentLang === 'zh' ? I18N.zh.lang_en : I18N.en.lang_zh;
-    btn.disabled = false;
-  }
-}
-
-function showTranslateHint(isError: boolean) {
-  const existing = document.getElementById('dv-translate-hint');
-  if (existing) existing.remove();
-  const hint = document.createElement('div');
-  hint.id = 'dv-translate-hint';
-  hint.className = 'dv-translate-hint notranslate';
-  hint.setAttribute('translate', 'no');
-  hint.textContent = isError ? t('failed') : t('hint');
-  document.body.appendChild(hint);
-  requestAnimationFrame(() => hint.classList.add('dv-translate-hint--show'));
-  setTimeout(() => {
-    hint.classList.remove('dv-translate-hint--show');
-    setTimeout(() => hint.remove(), 300);
-  }, isError ? 4000 : 2500);
-}
-
-function switchToEnglish() {
-  if (isTranslating) return;
-  if (gtLoadFailed) { showTranslateHint(true); return; }
-  isTranslating = true;
-  updateTranslateBtn();
-  if (!gtReady) {
-    initGoogleTranslate();
-    const check = setInterval(() => {
-      if (gtReady) {
-        clearInterval(check);
-        waitForComboAndSelect('en', (ok) => {
-          if (ok) {
-            currentLang = 'en';
-            try { localStorage.setItem(STORAGE_LANG_KEY, 'en'); } catch (_) { /* noop */ }
-          } else {
-            showTranslateHint(true);
-          }
-          finishTranslating();
-        });
-      }
-      if (gtLoadFailed) {
-        clearInterval(check);
-        showTranslateHint(true);
-        finishTranslating();
-      }
-    }, 200);
-    return;
-  }
-  waitForComboAndSelect('en', (ok) => {
-    if (ok) {
-      currentLang = 'en';
-      try { localStorage.setItem(STORAGE_LANG_KEY, 'en'); } catch (_) { /* noop */ }
-    } else {
-      showTranslateHint(true);
-    }
-    finishTranslating();
-  });
-}
-
-function switchToChinese() {
-  if (isTranslating) return;
-  isTranslating = true;
-  currentLang = 'zh';
-  try { localStorage.setItem(STORAGE_LANG_KEY, 'zh'); } catch (_) { /* noop */ }
-  updateTranslateBtn();
-  if (gtReady) {
-    selectGTLanguage('zh-CN');
-    setTimeout(() => finishTranslating(), 800);
-  } else {
-    finishTranslating();
-  }
-}
-
-function initGoogleTranslate() {
-  if (gtLoadAttempted) return;
-  gtLoadAttempted = true;
-  (window as any).__dvAllowTranslate = true;
-
-  window.googleTranslateElementInit = function () {
-    try {
-      if (!(window as any).google || !(window as any).google.translate || !(window as any).google.translate.TranslateElement) {
-        gtLoadFailed = true;
-        finishTranslating();
-        return;
-      }
-      new (window as any).google.translate.TranslateElement({
-        pageLanguage: 'zh-CN',
-        includedLanguages: 'en,zh-CN',
-        autoDisplay: false,
-        layout: 0,
-      }, 'google_translate_element');
-      gtReady = true;
-      setTimeout(() => {
-        if (currentLang === 'en') {
-          waitForComboAndSelect('en', (ok) => {
-            finishTranslating();
-          });
-        }
-      }, 300);
-    } catch (_) {
-      gtLoadFailed = true;
-      finishTranslating();
-    }
-  };
-
-  const script = document.createElement('script');
-  script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-  script.async = true;
-  script.onerror = () => {
-    gtLoadFailed = true;
-    finishTranslating();
-  };
-  document.head.appendChild(script);
-
-  setTimeout(() => {
-    if (!gtReady) {
-      gtLoadFailed = true;
-      finishTranslating();
-    }
-  }, 15000);
 }
 
 // ══════════════════════════════════════════════
 // New Content Notification
 // ══════════════════════════════════════════════
 function getVersionJsonUrl(): string {
-  // Always use absolute path — directory-based routing (/articles/slug/) makes relative paths unreliable
   return '/version.json';
 }
 
@@ -384,8 +141,7 @@ function showNewContentBanner(_data: any) {
   if (document.getElementById('dv-new-content')) return;
   const el = document.createElement('div');
   el.id = 'dv-new-content';
-  el.className = 'dv-new-content notranslate';
-  el.setAttribute('translate', 'no');
+  el.className = 'dv-new-content';
   el.innerHTML =
     `<div class="dv-new-content__inner">
       <div class="dv-new-content__icon">${STAR_SVG}</div>
@@ -431,16 +187,13 @@ function checkForNewContent() {
       .catch(() => { /* noop */ });
   }
 
-  // Record current version immediately (so we can detect changes later)
   fetch(vUrl + '?t=' + Date.now(), { cache: 'no-store' })
     .then((r) => r.json())
     .then((data) => { try { localStorage.setItem(STORAGE_VERSION_KEY, String(data.version)); } catch (_) { /* noop */ } })
     .catch(() => { /* noop */ });
 
-  // Poll every 2 minutes (more responsive than 5min)
   setInterval(doCheck, 2 * 60 * 1000);
 
-  // Check immediately when tab becomes visible again
   document.addEventListener('visibilitychange', () => {
     if (!document.hidden) setTimeout(doCheck, 1000);
   });
@@ -458,16 +211,12 @@ let searchResultsEl: HTMLElement | null = null;
 
 async function loadPagefind() {
   if (pagefindInstance) return pagefindInstance;
-  // Pagefind is an ES module generated post-build. Use a <script type="module"> tag
-  // to load it at runtime so Vite/Rollup doesn't try to bundle it.
   return new Promise<any>((resolve) => {
-    // Check if already loaded globally
     if ((window as any).__dv_pagefind) {
       pagefindInstance = (window as any).__dv_pagefind;
       resolve(pagefindInstance);
       return;
     }
-    // Create a module script that imports pagefind and exposes it globally
     const s = document.createElement('script');
     s.type = 'module';
     s.textContent = `
@@ -476,7 +225,6 @@ async function loadPagefind() {
       window.__dv_pagefindReady = true;
       window.dispatchEvent(new CustomEvent('dv:pagefind-ready'));
     `;
-    // Listen for ready event
     const onReady = () => {
       const pf = (window as any).__dv_pagefind;
       if (pf) {
@@ -489,7 +237,6 @@ async function loadPagefind() {
     window.addEventListener('dv:pagefind-ready', onReady, { once: true });
     s.onerror = () => resolve(null);
     document.head.appendChild(s);
-    // Hard timeout after 8s
     setTimeout(() => {
       if (!pagefindInstance) resolve(null);
     }, 8000);
@@ -516,7 +263,7 @@ function closeSearch() {
   document.body.style.overflow = '';
   if (searchInput) searchInput.value = '';
   if (searchResultsEl) {
-    searchResultsEl.innerHTML = '<div class="search-modal__empty">输入关键词开始搜索</div>';
+    searchResultsEl.innerHTML = `<div class="search-modal__empty">${t('search_empty')}</div>`;
   }
   searchResults = [];
   selectedIndex = -1;
@@ -525,7 +272,7 @@ function closeSearch() {
 function renderResults(results: any[]) {
   if (!searchResultsEl) return;
   if (results.length === 0) {
-    searchResultsEl.innerHTML = '<div class="search-modal__empty">未找到相关文章</div>';
+    searchResultsEl.innerHTML = `<div class="search-modal__empty">${t('search_no_results')}</div>`;
     return;
   }
   searchResultsEl.innerHTML = results.map((r, i) => {
@@ -539,7 +286,6 @@ function renderResults(results: any[]) {
     </a>`;
   }).join('');
 
-  // Scroll selected into view
   const selected = searchResultsEl.querySelector('.search-result.is-selected');
   if (selected) {
     selected.scrollIntoView({ block: 'nearest' });
@@ -556,20 +302,19 @@ async function performSearch(query: string) {
   if (!searchResultsEl) return;
   const pf = await loadPagefind();
   if (!pf) {
-    searchResultsEl.innerHTML = '<div class="search-modal__empty">搜索功能需要构建后可用</div>';
+    searchResultsEl.innerHTML = `<div class="search-modal__empty">${t('search_error')}</div>`;
     return;
   }
   if (!query.trim()) {
-    searchResultsEl.innerHTML = '<div class="search-modal__empty">输入关键词开始搜索</div>';
+    searchResultsEl.innerHTML = `<div class="search-modal__empty">${t('search_empty')}</div>`;
     searchResults = [];
     selectedIndex = -1;
     return;
   }
-  searchResultsEl.innerHTML = '<div class="search-modal__loading">搜索中...</div>';
+  searchResultsEl.innerHTML = `<div class="search-modal__loading">${t('search_loading')}</div>`;
   try {
     const search = await pf.search(query, { pageSize: 20 });
     const rawResults = search?.results?.slice(0, 20) || [];
-    // Pagefind returns lazy results — call data() to get meta/excerpt/url
     const resolved = await Promise.all(
       rawResults.map(async (r: any) => {
         try {
@@ -589,7 +334,7 @@ async function performSearch(query: string) {
     renderResults(searchResults);
   } catch (e) {
     console.warn('[DV] Search error:', e);
-    searchResultsEl.innerHTML = '<div class="search-modal__empty">搜索出错</div>';
+    searchResultsEl.innerHTML = `<div class="search-modal__empty">${t('search_error')}</div>`;
   }
 }
 
@@ -607,7 +352,9 @@ function initSearch() {
   searchResultsEl = document.getElementById('search-results');
   if (!searchOverlay || !searchInput || !searchResultsEl) return;
 
-  // Keyboard shortcut: Cmd/Ctrl+K or "/"
+  // Set initial placeholder
+  searchInput.placeholder = t('search_placeholder');
+
   document.addEventListener('keydown', (e) => {
     const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
     const modKey = isMac ? e.metaKey : e.ctrlKey;
@@ -633,7 +380,6 @@ function initSearch() {
       return;
     }
 
-    // Keyboard navigation in search results
     if (!searchOverlay!.hidden) {
       if (e.key === 'ArrowDown') {
         e.preventDefault();
@@ -656,15 +402,12 @@ function initSearch() {
     }
   });
 
-  // Click on overlay backdrop to close
   searchOverlay.addEventListener('click', (e) => {
     if (e.target === searchOverlay) closeSearch();
   });
 
-  // Input event
   searchInput.addEventListener('input', handleSearchInput);
 
-  // Search buttons/triggers (multiple possible)
   const searchBtns = document.querySelectorAll('[data-search-trigger], #nav-search-btn, #home-search-btn');
   searchBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
@@ -673,7 +416,6 @@ function initSearch() {
     });
   });
 
-  // Click on result to navigate (delegated)
   searchResultsEl.addEventListener('click', (e) => {
     const result = (e.target as HTMLElement).closest('.search-result') as HTMLElement | null;
     if (result) {
@@ -705,26 +447,41 @@ function initReadingProgress() {
 }
 
 // ══════════════════════════════════════════════
+// Back Button — fade to 10% opacity on scroll
+// ══════════════════════════════════════════════
+function initBackButton() {
+  const btn = document.querySelector('.dv-back-btn') as HTMLElement | null;
+  if (!btn) return;
+
+  function update() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    if (scrollTop > 100) {
+      btn.classList.add('is-scrolled');
+    } else {
+      btn.classList.remove('is-scrolled');
+    }
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+}
+
+// ══════════════════════════════════════════════
 // Init
 // ══════════════════════════════════════════════
 function init() {
   currentLang = detectLang();
-  document.documentElement.lang = currentLang === 'en' ? 'en' : 'zh-CN';
+  applyLanguage(currentLang);
 
-  // Create floating translate button immediately
-  getOrCreateTranslateBtn();
-  updateTranslateBtn();
+  // Create floating language switch button
+  getOrCreateLangSwitchBtn();
 
-  // Only load Google Translate if user previously selected English
-  if (currentLang === 'en') {
-    initGoogleTranslate();
-  }
-
-  // Record current version immediately (needed for change detection)
+  // Record current version immediately
   checkForNewContent();
 
   initSearch();
   initReadingProgress();
+  initBackButton();
   initLikeButton();
   initTipModal();
 }
@@ -757,38 +514,41 @@ function initLikeButton() {
   if (!slug) return;
 
   const countEl = document.getElementById('like-count');
+  const labelEl = btn.querySelector('.article-action-btn__label');
   const liked = getLikedArticles();
 
-  // Restore liked state
   if (liked.has(slug)) {
     btn.classList.add('is-liked');
     const svg = btn.querySelector('svg');
     if (svg) svg.setAttribute('fill', 'currentColor');
   }
 
-  // Initialize count (localStorage-based demo count)
   let count = liked.has(slug) ? 1 : Math.floor(Math.random() * 5) + 1;
   if (countEl) countEl.textContent = String(count);
+  if (labelEl) labelEl.setAttribute('data-i18n', liked.has(slug) ? 'liked' : 'like');
 
   btn.addEventListener('click', () => {
     const likedNow = getLikedArticles();
-    const label = btn.querySelector('.article-action-btn__label');
     if (likedNow.has(slug)) {
-      // Unlike
       likedNow.delete(slug);
       btn.classList.remove('is-liked');
       const svg = btn.querySelector('svg');
       if (svg) svg.setAttribute('fill', 'none');
       count = Math.max(0, count - 1);
-      if (label) label.textContent = '喜欢';
+      if (labelEl) {
+        labelEl.setAttribute('data-i18n', 'like');
+        labelEl.textContent = t('like');
+      }
     } else {
-      // Like
       likedNow.add(slug);
       btn.classList.add('is-liked');
       const svg = btn.querySelector('svg');
       if (svg) svg.setAttribute('fill', 'currentColor');
       count++;
-      if (label) label.textContent = '已喜欢';
+      if (labelEl) {
+        labelEl.setAttribute('data-i18n', 'liked');
+        labelEl.textContent = t('liked');
+      }
     }
     if (countEl) countEl.textContent = String(count);
     saveLikedArticles(likedNow);

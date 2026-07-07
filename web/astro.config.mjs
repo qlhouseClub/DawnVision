@@ -7,6 +7,8 @@ export default defineConfig({
   build: {
     format: 'directory',
   },
+  // Ensure all URLs end with trailing slash to match directory format
+  trailingSlash: 'always',
   vite: {
     resolve: {
       alias: {

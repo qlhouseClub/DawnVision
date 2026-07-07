@@ -6,15 +6,18 @@ const sourceSchema = z.object({
   url: z.union([z.string(), z.null()]).default('').transform(v => v ?? ''),
 });
 
-// 引用块
+// 引用块（支持中英双语）
 const pullQuoteSchema = z.object({
   text: z.string(),
   attr: z.string().default(''),
+  text_en: z.string().optional().default(''),
+  attr_en: z.string().optional().default(''),
 });
 
-// 基础文章schema（cover和brief共用）
+// 基础文章schema（cover和brief共用）—— 扩展支持英文字段
 const baseArticleSchema = z.object({
   slug: z.string(),
+  // 中文内容
   title: z.string(),
   title_break: z.string().optional().nullable(),
   title_short: z.string().optional().nullable(),
@@ -31,6 +34,18 @@ const baseArticleSchema = z.object({
   pull_quote: pullQuoteSchema.nullable().optional(),
   cognitive_notes: z.string().default(''),
   source_summary: z.string().default(''),
+  // 英文内容（可选，有则显示双语切换）
+  title_en: z.string().optional().default(''),
+  title_break_en: z.string().optional().nullable(),
+  title_short_en: z.string().optional().nullable(),
+  deck_en: z.string().optional().default(''),
+  keywords_en: z.string().optional().default(''),
+  og_description_en: z.string().optional().default(''),
+  twitter_description_en: z.string().optional().nullable(),
+  read_time_en: z.string().optional().default(''),
+  body_html_en: z.string().optional().default(''),
+  cognitive_notes_en: z.string().optional().default(''),
+  source_summary_en: z.string().optional().default(''),
 });
 
 // Cover文章（封面焦点）
@@ -47,6 +62,7 @@ const briefSchema = baseArticleSchema.extend({
 // Cao文章（操蛇之神）
 const caoSchema = baseArticleSchema.extend({
   footnote_tip: z.string().optional(),
+  footnote_tip_en: z.string().optional().default(''),
 });
 
 // 期数信息

@@ -10,7 +10,7 @@ export async function getStaticPaths() {
   const paths: { params: { slug: string }; props: any }[] = [];
 
   // Build a flat list of all articles in order (newest first) for prev/next
-  const allArticles: { slug: string; title: string; type: string }[] = [];
+  const allArticles: { slug: string; title: string; title_en?: string; type: string }[] = [];
 
   for (const issue of issues) {
     // Cover
@@ -23,10 +23,11 @@ export async function getStaticPaths() {
         issueDate: issue.data.issue.date_display,
         issueDateIso: issue.data.issue.date,
         category: 'Focus · 焦点',
+        categoryEn: 'Focus',
       }
     };
     paths.push(coverPath);
-    allArticles.push({ slug: issue.data.cover.slug, title: issue.data.cover.title, type: 'cover' });
+    allArticles.push({ slug: issue.data.cover.slug, title: issue.data.cover.title, title_en: issue.data.cover.title_en, type: 'cover' });
 
     // Briefs
     for (const brief of issue.data.briefs) {
@@ -38,10 +39,11 @@ export async function getStaticPaths() {
           issueNum: issue.data.issue.number,
           issueDate: issue.data.issue.date_display,
           issueDateIso: issue.data.issue.date,
-          category: brief.category_en || brief.category,
+          category: brief.category,
+          categoryEn: brief.category_en || brief.category,
         }
       });
-      allArticles.push({ slug: brief.slug, title: brief.title, type: 'brief' });
+      allArticles.push({ slug: brief.slug, title: brief.title, title_en: brief.title_en, type: 'brief' });
     }
 
     // Cao
@@ -54,17 +56,17 @@ export async function getStaticPaths() {
           issueNum: issue.data.issue.number,
           issueDate: issue.data.issue.date_display,
           issueDateIso: issue.data.issue.date,
-          category: 'Cao! · 来吐槽吧',
+          category: 'Cao! · 槽点',
+          categoryEn: 'Cao!',
         }
       });
-      allArticles.push({ slug: issue.data.cao.slug, title: issue.data.cao.title, type: 'cao' });
+      allArticles.push({ slug: issue.data.cao.slug, title: issue.data.cao.title, title_en: issue.data.cao.title_en, type: 'cao' });
     }
   }
 
   // Add prev/next to each path's props
   for (const p of paths) {
     const idx = allArticles.findIndex(a => a.slug === p.params.slug);
-    // In reading order (newest first): prev = older article (idx+1), next = newer article (idx-1)
     p.props.prevArticle = idx < allArticles.length - 1 ? allArticles[idx + 1] : null;
     p.props.nextArticle = idx > 0 ? allArticles[idx - 1] : null;
   }
@@ -72,12 +74,16 @@ export async function getStaticPaths() {
   return paths;
 }
 
-const { article, type, issueNum, issueDate, issueDateIso, category, prevArticle, nextArticle } = Astro.props;
+const { article, type, issueNum, issueDate, issueDateIso, category, categoryEn, prevArticle, nextArticle } = Astro.props;
 const isCao = type === 'cao';
 
 const pageTitle = article.title_short || article.title;
+const pageTitleEn = article.title_short_en || article.title_en || pageTitle;
 const pageDescription = article.og_description || article.deck;
+const pageDescriptionEn = article.og_description_en || article.deck_en || pageDescription;
 const pageUrl = new URL(Astro.url.pathname, Astro.site ?? 'https://www.dawnvision.net').toString();
+
+const hasEnglish = !!(article.title_en && article.body_html_en);
 
 const articleLd = JSON.stringify(buildNewsArticleJsonLd(
   article,
@@ -87,16 +93,26 @@ const articleLd = JSON.stringify(buildNewsArticleJsonLd(
 
 const breadcrumbLd = JSON.stringify(buildBreadcrumbJsonLd([
   { name: '首页', url: 'https://www.dawnvision.net/' },
-  { name: '文章', url: 'https://www.dawnvision.net/articles' },
+  { name: '文章', url: 'https://www.dawnvision.net/articles/' },
   { name: pageTitle },
 ]));
 
 const jsonLdArray = [articleLd, breadcrumbLd];
+
+// Read time display
+const readTime = article.read_time || '约 5 分钟阅读';
+const readTimeEn = article.read_time_en || '~5 min read';
+
+// Pull quote
+const pullQuote = article.pull_quote;
+const pullQuoteEn = pullQuote && pullQuote.text_en ? { text: pullQuote.text_en, attr: pullQuote.attr_en || pullQuote.attr } : null;
 ---
 
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
+  titleEn={pageTitleEn}
+  descriptionEn={pageDescriptionEn}
   navVariant="inner"
   activeNav={isCao ? 'cao' : 'articles'}
   type="article"
@@ -104,50 +120,79 @@ const jsonLdArray = [articleLd, breadcrumbLd];
   structuredData={jsonLdArray}
 >
   <Fragment slot="main">
+    {/* Back button - fixed top-left */}
+    <a href="/articles/" class="dv-back-btn" aria-label="返回文章列表" title="返回文章列表">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </a>
+
     {/* Article Hero */}
     <section class={`article-hero ${isCao ? 'article-hero--cao' : ''}`}>
       <BackgroundBlobs variant="section" />
       <div class="container--narrow" style="position:relative;z-index:1;">
-        {/* Visually hidden but indexable by Pagefind for search results */}
         <div data-pagefind-meta="category" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">{category}</div>
-        <h1 class="article-hero__title" data-pagefind-meta="title" set:html={article.title_break || article.title}></h1>
-        <p class="article-hero__deck">{article.deck}</p>
+        {/* Chinese title */}
+        <h1 class="article-hero__title dv-zh" data-pagefind-meta="title" set:html={article.title_break || article.title}></h1>
+        {/* English title */}
+        {hasEnglish && <h1 class="article-hero__title dv-en" set:html={article.title_break_en || article.title_en}></h1>}
+        <p class="article-hero__deck dv-zh">{article.deck}</p>
+        {hasEnglish && <p class="article-hero__deck dv-en">{article.deck_en}</p>}
         <div class="article-hero__meta">
-          <span class="article-hero__issue notranslate" translate="no">No.{issueNum}</span>
+          <span class="article-hero__issue notranslate">No.{issueNum}</span>
           <span>{issueDate}</span>
-          <span>{article.read_time}</span>
+          <span class="dv-zh">{readTime}</span>
+          {hasEnglish && <span class="dv-en">{readTimeEn}</span>}
         </div>
       </div>
     </section>
 
     {/* Article Body */}
     <article class="container--narrow" style="padding-top: clamp(40px, 6vw, 64px); padding-bottom: 0;">
-      <div class="article-body" data-pagefind-body set:html={article.body_html}></div>
+      {/* Chinese body */}
+      <div class="article-body dv-zh" data-pagefind-body set:html={article.body_html}></div>
+      {/* English body */}
+      {hasEnglish && <div class="article-body dv-en" set:html={article.body_html_en}></div>}
 
       {/* Pull Quote */}
-      {article.pull_quote && (
-        <blockquote class="article-pull-quote">
-          <p class="article-pull-quote__text">{article.pull_quote.text}</p>
-          {article.pull_quote.attr && (
-            <cite class="article-pull-quote__attr">{article.pull_quote.attr}</cite>
+      {pullQuote && (
+        <Fragment>
+          <blockquote class="article-pull-quote dv-zh">
+            <p class="article-pull-quote__text">{pullQuote.text}</p>
+            {pullQuote.attr && <cite class="article-pull-quote__attr">{pullQuote.attr}</cite>}
+          </blockquote>
+          {pullQuoteEn && (
+            <blockquote class="article-pull-quote dv-en">
+              <p class="article-pull-quote__text">{pullQuoteEn.text}</p>
+              {pullQuoteEn.attr && <cite class="article-pull-quote__attr">{pullQuoteEn.attr}</cite>}
+            </blockquote>
           )}
-        </blockquote>
+        </Fragment>
       )}
 
       {/* Cao Footnote Tip */}
       {isCao && article.footnote_tip && (
-        <div class="article-cao-tip">{article.footnote_tip}</div>
+        <Fragment>
+          <div class="article-cao-tip dv-zh">{article.footnote_tip}</div>
+          {article.footnote_tip_en && <div class="article-cao-tip dv-en">{article.footnote_tip_en}</div>}
+        </Fragment>
       )}
 
       {/* Cognitive Notes */}
       {article.cognitive_notes && (
-        <div class="article-cognitive">{article.cognitive_notes}</div>
+        <Fragment>
+          <div class="article-cognitive dv-zh">{article.cognitive_notes}</div>
+          {article.cognitive_notes_en && <div class="article-cognitive dv-en">{article.cognitive_notes_en}</div>}
+        </Fragment>
       )}
 
       {/* Sources */}
       {article.sources && article.sources.length > 0 && (
         <div class="article-sources">
-          <div class="article-sources__title notranslate" translate="no">Sources · 信源</div>
+          <div class="article-sources__title notranslate">
+            <span class="dv-zh">Sources · 信源</span>
+            <span class="dv-en">Sources</span>
+          </div>
           <ul class="article-sources__list">
             {article.sources.map((source: { text: string; url: string }) => (
               <li class="article-sources__item">
@@ -160,7 +205,10 @@ const jsonLdArray = [articleLd, breadcrumbLd];
             ))}
           </ul>
           {article.source_summary && (
-            <p class="article-source-summary">{article.source_summary}</p>
+            <Fragment>
+              <p class="article-source-summary dv-zh">{article.source_summary}</p>
+              {article.source_summary_en && <p class="article-source-summary dv-en">{article.source_summary_en}</p>}
+            </Fragment>
           )}
         </div>
       )}
@@ -171,29 +219,37 @@ const jsonLdArray = [articleLd, breadcrumbLd];
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
           </svg>
-          <span class="article-action-btn__label">喜欢</span>
+          <span class="article-action-btn__label" data-i18n="like">喜欢</span>
           <span class="article-action-btn__count" id="like-count">0</span>
         </button>
         <button class="article-action-btn article-action-btn--tip" id="article-tip-btn" aria-label="打赏">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
           </svg>
-          <span class="article-action-btn__label">打赏</span>
+          <span class="article-action-btn__label" data-i18n="tip">打赏</span>
         </button>
       </div>
 
       {/* Prev / Next Navigation */}
       <nav class="article-nav" aria-label="文章导航">
         {prevArticle ? (
-          <a href={`/articles/${prevArticle.slug}`} class="article-nav__item article-nav__item--prev">
-            <div class="article-nav__label">上一篇</div>
-            <div class="article-nav__title">{prevArticle.title}</div>
+          <a href={`/articles/${prevArticle.slug}/`} class="article-nav__item article-nav__item--prev">
+            <div class="article-nav__label">
+              <span class="dv-zh" data-i18n="prev_article">上一篇</span>
+              <span class="dv-en" data-i18n="prev_article">Previous</span>
+            </div>
+            <div class="article-nav__title dv-zh">{prevArticle.title}</div>
+            {prevArticle.title_en && <div class="article-nav__title dv-en">{prevArticle.title_en}</div>}
           </a>
         ) : <div></div>}
         {nextArticle ? (
-          <a href={`/articles/${nextArticle.slug}`} class="article-nav__item article-nav__item--next">
-            <div class="article-nav__label">下一篇</div>
-            <div class="article-nav__title">{nextArticle.title}</div>
+          <a href={`/articles/${nextArticle.slug}/`} class="article-nav__item article-nav__item--next">
+            <div class="article-nav__label">
+              <span class="dv-zh" data-i18n="next_article">下一篇</span>
+              <span class="dv-en" data-i18n="next_article">Next</span>
+            </div>
+            <div class="article-nav__title dv-zh">{nextArticle.title}</div>
+            {nextArticle.title_en && <div class="article-nav__title dv-en">{nextArticle.title_en}</div>}
           </a>
         ) : <div></div>}
       </nav>

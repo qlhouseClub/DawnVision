@@ -8,6 +8,7 @@ import '@styles/pages/error.css';
   description="这页穿越到未来了"
   navVariant="home"
   noindex={true}
+  canonical="/"
 >
   <Fragment slot="main">
     <div class="error-page error-page--404">
@@ -16,7 +17,7 @@ import '@styles/pages/error.css';
       <p class="error-page__desc">你访问的页面不存在，或许它还没被写出来。</p>
       <div class="error-page__actions">
         <a href="/" class="error-page__btn error-page__btn--primary">回到首页</a>
-        <a href="/articles" class="error-page__btn error-page__btn--ghost">最新文章</a>
+        <a href="/articles/" class="error-page__btn error-page__btn--ghost">最新文章</a>
       </div>
     </div>
   </Fragment>

@@ -20,23 +20,23 @@ const jsonLd = JSON.stringify({
 <BaseLayout
   title="Cao! 槽点"
   description="每天一点槽，笑完继续搞。Dawn Vision吐槽专栏，AI编程翻车、AI产品吐槽、科技圈趣闻。AI fails, tech rant, AI humor."
+  titleEn="Cao! Roast"
+  descriptionEn="A little rant a day keeps the sanity away. We roast AI so you don't have to. AI fails, tech rants, and humor."
   navVariant="inner"
   activeNav="cao"
   structuredData={jsonLd}
 >
   <Fragment slot="main">
     <div class="cao-page">
-      {/* Cao Hero (full-bleed Klein blue, matching articles page Cao section) */}
       <section class="cao-hero">
         <BackgroundBlobs variant="section" />
         <div class="cao-page__container" style="position:relative;z-index:1;">
-          <h1 class="cao-hero__title notranslate" translate="no">Cao! <em>槽点!</em></h1>
-          <p class="cao-hero__subtitle">每天一点槽，笑完继续搞。</p>
-          <p class="cao-hero__subtitle-en notranslate" translate="no">A little rant a day keeps the sanity away. We roast AI so you don't have to.</p>
+          <h1 class="cao-hero__title notranslate">Cao! <em class="dv-zh">槽点!</em></h1>
+          <p class="cao-hero__subtitle dv-zh">每天一点槽，笑完继续搞。</p>
+          <p class="cao-hero__subtitle-en notranslate">A little rant a day keeps the sanity away. We roast AI so you don't have to.</p>
         </div>
       </section>
 
-      {/* Cao Article List (flat list, no latest/archive split) */}
       <div class="cao-page__body">
         <div class="cao-page__container">
           {caos.length > 0 ? (
@@ -47,13 +47,14 @@ const jsonLd = JSON.stringify({
                   article={cao}
                   issueNum={cao.issueNum}
                   issueDate={cao.issueDate}
-                  href={`/articles/${cao.slug}`}
+                  href={`/articles/${cao.slug}/`}
                 />
               ))}
             </div>
           ) : (
             <div style="padding: 80px 0; text-align: center; color: var(--color-text-muted); font-style: italic;">
-              暂无Cao专栏内容
+              <span class="dv-zh">暂无Cao专栏内容</span>
+              <span class="dv-en">No Cao! articles yet</span>
             </div>
           )}
         </div>

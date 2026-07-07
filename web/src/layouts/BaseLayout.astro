@@ -19,6 +19,9 @@ export interface Props {
   activeNav?: 'home' | 'articles' | 'cao' | 'about';
   /** JSON-LD structured data strings */
   structuredData?: string | string[];
+  /** English title/description for bilingual pages */
+  titleEn?: string;
+  descriptionEn?: string;
 }
 
 const {
@@ -31,6 +34,8 @@ const {
   navVariant = 'inner',
   activeNav,
   structuredData,
+  titleEn,
+  descriptionEn,
 } = Astro.props;
 
 const isHome = navVariant === 'home';
@@ -38,6 +43,9 @@ const isHome = navVariant === 'home';
 const fullTitle = title === siteConfig.name
   ? `${title} | ${siteConfig.tagline} — AI 深度观察日刊`
   : `${title} — ${siteConfig.name}`;
+const fullTitleEn = titleEn
+  ? (titleEn === siteConfig.name ? `${titleEn} | ${siteConfig.englishTagline} — AI Daily Briefing` : `${titleEn} — ${siteConfig.name}`)
+  : '';
 const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site ?? siteConfig.url).toString();
 const ogImageURL = new URL(ogImage, Astro.site ?? siteConfig.url).toString();
 
@@ -47,23 +55,10 @@ const jsonLdArray = structuredData
 ---
 
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-lang="zh">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  {/* Anti-redirect guard: block cached old GT scripts from auto-redirecting */}
-  <script is:inline>
-  (function(){
-    window.__dvAllowTranslate = true;
-    window.googleTranslateElementInit = function(){ /* overridden by interactions */ };
-    var isGT = function(u){ return typeof u==='string' && /translate\.google(apis)?\.com/.test(u); };
-    var _a=window.location.assign, _r=window.location.replace, _o=window.open;
-    window.location.assign = function(u){ if(isGT(u) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT redirect'); return; } return _a.call(window.location,u); };
-    window.location.replace = function(u){ if(isGT(u) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT redirect'); return; } return _r.call(window.location,u); };
-    window.open = function(){ if(isGT(arguments[0]) && !window.__dvAllowTranslate){ console.warn('[DV] Blocked auto GT popup'); return null; } return _o.apply(window,arguments); };
-  })();
-  </script>
 
   <title>{fullTitle}</title>
   <meta name="description" content={description}>
@@ -75,6 +70,7 @@ const jsonLdArray = structuredData
 
   {/* Favicon */}
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/favicon.svg">
 
   {/* Fonts - preconnect and non-blocking load */}
@@ -143,30 +139,17 @@ const jsonLdArray = structuredData
     </script>
   )}
 
-  {/* GT UI Hiding CSS — injected before body renders to prevent flash */}
+  {/* Bilingual + Floating UI Styles */}
   <style is:inline>
-    iframe.goog-te-banner-frame,
-    iframe[class*="goog-te-banner"],
-    iframe[id*="goog-te-banner"],
-    .goog-te-gadget, .goog-te-gadget-icon, .goog-te-gadget-simple,
-    .goog-te-gadget span, #google_translate_element, #google_translate_element *,
-    .goog-te-spinner-pos, .goog-te-spinner,
-    img[src*="translate_spinner"], img[src*="loading"],
-    .goog-te-menu-frame, .goog-te-menu-value,
-    .goog-te-balloon-frame, .goog-text-highlight,
-    #goog-gt-tt, .goog-tooltip,
-    iframe[src*="translate.google.com"],
-    iframe[src*="translate.googleapis.com"],
-    iframe[src*="translate_p"], iframe[src*="element/"],
-    a[href*="goog-te"], .VIiyi, .JLqJ4b,
-    .skiptranslate {
-      display:none!important; visibility:hidden!important; opacity:0!important;
-      width:0!important; height:0!important; max-width:0!important; max-height:0!important;
-      overflow:hidden!important; pointer-events:none!important; position:absolute!important;
-      top:-9999px!important; left:-9999px!important;
-      margin:0!important; padding:0!important; border:0!important;
+    /* Language toggle: show/hide content based on data-lang */
+    :root {
+      --dv-lang: 'zh';
     }
-    body, html { top:0!important; margin-top:0!important; }
+    html[data-lang="zh"] .dv-en { display: none !important; }
+    html[data-lang="en"] .dv-zh { display: none !important; }
+
+    /* When English is active, swap visible text for title/description */
+    html[data-lang="en"] head > title { display: none; }
 
     /* Floating language switch button */
     .dv-lang-switch {
@@ -197,11 +180,6 @@ const jsonLdArray = structuredData
       color: #fff;
       transform: scale(1.08);
       box-shadow: 0 4px 24px rgba(0,47,167,0.3);
-    }
-    .dv-lang-switch:disabled {
-      opacity: 0.6;
-      cursor: wait;
-      transform: none;
     }
     @media (max-width: 700px) {
       .dv-lang-switch {
@@ -248,9 +226,6 @@ const jsonLdArray = structuredData
       <Footer variant="site" />
     </Fragment>
   )}
-
-  {/* Hidden GT element container */}
-  <div id="google_translate_element" style="position:absolute;left:-9999px;top:-9999px;width:0;height:0;overflow:hidden;opacity:0;pointer-events:none;"></div>
 
   {/* Search Modal + Reading Progress */}
   <SearchModal />

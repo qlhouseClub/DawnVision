@@ -19,53 +19,58 @@ const jsonLd = JSON.stringify({
 <BaseLayout
   title="About · 关于"
   description="关于Dawn Vision——在噪音中看见信号，AI时代的深度观察日刊。"
+  titleEn="About"
+  descriptionEn="About Dawn Vision — Seeing signals through noise. A daily AI insight publication."
   navVariant="inner"
   activeNav="about"
   structuredData={jsonLd}
 >
   <Fragment slot="main">
     <div class="about-page">
-      <!-- Title -->
-      <h1 class="about-page__title notranslate" translate="no">Dawn Vision</h1>
-      <div class="about-page__eyebrow notranslate" translate="no">About the Author</div>
+      <h1 class="about-page__title notranslate">Dawn Vision</h1>
+      <div class="about-page__eyebrow notranslate">About the Author</div>
 
-      <!-- Author tags (italic, gray, centered) -->
       <ul class="about-page__tags">
-        <li>水瓶座、天马行空的设计师</li>
-        <li class="notranslate" translate="no">INFP (MBTI)、MUM (SBTI)</li>
-        <li>认错超快叛逆不改气人天赋高超的心理砖家</li>
-        <li>视角独特且薄学的不才写手</li>
-        <li>仗势AI冲浪的技术小白</li>
+        <li class="dv-zh">水瓶座、天马行空的设计师</li>
+        <li class="dv-en">Aquarius, free-spirited designer</li>
+        <li class="notranslate">INFP (MBTI)、MUM (SBTI)</li>
+        <li class="dv-zh">认错超快叛逆不改气人天赋高超的心理砖家</li>
+        <li class="dv-en">Self-proclaimed psychology expert with quick apologies but zero compliance</li>
+        <li class="dv-zh">视角独特且薄学的不才写手</li>
+        <li class="dv-en">Opinionated, lightly-educated writer with a unique perspective</li>
+        <li class="dv-zh">仗势AI冲浪的技术小白</li>
+        <li class="dv-en">Tech noob riding the AI wave</li>
       </ul>
 
-      <!-- Blue divider -->
       <div class="about-page__divider"></div>
 
-      <!-- Description paragraph -->
-      <p class="about-page__desc">
+      <p class="about-page__desc dv-zh">
         Dawn Vision 是一份 AI 深度观察日刊；<br>
         关注每天 AI 相关的前沿话题。
       </p>
+      <p class="about-page__desc dv-en">
+        Dawn Vision is a daily AI insight publication;<br>
+        tracking cutting-edge AI topics every day.
+      </p>
 
-      <!-- Contact -->
       <div class="about-page__contact">
         <div class="about-page__contact-item">
-          <div class="about-page__contact-value notranslate" translate="no">DawnVision88</div>
-          <div class="about-page__contact-label notranslate" translate="no">Wechat</div>
+          <div class="about-page__contact-value notranslate">DawnVision88</div>
+          <div class="about-page__contact-label notranslate">WeChat</div>
         </div>
         <div class="about-page__contact-item">
-          <a href="tel:18622454349" class="about-page__contact-value about-page__contact-value--link notranslate" translate="no">18622454349</a>
-          <div class="about-page__contact-label notranslate" translate="no">Phone</div>
+          <a href="tel:18622454349" class="about-page__contact-value about-page__contact-value--link notranslate">18622454349</a>
+          <div class="about-page__contact-label notranslate">Phone</div>
         </div>
       </div>
 
-      <!-- Tip Jar -->
       <div class="about-page__tipjar">
-        <div class="about-page__tipjar-label notranslate" translate="no">Tip Jar</div>
+        <div class="about-page__tipjar-label notranslate">Tip Jar</div>
         <div class="about-page__qr-wrap">
-          <img src="/images/reward-qr.webp" alt="谢谢老板请我喝奶茶" class="about-page__qr" width="220" height="220" loading="lazy" />
+          <img src="/images/reward-qr.webp" alt="Tip Jar" class="about-page__qr" width="220" height="220" loading="lazy" />
         </div>
-        <p class="about-page__tipjar-quote">"谢谢老板请我喝奶茶"</p>
+        <p class="about-page__tipjar-quote dv-zh">"谢谢老板请我喝奶茶"</p>
+        <p class="about-page__tipjar-quote dv-en">"Thanks for the bubble tea!"</p>
       </div>
     </div>
   </Fragment>

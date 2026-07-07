@@ -387,3 +387,50 @@
     gap: var(--space-4);
   }
 }
+
+/* ── Back Button (fixed top-left, below nav) ── */
+.dv-back-btn {
+  position: fixed;
+  top: 72px;
+  left: 24px;
+  z-index: 900;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: #ffffff;
+  color: #002FA7;
+  cursor: pointer;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+  transition: opacity 0.3s ease, background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  text-decoration: none;
+  opacity: 1;
+}
+.dv-back-btn:hover {
+  background: #002FA7;
+  color: #fff;
+  transform: scale(1.08);
+  box-shadow: 0 4px 24px rgba(0,47,167,0.3);
+}
+.dv-back-btn.is-scrolled {
+  opacity: 0.1;
+}
+.dv-back-btn.is-scrolled:hover {
+  opacity: 1;
+}
+@media (max-width: 700px) {
+  .dv-back-btn {
+    top: 60px;
+    left: 16px;
+    width: 40px;
+    height: 40px;
+  }
+  .dv-back-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+}

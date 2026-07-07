@@ -12,7 +12,7 @@ export async function GET(context: APIContext) {
     items.push({
       title: issue.data.cover.title,
       description: issue.data.cover.deck,
-      link: `/articles/${issue.data.cover.slug}`,
+      link: `/articles/${issue.data.cover.slug}/`,
       pubDate: new Date(issue.data.issue.date),
       categories: [issue.data.cover.category_en || 'Focus'],
     });
@@ -22,7 +22,7 @@ export async function GET(context: APIContext) {
       items.push({
         title: brief.title,
         description: brief.deck,
-        link: `/articles/${brief.slug}`,
+        link: `/articles/${brief.slug}/`,
         pubDate: new Date(issue.data.issue.date),
         categories: [brief.category_en || 'Brief'],
       });
@@ -33,7 +33,7 @@ export async function GET(context: APIContext) {
       items.push({
         title: issue.data.cao.title,
         description: issue.data.cao.deck,
-        link: `/articles/${issue.data.cao.slug}`,
+        link: `/articles/${issue.data.cao.slug}/`,
         pubDate: new Date(issue.data.issue.date),
         categories: ['Cao!'],
       });
@@ -46,5 +46,7 @@ export async function GET(context: APIContext) {
     site: context.site ?? siteConfig.url,
     items: items.slice(0, 100),
     customData: `<language>zh-cn</language><lastBuildDate>${new Date().toUTCString()}</lastBuildDate>`,
+    // Ensure trailing slashes in RSS item links match directory build format
+    trailingSlash: true,
   });
 }

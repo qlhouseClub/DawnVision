@@ -144,7 +144,7 @@
 }
 
 .card--grid .card__deck {
-  font-size: var(--text-sm);
+  font-size: clamp(0.75rem, 1.2vw, 0.875rem);
   line-height: var(--leading-relaxed);
   color: var(--color-text-muted);
   font-style: italic;
@@ -214,7 +214,7 @@
 }
 
 .card--cao-item .card__deck {
-  font-size: var(--text-sm);
+  font-size: clamp(0.75rem, 1.2vw, 0.875rem);
   line-height: var(--leading-relaxed);
   color: var(--color-text-muted);
   font-style: italic;

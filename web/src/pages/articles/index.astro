@@ -33,20 +33,29 @@ const issuesData = allIssues.map(issue => ({
   cao: issue.data.cao ? {
     slug: issue.data.cao.slug,
     title: issue.data.cao.title,
+    title_en: issue.data.cao.title_en || '',
     deck: issue.data.cao.deck,
+    deck_en: issue.data.cao.deck_en || '',
     read_time: issue.data.cao.read_time,
+    read_time_en: issue.data.cao.read_time_en || '',
   } : null,
   cover: {
     slug: issue.data.cover.slug,
     title: issue.data.cover.title,
+    title_en: issue.data.cover.title_en || '',
     deck: issue.data.cover.deck,
+    deck_en: issue.data.cover.deck_en || '',
     read_time: issue.data.cover.read_time,
+    read_time_en: issue.data.cover.read_time_en || '',
   },
   briefs: (issue.data.briefs || []).map(b => ({
     slug: b.slug,
     title: b.title,
+    title_en: b.title_en || '',
     deck: b.deck,
+    deck_en: b.deck_en || '',
     category: b.category,
+    category_en: b.category_en || '',
   })),
 }));
 
@@ -70,14 +79,16 @@ const jsonLdArray = [breadcrumbLd];
       <!-- Filter bar -->
       <div class="articles-page__filter-bar">
         <div class="articles-page__filter-inner">
-          <span class="articles-page__issue-label notranslate" translate="no" id="issue-label">Issue {currentIssueNum.padStart(3, '0')}</span>
+          <div class="articles-page__filter-row">
+            <span class="articles-page__issue-label notranslate" translate="no" id="issue-label">Issue {currentIssueNum.padStart(3, '0')}</span>
+            <button class="articles-search-btn" data-search-trigger aria-label="搜索" title="搜索文章">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </div>
           <IssueFilter />
-          <button class="articles-search-btn" data-search-trigger aria-label="搜索" title="搜索文章">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-          </button>
         </div>
       </div>
 
@@ -90,21 +101,28 @@ const jsonLdArray = [breadcrumbLd];
         <div class="articles-page__cao-inner" id="cao-content">
           {currentCao && (
             <Fragment>
-              <h2 class="articles-page__cao-title notranslate" translate="no">
-                Cao! <em>槽点!</em>
+              <h2 class="articles-page__cao-title notranslate">
+                Cao! <em class="dv-zh">槽点!</em>
               </h2>
               <article class="articles-page__cao-article">
                 <h3 class="articles-page__cao-article-title">
-                  <a href={`/articles/${currentCao.slug}`} set:html={currentCao.title} />
+                  <a href={`/articles/${currentCao.slug}/`}>
+                    <span class="dv-zh" set:html={currentCao.title}></span>
+                    {currentCao.title_en && <span class="dv-en" set:html={currentCao.title_en}></span>}
+                  </a>
                 </h3>
-                <p class="articles-page__cao-deck">{currentCao.deck}</p>
+                <p class="articles-page__cao-deck dv-zh">{currentCao.deck}</p>
+                {currentCao.deck_en && <p class="articles-page__cao-deck dv-en">{currentCao.deck_en}</p>}
                 {currentCao.read_time && (
                   <div class="articles-page__cao-meta">
-                    <a href={`/articles/${currentCao.slug}`}>{currentCao.read_time} →</a>
+                    <a href={`/articles/${currentCao.slug}/`}>
+                      <span class="dv-zh">{currentCao.read_time} →</span>
+                      {currentCao.read_time_en && <span class="dv-en">{currentCao.read_time_en} →</span>}
+                    </a>
                   </div>
                 )}
               </article>
-              <a href="/cao" class="articles-page__cao-all notranslate" translate="no">View All Cao! →</a>
+              <a href="/cao/" class="articles-page__cao-all notranslate">View All Cao! →</a>
             </Fragment>
           )}
         </div>
@@ -115,8 +133,8 @@ const jsonLdArray = [breadcrumbLd];
         <div class="articles-page__container">
           <!-- Focus Section -->
           <section class="articles-page__section articles-page__focus" id="section-focus">
-            <div class="articles-page__section-label notranslate" translate="no">
-              Focus <span>焦点</span>
+            <div class="articles-page__section-label notranslate">
+              Focus <span class="dv-zh">焦点</span>
             </div>
             <div id="focus-content">
               <ArticleCard
@@ -132,8 +150,8 @@ const jsonLdArray = [breadcrumbLd];
           <!-- Brief Section -->
           {currentBriefs.length > 0 && (
             <section class="articles-page__section" id="section-brief">
-              <div class="articles-page__section-label notranslate" translate="no">
-                Brief <span>资讯</span>
+              <div class="articles-page__section-label notranslate">
+                Brief <span class="dv-zh">资讯</span>
               </div>
               <div class="articles-page__grid" id="brief-grid">
                 {currentBriefs.map((brief) => (
@@ -161,213 +179,232 @@ const jsonLdArray = [breadcrumbLd];
       </div>
     </div>
   </Fragment>
-</BaseLayout>
 
-<script>
-  // Client-side issue switching for static site
-  (function() {
-    const page = document.getElementById('articles-page');
-    if (!page) return;
+  <script>
+    // Client-side issue switching for static site
+    (function() {
+      const page = document.getElementById('articles-page');
+      if (!page) return;
 
-    const issuesData = JSON.parse(page.dataset.issues || '[]');
-    const issuesMap: Record<string, typeof issuesData[0]> = {};
-    issuesData.forEach((iss: typeof issuesData[0]) => {
-      issuesMap[iss.num] = iss;
-    });
-    const latestNum = issuesData[0]?.num;
+      const issuesData = JSON.parse(page.dataset.issues || '[]');
+      const issuesMap: Record<string, typeof issuesData[0]> = {};
+      issuesData.forEach((iss: typeof issuesData[0]) => {
+        issuesMap[iss.num] = iss;
+      });
+      const latestNum = issuesData[0]?.num;
 
-    function pad(n: string | number) {
-      return String(n).padStart(3, '0');
-    }
+      function pad(n: string | number) {
+        return String(n).padStart(3, '0');
+      }
 
-    // Escape HTML helper
-    function esc(s: string): string {
-      const d = document.createElement('div');
-      d.textContent = s;
-      return d.innerHTML;
-    }
+      // Escape HTML helper
+      function esc(s: string): string {
+        const d = document.createElement('div');
+        d.textContent = s;
+        return d.innerHTML;
+      }
 
-    // Render Cao section
-    function renderCao(issue: typeof issuesData[0]): string {
-      if (!issue.cao) return '';
-      return `
-        <h2 class="articles-page__cao-title notranslate" translate="no">Cao! <em>槽点!</em></h2>
-        <article class="articles-page__cao-article">
-          <h3 class="articles-page__cao-article-title">
-            <a href="/articles/${issue.cao.slug}">${issue.cao.title}</a>
-          </h3>
-          <p class="articles-page__cao-deck">${esc(issue.cao.deck)}</p>
-          ${issue.cao.read_time ? `<div class="articles-page__cao-meta"><a href="/articles/${issue.cao.slug}">${esc(issue.cao.read_time)} →</a></div>` : ''}
-        </article>
-        <a href="/cao" class="articles-page__cao-all notranslate" translate="no">View All Cao! →</a>
-      `;
-    }
-
-    // Render Focus cover card
-    function renderCover(issue: typeof issuesData[0]): string {
-      const c = issue.cover;
-      return `
-        <article class="card card--cover">
-          <h3 class="card__title">
-            <a href="/articles/${c.slug}">${c.title}</a>
-          </h3>
-          <p class="card__deck">${esc(c.deck)}</p>
-          <div class="card__byline">
-            <a href="/articles/${c.slug}">Dawn Vision · ${esc(c.read_time || '')} →</a>
-          </div>
-        </article>
-      `;
-    }
-
-    // Render Brief grid cards (Chinese categories only, for translation support)
-    function renderBriefs(issue: typeof issuesData[0]): string {
-      return issue.briefs.map((b: typeof issue.briefs[0]) => {
+      // Render Cao section
+      function renderCao(issue: typeof issuesData[0]): string {
+        if (!issue.cao) return '';
+        const hasEn = !!(issue.cao.title_en && issue.cao.deck_en);
         return `
-          <article class="card card--grid">
-            <span class="card__tag">${esc(b.category || '')}</span>
-            <h3 class="card__title">
-              <a href="/articles/${b.slug}">${b.title}</a>
+          <h2 class="articles-page__cao-title notranslate">Cao! <em class="dv-zh">槽点!</em></h2>
+          <article class="articles-page__cao-article">
+            <h3 class="articles-page__cao-article-title">
+              <a href="/articles/${issue.cao.slug}/">
+                <span class="dv-zh">${issue.cao.title}</span>
+                ${hasEn ? `<span class="dv-en">${issue.cao.title_en}</span>` : ''}
+              </a>
             </h3>
-            <p class="card__deck">${esc(b.deck)}</p>
+            <p class="articles-page__cao-deck dv-zh">${esc(issue.cao.deck)}</p>
+            ${hasEn ? `<p class="articles-page__cao-deck dv-en">${esc(issue.cao.deck_en)}</p>` : ''}
+            ${issue.cao.read_time ? `<div class="articles-page__cao-meta"><a href="/articles/${issue.cao.slug}/"><span class="dv-zh">${esc(issue.cao.read_time)} →</span>${hasEn && issue.cao.read_time_en ? `<span class="dv-en">${esc(issue.cao.read_time_en)} →</span>` : ''}</a></div>` : ''}
+          </article>
+          <a href="/cao/" class="articles-page__cao-all notranslate">View All Cao! →</a>
+        `;
+      }
+
+      // Render Focus cover card
+      function renderCover(issue: typeof issuesData[0]): string {
+        const c = issue.cover;
+        const hasEn = !!(c.title_en && c.deck_en);
+        return `
+          <article class="card card--cover">
+            <h3 class="card__title">
+              <a href="/articles/${c.slug}/">
+                <span class="dv-zh">${c.title}</span>
+                ${hasEn ? `<span class="dv-en">${c.title_en}</span>` : ''}
+              </a>
+            </h3>
+            <p class="card__deck dv-zh">${esc(c.deck)}</p>
+            ${hasEn ? `<p class="card__deck dv-en">${esc(c.deck_en)}</p>` : ''}
+            <div class="card__byline">
+              <a href="/articles/${c.slug}/">
+                <span class="dv-zh">Dawn Vision · ${esc(c.read_time || '')} →</span>
+                ${hasEn && c.read_time_en ? `<span class="dv-en">Dawn Vision · ${esc(c.read_time_en)} →</span>` : ''}
+              </a>
+            </div>
           </article>
         `;
-      }).join('');
-    }
-
-    // Render pagination
-    function renderPagination(currentNum: string): string {
-      const idx = issuesData.findIndex((i: typeof issuesData[0]) => i.num === currentNum);
-      const isLat = currentNum === latestNum;
-      const prevNum = idx < issuesData.length - 1 ? issuesData[idx + 1]?.num : null;
-      const numsAsc = issuesData.map((i: typeof issuesData[0]) => i.num).reverse();
-
-      let html = '<nav class="pagination" aria-label="期数分页" data-pagination>';
-
-      if (prevNum) {
-        html += `<a href="/articles?issue=${prevNum}" class="pagination__nav pagination__nav--prev notranslate" translate="no" data-issue="${prevNum}">← Issue ${pad(prevNum)}</a>`;
-      } else {
-        html += '<span class="pagination__nav pagination__nav--disabled">← 创刊号</span>';
       }
 
-      html += '<div class="pagination__pages">';
-      numsAsc.forEach((num: string) => {
-        const active = num === currentNum ? ' is-active' : '';
-        html += `<a href="/articles?issue=${num}" class="pagination__page${active}" data-issue="${num}">${parseInt(num)}</a>`;
+      // Render Brief grid cards
+      function renderBriefs(issue: typeof issuesData[0]): string {
+        return issue.briefs.map((b: typeof issue.briefs[0]) => {
+          const hasEn = !!(b.title_en && b.deck_en);
+          return `
+            <article class="card card--grid">
+              <span class="card__tag dv-zh">${esc(b.category || '')}</span>
+              ${hasEn && b.category_en ? `<span class="card__tag dv-en">${esc(b.category_en)}</span>` : ''}
+              <h3 class="card__title">
+                <a href="/articles/${b.slug}/">
+                  <span class="dv-zh">${b.title}</span>
+                  ${hasEn ? `<span class="dv-en">${b.title_en}</span>` : ''}
+                </a>
+              </h3>
+              <p class="card__deck dv-zh">${esc(b.deck)}</p>
+              ${hasEn ? `<p class="card__deck dv-en">${esc(b.deck_en)}</p>` : ''}
+            </article>
+          `;
+        }).join('');
+      }
+
+      // Render pagination
+      function renderPagination(currentNum: string): string {
+        const idx = issuesData.findIndex((i: typeof issuesData[0]) => i.num === currentNum);
+        const isLat = currentNum === latestNum;
+        const prevNum = idx < issuesData.length - 1 ? issuesData[idx + 1]?.num : null;
+        const numsAsc = issuesData.map((i: typeof issuesData[0]) => i.num).reverse();
+
+        let html = '<nav class="pagination" aria-label="期数分页" data-pagination>';
+
+        if (prevNum) {
+          html += `<a href="/articles/?issue=${prevNum}" class="pagination__nav pagination__nav--prev notranslate" translate="no" data-issue="${prevNum}">← Issue ${pad(prevNum)}</a>`;
+        } else {
+          html += '<span class="pagination__nav pagination__nav--disabled">← 创刊号</span>';
+        }
+
+        html += '<div class="pagination__pages">';
+        numsAsc.forEach((num: string) => {
+          const active = num === currentNum ? ' is-active' : '';
+          html += `<a href="/articles/?issue=${num}" class="pagination__page${active}" data-issue="${num}">${parseInt(num)}</a>`;
+        });
+        html += '</div>';
+
+        if (isLat) {
+          html += '<span class="pagination__nav pagination__nav--disabled">已是最新 →</span>';
+        } else {
+          html += '<a href="/articles/" class="pagination__nav pagination__nav--next" data-issue="latest">最新一期 →</a>';
+        }
+
+        html += '</nav>';
+        return html;
+      }
+
+      let switching = false;
+
+      function switchIssue(num: string, source?: string) {
+        if (switching) return;
+        switching = true;
+
+        const issue = num === 'latest' ? issuesData[0] : issuesMap[num];
+        if (!issue) { switching = false; return; }
+
+        const issueNum = issue.num;
+        const isLat = issueNum === latestNum;
+
+        // Update issue label
+        const label = document.getElementById('issue-label');
+        if (label) label.textContent = `Issue ${pad(issueNum)}`;
+
+        // Update Cao
+        const caoContent = document.getElementById('cao-content');
+        const caoSection = document.getElementById('section-cao');
+        if (caoContent && caoSection) {
+          if (issue.cao) {
+            caoSection.style.display = '';
+            caoContent.innerHTML = renderCao(issue);
+          } else {
+            caoSection.style.display = 'none';
+          }
+        }
+
+        // Update Focus
+        const focusContent = document.getElementById('focus-content');
+        if (focusContent) focusContent.innerHTML = renderCover(issue);
+
+        // Update Briefs
+        const briefGrid = document.getElementById('brief-grid');
+        const briefSection = document.getElementById('section-brief');
+        if (briefGrid && briefSection) {
+          if (issue.briefs.length > 0) {
+            briefSection.style.display = '';
+            briefGrid.innerHTML = renderBriefs(issue);
+          } else {
+            briefSection.style.display = 'none';
+          }
+        }
+
+        // Update pagination
+        const paginationWrap = page.querySelector('.articles-page__pagination');
+        if (paginationWrap) paginationWrap.innerHTML = renderPagination(issueNum);
+
+        // Update URL without reload
+        const url = isLat ? '/articles/' : `/articles/?issue=${issueNum}`;
+        history.pushState({ issue: issueNum }, '', url);
+
+        // Notify filter to sync dropdowns (skip if source is filter or init - filter already set)
+        if (source === 'pagination' || source === 'navigation') {
+          document.dispatchEvent(new CustomEvent('issue-changed', { detail: { issue: issueNum, source: 'pagination' } }));
+        }
+
+        // Scroll to top of articles content
+        window.scrollTo({ top: page.offsetTop - 60, behavior: 'smooth' });
+
+        // Re-bind pagination links
+        bindPaginationLinks();
+
+        switching = false;
+      }
+
+      function bindPaginationLinks() {
+        const paginationEl = page.querySelector('[data-pagination]');
+        if (!paginationEl) return;
+        const links = paginationEl.querySelectorAll<HTMLAnchorElement>('a[data-issue]');
+        links.forEach(link => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const num = link.dataset.issue || 'latest';
+            switchIssue(num, 'pagination');
+          });
+        });
+      }
+
+      // Handle browser back/forward
+      window.addEventListener('popstate', (e) => {
+        const params = new URLSearchParams(window.location.search);
+        const issue = params.get('issue') || 'latest';
+        switchIssue(issue, 'navigation');
       });
-      html += '</div>';
 
-      if (isLat) {
-        html += '<span class="pagination__nav pagination__nav--disabled">已是最新 →</span>';
-      } else {
-        html += '<a href="/articles" class="pagination__nav pagination__nav--next" data-issue="latest">最新一期 →</a>';
-      }
-
-      html += '</nav>';
-      return html;
-    }
-
-    let switching = false;
-
-    function switchIssue(num: string, source?: string) {
-      if (switching) return;
-      switching = true;
-
-      const issue = num === 'latest' ? issuesData[0] : issuesMap[num];
-      if (!issue) { switching = false; return; }
-
-      const issueNum = issue.num;
-      const isLat = issueNum === latestNum;
-
-      // Update issue label
-      const label = document.getElementById('issue-label');
-      if (label) label.textContent = `Issue ${pad(issueNum)}`;
-
-      // Update Cao
-      const caoContent = document.getElementById('cao-content');
-      const caoSection = document.getElementById('section-cao');
-      if (caoContent && caoSection) {
-        if (issue.cao) {
-          caoSection.style.display = '';
-          caoContent.innerHTML = renderCao(issue);
-        } else {
-          caoSection.style.display = 'none';
-        }
-      }
-
-      // Update Focus
-      const focusContent = document.getElementById('focus-content');
-      if (focusContent) focusContent.innerHTML = renderCover(issue);
-
-      // Update Briefs
-      const briefGrid = document.getElementById('brief-grid');
-      const briefSection = document.getElementById('section-brief');
-      if (briefGrid && briefSection) {
-        if (issue.briefs.length > 0) {
-          briefSection.style.display = '';
-          briefGrid.innerHTML = renderBriefs(issue);
-        } else {
-          briefSection.style.display = 'none';
-        }
-      }
-
-      // Update pagination
-      const paginationWrap = page.querySelector('.articles-page__pagination');
-      if (paginationWrap) paginationWrap.innerHTML = renderPagination(issueNum);
-
-      // Update URL without reload
-      const url = isLat ? '/articles' : `/articles?issue=${issueNum}`;
-      history.pushState({ issue: issueNum }, '', url);
-
-      // Notify filter to sync dropdowns (skip if source is filter or init - filter already set)
-      if (source === 'pagination' || source === 'navigation') {
-        document.dispatchEvent(new CustomEvent('issue-changed', { detail: { issue: issueNum, source: 'pagination' } }));
-      }
-
-      // Scroll to top of articles content
-      window.scrollTo({ top: page.offsetTop - 60, behavior: 'smooth' });
-
-      // Re-bind pagination links
+      // Initial bind
       bindPaginationLinks();
 
-      switching = false;
-    }
+      // Listen for issue filter changes (from IssueFilter component)
+      document.addEventListener('issue-changed', ((e: CustomEvent) => {
+        if (e.detail && e.detail.issue && e.detail.source === 'filter') {
+          switchIssue(e.detail.issue, 'filter');
+        }
+      }) as EventListener);
 
-    function bindPaginationLinks() {
-      const paginationEl = page.querySelector('[data-pagination]');
-      if (!paginationEl) return;
-      const links = paginationEl.querySelectorAll<HTMLAnchorElement>('a[data-issue]');
-      links.forEach(link => {
-        link.addEventListener('click', (e) => {
-          e.preventDefault();
-          const num = link.dataset.issue || 'latest';
-          switchIssue(num, 'pagination');
-        });
-      });
-    }
-
-    // Handle browser back/forward
-    window.addEventListener('popstate', (e) => {
-      const params = new URLSearchParams(window.location.search);
-      const issue = params.get('issue') || 'latest';
-      switchIssue(issue, 'navigation');
-    });
-
-    // Initial bind
-    bindPaginationLinks();
-
-    // Listen for issue filter changes (from IssueFilter component)
-    document.addEventListener('issue-changed', ((e: CustomEvent) => {
-      if (e.detail && e.detail.issue && e.detail.source === 'filter') {
-        switchIssue(e.detail.issue, 'filter');
+      // Check URL for pre-selected issue on page load (IssueFilter init handles dropdown sync)
+      const initialParams = new URLSearchParams(window.location.search);
+      const initialIssue = initialParams.get('issue');
+      if (initialIssue && issuesMap[initialIssue] && initialIssue !== latestNum) {
+        // Defer to let IssueFilter init first
+        setTimeout(() => switchIssue(initialIssue, 'init'), 200);
       }
-    }) as EventListener);
-
-    // Check URL for pre-selected issue on page load (IssueFilter init handles dropdown sync)
-    const initialParams = new URLSearchParams(window.location.search);
-    const initialIssue = initialParams.get('issue');
-    if (initialIssue && issuesMap[initialIssue] && initialIssue !== latestNum) {
-      // Defer to let IssueFilter init first
-      setTimeout(() => switchIssue(initialIssue, 'init'), 200);
-    }
-  })();
-</script>
+    })();
+  </script>
+</BaseLayout>

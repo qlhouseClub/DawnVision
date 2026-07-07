@@ -7,26 +7,59 @@
   "cover": {
     "slug": "ai-deployment-arms-race-meta-sell-compute-microsoft-frontier",
     "title": "大厂AI落地军备竞赛：微软25亿砸交付、Meta改行卖算力，Agent幻想破灭后的真实战场",
+    "title_en": "Big Tech's AI Deployment Arms Race: Microsoft Bets $2.5B on Delivery, Meta Pivots to Selling Compute — The Real Battlefield After the Agent Fantasy Dies",
     "title_short": "大厂AI落地军备竞赛",
+    "title_short_en": "Big Tech's AI Deployment Arms Race",
     "title_break": "大厂AI落地军备竞赛<br>Agent幻想破灭后的真实战场",
+    "title_break_en": "Big Tech's AI Deployment Arms Race<br>The Real Battlefield After the Agent Fantasy Dies",
     "deck": "微软投25亿美元成立6000人AI部署公司，亚马逊砸10亿跟进，Meta承认Agent进展不及预期转而卖算力——AI产业从炼模型进入拼交付的新阶段。",
+    "deck_en": "Microsoft invests $2.5 billion to launch a 6,000-person AI deployment company; Amazon follows with $1 billion; Meta admits Agent progress is lagging and pivots to selling compute — the AI industry shifts from training models to fighting over deployment.",
     "keywords": "Dawn Vision,AI部署,微软Frontier,Meta卖算力,AI Agent,Forward Deployed Engineering,FDE,AI落地",
+    "keywords_en": "Dawn Vision, AI deployment, Microsoft Frontier, Meta sells compute, AI Agent, Forward Deployed Engineering, FDE, AI implementation",
     "og_description": "微软25亿美元、亚马逊10亿美元、Meta卖过剩算力，AI产业从模型竞赛进入交付竞赛。",
-    "twitter_description": "大厂AI落地军备竞赛打响：重人力部署模式成为标配，卖铲子比淘金更赚钱？",
+    "og_description_en": "Microsoft $2.5B, Amazon $1B, Meta sells excess compute — the AI industry shifts from model competition to deployment competition.",
+    "twitter_description": "大厂AI落地军备竞赛打响：重人力部署模式成为标配，卖铲子的比淘金的更赚钱？",
     "read_time": "约 10 分钟阅读",
+    "read_time_en": "~10 min read",
     "word_count": 2600,
     "sources": [
-      {"text": "TechCrunch - Microsoft launches its own AI deployment company with $2.5 billion commitment", "url": "https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/"},
-      {"text": "TechCrunch - Mark Zuckerberg tells staff that AI agents haven't progressed as quickly as he'd hoped", "url": "https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped/"},
-      {"text": "TechCrunch - Meta, like SpaceX, looks to turn excess AI compute into cash", "url": "https://techcrunch.com/2026/07/01/meta-like-spacex-looks-to-turn-excess-ai-compute-into-cash/"},
-      {"text": "InfoQ - 被骂\"退出AI竞赛\"，Meta改行卖算力股价暴涨10%", "url": "https://www.infoq.cn/article/vxgbzsNORRzQDz6xK1jv"},
-      {"text": "TechCrunch - Amazon launches new $1B FDE org following OpenAI and Anthropic", "url": "https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/"},
-      {"text": "Reuters - Zuckerberg says AI agent progress slower than expected", "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-zuckerberg-says-ai-agent-201123441.html"}
+      {
+        "text": "TechCrunch - Microsoft launches its own AI deployment company with $2.5 billion commitment",
+        "url": "https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/"
+      },
+      {
+        "text": "TechCrunch - Mark Zuckerberg tells staff that AI agents haven't progressed as quickly as he'd hoped",
+        "url": "https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped/"
+      },
+      {
+        "text": "TechCrunch - Meta, like SpaceX, looks to turn excess AI compute into cash",
+        "url": "https://techcrunch.com/2026/07/01/meta-like-spacex-looks-to-turn-excess-ai-compute-into-cash/"
+      },
+      {
+        "text": "InfoQ - 被骂\"退出AI竞赛\"，Meta改行卖算力股价暴涨10%",
+        "url": "https://www.infoq.cn/article/vxgbzsNORRzQDz6xK1jv"
+      },
+      {
+        "text": "TechCrunch - Amazon launches new $1B FDE org following OpenAI and Anthropic",
+        "url": "https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/"
+      },
+      {
+        "text": "Reuters - Zuckerberg says AI agent progress slower than expected",
+        "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-zuckerberg-says-ai-agent-201123441.html"
+      }
     ],
     "body_html": "      <p>6000人，25亿美元。</p>\n      <p>7月2日，微软宣布成立Microsoft Frontier Company，一个专门负责企业AI部署的全新运营实体。<strong>6000名行业和工程专家，25亿美元初始投入</strong>，首批合作伙伴包括伦敦证券交易所集团、联合利华、Land O'Lakes和埃森哲。微软商业业务CEO Judson Althoff特意强调：这\"超越了所谓的Forward-Deployed Engineering（FDE，前向部署工程）\"，将是行业内最大、最强的结果导向工程组织。</p>\n      <p>但所有人都看得出来，这就是FDE模式。两天前的6月30日，AWS刚刚宣布投入10亿美元成立自己的AI部署组织。今年5月，OpenAI和Anthropic先后联合私募股权公司成立了类似的AI服务合资企业。<strong>四大科技巨头在60天内集体押注同一种模式</strong>，这不是巧合。</p>\n\n      <h2>扎克伯格的内部坦白：Agent进展没有预期快</h2>\n      <p>同样是7月2日，另一条新闻提供了理解这波FDE浪潮的关键注脚。据Reuters报道，扎克伯格在周四的内部全员会上承认，AI Agent的发展速度\"没有按照高管们此前预期的方式加速\"。</p>\n      <p>今年早些时候，Meta裁员约8000人（占企业员工约10%），并将另外7000人重新分配到AI相关团队，其中包括一个名为\"Agent Transformation\"的部门。在这次会议上，扎克伯格坦言这些裁员并不像应该的那样\"干净\"，而新的AI聚焦型公司结构所预期的效益\"尚未实现\"。他预计未来3到6个月内公司才会开始看到AI投资的改善。</p>\n      <p>这句话的分量不亚于一颗炸弹。Meta今年在AI基础设施上的投入预计高达<strong>1150亿至1350亿美元</strong>，是全球AI军备竞赛中最激进的玩家之一。Meta Superintelligence Labs被挖来的工程师们此前向媒体抱怨那是一个\"灵魂 crushing的古拉格\"，现在CEO本人也承认进展不顺利。</p>\n      <p>更具讽刺意味的是，就在一天前的7月1日，Bloomberg报道Meta正在筹建云业务，打算出售过剩的AI算力和模型访问权。消息一出，Meta股价暴涨超过10%，因为市场终于看到了一个把巨额投入变现的清晰路径——哪怕这个路径不是做最好的AI模型，而是卖铲子。</p>\n\n      <h2>FDE模式崛起：AI落地不能只靠API</h2>\n      <p>什么是Forward-Deployed Engineering？简单说，就是把工程师直接派到客户现场，和客户的团队一起把AI产品真正用起来、解决实际问题，而不是卖一个API密钥就完事。这个模式因Palantir而闻名，现在成了AI巨头们的标配。</p>\n      <p>为什么突然之间，所有大厂都要做FDE？因为过去两年的实践证明了一件事：<strong>AI模型能力的提升，并不会自动转化为企业生产力的提升</strong>。买一个GPT或Claude的API很容易，但把大模型真正整合进企业的工作流、数据管道、权限系统、业务流程里，需要大量的定制开发、调试、培训和持续维护。这些脏活累活，不是模型厂商在博客里发个demo就能解决的。</p>\n      <p>GitLab本周发布的调研数据从侧面印证了这一点：AI工具确实加快了编码速度，但<strong>整体软件交付效率并未提升</strong>。瓶颈不在写代码的速度，而在需求理解、系统集成、测试、部署、运维这些\"最后一公里\"环节。这恰好是FDE工程师要解决的问题。</p>\n      <p>微软的优势是明显的：它已经在财富500强的大部分企业里派驻了工程师，客户关系是现成的。Microsoft Frontier Company可以直接从现有客户的AI部署需求中启动。但这也意味着微软承认了一件事：<strong>仅仅靠Copilot订阅和Azure OpenAI API，不足以完成企业AI的落地闭环</strong>。必须有人把手弄脏，深入到客户的业务现场去。</p>\n\n      <h2>卖铲子的比淘金的先赚钱？</h2>\n      <p>Meta转向卖算力，是一个更值得玩味的信号。</p>\n      <p>截至第一季度末，Meta已承诺未来几年在AI基础设施上投入<strong>1829亿美元</strong>。路易斯安那州2250英亩的超大规模园区、俄亥俄州\"曼哈顿大小\"的吉瓦级数据中心——这些投入的初衷是支撑Meta自己的AI超级智能战略和Llama模型生态。但现实是：Meta AI和Llama都没有产生显著的外部收入，Muse Spark模型发布时间一再推迟。</p>\n      <p>于是Meta选择了一条务实的路：学SpaceX/xAI，把过剩的算力卖出去。今年5月，SpaceX把Colossus 1数据中心的全部算力签给了Anthropic，Bloomberg Intelligence估算这笔合作到2028年可能带来超过<strong>500亿美元</strong>收入，到2030年甚至达到1000亿美元。SpaceX随后又和Google、Reflection AI签了类似的租赁协议。</p>\n      <p>CoreWeave模式正在被巨头们复制：先建设远超当前需求的算力基础设施，押注未来需求增长，再在短期内出租多余产能分摊成本。这不是什么新商业模式，但它揭示了AI产业的一个结构性变化：<strong>算力的稀缺性正在从\"短缺\"转向\"结构性过剩\"，而掌握算力的人开始掌握话语权</strong>。</p>\n      <p>消息公布后，CoreWeave和Nebius股价分别下跌10.8%和12.4%——市场担心Meta这个新玩家入场，会让这些\"新云厂商\"的日子更难过。D.A. Davidson分析师Gil Luria直言不讳：Meta此举表明它在\"放弃前沿AI竞赛\"，转而卖算力变现。但Jefferies分析师Brent Thill持不同看法：Meta\"并非退出AI竞赛，而是将早期激进的运力投入转化为战略性的价值创造途径\"。</p>\n\n      <h2>终局判断：AI进入\"重资产+重人力\"的工业化阶段</h2>\n      <p>把这周的几条新闻放在一起看，一个清晰的产业拐点浮现出来。</p>\n      <p>第一阶段（2023-2025）是模型竞赛：谁能训练出最大最强的模型，谁就是王者。OpenAI凭GPT-4领跑，Anthropic凭Claude追赶，Google和Meta紧追不舍。这个阶段的核心叙事是\"Scaling Law\"——参数越大、数据越多，能力越强。</p>\n      <p>第二阶段（2025-2026上半年）是Agent竞赛：谁能让模型真正自主完成复杂任务，谁就能定义下一代交互范式。但扎克伯格的坦白说明，Agent的进展比所有人预期的都慢。<strong>模型可以在基准测试中拿到高分，但在真实企业环境中，一个能可靠执行多步骤任务的Agent仍然遥不可及</strong>。</p>\n      <p>我们正在进入第三阶段：落地竞赛。这个阶段的赢家不一定是模型最强的，而是能把AI真正嵌入企业工作流、交付可衡量商业价值的。这个阶段的核心竞争力不是SOTA分数，而是<strong>行业know-how、系统集成能力、客户关系和持续服务能力</strong>。这就是为什么微软、亚马逊、OpenAI、Anthropic集体投入FDE——他们意识到，AI落地是一个重人力、重资产、长期陪跑的生意，不是一个API调用就能解决的。</p>\n      <p>Meta的选择则代表了另一条路径：如果你做不出最赚钱的模型，那就做最赚钱的基础设施供应商。1829亿美元的算力投入，即使自己用不完，租出去也是一笔可观的收入。这和19世纪淘金热中卖牛仔裤的Levi Strauss一个逻辑——淘金的未必发财，卖铲子的稳赚不赔。</p>\n      <p>对AI行业从业者来说，这意味着几个明确的信号：<strong>纯模型优化的红利正在收窄，懂行业、能落地的工程师和产品经理将变得更值钱；算力成本会持续下降但不会免费，掌握算力调度和优化能力的团队有结构性优势；AI创业的机会不在于做\"更好的GPT\"，而在于在某个垂直领域把AI真正用透</strong>。</p>\n      <p>扎克伯格说3到6个月会看到AI投资的改善。微软说Frontier Company是行业最大的交付组织。Meta说几乎\"每周都有公司\"主动来买算力。AI的幻想期正在结束，工业化落地的阶段已经开始。这个阶段没有那么多性感的demo和惊人的benchmark，但它才是真正决定AI能走多远的战场。</p>",
-    "pull_quote": {"text": "AI落地是一个重人力、重资产、长期陪跑的生意，不是一个API调用就能解决的。", "attr": "—— Dawn Vision编辑部判断"},
+    "body_html_en": "      <p>6,000 people, $2.5 billion.</p>\n      <p>On July 2, Microsoft announced Microsoft Frontier Company — a brand-new operating entity dedicated exclusively to enterprise AI deployment. <strong>6,000 industry and engineering experts, $2.5 billion in initial investment</strong>, with launch partners including London Stock Exchange Group, Unilever, Land O'Lakes, and Accenture. Microsoft's commercial business CEO Judson Althoff was careful to emphasize: this &ldquo;goes beyond so-called Forward-Deployed Engineering (FDE)&rdquo; and would be the largest, most outcome-driven engineering organization in the industry.</p>\n      <p>But everyone could see it for what it was: the FDE model. Two days earlier on June 30, AWS had just announced a $1 billion investment to launch its own AI deployment organization. In May, OpenAI and Anthropic each partnered with private equity firms to launch similar AI services joint ventures. <strong>Four tech giants collectively betting on the same model within 60 days</strong> — that's no coincidence.</p>\n\n      <h2>Zuckerberg's Internal Admission: Agents Aren't Progressing as Fast as Expected</h2>\n      <p>Also on July 2, another story provided a critical footnote for understanding this FDE wave. According to Reuters, Zuckerberg admitted at an internal all-hands meeting on Thursday that AI Agents haven't been &ldquo;accelerating in the way executives had previously expected.&rdquo;</p>\n      <p>Earlier this year, Meta laid off approximately 8,000 people (~10% of its corporate workforce) and reallocated another 7,000 to AI-related teams, including a division called &ldquo;Agent Transformation.&rdquo; At the meeting, Zuckerberg acknowledged that these layoffs hadn't been as &ldquo;clean&rdquo; as they should have been, and the expected benefits from the new AI-focused company structure &ldquo;haven't materialized yet.&rdquo; He anticipated the company would start seeing improvements from AI investments within the next 3 to 6 months.</p>\n      <p>This statement carried the weight of a bomb. Meta's AI infrastructure spending this year is projected to reach <strong>$115-135 billion</strong>, making it one of the most aggressive players in the global AI arms race. Engineers poached to Meta Superintelligence Labs had previously complained to the press that it was a &ldquo;soul-crushing gulag,&rdquo; and now the CEO himself admitted progress wasn't going smoothly.</p>\n      <p>More ironically, just one day earlier on July 1, Bloomberg reported that Meta was building out a cloud business to sell excess AI compute and model access. The news sent Meta stock surging over 10%, because the market finally saw a clear path to monetizing massive investments — even if that path wasn't building the best AI models, but selling picks and shovels.</p>\n\n      <h2>The Rise of FDE: AI Deployment Can't Rely on APIs Alone</h2>\n      <p>What is Forward-Deployed Engineering? Simply put: instead of selling an API key and walking away, you send engineers directly to client sites to work alongside their teams to actually implement AI products and solve real problems. The model was made famous by Palantir and is now standard practice for AI giants.</p>\n      <p>Why is every Big Tech company suddenly doing FDE? Because two years of practice has proven one thing: <strong>improvements in AI model capability do not automatically translate into enterprise productivity gains</strong>. Buying a GPT or Claude API is easy; but truly integrating LLMs into enterprise workflows, data pipelines, permission systems, and business processes requires massive custom development, debugging, training, and ongoing maintenance. This grunt work isn't something model vendors can solve with a blog post demo.</p>\n      <p>GitLab survey data released this week corroborates this indirectly: AI tools have indeed accelerated coding speed, but <strong>overall software delivery efficiency hasn't improved</strong>. The bottleneck isn't code-writing speed — it's requirements understanding, system integration, testing, deployment, and operations — the &ldquo;last mile.&rdquo; That's precisely what FDE engineers are there to solve.</p>\n      <p>Microsoft's advantage is obvious: it already has engineers stationed at most Fortune 500 companies; the customer relationships are already there. Microsoft Frontier Company can kick off directly from existing customer AI deployment needs. But that also means Microsoft has conceded something: <strong>Copilot subscriptions and Azure OpenAI APIs alone aren't enough to close the enterprise AI deployment loop</strong>. Someone has to get their hands dirty and go deep into the client's business.</p>\n\n      <h2>Do the Pick-and-Shovel Sellers Profit Before the Gold Miners?</h2>\n      <p>Meta pivoting to selling compute is an even more telling signal.</p>\n      <p>As of Q1, Meta has committed <strong>$182.9 billion</strong> to AI infrastructure over the coming years. A 2,250-acre hyperscale campus in Louisiana, a &ldquo;Manhattan-sized&rdquo; gigawatt data center in Ohio — these investments were originally meant to support Meta's own AI superintelligence strategy and the Llama model ecosystem. But the reality is: neither Meta AI nor Llama has generated significant external revenue, and the Muse Spark model has been delayed repeatedly.</p>\n      <p>So Meta chose a pragmatic path: follow SpaceX/xAI's lead and sell off excess compute. In May, SpaceX signed over all compute at its Colossus 1 data center to Anthropic; Bloomberg Intelligence estimated the deal could generate over <strong>$50 billion</strong> by 2028, potentially reaching $100 billion by 2030. SpaceX subsequently signed similar lease agreements with Google and Reflection AI.</p>\n      <p>The CoreWeave model is being replicated by the giants: build compute infrastructure far beyond current demand, bet on future demand growth, then lease out excess capacity in the near term to defray costs. This isn't a new business model, but it reveals a structural shift in the AI industry: <strong>compute scarcity is shifting from &lsquo;shortage&rsquo; to &lsquo;structural surplus,&rsquo; and those who control compute are gaining leverage</strong>.</p>\n      <p>After the announcement, CoreWeave and Nebius shares fell 10.8% and 12.4% respectively — the market fears Meta's entry as a new player will make life harder for these &ldquo;new cloud providers.&rdquo; D.A. Davidson analyst Gil Luria didn't mince words: Meta's move shows it's &ldquo;abandoning the frontier AI race&rdquo; in favor of monetizing compute. But Jefferies analyst Brent Thill saw it differently: Meta is &ldquo;not exiting the AI race, but converting early aggressive capacity investments into a strategic value creation path.&rdquo;</p>\n\n      <h2>Endgame: AI Enters the &ldquo;Heavy Asset + Heavy Labor&rdquo; Industrial Phase</h2>\n      <p>Pull this week's stories together and a clear industry inflection point emerges.</p>\n      <p>Phase One (2023-2025) was the model race: whoever could train the biggest, most capable model was king. OpenAI led with GPT-4, Anthropic chased with Claude, Google and Meta followed close behind. The core narrative of this phase was &ldquo;Scaling Laws&rdquo; — more parameters, more data, more capability.</p>\n      <p>Phase Two (2025-H1 2026) was the Agent race: whoever could make models truly complete complex tasks autonomously would define the next interaction paradigm. But Zuckerberg's admission shows Agent progress is slower than everyone expected. <strong>Models can score high on benchmarks, but in real enterprise environments, an Agent that can reliably execute multi-step tasks remains out of reach</strong>.</p>\n      <p>We are now entering Phase Three: the deployment race. The winners of this phase won't necessarily have the strongest models — they'll be the ones who can truly embed AI into enterprise workflows and deliver measurable business value. The core competitiveness of this phase isn't SOTA scores; it's <strong>industry know-how, system integration capability, customer relationships, and ongoing service capability</strong>. That's why Microsoft, Amazon, OpenAI, and Anthropic are collectively investing in FDE — they've realized AI deployment is a labor-heavy, asset-heavy, long-haul business, not something an API call can solve.</p>\n      <p>Meta's choice represents an alternative path: if you can't build the most profitable models, be the most profitable infrastructure provider. Even $182.9 billion in compute investment, if you can't use it all yourself, makes for substantial revenue when leased out. This follows the same logic as Levi Strauss selling jeans during the 19th-century gold rush — the gold miners don't always get rich, but the pick-and-shovel sellers reliably profit.</p>\n      <p>For AI industry practitioners, this sends clear signals: <strong>the dividends from pure model optimization are narrowing; engineers and product managers who understand industries and can deliver real implementations will become more valuable; compute costs will continue falling but won't reach free; teams that master compute scheduling and optimization hold structural advantages; AI startup opportunities don't lie in building a &lsquo;better GPT,&rsquo; but in deeply applying AI within a specific vertical</strong>.</p>\n      <p>Zuckerberg says AI investment improvements will show in 3-6 months. Microsoft says Frontier Company is the industry's largest deployment organization. Meta says &ldquo;practically every week&rdquo; companies proactively reach out to buy compute. AI's fantasy phase is ending; industrial deployment has begun. This phase won't have as many sexy demos or stunning benchmarks, but it's the battlefield that will truly determine how far AI can go.</p>",
+    "pull_quote": {
+      "text": "AI落地是一个重人力、重资产、长期陪跑的生意，不是一个API调用就能解决的。",
+      "text_en": "AI deployment is a labor-heavy, asset-heavy, long-haul business — it can't be solved with a single API call.",
+      "attr": "—— Dawn Vision编辑部判断",
+      "attr_en": "— Dawn Vision Editorial Assessment"
+    },
     "cognitive_notes": "AI部署 · FDE模式 · Meta算力商业化 · Forward Deployed Engineering · AI落地 · 产业拐点 · 微软Frontier · AI工业化",
-    "source_summary": "本文基于 Dawn Vision 认知引擎处理的 28 个源信号生成，经编辑部人工审核。素材来源：TechCrunch、Reuters、Bloomberg、InfoQ。"
+    "cognitive_notes_en": "AI deployment · FDE model · Meta compute monetization · Forward Deployed Engineering · AI implementation · industry inflection point · Microsoft Frontier · AI industrialization",
+    "source_summary": "本文基于 Dawn Vision 认知引擎处理的 28 个源信号生成，经编辑部人工审核。素材来源：TechCrunch、Reuters、Bloomberg、InfoQ。",
+    "source_summary_en": "This article was generated from 28 source signals processed by the Dawn Vision cognitive engine, with editorial review. Sources: TechCrunch, Reuters, Bloomberg, InfoQ."
   },
   "briefs": [
     {
@@ -34,147 +67,319 @@
       "category": "具身智能 · 机器人",
       "category_en": "Embodied AI · Robotics",
       "title": "宇树科技104天过审：具身智能第一股IPO，人形机器人盈利时代提前到来",
+      "title_en": "Unitree Robotics Approved in 104 Days: Embodied AI's First IPO — Humanoid Robot Profitability Arrives Ahead of Schedule",
       "title_break": "宇树科技104天过审<br>具身智能第一股来了",
+      "title_break_en": "Unitree Approved in 104 Days<br>Embodied AI's First Stock Has Arrived",
       "deck": "证监会同意宇树科技科创板IPO注册，从受理到过审仅104天。全球首家IPO前实现人形机器人规模化盈利的企业，正式拿到A股入场券。",
+      "deck_en": "The CSRC approved Unitree Robotics' STAR Market IPO registration; from acceptance to approval took only 104 days. The world's first company to achieve scaled profitability on humanoid robots before IPO has officially secured its A-share ticket.",
       "keywords": "Dawn Vision,宇树科技,具身智能,人形机器人,IPO,科创板,机器人第一股",
+      "keywords_en": "Dawn Vision, Unitree Robotics, embodied AI, humanoid robots, IPO, STAR Market, first robot stock",
       "og_description": "宇树科技104天过审科创板，具身智能第一股诞生，人形机器人进入盈利阶段。",
+      "og_description_en": "Unitree Robotics approved for STAR Market in 104 days as embodied AI's first stock, marking humanoid robots' entry into profitability.",
       "read_time": "约 5 分钟阅读",
+      "read_time_en": "~5 min read",
       "word_count": 820,
       "sources": [
-        {"text": "36氪 - 8点1氪丨\"具身智能第一股\"宇树科技上市申请通过", "url": "https://36kr.com/p/3879158039834629?f=rss"},
-        {"text": "36氪 - 氪星晚报｜证监会同意宇树科技科创板IPO注册", "url": "https://36kr.com/p/3878550357946625?f=rss"},
-        {"text": "量子位 - 黄仁勋说的Physical AI，被中国选手带进生命科学实验室", "url": "https://www.qbitai.com/2026/07/442311.html"}
+        {
+          "text": "36氪 - 8点1氪丨\"具身智能第一股\"宇树科技上市申请通过",
+          "url": "https://36kr.com/p/3879158039834629?f=rss"
+        },
+        {
+          "text": "36氪 - 氪星晚报｜证监会同意宇树科技科创板IPO注册",
+          "url": "https://36kr.com/p/3878550357946625?f=rss"
+        },
+        {
+          "text": "量子位 - 黄仁勋说的Physical AI，被中国选手带进生命科学实验室",
+          "url": "https://www.qbitai.com/2026/07/442311.html"
+        }
       ],
       "body_html": "      <p>104天。</p>\n      <p>7月2日，证监会官网显示，同意宇树科技首次公开发行股票注册。从3月20日科创板IPO申请获受理，到7月2日注册生效，<strong>宇树科技仅用了104天</strong>，创下科创板预先审阅机制下的最快纪录之一。这意味着全球首家在IPO前实现人形机器人规模化盈利的企业，正式拿到了A股\"入场券\"，将成为真正意义上的\"人形机器人第一股\"。</p>\n\n      <h2>为什么宇树能跑这么快？</h2>\n      <p>宇树科技的过审速度本身就是一个信号。在科创板审核趋严的大背景下，104天完成从受理到注册，说明监管层对具身智能赛道的支持力度。宇树的核心优势在于：它不是一家靠PPT融资的机器人公司，而是已经实现了规模化出货和正向盈利。</p>\n      <p>公开信息显示，宇树科技的四足机器人（机器狗）产品线已经在全球消费级和工业级市场占据领先份额，其人形机器人Unitree G1和H1系列也已进入批量交付阶段。与很多仍在实验室阶段的人形机器人公司不同，<strong>宇树是第一家把人形机器人卖到了全球数十个国家、并在IPO前实现盈利的企业</strong>。</p>\n      <p>同一周，优必选与烟台深蓝人才发展集团合资成立蔚蓝优智科技，注册资本3200万元，经营范围包括智能机器人研发、制造和销售。韩国政府也宣布将AI预算提高至<strong>9.9万亿韩元</strong>（约合人民币520亿元），是去年的三倍，目标到2030年在Physical AI领域跃居全球第一。法拉第未来甚至要把公司名字改成Faraday Future Physical AI Ecosystem Inc.——人人都在往Physical AI上靠。</p>\n\n      <h2>具身智能的商业化拐点</h2>\n      <p>宇树IPO的更大意义在于：它可能标志着人形机器人/具身智能从\"科研demo\"阶段进入\"商业化落地\"阶段。</p>\n      <p>黄仁勋反复强调的Physical AI（物理AI）概念，核心就是让AI从数字世界走向物理世界，通过机器人载体与真实环境交互。英伟达的Aspire机器人技能库、优必选的Walker系列、特斯拉的Optimus，都在这条赛道上。但宇树的不同之处在于它的性价比路径——G1系列起售价低于10万元人民币，让高校、研究机构和中小企业都能买得起、用得上。</p>\n      <p>据行业数据，中国人形机器人产业链在2026年进入密集交付期。WAIC 2026（世界人工智能大会）将于7月17日至20日在上海举行，<strong>超节点与光互连、算力基础设施</strong>是今年的核心议题之一。宇树科技选择在这个时间窗口完成IPO注册，显然是瞄准了WAIC期间的行业热度和资本市场窗口。</p>\n      <p>当然，风险也不容忽视。机器人ETF当前PE-TTM估值处于近一年仅12%分位，说明资本市场对这个赛道仍然存在分歧。人形机器人从\"能走能跳\"到\"能干活能赚钱\"，中间还有很长的路要走。但宇树至少证明了一件事：<strong>机器人公司不一定非要烧钱到天荒地老，找到对的产品和市场，是可以赚钱的</strong>。</p>\n      <p>对投资人来说，宇树的上市提供了一个难得的标的——不是又一个大模型故事，而是一个有出货、有收入、有利润的硬科技公司。对行业来说，\"具身智能第一股\"的示范效应会吸引更多资本和人才进入这个赛道，加速产业链成熟。104天的过审速度说明，政策端也在为这个方向开绿灯。</p>",
-      "pull_quote": {"text": "宇树不是第一家做人形机器人的，但它是第一家在IPO前就证明这件事能赚钱的。", "attr": "—— 行业观察者评论"},
+      "body_html_en": "      <p>104 days.</p>\n      <p>On July 2, the CSRC website showed approval for Unitree Robotics' initial public offering registration. From IPO application acceptance on the STAR Market on March 20 to registration taking effect on July 2, <strong>Unitree took only 104 days</strong>, setting one of the fastest records under the STAR Market's pre-review mechanism. This means the world's first company to achieve scaled profitability in humanoid robots before IPO has officially secured its A-share &ldquo;ticket,&rdquo; becoming the true &ldquo;first humanoid robot stock.&rdquo;</p>\n\n      <h2>Why Could Unitree Move This Fast?</h2>\n      <p>Unitree's approval speed is itself a signal. Against a backdrop of tightening STAR Market reviews, completing acceptance-to-registration in 104 days demonstrates regulatory support for the embodied AI sector. Unitree's core advantage: it isn't a robot company fundraising on PowerPoint — it has already achieved scaled shipments and positive profitability.</p>\n      <p>Public information shows Unitree's quadruped robot (robot dog) product line already holds leading share in global consumer and industrial markets, and its humanoid robots — the Unitree G1 and H1 series — have entered batch delivery. Unlike many humanoid robot companies still in the lab stage, <strong>Unitree is the first to sell humanoid robots to dozens of countries globally and achieve profitability before IPO</strong>.</p>\n      <p>That same week, UBTECH formed a joint venture called Weilan Youzhi Technology with Yantai Shenlan Talent Development Group, with 32 million RMB in registered capital, covering smart robot R&D, manufacturing, and sales. The South Korean government also announced it was raising AI budgets to <strong>9.9 trillion KRW</strong> (~52 billion RMB), triple last year's, targeting global #1 in Physical AI by 2030. Faraday Future even wants to rename itself Faraday Future Physical AI Ecosystem Inc. — everyone's piling onto Physical AI.</p>\n\n      <h2>The Commercialization Inflection Point for Embodied AI</h2>\n      <p>The larger significance of Unitree's IPO: it may mark humanoid robots/embodied AI moving from the &ldquo;research demo&rdquo; stage to the &ldquo;commercial deployment&rdquo; stage.</p>\n      <p>The Physical AI concept that Jensen Huang repeatedly emphasizes is fundamentally about AI moving from the digital world to the physical world, interacting with real environments through robot bodies. NVIDIA's Aspire robot skill library, UBTECH's Walker series, Tesla's Optimus are all on this track. But Unitree differs in its value-for-money path — the G1 series starts below 100,000 RMB, making it affordable for universities, research institutions, and SMEs.</p>\n      <p>According to industry data, China's humanoid robot supply chain enters an intensive delivery period in 2026. WAIC 2026 (World AI Conference) will be held July 17-20 in Shanghai, with <strong>super-nodes, optical interconnect, and compute infrastructure</strong> among this year's core topics. Unitree choosing to complete IPO registration in this time window is clearly targeting industry buzz and capital market windows during WAIC.</p>\n      <p>Of course, risks can't be ignored. The Robotics ETF's current PE-TTM valuation sits at only the 12th percentile of the past year, indicating capital markets remain divided on the sector. For humanoid robots to go from &ldquo;can walk and jump&rdquo; to &ldquo;can work and earn money,&rdquo; there's still a long road ahead. But Unitree has at least proven one thing: <strong>robot companies don't have to burn money forever — find the right product and market, and you can be profitable</strong>.</p>\n      <p>For investors, Unitree's listing provides a rare target — not another LLM story, but a hard-tech company with shipments, revenue, and profits. For the industry, the demonstration effect of the &ldquo;first embodied AI stock&rdquo; will attract more capital and talent into the sector, accelerating supply chain maturation. The 104-day approval speed shows policymakers are also greenlighting this direction.</p>",
+      "pull_quote": {
+        "text": "宇树不是第一家做人形机器人的，但它是第一家在IPO前就证明这件事能赚钱的。",
+        "text_en": "Unitree isn't the first to build humanoid robots, but it's the first to prove before IPO that this business can make money.",
+        "attr": "—— 行业观察者评论",
+        "attr_en": "— Industry observer comment"
+      },
       "cognitive_notes": "宇树科技 · 具身智能 · 人形机器人 · IPO · Physical AI · 科创板 · 机器人商业化",
-      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 11 个源信号生成，经编辑部人工审核。素材来源：36氪、量子位。"
+      "cognitive_notes_en": "Unitree Robotics · embodied AI · humanoid robots · IPO · Physical AI · STAR Market · robot commercialization",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 11 个源信号生成，经编辑部人工审核。素材来源：36氪、量子位。",
+      "source_summary_en": "This article was generated from 11 source signals processed by the Dawn Vision cognitive engine, with editorial review. Sources: 36Kr, QbitAI.",
+      "title_short_en": "Unitree IPO: First Humanoid Robot Stock"
     },
     {
       "slug": "gitlab-survey-ai-coding-productivity-myth",
       "category": "AI 编程 · 工具竞争",
       "category_en": "AI Coding · Tools",
       "title": "GitLab调研打脸AI编程神话：代码写快了，软件交付效率却没提升",
+      "title_en": "GitLab Survey Debunks the AI Coding Myth: Code Gets Written Faster, But Software Delivery Hasn't Gotten Quicker",
       "title_break": "GitLab调研打脸AI编程神话<br>代码写快了但交付没提速",
+      "title_break_en": "GitLab Survey Debunks AI Coding Myth<br>Code is Faster, Delivery Isn't",
       "deck": "AI编程工具确实提升了编码速度，但GitLab最新调研显示整体软件交付效率并未改善。瓶颈转移到集成、测试和部署环节，Vercel和Dapr正在补位。",
+      "deck_en": "AI coding tools have indeed boosted coding speed, but GitLab's latest survey shows overall software delivery efficiency hasn't improved. Bottlenecks have shifted to integration, testing, and deployment — and Vercel and Dapr are stepping in to fill the gap.",
       "keywords": "Dawn Vision,AI编程,GitLab,Copilot,Cursor,Vercel Eve,Dapr,软件交付效率",
+      "keywords_en": "Dawn Vision, AI coding, GitLab, Copilot, Cursor, Vercel Eve, Dapr, software delivery efficiency",
       "og_description": "GitLab调研显示AI工具仅加快编码但整体交付效率未提升，AI编程瓶颈正在转移。",
+      "og_description_en": "GitLab survey shows AI tools only accelerate coding while overall delivery efficiency hasn't improved; AI coding bottlenecks are shifting.",
       "read_time": "约 5 分钟阅读",
+      "read_time_en": "~5 min read",
       "word_count": 800,
       "sources": [
-        {"text": "InfoQ - GitLab调研：AI工具仅加快编码，整体软件交付效率并未提升", "url": "https://www.infoq.cn/article/8WD205mNH9OGrkf8BRYO"},
-        {"text": "InfoQ - Vercel推出开源AI智能体开发框架Eve", "url": "https://www.infoq.cn/article/kY3j5x1kIEvedufYJ1rJ"},
-        {"text": "InfoQ - Dapr 1.18推出可验证执行功能", "url": "https://www.infoq.cn/article/U3gIuyf8VccCdKZeiyCi"},
-        {"text": "InfoQ - 前后端一起消失：AI Coding正在改写大厂工程师分工", "url": "https://www.infoq.cn/article/rHiSH66JZwoQG5Dfvv6x"}
+        {
+          "text": "InfoQ - GitLab调研：AI工具仅加快编码，整体软件交付效率并未提升",
+          "url": "https://www.infoq.cn/article/8WD205mNH9OGrkf8BRYO"
+        },
+        {
+          "text": "InfoQ - Vercel推出开源AI智能体开发框架Eve",
+          "url": "https://www.infoq.cn/article/kY3j5x1kIEvedufYJ1rJ"
+        },
+        {
+          "text": "InfoQ - Dapr 1.18推出可验证执行功能",
+          "url": "https://www.infoq.cn/article/U3gIuyf8VccCdKZeiyCi"
+        },
+        {
+          "text": "InfoQ - 前后端一起消失：AI Coding正在改写大厂工程师分工",
+          "url": "https://www.infoq.cn/article/rHiSH66JZwoQG5Dfvv6x"
+        }
       ],
       "body_html": "      <p>代码写得更快了，但软件并没有交付得更快。</p>\n      <p>GitLab本周发布的最新开发者调研得出了一个让很多AI编程工具厂商尴尬的结论：<strong>AI工具确实显著提升了编码速度，但整体软件交付效率并未因此提升</strong>。这盆冷水浇得恰逢其时——当Cursor估值被传达到80亿美元、Copilot成为开发者标配、Claude Code刷屏朋友圈的时候，有人开始问那个被忽略的问题：然后呢？</p>\n\n      <h2>瓶颈转移了，但没有消失</h2>\n      <p>GitLab的调研数据揭示了一个经典的\"瓶颈转移\"现象。AI编程助手在代码补全、函数生成、bug修复这些局部任务上表现出色，单个开发者的代码产出速度可能提升了30%-50%。但软件工程从来不是写代码这一个环节——需求分析、系统设计、代码审查、集成测试、安全扫描、部署运维……这些环节才是决定软件交付周期的关键。</p>\n      <p>编码速度的提升，反而把瓶颈转移到了下游。一个能一天写500行代码的AI辅助开发者，可能需要等三天才能拿到测试环境；一个自动生成的API接口，可能因为没有理解业务上下文而需要三次返工。InfoQ同期的一篇分析文章标题说得很直白：<strong>\"前后端一起消失：AI Coding正在改写大厂工程师分工\"</strong>。</p>\n      <p>这也解释了为什么Cloudflare CEO Matthew Prince会警告：\"未来两年，Agent会让互联网每周爆出一个Log4j级别的安全漏洞。\"AI生成代码的速度越快，安全审查和质量保证的压力就越大。当代码产出速度超过了团队的审查和验证能力，技术债和安全漏洞会以更快的速度累积。</p>\n\n      <h2>工具链在补位：从写代码到交付代码</h2>\n      <p>市场正在对这个问题做出反应。本周Vercel推出了开源AI智能体开发框架<strong>Eve</strong>，目标不是让AI写更多代码，而是让AI Agent更好地完成从开发到部署的完整工作流。Dapr 1.18版本推出了\"可验证执行\"功能，为AI智能体和工作流赋予密码学级别的信任能力——这意味着你可以验证AI执行的操作确实是它声称执行的，没有被篡改或注入。</p>\n      <p>这两个工具指向同一个方向：<strong>AI编程的下半场不是比谁写代码快，而是比谁能让AI可靠地完成端到端的交付任务</strong>。从生成代码片段，到生成完整功能模块，再到自主完成从需求到上线的全流程——每一步都需要更可靠的工具链支撑。</p>\n      <p>对开发者个人而言，这意味着技能栈的重心在转移。单纯的\"写代码\"能力在贬值，因为AI已经做得够好了；但<strong>系统设计能力、需求理解能力、跨系统集成能力、质量把控能力</strong>在升值。InfoQ的报道提到，大厂的工程师分工正在被AI改写，传统的\"前端/后端/测试\"边界在模糊，取而代之的是更贴近业务端到端交付的角色。</p>\n      <p>AI编程工具的故事远没有结束。Cursor、Copilot、Cline、MarsCode们解决了\"写\"的问题，但一个完整的软件交付生命周期中，\"写\"只占不到30%的时间。剩下的70%——测试、集成、部署、运维、安全——才是下一个战场。谁能把这些环节也AI化、自动化，谁才是AI编程的真正赢家。</p>",
-      "pull_quote": {"text": "AI让代码写快了50%，但剩下那50%决定软件能不能上线——而那50%AI还搞不定。", "attr": "—— 一位工程VP在Hacker News的评论"},
+      "body_html_en": "      <p>Code is being written faster, but software isn't shipping any faster.</p>\n      <p>GitLab's latest developer survey, released this week, reached a conclusion embarrassing for many AI coding tool vendors: <strong>AI tools have significantly improved coding speed, but overall software delivery efficiency hasn't improved as a result</strong>. This bucket of cold water is well-timed — as Cursor's valuation is reportedly reaching $8 billion, Copilot becomes developer standard issue, and Claude Code floods social feeds, someone is finally asking the neglected question: then what?</p>\n\n      <h2>The Bottleneck Shifted, It Didn't Disappear</h2>\n      <p>GitLab's data reveals a classic &ldquo;bottleneck shift&rdquo; phenomenon. AI coding assistants excel at local tasks like code completion, function generation, and bug fixes; individual developer code output may be up 30-50%. But software engineering was never just about writing code — requirements analysis, system design, code review, integration testing, security scanning, deployment and operations… these are the stages that determine software delivery cycles.</p>\n      <p>Faster coding has instead shifted the bottleneck downstream. An AI-assisted developer who can write 500 lines a day might wait three days for a test environment; an auto-generated API endpoint might require three rounds of rework because it didn't understand business context. A contemporary InfoQ analysis put it bluntly in the headline: <strong>&ldquo;Frontend and Backend Disappear Together: AI Coding is Rewriting Big Tech Engineer Roles&rdquo;</strong>.</p>\n      <p>This also explains why Cloudflare CEO Matthew Prince warned: &ldquo;Over the next two years, Agents will cause a Log4j-level security vulnerability on the internet every week.&rdquo; The faster AI generates code, the greater the pressure on security review and quality assurance. When code output speed exceeds a team's review and validation capacity, technical debt and security vulnerabilities accumulate faster.</p>\n\n      <h2>The Toolchain Fills In: From Writing Code to Shipping Code</h2>\n      <p>The market is responding to this problem. This week Vercel launched <strong>Eve</strong>, an open-source AI Agent development framework, with the goal not of making AI write more code but of helping AI Agents complete full development-to-deployment workflows better. Dapr version 1.18 introduced &ldquo;verifiable execution,&rdquo; giving AI Agents and workflows cryptographic-grade trust capabilities — meaning you can verify that operations an AI claims to execute were actually executed, without tampering or injection.</p>\n      <p>Both tools point in the same direction: <strong>the second half of AI coding isn't about who writes code faster — it's about who can get AI to reliably complete end-to-end delivery tasks</strong>. From generating code snippets, to generating complete feature modules, to autonomously completing the full requirement-to-production flow — each step requires more reliable toolchain support.</p>\n      <p>For individual developers, this means skill stack priorities are shifting. Pure &ldquo;code writing&rdquo; ability is depreciating because AI already does it well; but <strong>system design ability, requirements understanding, cross-system integration, and quality control</strong> are appreciating. InfoQ's report noted that Big Tech engineer roles are being rewritten by AI, with traditional &ldquo;frontend/backend/QA&rdquo; boundaries blurring, replaced by roles closer to end-to-end business delivery.</p>\n      <p>The AI coding tool story is far from over. Cursor, Copilot, Cline, MarsCode have solved the &ldquo;writing&rdquo; problem, but in a complete software delivery lifecycle, &ldquo;writing&rdquo; accounts for less than 30% of time. The remaining 70% — testing, integration, deployment, ops, security — is the next battlefield. Whoever can AI-ify and automate those stages will be the real winner of AI coding.</p>",
+      "pull_quote": {
+        "text": "AI让代码写快了50%，但剩下那50%决定软件能不能上线——而那50%AI还搞不定。",
+        "text_en": "AI made code writing 50% faster, but the other 50% determines whether software ships — and that 50% is still beyond AI.",
+        "attr": "—— 一位工程VP在Hacker News的评论",
+        "attr_en": "— An engineering VP's Hacker News comment"
+      },
       "cognitive_notes": "AI编程 · GitLab调研 · 软件交付效率 · Vercel Eve · Dapr · 工程师分工 · AI瓶颈转移",
-      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：InfoQ、GitLab。"
+      "cognitive_notes_en": "AI coding · GitLab survey · software delivery efficiency · Vercel Eve · Dapr · engineer roles · AI bottleneck shift",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：InfoQ、GitLab。",
+      "source_summary_en": "This article was generated from 8 source signals processed by the Dawn Vision cognitive engine, with editorial review. Sources: InfoQ, GitLab.",
+      "title_short_en": "GitLab: AI Codes Faster, Ships Same"
     },
     {
       "slug": "anthropic-samsung-custom-ai-chip-nvidia-independence",
       "category": "算力基建 · 芯片自主",
       "category_en": "Compute · Infrastructure",
       "title": "Anthropic找三星造芯：OpenAI Jalapeño之后，AI公司集体逃离英伟达",
+      "title_en": "Anthropic Taps Samsung for Custom Chips: After OpenAI's Jalapeño, AI Companies Are Collectively Fleeing NVIDIA",
       "title_break": "Anthropic找三星造芯<br>AI公司集体逃离英伟达",
+      "title_break_en": "Anthropic Taps Samsung for Chips<br>AI Companies Collectively Flee NVIDIA",
       "deck": "Anthropic与三星洽谈定制AI芯片合作，距OpenAI发布Broadcom代工Jalapeño仅一周。Google、Amazon早有TPU/Trainium，算力自主成为头部AI公司标配战略。",
+      "deck_en": "Anthropic is in talks with Samsung on custom AI chip collaboration, just one week after OpenAI unveiled the Broadcom-fabricated Jalapeño. Google and Amazon already have TPU/Trainium; compute sovereignty is becoming standard strategy for top AI companies.",
       "keywords": "Dawn Vision,Anthropic,三星,AI芯片,OpenAI Jalapeño,英伟达,定制芯片,算力自主",
+      "keywords_en": "Dawn Vision, Anthropic, Samsung, AI chips, OpenAI Jalapeño, NVIDIA, custom chips, compute sovereignty",
       "og_description": "Anthropic与三星洽谈定制AI芯片，继OpenAI Jalapeño后AI公司自研芯片浪潮加速。",
+      "og_description_en": "Anthropic in talks with Samsung for custom AI chips; after OpenAI Jalapeño, the wave of AI companies building their own chips accelerates.",
       "read_time": "约 5 分钟阅读",
+      "read_time_en": "~5 min read",
       "word_count": 780,
       "sources": [
-        {"text": "TechCrunch - Anthropic is discussing a new custom chip with Samsung", "url": "https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/"},
-        {"text": "TechCrunch - OpenAI unveils its first custom chip built by Broadcom", "url": "https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/"},
-        {"text": "InfoQ - WAIC 2026算力：超节点与光互连能否绕过单芯片物理天花板", "url": "https://www.qbitai.com/2026/07/442167.html"}
+        {
+          "text": "TechCrunch - Anthropic is discussing a new custom chip with Samsung",
+          "url": "https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/"
+        },
+        {
+          "text": "TechCrunch - OpenAI unveils its first custom chip built by Broadcom",
+          "url": "https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/"
+        },
+        {
+          "text": "InfoQ - WAIC 2026算力：超节点与光互连能否绕过单芯片物理天花板",
+          "url": "https://www.qbitai.com/2026/07/442167.html"
+        }
       ],
       "body_html": "      <p>AI公司和英伟达的\"蜜月期\"，似乎正在结束。</p>\n      <p>7月2日，The Information报道称Anthropic正在与三星洽谈合作，开发定制AI芯片。<strong>距离OpenAI发布其首款定制推理芯片Jalapeño（由Broadcom代工）仅仅过去一周</strong>。加上Google的TPU、Amazon的Trainium，全球前五名AI公司中，已经有四家在推进自研芯片。英伟达在AI训练芯片市场的垄断地位，正在从供给侧被瓦解。</p>\n\n      <h2>为什么所有人都在造芯？</h2>\n      <p>Anthropic对芯片的需求是真实且紧迫的。今年6月，Claude Sonnet 5发布后需求暴增，Mythos和Fable模型的算力需求更是天文数字。尽管Anthropic已经获得了Amazon和Google的算力承诺，但在一个英伟达H100/B100芯片仍然供不应求的市场里，把核心算力命脉完全交给第三方，风险太高。</p>\n      <p>定制芯片的逻辑很简单：<strong>通用GPU（如英伟达的产品线）为灵活性牺牲了效率，而专门为推理或特定模型架构设计的芯片，可以在性能功耗比上实现数量级的优势</strong>。OpenAI称Jalapeño在推理效率上超越竞品；Google TPU已经迭代到第五代，支撑了Gemini全系模型的训练和推理；Amazon Trainium和Inferentia也在AWS内部大规模部署。</p>\n      <p>选择三星作为合作伙伴也有讲究。三星本身就是英伟达的重要代工伙伴，在HBM（高带宽内存）和先进封装领域有深厚积累。同时三星还和Google在芯片制造上有合作，代工经验丰富。对Anthropic来说，与三星合作既能利用三星的制造能力，又不必像依赖台积电那样面临地缘政治风险。</p>\n\n      <h2>算力自主的军备竞赛</h2>\n      <p>WAIC 2026即将开幕，量子位的前瞻报道点出了今年算力领域的核心命题：<strong>超节点与光互连，能否绕过单芯片的物理天花板？</strong>当单颗芯片的制程进步越来越慢、功耗墙越来越难以突破，通过高速互联把多颗芯片连成\"超节点\"成为新方向。但这只是延缓问题，不是解决问题。</p>\n      <p>更深层的动因是成本。当一家AI公司每年在算力上花费数十亿美元甚至上百亿美元时，芯片成本的哪怕10%的优化，都意味着数亿美元的节省。Etched AI等AI芯片创业公司的估值已经冲到50亿美元级别，说明资本市场也看好AI芯片定制化的机会。</p>\n      <p>当然，自研芯片谈何容易。Anthropic自己也承认，多元化硬件战略——包括Google、Amazon和Nvidia的芯片——仍将是其算力策略的核心。<strong>定制芯片不是一夜之间就能替代英伟达的，它更像是一种保险和长期布局</strong>。但趋势已经很明确：头部AI公司不想再被任何单一芯片供应商卡脖子。</p>\n      <p>英伟达不会坐视不管。它在CUDA生态、软件栈、开发者社区上的护城河依然深厚。但当客户们开始自己造芯的时候，英伟达必须证明：继续用我的芯片，比你自己造更划算。AI芯片市场的下一阶段竞争，不再是单一芯片的性能比拼，而是<strong>整套软硬件系统的效率、成本和生态之争</strong>。</p>",
-      "pull_quote": {"text": "如果你每年花100亿美元买芯片，你会开始想：为什么不自己造？", "attr": "—— 一位AI基础设施投资人"},
+      "body_html_en": "      <p>The &ldquo;honeymoon phase&rdquo; between AI companies and NVIDIA appears to be ending.</p>\n      <p>On July 2, The Information reported that Anthropic is in talks with Samsung to develop custom AI chips. <strong>It's been barely a week since OpenAI unveiled its first custom inference chip, Jalapeño (fabricated by Broadcom)</strong>. Add Google's TPU and Amazon's Trainium to the mix, and four of the world's top five AI companies are now advancing self-developed chips. NVIDIA's monopoly in AI training chips is being eroded from the supply side.</p>\n\n      <h2>Why Is Everyone Building Chips?</h2>\n      <p>Anthropic's demand for chips is real and urgent. In June, demand exploded after Claude Sonnet 5 launched, and compute requirements for the Mythos and Fable models are astronomical. Although Anthropic has secured compute commitments from Amazon and Google, in a market where NVIDIA H100/B100 chips remain supply-constrained, putting your core compute lifeline entirely in third-party hands is too risky.</p>\n      <p>The logic for custom chips is simple: <strong>general-purpose GPUs (like NVIDIA's product line) sacrifice efficiency for flexibility, while chips designed specifically for inference or particular model architectures can deliver order-of-magnitude advantages in performance per watt</strong>. OpenAI claims Jalapeño surpasses competitors on inference efficiency; Google's TPU is already on its fifth generation, powering training and inference for the entire Gemini model lineup; Amazon's Trainium and Inferentia are deployed at scale within AWS.</p>\n      <p>Choosing Samsung as a partner is also deliberate. Samsung itself is a key NVIDIA fabrication partner with deep expertise in HBM (High Bandwidth Memory) and advanced packaging. Samsung also collaborates with Google on chip fabrication and has extensive foundry experience. For Anthropic, partnering with Samsung leverages Samsung's manufacturing capabilities without facing the geopolitical risks that come with relying on TSMC.</p>\n\n      <h2>The Compute Sovereignty Arms Race</h2>\n      <p>WAIC 2026 is about to open, and QbitAI's preview identified this year's core question in compute: <strong>can super-nodes and optical interconnects bypass the single-chip physical ceiling?</strong> As single-chip process progress slows and the power wall grows harder to break, connecting multiple chips via high-speed interconnect into &ldquo;super-nodes&rdquo; is becoming a new direction. But this only delays the problem — it doesn't solve it.</p>\n      <p>The deeper driver is cost. When an AI company spends billions or even tens of billions annually on compute, even a 10% optimization in chip costs means hundreds of millions in savings. AI chip startups like Etched AI have already reached valuations around $5 billion, indicating capital markets see opportunity in AI chip customization.</p>\n      <p>Of course, building your own chips is far from easy. Anthropic itself acknowledges that a diversified hardware strategy — including Google, Amazon, and Nvidia chips — will remain central to its compute strategy. <strong>Custom chips won't replace NVIDIA overnight; they're more of an insurance policy and long-term bet</strong>. But the trend is clear: top AI companies don't want to be bottlenecked by any single chip supplier.</p>\n      <p>NVIDIA won't sit idle. Its moats in the CUDA ecosystem, software stack, and developer community remain deep. But when customers start building their own chips, NVIDIA must prove: continuing to use my chips is more cost-effective than building your own. The next stage of AI chip competition won't be single-chip performance comparisons — it'll be a battle over <strong>the efficiency, cost, and ecosystem of entire hardware-software systems</strong>.</p>",
+      "pull_quote": {
+        "text": "如果你每年花100亿美元买芯片，你会开始想：为什么不自己造？",
+        "text_en": "If you're spending $10 billion a year on chips, you start thinking: why not build them ourselves?",
+        "attr": "—— 一位AI基础设施投资人",
+        "attr_en": "— An AI infrastructure investor"
+      },
       "cognitive_notes": "AI芯片 · Anthropic · 三星 · OpenAI Jalapeño · 英伟达 · 算力自主 · 定制芯片 · 超节点",
-      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 9 个源信号生成，经编辑部人工审核。素材来源：TechCrunch、The Information、量子位、InfoQ。"
+      "cognitive_notes_en": "AI chips · Anthropic · Samsung · OpenAI Jalapeño · NVIDIA · compute sovereignty · custom chips · super-nodes",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 9 个源信号生成，经编辑部人工审核。素材来源：TechCrunch、The Information、量子位、InfoQ。",
+      "source_summary_en": "This article was generated from 9 source signals processed by the Dawn Vision cognitive engine, with editorial review. Sources: TechCrunch, The Information, QbitAI, InfoQ.",
+      "title_short_en": "Anthropic Taps Samsung for AI Chips"
     },
     {
       "slug": "skywork-3-2-tags-agent-work-id-areal-2-rl",
       "category": "AI Agent · 工程实践",
       "category_en": "AI Agent · Engineering",
       "title": "天工3.2给Agent发\"工牌\"：AReaL 2.0开源，智能体从工具变同事",
+      "title_en": "Skywork 3.2 Issues Agents Their \"Employee Badges\": AReaL 2.0 Goes Open Source, Agents Evolve from Tools to Colleagues",
       "title_break": "天工3.2给Agent发\"工牌\"<br>智能体从工具变同事",
+      "title_break_en": "Skywork 3.2 Gives Agents \"Badges\"<br>Agents Go from Tools to Colleagues",
       "deck": "天工3.2上线Skywork Tags让Agent以\"数字员工\"身份加入工作群，AReaL 2.0开源打造自演进Agent的RL基础设施。Agent从被动工具进化为可成长的协作伙伴。",
+      "deck_en": "Skywork 3.2 launches Tags to let Agents join work groups as &ldquo;digital employees,&rdquo; while AReaL 2.0 open-sources RL infrastructure for self-evolving Agents. Agents evolve from passive tools into growth-capable collaborative partners.",
       "keywords": "Dawn Vision,天工3.2,Skywork Tags,AI Agent,AReaL 2.0,强化学习,智能体,数字员工",
+      "keywords_en": "Dawn Vision, Skywork 3.2, Skywork Tags, AI Agent, AReaL 2.0, reinforcement learning, agents, digital employees",
       "og_description": "天工3.2发布Agent工牌功能，AReaL 2.0开源RL基础设施，Agent进入自演进阶段。",
+      "og_description_en": "Skywork 3.2 launches Agent badge functionality; AReaL 2.0 open-sources RL infrastructure as Agents enter the self-evolving phase.",
       "read_time": "约 5 分钟阅读",
+      "read_time_en": "~5 min read",
       "word_count": 760,
       "sources": [
-        {"text": "量子位 - 天工3.2重磅升级：Skywork Tags上线，给Agent一张工牌", "url": "https://www.qbitai.com/2026/07/442030.html"},
-        {"text": "量子位 - 让Agent越用越强：AReaL 2.0开源，面向自演进智能体的RL基础设施", "url": "https://www.qbitai.com/2026/07/442134.html"},
-        {"text": "InfoQ - 让Agent越用越强：AReaL 2.0开源，给智能体装上\"成长系统\"", "url": "https://www.infoq.cn/article/IeXGCZqbv5WQ5zFQXoup"},
-        {"text": "爱范儿 - 从疯狂翻表到群里直接@AI：飞书来了个新同事", "url": "https://www.ifanr.com/1670632"}
+        {
+          "text": "量子位 - 天工3.2重磅升级：Skywork Tags上线，给Agent一张工牌",
+          "url": "https://www.qbitai.com/2026/07/442030.html"
+        },
+        {
+          "text": "量子位 - 让Agent越用越强：AReaL 2.0开源，面向自演进智能体的RL基础设施",
+          "url": "https://www.qbitai.com/2026/07/442134.html"
+        },
+        {
+          "text": "InfoQ - 让Agent越用越强：AReaL 2.0开源，给智能体装上\"成长系统\"",
+          "url": "https://www.infoq.cn/article/IeXGCZqbv5WQ5zFQXoup"
+        },
+        {
+          "text": "爱范儿 - 从疯狂翻表到群里直接@AI：飞书来了个新同事",
+          "url": "https://www.ifanr.com/1670632"
+        }
       ],
       "body_html": "      <p>你在工作群里@的同事，可能很快就不是人类了。</p>\n      <p>7月2日，昆仑万维发布天工3.2大模型升级，核心功能是<strong>Skywork Tags</strong>——给AI Agent发一张\"工牌\"，让它以正式\"数字员工\"的身份加入企业工作群聊，和人并肩工作。这不是一个聊天机器人，而是一个有身份、有角色、有任务边界的Agent，可以被@、被指派任务、被追踪绩效。同一天，AReaL 2.0开源发布，为自演进智能体提供强化学习基础设施——让Agent在使用中越变越强。</p>\n\n      <h2>从工具到同事：Agent的身份进化</h2>\n      <p>Skywork Tags的本质是Agent身份系统。在此之前，企业用AI大多是\"打开一个对话框问问题\"的模式——AI是工具，人是使用者，用完就走。Skywork Tags改变了这个关系：Agent有了工号、有了角色（如\"数据分析专员\"\"客服助理\"）、有权限边界，可以存在于飞书/钉钉/企业微信的群聊里，像一个真正的员工一样被@、被分配任务、汇报工作。</p>\n      <p>爱范儿报道的飞书AI助手展示了类似趋势：<strong>从\"打开一个AI对话框\"到\"在群里直接@AI\"</strong>，交互方式从\"人找AI\"变成\"AI在工作流中随时待命\"。钉钉的A1录音卡也入选了Gartner AI可穿戴设备报告，说明AI硬件+工作场景的结合正在加速。</p>\n      <p>这个变化看似只是交互方式的调整，实际上是企业对Agent认知的根本转变：AI不再是一个\"高级搜索引擎\"，而是一个可以承担特定职责的\"虚拟员工\"。这意味着Agent需要的不只是更强的模型能力，还需要<strong>身份管理、权限控制、任务追踪、绩效评估</strong>等一整套\"人力资源管理\"基础设施。</p>\n\n      <h2>让Agent越用越强：RL基础设施补位</h2>\n      <p>但一个\"数字员工\"如果永远停留在入职第一天的水平，是没有价值的。这就是AReaL 2.0要解决的问题。</p>\n      <p>AReaL 2.0是一个面向自演进智能体的开源强化学习（RL）基础设施。简单说，它让Agent可以在与环境的交互中持续学习、自我优化，而不是每次都依赖人工标注和重新训练。<strong>传统的大模型训练是\"一次性\"的——训练完成后模型能力就固定了；而AReaL的目标是让Agent在使用过程中持续进化</strong>，像一个新员工从入职到熟练的过程。</p>\n      <p>InfoQ的分析指出，Agent规模化落地的一大痛点就是\"越用越笨\"——在固定的模型权重下，Agent无法从成功和失败中学习，同样的错误会一犯再犯。AReaL 2.0提供的RL基础设施，让Agent可以从环境反馈中学习，逐步优化策略。这对于企业场景尤其重要：一个客服Agent如果每次遇到新问题都要人工介入才能解决，那就不叫自动化。</p>\n      <p>这两条新闻放在一起，勾勒出Agent发展的下一个阶段：<strong>从\"能用\"到\"好用\"再到\"越用越好\"</strong>。天工Skywork Tags解决了Agent\"进入工作场景\"的身份问题，AReaL 2.0解决了Agent\"持续成长\"的能力问题。当Agent可以像人一样有身份、有角色、能学习、会进步，它就真正从工具变成了同事。</p>\n      <p>当然，Agent\"入职\"也带来新问题：谁来管理这些数字员工？它们的绩效怎么考核？犯了错谁负责？这些问题目前还没有答案，但方向已经清晰了——<strong>未来的工作群里，人类和AI会混在一起，你可能分不清谁是谁</strong>。</p>",
-      "pull_quote": {"text": "未来你在工作群@同事时，最好先确认一下它是不是人类。", "attr": "—— 一位产品经理的调侃"},
+      "body_html_en": "      <p>The colleague you @ in your work group chat might not be human for much longer.</p>\n      <p>On July 2, Kunlun Tech released the Skywork 3.2 LLM upgrade, whose core feature is <strong>Skywork Tags</strong> — issuing AI Agents an &ldquo;employee badge,&rdquo; letting them join enterprise work chats as formal &ldquo;digital employees&rdquo; working alongside humans. This isn't a chatbot; it's an Agent with identity, role, and task boundaries that can be @mentioned, assigned tasks, and performance-tracked. The same day, AReaL 2.0 was released open-source, providing reinforcement learning infrastructure for self-evolving Agents — letting Agents grow stronger through use.</p>\n\n      <h2>From Tool to Colleague: The Agent Identity Evolution</h2>\n      <p>Skywork Tags is fundamentally an Agent identity system. Before this, most enterprise AI use followed a &ldquo;open a dialog box and ask a question&rdquo; pattern — AI was a tool, humans were users, and you walked away when done. Skywork Tags changes that relationship: Agents get employee IDs, roles (like &ldquo;data analyst&rdquo; or &ldquo;customer service assistant&rdquo;), and permission boundaries; they can exist in Feishu/DingTalk/WeCom group chats, @mentioned, assigned tasks, and reporting work like real employees.</p>\n      <p>An ifanr report on Feishu's AI assistant shows a similar trend: <strong>from &ldquo;opening an AI dialog&rdquo; to &ldquo;@mentioning AI directly in the group&rdquo;</strong>, interaction shifts from &ldquo;humans seeking out AI&rdquo; to &ldquo;AI on standby within the workflow.&rdquo; DingTalk's A1 recording card was also selected for Gartner's AI wearables report, indicating the convergence of AI hardware and work scenarios is accelerating.</p>\n      <p>This shift may look like just an interaction change, but it's actually a fundamental shift in how enterprises perceive Agents: AI is no longer a &ldquo;fancy search engine,&rdquo; but a &ldquo;virtual employee&rdquo; who can carry specific responsibilities. This means Agents don't just need stronger model capabilities — they need a full stack of &ldquo;human resources management&rdquo; infrastructure for <strong>identity management, permission control, task tracking, and performance evaluation</strong>.</p>\n\n      <h2>Making Agents Stronger Over Time: RL Infrastructure Fills In</h2>\n      <p>But a &ldquo;digital employee&rdquo; stuck at day-one proficiency forever provides no value. That's the problem AReaL 2.0 solves.</p>\n      <p>AReaL 2.0 is an open-source reinforcement learning (RL) infrastructure for self-evolving agents. Simply put, it lets Agents continuously learn and self-optimize through interaction with their environment, rather than relying on manual annotation and retraining each time. <strong>Traditional LLM training is &ldquo;one-shot&rdquo; — model capability is fixed after training; AReaL's goal is for Agents to keep evolving during use</strong>, like a new hire going from onboarding to proficiency.</p>\n      <p>InfoQ's analysis notes that a major pain point for Agent deployment at scale is &ldquo;getting dumber with use&rdquo; — with fixed model weights, Agents can't learn from successes and failures and repeat the same mistakes. AReaL 2.0's RL infrastructure lets Agents learn from environmental feedback and gradually optimize strategies. This is especially important for enterprise scenarios: a customer service Agent that requires human intervention for every new issue isn't automation.</p>\n      <p>These two stories together outline the next stage of Agent development: <strong>from &ldquo;usable&rdquo; to &ldquo;good&rdquo; to &ldquo;gets better over time&rdquo;</strong>. Skywork Tags solves the Agent's &ldquo;entering the workplace&rdquo; identity problem; AReaL 2.0 solves the Agent's &ldquo;continuous growth&rdquo; capability problem. When Agents can have identities, roles, learning, and improvement just like humans, they truly evolve from tools to colleagues.</p>\n      <p>Of course, Agent &ldquo;onboarding&rdquo; also raises new questions: who manages these digital employees? How is their performance evaluated? Who's responsible when they make mistakes? These questions don't have answers yet, but the direction is clear — <strong>in future work groups, humans and AI will be mixed together, and you might not be able to tell them apart</strong>.</p>",
+      "pull_quote": {
+        "text": "未来你在工作群@同事时，最好先确认一下它是不是人类。",
+        "text_en": "When you @ a colleague in a work group in the future, you might want to first check whether they're human.",
+        "attr": "—— 一位产品经理的调侃",
+        "attr_en": "— A product manager's quip"
+      },
       "cognitive_notes": "AI Agent · 天工3.2 · Skywork Tags · AReaL 2.0 · 强化学习 · 数字员工 · Agent身份系统 · 自演进智能体",
-      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 10 个源信号生成，经编辑部人工审核。素材来源：量子位、InfoQ、爱范儿。"
+      "cognitive_notes_en": "AI Agent · Skywork 3.2 · Skywork Tags · AReaL 2.0 · reinforcement learning · digital employees · Agent identity system · self-evolving agents",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 10 个源信号生成，经编辑部人工审核。素材来源：量子位、InfoQ、爱范儿。",
+      "source_summary_en": "This article was generated from 10 source signals processed by the Dawn Vision cognitive engine, with editorial review. Sources: QbitAI, InfoQ, ifanr.",
+      "title_short_en": "Skywork 3.2: Agents Get Badges"
     },
     {
       "slug": "alibaba-damo-ai-superconductor-discovery-elementsclaw",
       "category": "大模型 · 商业分析",
       "category_en": "LLM · Business",
       "title": "达摩院AI发现4种全新超导材料：6.8万候选已实验验证，科研范式真变了",
+      "title_en": "DAMO Academy AI Discovers 4 New Superconducting Materials: 68,000 Candidates Experimentally Verified — The Research Paradigm Has Truly Changed",
       "title_break": "达摩院AI发现4种全新超导材料<br>6.8万候选已实验验证",
+      "title_break_en": "DAMO AI Discovers 4 New Superconductors<br>68,000 Candidates Experimentally Verified",
       "deck": "阿里达摩院发布AI智能体ElementsClaw，预测6.8万个超导材料候选，4种全新材料已合成证实。AI for Science从论文走进实验室，材料科学进入智能发现时代。",
+      "deck_en": "Alibaba DAMO Academy released ElementsClaw, an AI Agent that predicted 68,000 superconductor candidates — 4 new materials have already been synthesized and confirmed. AI for Science moves from papers into the lab as materials science enters the intelligent discovery era.",
       "keywords": "Dawn Vision,达摩院,AI for Science,超导材料,ElementsClaw,材料发现,科学智能,阿里",
+      "keywords_en": "Dawn Vision, DAMO Academy, AI for Science, superconducting materials, ElementsClaw, materials discovery, scientific intelligence, Alibaba",
       "og_description": "达摩院AI智能体发现4种全新超导材料并实验验证，AI for Science进入实战阶段。",
+      "og_description_en": "DAMO Academy's AI Agent discovers 4 new superconducting materials with experimental verification, as AI for Science enters the practical phase.",
       "read_time": "约 5 分钟阅读",
+      "read_time_en": "~5 min read",
       "word_count": 750,
       "sources": [
-        {"text": "36氪 - 达摩院AI自主发现4种全新超导材料，已获实验验证", "url": "https://36kr.com/newsflashes/3879430448754952?f=rss"},
-        {"text": "量子位 - 黄仁勋说的Physical AI，被中国跨界选手带进了生命科学实验室", "url": "https://www.qbitai.com/2026/07/442311.html"}
+        {
+          "text": "36氪 - 达摩院AI自主发现4种全新超导材料，已获实验验证",
+          "url": "https://36kr.com/newsflashes/3879430448754952?f=rss"
+        },
+        {
+          "text": "量子位 - 黄仁勋说的Physical AI，被中国跨界选手带进生命科学实验室",
+          "url": "https://www.qbitai.com/2026/07/442311.html"
+        }
       ],
       "body_html": "      <p>6.8万个候选，4种全新材料，全部经过实验验证。</p>\n      <p>7月3日，阿里达摩院联合中国人民大学、中国科学院大学发布了行业内首个超导材料发现AI智能体<strong>ElementsClaw</strong>。这个AI系统预测了6.8万个可能的超导材料，其中<strong>4种全新材料已经在实验室合成并证实存在超导性</strong>。相关数据已全部开放，供全球学界进一步挖掘。这不是又一个AI发论文的故事——这是AI真正在实验室里做出科学发现的案例。</p>\n\n      <h2>从\"猜\"到\"找\"：AI重新定义材料科学</h2>\n      <p>超导材料的发现历史上充满了偶然。1911年荷兰物理学家Onnes发现汞的超导性，是在一次实验意外中观察到的；1986年铜基高温超导体的发现，拿了诺贝尔奖但过程也充满试错；2023年韩国团队的LK-99室温超导乌龙，更是让全球围观了一次\"全民炼丹\"。材料科学的传统范式就是：<strong>科学家基于经验提出假设，然后在实验室里一个一个试</strong>，效率极低，高度依赖直觉和运气。</p>\n      <p>ElementsClaw改变了这个游戏规则。它不是随机猜测，而是基于对元素周期律、晶体结构、电子相互作用的深度学习，系统性地筛选可能的超导材料组合。6.8万个候选不是瞎猜的，是AI在理解物理化学规律基础上给出的\"高概率名单\"——这把科学家的搜索空间从天文数字缩小到了可实验验证的范围。</p>\n      <p>更关键的是\"已获实验验证\"这几个字。AI for Science领域过去几年发了大量论文，但很多停留在\"计算预测\"阶段，真正走进实验室、被实验证实的并不多。达摩院这次的成果，<strong>4种新材料已经合成并测量到了超导信号</strong>，说明AI的预测不是纸上谈兵。</p>\n\n      <h2>AI for Science的商业化路径</h2>\n      <p>量子位同日的另一篇报道提到，黄仁勋反复强调的Physical AI正在被中国公司带入生命科学实验室。AI for Science正在从学术概念变成产业工具：药物发现、材料设计、蛋白质折叠、气候模拟、量子计算控制——这些领域都在被AI加速。</p>\n      <p>材料科学的市场价值是巨大的。超导材料如果能在室温常压下实现，将彻底改变电力传输、核磁共振、量子计算、可控核聚变等领域。即使是\"传统\"的高温超导材料，在可控核聚变托卡马克装置、核磁共振成像、粒子加速器等领域也有刚性需求。AI加速材料发现的速度，意味着这些应用的商业化可能比预期来得更早。</p>\n      <p>达摩院选择把数据全部开放，也是一个聪明的策略。科学发现本身是公共品，开放数据可以吸引全球研究者参与验证和迭代，加速整个领域的进步。同时，阿里也能通过这个成果建立在AI for Science领域的品牌认知，吸引相关人才和合作机会。</p>\n      <p>AI for Science不是一个新故事了，但2026年它正在从\"demo\"走向\"生产力\"。DeepMind的AlphaFold改变了蛋白质结构预测，现在ElementsClaw这样的系统开始改变材料发现。<strong>当AI能够真正在实验室里做出发现，而不只是在论文里画表格的时候，科研的范式就真的变了</strong>。</p>",
-      "pull_quote": {"text": "AI不会替代科学家，但会用AI的科学家会替代不用AI的科学家。", "attr": "—— AI for Science领域的共识"},
+      "body_html_en": "      <p>68,000 candidates, 4 new materials, all experimentally verified.</p>\n      <p>On July 3, Alibaba DAMO Academy, together with Renmin University of China and University of Chinese Academy of Sciences, released <strong>ElementsClaw</strong>, the industry's first AI Agent for superconductor discovery. This AI system predicted 68,000 potential superconducting materials, of which <strong>4 new materials have been synthesized in the lab and confirmed to exhibit superconductivity</strong>. All data has been released openly for further exploration by the global research community. This isn't another story of AI publishing papers — it's a case of AI genuinely making scientific discoveries in the lab.</p>\n\n      <h2>From &ldquo;Guessing&rdquo; to &ldquo;Finding&rdquo;: AI Redefines Materials Science</h2>\n      <p>The history of superconductor discovery is full of accidents. In 1911 Dutch physicist Onnes discovered mercury's superconductivity through an experimental accident; the 1986 discovery of copper-based high-temperature superconductors won a Nobel Prize but was full of trial and error; in 2023 the Korean LK-99 room-temperature superconductor fiasco had the whole world watching a round of &ldquo;mass alchemy.&rdquo; The traditional materials science paradigm is: <strong>scientists propose hypotheses based on experience, then test them one by one in the lab</strong> — extremely inefficient, heavily dependent on intuition and luck.</p>\n      <p>ElementsClaw changes the rules of this game. It doesn't guess randomly; it systematically screens potential superconductor combinations through deep learning of periodic laws, crystal structures, and electron interactions. The 68,000 candidates aren't blind guesses — they're a &ldquo;high-probability shortlist&rdquo; AI generates from understanding physical chemistry laws, shrinking scientists' search space from astronomical numbers to experimentally verifiable ranges.</p>\n      <p>Most critically, the words &ldquo;experimentally verified.&rdquo; AI for Science has produced plenty of papers in recent years, but many remain at the &ldquo;computational prediction&rdquo; stage; few actually make it into the lab and get experimentally confirmed. DAMO's result has <strong>4 new materials synthesized with measured superconducting signals</strong>, proving AI predictions aren't just academic exercises.</p>\n\n      <h2>The Commercial Path for AI for Science</h2>\n      <p>A separate QbitAI report the same day noted that the Physical AI concept Jensen Huang repeatedly emphasizes is being brought into life science labs by Chinese companies. AI for Science is moving from academic concept to industrial tool: drug discovery, materials design, protein folding, climate simulation, quantum computing control — all being accelerated by AI.</p>\n      <p>The market value of materials science is enormous. If superconductors can be realized at room temperature and ambient pressure, they would completely transform power transmission, MRI, quantum computing, and controlled nuclear fusion. Even &ldquo;traditional&rdquo; high-temperature superconductors have rigid demand in fusion tokamaks, MRI, and particle accelerators. AI accelerating materials discovery means these applications may commercialize sooner than expected.</p>\n      <p>DAMO's choice to fully open the data is also a smart strategy. Scientific discovery is inherently a public good; open data can attract global researchers to validate and iterate, accelerating the entire field. At the same time, Alibaba can build brand recognition in AI for Science through this achievement, attracting talent and collaboration opportunities.</p>\n      <p>AI for Science isn't a new story, but in 2026 it's moving from &ldquo;demo&rdquo; to &ldquo;productivity.&rdquo; DeepMind's AlphaFold transformed protein structure prediction; now systems like ElementsClaw are starting to transform materials discovery. <strong>When AI can genuinely make discoveries in the lab — not just draw tables in papers — the scientific research paradigm has truly changed</strong>.</p>",
+      "pull_quote": {
+        "text": "AI不会替代科学家，但会用AI的科学家会替代不用AI的科学家。",
+        "text_en": "AI won't replace scientists — but scientists who use AI will replace scientists who don't.",
+        "attr": "—— AI for Science领域的共识",
+        "attr_en": "— Consensus in AI for Science"
+      },
       "cognitive_notes": "AI for Science · 达摩院 · 超导材料 · ElementsClaw · 材料发现 · Physical AI · 科学智能",
-      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 7 个源信号生成，经编辑部人工审核。素材来源：36氪、量子位。"
+      "cognitive_notes_en": "AI for Science · DAMO Academy · superconducting materials · ElementsClaw · materials discovery · Physical AI · scientific intelligence",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 7 个源信号生成，经编辑部人工审核。素材来源：36氪、量子位。",
+      "source_summary_en": "This article was generated from 7 source signals processed by the Dawn Vision cognitive engine, with editorial review. Sources: 36Kr, QbitAI.",
+      "title_short_en": "DAMO AI Discovers 4 Superconductors"
     },
     {
       "slug": "google-notebooklm-tiktok-ai-clips-libby-filter",
       "category": "AI 新媒体 · 内容创作",
       "category_en": "AI New Media",
       "title": "NotebookLM一键生成TikTok短视频：AI内容生产进入竖屏时代",
+      "title_en": "NotebookLM Generates TikTok Shorts in One Click: AI Content Production Enters the Vertical Video Era",
       "title_break": "NotebookLM一键生成TikTok<br>AI内容生产进入竖屏时代",
+      "title_break_en": "NotebookLM One-Click TikTok<br>AI Content Production Goes Vertical",
       "deck": "Google NotebookLM新增60秒竖屏AI视频生成，基于用户上传资料自动制作TikTok风格内容。同一周图书馆App Libby宣布过滤AI内容——创作和过滤同时加速。",
+      "deck_en": "Google NotebookLM adds 60-second vertical AI video generation, automatically producing TikTok-style content from user-uploaded materials. The same week, library app Libby announced AI content filtering — creation and filtering accelerate simultaneously.",
       "keywords": "Dawn Vision,NotebookLM,AI视频,TikTok,AI内容创作,AI新媒体,竖屏视频,Google",
+      "keywords_en": "Dawn Vision, NotebookLM, AI video, TikTok, AI content creation, AI new media, vertical video, Google",
       "og_description": "NotebookLM新增TikTok风格AI视频生成，AI内容生产进入竖屏短视频时代。",
+      "og_description_en": "NotebookLM adds TikTok-style AI video generation as AI content production enters the vertical short video era.",
       "read_time": "约 5 分钟阅读",
+      "read_time_en": "~5 min read",
       "word_count": 770,
       "sources": [
-        {"text": "The Verge - Google's NotebookLM can sum up your research in a TikTok-style clip", "url": "https://www.theverge.com/tech/959778/google-notebooklm-ai-clips"},
-        {"text": "The Verge - Libby will filter out AI content, kind of", "url": "https://www.theverge.com/column/959433/libby-ai-filter"},
-        {"text": "TechCrunch - Meta quietly launches vibe-coded gaming app Pocket", "url": "https://techcrunch.com/2026/07/02/meta-quietly-launches-vibe-coded-gaming-app-pocket/"},
-        {"text": "TechCrunch - Gemini Spark, Google's agentic assistant, is now available on Mac", "url": "https://techcrunch.com/2026/07/01/gemini-spark-googles-agentic-assistant-is-now-available-on-mac/"}
+        {
+          "text": "The Verge - Google's NotebookLM can sum up your research in a TikTok-style clip",
+          "url": "https://www.theverge.com/tech/959778/google-notebooklm-ai-clips"
+        },
+        {
+          "text": "The Verge - Libby will filter out AI content, kind of",
+          "url": "https://www.theverge.com/column/959433/libby-ai-filter"
+        },
+        {
+          "text": "TechCrunch - Meta quietly launches vibe-coded gaming app Pocket",
+          "url": "https://techcrunch.com/2026/07/02/meta-quietly-launches-vibe-coded-gaming-app-pocket/"
+        },
+        {
+          "text": "TechCrunch - Gemini Spark, Google's agentic assistant, is now available on Mac",
+          "url": "https://techcrunch.com/2026/07/01/gemini-spark-googles-agentic-assistant-is-now-available-on-mac/"
+        }
       ],
       "body_html": "      <p>以后做\"3分钟看懂一篇论文\"的短视频，可能只需要点一下按钮。</p>\n      <p>7月1日，Google宣布NotebookLM新增<strong>AI Clips功能</strong>：可以把你上传到NotebookLM的任何资料——论文、笔记、PDF、研究报告——自动生成一段60秒的竖屏TikTok/Reels/Shorts风格短视频。视频包含自动配音、字幕、视觉素材和关键信息摘要，直接适配短视频平台的竖屏格式。AI内容创作工具，终于杀到了短视频这个最大的内容战场。</p>\n\n      <h2>从音频播客到竖屏视频，NotebookLM的进化路径</h2>\n      <p>NotebookLM最初是一个AI笔记助手，后来凭借\"AI播客\"功能出圈——两个人声对话风格的音频摘要，把枯燥的论文变成了像电台节目一样好懂的播客。这次的AI Clips是同一个逻辑的延伸：<strong>把复杂信息压缩成适合移动端消费的短格式内容</strong>。</p>\n      <p>Google给出的demo展示了一个典型场景：上传一份关于气候变化的研究报告，NotebookLM自动生成一段60秒竖屏视频，有AI配音讲解核心发现，有配合内容的图片和文字动画，有字幕，有片头片尾——基本就是一个可以直接发TikTok的成品。这个功能面向Google AI Ultra和Pro订阅用户开放。</p>\n      <p>这对内容创作者意味着什么？意味着\"把长内容变成短视频\"这个最耗时的环节，可能被AI大幅压缩。过去一个博主把一篇深度文章做成3条短视频，可能需要半天时间写脚本、找素材、剪辑；现在NotebookLM可以几分钟内生成初稿，创作者只需要调整和优化。<strong>一个人运营多个账号的\"矩阵玩法\"门槛进一步降低</strong>。</p>\n\n      <h2>创作和过滤同时加速</h2>\n      <p>有意思的是，就在NotebookLM让AI生成内容变得更容易的同一周，图书馆借阅App Libby（OverDrive旗下）宣布将推出AI内容过滤功能。OverDrive新任CEO Marc DeBevoise表示：\"AI是我们的新前沿\"，但平台会让读者<strong>能够筛选出哪些书是AI生成的</strong>。Tidal也宣布从7月15日起不给100% AI生成的音乐支付版税，但会打上标签而不是 outright 禁止。</p>\n      <p>AI内容的\"创作\"和\"标识/过滤\"正在同时加速，这形成了一个有趣的张力：<strong>生产端越来越容易，消费端越来越需要辨别真伪</strong>。平台必须在\"拥抱AI提高效率\"和\"保护人类创作者权益\"之间找到平衡。Tidal选择不禁止但标签化+demonetize，Libby选择给读者选择权——这些都是务实的中间路线。</p>\n      <p>Meta也悄悄上线了一个有趣的产品：Pocket，一个用vibe coding（AI辅助编程）开发的实验性游戏应用，用户可以用文字提示生成和分享互动小游戏。这是Meta在AI创作工具上的又一个尝试，虽然还很早期，但说明大厂都在赌\"AI降低创作门槛\"这个方向。</p>\n      <p>Gemini Spark也在本周登陆Mac平台，带来实时追踪和更多应用支持。Google正在把它的AI助手从网页端推向桌面端，和Apple Intelligence、Copilot正面竞争。</p>\n      <p>AI内容创作工具正在从\"生成文字\"进化到\"生成完整的多模态内容包\"——文字、图片、音频、视频，一条龙服务。对内容创作者来说，这是最好的时代也是最坏的时代：<strong>生产工具前所未有地强大，但竞争也前所未有地激烈，差异化的门槛从\"能不能做出来\"变成了\"有没有独特的观点和审美\"</strong>。</p>",
-      "pull_quote": {"text": "当人人都能一键生成短视频时，唯一不可替代的是你想说什么——而不是你怎么把它做出来。", "attr": "—— Dawn Vision编辑部"},
+      "body_html_en": "      <p>In the future, making a &ldquo;3-minute explainer on a paper&rdquo; short video might just take one click.</p>\n      <p>On July 1, Google announced a new <strong>AI Clips feature</strong> for NotebookLM: any material you upload to NotebookLM — papers, notes, PDFs, research reports — can be automatically turned into a 60-second vertical TikTok/Reels/Shorts-style video. Videos include AI voiceover, subtitles, visual assets, and key information summaries, directly formatted for short video platforms. AI content creation tools have finally arrived at short-form video, the largest content battlefield.</p>\n\n      <h2>From Audio Podcasts to Vertical Video: NotebookLM's Evolution Path</h2>\n      <p>NotebookLM started as an AI note-taking assistant, then broke out with its &ldquo;AI Podcast&rdquo; feature — two-voice conversational audio summaries that turned dry papers into radio-show-like digestible podcasts. AI Clips extends the same logic: <strong>compressing complex information into short-form content suitable for mobile consumption</strong>.</p>\n      <p>Google's demo shows a typical scenario: upload a research report on climate change, and NotebookLM auto-generates a 60-second vertical video with AI voiceover explaining key findings, images and text animations synced to content, subtitles, intro and outro — basically a finished product ready for TikTok. The feature is available to Google AI Ultra and Pro subscribers.</p>\n      <p>What does this mean for content creators? It means the most time-consuming step — turning long-form content into short videos — could be dramatically compressed by AI. Previously a creator taking a deep article and making three short videos might spend half a day scripting, sourcing, and editing; now NotebookLM can generate a first draft in minutes, leaving creators only to adjust and refine. <strong>The barrier to running multiple accounts in a &lsquo;matrix playbook&rsquo; drops further</strong>.</p>\n\n      <h2>Creation and Filtering Accelerate Simultaneously</h2>\n      <p>Interestingly, the same week NotebookLM made AI content generation easier, library borrowing app Libby (by OverDrive) announced it would launch AI content filtering. OverDrive's new CEO Marc DeBevoise said: &ldquo;AI is our new frontier,&rdquo; but the platform will let readers <strong>filter out which books are AI-generated</strong>. Tidal also announced that starting July 15 it won't pay royalties for 100% AI-generated music, but will label it rather than outright banning it.</p>\n      <p>AI content &ldquo;creation&rdquo; and &ldquo;labeling/filtering&rdquo; are accelerating simultaneously, creating an interesting tension: <strong>production gets ever easier, while consumption requires ever more discernment of what's real</strong>. Platforms must balance &ldquo;embracing AI for efficiency&rdquo; and &ldquo;protecting human creators' rights.&rdquo; Tidal chose not to ban but to label and demonetize; Libby chose to give readers choice — both pragmatic middle paths.</p>\n      <p>Meta also quietly launched an interesting product: Pocket, an experimental gaming app built with vibe coding (AI-assisted programming), where users can generate and share interactive mini-games via text prompts. It's another Meta attempt at AI creation tools; still early, but it indicates Big Tech is betting on &ldquo;AI lowering creation barriers.&rdquo;</p>\n      <p>Gemini Spark also landed on Mac this week, bringing real-time tracking and more app support. Google is pushing its AI assistant from web to desktop, going head-to-head with Apple Intelligence and Copilot.</p>\n      <p>AI content creation tools are evolving from &ldquo;generating text&rdquo; to &ldquo;generating complete multimodal content packages&rdquo; — text, images, audio, video, full-service. For content creators, it's the best of times and the worst of times: <strong>production tools are unprecedentedly powerful, but competition is unprecedentedly fierce; the differentiation bar shifts from &lsquo;can you make it&rsquo; to &lsquo;do you have unique perspective and taste&rsquo;</strong>.</p>",
+      "pull_quote": {
+        "text": "当人人都能一键生成短视频时，唯一不可替代的是你想说什么——而不是你怎么把它做出来。",
+        "text_en": "When anyone can generate a short video in one click, the only irreplaceable thing is what you want to say — not how you make it.",
+        "attr": "—— Dawn Vision编辑部",
+        "attr_en": "— Dawn Vision Editorial"
+      },
       "cognitive_notes": "NotebookLM · AI视频 · TikTok · AI内容创作 · AI新媒体 · 竖屏视频 · AI过滤 · Libby · Tidal",
-      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 12 个源信号生成，经编辑部人工审核。素材来源：The Verge、TechCrunch。"
+      "cognitive_notes_en": "NotebookLM · AI video · TikTok · AI content creation · AI new media · vertical video · AI filtering · Libby · Tidal",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 12 个源信号生成，经编辑部人工审核。素材来源：The Verge、TechCrunch。",
+      "source_summary_en": "This article was generated from 12 source signals processed by the Dawn Vision cognitive engine, with editorial review. Sources: The Verge, TechCrunch.",
+      "title_short_en": "NotebookLM Generates TikTok Shorts"
     }
   ],
   "cao": {
     "slug": "jersey-mikes-ipo-ai-hype-sandwich",
     "title": "三明治店IPO狂提AI 22次：比被雷劈的风险还值得写进S-1？",
+    "title_en": "Sandwich Chain Jersey Mike's Mentions AI 22 Times in IPO Filing: More Worth Disclosing Than the Risk of Being Struck by Lightning?",
     "title_break": "三明治店IPO狂提AI 22次<br>比被雷劈风险还值得写？",
+    "title_break_en": "Sandwich Chain Drops AI 22 Times in IPO Filing<br>More Pressing Than Lightning Strike Risk?",
     "deck": "Jersey Mike's三明治连锁提交S-1上市文件，\"AI\"出现22次，\"天气\"提了5次，\"闪电\"0次。AI泡沫的荒诞缩影：卖潜艇堡的也要警示AI风险，比雷劈概率还高。",
+    "deck_en": "Sandwich chain Jersey Mike's filed its S-1, with &ldquo;AI&rdquo; appearing 22 times, &ldquo;weather&rdquo; 5 times, and &ldquo;lightning&rdquo; zero times. An absurd microcosm of the AI bubble: a sub shop warning about AI risks, rated more likely than getting struck by lightning.",
     "keywords": "Dawn Vision,Jersey Mike,IPO,AI泡沫,AI炒作,S-1,AI风险,三明治",
+    "keywords_en": "Dawn Vision, Jersey Mike's, IPO, AI bubble, AI hype, S-1, AI risk, sandwiches",
     "og_description": "三明治店Jersey Mike's IPO文件提AI 22次，AI泡沫的荒诞一幕。",
+    "og_description_en": "Sandwich chain Jersey Mike's mentions AI 22 times in IPO filing — an absurd snapshot of the AI bubble.",
     "read_time": "约 4 分钟阅读",
+    "read_time_en": "~4 min read",
     "word_count": 720,
     "sources": [
-      {"text": "TechCrunch - Jersey Mike's IPO illustrates how bad the AI hype has become", "url": "https://techcrunch.com/2026/07/02/jersey-mikes-ipo-illustrates-how-bad-the-ai-hype-has-become/"},
-      {"text": "SEC - Jersey Mike's S-1 Filing", "url": "https://www.sec.gov/Archives/edgar/data/2127043/000119312526293830/ck0002127043-20260702.htm"}
+      {
+        "text": "TechCrunch - Jersey Mike's IPO illustrates how bad the AI hype has become",
+        "url": "https://techcrunch.com/2026/07/02/jersey-mikes-ipo-illustrates-how-bad-the-ai-hype-has-become/"
+      },
+      {
+        "text": "SEC - Jersey Mike's S-1 Filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/2127043/000119312526293830/ck0002127043-20260702.htm"
+      }
     ],
     "body_html": "      <p>朋友们，今天AI圈的魔幻故事，已经超越了\"Agent删库\"\"AI复活死人\"的范畴，上升到了行为艺术的层面。</p>\n      <p>事情是这样的：美国一家叫Jersey Mike's的三明治连锁——就是那个卖潜艇堡（submarine sandwich）的，代言人是Danny DeVito的那家——本周提交了S-1上市文件。按说一个卖三明治的，上市和AI有什么关系？八竿子打不着对吧？</p>\n      <p>但TechCrunch的记者闲得无聊去翻了翻这份S-1，结果差点笑出声：<strong>\"artificial intelligence\"和缩写\"AI\"在这份文件里总共出现了22次</strong>。</p>\n\n      <h2>22次AI，0次闪电</h2>\n      <p>朋友们，你们品品。一个卖三明治的公司，在投资者风险警示章节里一本正经地提到AI风险，说什么\"我们开始在业务中使用AI技术\"。具体用AI干嘛呢？文件没说。怎么就成风险了呢？也没说。反正就是要提一嘴——<strong>不提AI，投资人可能以为你是一家过时的三明治店</strong>。</p>\n      <p>更搞笑的是对比数据。TechCrunch记者统计了一下：\"software\"（软件）提了52次，\"data\"（数据）提了112次（毕竟是连锁经营，确实用软件和数据），\"weather\"（天气）提了5次——极端天气确实可能影响食材供应和门店运营，这很合理。</p>\n      <p>那\"lightning\"（闪电/雷击）呢？<strong>0次</strong>。</p>\n      <p>你猜怎么着？2021年，Jersey Mike's在得克萨斯州的一家门店真的被雷劈过，还造成了财产损失。这种事情真真切切发生过，但在S-1风险提示里一次都没提。反而是AI——这个他们\"刚开始使用\"的技术，被郑重其事地写进了风险因素。</p>\n      <p>我来翻译一下这份S-1的潜台词：\"亲爱的投资人，我们是一家卖三明治的，但我们也在蹭AI，求高估值。AI可能会出问题（就像星巴克那个不会算数的AI库存工具，上线几个月就因为数不清咖啡豆、拖慢咖啡师速度而被悄悄砍掉了），但不管怎样我们提了AI，请给我们AI溢价，谢谢。\"</p>\n\n      <h2>AI泡沫的温度计</h2>\n      <p>其实Jersey Mike's不是第一个，也不会是最后一个蹭AI的公司。之前有个电竞公司靠在融资Pitch里加AI，多融了2000万美元；Bending Spoons——一家专门收购\"非AI\"老App然后翻新的公司——上市时也要强调AI。<strong>现在的资本市场，不提AI就像2000年不提.com、2017年不提区块链、2021年不提元宇宙一样</strong>，你都不好意思跟投资人打招呼。</p>\n      <p>TechCrunch记者说得好：他不确定AI hype从\"真实的兴奋\"到\"泡沫\"到\"得了吧\"的精确拐点在哪里，<strong>\"但当一个Danny DeVito代言的三明治店都在IPO文件里谈AI的时候，我们肯定离那个拐点很近了\"</strong>。</p>\n      <p>当然，公平地说，Jersey Mike's的AI风险提示可能是律师写的模板文案——就像每一份S-1都会写\"宏观经济下行可能影响业绩\"一样，AI只是2026年版的模板条款。星巴克确实栽过AI的跟头（那个不会数库存的AI系统），所以从法律风险角度提一嘴也不算完全空穴来风。</p>\n      <p>但是22次？三明治啊朋友。你家的AI是在帮你切生菜还是在帮你算加盟费？22次，差不多每15页提一次，比天气风险重要4倍，比被雷劈的风险重要无穷大倍。</p>\n      <p>说真的，我甚至有点期待它的路演PPT里出现\"AI赋能的三明治定制引擎\"\"大模型驱动的供应链优化\"之类的黑话。毕竟在2026年，如果你不把自己包装成AI公司，你都不好意思上市。</p>",
-    "pull_quote": {"text": "当一个卖三明治的都开始在IPO文件里警示AI风险的时候，AI泡沫的温度可能已经到了三分熟——和他们家的潜艇堡一样。", "attr": "—— 一位网友在X上的评论"},
+    "body_html_en": "      <p>Friends, today's AI absurdity has transcended &ldquo;Agent drops the database&rdquo; and &ldquo;AI resurrects the dead&rdquo; — it's ascended to the level of performance art.</p>\n      <p>Here's what happened: an American sandwich chain called Jersey Mike's — you know, the sub place with Danny DeVito as their spokesperson — filed S-1 IPO paperwork this week. A sandwich chain going public — what does that have to do with AI? Not a thing, right?</p>\n      <p>But a TechCrunch reporter, bored enough to flip through the S-1, nearly laughed out loud: <strong>&ldquo;artificial intelligence&rdquo; and its abbreviation &ldquo;AI&rdquo; appeared a total of 22 times in the filing</strong>.</p>\n\n      <h2>22 Mentions of AI, 0 of Lightning</h2>\n      <p>Friends, let that sink in. A sandwich company, in its investor risk factors section, earnestly mentions AI risks, claiming &ldquo;we are beginning to use AI technology in our business.&rdquo; What exactly are they using AI for? The filing doesn't say. How is that a risk? Doesn't say either. The point is just to mention it — <strong>without mentioning AI, investors might think you're a dated sandwich shop</strong>.</p>\n      <p>Even funnier is the comparison. The TechCrunch reporter counted: &ldquo;software&rdquo; was mentioned 52 times, &ldquo;data&rdquo; 112 times (it's a chain, they do use software and data, fair enough), &ldquo;weather&rdquo; 5 times — extreme weather can indeed affect ingredient supply and store operations, totally reasonable.</p>\n      <p>And &ldquo;lightning&rdquo;? <strong>Zero times</strong>.</p>\n      <p>Guess what? In 2021, a Jersey Mike's location in Texas actually got struck by lightning, causing property damage. It literally happened, but wasn't mentioned once in the S-1 risk factors. Yet AI — a technology they're &ldquo;just beginning to use&rdquo; — got written into risk factors with a straight face.</p>\n      <p>Let me translate the subtext of this S-1: &ldquo;Dear investors, we sell sandwiches, but we're name-dropping AI too, please give us a higher valuation. AI might cause problems (like Starbucks' AI inventory tool that couldn't count coffee beans and slowed down baristas so badly it got quietly killed after a few months), but hey, we mentioned AI, so please give us that AI premium, thanks.&rdquo;</p>\n\n      <h2>The AI Bubble Thermometer</h2>\n      <p>Jersey Mike's isn't the first and won't be the last company to name-drop AI. There was the esports company that raised an extra $20 million by adding AI to its pitch deck; Bending Spoons — a company that acquires &ldquo;non-AI&rdquo; old apps and refurbishes them — also made sure to emphasize AI when going public. <strong>In today's capital markets, not mentioning AI is like not mentioning &lsquo;.com&rsquo; in 2000, &lsquo;blockchain&rsquo; in 2017, or &lsquo;metaverse&rsquo; in 2021</strong> — you can't even show your face to investors.</p>\n      <p>The TechCrunch reporter put it well: he's not sure exactly where AI hype crosses from &ldquo;genuine excitement&rdquo; to &ldquo;bubble&rdquo; to &ldquo;give me a break,&rdquo; but <strong>&ldquo;when a Danny DeVito-endorsed sandwich shop is talking about AI in its IPO filing, we must be getting close to that inflection point.&rdquo;</strong></p>\n      <p>To be fair, Jersey Mike's AI risk disclosure might be boilerplate written by lawyers — just as every S-1 includes &ldquo;macroeconomic downturn could affect performance,&rdquo; AI is just the 2026 version of template clauses. Starbucks did faceplant with AI (that inventory system that couldn't count stock), so from a legal risk perspective the mention isn't totally baseless.</p>\n      <p>But 22 times? These are sandwiches, people. Is your AI helping you chop lettuce or calculate franchise fees? Twenty-two times — roughly once every 15 pages, four times more important than weather risk, infinitely more important than getting struck by lightning.</p>\n      <p>Honestly, I'm half-expecting the roadshow deck to feature buzzphrases like &ldquo;AI-empowered sandwich customization engine&rdquo; and &ldquo;LLM-driven supply chain optimization.&rdquo; After all, in 2026 if you don't package yourself as an AI company, you're embarrassed to go public.</p>",
+    "pull_quote": {
+      "text": "当一个卖三明治的都开始在IPO文件里警示AI风险的时候，AI泡沫的温度可能已经到了三分熟——和他们家的潜艇堡一样。",
+      "text_en": "When a sandwich shop starts warning about AI risks in its IPO filing, the AI bubble temperature might be medium-rare — same as their subs.",
+      "attr": "—— 一位网友在X上的评论",
+      "attr_en": "— A commenter on X"
+    },
     "cognitive_notes": "Jersey Mike · IPO · AI泡沫 · AI炒作 · S-1 · AI风险 · 三明治 · 科技泡沫",
+    "cognitive_notes_en": "Jersey Mike's · IPO · AI bubble · AI hype · S-1 · AI risk · sandwiches · tech bubble",
     "source_summary": "本文基于 Dawn Vision 认知引擎处理的公开信息整理，素材来源：TechCrunch、SEC。",
-    "footnote_tip": "温馨提示：1. 看到任何公司在招股书/融资材料里狂提AI但不说具体用在哪，先打个问号；2. AI是工具不是魔法，三明治不会因为加了AI就变好吃（除非AI真的能优化配方）；3. 历史经验：当卖三明治的都开始蹭某个技术概念的时候，那个概念的估值泡沫可能快到顶了——参考2000年的宠物店.com。"
+    "source_summary_en": "This article is based on public information processed by the Dawn Vision cognitive engine. Sources: TechCrunch, SEC.",
+    "footnote_tip": "温馨提示：1. 看到任何公司在招股书/融资材料里狂提AI但不说具体用在哪，先打个问号；2. AI是工具不是魔法，三明治不会因为加了AI就变好吃（除非AI真的能优化配方）；3. 历史经验：当卖三明治的都开始蹭某个技术概念的时候，那个概念的估值泡沫可能快到顶了——参考2000年的宠物店.com。",
+    "footnote_tip_en": "Friendly reminders: 1. When you see any company dropping AI repeatedly in an S-1 or fundraising deck without explaining specific uses, raise an eyebrow first. 2. AI is a tool, not magic — sandwiches don't taste better just because you added AI (unless AI actually optimizes the recipe). 3. Historical lesson: when sandwich shops start jumping on a technology concept, that concept's valuation bubble might be nearing its top — see Pets.com in 2000.",
+    "title_short_en": "Jersey Mike's AI-Fueled S-1"
   }
 }

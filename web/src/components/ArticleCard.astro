@@ -1,14 +1,7 @@
 ---
 /**
- * ArticleCard — 文章卡片
+ * ArticleCard — 文章卡片（支持中英双语）
  * @param variant 'cover' | 'grid' | 'brief' | 'cao-item'
- *   - cover: Focus封面大卡片
- *   - grid: Brief网格卡片（标签tag显示中文分类）
- *   - cao-item: Cao列表项
- * @param article 文章数据
- * @param issueNum 期数号
- * @param issueDate 期数日期显示
- * @param showCategory 是否显示分类标签
  */
 import '@styles/components/article-card.css';
 
@@ -18,9 +11,12 @@ export interface Props {
     slug: string;
     title: string;
     deck: string;
+    title_en?: string;
+    deck_en?: string;
     category?: string;
     category_en?: string;
     read_time?: string;
+    read_time_en?: string;
   };
   issueNum?: string | number;
   issueDate?: string;
@@ -33,7 +29,7 @@ const {
   article,
   issueNum,
   issueDate,
-  href = `/articles/${article.slug}`,
+  href = `/articles/${article.slug}/`,
   showCategory = true,
 } = Astro.props;
 
@@ -41,56 +37,81 @@ function pad(n: string | number) {
   return String(n).padStart(3, '0');
 }
 
-// Format date as YYYY.MM.DD for display
 function formatDate(dateStr?: string) {
   if (!dateStr) return '';
   return dateStr.replace(/-/g, '.');
 }
 
-// Chinese-only category for grid cards (translation support)
 const categoryText = article.category || '';
+const categoryEn = article.category_en || '';
+const hasEn = !!(article.title_en && article.deck_en);
 ---
 
 <article class={`card card--${variant}`}>
   {variant === 'grid' ? (
     <Fragment>
       {showCategory && categoryText && (
-        <span class="card__tag">{categoryText}</span>
+        <Fragment>
+          <span class="card__tag dv-zh">{categoryText}</span>
+          {hasEn && categoryEn && <span class="card__tag dv-en">{categoryEn}</span>}
+        </Fragment>
       )}
       <h3 class="card__title">
-        <a href={href} set:html={article.title} />
+        <a href={href}>
+          <span class="dv-zh" set:html={article.title}></span>
+          {hasEn && <span class="dv-en" set:html={article.title_en}></span>}
+        </a>
       </h3>
-      <p class="card__deck">{article.deck}</p>
+      <p class="card__deck dv-zh">{article.deck}</p>
+      {hasEn && <p class="card__deck dv-en">{article.deck_en}</p>}
     </Fragment>
   ) : variant === 'cao-item' ? (
     <Fragment>
-      <div class="card__meta notranslate" translate="no">
+      <div class="card__meta notranslate">
         {issueNum && <span>Issue {pad(issueNum)} · {formatDate(issueDate)}</span>}
       </div>
       <h3 class="card__title">
-        <a href={href} set:html={article.title} />
+        <a href={href}>
+          <span class="dv-zh" set:html={article.title}></span>
+          {hasEn && <span class="dv-en" set:html={article.title_en}></span>}
+        </a>
       </h3>
-      <p class="card__deck">{article.deck}</p>
+      <p class="card__deck dv-zh">{article.deck}</p>
+      {hasEn && <p class="card__deck dv-en">{article.deck_en}</p>}
     </Fragment>
   ) : variant === 'cover' ? (
     <Fragment>
       <h3 class="card__title">
-        <a href={href} set:html={article.title} />
+        <a href={href}>
+          <span class="dv-zh" set:html={article.title}></span>
+          {hasEn && <span class="dv-en" set:html={article.title_en}></span>}
+        </a>
       </h3>
-      <p class="card__deck">{article.deck}</p>
+      <p class="card__deck dv-zh">{article.deck}</p>
+      {hasEn && <p class="card__deck dv-en">{article.deck_en}</p>}
       <div class="card__byline">
-        <a href={href}>Dawn Vision · {article.read_time} →</a>
+        <a href={href}>
+          <span class="dv-zh">Dawn Vision · {article.read_time} →</span>
+          {hasEn && <span class="dv-en">Dawn Vision · {article.read_time_en || '~5 min read'} →</span>}
+        </a>
       </div>
     </Fragment>
   ) : (
     <Fragment>
       {showCategory && categoryText && (
-        <div class="card__category">{categoryText}</div>
+        <Fragment>
+          <div class="card__category dv-zh">{categoryText}</div>
+          {hasEn && categoryEn && <div class="card__category dv-en">{categoryEn}</div>}
+        </Fragment>
       )}
       <h3 class="card__title">
-        <a href={href} set:html={article.title} />
+        <a href={href}>
+          <span class="dv-zh" set:html={article.title}></span>
+          {hasEn && <span class="dv-en" set:html={article.title_en}></span>}
+        </a>
       </h3>
-      <p class="card__deck">{article.deck}</p>
+      <p class="card__deck dv-zh">{article.deck}</p>
+      {hasEn && <p class="card__deck dv-en">{article.deck_en}</p>}
     </Fragment>
   )}
 </article>

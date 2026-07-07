@@ -9,20 +9,20 @@ export async function GET(context: APIContext) {
 
   const urls: { loc: string; lastmod: string; changefreq: string; priority: string }[] = [];
 
-  // Static pages
+  // Static pages — all URLs end with trailing slash (matches build.format: 'directory')
   urls.push({ loc: `${site}/`, lastmod: now, changefreq: 'daily', priority: '1.0' });
-  urls.push({ loc: `${site}/articles`, lastmod: now, changefreq: 'daily', priority: '0.9' });
-  urls.push({ loc: `${site}/cao`, lastmod: now, changefreq: 'daily', priority: '0.8' });
-  urls.push({ loc: `${site}/about`, lastmod: '2026-07-03', changefreq: 'monthly', priority: '0.5' });
+  urls.push({ loc: `${site}/articles/`, lastmod: now, changefreq: 'daily', priority: '0.9' });
+  urls.push({ loc: `${site}/cao/`, lastmod: now, changefreq: 'daily', priority: '0.8' });
+  urls.push({ loc: `${site}/about/`, lastmod: '2026-07-03', changefreq: 'monthly', priority: '0.5' });
 
-  // Article pages
+  // Article pages — directory format requires trailing slash
   for (const issue of issues) {
     const date = issue.data.issue.date;
     const isoDate = new Date(date).toISOString().split('T')[0];
 
     // Cover
     urls.push({
-      loc: `${site}/articles/${issue.data.cover.slug}`,
+      loc: `${site}/articles/${issue.data.cover.slug}/`,
       lastmod: isoDate,
       changefreq: 'monthly',
       priority: '0.8',
@@ -31,7 +31,7 @@ export async function GET(context: APIContext) {
     // Briefs
     for (const brief of issue.data.briefs) {
       urls.push({
-        loc: `${site}/articles/${brief.slug}`,
+        loc: `${site}/articles/${brief.slug}/`,
         lastmod: isoDate,
         changefreq: 'monthly',
         priority: '0.7',
@@ -41,7 +41,7 @@ export async function GET(context: APIContext) {
     // Cao
     if (issue.data.cao) {
       urls.push({
-        loc: `${site}/articles/${issue.data.cao.slug}`,
+        loc: `${site}/articles/${issue.data.cao.slug}/`,
         lastmod: isoDate,
         changefreq: 'monthly',
         priority: '0.6',
