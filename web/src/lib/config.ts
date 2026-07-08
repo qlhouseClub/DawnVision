@@ -1,9 +1,12 @@
+// 支持通过环境变量 SITE_URL 切换域名（国内/国际部署）
+const SITE_URL = import.meta.env.SITE_URL || 'https://www.dawnvision.net';
+
 export const siteConfig = {
   name: 'Dawn Vision',
   tagline: '穿越嘈杂，洞见留声',
   englishTagline: 'AI Insight Daily',
   description: 'Dawn Vision — AI深度观察日刊，每日精选AI行业焦点，穿透信息噪声。焦点资讯+槽点吐槽，AI news & tech rant.',
-  url: 'https://www.dawnvision.net',
+  url: SITE_URL,
   defaultLocale: 'zh-CN',
   author: 'Dawn Vision 编辑部',
   itemsPerPage: 7, // 每期7篇（1 cover + 6 briefs）
