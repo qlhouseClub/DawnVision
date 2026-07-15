@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.dawnvision.net/</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.dawnvision.net/articles/</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.dawnvision.net/cao/</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -23,6 +23,102 @@
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/free-ai-coding-top-tier-cursor-copilot-competition/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/openai-agentic-era-ai-investment-useful-work-per-dollar/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/data-science-teams-chatgpt-work-codex-use-cases/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/sales-teams-chatgpt-work-pipeline-meeting-prep/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/google-images-25th-anniversary-visual-search-multimodal/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/google-deepmind-atl-saathi-india-ai-education/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/bilibili-ai-creation-contest-coin-ranking-5000-creators/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/sk-hynix-15-percent-crash-yangtze-memory-stock-options/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/ai-anthropomorphic-regulation-companion-agents-shutdown-july15/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/microsoft-ai-coding-24-percent-more-prs-social-adoption/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/limx-dynamics-2b-pre-ipo-humanoid-robot-mass-production/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/zhipu-ai-314b-hk-placement-llm-funding-arms-race/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/ios-27-public-beta-siri-ai-apple-intelligence-gemini/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/video-agent-100-skills-director-level-workflow/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/bytedance-autonomous-driving-seed-world-model-volcengine/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/gpt-5-6-sol-deletes-files-proves-math-conjecture-ai-schizophrenia/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.dawnvision.net/articles/apple-sues-openai-trade-secret-ai-hardware-war/</loc>
