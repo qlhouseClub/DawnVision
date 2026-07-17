@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.dawnvision.net/</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.dawnvision.net/articles/</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.dawnvision.net/cao/</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -23,6 +23,102 @@
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/zhipu-ai-1b-arr-15x-growth-china-llm-commercialization/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/apple-intelligence-china-approved-alibaba-baidu-qwen/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/roblox-ai-game-creation-build-mobile-ugc/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/alibaba-1688-utp-universal-trade-protocol-a2a-b2b/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/sugon-8000-waic-20x-compute-density-100k-card-interconnect/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/ant-group-agent-business-three-layer-ai-fu-health/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/eu-google-android-search-ai-interoperability-antitrust/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/apple-openai-ha-ha-trade-secret-lawsuit/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/hyundai-boston-dynamics-full-acquisition-embodied-ai-mass-production/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/openai-codex-230-keyboard-ai-coding-hardware/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/anthropic-blackstone-ode-enterprise-ai-implementation/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/apple-intelligence-china-approved-qwen-end-side-ai/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/vint-cerf-ai-agent-internet-identity-standard/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/suno-hack-youtube-training-data-copyright/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/emergent-india-ai-coding-unicorn-130m-series-c/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/grok-build-upload-entire-codebase-google-cloud/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.dawnvision.net/articles/free-ai-coding-top-tier-cursor-copilot-competition/</loc>
