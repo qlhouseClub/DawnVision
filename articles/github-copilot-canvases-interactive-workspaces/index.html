@@ -1,0 +1,123 @@
+<!DOCTYPE html><html lang="zh-CN" data-lang="zh"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>GitHub Copilot Canvases发布：AI编程从对话框走向交互式工作区 — Dawn Vision</title><meta name="description" content="GitHub发布Copilot Canvases交互式画布工作区，将AI编程从对话模式转向可视化工作空间模式，AI编程工具交互范式升级。"><meta name="author" content="Dawn Vision 编辑部"><meta name="keywords" content="Dawn Vision, AI资讯, AI日报, 人工智能, 大模型, AI Agent, GPT, Claude, 具身智能, AI商业化, 一人公司, AI编程, 深度分析, AI观察, LLM, AIGC, 槽点, 吐槽, AI吐槽, Cao, AI吐槽专栏, AI趣闻, AI翻车, AI fails, AI roasting, tech rant, AI humor"><link rel="canonical" href="https://www.dawnvision.net/articles/github-copilot-canvases-interactive-workspaces/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&family=Noto+Sans+SC:wght@400;500;700&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&family=Noto+Sans+SC:wght@400;500;700&display=swap"></noscript><meta property="og:type" content="article"><meta property="og:title" content="GitHub Copilot Canvases发布：AI编程从对话框走向交互式工作区 — Dawn Vision"><meta property="og:description" content="GitHub发布Copilot Canvases交互式画布工作区，将AI编程从对话模式转向可视化工作空间模式，AI编程工具交互范式升级。"><meta property="og:url" content="https://www.dawnvision.net/articles/github-copilot-canvases-interactive-workspaces/"><meta property="og:image" content="https://www.dawnvision.net/images/og-image.png"><meta property="og:site_name" content="Dawn Vision"><meta property="og:locale" content="zh_CN"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="GitHub Copilot Canvases发布：AI编程从对话框走向交互式工作区 — Dawn Vision"><meta name="twitter:description" content="GitHub发布Copilot Canvases交互式画布工作区，将AI编程从对话模式转向可视化工作空间模式，AI编程工具交互范式升级。"><meta name="twitter:image" content="https://www.dawnvision.net/images/og-image.png"><meta name="robots" content="index, follow"><meta name="applicable-device" content="pc,mobile"><meta name="format-detection" content="telephone=no"><meta name="baidu-site-verification" content><script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"GitHub Copilot Canvases发布：AI编程从对话框走向交互式工作区","description":"GitHub发布Copilot Canvases交互式画布工作区，将AI编程从对话模式转向可视化工作空间模式，AI编程工具交互范式升级。","datePublished":"2026-07-22","dateModified":"2026-07-22","author":{"@type":"Organization","name":"Dawn Vision 编辑部"},"publisher":{"@type":"Organization","name":"Dawn Vision","url":"https://www.dawnvision.net/","logo":{"@type":"ImageObject","url":"https://www.dawnvision.net/images/og-image.png","width":1200,"height":630}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.dawnvision.net/articles/github-copilot-canvases-interactive-workspaces"},"url":"https://www.dawnvision.net/articles/github-copilot-canvases-interactive-workspaces","inLanguage":"zh-CN","articleSection":"AI 编程 · 工具竞争","keywords":"Dawn Vision, GitHub Copilot, Canvases, AI编程, 交互式工作区, 编程工具, Cursor, AI Agent编程","wordCount":780}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://www.dawnvision.net/"},{"@type":"ListItem","position":2,"name":"文章","item":"https://www.dawnvision.net/articles/"},{"@type":"ListItem","position":3,"name":"GitHub Copilot Canvases发布：AI编程从对话框走向交互式工作区"}]}</script><style>
+    /* Language toggle: show/hide content based on data-lang */
+    :root {
+      --dv-lang: 'zh';
+    }
+    html[data-lang="zh"] .dv-en { display: none !important; }
+    html[data-lang="en"] .dv-zh { display: none !important; }
+
+    /* When English is active, swap visible text for title/description */
+    html[data-lang="en"] head > title { display: none; }
+
+    /* Floating language switch button */
+    .dv-lang-switch {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 900;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: none;
+      background: #ffffff;
+      color: #002FA7;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .dv-lang-switch:hover {
+      background: #002FA7;
+      color: #fff;
+      transform: scale(1.08);
+      box-shadow: 0 4px 24px rgba(0,47,167,0.3);
+    }
+    @media (max-width: 700px) {
+      .dv-lang-switch {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+        font-size: 10px;
+      }
+    }
+  </style><link rel="stylesheet" href="/_astro/502.Dsp8BFs5.css">
+<style>@keyframes blobFloat{0%,to{transform:translate(0) scale(1)}33%{transform:translate(3vw,4vh) scale(1.05)}66%{transform:translate(-2vw,-3vh) scale(.97)}}.blobs--home{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--home .blob{position:absolute;border-radius:50%;filter:blur(120px);opacity:.5;animation:blobFloat 25s ease-in-out infinite;will-change:transform}.blobs--home .blob--1{width:50vw;height:50vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-5%;left:-5%;animation-delay:0s;animation-duration:30s}.blobs--home .blob--2{width:55vw;height:55vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-10s;animation-duration:28s;opacity:.6}.blobs--home .blob--3{width:40vw;height:40vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:30%;right:5%;animation-delay:-15s;animation-duration:32s;opacity:.4}.blobs--home .blob--4{width:35vw;height:35vw;background:radial-gradient(circle,rgba(80,130,255,.3) 0%,transparent 70%);top:0%;left:25%;animation-delay:-5s;animation-duration:35s;opacity:.35}.blobs--home .blob--5,.blobs--home .blob--6{display:none}.blobs--section{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--section .blob{position:absolute;border-radius:50%;filter:blur(100px);opacity:.45;animation:blobFloat 28s ease-in-out infinite;will-change:transform}.blobs--section .blob--1{width:45vw;height:45vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-10%;left:-8%;animation-delay:0s;animation-duration:30s}.blobs--section .blob--2{width:50vw;height:50vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-8s;animation-duration:26s;opacity:.55}.blobs--section .blob--3{width:35vw;height:35vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:20%;right:5%;animation-delay:-14s;animation-duration:32s}.blobs--section .blob--4,.blobs--section .blob--5{display:none}@media(max-width:700px){.blobs--home .blob{filter:blur(80px)}.blobs--section .blob{filter:blur(60px)}}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.CY1OParl.css"></head> <body class>  <a href="#main-content" class="skip-link">跳至主要内容</a>  <nav class="nav nav--inner notranslate" role="navigation" aria-label="主导航" data-pagefind-ignore translate="no"> <div class="nav__inner"> <div class="nav__group"> <a href="/" class="nav__link ">Home</a> <a href="/articles/" class="nav__link nav__link--active" aria-current="page">Articles</a> </div> <a href="/" class="nav__brand" aria-label="Dawn Vision 首页" translate="no">
+Dawn Vision
+<small>Daily Briefing</small> </a> <div class="nav__group"> <a href="/cao/" class="nav__link ">Cao</a> <a href="/about/" class="nav__link ">About</a> </div> </div> </nav> <main id="main-content"> <a href="/articles/" class="dv-back-btn" aria-label="返回文章列表" title="返回文章列表"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"> <polyline points="15 18 9 12 15 6"></polyline> </svg> </a> <section class="article-hero "> <div class="blobs blobs--section" aria-hidden="true"> <div class="blob blob--1"></div><div class="blob blob--2"></div><div class="blob blob--3"></div><div class="blob blob--4"></div><div class="blob blob--5"></div> </div> <div class="container--narrow" style="position:relative;z-index:1;"> <div data-pagefind-meta="category" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">AI 编程 · 工具竞争</div>  <h1 class="article-hero__title dv-zh" data-pagefind-meta="title">GitHub Copilot Canvases发布<br>AI编程走向交互式工作区</h1>  <h1 class="article-hero__title dv-en">GitHub Copilot Canvases Launches<br>AI Coding Goes Interactive</h1> <p class="article-hero__deck dv-zh">Copilot推出可视化画布工作区，AI变成可以拖拽、探索、操作的交互式空间，而不是一问一答的聊天机器人。AI编程工具的交互范式正在被重写。</p> <p class="article-hero__deck dv-en">Copilot launches visual canvas workspaces where AI becomes an interactive space you can drag, explore, and manipulate — not a question-and-answer chatbot. The interaction paradigm for AI coding tools is being rewritten.</p> <div class="article-hero__meta"> <span class="article-hero__issue notranslate">No.019</span> <span>2026.07.22</span> <span class="dv-zh">约 5 分钟阅读</span> <span class="dv-en">~5 min read</span> </div> </div> </section> <article class="container--narrow" style="padding-top: clamp(40px, 6vw, 64px); padding-bottom: 0;">  <div class="article-body dv-zh" data-pagefind-body><p>7月22日，GitHub正式发布Copilot Canvases——一个交互式画布工作区，将AI编程从传统的对话框模式带入了可视化空间时代。<strong>这不是一次功能更新，这是一次交互范式的迁移</strong>。</p>
+<h2>从聊天到画布：编程交互的第三次迁移</h2>
+<p>回顾AI编程工具的演进：第一代是代码补全（Copilot初版），AI在你写代码时偷偷给建议；第二代是聊天对话（ChatGPT/Cursor Chat），你用自然语言描述需求，AI返回代码。</p>
+<p>Canvases代表第三代：<strong>AI变成一个可以操作的工作空间</strong>。你不再是"问AI一个问题，等它回答"，而是在一个可视化画布上和AI一起工作——拖拽组件、探索工作流、在多个文件之间可视化关联、直接在画布上操作和修改代码。</p>
+<p>GitHub在博客中描述："Canvases将AI变成交互式工作区，你可以在其中可视化信息、探索工作流、在复杂任务中采取行动。"</p>
+<p>这听起来很像Cursor的Composer模式，但更进了一步：Canvases不是IDE里的一个面板，它本身就是工作区。</p>
+<h2>为什么画布模式是未来</h2>
+<p>对话模式的根本问题是：<strong>上下文窗口是线性的，但编程工作不是线性的</strong>。当你在做一个涉及10个文件的重构时，你需要同时看到所有相关代码、理解它们之间的依赖关系、在多个位置并行修改。聊天窗口里的文字流天然不适合这种工作。</p>
+<p>画布解决了这个问题：空间是二维的，你可以把相关代码块放在相邻位置，画箭头表示依赖关系，在不同区域并行处理不同子任务。AI在画布上不是一个"说话的头像"，而是一个可以操作的合作者——它可以高亮显示需要修改的区域，直接在画布上生成diff，让你拖拽调整架构。</p>
+<p>这也符合人类处理复杂任务的认知模式：我们思考复杂系统时，本能地会画图、做笔记、在白板上移动便利贴。画布就是给AI编程提供了一块数字白板。</p>
+<h2>AI编程工具的战争升级</h2>
+<p>Canvases的发布标志着AI编程工具的竞争从"谁的模型更强"转向"谁的交互更好"。Cursor在Agent模式和Composer上领先了大半年，GitHub现在用Canvases直接对标。</p>
+<p>但竞争对开发者是好事。几个可以预见的趋势：</p>
+<p><strong>IDE将从"代码编辑器"变成"AI工作区"</strong>。未来的IDE不会以文件树和文本编辑器为中心，而会以画布和Agent为中心。文件树会变成画布上的一个图层，文本编辑变成多种交互方式之一。</p>
+<p><strong>多Agent协作将原生支持</strong>。在画布上，你可以同时让多个Agent处理不同任务：一个重构前端，一个写测试，一个审查安全问题，它们的工作区域在画布上可视化呈现，你来协调。</p>
+<p><strong>可视化调试将成为标配</strong>。当代码在画布上生成和修改，调试也会在画布上进行——AI可以直接可视化执行流程、标出性能瓶颈、在画布上展示调用栈。</p>
+<p>当然，Canvases还在早期阶段。但方向已经很清晰了：<strong>编程的未来不是"你和AI聊天"，而是"你和AI在同一个空间里工作"</strong>。</p>
+<p>明天见。</p>
+<div class="article-sources">
+  <div class="article-sources__label">Sources · 参考来源</div>
+  <ul class="article-sources__list">
+    <li><a href="https://github.blog/ai-and-ml/github-copilot/how-to-build-interactive-experiences-with-canvases/" target="_blank" rel="noopener noreferrer nofollow">GitHub Blog - How to build interactive experiences with canvases</a></li>
+    <li><span style="color:var(--color-text-light);text-decoration:underline;text-decoration-style:dotted;cursor:default;">Hacker News - Community discussion</span></li>
+  </ul>
+  <p class="article-sources__note">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，标题、观点、行文均为原创，仅供参考，不构成任何投资建议或决策依据。如有侵权请联系删除。</p>
+</div>
+<div class="article-page__footnote">
+  <p>本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：GitHub Blog、Hacker News。</p>
+  <p>相关入库笔记：GitHub Copilot · Canvases · AI编程 · 交互式工作区 · 编程工具交互 · Cursor Composer · AI工作区</p>
+</div></div>  <div class="article-body dv-en"><p>On July 22, GitHub officially launched Copilot Canvases — an interactive canvas workspace that moves AI coding from the traditional chat box paradigm into the era of visual spaces. <strong>This isn't a feature update; it's an interaction paradigm shift</strong>.</p>
+<h2>From Chat to Canvas: The Third Migration of Programming Interaction</h2>
+<p>Looking at the evolution of AI coding tools: the first generation was code completion (early Copilot), where AI surreptitiously suggested lines as you typed. The second generation was chat conversations (ChatGPT / Cursor Chat), where you described requirements in natural language and AI returned code.</p>
+<p>Canvases represents the third generation: <strong>AI becomes an actionable workspace</strong>. You're no longer "asking AI a question and waiting for an answer" — you're working alongside AI on a visual canvas: dragging components, exploring workflows, visualizing connections between files, manipulating and modifying code directly on the canvas.</p>
+<p>GitHub describes it: "Canvases turn AI into interactive workspaces where you can visualize information, explore workflows, and take action across complex tasks."</p>
+<p>This sounds similar to Cursor's Composer mode, but goes further: Canvases isn't a panel within your IDE — it is the workspace itself.</p>
+<h2>Why Canvas Mode Is the Future</h2>
+<p>The fundamental problem with chat mode: <strong>context windows are linear, but programming work is not</strong>. When you're doing a refactor across 10 files, you need to see all the related code simultaneously, understand dependencies between them, and make changes in parallel across multiple locations. A linear stream of text in a chat window is inherently unsuited for this kind of work.</p>
+<p>Canvas solves this: space is two-dimensional. You can place related code blocks adjacent to each other, draw arrows for dependencies, work on different subtasks in different regions simultaneously. On the canvas, AI isn't a "talking head" — it's a manipulable collaborator that can highlight areas needing changes, generate diffs directly on the canvas, and let you drag to adjust architecture.</p>
+<p>This aligns with how humans naturally process complex tasks: when we think about complex systems, we instinctively draw diagrams, take notes, move sticky notes around whiteboards. Canvases provides a digital whiteboard for AI coding.</p>
+<h2>The AI Coding Tool War Escalates</h2>
+<p>Canvases marks a shift in AI coding tool competition from "who has the stronger model" to "who has the better interaction." Cursor led on Agent mode and Composer for the better part of a year; GitHub now directly targets that with Canvases.</p>
+<p>But competition is good for developers. Several predictable trends are emerging:</p>
+<p><strong>IDEs will shift from "code editors" to "AI workspaces."</strong>Future IDEs won't center on file trees and text editors — they'll center on canvases and agents. The file tree becomes one layer on the canvas; text editing becomes one of several interaction modes.</p>
+<p><strong>Multi-agent collaboration will be natively supported.</strong>On a canvas, you can have multiple agents working on different tasks simultaneously: one refactoring frontend, one writing tests, one auditing security. Their work areas appear visually on the canvas; you coordinate.</p>
+<p><strong>Visual debugging will become standard.</strong>When code is generated and modified on canvas, debugging happens on canvas too — AI can directly visualize execution flows, flag performance bottlenecks, and display call stacks on the canvas surface.</p>
+<p>Canvases is still in early stages, of course. But the direction is clear: <strong>the future of programming isn't "you chatting with AI" — it's "you and AI working in the same space."</strong></p>
+<p>See you tomorrow.</p>
+<div class="article-sources">
+  <div class="article-sources__label">Sources · 参考来源</div>
+  <ul class="article-sources__list">
+    <li><a href="https://github.blog/ai-and-ml/github-copilot/how-to-build-interactive-experiences-with-canvases/" target="_blank" rel="noopener noreferrer nofollow">GitHub Blog - Building interactive experiences with Canvases</a></li>
+    <li><span style="color:var(--color-text-light);text-decoration:underline;text-decoration-style:dotted;cursor:default;">Hacker News - Community discussion</span></li>
+  </ul>
+  <p class="article-sources__note">Disclaimer: This article is original secondary analysis by Dawn Vision. All titles, opinions, and writing are original. For reference only; not investment advice.</p>
+</div>
+<div class="article-page__footnote">
+  <p>This article was generated by the Dawn Vision cognitive engine processing 8 source signals, with human editorial review. Sources: GitHub Blog, Hacker News.</p>
+  <p>Related notes: GitHub Copilot · Canvases · AI coding · interactive workspaces · tool interaction · Cursor Composer · AI workspace</p>
+</div></div>   <blockquote class="article-pull-quote dv-zh"> <p class="article-pull-quote__text">编程的未来不是你和AI聊天，而是你和AI在同一个空间里工作。</p> <cite class="article-pull-quote__attr">—— Dawn Vision编辑部</cite> </blockquote> <blockquote class="article-pull-quote dv-en"> <p class="article-pull-quote__text">The future of programming isn&#39;t chatting with AI — it&#39;s working alongside AI in the same space.</p> <cite class="article-pull-quote__attr">— The Dawn Vision Editorial Desk</cite> </blockquote>     <div class="article-cognitive dv-zh">GitHub Copilot · Canvases · AI编程 · 交互式工作区 · 编程范式 · Cursor · AI IDE</div> <div class="article-cognitive dv-en">GitHub Copilot · Canvases · AI coding · interactive workspaces · programming paradigms · Cursor · AI IDE</div>  <div class="article-sources"> <div class="article-sources__title notranslate"> <span class="dv-zh">Sources · 信源</span> <span class="dv-en">Sources</span> </div> <ul class="article-sources__list"> <li class="article-sources__item"> <a href="https://github.blog/ai-and-ml/github-copilot/how-to-build-interactive-experiences-with-canvases/" target="_blank" rel="noopener noreferrer">GitHub Blog - How to build interactive experiences with canvases</a> </li><li class="article-sources__item"> <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News - Discussion</a> </li> </ul>  <p class="article-source-summary dv-zh">本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：GitHub Blog、Hacker News。</p> <p class="article-source-summary dv-en">This article was generated by the Dawn Vision cognitive engine processing 8 source signals, with human editorial review. Sources: GitHub Blog, Hacker News.</p> </div>  <div class="article-actions"> <button class="article-action-btn article-action-btn--like" id="article-like-btn" data-slug="github-copilot-canvases-interactive-workspaces" aria-label="喜欢这篇文章"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path> </svg> <span class="article-action-btn__label" data-i18n="like">喜欢</span> <span class="article-action-btn__count" id="like-count">0</span> </button> <button class="article-action-btn article-action-btn--tip" id="article-tip-btn" aria-label="打赏"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon> </svg> <span class="article-action-btn__label" data-i18n="tip">打赏</span> </button> </div>  <nav class="article-nav" aria-label="文章导航"> <a href="/articles/openai-chatgpt-ads-small-business/" class="article-nav__item article-nav__item--prev"> <div class="article-nav__label"> <span class="dv-zh" data-i18n="prev_article">上一篇</span> <span class="dv-en" data-i18n="prev_article">Previous</span> </div> <div class="article-nav__title dv-zh">ChatGPT广告平台上线：OpenAI从卖工具变成卖流量，AI商业化进入收割期</div> <div class="article-nav__title dv-en">ChatGPT Ads Platform Goes Live: OpenAI Shifts from Selling Tools to Selling Attention, AI Commercialization Enters Harvest Phase</div> </a> <a href="/articles/us-sanctions-chinese-open-source-ai-models/" class="article-nav__item article-nav__item--next"> <div class="article-nav__label"> <span class="dv-zh" data-i18n="next_article">下一篇</span> <span class="dv-en" data-i18n="next_article">Next</span> </div> <div class="article-nav__title dv-zh">美国威胁制裁中国开源AI模型：地缘政治撞上开源悖论</div> <div class="article-nav__title dv-en">US Threatens Sanctions on Chinese Open-Source AI: Geopolitics Meets the Open-Source Paradox</div> </a> </nav> </article>  </main> <footer class="footer footer--site" role="contentinfo" data-pagefind-ignore> <div class="footer__container"> <div class="footer__brand notranslate" translate="no">Dawn Vision</div> <div class="footer__meta notranslate" translate="no">© 2026 · Daily at 16:30 CST · Weekdays Only</div> </div> </footer>   <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="搜索文章" hidden> <div class="search-modal" role="document"> <div class="search-modal__input-wrap"> <svg class="search-modal__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="11" cy="11" r="8"></circle> <line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> <input type="search" class="search-modal__input" id="search-input" placeholder="搜索文章、关键词、作者..." autocomplete="off" spellcheck="false" aria-label="搜索关键词"> <span class="search-modal__close-hint">ESC</span> </div> <div class="search-modal__results" id="search-results"> <div class="search-modal__empty">输入关键词开始搜索</div> </div> <div class="search-modal__footer"> <span><kbd>↑</kbd><kbd>↓</kbd> 选择</span> <span><kbd>↵</kbd> 打开</span> <span><kbd>⌘K</kbd> 搜索</span> </div> </div> </div> <!-- Reading progress bar (shown on article pages) --> <div class="reading-progress" id="reading-progress" hidden></div>  <div class="tip-modal" id="tip-modal" hidden> <div class="tip-modal__overlay" data-tip-close></div> <div class="tip-modal__content" role="dialog" aria-modal="true" aria-label="打赏支持"> <button class="tip-modal__close" data-tip-close aria-label="关闭">×</button> <h3 class="tip-modal__title notranslate" translate="no">Tip Jar</h3> <p class="tip-modal__desc">谢谢老板请我喝奶茶 ☕</p> <div class="tip-modal__qr-wrap"> <img src="/images/reward-qr.webp" alt="打赏二维码" class="tip-modal__qr" width="200" height="200"> </div> <p class="tip-modal__thanks">微信扫码打赏，你的支持是持续创作的动力。</p> </div> </div>  <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.Dib_mikw.js"></script>  <script>
+  window.addEventListener('load', function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    bp.src = (curProtocol === 'https' ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js');
+    bp.async = true;
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  });
+  </script> </body> </html>
