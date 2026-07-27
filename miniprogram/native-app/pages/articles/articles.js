@@ -1,6 +1,5 @@
 // pages/articles/articles.js
 const api = require('../../utils/api.js');
-const format = require('../../utils/format.js');
 
 const app = getApp();
 
@@ -8,10 +7,8 @@ Page({
   data: {
     loading: true,
     issues: [],
-    expandedIndex: -1,       // 当前展开的期数索引
-    loadingBriefs: false,    // 是否正在加载brief详情
-    issueDetailMap: {},      // 期数详情缓存 { number: issueData }
-    briefCountMap: {}        // brief数量缓存 { number: count }
+    issueDetailMap: {},
+    briefCountMap: {}
   },
 
   onLoad: function (options) {
@@ -24,7 +21,6 @@ Page({
     }
   },
 
-  // 下拉刷新
   onPullDownRefresh: function () {
     this.loadIssues(true).then(() => {
       wx.stopPullDownRefresh();
@@ -38,7 +34,6 @@ Page({
     this.setData({ loading: true });
 
     return api.getIssues(forceRefresh).then(issues => {
-      // 处理数据，确保每期都有必要的字段
       const processedIssues = (issues || []).map(issue => {
         const issueInfo = issue.issue || {};
         return {
@@ -48,7 +43,8 @@ Page({
             date_display: issueInfo.date_display || issue.date_display
           },
           cover: issue.cover || null,
-          briefs: issue.briefs || null
+          has_cao: issue.has_cao || false,
+          brief_count: issue.brief_count || 0
         };
       });
 
@@ -56,14 +52,9 @@ Page({
       const briefCountMap = {};
       processedIssues.forEach(issue => {
         const num = issue.issue.number;
-        if (issue.briefs && issue.briefs.length) {
-          briefCountMap[num] = issue.briefs.length;
-        } else {
-          briefCountMap[num] = 0;
-        }
+        briefCountMap[num] = issue.brief_count || 0;
       });
 
-      // 更新全局数据
       app.globalData.issues = processedIssues;
 
       this.setData({
@@ -84,39 +75,21 @@ Page({
     });
   },
 
-  // 展开/收起期数
+  // 展开/收起期数（加载详情）
   toggleIssue: function (e) {
     const index = e.currentTarget.dataset.index;
-    const currentExpanded = this.data.expandedIndex;
-
-    // 如果点击的是已展开的，则收起
-    if (currentExpanded === index) {
-      this.setData({ expandedIndex: -1 });
-      return;
-    }
-
-    // 展开新的期数
-    this.setData({ expandedIndex: index });
-
     const issue = this.data.issues[index];
     const issueNum = issue.issue.number;
 
-    // 如果已经有详情了，直接显示
+    // 如果已经有详情了，不做操作（因为只有展开按钮，没有收起）
     if (this.data.issueDetailMap[issueNum]) {
       return;
     }
 
-    // 如果列表数据里已经有 briefs，也不用请求
-    if (issue.briefs && issue.briefs.length > 0) {
-      const detailMap = this.data.issueDetailMap;
-      detailMap[issueNum] = issue;
-      this.setData({ issueDetailMap: detailMap });
-      return;
-    }
-
-    // 否则请求期数详情
-    this.setData({ loadingBriefs: true });
+    // 请求期数详情
+    wx.showLoading({ title: '加载中...' });
     api.getIssue(issueNum).then(issueData => {
+      wx.hideLoading();
       const detailMap = this.data.issueDetailMap;
       const countMap = this.data.briefCountMap;
       
@@ -127,14 +100,13 @@ Page({
 
       this.setData({
         issueDetailMap: detailMap,
-        briefCountMap: countMap,
-        loadingBriefs: false
+        briefCountMap: countMap
       });
     }).catch(err => {
+      wx.hideLoading();
       console.error('加载期数详情失败', err);
-      this.setData({ loadingBriefs: false });
       wx.showToast({
-        title: '加载简报失败',
+        title: '加载失败',
         icon: 'none'
       });
     });
@@ -160,6 +132,18 @@ Page({
     if (issueNum && slug) {
       wx.navigateTo({
         url: '/pages/article/article?issue=' + issueNum + '&slug=' + slug
+      });
+    }
+  },
+
+  // 跳转到槽点文章
+  goToCao: function (e) {
+    const issueNum = e.currentTarget.dataset.issue;
+    const slug = e.currentTarget.dataset.slug;
+    
+    if (issueNum && slug) {
+      wx.navigateTo({
+        url: '/pages/article/article?issue=' + issueNum + '&slug=' + slug + '&type=cao'
       });
     }
   },

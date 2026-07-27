@@ -7,6 +7,7 @@ Page({
     loading: true,
     article: null,
     issueNumber: '',
+    issueNumberDisplay: '',
     articleSlug: '',
     processedHtml: '',
     relatedArticles: [],
@@ -26,12 +27,36 @@ Page({
       return;
     }
 
+    // 计算期号显示格式（三位数补零）
+    const issueNumberDisplay = format.formatIssueNumber(issueNum);
+
     this.setData({
       issueNumber: issueNum,
+      issueNumberDisplay: issueNumberDisplay,
       articleSlug: slug
     });
 
     this.loadArticle(issueNum, slug);
+  },
+
+  // 返回上一页
+  goBack: function () {
+    const pages = getCurrentPages();
+    if (pages.length > 1) {
+      wx.navigateBack({
+        delta: 1
+      });
+    } else {
+      // 如果没有上一页，返回首页
+      wx.switchTab({
+        url: '/pages/index/index',
+        fail: function () {
+          wx.redirectTo({
+            url: '/pages/index/index'
+          });
+        }
+      });
+    }
   },
 
   // 下拉刷新

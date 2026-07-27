@@ -1,61 +1,53 @@
 <!--pages/articles/articles.wxml-->
-<view class="page">
-  <!-- 顶部品牌头 -->
-  <view class="brand-header">
-    <view class="brand-header-inner">
-      <view class="brand-logo">
-        <text class="brand-name">DAWN VISION</text>
-        <text class="brand-tagline">穿越嘈杂，洞见留声</text>
+<view class="articles-page">
+  <!-- 顶部品牌头（白色吸顶） -->
+  <view class="brand-header brand-header--white">
+    <view class="brand-header__inner">
+      <view class="brand-header__logo">
+        <text class="brand-header__name">DAWN VISION</text>
+        <text class="brand-header__tagline">穿越嘈杂，洞见留声</text>
       </view>
     </view>
+    <view class="brand-header__divider"></view>
   </view>
 
+  <!-- 占位，避免内容被吸顶头遮挡 -->
+  <view class="header-placeholder"></view>
+
   <!-- 期刊列表 -->
-  <view class="issues-list">
+  <view class="issues-list container">
     <!-- 加载中 -->
     <view class="loading-wrap" wx:if="{{loading}}">
       <text>加载中...</text>
     </view>
 
-    <!-- 期数卡片列表 -->
+    <!-- 期数列表 -->
     <block wx:if="{{!loading && issues.length > 0}}">
-      <view class="issue-card" wx:for="{{issues}}" wx:key="index" wx:for-item="issue">
-        <!-- 卡片头部 - 点击展开/收起 -->
-        <view class="issue-card-header" bindtap="toggleIssue" data-index="{{index}}">
-          <view class="issue-card-meta">
-            <text class="issue-num">第 {{issue.issue.number}} 期</text>
-            <text class="issue-date">{{issue.issue.date_display || issue.issue.date}}</text>
-          </view>
-          <view class="issue-card-arrow {{expandedIndex === index ? 'expanded' : ''}}">
-            <text>▾</text>
-          </view>
+      <view class="issue-block" wx:for="{{issues}}" wx:key="index" wx:for-item="issue">
+        <!-- 期数标签 -->
+        <view class="issue-meta">
+          <text class="issue-meta__num">ISSUE {{issue.issue.number}}</text>
+          <text class="issue-meta__date">{{issue.issue.date_display || issue.issue.date}}</text>
         </view>
 
         <!-- 封面文章 -->
-        <view class="cover-section" bindtap="goToCoverArticle" data-issue="{{issue.issue.number}}" data-slug="{{issue.cover.slug}}">
-          <view class="cover-tag">封面</view>
-          <view class="cover-title">{{issue.cover.title_short || issue.cover.title}}</view>
-          <view class="cover-deck">{{issue.cover.deck}}</view>
-        </view>
-
-        <!-- Brief 数量 -->
-        <view class="brief-count-row">
-          <text class="brief-count-text">
-            本期共 {{briefCountMap[issue.issue.number] || (issue.briefs ? issue.briefs.length : 0)}} 篇简报
-          </text>
-        </view>
-
-        <!-- 展开的 brief 列表 -->
-        <view class="briefs-list" wx:if="{{expandedIndex === index}}">
-          <view class="brief-divider"></view>
-          
-          <!-- 加载brief详情中 -->
-          <view class="brief-loading" wx:if="{{loadingBriefs && expandedIndex === index}}">
-            <text>加载简报中...</text>
+        <view class="cover-card" bindtap="goToCoverArticle" data-issue="{{issue.issue.number}}" data-slug="{{issue.cover.slug}}">
+          <view class="cover-card__tag">FOCUS · 焦点</view>
+          <view class="cover-card__title">
+            <text>{{issue.cover.title_short || issue.cover.title}}</text>
           </view>
+          <view class="cover-card__deck">
+            <text>{{issue.cover.deck}}</text>
+          </view>
+          <view class="cover-card__byline">
+            <text>{{issue.cover.read_time || ''}}</text>
+          </view>
+        </view>
 
-          <!-- brief 列表项 -->
-          <block wx:if="{{!loadingBriefs && issueDetailMap[issue.issue.number]}}">
+        <!-- Brief 列表 -->
+        <view class="brief-section" wx:if="{{issueDetailMap[issue.issue.number] && issueDetailMap[issue.issue.number].briefs && issueDetailMap[issue.issue.number].briefs.length > 0}}">
+          <view class="brief-section__label">BRIEF · 资讯</view>
+          <view class="brief-list">
             <view class="brief-item" 
                   wx:for="{{issueDetailMap[issue.issue.number].briefs}}" 
                   wx:key="slug"
@@ -63,15 +55,28 @@
                   bindtap="goToArticle"
                   data-issue="{{issue.issue.number}}"
                   data-slug="{{brief.slug}}">
-              <view class="brief-category">{{brief.category}}</view>
-              <view class="brief-title">{{brief.title}}</view>
-              <view class="brief-deck">{{brief.deck}}</view>
-              <view class="brief-meta">
-                <text class="brief-read-time">{{brief.read_time}}</text>
-              </view>
+              <view class="brief-item__category" wx:if="{{brief.category}}">{{brief.category}}</view>
+              <view class="brief-item__title">{{brief.title}}</view>
+              <view class="brief-item__deck">{{brief.deck}}</view>
             </view>
-          </block>
+          </view>
         </view>
+
+        <!-- 展开/收起 Brief -->
+        <view class="brief-toggle" wx:if="{{!issueDetailMap[issue.issue.number] && briefCountMap[issue.issue.number] > 0}}" bindtap="toggleIssue" data-index="{{index}}">
+          <text class="brief-toggle__text">展开 {{briefCountMap[issue.issue.number]}} 条资讯</text>
+          <text class="brief-toggle__arrow">↓</text>
+        </view>
+
+        <!-- 槽点文章 -->
+        <view class="cao-card" wx:if="{{issueDetailMap[issue.issue.number] && issueDetailMap[issue.issue.number].cao}}" bindtap="goToCao" data-issue="{{issue.issue.number}}" data-slug="{{issueDetailMap[issue.issue.number].cao.slug}}">
+          <view class="cao-card__tag">CAO! 槽点!</view>
+          <view class="cao-card__title">{{issueDetailMap[issue.issue.number].cao.title}}</view>
+          <view class="cao-card__deck">{{issueDetailMap[issue.issue.number].cao.deck}}</view>
+        </view>
+
+        <!-- 分隔线 -->
+        <view class="issue-divider"></view>
       </view>
     </block>
 

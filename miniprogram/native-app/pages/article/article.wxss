@@ -1,176 +1,384 @@
-/* pages/article/article.wxss */
+/* ============================================
+   Dawn Vision 文章详情页 - 杂志编辑风格
+   主色：克莱因蓝 #002FA7
+   字体：衬线标题（Noto Serif SC / Georgia），无衬线标签
+   ============================================ */
 
 .page {
   min-height: 100vh;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
-/* 加载状态 */
-.loading-wrap {
-  padding: 120rpx 0;
-  text-align: center;
-  color: #999;
-  font-size: 26rpx;
+/* ============================================
+   顶部品牌头（透明吸顶，叠加在 Hero 上）
+   ============================================ */
+.brand-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding-top: env(safe-area-inset-top);
+  background: transparent;
 }
 
-/* 文章头部 */
-.article-header {
-  padding: 48rpx 40rpx 0;
-}
-
-.article-meta {
+.brand-header__inner {
   display: flex;
   align-items: center;
-  gap: 12rpx;
-  margin-bottom: 24rpx;
+  justify-content: space-between;
+  padding: 20rpx 32rpx 16rpx;
+  position: relative;
 }
 
-.meta-issue {
-  font-family: Georgia, "Noto Serif SC", serif;
-  font-size: 24rpx;
-  font-weight: 600;
+/* 返回按钮：圆形白底蓝箭头 */
+.brand-header__back {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.12);
+}
+
+.brand-header__back:active {
+  background: #f0f0f0;
+  transform: scale(0.95);
+}
+
+.brand-header__back-icon {
+  font-size: 32rpx;
   color: #002FA7;
-  background: rgba(0, 47, 167, 0.08);
-  padding: 6rpx 16rpx;
-  border-radius: 4rpx;
-  letter-spacing: 1rpx;
+  font-weight: 700;
+  line-height: 1;
 }
 
-.meta-dot {
-  color: #CCC;
-  font-size: 20rpx;
+/* 品牌名居中 */
+.brand-header__logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
-.meta-read-time {
-  font-size: 24rpx;
-  color: #999;
+.brand-header__name {
+  display: block;
+  font-size: 26rpx;
+  font-weight: 900;
+  letter-spacing: 6rpx;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif;
 }
 
-.article-category {
-  display: inline-block;
-  font-size: 22rpx;
-  color: #002FA7;
-  background: rgba(0, 47, 167, 0.06);
-  padding: 6rpx 18rpx;
-  border-radius: 4rpx;
-  margin-bottom: 20rpx;
-  letter-spacing: 1rpx;
+/* 右侧占位，保持 flex 布局平衡 */
+.brand-header__right {
+  width: 64rpx;
+  height: 64rpx;
 }
 
-.article-title {
-  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", Georgia, serif;
-  font-size: 48rpx;
-  font-weight: 600;
-  line-height: 1.4;
-  color: #1a1a1a;
-  margin-bottom: 20rpx;
+/* ============================================
+   加载状态
+   ============================================ */
+.loading-wrap {
+  padding: 200rpx 0;
+  text-align: center;
 }
 
-.article-deck {
-  font-size: 30rpx;
-  color: #666;
-  line-height: 1.8;
-  margin-bottom: 32rpx;
+.loading-text {
+  font-size: 26rpx;
+  font-style: italic;
+  color: #999999;
+  letter-spacing: 2rpx;
+  font-family: 'Noto Serif SC', Georgia, serif;
 }
 
-.title-divider {
-  width: 60rpx;
-  height: 4rpx;
+/* ============================================
+   1. Hero 区域 - 全屏克莱因蓝 + 光斑
+   ============================================ */
+.hero {
+  position: relative;
   background: #002FA7;
-  margin-bottom: 40rpx;
+  overflow: hidden;
+  padding: 180rpx 40rpx 100rpx;
 }
 
-/* 文章正文 */
+/* 背景光斑 */
+.hero-blobs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(160rpx);
+  opacity: 0.25;
+}
+
+.hero-blob-1 {
+  width: 500rpx;
+  height: 500rpx;
+  background: #1a3fd4;
+  top: -120rpx;
+  right: -100rpx;
+}
+
+.hero-blob-2 {
+  width: 400rpx;
+  height: 400rpx;
+  background: #001a5c;
+  bottom: 100rpx;
+  left: -80rpx;
+}
+
+.hero-blob-3 {
+  width: 300rpx;
+  height: 300rpx;
+  background: #2a50e0;
+  top: 30%;
+  right: 20%;
+  opacity: 0.2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* 分类标签：9px 大写 白色半透明 字间距 5px */
+.hero-category {
+  margin-bottom: 28rpx;
+}
+
+.hero-category-text {
+  font-size: 18rpx;
+  font-weight: 700;
+  letter-spacing: 10rpx;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+}
+
+/* 文章标题：超大 900 字重 斜体 白色 字间距 -0.3px */
+.hero-title {
+  font-size: 68rpx;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1.08;
+  letter-spacing: -0.6rpx;
+  color: #ffffff;
+  margin-bottom: 28rpx;
+  font-family: 'Noto Serif SC', Georgia, serif;
+}
+
+/* Deck：斜体 白色 75% 透明度 */
+.hero-deck {
+  font-size: 30rpx;
+  font-style: italic;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 36rpx;
+  font-family: 'Noto Serif SC', Georgia, serif;
+}
+
+/* Meta：10px 大写 白色 50% 透明度 字间距 2px */
+.hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+}
+
+.hero-meta-item {
+  font-size: 20rpx;
+  font-weight: 600;
+  letter-spacing: 4rpx;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+}
+
+.hero-meta-dot {
+  font-size: 20rpx;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================
+   2. 正文区域
+   ============================================ */
+.body-section {
+  background: #ffffff;
+  padding: 56rpx 0 20rpx;
+}
+
 .article-body {
   padding: 0 40rpx;
-  color: #222;
 }
 
-/* Pull Quote 引用样式 */
-.pull-quote {
-  margin: 48rpx 40rpx;
-  padding: 36rpx 32rpx;
+/* ============================================
+   3. Pull Quote 引用卡片
+   ============================================ */
+.pull-quote-section {
+  padding: 40rpx 40rpx;
+}
+
+.pull-quote-card {
+  position: relative;
+  padding: 56rpx 40rpx 44rpx;
   background: rgba(0, 47, 167, 0.04);
   border-left: 6rpx solid #002FA7;
   border-radius: 0 12rpx 12rpx 0;
 }
 
-.pull-quote-text {
-  font-family: "Noto Serif SC", Georgia, serif;
-  font-size: 32rpx;
-  line-height: 1.7;
-  color: #1a1a1a;
+.pull-quote-mark {
+  position: absolute;
+  top: 20rpx;
+  left: 32rpx;
+  font-size: 100rpx;
+  font-weight: 900;
   font-style: italic;
-  margin-bottom: 16rpx;
+  color: #002FA7;
+  opacity: 0.12;
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+.pull-quote-text {
+  font-family: 'Noto Serif SC', Georgia, serif;
+  font-size: 34rpx;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.7;
+  color: #0a0a0a;
+  margin-bottom: 20rpx;
+  position: relative;
+  z-index: 1;
 }
 
 .pull-quote-attr {
   font-size: 24rpx;
-  color: #666;
-  text-align: right;
+  color: #6b6b6b;
+  font-style: italic;
   letter-spacing: 1rpx;
+  font-family: 'Noto Serif SC', Georgia, serif;
+  position: relative;
+  z-index: 1;
 }
 
-/* 认知笔记 */
-.cognitive-notes {
-  margin: 40rpx;
-  padding: 28rpx 32rpx;
+/* ============================================
+   4. 认知笔记区
+   ============================================ */
+.cognitive-section {
+  padding: 20rpx 40rpx;
+}
+
+.cognitive-card {
   background: #FAFAF5;
-  border-radius: 12rpx;
   border: 1rpx solid #E8E8E0;
-}
-
-.notes-label {
-  font-size: 22rpx;
-  color: #002FA7;
-  font-weight: 600;
-  letter-spacing: 2rpx;
-  margin-bottom: 12rpx;
-}
-
-.notes-content {
-  font-size: 26rpx;
-  color: #555;
-  line-height: 1.7;
-}
-
-/* 来源说明 */
-.source-summary {
-  margin: 40rpx;
-  padding: 28rpx 32rpx;
-  background: #F9F9F7;
   border-radius: 12rpx;
+  padding: 40rpx 32rpx;
 }
 
-.source-label {
-  font-size: 22rpx;
-  color: #999;
-  letter-spacing: 2rpx;
-  margin-bottom: 12rpx;
-}
-
-.source-text {
-  font-size: 24rpx;
-  color: #777;
-  line-height: 1.7;
-}
-
-/* 相关推荐 */
-.related-section {
-  margin: 60rpx 0 40rpx;
-  padding: 0 40rpx;
-}
-
-.related-header {
+.cognitive-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20rpx;
   margin-bottom: 24rpx;
 }
 
-.related-title {
-  font-family: "Noto Serif SC", Georgia, serif;
-  font-size: 30rpx;
+.cognitive-label-line {
+  flex: 1;
+  height: 1rpx;
+  background: #E8E8E0;
+}
+
+.cognitive-label-text {
+  font-size: 20rpx;
+  font-weight: 700;
+  letter-spacing: 3rpx;
+  text-transform: uppercase;
+  color: #002FA7;
+  white-space: nowrap;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+}
+
+.cognitive-content {
+  font-size: 26rpx;
+  line-height: 1.8;
+  color: #555555;
+  font-family: 'Noto Serif SC', Georgia, serif;
+}
+
+/* ============================================
+   5. 来源说明区
+   ============================================ */
+.source-section {
+  padding: 20rpx 40rpx;
+}
+
+.source-card {
+  background: #F5F5F0;
+  border-radius: 12rpx;
+  padding: 32rpx 32rpx;
+}
+
+.source-label {
+  margin-bottom: 16rpx;
+}
+
+.source-label-text {
+  font-size: 20rpx;
   font-weight: 600;
-  color: #1a1a1a;
-  letter-spacing: 2rpx;
+  letter-spacing: 3rpx;
+  text-transform: uppercase;
+  color: #999999;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+}
+
+.source-content {
+  font-size: 24rpx;
+  line-height: 1.8;
+  color: #6b6b6b;
+  font-family: 'Noto Serif SC', Georgia, serif;
+}
+
+/* ============================================
+   6. 相关推荐区
+   ============================================ */
+.related-section {
+  padding: 60rpx 40rpx 20rpx;
+}
+
+.related-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24rpx;
+  margin-bottom: 36rpx;
+}
+
+.related-label-line {
+  flex: 1;
+  height: 1rpx;
+  background: #E8E8E8;
+}
+
+.related-label {
+  font-size: 20rpx;
+  font-weight: 700;
+  letter-spacing: 3rpx;
+  text-transform: uppercase;
+  color: #0a0a0a;
+  white-space: nowrap;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
 }
 
 .related-list {
@@ -180,51 +388,146 @@
 }
 
 .related-item {
-  padding: 24rpx 28rpx;
+  padding: 28rpx 32rpx;
   border-bottom: 1rpx solid #EFEFE8;
+  position: relative;
 }
 
 .related-item:last-child {
   border-bottom: none;
 }
 
+.related-item:active {
+  background: #F0F0EB;
+}
+
 .related-item-cat {
   display: inline-block;
   font-size: 20rpx;
+  font-weight: 700;
   color: #002FA7;
   background: rgba(0, 47, 167, 0.08);
-  padding: 4rpx 12rpx;
+  padding: 4rpx 14rpx;
   border-radius: 4rpx;
-  margin-bottom: 8rpx;
+  margin-bottom: 10rpx;
+  letter-spacing: 1rpx;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
 }
 
 .related-item-title {
-  font-family: "Noto Serif SC", Georgia, serif;
-  font-size: 28rpx;
+  font-family: 'Noto Serif SC', Georgia, serif;
+  font-size: 30rpx;
   font-weight: 600;
-  color: #1a1a1a;
+  color: #0a0a0a;
   line-height: 1.5;
-  margin-bottom: 6rpx;
+  margin-bottom: 8rpx;
+  padding-right: 48rpx;
 }
 
 .related-item-deck {
   font-size: 24rpx;
-  color: #777;
+  color: #6b6b6b;
   line-height: 1.6;
+  font-style: italic;
+  padding-right: 48rpx;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  font-family: 'Noto Serif SC', Georgia, serif;
 }
 
-/* 底部留白 */
-.article-footer-space {
-  height: 80rpx;
+.related-item-arrow {
+  position: absolute;
+  right: 32rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28rpx;
+  color: #002FA7;
+  font-weight: 700;
 }
 
-.empty-wrap {
-  padding: 160rpx 0;
+/* ============================================
+   7. 底部克莱因蓝品牌块
+   ============================================ */
+.site-footer {
+  background: #002FA7;
+  padding: 80rpx 40rpx 100rpx;
+  margin-top: 60rpx;
   text-align: center;
-  color: #999;
+  position: relative;
+  overflow: hidden;
+}
+
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: -100rpx;
+  right: -100rpx;
+  width: 300rpx;
+  height: 300rpx;
+  background: #1a3fd4;
+  border-radius: 50%;
+  filter: blur(120rpx);
+  opacity: 0.3;
+}
+
+.footer-brand {
+  font-size: 36rpx;
+  font-weight: 900;
+  letter-spacing: 8rpx;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 12rpx;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-tagline {
   font-size: 26rpx;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 2rpx;
+  margin-bottom: 32rpx;
+  font-family: 'Noto Serif SC', Georgia, serif;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-divider {
+  width: 60rpx;
+  height: 2rpx;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 0 auto 24rpx;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-issue {
+  font-size: 22rpx;
+  font-weight: 600;
+  letter-spacing: 4rpx;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   空状态
+   ============================================ */
+.empty-wrap {
+  padding: 200rpx 40rpx;
+  text-align: center;
+}
+
+.empty-text {
+  font-size: 28rpx;
+  font-style: italic;
+  color: #999999;
+  letter-spacing: 1rpx;
+  font-family: 'Noto Serif SC', Georgia, serif;
 }

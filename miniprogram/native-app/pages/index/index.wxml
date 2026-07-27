@@ -1,74 +1,106 @@
 <!--pages/index/index.wxml-->
-<view class="page">
-  <!-- Hero 区域 - Klein蓝全屏背景 -->
-  <view class="hero">
-    <view class="hero-content">
-      <view class="hero-brand">
-        <text class="hero-brand-en">DAWN VISION</text>
+<view class="home-page">
+  <!-- 顶部品牌头（透明，叠加在 Hero 上） -->
+  <view class="brand-header brand-header--transparent">
+    <view class="brand-header__inner">
+      <view class="brand-header__logo">
+        <text class="brand-header__name">DAWN VISION</text>
+        <text class="brand-header__tagline">穿越嘈杂，洞见留声</text>
       </view>
-      <view class="hero-divider"></view>
-      <view class="hero-tagline">穿越嘈杂，洞见留声</view>
-      <view class="hero-subtitle">AI Insight Daily</view>
     </view>
   </view>
 
-  <!-- 内容区域 -->
-  <view class="content">
-    <!-- 最新一期封面卡片 -->
-    <view class="latest-section">
-      <view class="section-header">
-        <text class="section-label">最新一期</text>
-        <text class="section-issue" wx:if="{{latestIssue && latestIssue.number}}">第 {{latestIssue.number}} 期</text>
-      </view>
+  <!-- 全屏克莱因蓝 Hero -->
+  <view class="hero">
+    <!-- 背景光斑 -->
+    <view class="blobs">
+      <view class="blob blob-1"></view>
+      <view class="blob blob-2"></view>
+      <view class="blob blob-3"></view>
+    </view>
 
-      <!-- 加载中 -->
-      <view class="loading-wrap" wx:if="{{loading}}">
-        <text>加载中...</text>
-      </view>
-
-      <!-- 封面卡片 -->
-      <view class="cover-card" wx:if="{{!loading && latestCover}}" bindtap="goToCoverArticle">
-        <view class="cover-card-inner">
-          <view class="cover-meta">
-            <text class="cover-issue-num">第 {{latestIssue.number}} 期</text>
-            <text class="cover-date">{{latestIssue.date_display || latestIssue.date}}</text>
-          </view>
-          <view class="cover-title">
-            <text>{{latestCover.title_short || latestCover.title}}</text>
-          </view>
-          <view class="cover-deck">
-            <text>{{latestCover.deck}}</text>
-          </view>
-          <view class="cover-footer">
-            <text class="cover-read-time">{{latestCover.read_time}}</text>
-            <text class="cover-action">阅读全文 →</text>
-          </view>
+    <view class="hero-content">
+      <!-- 封面卡片（白色） -->
+      <view class="teaser-card" wx:if="{{!loading && latestCover}}" bindtap="goToCoverArticle">
+        <view class="teaser-label">
+          <text class="teaser-label-text">FOCUS · 焦点</text>
+        </view>
+        <view class="teaser-title">
+          <text>{{latestCover.title_short || latestCover.title}}</text>
+        </view>
+        <view class="teaser-deck">
+          <text>{{latestCover.deck}}</text>
+        </view>
+        <view class="teaser-btn">
+          <text class="teaser-btn-text">READ MORE</text>
+          <text class="teaser-btn-arrow">→</text>
         </view>
       </view>
 
-      <!-- 错误提示 -->
-      <view class="empty-wrap" wx:if="{{!loading && error}}">
-        <text class="error-text">{{error}}</text>
+      <!-- 加载中 -->
+      <view class="teaser-card teaser-loading" wx:if="{{loading}}">
+        <view class="teaser-label">
+          <text class="teaser-label-text">FOCUS · 焦点</text>
+        </view>
+        <view class="teaser-title teaser-title--skeleton"></view>
+        <view class="teaser-deck teaser-deck--skeleton"></view>
+        <view class="teaser-btn">
+          <text class="teaser-btn-text">LOADING...</text>
+        </view>
       </view>
 
-      <!-- 空状态 -->
-      <view class="empty-wrap" wx:if="{{!loading && !latestCover && !error}}">
-        <text>暂无内容</text>
+      <!-- 错误/空状态 -->
+      <view class="teaser-card" wx:if="{{!loading && !latestCover}}">
+        <view class="teaser-label">
+          <text class="teaser-label-text">FOCUS · 焦点</text>
+        </view>
+        <view class="teaser-empty">
+          <text>{{error || '暂无内容'}}</text>
+        </view>
+      </view>
+
+      <!-- 主标语 -->
+      <view class="main-title">
+        <text class="main-title-line">THROUGH THE CLAMOR,</text>
+        <text class="main-title-line">INSIGHT ECHOES.</text>
+        <text class="main-title-line">READ.</text>
+      </view>
+
+      <!-- 副标语（中文） -->
+      <view class="main-tagline">
+        <text class="tagline-line">穿越嘈杂，</text>
+        <text class="tagline-line">洞见留声。</text>
       </view>
     </view>
+  </view>
 
-    <!-- 进入期刊库按钮 -->
-    <view class="archive-section">
-      <view class="archive-btn" bindtap="goToArticles">
-        <text class="archive-btn-text">进入期刊库</text>
-        <text class="archive-btn-arrow">→</text>
+  <!-- 内容区域（白色背景） -->
+  <view class="content-section">
+    <view class="container">
+      <!-- 期数信息 -->
+      <view class="issue-info" wx:if="{{latestIssue && latestIssue.number}}">
+        <text class="issue-num">ISSUE {{latestIssue.number}}</text>
+        <text class="issue-date">{{latestIssue.date_display || latestIssue.date}}</text>
+      </view>
+
+      <!-- 进入期刊库 -->
+      <view class="cta-section">
+        <view class="cta-btn" bindtap="goToArticles">
+          <text class="cta-btn-text">BROWSE ALL ISSUES</text>
+          <text class="cta-btn-arrow">→</text>
+        </view>
+        <view class="cta-sub">
+          <text>浏览全部期刊</text>
+        </view>
       </view>
     </view>
+  </view>
 
-    <!-- 底部信息 -->
-    <view class="footer-info">
-      <text class="footer-brand">DAWN VISION</text>
-      <text class="footer-tagline">穿越嘈杂，洞见留声</text>
+  <!-- 底部克莱因蓝块 -->
+  <view class="bottom-brand">
+    <view class="bottom-brand-inner">
+      <text class="bottom-brand-name">DAWN VISION</text>
+      <text class="bottom-brand-tag">穿越嘈杂，洞见留声</text>
     </view>
   </view>
 </view>

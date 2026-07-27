@@ -1,217 +1,306 @@
-/* pages/articles/articles.wxss */
+/* pages/articles/articles.wxss - 文章列表页 */
 
-.page {
+.articles-page {
   min-height: 100vh;
-  background: #F5F5F0;
+  background: #ffffff;
+}
+
+/* ============================================
+   顶部品牌头（白色吸顶）
+   ============================================ */
+.brand-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding-top: env(safe-area-inset-top);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(32rpx) saturate(1.5);
+  -webkit-backdrop-filter: blur(32rpx) saturate(1.5);
+}
+
+.brand-header--white {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(32rpx) saturate(1.5);
+  -webkit-backdrop-filter: blur(32rpx) saturate(1.5);
+}
+
+.brand-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24rpx 40rpx 16rpx;
+}
+
+.brand-header__logo {
+  text-align: center;
+}
+
+.brand-header__name {
+  display: block;
+  font-size: 26rpx;
+  font-weight: 900;
+  letter-spacing: 6rpx;
+  text-transform: uppercase;
+  color: #0a0a0a;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif;
+}
+
+.brand-header__tagline {
+  display: block;
+  font-size: 18rpx;
+  color: #999999;
+  letter-spacing: 4rpx;
+  margin-top: 4rpx;
+  font-style: italic;
+}
+
+.brand-header__divider {
+  height: 1rpx;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+/* 占位高度 */
+.header-placeholder {
+  height: calc(88rpx + env(safe-area-inset-top));
+}
+
+/* ============================================
+   期刊列表
+   ============================================ */
+.issues-list {
+  padding-top: 48rpx;
   padding-bottom: 40rpx;
 }
 
-/* 顶部品牌头 */
-.brand-header {
-  background: #FFFFFF;
-  border-bottom: 1rpx solid #E8E8E0;
-  padding: 24rpx 32rpx 20rpx;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+.issue-block {
+  margin-bottom: 64rpx;
 }
 
-.brand-header-inner {
+/* 期数 meta */
+.issue-meta {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-.brand-logo {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand-name {
-  font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
-  font-size: 32rpx;
-  font-weight: 700;
-  color: #002FA7;
-  letter-spacing: 2rpx;
-  line-height: 1.2;
-}
-
-.brand-tagline {
-  font-size: 20rpx;
-  color: #999;
-  letter-spacing: 2rpx;
-  margin-top: 4rpx;
-}
-
-/* 期刊列表 */
-.issues-list {
-  padding: 24rpx 32rpx 0;
-}
-
-/* 期数卡片 */
-.issue-card {
-  background: #FFFFFF;
-  border-radius: 16rpx;
+  gap: 20rpx;
   margin-bottom: 24rpx;
-  overflow: hidden;
-  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.05);
 }
 
-/* 卡片头部 */
-.issue-card-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 28rpx 32rpx;
-  background: #FAFAF5;
-  border-bottom: 1rpx solid #F0F0EA;
-}
-
-.issue-card-meta {
-  display: flex;
-  align-items: center;
-  gap: 16rpx;
-}
-
-.issue-num {
-  font-family: Georgia, "Noto Serif SC", serif;
-  font-size: 28rpx;
-  font-weight: 600;
+.issue-meta__num {
+  font-size: 20rpx;
+  font-weight: 700;
+  letter-spacing: 4rpx;
+  text-transform: uppercase;
   color: #002FA7;
-  letter-spacing: 1rpx;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
 }
 
-.issue-date {
-  font-size: 24rpx;
-  color: #999;
+.issue-meta__date {
+  font-size: 20rpx;
+  letter-spacing: 2rpx;
+  color: #999999;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
 }
 
-.issue-card-arrow {
-  font-size: 24rpx;
-  color: #999;
-  transition: transform 0.3s;
+/* ============================================
+   封面卡片
+   ============================================ */
+.cover-card {
+  position: relative;
+  border-bottom: 4rpx solid #0a0a0a;
+  padding-bottom: 40rpx;
+  margin-bottom: 32rpx;
+  transition: transform 0.15s ease-out;
 }
 
-.issue-card-arrow.expanded {
-  transform: rotate(180deg);
+.cover-card:active {
+  transform: translateX(8rpx);
 }
 
-/* 封面文章区域 */
-.cover-section {
-  padding: 32rpx;
-  border-bottom: 1rpx solid #F5F5F0;
-}
-
-.cover-tag {
+.cover-card__tag {
   display: inline-block;
   font-size: 20rpx;
-  color: #FFFFFF;
-  background: #002FA7;
-  padding: 6rpx 14rpx;
-  border-radius: 4rpx;
-  margin-bottom: 16rpx;
-  letter-spacing: 1rpx;
+  font-weight: 700;
+  letter-spacing: 4rpx;
+  text-transform: uppercase;
+  color: #002FA7;
+  background: rgba(0, 47, 167, 0.06);
+  padding: 8rpx 16rpx;
+  margin-bottom: 20rpx;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
 }
 
-.cover-title {
-  font-family: "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
-  font-size: 34rpx;
-  font-weight: 600;
-  line-height: 1.45;
-  color: #1a1a1a;
-  margin-bottom: 12rpx;
+.cover-card__title {
+  font-size: 48rpx;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1.1;
+  letter-spacing: -0.6rpx;
+  color: #002FA7;
+  margin-bottom: 20rpx;
 }
 
-.cover-deck {
-  font-size: 26rpx;
-  color: #666;
+.cover-card__deck {
+  font-size: 28rpx;
+  font-style: italic;
   line-height: 1.7;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  color: #6b6b6b;
+  margin-bottom: 20rpx;
 }
 
-/* Brief 数量行 */
-.brief-count-row {
-  padding: 20rpx 32rpx;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.brief-count-text {
-  font-size: 24rpx;
-  color: #999;
-}
-
-/* 展开的 brief 列表 */
-.briefs-list {
-  background: #FAFAF8;
-}
-
-.brief-divider {
-  height: 1rpx;
-  background: #E8E8E0;
-  margin: 0 32rpx;
-}
-
-.brief-loading {
-  padding: 30rpx 32rpx;
-  text-align: center;
-  color: #999;
-  font-size: 24rpx;
-}
-
-.brief-item {
-  padding: 28rpx 32rpx;
-  border-bottom: 1rpx solid #EFEFE8;
-}
-
-.brief-item:last-child {
-  border-bottom: none;
-}
-
-.brief-category {
-  display: inline-block;
+.cover-card__byline {
   font-size: 20rpx;
-  color: #002FA7;
-  background: rgba(0, 47, 167, 0.08);
-  padding: 4rpx 12rpx;
-  border-radius: 4rpx;
-  margin-bottom: 12rpx;
+  letter-spacing: 4rpx;
+  text-transform: uppercase;
+  color: #999999;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
 }
 
-.brief-title {
-  font-family: "Noto Serif SC", Georgia, serif;
-  font-size: 28rpx;
-  font-weight: 600;
-  line-height: 1.5;
-  color: #1a1a1a;
+/* ============================================
+   Brief 资讯区
+   ============================================ */
+.brief-section {
   margin-bottom: 8rpx;
 }
 
-.brief-deck {
+.brief-section__label {
+  display: inline-block;
+  font-size: 20rpx;
+  font-weight: 700;
+  letter-spacing: 4rpx;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #002FA7;
+  padding: 10rpx 20rpx;
+  margin-bottom: 20rpx;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+}
+
+.brief-list {
+  border-top: 1rpx solid #e8e8e8;
+}
+
+.brief-item {
+  position: relative;
+  border-bottom: 1rpx solid #e8e8e8;
+  padding: 24rpx 0;
+  transition: transform 0.15s ease-out;
+}
+
+.brief-item:active {
+  transform: translateX(6rpx);
+}
+
+.brief-item__category {
+  display: inline-block;
+  font-size: 18rpx;
+  font-weight: 700;
+  letter-spacing: 2rpx;
+  text-transform: uppercase;
+  color: #002FA7;
+  background: rgba(0, 47, 167, 0.06);
+  padding: 4rpx 12rpx;
+  margin-bottom: 10rpx;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+}
+
+.brief-item__title {
+  font-size: 30rpx;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #002FA7;
+  margin-bottom: 8rpx;
+}
+
+.brief-item__deck {
   font-size: 24rpx;
-  color: #666;
+  font-style: italic;
   line-height: 1.6;
+  color: #6b6b6b;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* ============================================
+   展开/收起按钮
+   ============================================ */
+.brief-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12rpx;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #e8e8e8;
+  margin-bottom: 24rpx;
+}
+
+.brief-toggle__text {
+  font-size: 22rpx;
+  letter-spacing: 2rpx;
+  color: #999999;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+}
+
+.brief-toggle__arrow {
+  font-size: 20rpx;
+  color: #999999;
+}
+
+/* ============================================
+   槽点卡片（深色风格）
+   ============================================ */
+.cao-card {
+  background: #0a0a0a;
+  padding: 32rpx;
+  margin-top: 24rpx;
+  margin-bottom: 16rpx;
+  transition: transform 0.15s ease-out;
+}
+
+.cao-card:active {
+  transform: translateX(6rpx);
+}
+
+.cao-card__tag {
+  display: inline-block;
+  font-size: 20rpx;
+  font-weight: 700;
+  letter-spacing: 4rpx;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #FF4757;
+  padding: 8rpx 16rpx;
+  margin-bottom: 16rpx;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+}
+
+.cao-card__title {
+  font-size: 36rpx;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1.2;
+  letter-spacing: -0.3rpx;
+  color: #ffffff;
   margin-bottom: 12rpx;
 }
 
-.brief-meta {
-  display: flex;
-  align-items: center;
+.cao-card__deck {
+  font-size: 26rpx;
+  font-style: italic;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
 }
 
-.brief-read-time {
-  font-size: 22rpx;
-  color: #AAA;
+/* ============================================
+   分隔线
+   ============================================ */
+.issue-divider {
+  height: 0;
+  margin-top: 16rpx;
 }
 
 .bottom-space {
-  height: 40rpx;
+  height: 80rpx;
 }

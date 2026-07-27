@@ -1,87 +1,161 @@
 <!--pages/article/article.wxml-->
 <view class="page">
+
+  <!-- ============================================
+       顶部品牌头（透明吸顶，叠加在 Hero 上）
+       左侧返回按钮：圆形白底蓝箭头
+       中间品牌名居中
+       ============================================ -->
+  <view class="brand-header">
+    <view class="brand-header__inner">
+      <!-- 返回按钮 -->
+      <view class="brand-header__back" bindtap="goBack">
+        <text class="brand-header__back-icon">←</text>
+      </view>
+      <!-- 品牌名 -->
+      <view class="brand-header__logo">
+        <text class="brand-header__name">DAWN VISION</text>
+      </view>
+      <!-- 右侧占位，保持居中 -->
+      <view class="brand-header__right"></view>
+    </view>
+  </view>
+
   <!-- 加载中 -->
   <view class="loading-wrap" wx:if="{{loading}}">
-    <text>加载中...</text>
+    <text class="loading-text">Loading…</text>
   </view>
 
   <!-- 文章内容 -->
   <block wx:if="{{!loading && article}}">
-    <!-- 文章头部 -->
-    <view class="article-header">
-      <!-- 元信息 -->
-      <view class="article-meta">
-        <text class="meta-issue">第 {{issueNumber}} 期</text>
-        <text class="meta-dot">·</text>
-        <text class="meta-read-time">{{article.read_time}}</text>
+
+    <!-- ============================================
+         1. 克莱因蓝 Hero 区（带光斑背景，全宽）
+         ============================================ -->
+    <view class="hero">
+      <!-- 背景光斑 -->
+      <view class="hero-blobs">
+        <view class="hero-blob hero-blob-1"></view>
+        <view class="hero-blob hero-blob-2"></view>
+        <view class="hero-blob hero-blob-3"></view>
       </view>
 
-      <!-- 分类标签（如果是brief） -->
-      <view class="article-category" wx:if="{{article.category}}">
-        <text>{{article.category}}</text>
+      <view class="hero-content">
+        <!-- 分类标签（9px 大写 白色半透明 字间距 5px） -->
+        <view class="hero-category" wx:if="{{article.category}}">
+          <text class="hero-category-text">{{article.category}}</text>
+        </view>
+
+        <!-- 大标题（900字重，斜体，白色，紧缩字间距 -0.3px） -->
+        <view class="hero-title">
+          <text>{{article.title}}</text>
+        </view>
+
+        <!-- Deck（斜体，75%透明白色） -->
+        <view class="hero-deck" wx:if="{{article.deck}}">
+          <text>{{article.deck}}</text>
+        </view>
+
+        <!-- Meta 信息（10px 大写 白色 50% 透明度 字间距 2px） -->
+        <view class="hero-meta">
+          <text class="hero-meta-item">ISSUE {{issueNumberDisplay}}</text>
+          <text class="hero-meta-dot">·</text>
+          <text class="hero-meta-item">{{article.read_time}}</text>
+        </view>
       </view>
+    </view>
 
-      <!-- 文章标题 -->
-      <view class="article-title">
-        <text>{{article.title}}</text>
+    <!-- ============================================
+         2. 正文区域（白色背景）
+         ============================================ -->
+    <view class="body-section">
+      <view class="article-body">
+        <rich-text nodes="{{processedHtml}}"></rich-text>
       </view>
+    </view>
 
-      <!-- 文章导语 -->
-      <view class="article-deck" wx:if="{{article.deck}}">
-        <text>{{article.deck}}</text>
+    <!-- ============================================
+         3. Pull Quote 引用卡片
+         ============================================ -->
+    <view class="pull-quote-section" wx:if="{{article.pull_quote && article.pull_quote.text}}">
+      <view class="pull-quote-card">
+        <view class="pull-quote-mark">"</view>
+        <view class="pull-quote-text">{{article.pull_quote.text}}</view>
+        <view class="pull-quote-attr" wx:if="{{article.pull_quote.attr}}">— {{article.pull_quote.attr}}</view>
       </view>
-
-      <!-- 标题底部分割线 -->
-      <view class="title-divider"></view>
     </view>
 
-    <!-- 文章正文 -->
-    <view class="article-body">
-      <rich-text nodes="{{processedHtml}}"></rich-text>
+    <!-- ============================================
+         4. 认知笔记区
+         ============================================ -->
+    <view class="cognitive-section" wx:if="{{article.cognitive_notes}}">
+      <view class="cognitive-card">
+        <view class="cognitive-label">
+          <view class="cognitive-label-line"></view>
+          <text class="cognitive-label-text">COGNITIVE NOTES · 认知笔记</text>
+          <view class="cognitive-label-line"></view>
+        </view>
+        <view class="cognitive-content">
+          <text>{{article.cognitive_notes}}</text>
+        </view>
+      </view>
     </view>
 
-    <!-- Pull Quote 引用 -->
-    <view class="pull-quote" wx:if="{{article.pull_quote && article.pull_quote.text}}">
-      <view class="pull-quote-text">{{article.pull_quote.text}}</view>
-      <view class="pull-quote-attr" wx:if="{{article.pull_quote.attr}}">{{article.pull_quote.attr}}</view>
+    <!-- ============================================
+         5. 来源说明区
+         ============================================ -->
+    <view class="source-section" wx:if="{{article.source_summary}}">
+      <view class="source-card">
+        <view class="source-label">
+          <text class="source-label-text">ABOUT THIS ARTICLE · 关于本文</text>
+        </view>
+        <view class="source-content">
+          <text>{{article.source_summary}}</text>
+        </view>
+      </view>
     </view>
 
-    <!-- 认知笔记 -->
-    <view class="cognitive-notes" wx:if="{{article.cognitive_notes}}">
-      <view class="notes-label">认知笔记</view>
-      <view class="notes-content">{{article.cognitive_notes}}</view>
-    </view>
-
-    <!-- 来源说明 -->
-    <view class="source-summary" wx:if="{{article.source_summary}}">
-      <view class="source-label">关于本文</view>
-      <view class="source-text">{{article.source_summary}}</view>
-    </view>
-
-    <!-- 相关推荐 -->
+    <!-- ============================================
+         6. 相关推荐区（同期其他文章列表）
+         ============================================ -->
     <view class="related-section" wx:if="{{relatedArticles.length > 0}}">
       <view class="related-header">
-        <text class="related-title">同期刊其他文章</text>
+        <view class="related-label-line"></view>
+        <text class="related-label">MORE FROM THIS ISSUE · 同期其他文章</text>
+        <view class="related-label-line"></view>
       </view>
+
       <view class="related-list">
-        <view class="related-item" 
-              wx:for="{{relatedArticles}}" 
+        <view class="related-item"
+              wx:for="{{relatedArticles}}"
               wx:key="slug"
               bindtap="goToRelated"
               data-slug="{{item.slug}}">
           <view class="related-item-cat" wx:if="{{item.category}}">{{item.category}}</view>
           <view class="related-item-title">{{item.title}}</view>
-          <view class="related-item-deck">{{item.deck}}</view>
+          <view class="related-item-deck" wx:if="{{item.deck}}">{{item.deck}}</view>
+          <view class="related-item-arrow">
+            <text>→</text>
+          </view>
         </view>
       </view>
     </view>
 
-    <!-- 底部留白 -->
-    <view class="article-footer-space"></view>
+    <!-- ============================================
+         7. 底部克莱因蓝品牌块
+         ============================================ -->
+    <view class="site-footer">
+      <view class="footer-brand">DAWN VISION</view>
+      <view class="footer-tagline">穿越嘈杂，洞见留声</view>
+      <view class="footer-divider"></view>
+      <view class="footer-issue">ISSUE {{issueNumberDisplay}}</view>
+    </view>
+
   </block>
 
   <!-- 空状态/错误 -->
   <view class="empty-wrap" wx:if="{{!loading && !article}}">
-    <text>{{errorMsg || '文章不存在'}}</text>
+    <text class="empty-text">{{errorMsg || '文章不存在'}}</text>
   </view>
+
 </view>
