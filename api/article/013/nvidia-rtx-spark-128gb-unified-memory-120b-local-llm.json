@@ -1,0 +1,32 @@
+{
+  "slug": "nvidia-rtx-spark-128gb-unified-memory-120b-local-llm",
+  "category": "算力基建 · 端侧算力",
+  "title": "RTX Spark真机现身Bilibili World：CPU+GPU焊死在一起，128GB统一内存跑120B大模型",
+  "title_break": "RTX Spark真机现身BW2026<br>128GB统一内存跑120B大模型",
+  "deck": "20核CPU+6144个GPU核心+128GB统一内存，600GB/s片内带宽——英伟达把数据中心的做法搬进了个人电脑，本地跑120B大模型不再是梦。",
+  "keywords": "Dawn Vision,英伟达,RTX Spark,Bilibili World,统一内存,128GB,120B大模型,端侧AI,个人AI电脑",
+  "og_description": "英伟达RTX Spark在Bilibili World亮相，128GB统一内存，CPU+GPU融合架构，本地可跑120B大模型，个人AI电脑时代到来。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 820,
+  "sources": [
+    {
+      "text": "量子位 - 老黄RTX Spark真机现身Bilibili World！CPU和GPU直接焊在一起",
+      "url": "https://www.qbitai.com/"
+    },
+    {
+      "text": "36氪 - RTX Spark炸场！个人PC迎来真正AI时代",
+      "url": "https://36kr.com/"
+    },
+    {
+      "text": "英伟达官网 - GTC Taipei 2026 keynote",
+      "url": ""
+    }
+  ],
+  "body_html": "      <p>Bilibili World 2026的英伟达展台，一个\"神秘造型\"的设备成了全场最火爆的打卡点——<strong>RTX Spark</strong>真机。</p>\n      <p>这不是传统意义上的显卡。准确地说，它是一颗把CPU和GPU彻底焊在一起的\"AI超级芯片\"。具体规格是这样的：<strong>20个CPU核心</strong>、<strong>6144个GPU核心</strong>、<strong>128GB统一内存</strong>、片内带宽达到<strong>600GB/s</strong>。</p>\n      <p>128GB统一内存是什么概念？目前消费级显卡的显存天花板是24GB（RTX 4090），就算是专业级的RTX 6000 Ada也只有48GB。128GB意味着什么？意味着你可以在本地跑一个<strong>120B参数的大模型</strong>，而且是FP8精度，不需要量化、不需要offload、不需要云端API。你的电脑，就是一台小型AI超级计算机。</p>\n\n      <h2>统一内存：为什么这才是关键突破</h2>\n      <p>很多人看到128GB第一反应是\"显存好大\"，但真正的革命不是\"大\"，而是\"统一\"。</p>\n      <p>现在的PC架构里，CPU有自己的内存（DDR5），GPU有自己的显存（GDDR6X/HBM）。两边各管各的，数据要在内存和显存之间搬来搬去。你跑AI推理的时候，模型权重先从硬盘加载到系统内存，再从系统内存搬到显存——这个搬运过程就是瓶颈。</p>\n      <p>RTX Spark的做法是：CPU和GPU共享同一个128GB内存池。通过英伟达自研的第二代互联技术，GPU可以直接访问大容量内存，不需要再搬来搬去。600GB/s的片内带宽是什么水平？目前DDR5-6400的带宽大约是51.2GB/s，HBM3的带宽大约是1.2TB/s左右。600GB/s正好介于两者之间——比传统内存快一个数量级，接近高端显存的水平。</p>\n      <p>这意味着什么？意味着\"端侧大模型\"终于不是\"只能跑7B小模型\"的玩具了。120B参数是什么概念？是GPT-4级别的模型，是Claude Opus级别的模型，是目前最强大的商用模型的参数量级。以前你想跑这种级别的模型，需要一整台8卡H100服务器，现在你只需要一台装了RTX Spark的个人电脑。</p>\n\n      <h2>个人AI电脑时代，真的要来了</h2>\n      <p>黄仁勋在GTC台北2026上喊出的口号是\"新航向、新起点\"——重新定义个人电脑。当时很多人觉得这是营销话术，现在真机亮相，大家才意识到：这可能不是口号，是真的要变天了。</p>\n      <p>过去两年，\"端侧AI\"一直是个有点尴尬的概念。手机上的端侧AI只能跑个几B的小模型，做个拍照优化、语音助手什么的；PC上的AI加速也就是个NPU，聊胜于无。大家嘴上都说\"端侧AI是未来\"，但心里都清楚：真正的大模型还得在云端跑。</p>\n      <p>RTX Spark把这个格局彻底打翻了。如果个人电脑就能跑120B大模型，那云端推理的必要性在哪里？数据隐私问题怎么解？API调用成本还有没有意义？</p>\n      <p>当然，现在说\"端侧取代云端\"还为时过早。RTX Spark的价格肯定不会便宜，128GB统一内存的功耗和发热也是问题，模型优化和软件生态更是长路漫漫。但方向已经很清楚了：<strong>AI算力正在从云端向端侧扩散，而且扩散的速度比所有人预想的都快</strong>。</p>\n      <p>从数据中心的H100/H200，到企业级的推理芯片，再到消费级的RTX Spark——英伟达正在把AI算力一层一层往下渗透。当120B大模型能在你家电脑上跑的时候，AI产业的整个价值链都会被重写。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "当120B大模型能在你家电脑上跑的时候，AI产业的整个价值链都会被重写。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "RTX Spark · 英伟达 · 统一内存 · 128GB · 120B大模型 · 端侧AI · 个人AI电脑 · Bilibili World",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 9 个源信号生成，经编辑部人工审核。素材来源：量子位、36氪、英伟达GTC台北。"
+}

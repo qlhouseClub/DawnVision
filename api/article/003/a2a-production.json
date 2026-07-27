@@ -1,0 +1,33 @@
+{
+  "slug": "a2a-production",
+  "title": "A2A 协议进入生产年",
+  "title_break": "A2A 协议<br/>进入生产年",
+  "deck": "Google开源移交Linux基金会、阿里云推出生产级AgentRun平台、微信率先接入手机厂商——Agent之间的\"普通话\"正在从论文里走进生产环境。",
+  "keywords": "Dawn Vision, A2A协议, Agent通信, Google开源, 阿里云AgentRun, Linux基金会, Agent互联网",
+  "og_description": "Google开源、阿里云落地、微信接入——A2A协议从标准制定进入生产实践。",
+  "read_time": "约 4 分钟阅读",
+  "word_count": 750,
+  "sources": [
+    {
+      "text": "Google A2A协议官方开源仓库（Linux基金会）",
+      "url": "https://github.com/google/A2A"
+    },
+    {
+      "text": "阿里云云原生 - AgentRun生产级多Agent协作平台",
+      "url": "https://www.cnblogs.com/alisystemsoftware/p/20576963"
+    },
+    {
+      "text": "36氪 - 微信A2A协议接入手机厂商报道",
+      "url": ""
+    }
+  ],
+  "body_html": "<p>互联网之所以能成为互联网，是因为所有计算机都说同一种\"话\"——TCP/IP。</p>\n<p>Agent世界也在等待它的TCP/IP时刻。6月，这个时刻似乎更近了一步。</p>\n<h2>从Google开源到Linux基金会</h2>\n<p>Google正式将A2A（Agent-to-Agent）协议的开源仓库移交Linux基金会治理，最新版本v0.3.0已经具备了生产级协议的核心要素：基于JSON-RPC 2.0 over HTTP(S)的通信层、通过AgentCard实现的能力自描述与服务发现、Task生命周期管理（submitted/working/completed/failed）、TextPart/FilePart/DataPart三部分消息协议。</p>\n<p>更重要的是官方SDK的覆盖：Python、JavaScript、Java、.NET四套官方SDK同时发布，意味着主流技术栈的开发者都可以直接接入，不需要自己从头实现协议细节。同步、异步、流式（SSE）三种交互模式也全部支持——从简单的问答到复杂的长周期协作任务都能覆盖。</p>\n<h2>阿里云AgentRun：生产环境的第一道考题</h2>\n<p>协议有了，真正难的是生产环境的工程问题。阿里云在6月16日发布的AgentRun平台，正面回答了这些问题。</p>\n<p>多Agent协作在Demo里看起来很美——几个Agent聊聊天就把事办了。但到了生产环境，问题立刻来了：Agent怎么找到彼此？（注册中心/服务发现）跨Agent的调用怎么做鉴权？（API Key/HTTP Basic Auth）不同环境（开发/预发/生产）怎么隔离？（Workspace逻辑隔离）调用链出了问题怎么排查？（分布式链路追踪）</p>\n<p>AgentRun给出了一套相对完整的解法：通过Discovery Endpoint按环境管理发现入口，内置凭证体系处理跨Agent鉴权，Workspace实现环境隔离。在\"希希咖啡厅\"的演示场景中，coffee_agent负责点单、delivery_agent负责配送，一个超级Agent（Orchestrator）负责意图拆解和子任务调度——整个流程通过A2A协议协同完成。</p>\n<h2>微信率先接入，荣耀第一个落地</h2>\n<p>最有信号意义的消息是：微信已经基于A2A协议向手机厂商开放Agent能力，荣耀成为第一个落地合作方。</p>\n<p>这意味着什么？意味着你的手机系统助手（比如荣耀的YOYO）未来可以直接调用微信里的Agent能力——你不需要打开微信，对着手机说\"帮我给张三发个消息说我晚到十分钟\"，系统Agent通过A2A协议和微信Agent通信，直接完成任务。</p>\n<div class=\"pull-quote\">\n        \"A2A之于Agent，就像HTTP之于Web。协议本身不产生价值，协议之上的生态才产生价值。\"\n        <span class=\"pull-quote__attr\">—— 云原生技术社区评论</span>\n</div>\n<h2>A2A和MCP的分工正在清晰</h2>\n<p>很多人在问：已经有了MCP（Model Context Protocol），为什么还需要A2A？两者的定位正在变得清晰：</p>\n<p>MCP解决的是\"模型连接工具\"的问题——Agent怎么调用数据库、怎么读文件、怎么操作API，它是单向的、无状态的、事务式的，就像浏览器和服务器之间的请求/响应。</p>\n<p>A2A解决的是\"Agent连接Agent\"的问题——两个对等的Agent怎么协商任务、怎么分配工作、怎么同步状态，它是双向的、有状态的、协作式的，就像两个人之间的对话和分工。</p>\n<p>两者不是竞争关系，而是互补关系。一个Agent通过MCP调用工具完成具体操作，通过A2A和其他Agent协作完成复杂任务。MCP是Agent的\"手\"，A2A是Agent的\"嘴\"。</p>\n<p>协议的地基正在一层层打好。当Agent之间可以无障碍对话、协作、分工的时候，真正的\"Agent互联网\"才会从PPT走进现实。</p>\n<hr/>\n<p>明天见。</p>",
+  "pull_quote": {
+    "text": "A2A之于Agent，就像HTTP之于Web。协议本身不产生价值，协议之上的生态才产生价值。",
+    "attr": "—— 云原生技术社区评论"
+  },
+  "cognitive_notes": "A2A协议生产落地 · MCP与A2A定位差异",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 5 个源信号生成，经编辑部人工审核。",
+  "twitter_description": "Agent间通信的TCP/IP时刻正在到来。",
+  "category": "Agent 协议"
+}

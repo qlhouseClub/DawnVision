@@ -9,7 +9,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "postbuild": "pagefind --site dist"
+    "postbuild": "node scripts/generate-api.cjs && pagefind --site dist"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.0",

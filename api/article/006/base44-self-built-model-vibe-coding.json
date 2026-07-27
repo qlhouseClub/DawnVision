@@ -1,0 +1,28 @@
+{
+  "slug": "base44-self-built-model-vibe-coding",
+  "category": "AI 编程 · 工具竞争",
+  "title": "8人团队年入1亿美元自研模型对战Cursor：vibe coding的护城河之争",
+  "title_break": "8人团队年入1亿<br>自研模型打Cursor",
+  "deck": "Wix旗下Base44推出自研LLM Base1，ARR突破1亿美元。当vibe coding平台开始自建模型而非调用GPT/Claude，AI编程工具的竞争从“体验层”烧到了“模型层”。",
+  "keywords": "Dawn Vision, Base44, vibe coding, AI编程, Cursor, Claude Code, 自研模型, Lovable",
+  "og_description": "8人团队Base44年入1亿美元自研模型，vibe coding护城河战开打。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 780,
+  "sources": [
+    {
+      "text": "TechCrunch - Vibe-coding platform Base44 launches own model",
+      "url": "https://techcrunch.com/2026/06/29/vibe-coding-platform-base44-launches-own-model-as-ai-startups-seek-defensibility/"
+    },
+    {
+      "text": "InfoQ中文 - 8人起家年入上亿美元，推出自研大模型对战Cursor、Claude Code",
+      "url": "https://www.infoq.cn/article/lgKWA0PHN4zsOkB4C4Pv"
+    }
+  ],
+  "pull_quote": {
+    "text": "企业客户并不总能在所有场景中使用最新模型获得投资回报，整个基础设施正在转向模型编排和优化。",
+    "attr": "—— Headline VC合伙人 Jonathan Userovici"
+  },
+  "cognitive_notes": "Base44 · vibe coding · 自研模型 · Cursor竞争 · AI编程工具垂直整合",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的公开信息整理，素材来源：TechCrunch、InfoQ中文。",
+  "body_html": "      <p>8个人，1亿美元ARR，现在还要自己训练大模型。</p>\n      <p>这不是段子，这是Base44的真实故事。一年前Wix以8000万美元收购这家成立仅半年的公司时，团队只有8个人。如今Base44正式推出自研大模型Base1，基于“平台上数千万真实用户交互数据”训练，目标是在延迟、成本和效率上全面超越调用外部前沿模型的方案。</p>\n      <p>创始人Maor Shlomo说的直白：“将模型训练纳入我们整个技术栈的一部分，让我们在延迟、成本和效率方面拥有更多优化空间。”翻译一下：<strong>调用别人的API，命脉永远在别人手里。</strong></p>\n\n      <h2>为什么vibe coding平台要自研模型</h2>\n      <p>vibe coding——用自然语言描述需求、AI自动生成应用——是2026年最火的AI应用赛道之一。Lovable ARR达5亿美元，Base44 ARR突破1亿美元，还有大量小团队涌入。这个赛道的核心矛盾在于：产品体验建立在外部模型之上，而外部模型同时也在做自己的编程工具（Claude Code、OpenAI Codex、GitHub Copilot）。</p>\n      <p>这是一个经典的“渠道商vs品牌商”困境。你帮OpenAI和Anthropic找到了开发者使用场景，但它们随时可以通过自有产品（Claude Code、Codex）直达用户。Base44选择自研模型，本质上是在<strong>构建垂直整合的护城河</strong>：从模型到应用到用户数据，全链路掌控。</p>\n      <p>Shlomo的判断是：“模型在进步，但它们将保持通用性。”通用模型什么都能做，但在特定场景下不一定是最优解。vibe coding有自己独特的任务分布——大量前端组件生成、UI逻辑编排、数据库schema设计、部署配置——这些任务的模式高度重复，一个在这些数据上专门训练的小模型，未必比通用大模型差，但成本可以低很多。</p>\n\n      <h2>自研模型是解药还是陷阱</h2>\n      <p>但自研模型不是万能药。</p>\n      <p>Headline VC合伙人Jonathan Userovici（投资了Mistral AI）提醒不要低估前沿模型的迭代速度。他举了法律科技公司Harvey的例子——Harvey也曾计划自研模型，最终放弃。原因很简单：当你花6个月训练出一个模型，GPT或Claude的下一代可能已经把你的优势追平了。<strong>前沿模型的进步速度，可能比垂直模型的迭代速度更快。</strong></p>\n      <p>成本也是一个现实考量。Base44坦承自研模型的成本下降“不是立竿见影”的，需要时间才能形成更强的利润结构。Wix近期宣布裁员20%，虽然Base44在被收购后持续扩张，但母公司的成本压力是真实存在的。</p>\n      <p>但Base44的赌注是：当vibe coding平台达到一定的用户规模和交互数据量，自研模型的ROI就会转正。数千万真实用户交互数据是大模型公司训练通用模型时不具备的——这些数据不是通用代码，而是真实的“人类意图→可运行应用”映射，这是vibe coding平台最核心的资产。</p>\n\n      <div class=\"pull-quote\">\n        \"企业客户并不总能在所有场景中使用最新模型获得投资回报，整个基础设施正在转向模型编排和优化。\"\n        <span class=\"pull-quote__attr\">—— Headline VC合伙人 Jonathan Userovici</span>\n      </div>\n\n      <p>AI编程工具的战争，正在从“谁的补全更准、谁的Agent更可靠”蔓延到“谁的成本结构更可持续”。Base44选择了垂直整合，Lovable选择了继续依赖外部模型（目前ARR 5亿美元，比Base44大5倍），Cursor和Copilot则背靠大模型公司。三条路径，谁能笑到最后？</p>\n      <p>答案可能不是赢家通吃，而是分层共存——通用模型做底层基础设施，垂直模型做场景优化，应用层做用户体验。但有一点是确定的：在AI编程这个赛道，<strong>只做“套壳”的公司会越来越危险</strong>。</p>\n\n      <hr>\n      <p>明天见。</p>"
+}

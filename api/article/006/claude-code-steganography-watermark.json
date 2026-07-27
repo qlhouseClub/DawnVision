@@ -1,0 +1,28 @@
+{
+  "slug": "claude-code-steganography-watermark",
+  "title": "Claude Code偷偷在你Prompt里打小报告？隐写术标记炸出开发者信任地震",
+  "title_break": "Claude Code偷偷<br>在Prompt里打小报告",
+  "deck": "开发者发现Claude Code在系统提示里用肉眼看不见的Unicode字符做隐写标记，专门检测亚洲时区和中国AI公司域名。主打“AI安全”的Anthropic，在隐私问题上翻了车。",
+  "keywords": "Dawn Vision, Claude Code, 隐写术, AI隐私, 开发者工具, Unicode, Anthropic, API反代检测",
+  "og_description": "Claude Code被爆用隐写术标记Prompt，检测中国AI域名和亚洲时区，开发者信任危机爆发。",
+  "read_time": "约 4 分钟阅读",
+  "word_count": 750,
+  "sources": [
+    {
+      "text": "thereallo.dev - Claude Code is steganographically marking requests (1644 HN points)",
+      "url": "https://thereallo.dev/blog/claude-code-prompt-steganography"
+    },
+    {
+      "text": "Hacker News - Claude Code is steganographically marking requests (471 comments)",
+      "url": "https://news.ycombinator.com/item?id=48734373"
+    }
+  ],
+  "pull_quote": {
+    "text": "当一个有文件系统和shell权限的工具，开始在看不见的标点符号里藏分类标记，正确的反应是审视。信任是在无聊的细节里earned的。",
+    "attr": "—— 文章作者 thereallo"
+  },
+  "cognitive_notes": "Claude Code隐写术 · AI工具隐私 · Unicode水印 · 开发者信任",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的公开信息整理，素材来源：thereallo.dev、Hacker News。",
+  "footnote_tip": "温馨提示：1. 给AI编程工具的权限要最小化，别动不动就给全仓库访问和sudo权限。2. 敏感项目不要用联网的AI工具，本地模型+离线环境才是正道。3. 任何跟你说“我们绝对保护隐私”的AI工具，都值得留个心眼。",
+  "body_html": "      <p>朋友们，今天这个AI翻车故事，精彩程度可以写进《2026年AI工具迷惑行为大赏》。</p>\n      <p>事情是这样的。一位开发者出于隐私考虑，检查了自己本地安装的Claude Code（v2.1.196）二进制文件——毕竟这东西有文件系统权限、能执行shell命令、能操作git，权限大得吓人，检查一下是应该的。</p>\n      <p>结果不查不知道，一查吓一跳：Claude Code在发给模型的系统提示里，<strong>偷偷嵌入了肉眼几乎看不见的隐写标记</strong>。</p>\n\n      <h2>怎么打的小报告</h2>\n      <p>手法相当“精妙”。</p>\n      <p>Claude Code的系统提示里有一句日期字符串，正常看起来是“Today’s date is 2026-07-01”这种无聊内容。但Claude Code会偷偷改变两个东西：一是“Today’s”里的撇号（apostrophe），二是日期分隔符（把-改成/）。这些变化用了四种不同的Unicode字符——普通撇号、右单引号（U+2019）、修饰符字母撇号（U+02BC）、另一种变体（U+02B9）——<strong>在等宽字体里你根本看不出区别，但后端可以据此解码出信息</strong>。</p>\n      <p>它检测什么？两个条件：第一，你的系统时区是不是<strong>Asia/Shanghai或Asia/Urumqi</strong>；第二，你的ANTHROPIC_BASE_URL（API地址）指向的域名是不是在一个秘密列表里。</p>\n      <p>这个域名列表被XOR加密和base64编码藏在二进制文件里，解码后包含什么？大量中国企业域名、AI公司域名、代理/网关/中转域名。关键词列表包括deepseek、zhipu（智谱）等中国AI实验室的名字。</p>\n      <p>翻译成人话：如果你在中国时区用Claude Code，或者你把Claude Code接到了第三方API中转/代理/兼容服务上，它就在发给Anthropic的系统提示里偷偷打个标记——“注意，这个用户可能在通过非官方渠道使用我们的服务”。</p>\n\n      <h2>为什么开发者炸了</h2>\n      <p>你可能会说：公司检测API滥用不是很正常吗？</p>\n      <p>正常，但方式不正常。</p>\n      <p>检测API滥用有一万种正大光明的方式：在请求头里加个明确的标识字段、在文档里说明检测策略、在发布说明里告知用户、在遥测设置里让用户选择是否参与。但Anthropic选择了最让人不舒服的一种：<strong>在用户看不到的地方，用隐写术往Prompt里塞标记</strong>。</p>\n      <p>正如作者所说：“如果客户端想检测自定义API网关，大可以明说。可以发一个明确的遥测字段并附上文档。可以让策略可见。可以写在发布说明里。把信号藏在系统提示的标点符号里，只会让其他所有隐私声明都变得难以相信。”</p>\n      <p>更讽刺的是，Claude Code和Anthropic一直主打“安全”“可信”“负责任AI”的人设。Dario Amodei频繁公开谈论AI安全和伦理，公司把“构建有益、无害、诚实的AI”挂在嘴边。结果呢？一个拥有你文件系统和shell权限的工具，在你看不见的地方偷偷做分类标记。</p>\n\n      <div class=\"pull-quote\">\n        \"当一个有文件系统和shell权限的工具，开始在看不见的标点符号里藏分类标记，正确的反应是审视。信任是在无聊的细节里earned的。\"\n        <span class=\"pull-quote__attr\">—— 文章作者 thereallo</span>\n      </div>\n\n      <p>而且这个检测的“防绕过”能力也很弱——改主机名、改时区、patch二进制、包装进程，任何一个稍微认真的对手都能绕过。最后被惩罚的是谁？是正常使用内部网关、本地代理、模型路由做合法事情的开发者。</p>\n      <p>HN上1644个点赞、471条评论，热评第一说得好：“如果你的产品需要靠隐写术来保护商业模式，那你的商业模式本身就有问题。”</p>\n\n      <p>最后说一句：这事儿说大不大说小不小。Anthropic完全可以发个补丁，把标记方式改成公开的遥测字段，这事就过去了。但对开发者来说，这是一个提醒——</p>\n      <p><strong>温馨提示：</strong></p>\n      <p>1. 给AI编程工具的权限要最小化，别动不动就给全仓库访问和sudo权限。</p>\n      <p>2. 敏感项目不要用联网的AI工具，本地模型+离线环境才是正道。</p>\n      <p>3. 任何跟你说“我们绝对保护隐私”的AI工具，都值得留个心眼——毕竟，你看不见它在你Prompt里塞了什么。</p>\n\n      <p>今天就槽到这里，明天继续。</p>"
+}

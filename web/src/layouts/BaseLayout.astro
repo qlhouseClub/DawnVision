@@ -128,11 +128,11 @@ const jsonLdArray = structuredData
 
   {/* Analytics: Baidu Tongji */}
   {siteConfig.analytics.baiduTongjiId && (
-    <script is:inline>
+    <script is:inline define:vars={{ baiduId: siteConfig.analytics.baiduTongjiId }}>
       var _hmt = _hmt || [];
       (function() {
         var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?" + BAIDU_TONGJI_ID;
+        hm.src = "https://hm.baidu.com/hm.js?" + baiduId;
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
       })();

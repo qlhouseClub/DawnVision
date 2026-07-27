@@ -1,0 +1,32 @@
+{
+  "slug": "mcp-a2a-fusion-draft-linux-foundation",
+  "category": "Agent 协议 · 技术标准",
+  "title": "MCP+A2A融合草案发布：Agent协议层尘埃落定，信任层成下一个战场",
+  "title_break": "MCP+A2A融合草案落地<br>协议层就绪，信任层开战",
+  "deck": "Linux Foundation发布MCP+A2A融合草案，两大协议统一治理。Agent协议层的“战国时代”接近尾声，但协议之上的信任、安全、计费问题才刚刚浮出水面。",
+  "keywords": "Dawn Vision, MCP, A2A, Agent协议, Linux Foundation, 智能体协议, AI Agent, 协议融合",
+  "og_description": "Linux Foundation发布MCP+A2A融合草案，Agent协议层从分裂走向统一，下一个战场转向信任、安全和计费。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 800,
+  "sources": [
+    {
+      "text": "搜狐 - MCP+A2A融合落地！2026年Agent协议层已就绪，信任层才是最大硬仗",
+      "url": "https://m.sohu.com/a/1053181535_122066679/"
+    },
+    {
+      "text": "CSDN - 2026年，AI Agent 开发踩坑实录：MCP 协议落地，我总结了这三条铁律",
+      "url": "https://blog.csdn.net/2604_95858050/article/details/161430845"
+    },
+    {
+      "text": "今日头条 - MCP vs A2A：企业多 Agent 编排协议选型决策框架",
+      "url": "http://m.toutiao.com/group/7632851494714278440/"
+    }
+  ],
+  "body_html": "\n      <p>2026年6月25日，全球Agent生态迎来了一个堪比“Kubernetes诞生之日”的时刻——Linux Foundation Agentic AI Foundation正式发布了<strong>MCP + A2A融合草案</strong>。</p>\n      <p>在此之前，Agent协议领域是典型的“战国时代”：Anthropic的MCP主打工具调用层，Google的A2A主打Agent之间的通信，还有IBM的ACP、CopilotKit的AG-UI，各家都想当标准制定者。开发者不知道该选哪个，企业不敢大规模投入，整个生态卡在了协议分裂的瓶颈上。</p>\n      <p>MCP+A2A的融合，意味着Agent协议层的“标准之争”接近了第一个分水岭——不是某一个赢了，而是最核心的两层协议找到了各自的位置，开始协同工作。</p>\n\n      <h2>两层协议，各管一摊</h2>\n      <p>很多人喜欢问“MCP和A2A哪个更强”，这其实是个错误的问题。它们的关系更像TCP和HTTP——一个管下层传输，一个管上层应用，不在一个层面竞争。</p>\n      <p><strong>MCP（Model Context Protocol）</strong>管的是“Agent怎么调用工具”。它定义了一套标准的工具接口规范，让Agent可以用统一的方式连接数据库、文件系统、API、第三方服务。MCP解决的是Agent的“手和脚”的问题——怎么与外部世界交互。</p>\n      <p><strong>A2A（Agent-to-Agent Protocol）</strong>管的是“Agent怎么和另一个Agent说话”。它定义了Agent之间的消息格式、任务委派机制、能力发现协议。A2A解决的是Agent的“社交”问题——多个Agent怎么协作完成复杂任务。</p>\n      <p>这次融合草案的核心，不是把两个协议合并成一个，而是<strong>把它们放在同一个治理框架下</strong>——都由Linux Foundation Agentic AI Foundation来管，确保两个协议在设计上互相兼容、在演进上步调一致。底层用MCP接工具，上层用A2A做Agent间通信——这套组合拳打出来，Agent基础设施的协议栈基本就定型了。</p>\n\n      <h2>协议层就绪了，然后呢？</h2>\n      <p>协议标准的统一是个好消息，但它解决的只是“能不能连上”的问题。连上之后怎么办？真正的硬仗还在后面。</p>\n      <p>第一个硬仗是<strong>信任</strong>。如果你的Agent要调用我Agent的能力，它凭什么相信你说的是真的？你发来的任务会不会是攻击？你会不会滥用我的能力？Agent之间的信任机制、身份认证、权限控制——这些东西协议里没写，也写不了，因为每个场景的信任模型都不一样。</p>\n      <p>第二个硬仗是<strong>安全</strong>。Agent能调用工具、能访问数据、能和其他Agent协作，这也意味着攻击面被指数级放大了。一个被攻破的Agent可以通过A2A协议感染其他Agent，可以通过MCP调用敏感工具，可以从一个小小的漏洞扩散到整个Agent网络。安全防护怎么建？谁来负责？出了事故怎么溯源？</p>\n      <p>第三个硬仗是<strong>计费</strong>。Agent之间互相调用服务，谁给谁钱？怎么定价？按调用次数还是按任务复杂度？怎么对账？怎么防止欺诈？互联网有广告和电商作为商业模式，Agent网络的经济系统会是什么样？现在没人知道。</p>\n      <p>协议层就像修好了公路——路通了当然是好事，但路上跑什么车、谁来管交通、出了事故谁负责、过路费怎么收——这些问题比修路本身更复杂，也更有商业价值。</p>\n      <p>协议层的“战国时代”快结束了，信任层的“春秋时代”才刚刚开始。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "协议层解决的是能不能连上的问题，信任层解决的是敢不敢用的问题。路修好了，交通规则和保险系统才是真正的价值所在。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "MCP · A2A · 协议融合 · Linux Foundation · Agent协议 · 信任层 · 安全 · 计费",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 7 个源信号生成，经编辑部人工审核。素材来源：搜狐、CSDN、今日头条。"
+}

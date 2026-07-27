@@ -1,0 +1,32 @@
+{
+  "slug": "mcp-stateless-update-agent-protocol-scalability",
+  "category": "Agent 协议 · 技术标准",
+  "title": "MCP无状态化重大更新：AI最重要协议的规模化关键一步",
+  "title_break": "MCP转向无状态架构<br>Agent协议规模化关键一步",
+  "deck": "会话ID从服务端有状态变成无状态，像普通网站一样工作。MCP协议赢得工具层标准战后，正在解决真正的难题——大规模部署。",
+  "keywords": "Dawn Vision, MCP, Model Context Protocol, 无状态, Agent协议, 规模化部署, Agentic AI, Arcade",
+  "og_description": "MCP协议重大更新：服务端会话ID转向无状态架构，类似普通网站工作方式，为大规模部署扫清障碍。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 780,
+  "sources": [
+    {
+      "text": "TechCrunch - AI's most important protocol is getting a little bit easier to use",
+      "url": "https://techcrunch.com/2026/07/20/ais-most-important-protocol-is-getting-a-little-bit-easier-to-use/"
+    },
+    {
+      "text": "Arcade Blog - MCP is going stateless",
+      "url": "https://www.arcade.dev/blog/mcp-going-stateless/"
+    },
+    {
+      "text": "MCP官方 - Release Candidate Spec",
+      "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/"
+    }
+  ],
+  "body_html": "      <p>AI领域最重要的协议——Model Context Protocol（MCP），正在悄悄做一个可能决定它能不能真正规模化的关键更新。</p>\n      <p>7月21日，Arcade团队发表了一篇技术解读，详细解释了MCP即将推出的无状态化更新。这个更新对普通用户来说可能感知不到，但对于所有在生产环境部署MCP服务的公司来说，它解决了一个令人头秃的问题：<strong>会话ID和负载均衡的矛盾</strong>。如果说之前的MCP是个只能在单机上跑的玩具，更新之后的MCP，终于可以在分布式集群上正经干活了。</p>\n\n      <h2>有状态为什么是规模化的死穴</h2>\n      <p>要理解这次更新为什么重要，得先搞懂之前的MCP是怎么工作的。</p>\n      <p>旧版MCP的工作流程是这样的：客户端（比如Claude）连接到MCP服务器，先发个「hello」——我是谁、什么版本、有什么能力。服务器回复自己的能力，同时发回一个<strong>会话ID（session ID）</strong>。之后客户端的每一个请求都要带上这个会话ID，服务器靠它认出「哦，这是刚才那个对话」。</p>\n      <p>听起来没毛病对吧？但一旦你要大规模部署，问题就来了。</p>\n      <p>想象一下：你有一个服务百万用户的MCP服务，前面放了个负载均衡器，请求被随机分发到几十台服务器上。问题来了：<strong>会话ID是某一台服务器发的，但下一个请求可能被负载均衡器分到另一台服务器上</strong>。那台服务器根本不认识这个会话ID，怎么办？</p>\n      <p>你有几个选择：一是让所有服务器共享会话状态（搞个Redis集群存session），二是让负载均衡器做「粘性会话」（同一个用户的请求永远打同一台机器），三是每台服务器都认识所有会话ID（不可能）。每一种方案都有各自的问题和成本——这就是为什么很多公司虽然嘴上说MCP好，但一直不敢在生产环境大规模部署的原因之一。</p>\n      <p>这次更新的核心就是：<strong>把会话状态从服务端移到客户端</strong>。服务器不再保存会话状态，会话ID变成一个客户端自己管理的「令牌」，每次请求带过来，服务器根据令牌里的信息就能知道上下文，不需要在本地存任何东西。就像普通网站用JWT token做用户认证一样——服务器不需要记住每个用户的session，只需要验证token就行。</p>\n\n      <h2>为什么这是AI基础设施的里程碑</h2>\n      <p>这个技术细节听起来很枯燥，但它的影响可能比你想象的要大。</p>\n      <p>第一，<strong>MCP的部署成本会大幅下降</strong>。以前你要搞一整套session管理基础设施，现在服务器可以是完全无状态的，加机器减机器随心所欲，水平扩展变得很简单。就像从「每个服务员都要记住每个客人的订单」变成「客人自己拿着点餐小票，谁接单都一样」——餐厅的运营成本直接降一个数量级。</p>\n      <p>第二，<strong>更多公司会愿意做第一方MCP集成</strong>。为什么现在很多大公司的MCP集成都是第三方开发者在做？因为官方团队觉得部署和维护成本太高。如果无状态化让部署变得跟普通API服务一样简单，那Salesforce、Notion、Figma这些公司可能会官方下场做MCP服务——到时候MCP生态的质量和数量都会上一个台阶。</p>\n      <p>第三，<strong>Agent协议的分层格局越来越清晰</strong>。MCP管「Agent怎么调用工具」，A2A管「Agent之间怎么通信」——现在MCP先一步解决了规模化问题，A2A还在路上。就像TCP和HTTP的关系，底层协议先成熟，上层应用才能爆发。MCP + A2A的双层协议栈，正在从概念走向可用。</p>\n      <div class=\"pull-quote\">\"模型训练在以月为单位迭代，但基础设施协议的演进是以年为单位的。这不是慢，这是正确的速度——基础不牢，地动山摇。\"<span class=\"pull-quote__attr\">—— Arcade创始人Nate Barbettini</span></div>\n      <p>Arcade这家公司也值得关注。它成立才两年，6月份刚融了<strong>6000万美元</strong>，整个业务都建立在「让AI Agent在企业里真正跑起来」这个命题上。它的创始人出来解读MCP更新，某种程度上也代表了企业级Agent基础设施的真实需求。</p>\n      <p>AI领域的很多突破都是大张旗鼓的——新模型发布、新SOTA刷新、新融资官宣。但真正决定产业能不能落地的，往往是这些悄无声息的基础设施改进。就像互联网的历史上，WWW的普及不是因为哪个网站火了，而是因为TCP/IP、HTTP、HTML这些底层协议一个个成熟了。</p>\n      <p>MCP的无状态化，就是这样一块不起眼但必不可少的砖头。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "模型训练在以月为单位迭代，但基础设施协议的演进是以年为单位的。这不是慢，这是正确的速度——基础不牢，地动山摇。",
+    "attr": "—— Arcade创始人Nate Barbettini"
+  },
+  "cognitive_notes": "MCP · Model Context Protocol · 无状态 · Agent协议 · 规模化部署 · Arcade · Agentic AI · 基础设施",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：TechCrunch、Arcade Blog、MCP官方博客。"
+}

@@ -1,0 +1,41 @@
+{
+  "slug": "openai-presence-enterprise-agent-platform-customer-service",
+  "title": "OpenAI发布Presence企业级Agent平台：从卖API到卖软件，OpenAI的第二次战略跃迁",
+  "title_short": "OpenAI发布Presence企业Agent平台",
+  "title_break": "OpenAI发布Presence企业Agent平台<br>从API公司到软件公司的跃迁",
+  "deck": "75%自动解决率、10天内人工转接率下降15个百分点、BBVA/软银/IAG已在生产环境运行——OpenAI不再满足于做模型供应商，它要下场做企业软件。",
+  "keywords": "Dawn Vision, OpenAI Presence, 企业级AI Agent, 客户服务, 企业软件, BBVA, 软银, AI商业化, Agent平台",
+  "og_description": "OpenAI发布企业级Agent平台Presence，已在自家客服线实现75%自动解决率，标志OpenAI从API供应商转型为企业软件公司。",
+  "twitter_description": "75%的问题自动解决，10天内人工转接率降15个百分点。OpenAI不只想卖token，它想卖SaaS。",
+  "read_time": "约 10 分钟阅读",
+  "word_count": 2500,
+  "sources": [
+    {
+      "text": "OpenAI官方博客 - Introducing OpenAI Presence",
+      "url": "https://openai.com/index/introducing-openai-presence"
+    },
+    {
+      "text": "财联社 - OpenAI即将推出OpenAI Presence新企业软件",
+      "url": ""
+    },
+    {
+      "text": "IT之家 - OpenAI推出OpenAI Presence，布局企业软件赛道",
+      "url": ""
+    },
+    {
+      "text": "TechCrunch - How OpenAI's human mistake led to the AI-powered hack on Hugging Face",
+      "url": "https://techcrunch.com/2026/07/22/how-an-openais-human-mistake-led-to-the-ai-powered-hack-on-hugging-face/"
+    },
+    {
+      "text": "OpenAI - NTT DATA Group cuts incident analysis to 30 minutes with Codex",
+      "url": "https://openai.com/index/ntt-data"
+    }
+  ],
+  "body_html": "      <p>75%。</p>\n      <p>这是OpenAI自家英文客服热线1-888-GPT-0090目前由AI独立解决的来电比例。7月22日，OpenAI正式发布企业级AI Agent平台<strong>OpenAI Presence</strong>——一个经过多年企业级部署打磨的产品，能让企业部署可信的语音和聊天Agent来处理客户支持、外呼销售和高风险内部工作流。BBVA在墨西哥探索银行业务语音支持，软银在测试自然日语客户对话，IAG在探索极端天气等高峰期的保险理赔支持。这不是一个API更新，这是OpenAI的第二次战略转型：<strong>从卖token变成卖软件</strong>。</p>\n      <p>上一次类似的转型发生在2023年3月，ChatGPT从研究预览变成商业化产品，OpenAI从实验室变成了API公司。三年后，Presence的发布意味着OpenAI要更进一步——它不再满足于做模型供应商，等客户自己把API缝成可用的系统；它要自己下场，把模型、策略、护栏、评估工具、改进闭环打包成一个完整的企业软件产品，直接卖给CIO和CTO。</p>\n\n      <h2>Presence到底是什么？不是ChatGPT Enterprise 2.0</h2>\n      <p>很多人看到“OpenAI发布企业Agent”的第一反应是：这不就是ChatGPT Enterprise加了Agent功能吗？不是。</p>\n      <p>ChatGPT Enterprise解决的是“让员工安全地用大模型”的问题——一个聊天界面，加上企业级安全和数据隔离。Presence解决的是一个完全不同的问题：<strong>让AI Agent在生产环境中可靠地替公司干活</strong>。这两者之间的距离，比大多数人想象的要大得多。</p>\n      <p>根据OpenAI官方博客的描述，Presence的每个部署从一个具体的“活儿”开始：解决账单问题、处理保险理赔、响应员工IT服务请求。Agent只获得完成这项工作所需的知识和系统访问权限。公司设定策略：Agent能做什么、什么时候需要审批、什么时候必须转人工。上线后，生产会话和转接案例暴露系统短板，Codex自动提出更新建议，团队测试审批后再发布。</p>\n      <p>这段话听起来简单，但里面包含了企业软件最核心的几个要素：<strong>权限最小化、策略引擎、护栏系统、仿真测试、持续改进闭环</strong>。这不是给一个大模型加个system prompt就能解决的问题。这是Salesforce、ServiceNow、SAP们花了二十年搭建的东西。</p>\n      <p>OpenAI举了自家客服线的数据：Presence上线后几周内就达到甚至超过了人工客服的质量基准，现在独立解决<strong>75%</strong>的来电问题；更关键的是，利用Codex驱动的改进循环，在短短<strong>10天内</strong>人工转接率下降了<strong>15个百分点</strong>。10天、15个百分点——这个改进速度是传统企业软件迭代周期的零头。</p>\n\n      <h2>为什么是现在？三个信号表明时机已到</h2>\n      <p>OpenAI不是今天才想做企业软件。Presence的发布时机背后，是三个关键信号的交汇。</p>\n      <p>第一个信号：<strong>Agent可靠性终于跨过了生产可用门槛</strong>。2024年的Agent还停留在demo阶段——能订个餐厅、能查个天气，但一到真实业务场景就掉链子：记错用户信息、违反公司政策、在关键步骤卡住不知道转人工。2025年到2026年，随着推理模型成熟、工具调用可靠性提升、评估体系完善，Agent在特定垂直场景的表现开始接近甚至超过人类一线员工。NTT DATA集团用ChatGPT Enterprise加Codex后，事故分析时间从数小时缩短到<strong>30分钟</strong>，9000名员工在使用——这不是试点，这是规模化部署。</p>\n      <p>第二个信号：<strong>企业不再问“AI能不能用”，而是问“怎么让AI可靠地干活”</strong>。OpenAI在博客开篇就点明了这个转变：“企业面临的挑战不再是证明AI Agent能工作，而是让它们足够可靠以在生产中完成高价值工作。”过去两年，几乎所有大企业都做过AI试点，但真正跑到生产环境、产生可量化ROI的比例很低。瓶颈不在模型能力，而在把模型、系统、流程、权限、监控缝合成一个可靠系统的工程能力。大多数企业没有这个能力。Presence就是OpenAI给这个问题交出的答卷。</p>\n      <div class=“pull-quote”>“企业面临的挑战不再是证明AI Agent能工作，而是让它们足够可靠以在生产中完成高价值工作。”<span class=“pull-quote__attr”>—— OpenAI官方博客</span></div>\n      <p>第三个信号：<strong>竞争压力倒逼OpenAI从平台走向应用</strong>。Anthropic在企业市场的攻势越来越猛——Claude for Work已经在很多企业与ChatGPT Enterprise正面竞争；Google的Gemini Enterprise Agent Platform也在同一天发布新模型；微软Copilot虽然生态绑定强，但OpenAI需要保持自己独立于微软的企业客户关系。更重要的是，ServiceNow、Salesforce这些传统企业软件巨头正在把AI Agent深度嵌入自己的产品——如果OpenAI只做底层模型，它就会被这些应用层公司管道化。Presence是OpenAI说：“我不只是你的模型供应商，我也是你的应用层竞争对手。”</p>\n\n      <h2>Presence的产品哲学：控制环比模型更重要</h2>\n      <p>仔细读Presence的产品设计，你会发现一个有意思的重心转移：<strong>OpenAI不再把模型本身当作核心卖点，而是把“控制环”（control loop）当作核心卖点</strong>。</p>\n      <p>什么是控制环？就是围绕模型的一整套系统：策略定义（Agent能做什么不能做什么）、护栏（实时检测和拦截违规行为）、审批流程（哪些动作需要人确认）、仿真测试（上线前模拟各种场景）、评估工具（量化Agent表现）、持续改进（生产数据反馈驱动模型和策略更新）。这些组件单独看都不新鲜，但把它们整合成一个开箱即用的产品，OpenAI是第一家。</p>\n      <p>这种设计哲学反映了一个深刻的行业认知转变：<strong>在企业场景中，模型能力只是基础，可靠性和可控性才是决定能否投产的关键</strong>。一个准确率99%但会在1%的情况下闯祸的Agent，在客服场景中可能意味着错误退款、违规承诺、隐私泄露——这些风险的代价远大于1%的效率提升。Presence的核心价值主张不是“我的模型最聪明”，而是“我的Agent不会把你的生意搞砸，而且越用越好”。</p>\n      <p>Codex驱动的改进闭环尤其值得关注。传统企业软件的更新周期是月度甚至季度级别的——业务部门提需求，IT排期开发，测试，上线。Presence的做法是：生产环境中的每次转接、每次差评、每次人工干预都是信号，Codex自动分析这些信号、定位问题根因、生成策略或配置更新建议，团队审批后灰度发布。这个循环把Agent的迭代速度从“季度”压缩到了“天”。前面提到的10天内人工转接率下降15个百分点，就是这个闭环的威力。</p>\n\n      <h2>企业AI市场的格局重塑</h2>\n      <p>Presence的发布将对企业AI市场产生深远影响，首当其冲的是三类公司。</p>\n      <p>第一类是<strong>传统企业软件巨头</strong>：Salesforce、ServiceNow、SAP、Oracle。这些公司过去一年都在拼命往自己的产品里加AI功能，但本质上是在旧架构上贴AI补丁。Presence是从Agent原生的角度重新设计的产品——策略引擎、护栏、评估、改进闭环都是围绕Agent工作流设计的。如果OpenAI在垂直场景（客服、IT支持、HR、财务）做到足够深的产品化，这些传统厂商面临的就不只是“加个AI功能”的竞争，而是架构层面的代差。不过传统巨头的优势是数据和工作流深度——Salesforce里有你全部的客户数据，ServiceNow里跑着你全部的IT流程，这些不是一个新Agent平台短期内能替代的。</p>\n      <p>第二类是<strong>AI Agent创业公司</strong>。过去两年涌现了大量企业Agent初创公司——做客服Agent的、做IT支持Agent的、做销售Agent的。Presence的发布直接杀入了它们的赛道。OpenAI的优势是模型能力、品牌认知、资金储备；创业公司的优势是垂直场景深度、灵活性、客户响应速度。接下来12个月会是一场残酷的淘汰赛——就像AWS的崛起没有灭掉所有企业SaaS，但确实把基础设施层的创业公司清洗了一遍。</p>\n      <p>第三类是<strong>微软</strong>。这可能是最微妙的关系。OpenAI和微软的关系在过去一年经历了多次紧张时刻——从Anthropic合作到Copilot竞争。Presence作为OpenAI独立推出的企业软件产品，在某种程度上和Microsoft 365 Copilot形成了竞争关系。但微软的企业渠道、Office生态、Azure基础设施又是OpenAI短期内无法替代的。这种“既合作又竞争”的关系会继续持续，双方都在小心翼翼地维持平衡。</p>\n      <p>对中国市场而言，Presence短期内不会直接进入，但它的产品形态给国内大模型公司指明了方向：<strong>只卖API和模型授权是不够的，企业需要的是完整的、可信赖的、能持续改进的Agent系统</strong>。飞书aily、钉钉悟空、百度文心智能体都在往这个方向走，但在策略引擎、护栏系统、持续改进闭环这些“无聊但关键”的企业级组件上，和Presence比还有明显差距。</p>\n\n      <h2>终局判断：AI的“Oracle时刻”</h2>\n      <p>回顾企业软件的历史，1977年Oracle的成立是一个标志性事件。在Oracle之前，数据库只是IBM大型机上的一个组件；Oracle把关系型数据库做成了独立的企业软件产品，开启了一个价值数千亿美元的市场。</p>\n      <p>Presence可能是AI Agent领域的“Oracle时刻”——把大模型从一个技术组件变成了一个独立的企业软件品类。当然，OpenAI不是唯一在做这件事的公司，但它是第一个把“模型+策略+护栏+评估+改进”完整打包成产品、并且有大规模生产数据（自家客服75%解决率）背书的公司。</p>\n      <p>这条路并不容易。企业软件的护城河从来不是技术领先，而是深度嵌入客户业务流程后的切换成本、合规认证、行业Know-how、服务网络。OpenAI在这些方面几乎是从零开始。Presence目前还是Limited GA，只对合格企业客户开放，由OpenAI的Forward Deployed Engineers和系统集成商主导部署——这意味着它还不是一个可以自助购买的SaaS产品，服务交付能力是瓶颈。</p>\n      <p>但方向是明确的。当AI Agent的可靠性跨过生产门槛，当企业有强烈的降本增效压力，当OpenAI这样的公司愿意把模型能力封装成解决方案而不是只卖API——企业软件的AI重构就开始了。Salesforce用了20年做到年营收300亿美元，ServiceNow用了15年做到年营收100亿美元。AI原生的企业软件公司会用多长时间？Presence给出了一个值得关注的起点。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "企业面临的挑战不再是证明AI Agent能工作，而是让它们足够可靠以在生产中完成高价值工作。OpenAI不想只卖token，它要卖SaaS。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "OpenAI Presence · 企业级Agent · 75%自动解决率 · BBVA · 软银 · IAG · 策略引擎 · 护栏系统 · Codex改进闭环 · 企业软件 · AI商业化",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 22 个源信号生成，经编辑部人工审核。素材来源：OpenAI官方博客、财联社、IT之家、TechCrunch。"
+}

@@ -1,0 +1,41 @@
+{
+  "slug": "sambanova-11b-valuation-jpmorgan-deepseek-chip-inference-war",
+  "title": "SambaNova估值110亿拿下摩根大通：AI推理基建的独立战争打响，大银行弃云从私算力格局重写",
+  "title_short": "SambaNova估值110亿",
+  "title_break": "SambaNova估值110亿拿下摩根大通<br>AI推理基建独立战争打响",
+  "deck": "SambaNova完成10亿美元F轮融资估值110亿，摩根大通选定其为私有推理基础设施合作伙伴。叠加DeepSeek被曝自研推理芯片、海光切入端侧，AI算力正从英伟达+云厂商的双垄断走向多元异构。",
+  "keywords": "Dawn Vision,SambaNova,AI推理芯片,SN50,摩根大通,DeepSeek自研芯片,算力基建,私有部署,AI推理,异构计算",
+  "og_description": "SambaNova融资10亿美元估值110亿，摩根大通采用其私有推理基础设施，叠加DeepSeek自研芯片，AI算力格局进入多元异构时代。",
+  "twitter_description": "SambaNova 110亿估值拿下摩根大通，AI推理芯片的独立战争打响了。",
+  "read_time": "约 10 分钟阅读",
+  "word_count": 2600,
+  "sources": [
+    {
+      "text": "TechCrunch - AI chip maker SambaNova raises $1B at $11B valuation",
+      "url": "https://techcrunch.com/2026/07/08/sambanova-draws-1b-at-11b-valuation-in-series-f-first-close/"
+    },
+    {
+      "text": "InfoQ中文 - DeepSeek被曝自研AI推理芯片，一年前已启动",
+      "url": "https://www.infoq.cn/article/sLYxUorQQs5K17DILrx8"
+    },
+    {
+      "text": "36氪 - 海光计划切入端侧AI，加速构建全栈自主算力体系",
+      "url": "https://36kr.com/newsflashes/3886606481879045?f=rss"
+    },
+    {
+      "text": "36氪 - 三星支持的韩国AI芯片创企Rebellions计划明年IPO",
+      "url": "https://36kr.com/newsflashes/3886643228684544?f=rss"
+    },
+    {
+      "text": "Intel Newsroom - Intel and SambaNova announce multi-year Xeon inference collaboration",
+      "url": "https://newsroom.intel.com/data-center/intel-and-sambanova-planning-multi-year-collaboration-for-xeon-based-ai-inference"
+    }
+  ],
+  "body_html": "      <p>110亿美元。</p>\n      <p>7月8日，AI芯片公司SambaNova宣布完成<strong>10亿美元F轮融资的首次交割</strong>，估值达到110亿美元。General Atlantic领投，BlackRock、Capital Group、卡塔尔投资局、Vista Equity Partners等全明星阵容跟投，Intel继续加码——5个月前的2月份，SambaNova刚融完3.5亿美元E轮并发布SN50芯片。</p>\n      <p>比融资更值得注意的是客户：<strong>摩根大通（JPMorgan Chase）选定SambaNova作为其推理基础设施合作伙伴</strong>，SN40L和SN50系统将为这家全球最大银行提供安全的本地化AI推理服务。SambaNova CEO Rodrigo Liang直言不讳：\"摩根大通这样级别的银行决定用SambaNova做推理，这向整个银行业传递了一个信号——是时候不完全依赖云服务了。\"</p>\n      <p>同一天，两条来自中国的消息形成了完美呼应：InfoQ报道DeepSeek一年前已启动自研AI推理芯片项目，正在对接代工和存储厂商；36氪消息称海光信息将集中展示\"云边端\"全系算力场景，首次大规模切入端侧AI。</p>\n      <p>训练靠英伟达、推理上公有云——这个AI行业默认了三年的算力格局，正在2026年夏天被彻底改写。</p>\n\n      <h2>为什么摩根大通选择\"弃云从私\"？</h2>\n      <p>SambaNova拿到摩根大通这个客户的分量，怎么强调都不为过。</p>\n      <p>银行业是对AI需求最迫切、同时对安全要求最严苛的行业。摩根大通管理着超过3.9万亿美元的资产，每天处理的交易笔数以亿计，客户数据的敏感度是最高级别。过去两年，摩根大通和其他华尔街大行一样，主要通过AWS、Azure、Google Cloud三大云厂商调用AI能力——OpenAI服务在Azure上，Anthropic在AWS和GCP上都有部署。</p>\n      <p>但大银行正在集体转向私有部署。Liang提到SambaNova的三类客户——主权云、新云厂商（neocloud）、自建自用的大型企业——摩根大通代表的是第三类，也是最有风向标意义的一类。原因有三：</p>\n      <p>第一，<strong>数据安全和合规</strong>。银行最敏感的风控模型、反洗钱模型、客户数据，即使在VPC隔离的云上，很多CIO和CISO依然睡不着觉。本地化部署意味着数据永远不出银行自己的数据中心，满足最严格的监管要求。欧洲的GDPR、美国的银行保密法、中国的数据安全法，都在推动金融机构把核心AI能力迁回本地。</p>\n      <p>第二，<strong>推理成本的非线性增长</strong>。训练是一次性投入，推理是持续的成本中心。2025年AI行业的注意力还在训练大模型需要多少钱，2026年大家开始算一笔账：当大模型真正部署到生产环境，每天几亿次调用，推理成本会随着调用量线性甚至超线性增长。云厂商的推理定价虽然在下降，但对超大规模用户来说，自建私有基础设施的TCO（总拥有成本）在2-3年维度上已经显著低于公有云。</p>\n      <p>第三，<strong>异构计算的性能优势</strong>。SambaNova的SN50芯片是专门为Agentic Inference（智能体推理）设计的——不是为了训练万亿参数模型，而是为了让万亿参数模型在推理时跑得更快、延迟更低、单token成本更便宜。Liang说SambaNova的核心竞争力是\"premium inference\"：把多万亿参数模型装到一个机架里，让它们跑得快。这和GPU的通用架构思路完全不同——GPU是瑞士军刀，什么都能干；SambaNova的RDU（可重构数据流单元）是手术刀，专门优化推理。</p>\n      <div class=\"pull-quote\">\"2024年银行问'我们该不该用AI'；2025年银行问'我们该用哪家云厂商的AI'；2026年银行问'我们该买谁的芯片建自己的AI集群'。问题的变化本身就是答案。\"<span class=\"pull-quote__attr\">—— 一位华尔街金融科技分析师</span></div>\n\n      <h2>中国侧的推理芯片竞赛：DeepSeek下海、海光端侧突围</h2>\n      <p>SambaNova在北美拿下摩根大通的同一天，中国AI推理芯片赛道也传来两个重要信号。</p>\n      <p>第一个是DeepSeek被曝自研推理芯片。InfoQ的报道称，DeepSeek大约在一年前就启动了AI推理芯片项目，目前正在对接代工厂和存储厂商。这个消息一点都不让人意外。DeepSeek从V3到R1再到最新的模型，一直走的是极致性价比路线——开源、便宜、推理成本低。但\"便宜\"是建立在英伟达GPU之上的，当你的调用量达到一定规模，GPU本身的采购成本和功耗就成了最大的成本项。如果能自研推理芯片，DeepSeek就能把推理成本的话语权完全掌握在自己手里。</p>\n      <p>这和Anthropic找三星造芯、OpenAI做Jalapeño芯片是同一个逻辑。当AI公司的规模做到一定程度，<strong>不做芯片就等于把利润的咽喉交给英伟达和台积电</strong>。但DeepSeek的路径可能更激进：Anthropic和OpenAI找的是三星这样的成熟代工合作，DeepSeek作为一家中国公司，面临的代工选择和供应链约束要复杂得多。</p>\n      <p>第二个是海光信息切入端侧AI。36氪报道称，海光将在光合组织2026智能计算应用大会上集中展示\"云边端\"全系算力场景，这是海光在CPU和DCU（深度学习处理器）双芯底座基础上，首次大规模呈现面向工业现场和行业应用的端侧算力布局。端侧AI的核心需求是实时响应、本地处理、安全可信——这恰恰是很多工业场景、边缘计算场景不愿意用云的原因。</p>\n      <p>韩国AI芯片公司Rebellions也传出消息，计划2027年第一或第二季度在韩国IPO，目前已经开始产生实际营收。Rebellions背后有三星电子的支持，走的也是专用推理芯片路线。从美国的SambaNova、Etched，到中国的DeepSeek自研、海光全栈，再到韩国的Rebellions，<strong>全球AI推理芯片赛道正在从英伟达一家独大，走向多地区、多架构、多场景的百花齐放</strong>。</p>\n\n      <h2>推理时代的算力格局：从\"一超多强\"到\"异构战国\"</h2>\n      <p>我们正在经历AI算力格局的一次根本性重构。</p>\n      <p>训练时代（2020-2025）的逻辑很简单：Scaling Law决定了谁能买到最多的H100/H200/B100，谁就能训练出最强的模型。英伟达是这个时代的绝对王者——CUDA生态壁垒、台积电先进制程优先权、NVLink高速互联，让竞争对手几乎没有机会。AMD的MI300系列虽然性能不错，但生态差距太大；Google TPU只给自己用；各种AI芯片创业公司大多停留在PPT阶段。</p>\n      <p>但推理时代的游戏规则完全不同。第一，<strong>推理不需要最先进的制程</strong>。训练需要极限算力密度和显存带宽，推理对制程的要求低得多，成熟制程也能跑出有竞争力的性能/功耗比。这给了更多玩家入场的机会。第二，<strong>推理场景高度碎片化</strong>。云端推理、私有数据中心推理、边缘推理、端侧推理——每个场景的延迟、功耗、成本要求都不一样，没有一款芯片能通吃所有场景。第三，<strong>软件栈的壁垒在降低</strong>。PyTorch、ONNX Runtime、vLLM、TensorRT-LLM这些推理框架正在快速成熟，让新芯片的软件适配成本大幅下降。</p>\n      <p>SambaNova的SN50选择和Intel Xeon深度合作走异构路线，而不是纯自研独立芯片，就是这个趋势的体现。Rodrigo Liang在采访中反复强调和Intel的合作关系——借助Intel的量产能力、供应链规模和客户渠道，SambaNova不需要自己从零开始造一整套系统。Intel也需要SambaNova——Xeon CPU在AI推理上需要专用加速芯片的加持，才能在和NVIDIA Grace Hopper的竞争中不落下风。</p>\n      <p>微软最近也被曝出加入AI成本削减趋势，更多依赖自研模型。TechCrunch的报道称微软正在减少对OpenAI模型的调用比例，转而使用自研的Phi系列和MaaS模型。这传递的信号同样明确：<strong>连OpenAI最大的投资者都在为推理成本做多元化布局，没有人愿意被单一供应商锁死</strong>。</p>\n\n      <h2>终局判断：推理基建的\"三层蛋糕\"正在形成</h2>\n      <p>把这些线索串在一起，AI推理基础设施的终局轮廓已经清晰可见：一个三层蛋糕结构。</p>\n      <p><strong>第一层是超大规模公有云推理</strong>。AWS、Azure、GCP、阿里云、腾讯云这些云厂商会继续提供通用推理服务，服务对象是中小客户、弹性需求、非敏感场景。这一层的核心竞争力是规模效应和易用性，英伟达GPU在这一层依然会占据主导地位，但份额会从接近垄断降到50-60%。</p>\n      <p><strong>第二层是行业/主权私有推理基础设施</strong>。银行、政府、医疗、大型制造企业会越来越多地建设自己的私有AI推理集群，SambaNova、Etched、Rebellions这类专用推理芯片公司，以及海光、华为昇腾这类国产算力厂商，会在这一层和英伟达正面竞争。这一层的核心竞争力是安全可控、TCO优势和特定场景性能优化。摩根大通选择SambaNova，就是这一层市场爆发的发令枪。</p>\n      <p><strong>第三层是端侧和边缘推理</strong>。手机、PC、汽车、工业设备、机器人——这些场景需要极低延迟、极高隐私性、断网可用，模型会越来越多地跑在端侧而非云端。高通、联发科、苹果、海光、地平线这些玩家会在这一层激烈竞争。</p>\n      <p>对AI行业的从业者和投资者来说，这个格局变化释放了几个明确信号。第一，<strong>推理芯片是比训练芯片更大的市场</strong>——训练市场一年几百亿美元到头，推理市场是几千亿甚至上万亿美元的规模，而且持续时间更长。第二，<strong>\"全自研\"不是唯一路径</strong>——SambaNova和Intel的合作证明，异构计算、强强联合可能比垂直整合更高效。第三，<strong>中国推理芯片厂商的窗口期正在打开</strong>——DeepSeek自研、海光全栈布局，不是为了超越英伟达做训练，而是在推理这个更大的市场里抢占国产替代的份额。</p>\n      <p>110亿美元估值只是开始。AI推理基建的独立战争，才刚刚打响第一枪。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "\"2024年银行问'我们该不该用AI'；2025年银行问'我们该用哪家云厂商的AI'；2026年银行问'我们该买谁的芯片建自己的AI集群'。问题的变化本身就是答案。\"",
+    "attr": "—— 一位华尔街金融科技分析师"
+  },
+  "cognitive_notes": "SambaNova · 110亿估值 · SN50 · 摩根大通 · AI推理芯片 · DeepSeek自研芯片 · 海光端侧AI · 私有部署 · 异构计算 · 算力格局重构 · Intel合作 · Rebellions IPO",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 26 个源信号生成，经编辑部人工审核。素材来源：TechCrunch、InfoQ中文、36氪、Intel Newsroom。"
+}

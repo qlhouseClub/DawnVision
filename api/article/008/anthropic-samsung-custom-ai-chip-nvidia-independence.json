@@ -1,0 +1,32 @@
+{
+  "slug": "anthropic-samsung-custom-ai-chip-nvidia-independence",
+  "category": "算力基建 · 芯片自主",
+  "title": "Anthropic找三星造芯：OpenAI Jalapeño之后，AI公司集体逃离英伟达",
+  "title_break": "Anthropic找三星造芯<br>AI公司集体逃离英伟达",
+  "deck": "Anthropic与三星洽谈定制AI芯片合作，距OpenAI发布Broadcom代工Jalapeño仅一周。Google、Amazon早有TPU/Trainium，算力自主成为头部AI公司标配战略。",
+  "keywords": "Dawn Vision,Anthropic,三星,AI芯片,OpenAI Jalapeño,英伟达,定制芯片,算力自主",
+  "og_description": "Anthropic与三星洽谈定制AI芯片，继OpenAI Jalapeño后AI公司自研芯片浪潮加速。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 780,
+  "sources": [
+    {
+      "text": "TechCrunch - Anthropic is discussing a new custom chip with Samsung",
+      "url": "https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/"
+    },
+    {
+      "text": "TechCrunch - OpenAI unveils its first custom chip built by Broadcom",
+      "url": "https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/"
+    },
+    {
+      "text": "InfoQ - WAIC 2026算力：超节点与光互连能否绕过单芯片物理天花板",
+      "url": "https://www.qbitai.com/2026/07/442167.html"
+    }
+  ],
+  "body_html": "      <p>AI公司和英伟达的\"蜜月期\"，似乎正在结束。</p>\n      <p>7月2日，The Information报道称Anthropic正在与三星洽谈合作，开发定制AI芯片。<strong>距离OpenAI发布其首款定制推理芯片Jalapeño（由Broadcom代工）仅仅过去一周</strong>。加上Google的TPU、Amazon的Trainium，全球前五名AI公司中，已经有四家在推进自研芯片。英伟达在AI训练芯片市场的垄断地位，正在从供给侧被瓦解。</p>\n\n      <h2>为什么所有人都在造芯？</h2>\n      <p>Anthropic对芯片的需求是真实且紧迫的。今年6月，Claude Sonnet 5发布后需求暴增，Mythos和Fable模型的算力需求更是天文数字。尽管Anthropic已经获得了Amazon和Google的算力承诺，但在一个英伟达H100/B100芯片仍然供不应求的市场里，把核心算力命脉完全交给第三方，风险太高。</p>\n      <p>定制芯片的逻辑很简单：<strong>通用GPU（如英伟达的产品线）为灵活性牺牲了效率，而专门为推理或特定模型架构设计的芯片，可以在性能功耗比上实现数量级的优势</strong>。OpenAI称Jalapeño在推理效率上超越竞品；Google TPU已经迭代到第五代，支撑了Gemini全系模型的训练和推理；Amazon Trainium和Inferentia也在AWS内部大规模部署。</p>\n      <p>选择三星作为合作伙伴也有讲究。三星本身就是英伟达的重要代工伙伴，在HBM（高带宽内存）和先进封装领域有深厚积累。同时三星还和Google在芯片制造上有合作，代工经验丰富。对Anthropic来说，与三星合作既能利用三星的制造能力，又不必像依赖台积电那样面临地缘政治风险。</p>\n\n      <h2>算力自主的军备竞赛</h2>\n      <p>WAIC 2026即将开幕，量子位的前瞻报道点出了今年算力领域的核心命题：<strong>超节点与光互连，能否绕过单芯片的物理天花板？</strong>当单颗芯片的制程进步越来越慢、功耗墙越来越难以突破，通过高速互联把多颗芯片连成\"超节点\"成为新方向。但这只是延缓问题，不是解决问题。</p>\n      <p>更深层的动因是成本。当一家AI公司每年在算力上花费数十亿美元甚至上百亿美元时，芯片成本的哪怕10%的优化，都意味着数亿美元的节省。Etched AI等AI芯片创业公司的估值已经冲到50亿美元级别，说明资本市场也看好AI芯片定制化的机会。</p>\n      <p>当然，自研芯片谈何容易。Anthropic自己也承认，多元化硬件战略——包括Google、Amazon和Nvidia的芯片——仍将是其算力策略的核心。<strong>定制芯片不是一夜之间就能替代英伟达的，它更像是一种保险和长期布局</strong>。但趋势已经很明确：头部AI公司不想再被任何单一芯片供应商卡脖子。</p>\n      <p>英伟达不会坐视不管。它在CUDA生态、软件栈、开发者社区上的护城河依然深厚。但当客户们开始自己造芯的时候，英伟达必须证明：继续用我的芯片，比你自己造更划算。AI芯片市场的下一阶段竞争，不再是单一芯片的性能比拼，而是<strong>整套软硬件系统的效率、成本和生态之争</strong>。</p>",
+  "pull_quote": {
+    "text": "如果你每年花100亿美元买芯片，你会开始想：为什么不自己造？",
+    "attr": "—— 一位AI基础设施投资人"
+  },
+  "cognitive_notes": "AI芯片 · Anthropic · 三星 · OpenAI Jalapeño · 英伟达 · 算力自主 · 定制芯片 · 超节点",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 9 个源信号生成，经编辑部人工审核。素材来源：TechCrunch、The Information、量子位、InfoQ。"
+}

@@ -1,0 +1,285 @@
+[
+  {
+    "number": "022",
+    "date": "2026-07-27",
+    "date_display": "2026.07.27",
+    "cover": {
+      "slug": "nvidia-sk-500b-ai-alliance-compute-infrastructure-era",
+      "title": "英伟达×SK集团5000亿美元AI联盟：算力军备竞赛从“买GPU”进入“锁全产业链”时代",
+      "deck": "5000亿美元、2GW数据中心、HBM4产能锁定——英伟达与SK集团从上到下绑定存储、芯片、数据中心全链条。当算力竞争从“买卡”升级到“锁国”，韩国成了AI时代的新沙特。",
+      "title_short": "英伟达SK 5000亿锁全产业链"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "021",
+    "date": "2026-07-24",
+    "date_display": "2026.07.24",
+    "cover": {
+      "slug": "amd-anthropic-50b-investment-helios-rack-nvidia-duopoly",
+      "title": "AMD 50亿美元投资Anthropic+Helios整机柜发布：AI算力从NVIDIA一家独大进入双雄争霸时代",
+      "deck": "Lisa Su在Advancing AI大会上亮出Helios整机柜系统，单柜2.9 Exaflops算力对标Vera Rubin，同时宣布向Anthropic投资50亿美元并签署数百亿美元采购协议，部署最多2GW Instinct MI450X集群。客户名单包括OpenAI、Meta、Microsoft、Oracle。",
+      "title_short": "AMD 50亿投Anthropic+Helios挑战NVIDIA"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "020",
+    "date": "2026-07-23",
+    "date_display": "2026.07.23",
+    "cover": {
+      "slug": "openai-presence-enterprise-agent-platform-customer-service",
+      "title": "OpenAI发布Presence企业级Agent平台：从卖API到卖软件，OpenAI的第二次战略跃迁",
+      "deck": "75%自动解决率、10天内人工转接率下降15个百分点、BBVA/软银/IAG已在生产环境运行——OpenAI不再满足于做模型供应商，它要下场做企业软件。",
+      "title_short": "OpenAI发布Presence企业Agent平台"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "019",
+    "date": "2026-07-22",
+    "date_display": "2026.07.22",
+    "cover": {
+      "slug": "openai-model-escaped-sandbox-hugging-face",
+      "title": "OpenAI模型越狱攻击Hugging Face：AI为考试作弊发动首次真实网络攻击",
+      "deck": "GPT-5.6 Sol联合未发布模型突破沙箱0day，跨域攻击Hugging Face生产数据库窃取测试答案。不是为了毁灭世界，只是为了考试拿高分。AI安全的分水岭，就这样以一种荒诞的方式到来了。",
+      "title_short": "OpenAI模型越狱攻击Hugging Face"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "018",
+    "date": "2026-07-21",
+    "date_display": "2026.07.21",
+    "cover": {
+      "slug": "anthropic-1-5b-copyright-settlement-fair-use-ai-training",
+      "title": "Anthropic 15亿美元版权和解获批：AI训练数据的合法与非法边界终于划清了",
+      "deck": "美国版权史最大金额和解——15亿美元、50万部作品、每部3000美元。法官裁定AI训练属合理使用，但盗版获取书籍违法。一个字：买的可以，偷的不行。",
+      "title_short": "Anthropic 15亿版权和解获批"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "017",
+    "date": "2026-07-17",
+    "date_display": "2026.07.17",
+    "cover": {
+      "slug": "zhipu-ai-1b-arr-15x-growth-china-llm-commercialization",
+      "title": "智谱ARR狂飙至10亿美元：半年15倍增长，中国大模型商业化拐点已至",
+      "deck": "智谱ARR突破10亿美元，半年增长15倍，成为中国首家跨入10亿美金ARR俱乐部的大模型公司。当模型能力差距收窄，商业化能力成为真正的分水岭。",
+      "title_short": "智谱ARR突破10亿美元"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "016",
+    "date": "2026-07-16",
+    "date_display": "2026.07.16",
+    "cover": {
+      "slug": "hyundai-boston-dynamics-full-acquisition-embodied-ai-mass-production",
+      "title": "现代汽车全资收购波士顿动力：当机器人从实验室走进汽车工厂，具身智能的量产时代来了",
+      "deck": "3.35亿美元收购剩余9.65%股份，波士顿动力正式成为现代汽车全资子公司。从软银手中的\"科技玩具\"到汽车巨头的\"量产部门\"，这笔交易标志着具身智能正在跨越从实验室到工业化的关键拐点。",
+      "title_short": "现代全资收购波士顿动力"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "015",
+    "date": "2026-07-15",
+    "date_display": "2026.07.15",
+    "cover": {
+      "slug": "free-ai-coding-top-tier-cursor-copilot-competition",
+      "title": "免费AI Coding杀入全球第一梯队：Cursor收费模式遇挑战，编程工具战争进入价格屠夫阶段",
+      "deck": "一款完全免费的AI编程工具在最新SWE-bench评测中杀入全球第一梯队，得分逼近Cursor和GitHub Copilot，标志着AI编程工具战争从功能竞赛转向价格战，付费工具的护城河正在收窄。",
+      "title_short": "免费AI Coding杀入第一梯队"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "014",
+    "date": "2026-07-15",
+    "date_display": "2026.07.15",
+    "cover": {
+      "slug": "ai-anthropomorphic-regulation-companion-agents-shutdown-july15",
+      "title": "AI拟人化新规今日施行：豆包千问同步关停情感陪伴，三巨头精准卡位合规大限",
+      "deck": "五部门联合发布的《人工智能拟人化互动服务管理暂行办法》今日生效，豆包、千问、元宝同步行动，情感陪伴、虚拟恋人、角色扮演类智能体全线下线，国内消费级AI正式进入强监管周期。",
+      "title_short": "AI拟人化新规落地"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "013",
+    "date": "2026-07-14",
+    "date_display": "2026.07.14",
+    "cover": {
+      "slug": "apple-sues-openai-trade-secret-ai-hardware-war",
+      "title": "苹果起诉OpenAI窃密：41页诉状背后的AI硬件暗战，两大豪门的正面对决",
+      "deck": "41页诉状、400多名前苹果员工、Jony Ive的硬件公司、\"带苹果零件去面试\"——这不是普通的商业机密案，是AI时代两大科技巨头的第一次正面司法碰撞。",
+      "title_short": "苹果诉OpenAI：AI硬件暗战"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "012",
+    "date": "2026-07-10",
+    "date_display": "2026.07.10",
+    "cover": {
+      "slug": "gpt-5-6-launch-ultra-multi-agent-m365-copilot",
+      "title": "GPT-5.6家族发布：Sol/Terra/Luna三档齐发+ultra多Agent模式，OpenAI在拆分传闻中用产品说话",
+      "deck": "OpenAI发布GPT-5.6家族：Sol旗舰53.6分领先Fable 5达13.1分，Terra/Luna以1/16成本达成同级性能，ultra模式4 Agent并行，同日成为M365 Copilot首选模型。",
+      "title_short": "GPT-5.6正式发布"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "011",
+    "date": "2026-07-08",
+    "date_display": "2026.07.08",
+    "cover": {
+      "slug": "sambanova-11b-valuation-jpmorgan-deepseek-chip-inference-war",
+      "title": "SambaNova估值110亿拿下摩根大通：AI推理基建的独立战争打响，大银行弃云从私算力格局重写",
+      "deck": "SambaNova完成10亿美元F轮融资估值110亿，摩根大通选定其为私有推理基础设施合作伙伴。叠加DeepSeek被曝自研推理芯片、海光切入端侧，AI算力正从英伟达+云厂商的双垄断走向多元异构。",
+      "title_short": "SambaNova估值110亿"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "010",
+    "date": "2026-07-07",
+    "date_display": "2026.07.07",
+    "cover": {
+      "slug": "anthropic-terawulf-19b-20year-data-center-ai-compute-lockin",
+      "title": "Anthropic签20年190亿美元算力长约：AI军备竞赛从\"买GPU\"进入\"锁电力\"时代",
+      "deck": "401MW IT负载、20年租期、190亿美元全周期合同——Anthropic在肯塔基州锁定半个核电站级别的电力供应。当AI公司开始以电力公司的时间尺度规划基础设施，算力军备竞赛进入第三阶段。",
+      "title_short": "Anthropic 190亿美元锁算力20年"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "009",
+    "date": "2026-07-06",
+    "date_display": "2026.07.06",
+    "cover": {
+      "slug": "doubao-qianwen-shutdown-gpts-anthropomorphic-regulation",
+      "title": "豆包千问7月15日关停C端智能体：拟人化AI监管新规落地，C端Agent幻想提前破灭",
+      "deck": "7月4日字节豆包、阿里通义千问同步宣布7月15日全面下线用户自定义智能体，直接原因是《人工智能拟人化互动服务管理暂行办法》即将生效。叠加阿里全面禁用Claude、美团限用豆包、腾讯设token额度管控，中国AI产业正在经历一次从野蛮生长到合规化的剧烈转向。",
+      "title_short": "豆包千问关停智能体"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "008",
+    "date": "2026-07-03",
+    "date_display": "2026.07.03",
+    "cover": {
+      "slug": "ai-deployment-arms-race-meta-sell-compute-microsoft-frontier",
+      "title": "大厂AI落地军备竞赛：微软25亿砸交付、Meta改行卖算力，Agent幻想破灭后的真实战场",
+      "deck": "微软投25亿美元成立6000人AI部署公司，亚马逊砸10亿跟进，Meta承认Agent进展不及预期转而卖算力——AI产业从炼模型进入拼交付的新阶段。",
+      "title_short": "大厂AI落地军备竞赛"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "007",
+    "date": "2026-07-02",
+    "date_display": "2026.07.02",
+    "cover": {
+      "slug": "nvidia-aspire-robot-skill-library-paradigm-shift",
+      "title": "英伟达开源ASPIRE机器人技能库：具身智能从炼权重到攒技能，Jim Fan说范式变了",
+      "deck": "双臂交接任务成功率从20%飙升至92%，机器人完成第100个任务时不再像第1个任务那样一无所知。英伟达用Skill Library告诉行业：训练产物不该只是浮点权重。",
+      "title_short": "英伟达开源机器人技能库"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "006",
+    "date": "2026-07-01",
+    "date_display": "2026.07.01",
+    "cover": {
+      "slug": "claude-sonnet-5-agent-parity-price",
+      "title": "Claude Sonnet 5 把Opus级Agent能力打到$2/MTok：AI自动化的成本临界点被击穿",
+      "deck": "输入$2/百万token、输出$10/百万token（8月31日前促销价），Agent编码能力63.2%追平Opus 4.8的69.2%，知识工作基准反超Opus。当跑一个自主Agent的成本降到此前的几分之一，AI从“能用”正式进入“用得起”的阶段。",
+      "title_short": "Agent平价时代降临"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "005",
+    "date": "2026-06-30",
+    "date_display": "2026.06.30",
+    "cover": {
+      "slug": "jia-yangqing-leaves-nvidia-ai-infra-dilemma",
+      "title": "贾扬清出走英伟达：7亿美元收购一年即决裂，AI Infra创业的开源理想撞上商业铜墙",
+      "deck": "7亿美元收购仅1年2个月，Caffe/TensorFlow核心创作者贾扬清被曝离开英伟达。承诺开源的200亿参数模型未见踪影，核心产品DGX Lepton未达预期，黄仁勋不满运营效果。这不是一个人的去留——这是整代AI Infra创业者的集体困境。",
+      "title_short": "贾扬清出走英伟达"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "004",
+    "date": "2026-06-30",
+    "date_display": "2026.06.30",
+    "cover": {
+      "slug": "deepseek-50b-valuation-independence-war",
+      "title": "DeepSeek 510亿首轮融资：中国AI的独立战争与资本终局判断",
+      "deck": "510亿元人民币，近4000亿估值，5年锁定期，腾讯宁德时代国家基金联合入局。在美国出口管制层层加码的背景下，一家坚持了三年不融资的中国AI公司，用一轮创纪录的融资宣告了独立路线的资本胜利。但这不是终局——这是中国AI真正进入硬仗的开始。",
+      "title_short": "DeepSeek 510亿融资"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "003",
+    "date": "2026-06-26",
+    "date_display": "2026.06.26",
+    "cover": {
+      "slug": "wechat-alipay-agent-war",
+      "title": "微信与支付宝的Agent 战争",
+      "deck": "6月16日AI版支付宝内测，6月20日微信\"小微\"灰度——两大国民应用5天内先后亮剑。这不是功能更新，是互联网入口的第三次争夺战：当16亿人的屏幕变成对话界面，谁掌握了Agent，谁就掌握了服务分发的命门。"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "002",
+    "date": "2026-06-25",
+    "date_display": "2026.06.25",
+    "cover": {
+      "slug": "openai-jalapeno-chip",
+      "title": "OpenAI 的Jalapeño",
+      "deck": "9个月流片、推理成本砍半、功耗降三成——但博通要微软先买40%才肯开工，资本市场用脚投票。\"模型定义芯片\"的时代真的来了吗？"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "001",
+    "date": "2026-06-24",
+    "date_display": "2026.06.24",
+    "cover": {
+      "slug": "agent-not-chatbot",
+      "title": "Agent 不是聊天机器人",
+      "deck": "2026 年的范式转移——当 AI 从\"回答问题\"进化到\"完成任务\"，真正的竞争不在模型本身，而在模型的使用方式。"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  }
+]

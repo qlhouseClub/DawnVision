@@ -1,0 +1,86 @@
+<!--pages/articles/articles.wxml-->
+<view class="page">
+  <!-- 顶部品牌头 -->
+  <view class="brand-header">
+    <view class="brand-header-inner">
+      <view class="brand-logo">
+        <text class="brand-name">DAWN VISION</text>
+        <text class="brand-tagline">穿越嘈杂，洞见留声</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 期刊列表 -->
+  <view class="issues-list">
+    <!-- 加载中 -->
+    <view class="loading-wrap" wx:if="{{loading}}">
+      <text>加载中...</text>
+    </view>
+
+    <!-- 期数卡片列表 -->
+    <block wx:if="{{!loading && issues.length > 0}}">
+      <view class="issue-card" wx:for="{{issues}}" wx:key="index" wx:for-item="issue">
+        <!-- 卡片头部 - 点击展开/收起 -->
+        <view class="issue-card-header" bindtap="toggleIssue" data-index="{{index}}">
+          <view class="issue-card-meta">
+            <text class="issue-num">第 {{issue.issue.number}} 期</text>
+            <text class="issue-date">{{issue.issue.date_display || issue.issue.date}}</text>
+          </view>
+          <view class="issue-card-arrow {{expandedIndex === index ? 'expanded' : ''}}">
+            <text>▾</text>
+          </view>
+        </view>
+
+        <!-- 封面文章 -->
+        <view class="cover-section" bindtap="goToCoverArticle" data-issue="{{issue.issue.number}}" data-slug="{{issue.cover.slug}}">
+          <view class="cover-tag">封面</view>
+          <view class="cover-title">{{issue.cover.title_short || issue.cover.title}}</view>
+          <view class="cover-deck">{{issue.cover.deck}}</view>
+        </view>
+
+        <!-- Brief 数量 -->
+        <view class="brief-count-row">
+          <text class="brief-count-text">
+            本期共 {{briefCountMap[issue.issue.number] || (issue.briefs ? issue.briefs.length : 0)}} 篇简报
+          </text>
+        </view>
+
+        <!-- 展开的 brief 列表 -->
+        <view class="briefs-list" wx:if="{{expandedIndex === index}}">
+          <view class="brief-divider"></view>
+          
+          <!-- 加载brief详情中 -->
+          <view class="brief-loading" wx:if="{{loadingBriefs && expandedIndex === index}}">
+            <text>加载简报中...</text>
+          </view>
+
+          <!-- brief 列表项 -->
+          <block wx:if="{{!loadingBriefs && issueDetailMap[issue.issue.number]}}">
+            <view class="brief-item" 
+                  wx:for="{{issueDetailMap[issue.issue.number].briefs}}" 
+                  wx:key="slug"
+                  wx:for-item="brief"
+                  bindtap="goToArticle"
+                  data-issue="{{issue.issue.number}}"
+                  data-slug="{{brief.slug}}">
+              <view class="brief-category">{{brief.category}}</view>
+              <view class="brief-title">{{brief.title}}</view>
+              <view class="brief-deck">{{brief.deck}}</view>
+              <view class="brief-meta">
+                <text class="brief-read-time">{{brief.read_time}}</text>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </block>
+
+    <!-- 空状态 -->
+    <view class="empty-wrap" wx:if="{{!loading && issues.length === 0}}">
+      <text>暂无期刊内容</text>
+    </view>
+  </view>
+
+  <!-- 底部留白 -->
+  <view class="bottom-space"></view>
+</view>

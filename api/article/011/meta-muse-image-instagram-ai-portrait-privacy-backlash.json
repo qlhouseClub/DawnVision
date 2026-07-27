@@ -1,0 +1,32 @@
+{
+  "slug": "meta-muse-image-instagram-ai-portrait-privacy-backlash",
+  "category": "AI 设计 · 创意工具",
+  "title": "Meta Muse Image上线：@任意Instagram用户生成其肖像，AI肖像权边界再被击穿",
+  "title_break": "Meta Muse Image上线<br>@用户就能生成其AI肖像",
+  "deck": "Meta Superintelligence Labs首个图像生成模型Muse Image发布，支持@其他Instagram账号用其公开照片生成AI图像，用户隐私反弹已经开始。",
+  "keywords": "Dawn Vision,Meta,Muse Image,Instagram,AI图像生成,肖像权,AI隐私,Superintelligence Labs,AI设计工具,Alexandr Wang",
+  "og_description": "Meta发布Muse Image图像生成模型，支持@Instagram用户生成其肖像引发隐私争议，AI训练数据和肖像权问题再次成为焦点。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 760,
+  "sources": [
+    {
+      "text": "The Verge - Meta's new Muse Image model can pull other Instagram users into AI photos",
+      "url": "https://www.theverge.com/tech/962485/meta-muse-image-ai-model-instagram"
+    },
+    {
+      "text": "TechCrunch - Meta just launched a new AI generator, Muse Image, and users are already pushing back",
+      "url": "https://techcrunch.com/2026/07/07/meta-rolls-out-muse-a-new-ai-image-generator/"
+    },
+    {
+      "text": "Meta AI Blog - Introducing Muse Image and Muse Video from MSL",
+      "url": "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/"
+    }
+  ],
+  "body_html": "      <p>你在Instagram上发过的自拍、旅行照、聚会照——不管你愿不愿意，现在其他用户可以在Meta AI里直接@你的账号，用你的公开照片生成各种AI图像了。</p>\n      <p>7月7日，Meta正式发布<strong>Muse Image</strong>——这是Meta Superintelligence Labs（MSL）成立以来推出的首个图像生成模型，由去年从Scale AI挖来的Alexandr Wang带队打造。Muse Image已经接入Meta AI应用、Instagram和WhatsApp的图像生成工具，即将上线Facebook和Messenger。发布不到24小时，用户已经开始因为隐私问题抵制。</p>\n\n      <h2>Agentic图像生成+@真人肖像，争议拉满</h2>\n      <p>Muse Image的核心卖点，恰恰也是争议最大的功能。</p>\n      <p>Alexandr Wang在Threads上强调Muse Image是\"agentic\"的——它和Muse Spark大语言模型协同工作，在生成之前会先理解你的prompt、搜索网络、做规划。这意味着它不只是一个简单的text-to-image模型，而是一个会思考、会搜索、会主动找参考素材的AI图像Agent。</p>\n      <p>真正引爆争议的是<strong>@提及功能</strong>。用户在prompt里@某个Instagram用户名，Muse Image就会调用该账号的公开照片来构建视觉形象，生成包含该用户 likeness（肖像）的AI图像。Meta的官方说明是：\"标记用户名可以让Meta AI使用公开照片构建视觉形象。\"同时Meta也指出用户可以在设置中控制他人如何复用自己的内容生成AI。</p>\n      <p>但这个\"控制\"的门槛有多高？普通用户有几个知道Instagram设置里藏着这样一个开关？又有几个用户会在Muse Image上线后第一时间去调整设置？在用户毫不知情的情况下，他们发在Instagram上的公开照片——可能是几年前的旅行照、聚会合照、甚至孩子的照片——已经可以被任何人用来生成AI图像。</p>\n\n      <h2>从训练数据争议到肖像权争议</h2>\n      <p>AI图像生成的争议，正在从\"模型是否用了受版权保护的图片训练\"进化到\"模型是否可以随意调用真人的肖像生成内容\"。</p>\n      <p>Midjourney和Stable Diffusion时代的争议主要是训练数据版权——艺术家起诉AI公司用了他们的作品训练模型但没有获得授权也没有付费。这个争议还在持续（Midjourney上周刚反诉好莱坞三巨头要求披露他们自己用了多少AI），但Meta把战场直接推进到了一个更敏感的领域：<strong>真人的肖像权</strong>。</p>\n      <p>和艺术家的作品不同，真人的肖像是一项具体的人格权。你发在Instagram上的公开照片，不等于你同意别人用你的脸生成AI图像——更不用说生成可能让你尴尬、甚至损害你名誉的内容。想象一下：你的同事@你的账号生成一张你穿奇装异服的照片发到群里，你的竞争对手@你的账号生成一张你做虚假宣传的图，甚至有人用你的肖像生成深度伪造的色情内容。虽然Meta有内容政策禁止这些滥用，但内容审核永远是滞后的——伤害已经造成的时候，图片早就传播开了。</p>\n      <div class=\"pull-quote\">\"Meta又一次选择了move fast and break things——只不过这次break的是用户对自己肖像的控制权。\"<span class=\"pull-quote__attr\">—— 一位数字权利倡导者的评论</span></div>\n      <p>Meta当然也设置了退出机制，也有内容政策，但问题的本质是：<strong>opt-out（选择退出）而不是opt-in（选择加入）的机制设计，本身就是把成本和风险转嫁给了用户</strong>。绝大多数用户不会去研究设置菜单里的AI内容复用开关，他们甚至不知道这个功能存在。等他们发现自己的脸被别人用来生成AI图像的时候，木已成舟。</p>\n      <p>Muse Video也在预告中，Wang称其在\"prompt遵循度、视觉保真度、时序一致性\"上有竞争力。可以预见，当Muse Video上线支持@用户生成视频时，争议只会更大。AI生成内容的边界，正在被科技巨头们用产品迭代一次次向前推进——而用户的选择权和知情权，总是慢半拍。</p>\n      <p>在享受AI图像生成带来的创作便利的同时，别忘了去Instagram设置里看看那个AI内容复用开关——你的脸，值得你花两分钟去保护。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "\"Meta又一次选择了move fast and break things——只不过这次break的是用户对自己肖像的控制权。\"",
+    "attr": "—— 一位数字权利倡导者的评论"
+  },
+  "cognitive_notes": "Meta · Muse Image · Instagram · AI图像生成 · 肖像权 · AI隐私 · Alexandr Wang · Superintelligence Labs · opt-out争议 · AI设计工具",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 11 个源信号生成，素材来源：The Verge、TechCrunch、Meta AI Blog。"
+}

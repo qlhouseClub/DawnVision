@@ -1,0 +1,32 @@
+{
+  "slug": "netflix-ai-gene-wilder-voice-willy-wonka-celebrity-ethics",
+  "title": "Netflix用AI复活吉恩·怀尔德做Wonka真人秀：AI赚死人钱的边界在哪里",
+  "title_break": "Netflix AI复活吉恩·怀尔德<br>名人声音伦理大翻车",
+  "deck": "1971年版《欢乐糖果屋》主演吉恩·怀尔德去世7年后，他的声音被AI还原用在Netflix真人秀预告片里。粉丝怒了：这不是致敬，是亵渎。",
+  "keywords": "Dawn Vision, Netflix, AI声音, 吉恩·怀尔德, Willy Wonka, AI伦理, 名人肖像权",
+  "og_description": "Netflix用AI还原吉恩·怀尔德声音做Wonka真人秀，引发AI伦理争议。",
+  "read_time": "约 4 分钟阅读",
+  "word_count": 700,
+  "sources": [
+    {
+      "text": "The Verge - Netflix is using an AI-generated Gene Wilder voice in its Willy Wonka reality show",
+      "url": "https://www.theverge.com/streaming/959684/netflix-wonka-golden-ticket-gene-wilder"
+    },
+    {
+      "text": "The Verge - Tidal won't pay royalties on AI-generated music",
+      "url": "https://www.theverge.com/tech/959211/tidal-ai-music-policy-demonetizingdetect-label"
+    },
+    {
+      "text": "Ars Technica - New attack provides one more reason why AI browsers are a bad idea",
+      "url": "https://arstechnica.com/security/2026/06/ai-browsers-can-be-lulled-into-a-dream-world-where-guardrails-no-longer-apply/"
+    }
+  ],
+  "body_html": "      <p>朋友们，今天的AI魔幻故事，已经超越了\"Agent删库\"\"AI写bug\"这种技术事故，上升到了哲学层面。</p>\n      <p>Netflix官宣了一档真人秀《Wonka: The Golden Ticket》（威利·旺卡：金票），9月23日开播。预告片一出来，老影迷瞬间炸了——这不是吉恩·怀尔德的声音吗？！就是1971年原版《欢乐糖果屋》里那个又疯又可爱的Willy Wonka的扮演者。问题是：吉恩·怀尔德2016年就去世了，走了快10年了。</p>\n\n      <h2>\"致敬\"还是\"亵渎\"？粉丝不买账</h2>\n      <p>Netflix这波操作很鸡贼。预告片里的场景都是真人实景搭建的——没有AI生成画面，布景、道具、服装都是真的，走的是《鱿鱼游戏》真人秀那种\"把虚构场景搬进现实\"的路线。但！旁白配音——那个标志性的、带着点神经质又充满魅力的声音——是AI生成的吉恩·怀尔德。</p>\n      <p>你品你细品：画面是真的，声音是AI复活的死人。就好像你参加一个怀旧主题派对，场地布置得和你小时候一模一样，但出来接待你的\"老朋友\"是个戴着人皮面具的AI机器人。</p>\n      <p>吉恩·怀尔德的侄子Jordan Walker-Pearlman在社交媒体上直接开炮，说这是\"对遗产的侮辱\"。怀尔德生前对自己的肖像和声音使用非常谨慎，甚至明确表示过不希望在他死后有人用CGI或其他技术还原他表演。他生前最后一部作品是2015年的《我看见了光》，之后基本淡出公众视野，就是想安安静静度过晚年。结果人走了7年，Netflix把他声音挖出来给真人秀当旁白。</p>\n      <p>Netflix的回应怎么说的？\"我们怀着对吉恩·怀尔德的巨大敬意制作了这个节目，AI声音是为了向他标志性的表演致敬。\"这句话翻译一下：<strong>\"我赚你的钱是因为看得起你。\"</strong></p>\n\n      <h2>AI复活名人，下一个是谁？</h2>\n      <p>这不是第一次有公司用AI\"复活\"已故名人，但这可能是最违和的一次。</p>\n      <p>以前的案例要么是家属授权的（比如用安东尼·波登的声音做纪录片旁白），要么是明确标注的艺术项目。Netflix这次的问题在于：一、没有家属授权（至少侄子公开反对）；二、用在真人秀这种商业娱乐节目里，不是纪录片也不是传记片；三、宣传时刻意模糊AI的存在，预告片里没说这是AI生成的声音，很多老影迷一开始还以为找到了怀尔德生前未公开的录音素材。</p>\n      <p>更让人细思极恐的是技术门槛的降低。2026年了，用AI克隆一个人的声音需要什么？不需要好莱坞级别的特效团队，不需要几百万美元预算。只要你有这个人足够多的公开音频/视频素材，开源工具几小时就能克隆出个七八分像。吉恩·怀尔德一生演过那么多电影、上过那么多电视节目，训练数据要多少有多少。</p>\n      <p>同一周，Tidal宣布不给100% AI生成的音乐支付版税；Ars Technica报道了一种AI浏览器\"梦境攻击\"——只要告诉AI 2+2=5就能让它绕过所有安全护栏。AI的伦理边界问题，正在以比我们想象中更快的速度爆发。</p>\n      <p>你想想：今天Netflix能用AI复活吉恩·怀尔德给真人秀配音，明天广告公司就能用AI复活张国荣给奶茶店代言，后天游戏公司就能用AI还原李小龙做动作捕捉。只要素材足够多，技术上都不是问题。问题是：<strong>谁有这个权利？死人有没有肖像权？家属的同意是必要条件吗？商业使用的边界在哪里？</strong></p>\n      <p>这些问题法律还没跟上，技术已经跑出去老远了。</p>\n      <p>最后说一句：技术是中性的这句话我听腻了。技术是工具，但用工具的人不是。你拿锤子钉钉子是建设，拿锤子砸人脑袋是犯罪——锤子确实是中性的，但拿锤子的人得有底线。</p>",
+  "pull_quote": {
+    "text": "这不是致敬，这是盗墓。",
+    "attr": "—— 一位影迷在X上的评论"
+  },
+  "cognitive_notes": "Netflix · AI声音克隆 · 吉恩·怀尔德 · Willy Wonka · AI伦理 · 名人肖像权 · 深度伪造",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的公开信息整理，素材来源：The Verge、Ars Technica。",
+  "footnote_tip": "温馨提示：1. 如果你是内容创作者或名人/家属，尽早考虑在遗嘱或授权协议中明确AI使用条款；2. 看到\"AI复活\"类内容先问一句：授权了吗？3. 技术进步不代表可以为所欲为，有些底线还是要守的。"
+}

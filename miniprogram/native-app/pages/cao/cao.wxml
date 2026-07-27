@@ -1,0 +1,60 @@
+<!--pages/cao/cao.wxml-->
+<view class="page">
+  <!-- 顶部品牌头 - 深色风格 -->
+  <view class="brand-header">
+    <view class="brand-header-inner">
+      <view class="brand-logo">
+        <text class="brand-name">DAWN VISION</text>
+        <text class="brand-tagline">槽点专栏</text>
+      </view>
+    </view>
+    <view class="brand-desc">
+      <text>科技圈的那些糟心事，我们一起吐槽</text>
+    </view>
+  </view>
+
+  <!-- 文章列表 -->
+  <view class="cao-list">
+    <!-- 加载中 -->
+    <view class="loading-wrap" wx:if="{{loading}}">
+      <text class="loading-text">加载中...</text>
+    </view>
+
+    <!-- 列表 -->
+    <block wx:if="{{!loading && caoList.length > 0}}">
+      <view class="cao-card" 
+            wx:for="{{caoList}}" 
+            wx:key="index"
+            wx:for-item="item"
+            bindtap="goToArticle"
+            data-issue="{{item.issue.number}}"
+            data-slug="{{item.cao.slug}}">
+        <view class="cao-card-inner">
+          <view class="cao-meta">
+            <text class="cao-issue">第 {{item.issue.number}} 期</text>
+            <text class="cao-date">{{item.issue.date_display || item.issue.date}}</text>
+          </view>
+          <view class="cao-title">
+            <text>{{item.cao.title}}</text>
+          </view>
+          <view class="cao-deck">
+            <text>{{item.cao.deck}}</text>
+          </view>
+          <view class="cao-footer">
+            <text class="cao-read-time">{{item.cao.read_time}}</text>
+            <text class="cao-action">吐槽一下 →</text>
+          </view>
+        </view>
+      </view>
+    </block>
+
+    <!-- 空状态 -->
+    <view class="empty-wrap" wx:if="{{!loading && caoList.length === 0}}">
+      <text class="empty-text">暂无槽点内容</text>
+      <text class="empty-sub">先去看看正经文章吧</text>
+    </view>
+  </view>
+
+  <!-- 底部留白 -->
+  <view class="bottom-space"></view>
+</view>

@@ -1,0 +1,28 @@
+{
+  "slug": "x-mcp-server-agent-protocol",
+  "category": "Agent 协议 · 技术标准",
+  "title": "X上线官方MCP服务器：当社交巨头为Agent打开数据大门",
+  "title_break": "X上线MCP<br>Agent互联再下一城",
+  "deck": "X推出Hosted MCP Server，让AI Agent通过标准协议直接访问X平台数据。GitHub、Slack、Notion、Stripe之后，MCP正在成为AI工具互联的事实标准。",
+  "keywords": "Dawn Vision, MCP, Model Context Protocol, X平台, Agent协议, AI Agent互联, Twitter API",
+  "og_description": "X上线官方MCP服务器，Agent互联标准从开源走向主流平台。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 750,
+  "sources": [
+    {
+      "text": "TechCrunch - X now offers an MCP server",
+      "url": "https://techcrunch.com/2026/06/30/x-now-offers-an-mcp-server-to-make-its-platform-easier-for-ai-tools-to-use/"
+    },
+    {
+      "text": "X Developer Community - Announcing the Hosted X MCP",
+      "url": "https://devcommunity.x.com/t/announcing-the-hosted-x-mcp/269558"
+    }
+  ],
+  "pull_quote": {
+    "text": "X不再只是一个社交平台，它正在把自己变成Agent时代的实时信息基础设施。",
+    "attr": "—— 一位AI基础设施观察者的判断"
+  },
+  "cognitive_notes": "MCP协议 · X平台 · Agent互联 · Agent互联网 · 工具标准化",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的公开信息整理，素材来源：TechCrunch、X Developer Community。",
+  "body_html": "      <p>Agent要干活，先得连上世界。</p>\n      <p>6月30日，X（原Twitter）正式推出Hosted MCP Server，让所有兼容MCP协议的AI工具——Claude、Cursor、Grok Build等——可以通过标准协议直接访问X平台数据。搜索推文、读取帖子、查询用户信息、分析趋势，这些功能开发者以前需要自己搭建MCP服务器、对接API、处理认证，现在开箱即用。</p>\n      <p>这不是一个功能更新，这是一个标准的确立信号。</p>\n\n      <h2>MCP从开源项目到主流标准</h2>\n      <p>MCP（Model Context Protocol）最初由Anthropic在2024年底开源，目标是定义一个AI模型连接外部工具和服务的通用标准。简单说，以前每个AI工具要连GitHub、Slack、Notion，都需要单独写集成代码；有了MCP，一次适配就能连所有支持MCP的服务。</p>\n      <p>一年多时间，MCP的采用速度超出预期。GitHub推出了官方MCP服务器，Slack集成了MCP支持，Notion开源了自己的MCP server，Stripe和Salesforce也推出了官方端点。据此前报道，MCP月下载量达<strong>9700万次</strong>。X的加入，意味着全球最重要的实时信息网络之一正式向Agent敞开了大门。</p>\n      <p>X在公告中特别强调了两点：第一，Hosted MCP不支持Write API，Agent只能读取不能发帖——这堵死了自动化spam的路径；第二，MCP不会绕过X的API规则，spam行为仍然会被限制。X今年早些时候已经上调了API发帖价格（普通帖子$0.015/条，带链接$0.20/条），用经济杠杆抑制自动化滥用。</p>\n\n      <h2>Agent互联网的基础设施在成型</h2>\n      <p>X上线MCP的深层意义，在于它加速了“Agent互联网”的形成。</p>\n      <p>今天的互联网是为人设计的——浏览器、网页、APP、按钮，都是给人点的。但AI Agent需要的是一种不同的互联网：结构化数据、标准化接口、可被程序调用的服务。MCP正在成为这个“Agent互联网”的HTTP协议——一个通用的连接层，让不同的Agent和不同的服务之间可以互相对话。</p>\n      <p>想想看：当Cursor可以通过MCP搜索X上的技术讨论获取最新开发经验，当Claude可以通过MCP查GitHub上的代码问题，当企业Agent可以通过MCP读取Salesforce数据、调用Stripe支付、在Slack发消息——这时候Agent不再是一个“聊天窗口里的助手”，而是一个<strong>真正能跨平台执行任务的数字员工</strong>。</p>\n      <p>这也解释了为什么Amazon同一天宣布投入10亿美元做FDE——当Agent的连接基础设施（MCP）和成本基础设施（Sonnet 5这样的平价模型）都在成熟，企业部署Agent的最后一公里就是：有人帮你把这些东西组装起来，跑通业务流程。</p>\n\n      <div class=\"pull-quote\">\n        \"X不再只是一个社交平台，它正在把自己变成Agent时代的实时信息基础设施。\"\n        <span class=\"pull-quote__attr\">—— 一位AI基础设施观察者的判断</span>\n      </div>\n\n      <p>当然，MCP的普及也带来新问题：权限管理、数据安全、Agent身份认证、跨平台操作审计——这些问题还没有标准答案。Ars Technica同一天报道的研究显示，AI浏览器可能被“梦境攻击”欺骗——告诉LLM 2+2=5就足以让它绕过护栏。当Agent可以连接更多真实服务，安全问题只会更严峻。</p>\n      <p>但方向是明确的：MCP正在成为AI工具互联的事实标准，而X的加入是这个标准走向主流的重要一步。未来回头看，2026年7月1日可能就是Agent互联网从概念走向基础设施的关键一天。</p>\n\n      <hr>\n      <p>明天见。</p>"
+}

@@ -1,0 +1,33 @@
+{
+  "slug": "figma-stitch-agent-design-war",
+  "category": "AI 设计 · 创意工具",
+  "title": "Figma代码层+Design Agent硬刚谷歌Stitch：设计工具的Agent战争正式打响",
+  "title_break": "Figma vs<br>谷歌Stitch",
+  "deck": "Figma 6月25日发布重大更新首次引入代码层和画布内嵌AI Agent，谷歌Stitch以免费语音UI+生态分发三板斧来袭，发布当天Figma股价暴跌8%。设计工具从协作平台升级为AI原生工作台。",
+  "keywords": "Dawn Vision, Figma, Google Stitch, Design Agent, AI设计工具, Vibe Design, 设计代码一体化",
+  "og_description": "Figma发布代码层+Design Agent，谷歌Stitch免费语音UI冲击，设计工具Agent战争打响。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 800,
+  "sources": [
+    {
+      "text": "搜狐 - Figma 6月25日重大更新：代码层+动画+AI Agent",
+      "url": "https://m.sohu.com/a/1041333890_362225/"
+    },
+    {
+      "text": "头条 - Figma Design Agent发布：画布内嵌AI终结Toggle Tax",
+      "url": "http://m.toutiao.com/group/7647063935027348020/"
+    },
+    {
+      "text": "头条 - 谷歌Stitch Vibe Design语音驱动UI冲击Figma",
+      "url": "http://m.toutiao.com/group/7619238286074905098/"
+    },
+    {
+      "text": "UX Tools Spring 2026调研",
+      "url": "http://m.toutiao.com/group/7641151655342015030/"
+    }
+  ],
+  "body_html": "      <p>8%。</p>\n      <p>这是谷歌Stitch发布当天Figma的股价跌幅。两天内跌幅扩大到约13%，2025年以来Figma股价已累计下跌约35%。</p>\n      <p>Stitch的核心卖点是\"Vibe Design\"——你不需要画线框图，不需要拖组件，不需要调像素。你只需要说话。\"给我三个菜单选项，参考Airbnb风格\"，Stitch会直接生成可交互的UI和前端代码。免费，通过Google Workspace生态分发（Gmail、Docs、Drive数亿企业用户）。</p>\n      <p>这对Figma来说不是小打小闹的竞争——这是谷歌用\"免费+捆绑+分发\"三板斧，直指Figma的护城河。但Figma没有坐以待毙。</p>\n\n      <h2>Figma的反击：代码层+Agent</h2>\n      <p>6月25日，Figma发布了可能是其成立以来最大的一次更新。三个核心变化值得关注：</p>\n      <p><strong>第一，代码层进入协作画布。</strong>团队可以直接在Figma中克隆代码仓库，在设计层测试流程，设计和开发之间的墙被进一步打通。这不是简单的\"设计转代码\"插件——而是代码本身成为设计画布的一部分，设计者和开发者在同一个空间里协作。</p>\n      <p><strong>第二，Design Agent嵌入画布而非侧边栏。</strong>这是Figma AI策略最精妙的地方。之前的AI设计工具（包括Figma自己的早期AI功能）都是把ChatGPT类的对话框放在侧边栏——你描述需求，AI生成设计，你复制粘贴回来。这产生了巨大的\"Toggle Tax\"（切换成本）：频繁在设计工具和AI工具之间切换，上下文丢失，效率不升反降。Design Agent把懂设计系统的Agent直接嵌入画布，设计系统（组件库、Token、变量）成为AI的专属上下文窗口。设计系统越完善的团队，AI增益越大。</p>\n      <p><strong>第三，Parallel Prompting和控制权优先。</strong>Agent可以同时跑出多个风格/方向方案供选择，但AI生成仅作为起点——Figma刻意强调\"人做最终决策\"，避免AI越俎代庖。这是对设计师群体心理的精准把握：设计师不怕AI帮忙，怕的是AI替他们做设计。</p>\n\n      <h2>设计工具的范式转移</h2>\n      <p>Figma vs Stitch的战争，本质上是两种设计工具哲学的碰撞。</p>\n      <p>Stitch代表的是\"零门槛\"路线：让不会设计的人也能用语音做出UI。它的目标用户不是专业设计师，而是产品经理、创业者、小企业主——那些有想法但不会用Figma的人。免费是它的武器，谷歌生态是它的分发渠道。</p>\n      <p>Figma代表的是\"增强专业者\"路线：让专业设计师和设计团队更高效。它的护城河是<strong>设计系统</strong>——企业的组件库、Token、变量、设计规范，这些是多年积累的组织资产，AI越深入理解这些资产，价值越大。</p>\n\n      <div class=\"pull-quote\">\n        \"Stitch要让人人都能做设计，Figma要让设计师变得更强大。这两个方向都成立，但商业逻辑完全不同——Stitch卖的是谷歌生态的粘性，Figma卖的是设计团队的工作流。\"\n        <span class=\"pull-quote__attr\">—— UX Tools 2026春季调研分析</span>\n      </div>\n\n      <h2>AI设计的终局不是替代</h2>\n      <p>UX Tools 2026年春季调研（1478名设计师参与）显示，53%的团队将\"可评估工具的AI生成效率\"作为选型核心维度。这说明设计师已经从\"AI会不会取代我\"的焦虑，转向了\"哪个AI工具真正能帮我提效\"的务实。</p>\n      <p>设计工具的AI化不是零和博弈。Figma 2025年收入10.6亿美元（同比+41%），说明即使在竞争加剧的环境下，设计工具市场仍在增长。AI不是在消灭设计师的工作，而是在重新定义设计师的工作——从画框线、对齐像素的\"美工\"，转向定义设计系统、指导AI、把控品质的\"设计导演\"。</p>\n      <p>从Sketch到Figma是一次协作革命，从Figma到AI原生设计工具是一次生产力革命。2026年，这场革命才刚刚进入白热化阶段。</p>",
+  "pull_quote": null,
+  "cognitive_notes": "Figma代码层更新 · Design Agent · 谷歌Stitch Vibe Design · Toggle Tax · 设计系统即上下文 · 零门槛vs增强专业者",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 6 个源信号生成，经编辑部人工审核。素材来源：搜狐Figma更新报道、头条Design Agent分析、头条Stitch Vibe Design报道、UX Tools 2026春季调研。"
+}

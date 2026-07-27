@@ -1,0 +1,32 @@
+{
+  "slug": "cursor-vibe-jam-2026-winner-capybara-15-days-no-code",
+  "category": "AI 编程 · 工具竞争",
+  "title": "Cursor Vibe Jam冠军诞生：9年iOS开发者15天零手写代码做游戏，拿走2.5万美元奖金",
+  "title_break": "Cursor Vibe Jam冠军出炉<br>15天零代码做游戏拿走$25K",
+  "deck": "一位9年经验的iOS开发者在Cursor Vibe Jam 2026中纯靠AI编程、不写一行代码，用两周时间做出外卖游戏Capybara斩获2.5万美元头奖，Vibe Coding范式进入实战验证阶段。",
+  "keywords": "Dawn Vision, Cursor Vibe Jam, Capybara游戏, Vibe Coding, AI编程, 零代码开发, 独立游戏, Cursor",
+  "og_description": "Cursor Vibe Jam 2026冠军由9年iOS开发者15天纯AI编程打造的Capybara游戏获得，未手写一行代码，Vibe Coding从概念走向实战。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 750,
+  "sources": [
+    {
+      "text": "IT之家 - 代码100%由AI编写：9年iOS开发者15天打造外卖游戏",
+      "url": ""
+    },
+    {
+      "text": "3DM游戏 - 开发者用AI写代码打造外卖游戏斩获2.5万美元",
+      "url": "https://m.3dmgame.com/news/202607/3948485.html"
+    },
+    {
+      "text": "搜狐 - 9年iOS开发者15天纯AI开发游戏夺冠",
+      "url": "https://m.sohu.com/a/1050235175_122396381/"
+    }
+  ],
+  "body_html": "      <p>一行代码都没写。</p>\n      <p>这不是零基础编程培训班的宣传语，而是<strong>Cursor Vibe Jam 2026</strong>冠军的真实经历。一位拥有9年iOS开发经验的工程师，花了15天时间，100%由AI编写代码，做出了一款名为<strong>Capybara（水豚）</strong>的外卖配送主题游戏，从数百个参赛作品中脱颖而出，拿走了<strong>25,000美元</strong>（约合17万元人民币）的头奖。游戏已在Steam以《铸魂迷途》为名上架，国区售价28.8元。</p>\n\n      <h2>Vibe Coding不再是玩具</h2>\n      <p>“Vibe Coding”这个概念在2025年由OpenAI联合创始人Andrej Karpathy带火——用自然语言描述你想要什么，让AI来写代码，你只负责“感觉对不对”（vibe check）。当时很多人觉得这只是玩具，做不了正经项目。</p>\n      <p>Cursor Vibe Jam 2026给出了一个有力的反例。这次比赛的规则很明确：鼓励参赛者使用Cursor等AI编程工具，在限定时间内从零开始做出一个完整的游戏作品。Capybara的获胜证明了一件事：对于有经验的开发者来说，Vibe Coding已经足以支撑完整产品的交付——只要你知道自己想要什么，并且能判断AI写的东西对不对。</p>\n      <p>这里的关键不是“AI替代程序员”，而是<strong>“程序员的角色从写代码变成了产品经理+评审员”</strong>。9年iOS经验不是白给的——这位开发者之所以能用AI做出获奖游戏，是因为他有足够的架构直觉、调试经验和产品判断力，知道什么是好游戏、什么代码能跑、哪里出了bug该怎么引导AI修正。一个完全不懂编程的人用同样的工具，大概率做不出同等质量的作品。</p>\n\n      <h2>一个人就是一个游戏工作室</h2>\n      <p>这件事更深层的意义在于：<strong>独立游戏开发的门槛正在被AI编程工具彻底改写</strong>。</p>\n      <p>传统上，做一个能上架Steam的独立游戏需要至少2-3人的小团队——一个程序、一个美术、一个策划——花半年到一年的时间。现在一个有经验的开发者，用Cursor加Claude Code，加上AI美术工具和AI音效工具，15天就能做出一个完整的、可发行的游戏。这不是未来预言，这是已经发生的事实。</p>\n      <p>这并不意味着游戏行业会被“一个人工作室”淹没。游戏的核心竞争力从来不只是技术实现——创意、玩法设计、叙事、美术风格、关卡设计、用户体验打磨，这些AI能辅助但无法替代。但AI确实把“从想法到可玩demo”的周期从数月压缩到数天，让独立开发者能快速验证想法、快速迭代、快速找到市场反馈。</p>\n      <p>更广泛地看，这对所有“一人公司”（solopreneur）都是好消息。如果你能做游戏，你就能做SaaS工具、做Chrome插件、做移动应用、做内容产品。AI编程工具正在把“一个全栈工程师能做的事情”的边界不断往外推。Cursor Vibe Jam是一个信号：2026年下半年，会有越来越多的“一个人+AI”团队拿出真正有商业价值的产品。</p>\n      <p>当然，工具是工具，判断力是判断力。AI能写代码，但它不知道什么值得写。知道什么值得做——这仍然是人类不可替代的价值。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "AI能写代码，但它不知道什么值得写。知道做什么——这仍然是人类不可替代的价值。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Cursor Vibe Jam · Capybara游戏 · Vibe Coding · AI编程 · 零代码开发 · 独立游戏 · 一人公司 · Solopreneur",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 7 个源信号生成，经编辑部人工审核。素材来源：IT之家、3DM游戏、搜狐科技。"
+}

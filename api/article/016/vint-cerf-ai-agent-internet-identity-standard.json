@@ -1,0 +1,30 @@
+{
+  "slug": "vint-cerf-ai-agent-internet-identity-standard",
+  "category": "AI Agent · 工程实践",
+  "title": "TCP/IP之父要给Agent发身份证：Vint Cerf推动AI Agent互联网身份标准",
+  "title_break": "Vint Cerf推AI Agent互联网身份标准<br>TCP/IP之父要给Agent发证",
+  "deck": "互联网之父Vint Cerf正在制定开放互联网上AI Agent的识别标准。当Agent开始在公网上自主行动，谁是真人谁是Agent，需要一个TCP/IP级别的底层答案。",
+  "keywords": "Dawn Vision, Vint Cerf, AI Agent, Agent身份, 互联网标准, TCP/IP, Agent协议",
+  "og_description": "TCP/IP之父Vint Cerf推动AI Agent互联网身份标准，公网上的Agent需要可识别。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 760,
+  "tags": [
+    "AI Agent",
+    "Vint Cerf",
+    "互联网标准",
+    "Agent身份"
+  ],
+  "sources": [
+    {
+      "text": "TechCrunch - Vint Cerf is working on a plan to unleash AI agents on the open internet",
+      "url": "https://techcrunch.com/2026/07/15/vint-cerf-is-working-on-a-plan-to-unleash-ai-agents-on-the-open-internet/"
+    }
+  ],
+  "body_html": "      <p>互联网之父Vint Cerf，今年83岁了，还在给互联网打地基。</p>\n      <p>7月15日，TechCrunch报道称，Vint Cerf正在领导一个工作组，制定<strong>开放互联网上AI Agent的识别标准</strong>。简单说就是：给每个在公网上活动的AI Agent发一张「身份证」，让网站和服务能知道「正在访问我的是真人还是AI」。</p>\n      <p>这件事的分量，怎么强调都不过分。如果说MCP解决了「Agent怎么调用工具」的问题，A2A解决了「Agent之间怎么对话」的问题，那Vint Cerf要解决的就是更底层的问题——<strong>Agent在互联网上的身份问题</strong>。</p>\n\n      <h2>为什么Agent需要「身份证」？</h2>\n      <p>想象一下不久的未来：你公司的采购Agent在网上自动比价、下单；你的研究Agent在学术网站上自动读论文、做笔记；你的投资Agent在各个金融平台上自动操作。这些Agent每天要访问成千上万的网站，和无数的服务交互。</p>\n      <p>问题来了：<strong>网站怎么知道访问者是真人还是Agent？</strong></p>\n      <p>现在的做法是验证码——reCAPTCHA、滑块验证、图片验证。但这些东西在AI面前越来越没用了——AI早就可以通过大多数验证码了。而且让Agent每次访问都去破解验证码，既浪费算力，又不优雅。</p>\n      <p>更深层的问题是责任。如果一个Agent在网上干了坏事——发垃圾邮件、刷流量、恶意爬取——<strong>谁来负责？</strong>是Agent的开发者？是运行Agent的用户？还是提供模型的厂商？如果Agent没有身份，责任就无法追溯。</p>\n      <p>Vint Cerf要做的，就是在互联网协议层面，给Agent一个可验证的身份标识。就像每个网站有SSL证书一样，每个Agent也可以有一个「Agent证书」——网站一看证书，就知道这个Agent是谁、属于谁、有什么权限。</p>\n\n      <h2>这会是下一个TCP/IP吗？</h2>\n      <p>说Vint Cerf是互联网的「总建筑师」一点都不夸张。上世纪70年代，他和Bob Kahn一起发明了TCP/IP协议——那是整个互联网的地基。没有TCP/IP，就没有今天的互联网。</p>\n      <p>现在，83岁的他又要给Agent时代打新的地基。如果这个标准真的做起来了，它的重要性可能不亚于当年的TCP/IP——因为Agent要在开放互联网上大规模活动，首先需要的就是「被识别」和「被信任」。</p>\n      <p>当然，这件事也有争议。比如：</p>\n      <p><strong>隐私问题</strong>——如果每个Agent都有唯一身份，那用户的行为不就更容易被追踪了吗？Vint Cerf的思路是用零知识证明——网站可以验证「这是一个合法的Agent」，但不需要知道Agent具体是谁、属于谁。</p>\n      <p><strong>去中心化问题</strong>——谁来发这些「Agent身份证」？如果是一家公司或者一个政府来发，那不就变成中心化控制了？目前的思路是类似SSL证书的体系——多个可信的第三方机构签发，互相认可。</p>\n      <p><strong>执行问题</strong>——网站可以选择不验证Agent身份，或者假Agent可以伪造身份。标准是死的，人是活的，怎么保证大家都遵守？</p>\n      <p>这些问题都没有标准答案。但有一点是肯定的：<strong>Agent要真正走出封闭环境、走向开放互联网，身份问题是绕不过去的第一道坎</strong>。Vint Cerf提前看到了这个问题，并且开始动手解决——这就是互联网之父的远见。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "Agent要真正走出封闭环境、走向开放互联网，身份问题是绕不过去的第一道坎。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Vint Cerf · AI Agent · 互联网身份标准 · TCP/IP · Agent协议 · 零知识证明",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 6 个源信号生成，经编辑部人工审核。素材来源：TechCrunch。"
+}

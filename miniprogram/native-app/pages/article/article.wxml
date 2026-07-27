@@ -1,0 +1,87 @@
+<!--pages/article/article.wxml-->
+<view class="page">
+  <!-- 加载中 -->
+  <view class="loading-wrap" wx:if="{{loading}}">
+    <text>加载中...</text>
+  </view>
+
+  <!-- 文章内容 -->
+  <block wx:if="{{!loading && article}}">
+    <!-- 文章头部 -->
+    <view class="article-header">
+      <!-- 元信息 -->
+      <view class="article-meta">
+        <text class="meta-issue">第 {{issueNumber}} 期</text>
+        <text class="meta-dot">·</text>
+        <text class="meta-read-time">{{article.read_time}}</text>
+      </view>
+
+      <!-- 分类标签（如果是brief） -->
+      <view class="article-category" wx:if="{{article.category}}">
+        <text>{{article.category}}</text>
+      </view>
+
+      <!-- 文章标题 -->
+      <view class="article-title">
+        <text>{{article.title}}</text>
+      </view>
+
+      <!-- 文章导语 -->
+      <view class="article-deck" wx:if="{{article.deck}}">
+        <text>{{article.deck}}</text>
+      </view>
+
+      <!-- 标题底部分割线 -->
+      <view class="title-divider"></view>
+    </view>
+
+    <!-- 文章正文 -->
+    <view class="article-body">
+      <rich-text nodes="{{processedHtml}}"></rich-text>
+    </view>
+
+    <!-- Pull Quote 引用 -->
+    <view class="pull-quote" wx:if="{{article.pull_quote && article.pull_quote.text}}">
+      <view class="pull-quote-text">{{article.pull_quote.text}}</view>
+      <view class="pull-quote-attr" wx:if="{{article.pull_quote.attr}}">{{article.pull_quote.attr}}</view>
+    </view>
+
+    <!-- 认知笔记 -->
+    <view class="cognitive-notes" wx:if="{{article.cognitive_notes}}">
+      <view class="notes-label">认知笔记</view>
+      <view class="notes-content">{{article.cognitive_notes}}</view>
+    </view>
+
+    <!-- 来源说明 -->
+    <view class="source-summary" wx:if="{{article.source_summary}}">
+      <view class="source-label">关于本文</view>
+      <view class="source-text">{{article.source_summary}}</view>
+    </view>
+
+    <!-- 相关推荐 -->
+    <view class="related-section" wx:if="{{relatedArticles.length > 0}}">
+      <view class="related-header">
+        <text class="related-title">同期刊其他文章</text>
+      </view>
+      <view class="related-list">
+        <view class="related-item" 
+              wx:for="{{relatedArticles}}" 
+              wx:key="slug"
+              bindtap="goToRelated"
+              data-slug="{{item.slug}}">
+          <view class="related-item-cat" wx:if="{{item.category}}">{{item.category}}</view>
+          <view class="related-item-title">{{item.title}}</view>
+          <view class="related-item-deck">{{item.deck}}</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 底部留白 -->
+    <view class="article-footer-space"></view>
+  </block>
+
+  <!-- 空状态/错误 -->
+  <view class="empty-wrap" wx:if="{{!loading && !article}}">
+    <text>{{errorMsg || '文章不存在'}}</text>
+  </view>
+</view>

@@ -1,0 +1,36 @@
+{
+  "slug": "google-notebooklm-tiktok-ai-clips-libby-filter",
+  "category": "AI 新媒体 · 内容创作",
+  "title": "NotebookLM一键生成TikTok短视频：AI内容生产进入竖屏时代",
+  "title_break": "NotebookLM一键生成TikTok<br>AI内容生产进入竖屏时代",
+  "deck": "Google NotebookLM新增60秒竖屏AI视频生成，基于用户上传资料自动制作TikTok风格内容。同一周图书馆App Libby宣布过滤AI内容——创作和过滤同时加速。",
+  "keywords": "Dawn Vision,NotebookLM,AI视频,TikTok,AI内容创作,AI新媒体,竖屏视频,Google",
+  "og_description": "NotebookLM新增TikTok风格AI视频生成，AI内容生产进入竖屏短视频时代。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 770,
+  "sources": [
+    {
+      "text": "The Verge - Google's NotebookLM can sum up your research in a TikTok-style clip",
+      "url": "https://www.theverge.com/tech/959778/google-notebooklm-ai-clips"
+    },
+    {
+      "text": "The Verge - Libby will filter out AI content, kind of",
+      "url": "https://www.theverge.com/column/959433/libby-ai-filter"
+    },
+    {
+      "text": "TechCrunch - Meta quietly launches vibe-coded gaming app Pocket",
+      "url": "https://techcrunch.com/2026/07/02/meta-quietly-launches-vibe-coded-gaming-app-pocket/"
+    },
+    {
+      "text": "TechCrunch - Gemini Spark, Google's agentic assistant, is now available on Mac",
+      "url": "https://techcrunch.com/2026/07/01/gemini-spark-googles-agentic-assistant-is-now-available-on-mac/"
+    }
+  ],
+  "body_html": "      <p>以后做\"3分钟看懂一篇论文\"的短视频，可能只需要点一下按钮。</p>\n      <p>7月1日，Google宣布NotebookLM新增<strong>AI Clips功能</strong>：可以把你上传到NotebookLM的任何资料——论文、笔记、PDF、研究报告——自动生成一段60秒的竖屏TikTok/Reels/Shorts风格短视频。视频包含自动配音、字幕、视觉素材和关键信息摘要，直接适配短视频平台的竖屏格式。AI内容创作工具，终于杀到了短视频这个最大的内容战场。</p>\n\n      <h2>从音频播客到竖屏视频，NotebookLM的进化路径</h2>\n      <p>NotebookLM最初是一个AI笔记助手，后来凭借\"AI播客\"功能出圈——两个人声对话风格的音频摘要，把枯燥的论文变成了像电台节目一样好懂的播客。这次的AI Clips是同一个逻辑的延伸：<strong>把复杂信息压缩成适合移动端消费的短格式内容</strong>。</p>\n      <p>Google给出的demo展示了一个典型场景：上传一份关于气候变化的研究报告，NotebookLM自动生成一段60秒竖屏视频，有AI配音讲解核心发现，有配合内容的图片和文字动画，有字幕，有片头片尾——基本就是一个可以直接发TikTok的成品。这个功能面向Google AI Ultra和Pro订阅用户开放。</p>\n      <p>这对内容创作者意味着什么？意味着\"把长内容变成短视频\"这个最耗时的环节，可能被AI大幅压缩。过去一个博主把一篇深度文章做成3条短视频，可能需要半天时间写脚本、找素材、剪辑；现在NotebookLM可以几分钟内生成初稿，创作者只需要调整和优化。<strong>一个人运营多个账号的\"矩阵玩法\"门槛进一步降低</strong>。</p>\n\n      <h2>创作和过滤同时加速</h2>\n      <p>有意思的是，就在NotebookLM让AI生成内容变得更容易的同一周，图书馆借阅App Libby（OverDrive旗下）宣布将推出AI内容过滤功能。OverDrive新任CEO Marc DeBevoise表示：\"AI是我们的新前沿\"，但平台会让读者<strong>能够筛选出哪些书是AI生成的</strong>。Tidal也宣布从7月15日起不给100% AI生成的音乐支付版税，但会打上标签而不是 outright 禁止。</p>\n      <p>AI内容的\"创作\"和\"标识/过滤\"正在同时加速，这形成了一个有趣的张力：<strong>生产端越来越容易，消费端越来越需要辨别真伪</strong>。平台必须在\"拥抱AI提高效率\"和\"保护人类创作者权益\"之间找到平衡。Tidal选择不禁止但标签化+demonetize，Libby选择给读者选择权——这些都是务实的中间路线。</p>\n      <p>Meta也悄悄上线了一个有趣的产品：Pocket，一个用vibe coding（AI辅助编程）开发的实验性游戏应用，用户可以用文字提示生成和分享互动小游戏。这是Meta在AI创作工具上的又一个尝试，虽然还很早期，但说明大厂都在赌\"AI降低创作门槛\"这个方向。</p>\n      <p>Gemini Spark也在本周登陆Mac平台，带来实时追踪和更多应用支持。Google正在把它的AI助手从网页端推向桌面端，和Apple Intelligence、Copilot正面竞争。</p>\n      <p>AI内容创作工具正在从\"生成文字\"进化到\"生成完整的多模态内容包\"——文字、图片、音频、视频，一条龙服务。对内容创作者来说，这是最好的时代也是最坏的时代：<strong>生产工具前所未有地强大，但竞争也前所未有地激烈，差异化的门槛从\"能不能做出来\"变成了\"有没有独特的观点和审美\"</strong>。</p>",
+  "pull_quote": {
+    "text": "当人人都能一键生成短视频时，唯一不可替代的是你想说什么——而不是你怎么把它做出来。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "NotebookLM · AI视频 · TikTok · AI内容创作 · AI新媒体 · 竖屏视频 · AI过滤 · Libby · Tidal",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 12 个源信号生成，经编辑部人工审核。素材来源：The Verge、TechCrunch。"
+}

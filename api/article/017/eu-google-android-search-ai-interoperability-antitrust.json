@@ -1,0 +1,34 @@
+{
+  "slug": "eu-google-android-search-ai-interoperability-antitrust",
+  "category": "AI 监管 · 政策",
+  "title": "欧盟勒令Google开放Android和Search：AI时代反垄断，从操作系统到智能助手",
+  "title_break": "欧盟勒令Google开放Android和Search<br>AI时代反垄断升级",
+  "deck": "欧盟数字市场法最新裁决：Google必须向竞争对手开放Android和Search的关键部分，允许竞品AI助手接入。AI时代的反垄断，瞄准的不是搜索市场，是下一代入口。",
+  "keywords": "Dawn Vision, 欧盟反垄断, Google, Android, Search, AI助手, 数字市场法, DMA, AI监管",
+  "og_description": "欧盟勒令Google开放Android和Search给竞争对手的AI助手，AI时代的反垄断从操作系统延伸到智能助手入口。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 780,
+  "tags": [
+    "AI监管",
+    "Google",
+    "欧盟",
+    "反垄断"
+  ],
+  "sources": [
+    {
+      "text": "The Verge - Google ordered to open Android and Search to rivals in Europe",
+      "url": "https://www.theverge.com/policy/966438/eu-google-android-ai-interoperability-search-data-dma"
+    },
+    {
+      "text": "TechCrunch AI - EU Google antitrust ruling",
+      "url": "https://techcrunch.com/"
+    }
+  ],
+  "body_html": "      <p>欧盟的反垄断大棒，这次精准地砸在了Google的AI命门上。</p>\n      <p>7月16日，欧盟根据数字市场法（DMA）作出两项最新裁决：Google必须向竞争对手开放<strong>Android操作系统</strong>和<strong>Google搜索</strong>的关键部分，允许竞品AI助手和搜索引擎接入。简单说就是：你的手机是Android的，但你可以用别的AI助手，而且Google不能给它使绊子。</p>\n      <p>这不是普通的罚款——罚款Google交得起，而且交完还能继续玩。这次的裁决是<strong>结构性的</strong>——要从根本上改变Google在AI时代的竞争优势。</p>\n\n      <h2>为什么是现在？AI改变了反垄断的游戏规则</h2>\n      <p>欧盟反垄断盯Google不是一天两天了——搜索、广告、Android，罚了一轮又一轮。但之前的反垄断，针对的都是<strong>上一个时代的市场</strong>：搜索市场、移动操作系统市场、广告市场。</p>\n      <p>这次不一样。这次的裁决，核心关键词是<strong>AI助手的互操作性</strong>。欧盟认为，Google利用Android和搜索的垄断地位，把自己的AI助手（Gemini）预装在每一部Android手机上、放在搜索结果的最顶部，让竞争对手的AI助手根本没有公平竞争的机会。</p>\n      <p>这个逻辑很关键。以前反垄断查的是「你在这个市场有没有垄断」，现在查的是「你会不会用这个市场的垄断地位，去拿下一个市场的垄断」。<strong>AI助手是下一代计算入口</strong>——如果Google用Android和搜索的优势，把Gemini的入口占死了，那以后所有的AI服务都得看Google的脸色。</p>\n      <p>这就是为什么欧盟要抢在AI市场还没完全定型的时候出手——等格局定了再反，就晚了。</p>\n\n      <h2>Google怎么应对？「合规」但「不认输」</h2>\n      <p>面对欧盟的裁决，Google的回应很官方：「我们将仔细评估并遵守这些要求，但我们也会考虑上诉。」翻译成人话就是：<strong>我先按你说的做，但我不服，我要继续打官司。</strong></p>\n      <p>这是科技巨头应对监管的标准操作：一边合规一边上诉，拖个三五年，说不定市场环境都变了。而且Google有的是办法「软抵制」——你让我开放接口是吧？我开放，但接口做得特别难用、文档写得特别烂、Bug特别多、出了问题没人管。竞争对手接是能接上，但体验差一大截，用户还是会用回Gemini。</p>\n      <div class=\"pull-quote\">\"反垄断的历史就是一部猫鼠游戏史——监管出一招，巨头有一百种方法绕过去。但每次绕过去，垄断的形式就变一次。\"<span class=\"pull-quote__attr\">—— 一位科技政策研究者</span></div>\n      <p>但不管怎么说，这对其他AI助手公司来说都是好事。尤其是那些欧洲本土的AI公司——以前它们想碰Android用户，比登天还难。现在至少有了一条通路，哪怕这条路不好走，也比没有强。</p>\n      <p>更大的意义在于<strong>示范效应</strong>。欧盟开了这个头，其他国家和地区会不会跟进？英国、日本、韩国，甚至美国自己——如果AI助手的入口被一两家公司垄断，各国监管都不会坐视不管。</p>\n      <p>AI时代的反垄断，才刚刚开始。Google只是第一个靶子，绝不会是最后一个。Apple、Microsoft、Amazon、Meta……这些手里有「入口」的公司，一个都跑不掉。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "反垄断的历史就是一部猫鼠游戏史——监管出一招，巨头有一百种方法绕过去。但每次绕过去，垄断的形式就变一次。",
+    "attr": "—— 一位科技政策研究者"
+  },
+  "cognitive_notes": "欧盟反垄断 · Google · Android · Search · AI助手互操作性 · 数字市场法 · AI时代入口 · 结构性裁决",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：The Verge、TechCrunch。"
+}

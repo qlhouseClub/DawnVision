@@ -1,0 +1,36 @@
+{
+  "slug": "mythos-export-controls-lifted-18-days",
+  "category": "AI 监管 · 政策",
+  "title": "Mythos出口管制18天即解禁：当AI封锁遇到开源追赶",
+  "title_break": "Mythos封禁18天<br>AI封锁成纸老虎",
+  "deck": "6月12日封禁、6月26日部分开放、7月1日全面解禁。美国政府对Anthropic最强模型Mythos的出口管制只维持了18天。原因：亚洲AI公司的模型快速逼近，封锁反而让美国AI失去全球市场。",
+  "keywords": "Dawn Vision, Mythos, 出口管制, AI监管, Anthropic, AI地缘政治, Fugu, GLM-5.2",
+  "og_description": "Mythos出口管制18天即解禁，AI封锁面对开源追赶成纸老虎。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 780,
+  "sources": [
+    {
+      "text": "TechCrunch - Trump drops restrictions on Anthropic's Mythos and Fable models",
+      "url": "https://techcrunch.com/2026/06/30/trump-drops-restrictions-on-anthropics-mythos-and-fable-models/"
+    },
+    {
+      "text": "The Verge - Anthropic's long-sidelined Fable 5 is greenlit to return",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/958964/anthropic-claude-fable-5-is-back"
+    },
+    {
+      "text": "The Verge - China's Z.ai claims it can match Mythos on cybersecurity",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/958804/chinas-z-ai-glm-52-mythos-cybersecurity"
+    },
+    {
+      "text": "Hacker News - Department of Commerce has lifted export controls (504 points)",
+      "url": "https://news.ycombinator.com/item?id=48740771"
+    }
+  ],
+  "pull_quote": {
+    "text": "特朗普政府飘忽不定的AI决策，让整个行业对未来模型发布的规则毫无头绪。",
+    "attr": "—— TechCrunch 记者 Tim Fernholz"
+  },
+  "cognitive_notes": "Mythos解禁 · AI出口管制 · AI地缘政治 · GLM-5.2 · AI政策摇摆",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的公开信息整理，素材来源：TechCrunch、The Verge、Hacker News。",
+  "body_html": "      <p>18天。</p>\n      <p>这是美国政府对Anthropic最强模型Mythos 5的出口管制持续的时间。6月12日援引“国家安全权限”发出管制令，Anthropic被迫关闭全球公开访问；6月26日商务部通知可向“经白宫批准的客户”开放；7月1日全面解除限制，全球用户恢复访问。</p>\n      <p>商务部长Howard Lutnick给出的解禁条件是：Anthropic同意“主动检测和应对模型相关安全风险、与美国政府合作制定未来模型发布协议、发现恶意活动及时通报”。但这些承诺Anthropic早在几个月前就已经通过Dario Amodei的公开政策文章主动做出了。<strong>换句话说，政府解禁的条件，Anthropic本来就在做。</strong></p>\n\n      <h2>为什么18天就软了</h2>\n      <p>18天就解禁，核心原因只有一个：封锁不住。</p>\n      <p>就在Mythos被封禁的这18天里，亚洲AI公司的模型在快速逼近。日本Sakana AI发布了Fugu模型，中国的Z.ai（智谱）发布了开源权重的GLM-5.2——The Verge报道，一些研究人员声称GLM-5.2在某些漏洞发现和网络安全场景中已经能匹配Mythos的水平。虽然在通用任务上GLM仍落后于Anthropic和OpenAI的模型，但“中国大幅缩小了差距”是不争的事实。</p>\n      <p>这就是出口管制的根本悖论：你封禁最强模型，以为能保持技术优势，但开源模型和国际竞争者会快速填补真空，你的封禁反而把全球市场让给了对手。网络安全专家一开始就对这轮管制持怀疑态度——在他们看来，这更像是一种政治施压手段（Anthropic高管曾公开批评政府对AI技术的使用方式），而非真正的安全措施。</p>\n      <p>Anthropic与加州州长Newsom达成协议，加州政府可以半价使用Claude——这进一步说明，在联邦政府把Anthropic当靶子的同时，州政府在积极拥抱AI。美国AI政策的混乱和分裂可见一斑。</p>\n\n      <h2>AI政策进入“摇摆期”</h2>\n      <p>Mythos 18天解禁不是孤例，它暴露了特朗普政府AI政策的深层矛盾。</p>\n      <p>一方面，政府对前沿模型保持警惕——OpenAI的GPT-5.6 Sol也被要求“受控发布”，不是面向所有用户开放，而是先给“经批准的组织”使用；6月发布的一项行政命令要求模型发布前接受审查。另一方面，美国又不能真的封锁自己最有竞争力的技术——AI是美国对华科技竞争的核心筹码，自废武功不符合战略利益。</p>\n      <p>这种摇摆给整个行业带来了巨大的不确定性。Dean W. Ball（刚加入OpenAI政策团队的分析师）批评了6月的行政命令，认为审查机制不清晰。企业不知道下一个模型发布会不会被卡，投资者不知道估值里要不要打“政策折扣”，国际客户不知道该信任美国供应商还是扶持本土替代。</p>\n\n      <div class=\"pull-quote\">\n        \"特朗普政府飘忽不定的AI决策，让整个行业对未来模型发布的规则毫无头绪。\"\n        <span class=\"pull-quote__attr\">—— TechCrunch 记者 Tim Fernholz</span>\n      </div>\n\n      <p>更深远的影响在于：出口管制的“18天闹剧”向全世界传递了一个信号——美国的AI供应是不可靠的。这会加速各国（尤其是欧盟、中国、中东）发展本土AI能力的决心，也会让国际客户在选择AI供应商时更倾向于“多供应商策略”，而不是深度绑定美国公司。</p>\n      <p>Mythos解禁了，但AI地缘政治的潘多拉魔盒已经打开。下一个被管制的会是谁？管制会持续多久？没有人知道。唯一确定的是：<strong>在AI这个领域，技术迭代的速度永远快于政策制定的速度</strong>，试图用传统出口管制框架去约束一个月迭代一次的技术，注定是一场打不赢的追赶战。</p>\n\n      <hr>\n      <p>明天见。</p>"
+}

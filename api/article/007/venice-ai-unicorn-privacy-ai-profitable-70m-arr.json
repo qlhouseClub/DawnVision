@@ -1,0 +1,32 @@
+{
+  "slug": "venice-ai-unicorn-privacy-ai-profitable-70m-arr",
+  "category": "AI 商业化 · 行业观察",
+  "title": "Venice AI两年成独角兽ARR超7000万已盈利：隐私AI赛道跑通了",
+  "title_break": "Venice AI独角兽<br>隐私AI赛道跑通",
+  "deck": "300万活跃用户、日均170万API调用、已盈利——这家主打\"无审查、隐私优先\"的AI平台用2年时间证明：用户愿意为不被监视的AI付费。",
+  "keywords": "Dawn Vision, Venice AI, 隐私AI, 独角兽, ARR 7000万, Dragonfly, 无审查AI",
+  "og_description": "Venice AI获6500万美元A轮估值10亿，ARR超7000万已盈利，隐私AI赛道验证。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 750,
+  "sources": [
+    {
+      "text": "TechCrunch - Venice AI becomes a unicorn with $65M Series A as its privacy-first AI platform takes off",
+      "url": "https://techcrunch.com/2026/07/01/venice-ai-becomes-a-unicorn-with-65m-series-a-as-its-privacy-first-ai-platform-takes-off/"
+    },
+    {
+      "text": "OpenAI Blog - How ChatGPT adoption has expanded",
+      "url": "https://openai.com/index/how-chatgpt-adoption-has-expanded"
+    },
+    {
+      "text": "InfoQ中文 - 让Agent越用越强：AReaL 2.0开源，给智能体装上\"成长系统\"",
+      "url": "https://www.infoq.cn/article/IeXGCZqbv5WQ5zFQXoup"
+    }
+  ],
+  "body_html": "      <p>10亿美元。</p>\n      <p>这是主打\"隐私优先、无审查\"的AI平台Venice AI在最新一轮融资中的估值。A轮融资6500万美元，由加密风投Dragonfly领投，Coinbase Ventures等参投——更重要的是，这家成立仅两年的公司已经盈利，年化收入超过<strong>7000万美元</strong>。</p>\n\n      <h2>隐私不是小众需求，是大众痛点</h2>\n      <p>Venice AI的数据很能说明问题：网站独立访客85万，月活跃用户<strong>300万</strong>，日均API调用170万次。用户可以在平台上访问200多个AI模型（包括开源模型和通过路由访问OpenAI、Anthropic等闭源模型），所有用户输入在客户端加密、经外部代理路由后才处理，Venice自己的系统不存储任何用户数据。部分模型还提供端到端加密，不过需要付费订阅。</p>\n      <p>创始人Erik Voorhees的背景很有意思——他是早期比特币布道者，创立过比特币博彩网站Satoshi Dice和加密交易所ShapeShift，长期倡导用户隐私。他把Venice定位为\"中立工具和中立平台\"，和比特币的逻辑一脉相承：\"我认为，世界进入下一个阶段时每个人都被持续监视，这从安全角度来说其实危险得多——比某个人问了个有争议的问题危险得多。\"</p>\n      <p>Venice的增长轨迹很说明问题。创始人承认刚上线时产品功能和ChatGPT差很远，用户用它纯粹是为了隐私；但现在功能已经和ChatGPT非常接近，当体验差距被弥合，\"不被监视\"就从一个小众极客需求变成了一个大众级的差异化卖点。</p>\n      <p>平台上的模型覆盖文本、图像、音频、视频生成，用户可以自由选择不同性能、质量和审查尺度的模型，甚至可以自定义AI角色。Venice还会修改开源模型的系统提示词，让它们回答得更开放，但不会额外添加限制。</p>\n\n      <h2>AI商业化的第三条路</h2>\n      <p>Venice AI的跑通，为AI商业化指出了第三条路。</p>\n      <p>过去一年，大家讨论最多的AI商业化路径要么是To C订阅（ChatGPT Plus、Claude Pro），要么是To B API/企业服务。Venice证明了<strong>\"价值主张驱动的垂直平台\"</strong>同样可以成立——你不需要做出比GPT更聪明的模型，你只需要在某一个价值维度（这里是隐私和自由）上做到极致，并且把体验做到足够接近主流产品，用户就愿意付费。</p>\n      <p>值得注意的是，虽然有加密货币背景（发了VVV和DIEM两个token，用户可以质押VVV铸造DIEM获得AI额度），但Voorhees透露只有约<strong>8%</strong>的用户用加密货币付费。这说明Venice的用户基本盘不是加密圈原住民，而是更广泛的、对隐私有需求的普通用户。</p>\n      <p>融资后Venice计划用这笔钱购买GPU、建设自己的数据中心，停止租赁GPU以提升毛利率。这和Base44等vibe coding平台自研模型的逻辑类似——当用户规模和调用量达到一定水平，自建基础设施的ROI就会转正。</p>\n      <p>当然，\"无审查\"也是一把双刃剑。AI精神健康风险、深度伪造、虚假信息等问题确实存在，完全不设限的平台很容易被滥用。Venice的回应和很多加密项目一样：工具是中立的，责任在使用者。这个立场在伦理层面争议很大，但从商业角度看，它确实切中了一个真实存在且规模不小的市场。</p>\n      <p>OpenAI同一天发布的ChatGPT adoption数据显示，ChatGPT在全球的使用量持续增长、覆盖更多语言和地区。但Venice的10亿估值和7000万ARR说明：<strong>不是所有用户都想要一个\"政治正确\"、被大公司监视、随时可能因为你问了敏感问题就拒绝回答的AI</strong>。AI市场不是赢家通吃，而是会分层——就像互联网既有Google也有Tor，既有Facebook也有Signal。</p>",
+  "pull_quote": {
+    "text": "我们为自由和真正把用户当作成年人来尊重而优化——我认为这在今天很罕见。",
+    "attr": "—— Venice AI创始人 Erik Voorhees"
+  },
+  "cognitive_notes": "Venice AI · 隐私AI · 独角兽 · ARR 7000万 · 已盈利 · Dragonfly · 无审查AI · AI商业化第三条路",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 7 个源信号生成，经编辑部人工审核。素材来源：TechCrunch、OpenAI Blog、InfoQ中文。"
+}

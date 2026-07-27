@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.dawnvision.net/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.dawnvision.net/articles/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.dawnvision.net/cao/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -23,6 +23,54 @@
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/nvidia-sk-500b-ai-alliance-compute-infrastructure-era/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/andrew-ng-openworker-desktop-agent-open-source/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/eu-ai-act-omnibus-amendment-takes-effect/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/mcp-a2a-fusion-draft-linux-foundation/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/tactile-dataset-30k-hours-embodied-ai/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/wechat-yuanbao-jd-agent-miniprogram-ecommerce/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/cursor-agent-sqlite-rebuild-from-manual/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/monday-blames-ai-for-missed-earnings/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.dawnvision.net/articles/amd-anthropic-50b-investment-helios-rack-nvidia-duopoly/</loc>

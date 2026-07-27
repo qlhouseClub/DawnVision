@@ -1,0 +1,32 @@
+{
+  "slug": "claude-cowork-mobile-web-fable-5-extension-agent-ecosystem",
+  "category": "AI Agent · 工程实践",
+  "title": "Claude Cowork登陆移动端：Anthropic的企业Agent从IDE走向全场景，Fable 5延长至7月12日",
+  "title_break": "Claude Cowork跨平台上线<br>Anthropic Agent从IDE到全场景",
+  "deck": "Claude Cowork正式向Max订阅用户开放移动和网页端访问，此前仅能通过Claude Code使用。Fable 5访问同时延长至7月12日，Anthropic正在构建完整Agent生态。",
+  "keywords": "Dawn Vision,Claude Cowork,Anthropic,Fable 5,AI Agent,移动端,企业协作,Claude Code,Agent生态,Max订阅",
+  "og_description": "Claude Cowork正式登陆移动和网页端，Fable 5访问延长至7月12日，Anthropic的Agent从IDE编程工具扩展为全场景协作平台。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 750,
+  "sources": [
+    {
+      "text": "The Verge - Anthropic is launching Claude Cowork on mobile and web",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/961978/anthropic-claude-cowork-mobile-web"
+    },
+    {
+      "text": "Hacker News - We're extending access to Fable 5 on all paid plans through July 12 (170 points)",
+      "url": "https://news.ycombinator.com/item?id=48821102"
+    },
+    {
+      "text": "TechCrunch - Why the rise of open source AI isn't hurting Anthropic yet",
+      "url": "https://techcrunch.com/2026/07/07/why-the-rise-of-open-source-ai-isnt-hurting-anthropic-yet/"
+    }
+  ],
+  "body_html": "      <p>以前要用Claude Cowork，你必须坐在电脑前打开VS Code，通过Claude Code插件才能访问。从7月8日开始，你在地铁上、在会议室里、在午餐排队时，掏出手机就能和你的Claude Cowork继续工作。</p>\n      <p>Anthropic正式宣布<strong>Claude Cowork登陆移动和网页端</strong>，首先向Max订阅用户开放，其他付费计划用户将在\"未来几周\"逐步获得访问权限。同一天Anthropic还宣布，火爆的Fable 5创造性协作体验将在所有付费计划上延长访问至7月12日。两个动作放在一起看，Anthropic的Agent生态闭环正在加速成型。</p>\n\n      <h2>从IDE工具到全场景协作平台</h2>\n      <p>理解Claude Cowork跨平台的意义，要先理解Cowork在Anthropic产品矩阵中的定位。</p>\n      <p>Claude Code是给开发者写代码用的IDE Agent；Claude.ai的普通对话是通用问答；Claude Cowork则是Anthropic面向团队协作场景推出的企业级Agent平台——你可以给Cowork配置团队知识库、连接工作工具、设定工作流程，让AI Agent真正作为团队的一员参与日常工作。之前Cowork最大的局限是只能通过Claude Code在IDE里访问，这意味着它主要被开发者使用，产品经理、运营、市场、销售这些非技术角色根本接触不到。</p>\n      <p>移动和网页端的开放彻底改变了这个局面。<strong>跨平台意味着Cowork从一个开发者工具变成了一个全团队、全场景可用的协作平台</strong>。产品经理在客户现场可以用手机让Cowork整理会议纪要，运营在活动现场可以让Cowork实时生成社交媒体文案，管理者在出差路上可以让Cowork汇总本周各项目进度——这些场景以前都需要回到电脑前才能完成，现在掏出手机就能做。</p>\n\n      <h2>Fable 5延长+开源不构成威胁，Anthropic的护城河逻辑</h2>\n      <p>Fable 5的延长访问同样值得关注。Fable是Anthropic推出的创造性多Agent协作体验——多个AI角色在共享工作空间里协同创作，从写剧本到做设计到策划方案，用户作为导演引导多个Agent一起工作。Fable 5上线后在开发者和创意人群体中爆火，Hacker News帖子获得170分和173条评论，很多人称之为\"第一次感受到AI真正有了协作感\"。</p>\n      <p>原定于7月8日结束的访问被延长到7月12日，说明Anthropic对Fable的用户粘性和转化效果很满意，正在考虑更长期的产品化方案。</p>\n      <p>同一天TechCrunch发表了一篇有意思的分析：<strong>为什么开源AI的崛起目前还没有伤害到Anthropic</strong>。文章的核心论点是开源模型和前沿模型其实在捕获同一个生命周期的两个不同阶段——开源模型在推理成本和本地化部署上有优势，但前沿模型在最复杂的推理任务、Agent能力、多模态理解上依然保持代际差距。企业客户愿意为Claude Opus和Sonnet的能力付费，不是因为他们不知道有便宜的开源模型，而是因为最有价值的工作任务需要最强的模型能力。</p>\n      <div class=\"pull-quote\">\"开源模型赢了成本敏感型场景，闭源前沿模型赢了价值敏感型场景——这两个市场目前不是零和博弈。\"<span class=\"pull-quote__attr\">—— TechCrunch分析文章</span></div>\n      <p>Claude Cowork的跨平台和Fable的火爆印证了这个判断。Anthropic的护城河不只是模型本身，而是围绕模型构建的完整体验——Cowork的协作工作流、Fable的多Agent创作体验、Claude Code的深度IDE集成、MCP生态的工具连接能力。这些体验层的东西是开源模型短期内复制不了的。</p>\n      <p>从Claude Code到Claude Cowork移动版，Anthropic正在一步步把Claude从一个聊天机器人变成一个真正的工作操作系统。当你的AI同事可以在任何设备上、任何场景下和你协作时，\"AI Agent\"这个词就不再是一个概念，而是你每天工作的一部分。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "\"开源模型赢了成本敏感型场景，闭源前沿模型赢了价值敏感型场景——这两个市场目前不是零和博弈。\"",
+    "attr": "—— TechCrunch分析文章"
+  },
+  "cognitive_notes": "Claude Cowork · Anthropic · Fable 5 · AI Agent · 移动端 · 企业协作 · Claude Code · 开源vs闭源 · Agent生态 · 跨平台",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 10 个源信号生成，素材来源：The Verge、Hacker News、TechCrunch。"
+}

@@ -1,0 +1,217 @@
+/* pages/articles/articles.wxss */
+
+.page {
+  min-height: 100vh;
+  background: #F5F5F0;
+  padding-bottom: 40rpx;
+}
+
+/* 顶部品牌头 */
+.brand-header {
+  background: #FFFFFF;
+  border-bottom: 1rpx solid #E8E8E0;
+  padding: 24rpx 32rpx 20rpx;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #002FA7;
+  letter-spacing: 2rpx;
+  line-height: 1.2;
+}
+
+.brand-tagline {
+  font-size: 20rpx;
+  color: #999;
+  letter-spacing: 2rpx;
+  margin-top: 4rpx;
+}
+
+/* 期刊列表 */
+.issues-list {
+  padding: 24rpx 32rpx 0;
+}
+
+/* 期数卡片 */
+.issue-card {
+  background: #FFFFFF;
+  border-radius: 16rpx;
+  margin-bottom: 24rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.05);
+}
+
+/* 卡片头部 */
+.issue-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28rpx 32rpx;
+  background: #FAFAF5;
+  border-bottom: 1rpx solid #F0F0EA;
+}
+
+.issue-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+}
+
+.issue-num {
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #002FA7;
+  letter-spacing: 1rpx;
+}
+
+.issue-date {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.issue-card-arrow {
+  font-size: 24rpx;
+  color: #999;
+  transition: transform 0.3s;
+}
+
+.issue-card-arrow.expanded {
+  transform: rotate(180deg);
+}
+
+/* 封面文章区域 */
+.cover-section {
+  padding: 32rpx;
+  border-bottom: 1rpx solid #F5F5F0;
+}
+
+.cover-tag {
+  display: inline-block;
+  font-size: 20rpx;
+  color: #FFFFFF;
+  background: #002FA7;
+  padding: 6rpx 14rpx;
+  border-radius: 4rpx;
+  margin-bottom: 16rpx;
+  letter-spacing: 1rpx;
+}
+
+.cover-title {
+  font-family: "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+  font-size: 34rpx;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #1a1a1a;
+  margin-bottom: 12rpx;
+}
+
+.cover-deck {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Brief 数量行 */
+.brief-count-row {
+  padding: 20rpx 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brief-count-text {
+  font-size: 24rpx;
+  color: #999;
+}
+
+/* 展开的 brief 列表 */
+.briefs-list {
+  background: #FAFAF8;
+}
+
+.brief-divider {
+  height: 1rpx;
+  background: #E8E8E0;
+  margin: 0 32rpx;
+}
+
+.brief-loading {
+  padding: 30rpx 32rpx;
+  text-align: center;
+  color: #999;
+  font-size: 24rpx;
+}
+
+.brief-item {
+  padding: 28rpx 32rpx;
+  border-bottom: 1rpx solid #EFEFE8;
+}
+
+.brief-item:last-child {
+  border-bottom: none;
+}
+
+.brief-category {
+  display: inline-block;
+  font-size: 20rpx;
+  color: #002FA7;
+  background: rgba(0, 47, 167, 0.08);
+  padding: 4rpx 12rpx;
+  border-radius: 4rpx;
+  margin-bottom: 12rpx;
+}
+
+.brief-title {
+  font-family: "Noto Serif SC", Georgia, serif;
+  font-size: 28rpx;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #1a1a1a;
+  margin-bottom: 8rpx;
+}
+
+.brief-deck {
+  font-size: 24rpx;
+  color: #666;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 12rpx;
+}
+
+.brief-meta {
+  display: flex;
+  align-items: center;
+}
+
+.brief-read-time {
+  font-size: 22rpx;
+  color: #AAA;
+}
+
+.bottom-space {
+  height: 40rpx;
+}

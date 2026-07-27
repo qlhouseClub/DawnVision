@@ -1,0 +1,97 @@
+<!--pages/about/about.wxml-->
+<view class="page">
+  <!-- 顶部品牌头 -->
+  <view class="brand-header">
+    <view class="brand-logo">
+      <text class="brand-name">DAWN VISION</text>
+      <text class="brand-tagline">穿越嘈杂，洞见留声</text>
+    </view>
+  </view>
+
+  <!-- 关于内容 -->
+  <view class="about-content">
+    <!-- 品牌介绍 -->
+    <view class="section card">
+      <view class="section-title">
+        <text class="title-text">关于 Dawn Vision</text>
+        <view class="title-line"></view>
+      </view>
+      <view class="section-body">
+        <text class="body-text">
+Dawn Vision 是一份聚焦科技与 AI 产业的深度周刊。我们从海量信息中提炼最有价值的信号，用结构化的分析和独立的判断，帮助你看清行业的真实走向。
+        </text>
+        <text class="body-text">
+在这里，没有标题党，没有情绪宣泄，只有冷静的观察、扎实的数据和清晰的思考框架。
+        </text>
+      </view>
+    </view>
+
+    <!-- 内容说明 -->
+    <view class="section card">
+      <view class="section-title">
+        <text class="title-text">内容架构</text>
+        <view class="title-line"></view>
+      </view>
+      <view class="section-body">
+        <view class="content-item">
+          <view class="item-dot"></view>
+          <view class="item-content">
+            <text class="item-title">封面深度</text>
+            <text class="item-desc">每期一篇深度长文，聚焦最重要的行业议题</text>
+          </view>
+        </view>
+        <view class="content-item">
+          <view class="item-dot"></view>
+          <view class="item-content">
+            <text class="item-title">产业简报</text>
+            <text class="item-desc">精选多条关键动态，简明扼要呈现核心信息</text>
+          </view>
+        </view>
+        <view class="content-item">
+          <view class="item-dot"></view>
+          <view class="item-content">
+            <text class="item-title">槽点专栏</text>
+            <text class="item-desc">轻松吐槽科技圈那些荒诞的人和事</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 更新频率 -->
+    <view class="section card">
+      <view class="section-title">
+        <text class="title-text">更新频率</text>
+        <view class="title-line"></view>
+      </view>
+      <view class="section-body">
+        <text class="body-text">
+周刊形式，每周发布一期。重大事件发生时，可能会加更号外。
+        </text>
+      </view>
+    </view>
+
+    <!-- 关注我们 -->
+    <view class="section card">
+      <view class="section-title">
+        <text class="title-text">关注我们</text>
+        <view class="title-line"></view>
+      </view>
+      <view class="section-body">
+        <view class="contact-item">
+          <text class="contact-label">官方网站</text>
+          <text class="contact-value" bindtap="copyWebsite">dawnvision.cn</text>
+        </view>
+        <view class="contact-item">
+          <text class="contact-label">RSS 订阅</text>
+          <text class="contact-value" bindtap="copyRss">dawnvision.cn/rss.xml</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 版权信息 -->
+    <view class="footer">
+      <text class="footer-text">© 2026 Dawn Vision</text>
+      <text class="footer-sub">穿越嘈杂，洞见留声</text>
+    </view>
+  </view>
+</view>

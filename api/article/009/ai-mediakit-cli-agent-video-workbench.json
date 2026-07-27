@@ -1,0 +1,32 @@
+{
+  "slug": "ai-mediakit-cli-agent-video-workbench",
+  "category": "AI 视频 · 多模态",
+  "title": "AI MediaKit CLI发布：Agent接管音视频工作台，从写脚本到剪片子一条龙",
+  "title_break": "AI MediaKit CLI发布<br>Agent成为音视频工作台",
+  "deck": "开源AI音视频处理工具AI MediaKit CLI + Skill发布，让Agent能直接调用音视频编辑能力。视频创作从\"人用软件\"进入\"Agent调用工具\"的新阶段。",
+  "keywords": "Dawn Vision,AI MediaKit,AI视频,音视频编辑,Agent工具,AI创作,多模态,CLI工具",
+  "og_description": "AI MediaKit CLI发布，Agent可直接调用音视频编辑能力，AI视频创作进入Agent自动化阶段。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 770,
+  "sources": [
+    {
+      "text": "InfoQ中文 - 让 Agent 成为音视频工作台：AI MediaKit CLI + Skill 发布",
+      "url": "https://www.infoq.cn/article/kY3j5x1kIEvedufYJ1rJ"
+    },
+    {
+      "text": "The Verge - Google's NotebookLM can sum up your research in a TikTok-style clip",
+      "url": "https://www.theverge.com/tech/959778/google-notebooklm-ai-clips"
+    },
+    {
+      "text": "TechCrunch - Meta quietly launches vibe-coded gaming app Pocket",
+      "url": "https://techcrunch.com/2026/07/02/meta-quietly-launches-vibe-coded-gaming-app-pocket/"
+    }
+  ],
+  "body_html": "      <p>以后你跟AI说\"帮我把这条采访视频剪个1分钟短视频，加字幕加BGM留最精彩的部分\"，它可能真的能直接给你出成片。</p>\n      <p>7月初，开源社区发布了<strong>AI MediaKit CLI + Skill</strong>，一套让AI Agent可以直接调用的音视频处理工具集。简单说，它把剪视频、加字幕、转格式、混音频、加特效这些专业音视频软件的功能，封装成了Agent可以直接调用的API和Skill——你的Cursor、Claude Code或者其他AI Agent，现在真的能\"动手\"剪视频了。</p>\n\n      <h2>从\"生成视频\"到\"处理视频\"</h2>\n      <p>过去一年AI视频领域的竞争焦点是\"生成\"：Sora、可灵、Veo、Pika这些工具在比拼谁生成的视频画质更高、时长更长、角色更一致。但对大多数内容创作者来说，视频生成只是工作流的一部分——更多时候你需要处理的是已经拍好的素材：剪采访、做vlog、加字幕、配BGM、调颜色、做字幕条。</p>\n      <p>AI MediaKit CLI瞄准的就是这个\"后半段\"市场。它提供的能力包括：视频裁剪和拼接、自动语音识别加字幕、背景音乐混音、格式转换、简单特效和转场、关键帧提取、内容理解和自动高光剪辑。更重要的是，这些能力不是给人在图形界面里点按钮用的，而是<strong>设计给Agent调用的命令行工具和Skill</strong>——AI可以直接写命令调用这些功能，不需要人操作鼠标。</p>\n      <p>这意味着什么？举个例子：你录了一期2小时的播客，以前你需要把音频导进剪映、自动识别字幕、手动校对、把精彩片段挑出来、剪成3条适合短视频平台的片段、加片头片尾、导出——整个过程至少两三个小时。现在你可以直接给Agent下指令：\"帮我把这个播客音频剪成3条60秒的短视频片段，选最有信息量的部分，加字幕，配个轻快的BGM，导出竖屏格式\"——Agent自己调用AI MediaKit的工具，可能十几分钟就给你搞定了。</p>\n\n      <h2>Agent工具链正在覆盖所有创作领域</h2>\n      <p>AI MediaKit不是一个孤立的产品，它代表了一个清晰的趋势：<strong>Agent的工具链正在从编程领域扩展到所有创意生产领域</strong>。</p>\n      <p>在编程领域，Agent已经能调用文件读写、命令行、Git、测试框架等工具完成完整的开发闭环；在设计领域，Figma的MCP插件让Agent能直接操作设计稿；在内容创作领域，NotebookLM的AI Clips能把文档自动生成TikTok风格短视频；现在AI MediaKit补上了音视频处理这块拼图。当Agent能调用的工具越来越多、越来越专业，它能完成的任务也就越来越复杂。</p>\n      <p>这和NotebookLM做短视频、Meta做vibe coding游戏应用Pocket是同一个方向：AI创作工具的终极形态，不是给人提供一个更好用的软件，而是<strong>给Agent提供一套足够强大的工具集，让人只需要说想要什么，Agent负责把东西做出来</strong>。</p>\n      <p>当然，现在的AI MediaKit还在早期阶段，功能相对基础，和Premiere、Final Cut Pro这些专业软件的能力还差得远。但方向是对的——专业软件几十年积累的功能，正在被一点点封装成Agent可以调用的工具。就像AI编程一开始也只能补全几行代码，现在已经能完成完整的功能开发了。</p>\n      <p>对内容创作者来说，这是最好的时代也是最坏的时代。工具越来越强大，一个人就能干以前一个团队的活；但竞争也会越来越激烈——当生产门槛被无限拉低，<strong>真正稀缺的不再是\"能把视频做出来\"的能力，而是\"知道要做什么视频\"的审美和判断力</strong>。技术会越来越便宜，好品味永远值钱。</p>",
+  "pull_quote": {
+    "text": "所有创意工作流的终点都是：你说想要什么，AI帮你做出来——前提是你真的知道自己想要什么。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "AI MediaKit · AI视频 · 音视频编辑 · Agent工具 · 多模态创作 · 视频剪辑自动化 · AI工具链 · 内容创作",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 7 个源信号生成，经编辑部人工审核。素材来源：InfoQ中文、The Verge、TechCrunch。"
+}

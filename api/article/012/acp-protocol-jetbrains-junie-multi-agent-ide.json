@@ -1,0 +1,32 @@
+{
+  "slug": "acp-protocol-jetbrains-junie-multi-agent-ide",
+  "category": "Agent 协议 · 技术标准",
+  "title": "ACP协议浮出水面：JetBrains发布ACP Registry，AI编程从\"选工具\"进入\"组Agent团队\"时代",
+  "title_break": "ACP协议+JetBrains Registry<br>多Agent在同一IDE协同",
+  "deck": "JetBrains 2026.1上线ACP Registry（Agent Client Protocol），3.2k Star的开放协议让Cursor、Copilot、Claude Code可在同一IDE协同工作，AI编程工具的护城河正在消融。",
+  "keywords": "Dawn Vision,ACP协议,Agent Client Protocol,JetBrains,Junie,AI编程,多Agent协同,IDE,MCP,Cursor,Copilot",
+  "og_description": "JetBrains 2026.1发布ACP Registry，基于3.2k Star的ACP开放协议，让不同厂商AI Agent可在同一IDE协同工作，AI编程工具格局重构。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 820,
+  "sources": [
+    {
+      "text": "今日头条 - ACP协议浮现:AI编程正在孕育一个技能交易市场",
+      "url": "http://m.toutiao.com/group/7660699725049479686/"
+    },
+    {
+      "text": "掘金 - AI Coding工具评估报告2026:ACP协议详解",
+      "url": "https://juejin.cn/post/7657433456431349801"
+    },
+    {
+      "text": "今日头条 - JetBrains绝地反击:Junie登顶SWE-rebench",
+      "url": "http://m.toutiao.com/group/7660704890117587510/"
+    }
+  ],
+  "body_html": "      <p>过去你选AI编程工具像选 religion 一样——Cursor党和Copilot党势不两立，Windsurf用户自成一派，Claude Code玩家觉得其他人都不够\"原生\"。但2026年7月JetBrains 2026.1版本发布后，这个问题可能不再重要了。</p>\n      <p>新版本上线了一个不起眼但影响深远的功能：<strong>ACP Registry</strong>。ACP全称Agent Client Protocol，是一个类似LSP（Language Server Protocol）的JSON-RPC 2.0开放协议，目标是让不同厂商的AI Agent在同一个IDE里协同工作。官方仓库agentclientprotocol/agent-client-protocol已经拿到<strong>3.2k+ Star</strong>。</p>\n\n      <h2>一个IDE里组Agent团队</h2>\n      <p>ACP解决的不是\"哪个模型更强\"的问题，而是一个更底层的问题：<strong>编辑器和编程Agent之间的通信标准化</strong>。</p>\n      <p>在ACP出现之前，每个AI编程工具都是一座孤岛。Cursor的Agent只能跑在Cursor里，GitHub Copilot只能在VS Code和Visual Studio里工作，Claude Code是独立CLI，Junie是JetBrains自家的。你想用Cursor写前端、Copilot Review代码、Claude Code做架构重构？对不起，请在三个窗口之间来回切换，复制粘贴上下文。</p>\n      <p>ACP改变了这个局面。协议定义了Agent和IDE客户端之间的标准交互方式：任务分发、上下文传递、文件操作、终端执行、差异预览。理论上，任何兼容ACP的Agent都可以接入任何兼容ACP的IDE。在IntelliJ IDEA里，你可以让Cursor的Agent负责前端组件、Copilot负责代码审查、Claude Code负责后端重构——<strong>三个Agent同时为你工作，在同一个编辑器里</strong>。</p>\n      <p>这听起来像一个开发团队的微缩版。过去你招人组团队，现在你调度Agent组团队。前端Agent、后端Agent、测试Agent、Review Agent——每个Agent来自不同厂商，擅长不同领域，但通过ACP协议在同一个工作空间里协作。</p>\n\n      <h2>护城河消融，技能市场浮现</h2>\n      <p>ACP协议的深层影响，是AI编程工具的<strong>护城河正在以周为单位消融</strong>。</p>\n      <p>过去AI编程工具的壁垒有三层：模型能力、IDE集成深度、用户习惯。MCP协议（Model Context Protocol）已经打通了工具调用层，让Agent可以使用任何兼容MCP的工具；ACP则打通了IDE接入层，让Agent不再绑定特定编辑器。当接入壁垒消失，竞争的焦点就从\"我是一个完整工具\"转向\"我是一个擅长X的技能\"。</p>\n      <p>这就是为什么有人说ACP正在孕育一个<strong>\"AI编程技能交易市场\"</strong>。就像VS Code插件市场里有上万个主题、语言支持和linter一样，未来可能会出现一个Agent技能市场——有的Agent擅长React性能优化，有的擅长SQL调优，有的擅长安全审计，有的擅长写测试。你按任务按需调度，按token或按次付费。</p>\n      <p>JetBrains选择在这个时间点拥抱开放协议，是一个耐人寻味的战略转向。作为IDE领域的老牌王者，JetBrains在AI编程竞赛中一度被Cursor和Copilot甩在身后——但Junie在SWE-rebench上登顶的成绩，加上主动拥抱ACP开放生态的举措，表明JetBrains找到了自己的位置：<strong>不做Agent，做Agent的平台</strong>。这和当年微软在VS Code上做LSP的思路如出一辙——既然打不过，就做生态。</p>\n      <div class=\"pull-quote\">\"MCP杀死了工具层的壁垒，ACP正在杀死IDE层的壁垒。当Agent不再绑定工具和编辑器，真正的竞争才刚刚开始——谁的Agent在特定任务上最靠谱，谁就能拿到那份钱。\"<span class=\"pull-quote__attr\">—— Dawn Vision编辑部判断</span></div>\n      <p>对开发者来说，这是最好的时代。你不再需要all in某一个工具，可以像组球队一样为不同任务选择不同的Agent。但坏消息是：选择成本变高了，你需要了解每个Agent的擅长领域和局限性。对AI编程工具厂商来说，护城河从\"我的IDE体验更好\"转向\"我的Agent在X任务上SOTA\"——这是一个更残酷但也更公平的竞技场。</p>\n      <p>IDE的战争没有赢家，只有幸存者。当协议标准化完成，AI编程的终局可能不是某个工具一统天下，而是一个百花齐放的Agent技能市场。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "\"MCP杀死了工具层的壁垒，ACP正在杀死IDE层的壁垒。当Agent不再绑定工具和编辑器，真正的竞争才刚刚开始。\"",
+    "attr": "—— Dawn Vision编辑部判断"
+  },
+  "cognitive_notes": "ACP协议 · Agent Client Protocol · JetBrains · ACP Registry · Junie · AI编程 · 多Agent协同 · IDE · MCP · 技能交易市场 · 开放协议",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 14 个源信号生成，素材来源：今日头条、掘金、SWE-rebench。"
+}

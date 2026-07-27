@@ -1,0 +1,28 @@
+{
+  "slug": "runway-media-router-ai-model-routing-generative-media",
+  "category": "AI 设计 · 创意工具",
+  "title": "Runway发布Media Router模型路由器：生成式AI从\"拼模型\"进入\"拼调度\"时代",
+  "title_break": "Runway推出模型路由器<br>自动选最优图像视频模型",
+  "deck": "Runway推出Media Router，根据质量/速度/成本自动选择最优图像/视频/音频生成模型，开发者不用再纠结该调哪个API。当生成式模型大爆发，路由层成为新基础设施。",
+  "keywords": "Dawn Vision,Runway,Media Router,模型路由,生成式AI,AI视频,AI图像,多模型调度,API基础设施",
+  "og_description": "Runway发布Media Router模型路由器，自动选择最优生成模型，生成式AI从比拼模型能力进入比拼调度能力的新阶段。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 760,
+  "sources": [
+    {
+      "text": "TechCrunch - Runway launches AI model router as generative media gets crowded",
+      "url": "https://techcrunch.com/2026/07/23/runway-bets-on-ai-model-routing-as-generative-media-gets-crowded/"
+    },
+    {
+      "text": "Runway官方 - Media Router产品介绍",
+      "url": ""
+    }
+  ],
+  "body_html": "      <p>做AI视频生成的开发者，过去一年最头疼的问题不是\"没有模型可用\"，而是\"模型太多不知道用哪个\"。</p>\n      <p>Runway Gen-4、Pika 3.0、Kling 3.0、Sora 3.0、Veo 2、Luma Dream Machine——每个模型都有自己擅长的风格和场景：有的写实人物强，有的运动镜头稳，有的生成速度快，有的价格便宜。开发者要么写一大堆if-else逻辑自己调度，要么硬着头皮只选一个模型凑合。7月23日，<strong>Runway</strong>给出了一个更聪明的答案：<strong>Media Router</strong>。</p>\n      <p>一句话概括Media Router：它是一个生成式AI领域的\"模型调度员\"——你只需要告诉它你要生成什么、优先考虑质量还是速度还是成本，它会自动帮你选择最合适的图像、视频或音频生成模型，把结果返回给你。开发者只需要对接一个API，不用再挨个集成十几个模型的API。</p>\n\n      <h2>为什么模型路由会成为新基础设施？</h2>\n      <p>Media Router的出现，标志着生成式AI市场进入了一个新阶段：模型层的竞争已经白热化，<strong>调度层正在成为新的瓶颈和新的机会</strong>。</p>\n      <p>想想大语言模型市场已经发生的事：一年前大家还在争论GPT-4和Claude 3谁更强，现在几乎所有严肃的AI应用都在用模型路由——简单问题用小模型省钱，复杂问题用大模型保证质量，特定任务用专门微调过的垂直模型。开源社区里OpenRouter、LiteLLM等模型路由工具已经成了标配，没有哪个AI产品会傻到只绑定一个大模型。</p>\n      <p>生成式媒体（图像、视频、音频）正在复制这个路径。2024年大家还在惊叹Sora的演示有多惊艳，2026年市场上已经有几十款能打的视频生成模型，各有优劣。Runway自己就是做视频生成模型起家的，现在它反过来做模型路由器，本身就是一个很有意思的信号：连模型厂商自己都承认，没有\"一个模型打天下\"这回事了。</p>\n      <p>Media Router的工作原理并不复杂：它在后端接入了Runway自研的模型，也接入了第三方模型（包括竞争对手的产品）。当一个请求进来时，路由器会分析prompt内容、用户指定的偏好（质量优先/速度优先/成本优先）、各模型当前的负载情况，自动路由到最优模型执行。如果一个模型生成失败，它会自动fallback到另一个模型重试——这对开发者来说是巨大的价值，可靠性一下子就上去了。</p>\n\n      <h2>Runway的野心：从模型公司到平台公司</h2>\n      <p>Runway这步棋，和当年Unity从游戏引擎公司转型为游戏开发平台有点像。</p>\n      <p>如果只做模型，Runway永远要和Pika、Kling、Sora们血战，拼模型效果、拼推理速度、拼价格，最后很可能陷入价格战利润微薄。但如果做路由层、做平台，Runway就变成了\"生成式媒体领域的AWS\"——不管你用哪家的模型，都要从我这里走，我收\"过路费\"。更关键的是，路由器掌握了所有请求数据：哪些prompt在什么场景下用什么模型效果最好、用户愿意为质量付多少钱、哪些模型在哪些任务上表现差——这些数据本身就是巨大的壁垒。</p>\n      <div class=\"pull-quote\">\"当一个赛道有超过5个主流选择的时候，用户需要的就不再是第6个选项，而是一个帮你做选择的人。\"<span class=\"pull-quote__attr\">—— 一位AI产品经理的评论</span></div>\n      <p>当然，Runway不是第一个想到做这件事的。开源社区已经有类似的多媒体路由工具，一些云服务商也在做多模型调度。但Runway是第一个有足够品牌影响力、有自研模型能力、有成熟开发者生态的玩家来正式做这件事。它作为\"模型厂商\"的身份反而成了优势——开发者会觉得：\"连Runway自己都觉得需要路由，那路由确实是刚需。\"</p>\n      <p>生成式AI的下一波机会，可能不在\"做出更好的模型\"，而在\"把现有模型用好\"。模型能力每三个月就上一个台阶，但真正能把多模型能力整合到流畅工作流里的工具还很少。从Prompt工程到Agent编排，再到现在的模型路由，AI应用开发的基础设施正在一层层完善。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "当一个赛道有超过5个主流选择的时候，用户需要的就不再是第6个选项，而是一个帮你做选择的人。",
+    "attr": "—— 一位AI产品经理"
+  },
+  "cognitive_notes": "Runway · Media Router · 模型路由 · 生成式AI · AI视频 · AI图像 · 多模型调度 · API基础设施 · 平台转型",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 7 个源信号生成，经编辑部人工审核。素材来源：TechCrunch、Runway官方。"
+}

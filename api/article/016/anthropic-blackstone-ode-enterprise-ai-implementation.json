@@ -1,0 +1,34 @@
+{
+  "slug": "anthropic-blackstone-ode-enterprise-ai-implementation",
+  "category": "大模型 · 商业分析",
+  "title": "Anthropic联手黑石推出Ode：大模型公司从卖API走向卖结果，万亿实施服务市场爆发",
+  "title_break": "Anthropic+黑石推企业AI实施服务Ode<br>大模型从卖API走向卖结果",
+  "deck": "Anthropic联合黑石、高盛等推出企业AI实施公司Ode，派驻前哨工程师嵌入企业。当大模型公司开始亲自下场做交付，AI商业化的下一个万亿市场正在浮现。",
+  "keywords": "Dawn Vision, Anthropic, Blackstone, Ode, 企业AI, AI实施服务, AI商业化, 大模型",
+  "og_description": "Anthropic联合黑石推出企业AI实施公司Ode，大模型公司从卖API走向卖结果。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 780,
+  "tags": [
+    "大模型商业",
+    "Anthropic",
+    "企业AI",
+    "实施服务"
+  ],
+  "sources": [
+    {
+      "text": "TechCrunch - Anthropic, Blackstone bet the next trillion-dollar AI business is implementation, not just models",
+      "url": "https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/"
+    },
+    {
+      "text": "TechCrunch - Inside Ode with Anthropic, the startup betting AI services are the future of enterprise",
+      "url": "https://techcrunch.com/video/inside-ode-with-anthropic-the-startup-betting-ai-services-are-the-future-of-enterprise/"
+    }
+  ],
+  "body_html": "      <p>大模型公司的商业化，走到了一个岔路口。</p>\n      <p>7月15日，Anthropic联合黑石集团、高盛、Hellman & Friedman等机构，正式推出<strong>企业AI实施公司Ode</strong>。这家公司的模式很简单：<strong>把Anthropic的工程师派驻到企业里，帮企业把AI真正用起来</strong>。不是卖API调用量，不是卖License，而是派驻工程师、做项目交付、按成果收费。</p>\n      <p>这听起来不就是传统的IT咨询吗？麦肯锡、埃森哲、IBM不都是干这个的？没错，但不一样的地方在于：<strong>这次是大模型厂商自己下场做交付</strong>。</p>\n\n      <h2>为什么大模型公司要亲自做交付？</h2>\n      <p>因为AI落地最大的瓶颈，从来不是模型能力，而是<strong>实施能力</strong>。</p>\n      <p>过去三年，企业在AI上花了很多钱——买云算力、买API、买SaaS工具。但回头一看，真正产生业务价值的项目比例低得可怜。Gartner去年的一份报告说，<strong>85%的企业AI项目没有达到预期ROI</strong>。为什么？不是模型不够强，而是没人知道怎么把模型和业务流程结合起来。</p>\n      <p>你说用AI做客服吧，怎么接入现有系统？怎么保证回答准确不胡说？怎么和人工客服交接？怎么做质量监控？这些问题，大模型厂商的技术文档里不会写，传统IT咨询公司又不懂大模型的能力边界。中间出现了一个巨大的gap。</p>\n      <p>Anthropic做Ode，就是来填这个gap的。Ode的工程师既懂Claude的能力边界，又懂企业的业务流程——他们就像「翻译官」，一边把企业的业务需求翻译成模型能理解的任务，一边把模型的能力翻译成企业能落地的方案。</p>\n      <p>更深层的原因是：<strong>纯卖API的增长天花板太低了</strong>。全世界真正会自己用大模型做开发的团队就那么多，API收入再涨也有上限。但企业AI实施服务市场有多大？光是全球IT服务市场就超过<strong>1万亿美元</strong>，如果AI实施能吃掉其中的10%，就是1000亿美元的市场。这比卖模型API大太多了。</p>\n\n      <h2>但挑战也很明显：人从哪来？</h2>\n      <p>模式听起来很美，但有一个现实问题：<strong>工程师从哪来？</strong></p>\n      <p>企业AI实施是一个人力密集型生意——你要派驻多少工程师，才能服务多少客户。Anthropic自己的工程师团队总共也就几千人，不可能全部拉去做交付。黑石和高盛投钱容易，但投人难。</p>\n      <p>所以Ode的模式能不能跑通，关键看一件事：<strong>它能不能用AI本身来放大实施效率</strong>。如果每个Ode工程师能靠Agent辅助，同时服务5-10个客户，那这个生意就能规模化。如果还是传统咨询公司的「人月」模式，那它的天花板就是另一家埃森哲，而不是什么AI时代的新物种。</p>\n      <p>不管怎样，Anthropic开了一个头。以前大模型公司都说「我只做平台，交付交给合作伙伴」。现在Anthropic说「合作伙伴太慢了，我自己来」。这是一个强烈的信号——<strong>AI商业化的重心，正在从模型层向下沉到实施层</strong>。谁能帮企业把AI真正用起来，谁才能赚到下一波大钱。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "AI商业化的重心，正在从模型层向下沉到实施层。谁能帮企业把AI真正用起来，谁才能赚到下一波大钱。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Anthropic · Blackstone · Ode · 企业AI实施 · AI商业化 · 咨询服务 · 大模型落地",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：TechCrunch。"
+}

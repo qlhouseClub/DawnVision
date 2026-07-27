@@ -1,0 +1,32 @@
+{
+  "slug": "google-nano-banana-2-lite-gemini-omni-flash-creator-tools",
+  "category": "AI 设计 · 创意工具",
+  "title": "Google发布Nano Banana 2 Lite：更快更便宜的图像生成器瞄准创作者工作流",
+  "title_break": "Nano Banana 2 Lite<br>AI生成进入实时创作时代",
+  "deck": "DeepMind同步发布Gemini Omni Flash轻量多模态模型，NotebookLM新增TikTok风格AI短视频功能。Google正在把AI创作工具打造成完整生态。",
+  "keywords": "Dawn Vision, Google, Nano Banana 2 Lite, Gemini Omni Flash, AI图像生成, NotebookLM, AI视频",
+  "og_description": "Google发布Nano Banana 2 Lite和Gemini Omni Flash，AI创作工具生态成型。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 730,
+  "sources": [
+    {
+      "text": "TechCrunch - Google introduces a faster, cheaper image generator with Nano Banana 2 Lite",
+      "url": "https://techcrunch.com/2026/06/30/google-introduces-a-faster-cheaper-image-generator-with-nano-banana-2-lite/"
+    },
+    {
+      "text": "Google DeepMind - Start building with Nano Banana 2 Lite and Gemini Omni Flash",
+      "url": "https://deepmind.google/blog/start-building-with-nano-banana-2-lite-and-gemini-omni-flash/"
+    },
+    {
+      "text": "The Verge - Google's NotebookLM can sum up your research in a TikTok-style clip",
+      "url": "https://www.theverge.com/tech/959778/google-notebooklm-ai-clips"
+    }
+  ],
+  "body_html": "      <p>Nano Banana。</p>\n      <p>别笑，这是Google DeepMind最新图像生成模型的官方代号。7月1日，Nano Banana 2 Lite和Gemini Omni Flash两款轻量模型同步发布，主打一个方向：更快、更便宜，让AI生成真正融入创作者的日常工作流。</p>\n\n      <h2>从\"等出图\"到\"实时调\"</h2>\n      <p>Nano Banana 2 Lite的定位非常清晰：不是追求最高画质的旗舰模型（那是Nano Banana 2的事），而是做创作者能高频调用、实时迭代的轻量工具。TechCrunch的报道总结得很直白：让它成为创作者制作AI内容时更实用的工具。</p>\n      <p>对设计师和创作者来说，AI生成工具最大的痛点不是质量不够高，而是<strong>迭代速度太慢</strong>。你写一段prompt，等30秒到1分钟出图，发现构图不对、风格不对、细节不对，改prompt再等一分钟。一个方案调十几次，半小时就过去了。Nano Banana 2 Lite要解决的就是这个问题：出图速度快到几乎实时，成本低到可以随便造，让创作者能像用画笔一样用AI——想到什么立刻试，不满意立刻改，而不是每次修改都要等一杯咖啡的时间。</p>\n      <p>和Nano Banana 2 Lite一起发布的Gemini Omni Flash走的是同样路线：轻量级多模态模型，速度快、成本低，适合实时交互场景。两款模型的组合拳指向一个方向：<strong>AI生成不应该是一个\"提交任务等结果\"的批处理过程，而应该是一个实时交互的创作过程</strong>。</p>\n      <p>这也是Midjourney v7/v8、Sora 2.0、可灵3.0等旗舰模型之外的另一条产品路线。旗舰模型负责最终出片的质量，轻量模型负责创作过程中的快速迭代和探索——就像设计师画草稿用普通自动铅笔，最终成稿才用好钢笔和好纸张。</p>\n\n      <h2>NotebookLM做短视频，Google的AI创作生态闭环</h2>\n      <p>比Nano Banana更有意思的是NotebookLM的新功能。</p>\n      <p>The Verge报道，Google的NotebookLM新增了一个功能：可以把你上传的研究资料和笔记，自动生成<strong>60秒竖版TikTok风格AI短视频</strong>。这个功能正在向Google AI Ultra和Pro订阅用户推送。Google展示的例子里，NotebookLM根据上传的资料自动生成视频脚本、配语音、配画面、加字幕，直接产出可以发社交平台的短视频。</p>\n      <p>这是一个值得注意的信号。过去一年AI视频工具主要在两个方向卷：一是电影级画质（Sora、可灵），二是角色一致性（Seedance等）。NotebookLM走了第三条路：<strong>把已有内容自动转成适合社交平台传播的短视频格式</strong>——不需要你会拍视频、不需要你会剪辑、不需要你做分镜，只要有文字内容（研究笔记、播客文字稿、文章），AI直接给你出一条可以发抖音、TikTok、视频号的竖版短视频。</p>\n      <p>这对内容创作者、自媒体、教育工作者、企业营销团队来说是效率工具级别的更新。以前你写了一篇深度文章，要再花几个小时把它做成短视频；现在可能点一下按钮就搞定了。</p>\n      <p>Google这次的发布不是孤立的产品更新，而是一套组合拳：Nano Banana 2 Lite做图像生成、Gemini Omni Flash做多模态理解、NotebookLM做内容整合和视频输出。再加上之前已经发布的Veo视频生成模型、Music AI音乐生成，Google正在把AI创作工具打造成一整套完整生态。</p>\n      <p>对创作者来说，这是最好的时代。工具越来越多、越来越便宜、越来越快，真正的瓶颈不再是技术，而是你有没有好想法。<strong>工具会越来越便宜，好内容永远稀缺。</strong></p>",
+  "pull_quote": {
+    "text": "精选2026年最值得关注的AI视频生成工具，从电影级写实的Kling AI 3.0到开源免费的WAN 2.2，覆盖入门到专业。",
+    "attr": "—— 51CTO 2026 AI视频工具评测"
+  },
+  "cognitive_notes": "Google · Nano Banana 2 Lite · Gemini Omni Flash · AI图像生成 · NotebookLM · AI短视频 · AI创作工具",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：TechCrunch、Google DeepMind、The Verge、51CTO。"
+}

@@ -1,0 +1,32 @@
+{
+  "slug": "andrew-ng-openworker-desktop-agent-open-source",
+  "category": "AI Agent · 工程实践",
+  "title": "吴恩达开源OpenWorker：桌面Agent从概念走向交付，本地优先成新趋势",
+  "title_break": "吴恩达开源桌面Agent OpenWorker<br>本地优先+工具集成双突破",
+  "deck": "100%开源、MIT协议、本地运行、25+工具集成——吴恩达的OpenWorker把Agent从浏览器和IDE拉回了桌面。当AI助手开始“住”在你的电脑里，入口之争翻开新的一页。",
+  "keywords": "Dawn Vision, 吴恩达, OpenWorker, 桌面Agent, AI智能体, 开源, 本地优先, AI助手",
+  "og_description": "吴恩达团队开源桌面AI智能体OpenWorker，支持25+工具集成、多模型切换、本地优先运行，Agent入口从浏览器和IDE扩展到桌面。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 820,
+  "sources": [
+    {
+      "text": "IT之家 - 吴恩达开源桌面 AI 智能体 OpenWorker，已获 3.7k Star",
+      "url": "https://www.ithome.com/0/981/493.htm"
+    },
+    {
+      "text": "量子位 - 100%开源！吴恩达做了个个人桌面Agent",
+      "url": "https://www.qbitai.com/"
+    },
+    {
+      "text": "GitHub - andrewyng/openworker",
+      "url": "https://github.com/andrewyng/openworker"
+    }
+  ],
+  "body_html": "\n      <p>GitHub上，一个叫OpenWorker的项目上线不到48小时就拿到了3700个Star。项目作者是吴恩达——那个在Coursera上教过几百万人学机器学习的吴恩达。</p>\n      <p>7月24日，吴恩达在LinkedIn正式宣布开源<strong>OpenWorker</strong>——一个定位为“个人桌面AI同事”的智能体。它不是又一个聊天机器人，而是一个能在你电脑上跨应用自主完成任务的Agent。润色文件、准备客户简报、梳理日程、起草报告、处理Slack警报——这些以前需要你手动切换三五个应用完成的事，现在一句话交代给它就行。</p>\n\n      <h2>三个关键设计：为什么OpenWorker不一样</h2>\n      <p>桌面Agent这个概念并不新鲜，微软的Copilot+、苹果的Apple Intelligence都有类似的定位。但OpenWorker有三个设计值得关注，它们代表了Agent发展的一个新方向。</p>\n      <p>第一个是<strong>100%开源，MIT协议</strong>。这意味着你可以自由地改代码、做二次开发、甚至商用。微软和苹果的桌面Agent都是闭源的黑盒子，你不知道它在干什么、数据去哪了。OpenWorker把所有代码都摊开在你面前——Agent循环、工具调用、对话记录，全透明。</p>\n      <p>第二个是<strong>本地优先</strong>。Agent的运行循环、对话记录、API密钥、工具token——这些敏感数据默认都存在你本地电脑上，不需要上传到云端。吴恩达团队在项目首页明确写了“本地优先”的设计原则，这在当前Agent产品几乎全是云端SaaS的大环境下显得格外突出。隐私焦虑越来越重的今天，“数据不出本地”可能会成为桌面Agent的核心竞争力。</p>\n      <p>第三个是<strong>不绑定模型</strong>。OpenWorker基于aisuite库构建，这是一个与提供商无关的Python框架，通过统一API支持多种大模型。你可以用GPT 5.6 Sol、Claude Fable、Gemini 3.6，也可以用Kimi、GLM、DeepSeek这些国产模型，甚至可以通过Ollama跑本地开源模型。用户自带API Key，OpenWorker不赚模型差价。</p>\n\n      <h2>Agent入口之争：桌面是下一个战场</h2>\n      <p>回顾Agent的入口演进，你会看到一条清晰的移动轨迹。</p>\n      <p>第一站是<strong>聊天框</strong>。ChatGPT、Claude、文心一言——所有Agent的起点都是对话框。你在框里输入指令，AI输出结果。简单直接，但能做的事情有限，而且需要用户主动打开应用。</p>\n      <p>第二站是<strong>IDE</strong>。Cursor、GitHub Copilot、Claude Code把Agent放进了代码编辑器里。程序员是第一批真正把Agent用起来的人，因为编程场景有明确的目标、清晰的反馈、大量的工具可以调用。Agent在IDE里证明了自己的价值。</p>\n      <p>第三站正在到来——<strong>桌面</strong>。OpenWorker代表的是Agent从垂直场景（聊天、编程）走向通用场景的尝试。你的文件系统、日历、邮件、办公软件、项目管理工具——所有这些日常工作的入口都在桌面上。如果Agent能在桌面上把这些工具串起来，它就不只是一个编程助手或聊天机器人，而是真正的“工作伙伴”。</p>\n      <p>当然，桌面Agent的挑战也很大。操作系统权限、应用之间的互操作、数据安全、指令理解的准确性——每一个都是硬骨头。OpenWorker目前只支持macOS，Windows版还在路上，Linux更是遥遥无期。但它的出现标志着：Agent的入口之争已经从浏览器和IDE，扩展到了整个操作系统桌面。</p>\n      <p>谁能占领桌面，谁就可能成为AI时代的“操作系统级入口”。这场战争才刚刚开始。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "当Agent从聊天框和IDE走向桌面，它就不再是一个工具插件，而是在争夺AI时代的操作系统级入口。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "吴恩达 · OpenWorker · 桌面Agent · 开源 · 本地优先 · 多模型 · 工具集成 · AI入口",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：IT之家、量子位、GitHub。"
+}

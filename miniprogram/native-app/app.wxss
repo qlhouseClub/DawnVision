@@ -1,0 +1,182 @@
+/* app.wxss - 全局样式 */
+
+page {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Helvetica, "Microsoft YaHei", Arial, sans-serif;
+  font-size: 28rpx;
+  line-height: 1.7;
+  color: #1a1a1a;
+  background-color: #F5F5F0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 品牌色变量 */
+.brand-color {
+  color: #002FA7;
+}
+
+.brand-bg {
+  background-color: #002FA7;
+}
+
+/* 衬线字体 - 用于标题 */
+.font-serif {
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", Georgia, serif;
+  font-weight: 600;
+}
+
+/* 无衬线字体 - 用于正文 */
+.font-sans {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Helvetica, "Microsoft YaHei", Arial, sans-serif;
+}
+
+/* 通用容器 */
+.container {
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+
+/* 品牌头部 */
+.brand-header {
+  padding: 40rpx 32rpx 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-header-mini {
+  padding: 24rpx 32rpx 20rpx;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: baseline;
+  gap: 12rpx;
+}
+
+.brand-name {
+  font-family: "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #002FA7;
+  letter-spacing: 2rpx;
+}
+
+.brand-tagline {
+  font-size: 22rpx;
+  color: #666;
+  letter-spacing: 2rpx;
+}
+
+/* 白色卡片 */
+.card {
+  background: #FFFFFF;
+  border-radius: 16rpx;
+  padding: 36rpx 32rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 4rpx 24rpx rgba(0, 0, 0, 0.06);
+}
+
+/* 按钮样式 */
+.btn-primary {
+  display: inline-block;
+  background: #002FA7;
+  color: #FFFFFF;
+  font-size: 28rpx;
+  font-weight: 500;
+  padding: 24rpx 48rpx;
+  border-radius: 8rpx;
+  text-align: center;
+  letter-spacing: 2rpx;
+}
+
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: #002FA7;
+  border: 2rpx solid #002FA7;
+  font-size: 28rpx;
+  font-weight: 500;
+  padding: 22rpx 48rpx;
+  border-radius: 8rpx;
+  text-align: center;
+  letter-spacing: 2rpx;
+}
+
+.btn-white {
+  display: inline-block;
+  background: #FFFFFF;
+  color: #002FA7;
+  font-size: 28rpx;
+  font-weight: 500;
+  padding: 24rpx 48rpx;
+  border-radius: 8rpx;
+  text-align: center;
+  letter-spacing: 2rpx;
+}
+
+/* 期号标签 */
+.issue-number {
+  display: inline-block;
+  font-family: "Noto Serif SC", Georgia, serif;
+  font-size: 24rpx;
+  font-weight: 600;
+  color: #002FA7;
+  background: rgba(0, 47, 167, 0.08);
+  padding: 8rpx 16rpx;
+  border-radius: 4rpx;
+  letter-spacing: 1rpx;
+}
+
+/* 日期 */
+.date-text {
+  font-size: 24rpx;
+  color: #999;
+  letter-spacing: 1rpx;
+}
+
+/* 文章标题 */
+.article-title {
+  font-family: "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+  font-size: 36rpx;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #1a1a1a;
+  margin: 16rpx 0;
+}
+
+/* 摘要/导语 */
+.deck-text {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 1.7;
+  margin-top: 12rpx;
+}
+
+/* 分割线 */
+.divider {
+  height: 1rpx;
+  background: #E8E8E0;
+  margin: 24rpx 0;
+}
+
+/* 加载状态 */
+.loading-wrap {
+  padding: 80rpx 0;
+  text-align: center;
+  color: #999;
+  font-size: 26rpx;
+}
+
+/* 空状态 */
+.empty-wrap {
+  padding: 120rpx 0;
+  text-align: center;
+  color: #999;
+  font-size: 26rpx;
+}
+
+/* 错误提示 */
+.error-text {
+  color: #E74C3C;
+  font-size: 24rpx;
+}

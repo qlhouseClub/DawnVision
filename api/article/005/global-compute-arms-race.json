@@ -1,0 +1,37 @@
+{
+  "slug": "global-compute-arms-race",
+  "category": "算力基建 · 国产替代",
+  "title": "全球算力军备赛白热化：三星11万亿押注+海光芯正IPO涨74%+Jalapeño9个月流片",
+  "title_break": "算力军备赛<br>白热化",
+  "deck": "三星宣布2655万亿韩元（约11.68万亿人民币）投资半导体和AI算力；海光芯正港股上市开盘涨74%；OpenAI Jalapeño芯片9个月流片。算力正成为大国竞争和企业战略的核心战场。",
+  "keywords": "Dawn Vision, 算力基建, 三星投资, 海光芯正IPO, OpenAI Jalapeño, 自研芯片, 国产替代, 算力缺口",
+  "og_description": "全球算力军备竞赛白热化，三星11万亿、海光IPO、OpenAI自研芯片同步加速。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 800,
+  "sources": [
+    {
+      "text": "36氪 - 三星正式宣布2655万亿韩元投资计划涉及半导体AI算力",
+      "url": "https://36kr.com/newsflashes/3873950707733767"
+    },
+    {
+      "text": "36氪 - 海光芯正IPO背后卖铲生意为何越做越亏",
+      "url": "https://36kr.com/p/3873681978840071"
+    },
+    {
+      "text": "TechCrunch - OpenAI's Jalapeño chip is Big Tech's spiciest move away from Nvidia",
+      "url": "https://techcrunch.com/podcast/openais-jalapeno-chip-is-big-techs-spiciest-move-away-from-nvidia/"
+    },
+    {
+      "text": "SemiAnalysis - US Grid Constraints: Towards 40GW+ of Behind-the-Meter Datacenter",
+      "url": "https://newsletter.semianalysis.com/p/us-grid-constraints-towards-40gw"
+    },
+    {
+      "text": "TechCrunch - Why Wall Street thinks Micron is the next Nvidia",
+      "url": "https://techcrunch.com/2026/06/28/why-wall-street-thinks-us-memory-maker-micron-is-the-next-nvidia/"
+    }
+  ],
+  "body_html": "      <p>2655万亿韩元。</p>\n      <p>约合<strong>11.68万亿元人民币</strong>。这是三星6月29日正式宣布的未来十年投资总额，其中2030万亿韩元投向韩国龙仁和平泽的半导体产业集群，重点覆盖半导体制造、AI算力数据中心和物理AI领域。</p>\n      <p>同一天，北京海光芯正在港交所敲钟上市。开盘涨<strong>74.56%</strong>，报199港元，市值约102亿港元（约13亿美元），募资净额约14.15亿港元。一家AI芯片公司在港股如此受追捧，上一次还是2024年。</p>\n      <p>同样是6月底，OpenAI的自研推理芯片Jalapeño（与Broadcom合作）被确认已完成流片——从立项到流片仅用了<strong>9个月</strong>，计划2026年底规模化部署。Google、Apple、Meta、Microsoft、Amazon、SpaceX——TechCrunch在一篇报道中列出的自研芯片名单越来越长。</p>\n      <p>三条新闻同一天刷屏，不是巧合。2026年夏天，全球算力军备竞赛进入了白热化阶段。</p>\n\n      <h2>所有人都在造芯片：英伟达的\"朋友\"和\"敌人\"</h2>\n      <p>三星的投资计划是目前全球半导体领域最大规模的单笔承诺。11.68万亿人民币是什么概念？相当于中国2025年全年GDP的约0.9%，相当于英伟达2025财年营收的近4倍。这笔钱砸下去，目标只有一个：在AI芯片制造领域缩小与台积电的差距，同时在HBM（高带宽内存）等关键部件上巩固领先地位。</p>\n      <p>华尔街已经开始寻找\"下一个英伟达\"。TechCrunch报道，美光科技（Micron）正在被资金热捧——HBM是AI GPU的关键组件，美光是全球三大HBM供应商之一。高盛报告称美光和英伟达将合计贡献Q2标普500指数<strong>40%以上</strong>的EPS增长。从卖GPU的到卖内存的，AI算力产业链的每一个环节都在被资本重估。</p>\n      <p>但最让英伟达紧张的不是三星或美光，而是它的客户们集体\"造反\"。OpenAI的Jalapeño是一个明确的信号：当AI公司的算力开支达到每年数十亿美元级别时，自研芯片的ROI就开始变得非常有吸引力。Jalapeño定位是推理芯片——推理市场是英伟达目前利润率最高、增速最快的板块。如果OpenAI在自己的产品里大规模使用Jalapeño替代英伟达GPU，对英伟达的冲击将是直接的。</p>\n\n      <h2>国产算力：从\"能用\"到\"好用\"的关键一跃</h2>\n      <p>海光芯正的IPO是观察国产算力进展的一个有趣样本。</p>\n      <p>它的招股书揭示了一个矛盾的现实：一方面，AI芯片需求爆发，公司营收高速增长；另一方面，<strong>卖铲生意越做越亏</strong>——研发投入巨大、价格战压力、客户集中度高。国产算力芯片公司在\"技术追赶\"和\"商业可持续\"之间走钢丝。</p>\n      <p>但趋势是明确的。DeepSeek-V4-Pro已经在国产算力集群上完成了全参数后训练（深圳河套学院/深智城算网），这是业界首个第三方机构做到这一点。中国正在推进的2.1万亿国家级AI数据中心网格计划明确提出<strong>80%国产芯片</strong>的目标。当需求确定、政策确定、资金确定，国产芯片从\"能用\"到\"好用\"只是时间问题。</p>\n\n      <h2>电比芯片更稀缺：算力的终极瓶颈</h2>\n      <p>比芯片更根本的瓶颈是电。</p>\n      <p>SemiAnalysis的一篇深度报告测算，到2028年，美国表后数据中心（Behind-the-Meter Datacenter）的装机容量将达到<strong>40GW以上</strong>。这是什么概念？一个大型核电站的装机容量约1GW，40GW相当于40个核电站。电网的扩容速度远远跟不上数据中心的建设速度。</p>\n      <p>中国的情况同样紧张。多地已经出现数据中心用电指标紧张的情况，这也是\"东数西算\"和太空算力（卫星数据中心）被提上日程的原因之一。当算力成为AI时代的石油，电力就是算力时代的石油。</p>\n      <p>军备竞赛没有停下的迹象。但历史告诉我们，军备竞赛的终局往往不是某一方彻底胜出，而是新的均衡格局形成。在这个新格局里，英伟达不会倒下，但它\"一家独大\"的时代正在结束；国产芯片不会一夜超车，但它的市场份额会持续提升；电力和散热可能成为比芯片设计更难攻克的瓶颈。</p>\n      <p>谁能算清这笔账，谁就能在算力战争中活到最后。</p>\n",
+  "pull_quote": null,
+  "cognitive_notes": "算力军备赛 · 三星11万亿投资 · 海光芯正IPO · OpenAI Jalapeño · 自研芯片趋势 · 40GW数据中心用电 · 国产算力80%目标",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 9 个源信号生成，经编辑部人工审核。素材来源：36氪三星/海光报道、TechCrunch Jalapeño/Micron分析、SemiAnalysis电网约束报告。"
+}

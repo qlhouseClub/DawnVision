@@ -1,0 +1,74 @@
+<!--pages/index/index.wxml-->
+<view class="page">
+  <!-- Hero 区域 - Klein蓝全屏背景 -->
+  <view class="hero">
+    <view class="hero-content">
+      <view class="hero-brand">
+        <text class="hero-brand-en">DAWN VISION</text>
+      </view>
+      <view class="hero-divider"></view>
+      <view class="hero-tagline">穿越嘈杂，洞见留声</view>
+      <view class="hero-subtitle">AI Insight Daily</view>
+    </view>
+  </view>
+
+  <!-- 内容区域 -->
+  <view class="content">
+    <!-- 最新一期封面卡片 -->
+    <view class="latest-section">
+      <view class="section-header">
+        <text class="section-label">最新一期</text>
+        <text class="section-issue" wx:if="{{latestIssue && latestIssue.number}}">第 {{latestIssue.number}} 期</text>
+      </view>
+
+      <!-- 加载中 -->
+      <view class="loading-wrap" wx:if="{{loading}}">
+        <text>加载中...</text>
+      </view>
+
+      <!-- 封面卡片 -->
+      <view class="cover-card" wx:if="{{!loading && latestCover}}" bindtap="goToCoverArticle">
+        <view class="cover-card-inner">
+          <view class="cover-meta">
+            <text class="cover-issue-num">第 {{latestIssue.number}} 期</text>
+            <text class="cover-date">{{latestIssue.date_display || latestIssue.date}}</text>
+          </view>
+          <view class="cover-title">
+            <text>{{latestCover.title_short || latestCover.title}}</text>
+          </view>
+          <view class="cover-deck">
+            <text>{{latestCover.deck}}</text>
+          </view>
+          <view class="cover-footer">
+            <text class="cover-read-time">{{latestCover.read_time}}</text>
+            <text class="cover-action">阅读全文 →</text>
+          </view>
+        </view>
+      </view>
+
+      <!-- 错误提示 -->
+      <view class="empty-wrap" wx:if="{{!loading && error}}">
+        <text class="error-text">{{error}}</text>
+      </view>
+
+      <!-- 空状态 -->
+      <view class="empty-wrap" wx:if="{{!loading && !latestCover && !error}}">
+        <text>暂无内容</text>
+      </view>
+    </view>
+
+    <!-- 进入期刊库按钮 -->
+    <view class="archive-section">
+      <view class="archive-btn" bindtap="goToArticles">
+        <text class="archive-btn-text">进入期刊库</text>
+        <text class="archive-btn-arrow">→</text>
+      </view>
+    </view>
+
+    <!-- 底部信息 -->
+    <view class="footer-info">
+      <text class="footer-brand">DAWN VISION</text>
+      <text class="footer-tagline">穿越嘈杂，洞见留声</text>
+    </view>
+  </view>
+</view>

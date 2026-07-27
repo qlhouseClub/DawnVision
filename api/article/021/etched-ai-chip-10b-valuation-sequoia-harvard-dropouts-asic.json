@@ -1,0 +1,32 @@
+{
+  "slug": "etched-ai-chip-10b-valuation-sequoia-harvard-dropouts-asic",
+  "category": "AI 轻创业 · 一人公司",
+  "title": "Etched AI估值7个月翻倍至103亿美元：三个哈佛辍学生用ASIC推理芯片挑战GPU霸权",
+  "title_break": "Etched估值103亿美元<br>三个哈佛辍学生做AI推理芯片",
+  "deck": "Etched完成3亿美元C轮融资，红杉领投，投后估值103亿美元，7个月翻倍。三位哈佛辍学生创立的公司声称其ASIC专用芯片不需要GPU就能跑AI推理，速度提升数倍。",
+  "keywords": "Dawn Vision,Etched,AI芯片,ASIC,103亿美元估值,红杉资本,推理芯片,哈佛辍学,GPU替代",
+  "og_description": "AI芯片初创Etched完成3亿美元C轮融资估值103亿美元，红杉领投，三个哈佛辍学生用专用ASIC芯片挑战GPU在AI推理市场的地位。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 750,
+  "sources": [
+    {
+      "text": "TechCrunch - AI chip startup Etched defies skeptics, hits $10.3B valuation",
+      "url": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/"
+    },
+    {
+      "text": "中财网 - AI芯片黑马Etched估值7个月翻倍飙至103亿美元",
+      "url": "http://sj.cfi.cn/newspage.aspx?client=phone&id=20260723002465"
+    },
+    {
+      "text": "华盛通 - AI创企Etched洽谈融资，估值目标200亿美元",
+      "url": "https://www.hstong.com/news/detail/26071807523723911"
+    }
+  ],
+  "body_html": "      <p>三个哈佛大学辍学生，四年时间，做出了一家估值<strong>103亿美元</strong>的AI芯片公司。</p>\n      <p>7月23日，AI芯片初创公司<strong>Etched</strong>宣布完成<strong>3亿美元</strong>C轮融资，由红杉资本领投，a16z、SK海力士等跟投，投后估值达到103亿美元——距离上一轮50亿美元估值仅仅过去7个月，翻倍还多。更夸张的是，据知情人士透露，Etched已经在推进下一轮融资，估值目标是<strong>200亿美元</strong>。</p>\n      <p>这家公司的核心卖点很简单：我们做的不是GPU，是专门为AI推理设计的ASIC专用芯片。不需要GPU，就能跑任何AI模型，而且速度快很多。</p>\n\n      <h2>为什么ASIC推理芯片现在火了？</h2>\n      <p>要理解Etched为什么值100亿美元，你得先理解AI算力市场正在发生的一个结构性变化：训练和推理正在分化。</p>\n      <p>过去几年，所有人都在盯着训练算力——GPT-5训练用了多少张H100，Claude训练集群多大。但从2025年下半年开始，一个更明显的趋势浮现：<strong>推理算力需求正在爆炸式增长，而且增速远超训练</strong>。为什么？因为Agent来了。一个Agent执行一次任务可能要调用大模型几十次，推理token消耗量是传统聊天机器人的几十倍。当AI产品从\"聊天\"走向\"干活\"，推理算力需求就像打开了泄洪闸。</p>\n      <p>GPU是通用计算芯片，什么都能做，但什么都不是最优。训练大模型需要通用计算——因为模型架构一直在变，你需要芯片能灵活适应各种张量运算。但推理不一样，尤其是大规模部署的推理：模型架构相对固定，对延迟和吞吐量要求极高，这时候专用芯片（ASIC）的优势就体现出来了——砍掉所有不需要的电路，把所有晶体管都砸在矩阵乘法和内存访问上，能效比可以比GPU高好几倍。</p>\n      <p>这不是一个新概念。Google的TPU就是ASIC，AWS有Trainium和Inferentia，微软有Maia。但这些都是云厂商自研自用，不对外卖。Etched想做的是\"第三方AI推理ASIC\"——卖给所有需要大规模推理算力的公司，和NVIDIA的GPU正面竞争。</p>\n\n      <h2>三个哈佛辍学生的\"反共识\"创业</h2>\n      <p>Etched的故事很符合硅谷经典创业叙事。三位创始人都是哈佛的辍学生——2022年创立公司的时候，他们还没毕业。当时整个行业的共识是：\"AI芯片赛道已经挤爆了，NVIDIA不可战胜，创业公司做AI芯片必死无疑\"。但这三个人不信邪，他们觉得GPU是为图形渲染设计的，不是为AI设计的，AI推理一定有专用芯片的机会。</p>\n      <div class=\"pull-quote\">\"训练需要通用，推理需要专用——当推理算力需求占比超过70%的时候，专用芯片的时代就来了。\"<span class=\"pull-quote__attr\">—— Etched联合创始人Robert Wachen</span></div>\n      <p>红杉领投这轮3亿美元融资，据说这是红杉历史上领投的C轮融资中估值最高的之一。a16z和SK海力士的跟投也很有信号意义——SK海力士是全球最大的HBM内存供应商，它的投资意味着Etched未来在高端内存供应上会有保障。</p>\n      <p>当然，质疑声音也不少。NVIDIA的CUDA生态护城河是所有AI芯片创业公司绕不过去的坎。就算你的芯片比GPU快5倍，如果主流AI框架不支持、开发者不愿意迁移、软件栈不稳定，客户还是不敢用。Etched声称其芯片能运行任何AI模型无需修改，但这一说法还需要大规模客户验证。</p>\n      <p>不过有一点是确定的：AI推理算力市场正在爆发，客户对NVIDIA之外的第二选择需求强烈。从AMD Helios到Etched的ASIC，从云厂商自研芯片到开源推理引擎优化，整个行业都在试图撼动NVIDIA在推理市场的地位。Etched能不能成功还不好说，但103亿美元估值说明：资本市场愿意为\"NVIDIA替代者\"这个故事买单。</p>\n      <p>毕竟，在一个1.4万亿美元的市场里，哪怕只分到5%的份额，也是700亿美元的生意。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "训练需要通用，推理需要专用——当推理算力需求占比超过70%的时候，专用芯片的时代就来了。",
+    "attr": "—— Robert Wachen，Etched联合创始人"
+  },
+  "cognitive_notes": "Etched · AI芯片 · ASIC · 103亿美元估值 · 红杉资本 · 推理芯片 · 哈佛辍学生 · GPU替代 · SK海力士",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：TechCrunch、中财网、华盛通。"
+}
