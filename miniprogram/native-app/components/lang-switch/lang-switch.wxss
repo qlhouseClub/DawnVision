@@ -1,0 +1,29 @@
+/* components/lang-switch/lang-switch.wxss */
+
+.dv-lang-switch {
+  position: fixed;
+  bottom: 48rpx;
+  right: 48rpx;
+  z-index: 900;
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #002FA7;
+  font-size: 22rpx;
+  font-weight: 700;
+  letter-spacing: 1rpx;
+  font-family: 'Noto Serif SC', Georgia, serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4rpx 32rpx rgba(0, 0, 0, 0.12);
+  transition: all 0.2s ease;
+}
+
+.dv-lang-switch:active {
+  background: #002FA7;
+  color: #ffffff;
+  transform: scale(1.08);
+  box-shadow: 0 8rpx 48rpx rgba(0, 47, 167, 0.3);
+}

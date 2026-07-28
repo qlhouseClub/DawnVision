@@ -1,303 +1,159 @@
-/* pages/about/about.wxss - 白色杂志编辑风 */
+/* pages/about/about.wxss - 严格复刻网站：居中作者展示页 */
 
 .about-page {
   min-height: 100vh;
   background: #ffffff;
 }
 
-/* ============================================
-   顶部品牌头（白色磨砂玻璃吸顶）
-   ============================================ */
-.brand-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  padding-top: env(safe-area-inset-top);
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(32rpx) saturate(1.5);
-  -webkit-backdrop-filter: blur(32rpx) saturate(1.5);
-}
-
-.brand-header--white {
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(32rpx) saturate(1.5);
-  -webkit-backdrop-filter: blur(32rpx) saturate(1.5);
-}
-
-.brand-header__inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24rpx 40rpx 16rpx;
-}
-
-.brand-header__logo {
-  text-align: center;
-}
-
-.brand-header__name {
-  display: block;
-  font-size: 26rpx;
-  font-weight: 900;
-  letter-spacing: 6rpx;
-  text-transform: uppercase;
-  color: #0a0a0a;
-  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif;
-}
-
-.brand-header__tagline {
-  display: block;
-  font-size: 18rpx;
-  color: #999999;
-  letter-spacing: 4rpx;
-  margin-top: 4rpx;
-  font-style: italic;
-}
-
-.brand-header__divider {
-  height: 1rpx;
-  background: rgba(0, 0, 0, 0.06);
-}
-
-/* 占位高度 */
-.header-placeholder {
-  height: calc(88rpx + env(safe-area-inset-top));
-}
-
-/* ============================================
-   内容区
-   ============================================ */
 .about-content {
-  padding: 56rpx 40rpx 0;
-}
-
-/* 通用分区标签 */
-.section-label {
-  margin-bottom: 24rpx;
-}
-
-.section-label text {
-  font-size: 20rpx;
-  font-weight: 700;
-  letter-spacing: 4rpx;
-  text-transform: uppercase;
-  color: #002FA7;
-  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
-}
-
-/* 分割线 */
-.section-divider {
-  height: 1rpx;
-  background: #e8e8e8;
-  margin: 48rpx 0;
-}
-
-/* ============================================
-   品牌介绍区
-   ============================================ */
-.intro-section {
-  padding-top: 8rpx;
-}
-
-.intro-label {
-  margin-bottom: 28rpx;
-}
-
-.intro-label text {
-  font-size: 20rpx;
-  font-weight: 700;
-  letter-spacing: 4rpx;
-  text-transform: uppercase;
-  color: #002FA7;
-  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
-}
-
-.intro-title {
-  margin-bottom: 32rpx;
-}
-
-.intro-title text {
-  font-size: 52rpx;
-  font-weight: 900;
-  font-style: italic;
-  line-height: 1.15;
-  letter-spacing: -0.8rpx;
-  color: #0a0a0a;
-  font-family: 'Noto Serif SC', Georgia, serif;
-}
-
-.intro-body {
-  display: flex;
-  flex-direction: column;
-  gap: 24rpx;
-}
-
-.intro-paragraph {
-  font-size: 28rpx;
-  line-height: 1.85;
-  color: #333333;
-  font-family: 'Noto Serif SC', Georgia, serif;
-}
-
-/* ============================================
-   内容架构区
-   ============================================ */
-.structure-section {
-  /* padding handled by divider spacing */
-}
-
-.structure-list {
-  display: flex;
-  flex-direction: column;
-  gap: 32rpx;
-}
-
-.structure-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 20rpx;
-}
-
-.structure-item__dot {
-  width: 12rpx;
-  height: 12rpx;
-  border-radius: 50%;
-  background: #002FA7;
-  margin-top: 14rpx;
-  flex-shrink: 0;
-}
-
-.structure-item__content {
-  flex: 1;
-}
-
-.structure-item__title {
-  display: block;
-  font-size: 30rpx;
-  font-weight: 700;
-  color: #0a0a0a;
-  margin-bottom: 8rpx;
-  font-family: 'Noto Serif SC', Georgia, serif;
-}
-
-.structure-item__desc {
-  display: block;
-  font-size: 26rpx;
-  font-style: italic;
-  line-height: 1.6;
-  color: #6b6b6b;
-  font-family: 'Noto Serif SC', Georgia, serif;
-}
-
-/* ============================================
-   更新频率区
-   ============================================ */
-.frequency-section {
-  /* padding handled by divider spacing */
-}
-
-.frequency-body {
-  display: flex;
-  flex-direction: column;
-  gap: 12rpx;
-}
-
-.frequency-text {
-  font-size: 28rpx;
-  font-weight: 700;
-  color: #0a0a0a;
-  font-family: 'Noto Serif SC', Georgia, serif;
-}
-
-.frequency-sub {
-  font-size: 26rpx;
-  font-style: italic;
-  color: #6b6b6b;
-  font-family: 'Noto Serif SC', Georgia, serif;
-}
-
-/* ============================================
-   关注我们区
-   ============================================ */
-.contact-section {
-  /* padding handled by divider spacing */
-}
-
-.contact-list {
-  border-top: 1rpx solid #e8e8e8;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 28rpx 0;
-  border-bottom: 1rpx solid #e8e8e8;
-  transition: transform 0.15s ease-out;
-}
-
-.contact-item:active {
-  transform: translateX(6rpx);
-}
-
-.contact-item__left {
-  display: flex;
-  flex-direction: column;
-  gap: 6rpx;
-}
-
-.contact-item__label {
-  font-size: 22rpx;
-  letter-spacing: 2rpx;
-  text-transform: uppercase;
-  color: #999999;
-  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
-}
-
-.contact-item__value {
-  font-size: 28rpx;
-  font-weight: 700;
-  color: #002FA7;
-  font-family: 'Noto Serif SC', Georgia, serif;
-}
-
-.contact-item__arrow {
-  font-size: 28rpx;
-  color: #002FA7;
-  font-weight: 700;
-}
-
-/* ============================================
-   底部克莱因蓝品牌块
-   ============================================ */
-.bottom-brand {
-  background: #002FA7;
-  padding: 80rpx 40rpx 100rpx;
-  margin-top: 64rpx;
-}
-
-.bottom-brand-inner {
+  max-width: 640rpx;
+  margin: 0 auto;
+  padding: 48rpx 40rpx 56rpx;
   text-align: center;
 }
 
-.bottom-brand-name {
+/* ============================================
+   标题 DAWN VISION
+   ============================================ */
+.about-title {
+  font-size: 72rpx;
+  font-weight: 900;
+  letter-spacing: 4rpx;
+  line-height: 1;
+  color: #0a0a0a;
+  margin-bottom: 12rpx;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+}
+
+/* ============================================
+   Eyebrow
+   ============================================ */
+.about-eyebrow {
+  font-size: 18rpx;
+  letter-spacing: 10rpx;
+  text-transform: uppercase;
+  color: #002FA7;
+  font-weight: 700;
+  margin-bottom: 40rpx;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+}
+
+/* ============================================
+   标签列表
+   ============================================ */
+.about-tags {
+  margin-bottom: 40rpx;
+}
+
+.about-tag {
+  display: block;
+  font-size: 28rpx;
+  font-style: italic;
+  color: #6b6b6b;
+  line-height: 1.7;
+  font-family: 'Noto Serif SC', Georgia, serif;
+}
+
+/* ============================================
+   蓝色分割线
+   ============================================ */
+.about-divider {
+  width: 80rpx;
+  height: 4rpx;
+  background: #002FA7;
+  margin: 0 auto 40rpx;
+}
+
+/* ============================================
+   描述段落
+   ============================================ */
+.about-desc {
+  font-size: 28rpx;
+  line-height: 1.8;
+  color: #6b6b6b;
+  font-family: 'Noto Serif SC', Georgia, serif;
+  max-width: 520rpx;
+  margin: 0 auto 48rpx;
+  text-align: center;
+}
+
+/* ============================================
+   联系方式
+   ============================================ */
+.about-contact {
+  display: flex;
+  justify-content: center;
+  gap: 64rpx;
+  margin-bottom: 48rpx;
+}
+
+.about-contact-item {
+  text-align: center;
+}
+
+.about-contact-value {
   display: block;
   font-size: 32rpx;
-  font-weight: 900;
-  letter-spacing: 8rpx;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.95);
-  margin-bottom: 12rpx;
+  font-weight: 700;
+  color: #0a0a0a;
+  letter-spacing: -0.3rpx;
+  margin-bottom: 8rpx;
+  line-height: 1.2;
   font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
 }
 
-.bottom-brand-tag {
+.about-contact-label {
+  display: block;
+  font-size: 16rpx;
+  letter-spacing: 10rpx;
+  text-transform: uppercase;
+  color: #002FA7;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+}
+
+/* ============================================
+   打赏码
+   ============================================ */
+.about-tipjar {
+  margin-top: 16rpx;
+}
+
+.about-tipjar-label {
+  display: block;
+  font-size: 18rpx;
+  letter-spacing: 10rpx;
+  text-transform: uppercase;
+  color: #002FA7;
+  font-weight: 700;
+  margin-bottom: 28rpx;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+}
+
+.about-qr-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}
+
+.about-qr {
+  width: 280rpx;
+  height: 280rpx;
+}
+
+.about-tipjar-quote {
   display: block;
   font-size: 24rpx;
   font-style: italic;
-  color: rgba(255, 255, 255, 0.5);
-  letter-spacing: 2rpx;
+  color: #6b6b6b;
+  opacity: 0.8;
   font-family: 'Noto Serif SC', Georgia, serif;
+}
+
+/* ============================================
+   底部留白
+   ============================================ */
+.bottom-space {
+  height: 80rpx;
 }

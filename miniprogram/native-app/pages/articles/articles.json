@@ -1,8 +1,9 @@
 {
-  "navigationBarTitleText": "期刊库",
-  "navigationBarBackgroundColor": "#002FA7",
-  "navigationBarTextStyle": "white",
   "enablePullDownRefresh": true,
   "backgroundTextStyle": "light",
-  "usingComponents": {}
+  "usingComponents": {
+    "dv-nav": "/components/nav/nav",
+    "search-modal": "/components/search-modal/search-modal",
+    "lang-switch": "/components/lang-switch/lang-switch"
+  }
 }

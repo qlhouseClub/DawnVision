@@ -6,52 +6,6 @@
 }
 
 /* ============================================
-   顶部品牌头（透明，叠加在 Hero 上）
-   ============================================ */
-.brand-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  padding-top: env(safe-area-inset-top);
-}
-
-.brand-header--transparent {
-  background: transparent;
-}
-
-.brand-header__inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24rpx 40rpx 20rpx;
-}
-
-.brand-header__logo {
-  text-align: center;
-}
-
-.brand-header__name {
-  display: block;
-  font-size: 28rpx;
-  font-weight: 900;
-  letter-spacing: 6rpx;
-  text-transform: uppercase;
-  color: #ffffff;
-  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif;
-}
-
-.brand-header__tagline {
-  display: block;
-  font-size: 18rpx;
-  color: rgba(255, 255, 255, 0.6);
-  letter-spacing: 4rpx;
-  margin-top: 4rpx;
-  font-style: italic;
-}
-
-/* ============================================
    Hero 区域 - 全屏克莱因蓝
    ============================================ */
 .hero {
@@ -109,7 +63,7 @@
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: 120rpx 40rpx 0;
+  padding: 100rpx 40rpx 0;
 }
 
 /* ============================================

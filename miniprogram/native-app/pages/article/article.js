@@ -1,34 +1,45 @@
 // pages/article/article.js
-const api = require('../../utils/api.js');
-const format = require('../../utils/format.js');
+var api = require('../../utils/api.js');
+var format = require('../../utils/format.js');
+var i18nContent = require('../../utils/i18n-content.js');
+var i18nUtil = require('../../utils/i18n.js');
 
 Page({
   data: {
     loading: true,
+    rawArticle: null,
     article: null,
     issueNumber: '',
     issueNumberDisplay: '',
     articleSlug: '',
     processedHtml: '',
     relatedArticles: [],
-    errorMsg: ''
+    errorMsg: '',
+    searchVisible: false,
+    lang: 'zh',
+    i18n: {}
   },
 
-  onLoad: function (options) {
-    const issueNum = options.issue;
-    const slug = options.slug;
-    const articleType = options.type || ''; // cover, brief, cao
+  onLoad: function(options) {
+    var app = getApp();
+    var lang = (app && app.globalData && app.globalData.lang) || 'zh';
+    this.setData({
+      lang: lang,
+      i18n: i18nUtil.getMessages(lang)
+    });
+
+    var issueNum = options.issue;
+    var slug = options.slug;
 
     if (!issueNum || !slug) {
       this.setData({
         loading: false,
-        errorMsg: '参数错误'
+        errorMsg: this.data.i18n.status_articleError
       });
       return;
     }
 
-    // 计算期号显示格式（三位数补零）
-    const issueNumberDisplay = format.formatIssueNumber(issueNum);
+    var issueNumberDisplay = format.formatIssueNumber(issueNum);
 
     this.setData({
       issueNumber: issueNum,
@@ -39,33 +50,13 @@ Page({
     this.loadArticle(issueNum, slug);
   },
 
-  // 返回上一页
-  goBack: function () {
-    const pages = getCurrentPages();
-    if (pages.length > 1) {
-      wx.navigateBack({
-        delta: 1
-      });
-    } else {
-      // 如果没有上一页，返回首页
-      wx.switchTab({
-        url: '/pages/index/index',
-        fail: function () {
-          wx.redirectTo({
-            url: '/pages/index/index'
-          });
-        }
-      });
-    }
-  },
-
-  // 下拉刷新
-  onPullDownRefresh: function () {
-    const { issueNumber, articleSlug } = this.data;
-    if (issueNumber && articleSlug) {
-      this.loadArticle(issueNumber, articleSlug, true).then(() => {
+  onPullDownRefresh: function() {
+    var self = this;
+    var data = this.data;
+    if (data.issueNumber && data.articleSlug) {
+      this.loadArticle(data.issueNumber, data.articleSlug, true).then(function() {
         wx.stopPullDownRefresh();
-      }).catch(() => {
+      }).catch(function() {
         wx.stopPullDownRefresh();
       });
     } else {
@@ -73,112 +64,125 @@ Page({
     }
   },
 
-  // 加载文章
-  loadArticle: function (issueNum, slug, forceRefresh) {
+  loadArticle: function(issueNum, slug, forceRefresh) {
+    var self = this;
     this.setData({ loading: true, errorMsg: '' });
 
-    return api.getArticle(issueNum, slug, forceRefresh).then(article => {
+    return api.getArticle(issueNum, slug, forceRefresh).then(function(article) {
       if (!article) {
-        this.setData({
+        self.setData({
           loading: false,
-          errorMsg: '文章不存在'
+          errorMsg: self.data.i18n.status_articleMissing
         });
         return;
       }
 
-      // 处理 HTML 内容，适配小程序 rich-text
-      const processedHtml = format.processRichTextHtml(article.body_html || '');
+      // 保存原始数据，提取当前语言版本
+      var extracted = i18nContent.extractArticle(article, self.data.lang);
+      var processedHtml = format.processRichTextHtml(extracted.bodyHtml || '');
 
-      this.setData({
+      self.setData({
         loading: false,
-        article: article,
+        rawArticle: article,
+        article: extracted,
         processedHtml: processedHtml
       });
 
-      // 设置导航栏标题
-      wx.setNavigationBarTitle({
-        title: article.title_short || article.title || '文章'
-      });
-
-      // 加载相关推荐（同期其他文章）
-      this.loadRelatedArticles(issueNum, slug);
-    }).catch(err => {
+      // 加载相关推荐
+      self.loadRelatedArticles(issueNum, slug);
+    }).catch(function(err) {
       console.error('加载文章失败', err);
-      this.setData({
+      self.setData({
         loading: false,
-        errorMsg: err.message || '加载失败，请检查网络'
+        errorMsg: err.message || self.data.i18n.status_error
       });
     });
   },
 
-  // 加载相关推荐文章
-  loadRelatedArticles: function (issueNum, currentSlug) {
-    api.getIssue(issueNum).then(issueData => {
+  loadRelatedArticles: function(issueNum, currentSlug) {
+    var self = this;
+    api.getIssue(issueNum).then(function(issueData) {
       if (!issueData) return;
 
-      const related = [];
+      var related = [];
 
-      // 添加封面文章（如果当前不是封面）
       if (issueData.cover && issueData.cover.slug !== currentSlug) {
+        var coverExtracted = i18nContent.extractArticle(issueData.cover, self.data.lang);
         related.push({
           slug: issueData.cover.slug,
-          title: issueData.cover.title_short || issueData.cover.title,
-          deck: issueData.cover.deck,
-          category: '封面'
+          title: coverExtracted.title,
+          deck: coverExtracted.deck,
+          category: coverExtracted.category
         });
       }
 
-      // 添加 brief 文章
       if (issueData.briefs && issueData.briefs.length > 0) {
-        issueData.briefs.forEach(brief => {
+        issueData.briefs.forEach(function(brief) {
           if (brief.slug !== currentSlug) {
+            var briefExtracted = i18nContent.extractArticle(brief, self.data.lang);
             related.push({
               slug: brief.slug,
-              title: brief.title,
-              deck: brief.deck,
-              category: brief.category
+              title: briefExtracted.title,
+              deck: briefExtracted.deck,
+              category: briefExtracted.category
             });
           }
         });
       }
 
-      // 最多显示 5 篇
-      this.setData({
-        relatedArticles: related.slice(0, 5)
-      });
-    }).catch(err => {
+      self.setData({ relatedArticles: related.slice(0, 5) });
+    }).catch(function(err) {
       console.error('加载相关文章失败', err);
     });
   },
 
-  // 跳转到相关文章
-  goToRelated: function (e) {
-    const slug = e.currentTarget.dataset.slug;
-    const issueNum = this.data.issueNumber;
-
+  goToRelated: function(e) {
+    var slug = e.currentTarget.dataset.slug;
+    var issueNum = this.data.issueNumber;
     if (issueNum && slug) {
-      // 关闭当前页再跳转，避免栈过深
       wx.redirectTo({
         url: '/pages/article/article?issue=' + issueNum + '&slug=' + slug
       });
     }
   },
 
-  // 分享
-  onShareAppMessage: function () {
-    const { article, issueNumber } = this.data;
-    const title = article ? (article.title_short || article.title) : 'Dawn Vision';
-    const path = '/pages/article/article?issue=' + issueNumber + '&slug=' + this.data.articleSlug;
-    return {
-      title: title,
-      path: path
-    };
+  onSearchClose: function() {
+    this.setData({ searchVisible: false });
   },
 
-  onShareTimeline: function () {
-    const { article } = this.data;
-    return {
-      title: article ? (article.title_short || article.title) : 'Dawn Vision'
-    };
+  onLangChange: function(e) {
+    var lang = e.detail.lang;
+    var self = this;
+    this.setData({
+      lang: lang,
+      i18n: i18nUtil.getMessages(lang)
+    });
+
+    // 如果已有原始数据，直接重新提取（不重新请求网络）
+    if (this.data.rawArticle) {
+      var extracted = i18nContent.extractArticle(this.data.rawArticle, lang);
+      var processedHtml = format.processRichTextHtml(extracted.bodyHtml || '');
+      this.setData({
+        article: extracted,
+        processedHtml: processedHtml
+      });
+
+      // 重新提取相关推荐
+      if (this.data.issueNumber && this.data.articleSlug) {
+        this.loadRelatedArticles(this.data.issueNumber, this.data.articleSlug);
+      }
+    }
+  },
+
+  onShareAppMessage: function() {
+    var data = this.data;
+    var title = data.article ? data.article.title : 'Dawn Vision';
+    var path = '/pages/article/article?issue=' + data.issueNumber + '&slug=' + data.articleSlug;
+    return { title: title, path: path };
+  },
+
+  onShareTimeline: function() {
+    var data = this.data;
+    return { title: data.article ? data.article.title : 'Dawn Vision' };
   }
 });

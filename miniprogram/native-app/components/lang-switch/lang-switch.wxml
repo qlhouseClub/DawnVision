@@ -1,0 +1,4 @@
+<!--components/lang-switch/lang-switch.wxml-->
+<view class="dv-lang-switch" bindtap="toggleLang">
+  <text>{{lang === 'zh' ? 'EN' : '中'}}</text>
+</view>

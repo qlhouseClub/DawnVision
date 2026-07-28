@@ -1,65 +1,81 @@
 // pages/index/index.js
-const api = require('../../utils/api.js');
+var api = require('../../utils/api.js');
+var i18nContent = require('../../utils/i18n-content.js');
+var i18nUtil = require('../../utils/i18n.js');
 
 Page({
   data: {
     loading: true,
     latestIssue: null,
     latestCover: null,
-    error: ''
+    error: '',
+    searchVisible: false,
+    lang: 'zh',
+    i18n: {}
   },
 
-  onLoad: function (options) {
+  onLoad: function() {
+    var app = getApp();
+    var lang = (app && app.globalData && app.globalData.lang) || 'zh';
+    this.setData({
+      lang: lang,
+      i18n: i18nUtil.getMessages(lang)
+    });
     this.loadData();
   },
 
-  onPullDownRefresh: function () {
-    this.loadData(true).then(() => {
+  onPullDownRefresh: function() {
+    var self = this;
+    this.loadData(true).then(function() {
       wx.stopPullDownRefresh();
-    }).catch(() => {
+    }).catch(function() {
       wx.stopPullDownRefresh();
     });
   },
 
-  // 加载数据
-  loadData: function (forceRefresh) {
+  loadData: function(forceRefresh) {
+    var self = this;
     this.setData({ loading: true, error: '' });
 
-    return api.getIssues(forceRefresh).then(issues => {
-      if (!issues || issues.length === 0) {
-        this.setData({
-          loading: false,
-          latestIssue: null,
-          latestCover: null
-        });
+    return api.getLatestCover(forceRefresh).then(function(data) {
+      if (!data) {
+        self.setData({ loading: false, latestIssue: null, latestCover: null });
         return;
       }
 
-      const latestIssue = issues[0];
-      const latestCover = latestIssue.cover || null;
+      // 提取当前语言的封面数据
+      var coverData = data.cover ? {
+        slug: data.cover.slug,
+        title: self.data.lang === 'en'
+          ? (data.cover.title_short_en || data.cover.title_en || data.cover.title)
+          : (data.cover.title_short || data.cover.title),
+        deck: self.data.lang === 'en'
+          ? (data.cover.deck_en || data.cover.deck)
+          : data.cover.deck,
+        readTime: self.data.lang === 'en'
+          ? (data.cover.read_time_en || data.cover.read_time)
+          : data.cover.read_time
+      } : null;
 
-      this.setData({
+      self.setData({
         loading: false,
-        latestIssue: latestIssue,
-        latestCover: latestCover
+        latestIssue: data.issue,
+        latestCover: coverData
       });
-    }).catch(err => {
-      console.error('加载期数列表失败', err);
-      this.setData({
+    }).catch(function(err) {
+      console.error('加载失败', err);
+      self.setData({
         loading: false,
-        error: err.message || '加载失败，请检查网络'
+        error: self.data.i18n.status_error
       });
     });
   },
 
-  // 跳转到封面文章
-  goToCoverArticle: function () {
-    const { latestIssue, latestCover } = this.data;
-    if (!latestIssue || !latestCover) return;
-
-    const issueNum = latestIssue.number;
-    const slug = latestCover.slug;
-
+  goToCoverArticle: function() {
+    var data = this.data;
+    if (!data.latestIssue || !data.latestCover) return;
+    var issueNum = data.latestIssue.number;
+    var slug = data.latestCover.slug;
     if (issueNum && slug) {
       wx.navigateTo({
         url: '/pages/article/article?issue=' + issueNum + '&slug=' + slug
@@ -67,26 +83,33 @@ Page({
     }
   },
 
-  // 跳转到文章列表
-  goToArticles: function () {
-    wx.switchTab({
-      url: '/pages/articles/articles'
-    });
+  goToArticles: function() {
+    wx.redirectTo({ url: '/pages/articles/articles' });
   },
 
-  // 分享
-  onShareAppMessage: function () {
-    const { latestCover } = this.data;
-    const title = latestCover ? latestCover.title : 'Dawn Vision - 穿越嘈杂，洞见留声';
+  onSearchClose: function() {
+    this.setData({ searchVisible: false });
+  },
+
+  onLangChange: function(e) {
+    var lang = e.detail.lang;
+    this.setData({
+      lang: lang,
+      i18n: i18nUtil.getMessages(lang)
+    });
+    // 重新加载以提取新语言内容
+    this.loadData();
+  },
+
+  onShareAppMessage: function() {
+    var cover = this.data.latestCover;
     return {
-      title: title,
+      title: cover ? cover.title : this.data.i18n.share_default,
       path: '/pages/index/index'
     };
   },
 
-  onShareTimeline: function () {
-    return {
-      title: 'Dawn Vision - 穿越嘈杂，洞见留声'
-    };
+  onShareTimeline: function() {
+    return { title: this.data.i18n.share_default };
   }
 });

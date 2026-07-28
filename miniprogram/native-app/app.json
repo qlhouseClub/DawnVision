@@ -7,36 +7,11 @@
     "pages/article/article"
   ],
   "window": {
-    "navigationStyle": "custom",
     "navigationBarBackgroundColor": "#002FA7",
     "navigationBarTitleText": "Dawn Vision",
     "navigationBarTextStyle": "white",
     "backgroundColor": "#ffffff",
     "backgroundTextStyle": "light"
-  },
-  "tabBar": {
-    "color": "#999999",
-    "selectedColor": "#002FA7",
-    "backgroundColor": "#ffffff",
-    "borderStyle": "white",
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "首页"
-      },
-      {
-        "pagePath": "pages/articles/articles",
-        "text": "文章"
-      },
-      {
-        "pagePath": "pages/cao/cao",
-        "text": "槽点"
-      },
-      {
-        "pagePath": "pages/about/about",
-        "text": "关于"
-      }
-    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",

@@ -1,62 +1,68 @@
 <!--pages/cao/cao.wxml-->
 <view class="cao-page">
-  <!-- 顶部品牌头（深色吸顶） -->
-  <view class="brand-header brand-header--dark">
-    <view class="brand-header__inner">
-      <view class="brand-header__logo">
-        <text class="brand-header__name">DAWN VISION</text>
-        <text class="brand-header__tagline">穿越嘈杂，洞见留声</text>
+  <!-- 导航 -->
+  <dv-nav variant="inner" active="cao"></dv-nav>
+
+  <!-- Hero（克莱因蓝全宽） -->
+  <view class="cao-hero">
+    <view class="cao-hero-blobs">
+      <view class="cao-hero-blob cao-hero-blob-1"></view>
+      <view class="cao-hero-blob cao-hero-blob-2"></view>
+    </view>
+    <view class="cao-hero-inner">
+      <view class="cao-hero-title">
+        <text>Cao!</text>
+        <text class="cao-hero-title-sub">{{i18n.section_cao}}</text>
+      </view>
+      <view class="cao-hero-subtitle">
+        <text>{{i18n.cao_intro}}</text>
+      </view>
+      <view class="cao-hero-subtitle-en" wx:if="{{lang === 'en'}}">
+        <text>A little rant a day keeps the sanity away.</text>
       </view>
     </view>
-    <view class="brand-header__divider"></view>
   </view>
 
-  <!-- 占位，避免内容被吸顶头遮挡 -->
-  <view class="header-placeholder"></view>
-
-  <!-- 槽点专栏描述 -->
-  <view class="cao-intro">
-    <text class="cao-intro__label">CAO! 槽点!</text>
-    <text class="cao-intro__text">科技圈的那些糟心事，我们一起吐槽。</text>
-  </view>
-
-  <!-- 文章列表 -->
-  <view class="cao-list">
-    <!-- 加载中 -->
-    <view class="loading-wrap" wx:if="{{loading}}">
-      <text class="loading-text">Loading…</text>
-    </view>
-
-    <!-- 列表 -->
-    <block wx:if="{{!loading && caoList.length > 0}}">
-      <view class="cao-card"
-            wx:for="{{caoList}}"
-            wx:key="index"
-            wx:for-item="item"
-            bindtap="goToArticle"
-            data-issue="{{item.issue.number}}"
-            data-slug="{{item.cao.slug}}">
-        <view class="cao-card__tag">CAO! 槽点!</view>
-        <view class="cao-card__issue">
-          <text class="cao-card__issue-num">ISSUE {{item.issue.number}}</text>
-          <text class="cao-card__issue-dot">·</text>
-          <text class="cao-card__issue-date">{{item.issue.date_display || item.issue.date}}</text>
-        </view>
-        <view class="cao-card__title">
-          <text>{{item.cao.title}}</text>
-        </view>
-        <view class="cao-card__deck">
-          <text>{{item.cao.deck}}</text>
-        </view>
+  <!-- 列表区（白色背景） -->
+  <view class="cao-body">
+    <view class="cao-list">
+      <!-- 加载中 -->
+      <view class="loading-wrap" wx:if="{{loading}}">
+        <text class="loading-text">{{i18n.status_loading}}</text>
       </view>
-    </block>
 
-    <!-- 空状态 -->
-    <view class="empty-wrap" wx:if="{{!loading && caoList.length === 0}}">
-      <text class="empty-text">暂无槽点内容</text>
+      <!-- 列表 -->
+      <block wx:if="{{!loading && caoList.length > 0}}">
+        <view
+          class="cao-item"
+          wx:for="{{caoList}}"
+          wx:key="slug"
+          bindtap="goToArticle"
+          data-issue="{{item.issue.number}}"
+          data-slug="{{item.slug}}">
+          <view class="cao-item__meta">
+            <text class="cao-item__num">ISSUE {{item.issue.number}}</text>
+            <text class="cao-item__dot">·</text>
+            <text class="cao-item__date">{{item.issue.date_display || item.issue.date}}</text>
+          </view>
+          <view class="cao-item__title">
+            <text>{{item.title}}</text>
+          </view>
+          <view class="cao-item__deck">
+            <text>{{item.deck}}</text>
+          </view>
+        </view>
+      </block>
+
+      <!-- 空状态 -->
+      <view class="empty-wrap" wx:if="{{!loading && caoList.length === 0}}">
+        <text class="empty-text">{{i18n.status_emptyCao}}</text>
+      </view>
     </view>
   </view>
 
-  <!-- 底部留白 -->
   <view class="bottom-space"></view>
+
+  <search-modal visible="{{searchVisible}}" bind:close="onSearchClose"></search-modal>
+  <lang-switch bind:change="onLangChange"></lang-switch>
 </view>

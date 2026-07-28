@@ -1,38 +1,18 @@
 <!--pages/article/article.wxml-->
 <view class="page">
 
-  <!-- ============================================
-       顶部品牌头（透明吸顶，叠加在 Hero 上）
-       左侧返回按钮：圆形白底蓝箭头
-       中间品牌名居中
-       ============================================ -->
-  <view class="brand-header">
-    <view class="brand-header__inner">
-      <!-- 返回按钮 -->
-      <view class="brand-header__back" bindtap="goBack">
-        <text class="brand-header__back-icon">←</text>
-      </view>
-      <!-- 品牌名 -->
-      <view class="brand-header__logo">
-        <text class="brand-header__name">DAWN VISION</text>
-      </view>
-      <!-- 右侧占位，保持居中 -->
-      <view class="brand-header__right"></view>
-    </view>
-  </view>
-
   <!-- 加载中 -->
   <view class="loading-wrap" wx:if="{{loading}}">
-    <text class="loading-text">Loading…</text>
+    <text class="loading-text">{{i18n.status_loading}}</text>
   </view>
 
   <!-- 文章内容 -->
   <block wx:if="{{!loading && article}}">
 
-    <!-- ============================================
-         1. 克莱因蓝 Hero 区（带光斑背景，全宽）
-         ============================================ -->
+    <!-- 1. 克莱因蓝 Hero 区 -->
     <view class="hero">
+      <dv-nav variant="home" active=""></dv-nav>
+
       <!-- 背景光斑 -->
       <view class="hero-blobs">
         <view class="hero-blob hero-blob-1"></view>
@@ -41,87 +21,92 @@
       </view>
 
       <view class="hero-content">
-        <!-- 分类标签（9px 大写 白色半透明 字间距 5px） -->
-        <view class="hero-category" wx:if="{{article.category}}">
+        <!-- 分类标签（视觉隐藏） -->
+        <view class="hero-category sr-only" wx:if="{{article.category}}">
           <text class="hero-category-text">{{article.category}}</text>
         </view>
 
-        <!-- 大标题（900字重，斜体，白色，紧缩字间距 -0.3px） -->
+        <!-- 大标题 -->
         <view class="hero-title">
           <text>{{article.title}}</text>
         </view>
 
-        <!-- Deck（斜体，75%透明白色） -->
+        <!-- Deck -->
         <view class="hero-deck" wx:if="{{article.deck}}">
           <text>{{article.deck}}</text>
         </view>
 
-        <!-- Meta 信息（10px 大写 白色 50% 透明度 字间距 2px） -->
+        <!-- Meta 信息 -->
         <view class="hero-meta">
           <text class="hero-meta-item">ISSUE {{issueNumberDisplay}}</text>
           <text class="hero-meta-dot">·</text>
-          <text class="hero-meta-item">{{article.read_time}}</text>
+          <text class="hero-meta-item">{{article.readTime}}</text>
         </view>
       </view>
     </view>
 
-    <!-- ============================================
-         2. 正文区域（白色背景）
-         ============================================ -->
+    <!-- 2. 正文区域 -->
     <view class="body-section">
       <view class="article-body">
         <rich-text nodes="{{processedHtml}}"></rich-text>
       </view>
     </view>
 
-    <!-- ============================================
-         3. Pull Quote 引用卡片
-         ============================================ -->
-    <view class="pull-quote-section" wx:if="{{article.pull_quote && article.pull_quote.text}}">
+    <!-- 3. Pull Quote 引用卡片 -->
+    <view class="pull-quote-section" wx:if="{{article.pullQuote && article.pullQuote.text}}">
       <view class="pull-quote-card">
         <view class="pull-quote-mark">"</view>
-        <view class="pull-quote-text">{{article.pull_quote.text}}</view>
-        <view class="pull-quote-attr" wx:if="{{article.pull_quote.attr}}">— {{article.pull_quote.attr}}</view>
+        <view class="pull-quote-text">{{article.pullQuote.text}}</view>
+        <view class="pull-quote-attr" wx:if="{{article.pullQuote.attr}}">- {{article.pullQuote.attr}}</view>
       </view>
     </view>
 
-    <!-- ============================================
-         4. 认知笔记区
-         ============================================ -->
-    <view class="cognitive-section" wx:if="{{article.cognitive_notes}}">
+    <!-- 4. 认知笔记区 -->
+    <view class="cognitive-section" wx:if="{{article.cognitiveNotes}}">
       <view class="cognitive-card">
         <view class="cognitive-label">
           <view class="cognitive-label-line"></view>
-          <text class="cognitive-label-text">COGNITIVE NOTES · 认知笔记</text>
+          <text class="cognitive-label-text">{{i18n.article_cognitive}}</text>
           <view class="cognitive-label-line"></view>
         </view>
         <view class="cognitive-content">
-          <text>{{article.cognitive_notes}}</text>
+          <text>{{article.cognitiveNotes}}</text>
         </view>
       </view>
     </view>
 
-    <!-- ============================================
-         5. 来源说明区
-         ============================================ -->
-    <view class="source-section" wx:if="{{article.source_summary}}">
+    <!-- 5. 来源说明区 -->
+    <view class="source-section" wx:if="{{article.sourceSummary}}">
       <view class="source-card">
         <view class="source-label">
-          <text class="source-label-text">ABOUT THIS ARTICLE · 关于本文</text>
+          <text class="source-label-text">{{i18n.article_about}}</text>
         </view>
         <view class="source-content">
-          <text>{{article.source_summary}}</text>
+          <text>{{article.sourceSummary}}</text>
         </view>
       </view>
     </view>
 
-    <!-- ============================================
-         6. 相关推荐区（同期其他文章列表）
-         ============================================ -->
+    <!-- 6. 文章来源链接 -->
+    <view class="source-section" wx:if="{{article.sources.length > 0}}">
+      <view class="source-card">
+        <view class="source-label">
+          <text class="source-label-text">SOURCES · 来源</text>
+        </view>
+        <view class="source-list">
+          <view class="source-item" wx:for="{{article.sources}}" wx:key="index" wx:for-item="src">
+            <text class="source-item-text">{{src.text}}</text>
+            <text class="source-item-url" wx:if="{{src.url}}">{{src.url}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 7. 相关推荐区 -->
     <view class="related-section" wx:if="{{relatedArticles.length > 0}}">
       <view class="related-header">
         <view class="related-label-line"></view>
-        <text class="related-label">MORE FROM THIS ISSUE · 同期其他文章</text>
+        <text class="related-label">{{i18n.article_related}}</text>
         <view class="related-label-line"></view>
       </view>
 
@@ -135,18 +120,16 @@
           <view class="related-item-title">{{item.title}}</view>
           <view class="related-item-deck" wx:if="{{item.deck}}">{{item.deck}}</view>
           <view class="related-item-arrow">
-            <text>→</text>
+            <text>-></text>
           </view>
         </view>
       </view>
     </view>
 
-    <!-- ============================================
-         7. 底部克莱因蓝品牌块
-         ============================================ -->
+    <!-- 8. 底部克莱因蓝品牌块 -->
     <view class="site-footer">
-      <view class="footer-brand">DAWN VISION</view>
-      <view class="footer-tagline">穿越嘈杂，洞见留声</view>
+      <view class="footer-brand">{{i18n.footer_brand}}</view>
+      <view class="footer-tagline">{{i18n.footer_tagline}}</view>
       <view class="footer-divider"></view>
       <view class="footer-issue">ISSUE {{issueNumberDisplay}}</view>
     </view>
@@ -155,7 +138,12 @@
 
   <!-- 空状态/错误 -->
   <view class="empty-wrap" wx:if="{{!loading && !article}}">
-    <text class="empty-text">{{errorMsg || '文章不存在'}}</text>
+    <text class="empty-text">{{errorMsg || i18n.status_articleMissing}}</text>
   </view>
 
+  <!-- 搜索模态框 -->
+  <search-modal visible="{{searchVisible}}" bind:close="onSearchClose"></search-modal>
+
+  <!-- 语言切换 -->
+  <lang-switch bind:change="onLangChange"></lang-switch>
 </view>

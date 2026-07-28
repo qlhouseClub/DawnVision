@@ -1,116 +1,61 @@
 <!--pages/about/about.wxml-->
 <view class="about-page">
-  <!-- 顶部品牌头（白色磨砂玻璃吸顶） -->
-  <view class="brand-header brand-header--white">
-    <view class="brand-header__inner">
-      <view class="brand-header__logo">
-        <text class="brand-header__name">DAWN VISION</text>
-        <text class="brand-header__tagline">穿越嘈杂，洞见留声</text>
-      </view>
-    </view>
-    <view class="brand-header__divider"></view>
-  </view>
+  <!-- 导航 -->
+  <dv-nav variant="inner" active="about"></dv-nav>
 
-  <!-- 占位，避免内容被吸顶头遮挡 -->
-  <view class="header-placeholder"></view>
-
-  <!-- 内容区 -->
+  <!-- 内容区（居中） -->
   <view class="about-content">
+    <!-- 标题 -->
+    <view class="about-title">
+      <text>Dawn Vision</text>
+    </view>
 
-    <!-- 品牌介绍区 -->
-    <view class="intro-section">
-      <view class="intro-label">
-        <text>ABOUT · 关于</text>
+    <!-- Eyebrow -->
+    <view class="about-eyebrow">
+      <text>{{lang === 'en' ? 'About the Author' : 'About the Author'}}</text>
+    </view>
+
+    <!-- 标签列表 -->
+    <view class="about-tags">
+      <text class="about-tag">{{lang === 'en' ? 'Aquarius, free-spirited designer' : '水瓶座、天马行空的设计师'}}</text>
+      <text class="about-tag">INFP (MBTI)、MUM (SBTI)</text>
+      <text class="about-tag">{{lang === 'en' ? 'Self-proclaimed psychology expert with quick apologies but zero compliance' : '认错超快叛逆不改气人天赋高超的心理砖家'}}</text>
+      <text class="about-tag">{{lang === 'en' ? 'Opinionated, lightly-educated writer with a unique perspective' : '视角独特且薄学的不才写手'}}</text>
+      <text class="about-tag">{{lang === 'en' ? 'Tech noob riding the AI wave' : '仗势AI冲浪的技术小白'}}</text>
+    </view>
+
+    <!-- 蓝色分割线 -->
+    <view class="about-divider"></view>
+
+    <!-- 描述段落 -->
+    <view class="about-desc">
+      <text>{{lang === 'en' ? 'Dawn Vision is a daily AI insight publication; tracking cutting-edge AI topics every day.' : 'Dawn Vision 是一份 AI 深度观察日刊；关注每天 AI 相关的前沿话题。'}}</text>
+    </view>
+
+    <!-- 联系方式 -->
+    <view class="about-contact">
+      <view class="about-contact-item">
+        <text class="about-contact-value">DawnVision88</text>
+        <text class="about-contact-label">WeChat</text>
       </view>
-      <view class="intro-title">
-        <text>穿越嘈杂，洞见留声。</text>
-      </view>
-      <view class="intro-body">
-        <text class="intro-paragraph">Dawn Vision 是一份聚焦科技与 AI 产业的深度周刊。我们从海量信息中提炼最有价值的信号，用结构化的分析和独立的判断，帮助你看清行业的真实走向。</text>
-        <text class="intro-paragraph">在这里，没有标题党，没有情绪宣泄，只有冷静的观察、扎实的数据和清晰的思考框架。</text>
+      <view class="about-contact-item" bindtap="copyPhone">
+        <text class="about-contact-value">18622454349</text>
+        <text class="about-contact-label">Phone</text>
       </view>
     </view>
 
-    <!-- 分割线 -->
-    <view class="section-divider"></view>
-
-    <!-- 内容架构区 -->
-    <view class="structure-section">
-      <view class="section-label">
-        <text>CONTENT · 内容架构</text>
+    <!-- 打赏码 -->
+    <view class="about-tipjar">
+      <text class="about-tipjar-label">Tip Jar</text>
+      <view class="about-qr-wrap">
+        <image class="about-qr" src="/images/reward-qr.webp" mode="aspectFit" lazy-load="{{true}}" />
       </view>
-      <view class="structure-list">
-        <view class="structure-item">
-          <view class="structure-item__dot"></view>
-          <view class="structure-item__content">
-            <text class="structure-item__title">封面深度</text>
-            <text class="structure-item__desc">每期一篇深度长文，聚焦最重要的行业议题。</text>
-          </view>
-        </view>
-        <view class="structure-item">
-          <view class="structure-item__dot"></view>
-          <view class="structure-item__content">
-            <text class="structure-item__title">产业简报</text>
-            <text class="structure-item__desc">精选多条关键动态，简明扼要呈现核心信息。</text>
-          </view>
-        </view>
-        <view class="structure-item">
-          <view class="structure-item__dot"></view>
-          <view class="structure-item__content">
-            <text class="structure-item__title">槽点专栏</text>
-            <text class="structure-item__desc">轻松吐槽科技圈那些荒诞的人和事。</text>
-          </view>
-        </view>
-      </view>
-    </view>
-
-    <!-- 分割线 -->
-    <view class="section-divider"></view>
-
-    <!-- 更新频率区 -->
-    <view class="frequency-section">
-      <view class="section-label">
-        <text>FREQUENCY · 更新频率</text>
-      </view>
-      <view class="frequency-body">
-        <text class="frequency-text">周刊形式，每周发布一期。</text>
-        <text class="frequency-sub">重大事件发生时，可能会加更号外。</text>
-      </view>
-    </view>
-
-    <!-- 分割线 -->
-    <view class="section-divider"></view>
-
-    <!-- 关注我们区 -->
-    <view class="contact-section">
-      <view class="section-label">
-        <text>FOLLOW · 关注我们</text>
-      </view>
-      <view class="contact-list">
-        <view class="contact-item" bindtap="copyWebsite">
-          <view class="contact-item__left">
-            <text class="contact-item__label">官方网站</text>
-            <text class="contact-item__value">dawnvision.cn</text>
-          </view>
-          <text class="contact-item__arrow">→</text>
-        </view>
-        <view class="contact-item" bindtap="copyRss">
-          <view class="contact-item__left">
-            <text class="contact-item__label">RSS 订阅</text>
-            <text class="contact-item__value">dawnvision.cn/rss.xml</text>
-          </view>
-          <text class="contact-item__arrow">→</text>
-        </view>
-      </view>
-    </view>
-
-  </view>
-
-  <!-- 底部克莱因蓝品牌块 -->
-  <view class="bottom-brand">
-    <view class="bottom-brand-inner">
-      <text class="bottom-brand-name">DAWN VISION</text>
-      <text class="bottom-brand-tag">穿越嘈杂，洞见留声</text>
+      <text class="about-tipjar-quote">{{lang === 'en' ? '"Thanks for the bubble tea!"' : '"谢谢老板请我喝奶茶"'}}</text>
     </view>
   </view>
+
+  <view class="bottom-space"></view>
+
+  <search-modal visible="{{searchVisible}}" bind:close="onSearchClose"></search-modal>
+  <lang-switch bind:change="onLangChange"></lang-switch>
 </view>

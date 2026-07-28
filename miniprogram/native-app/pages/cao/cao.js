@@ -1,140 +1,98 @@
 // pages/cao/cao.js
-const api = require('../../utils/api.js');
-const format = require('../../utils/format.js');
+// 槽点专栏列表页
+var api = require('../../utils/api.js');
+var i18nContent = require('../../utils/i18n-content.js');
+var i18nUtil = require('../../utils/i18n.js');
+
+// i18n.js 的 getMessages() 返回的对象键带点（如 'section.cao'），
+// WXML 无法通过 {{i18n.section.cao}} 访问（点号会被解析为嵌套属性）。
+// 这里把点分键拍平为下划线键（'section_cao'），使 WXML 可用 {{i18n.section_cao}} 直接取值。
+function flattenI18n(messages) {
+  var result = {};
+  if (!messages) return result;
+  Object.keys(messages).forEach(function (key) {
+    result[key.replace(/\./g, '_')] = messages[key];
+  });
+  return result;
+}
 
 Page({
   data: {
     loading: true,
+    // 接口原始列表，语言切换时用它重新提取，无需重新请求
+    rawCaoList: [],
+    // 当前语言下的展示列表（由 extractCaoList 产出）
     caoList: [],
-    error: ''
+    error: '',
+    searchVisible: false,
+    lang: 'zh',
+    i18n: {}
   },
 
-  onLoad: function (options) {
+  onLoad: function () {
+    var app = getApp();
+    var lang = (app && app.globalData && app.globalData.lang) || 'zh';
+    this.setData({
+      lang: lang,
+      i18n: flattenI18n(i18nUtil.getMessages(lang))
+    });
     this.loadCaoList();
   },
 
   onShow: function () {
-    if (this.data.caoList.length === 0) {
+    // 仅在未加载且无数据时补拉，避免与 onLoad 重复请求
+    if (!this.data.loading && this.data.rawCaoList.length === 0) {
       this.loadCaoList();
     }
   },
 
   // 下拉刷新
   onPullDownRefresh: function () {
-    this.loadCaoList(true).then(() => {
+    var self = this;
+    this.loadCaoList(true).then(function () {
       wx.stopPullDownRefresh();
-    }).catch(() => {
+    }).catch(function () {
       wx.stopPullDownRefresh();
     });
   },
 
   // 加载槽点文章列表
   loadCaoList: function (forceRefresh) {
+    var self = this;
     this.setData({ loading: true, error: '' });
 
-    // 先获取期数列表
-    return api.getIssues(forceRefresh).then(issues => {
-      if (!issues || issues.length === 0) {
-        this.setData({
-          loading: false,
-          caoList: []
-        });
-        return;
-      }
-
-      // 从期数列表中提取有 cao 的期数
-      const caoList = [];
-      const issuesWithCao = [];
-
-      issues.forEach(issue => {
-        const issueInfo = issue.issue || {};
-        const caoData = issue.cao;
-        
-        if (caoData) {
-          // 列表里已经有 cao 信息
-          caoList.push({
-            issue: {
-              number: issueInfo.number || issue.number,
-              date: issueInfo.date || issue.date,
-              date_display: issueInfo.date_display || issue.date_display
-            },
-            cao: caoData
-          });
-        } else {
-          // 需要请求详情获取 cao
-          const issueNum = issueInfo.number || issue.number;
-          if (issueNum) {
-            issuesWithCao.push({
-              number: issueNum,
-              date: issueInfo.date || issue.date,
-              date_display: issueInfo.date_display || issue.date_display
-            });
-          }
-        }
-      });
-
-      // 如果列表里已经有足够的 cao 数据，直接显示
-      if (caoList.length > 0) {
-        this.setData({
-          loading: false,
-          caoList: caoList
-        });
-        return;
-      }
-
-      // 否则需要逐期请求获取 cao（这里只请求前10期，避免请求过多）
-      if (issuesWithCao.length > 0) {
-        this.loadCaoFromIssues(issuesWithCao.slice(0, 20));
-      } else {
-        this.setData({
-          loading: false,
-          caoList: []
-        });
-      }
-    }).catch(err => {
+    return api.getCaoList(forceRefresh).then(function (list) {
+      var rawList = list || [];
+      self.setData({ rawCaoList: rawList });
+      self.renderCaoList();
+    }).catch(function (err) {
       console.error('加载槽点列表失败', err);
-      this.setData({
+      self.setData({
         loading: false,
-        error: err.message || '加载失败',
-        caoList: []
+        rawCaoList: [],
+        caoList: [],
+        error: self.data.i18n.status_error
+      });
+      wx.showToast({
+        title: self.data.i18n.toast_loadFail,
+        icon: 'none'
       });
     });
   },
 
-  // 从各期中提取 cao 文章
-  loadCaoFromIssues: function (issues) {
-    const promises = issues.map(issueInfo => {
-      return api.getIssue(issueInfo.number).then(issueData => {
-        if (issueData && issueData.cao) {
-          return {
-            issue: {
-              number: issueInfo.number,
-              date: issueInfo.date,
-              date_display: issueInfo.date_display
-            },
-            cao: issueData.cao
-          };
-        }
-        return null;
-      }).catch(() => null);
-    });
-
-    Promise.all(promises).then(results => {
-      const caoList = results.filter(item => item !== null);
-      this.setData({
-        loading: false,
-        caoList: caoList
-      });
-    }).catch(err => {
-      console.error('加载 cao 详情失败', err);
-      this.setData({ loading: false });
+  // 按当前语言提取并渲染列表
+  renderCaoList: function () {
+    var caoList = i18nContent.extractCaoList(this.data.rawCaoList, this.data.lang);
+    this.setData({
+      loading: false,
+      caoList: caoList
     });
   },
 
   // 跳转到文章详情
   goToArticle: function (e) {
-    const issueNum = e.currentTarget.dataset.issue;
-    const slug = e.currentTarget.dataset.slug;
+    var issueNum = e.currentTarget.dataset.issue;
+    var slug = e.currentTarget.dataset.slug;
 
     if (issueNum && slug) {
       wx.navigateTo({
@@ -143,11 +101,31 @@ Page({
     }
   },
 
-  // 分享
+  // 关闭搜索
+  onSearchClose: function () {
+    this.setData({ searchVisible: false });
+  },
+
+  // 语言切换：更新语言后用新语言重新提取内容（无需重新请求接口）
+  onLangChange: function (e) {
+    var lang = e.detail.lang;
+    this.setData({
+      lang: lang,
+      i18n: flattenI18n(i18nUtil.getMessages(lang))
+    });
+    this.renderCaoList();
+  },
+
+  // 分享给朋友
   onShareAppMessage: function () {
     return {
-      title: 'Dawn Vision 槽点专栏',
+      title: this.data.i18n.share_cao,
       path: '/pages/cao/cao'
     };
+  },
+
+  // 分享到朋友圈
+  onShareTimeline: function () {
+    return { title: this.data.i18n.share_cao };
   }
 });

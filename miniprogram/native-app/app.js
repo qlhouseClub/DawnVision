@@ -4,10 +4,20 @@ App({
     baseUrl: 'https://www.dawnvision.cn/api',
     brandColor: '#002FA7',
     issues: [],
-    latestIssue: null
+    latestIssue: null,
+    lang: 'zh',
+    searchVisible: false
   },
 
   onLaunch: function () {
+    // 读取语言设置
+    try {
+      const savedLang = wx.getStorageSync('dv_lang');
+      if (savedLang) {
+        this.globalData.lang = savedLang;
+      }
+    } catch (e) {}
+
     // 启动时尝试从缓存加载期数列表
     try {
       const cachedIssues = wx.getStorageSync('issues_list');
@@ -17,6 +27,28 @@ App({
       }
     } catch (e) {
       console.warn('读取缓存失败', e);
+    }
+  },
+
+  // 打开搜索
+  openSearch: function () {
+    const pages = getCurrentPages();
+    const currentPage = pages[pages.length - 1];
+    if (currentPage) {
+      if (typeof currentPage.setData === 'function') {
+        currentPage.setData({ searchVisible: true });
+      }
+    }
+  },
+
+  // 关闭搜索
+  closeSearch: function () {
+    const pages = getCurrentPages();
+    const currentPage = pages[pages.length - 1];
+    if (currentPage) {
+      if (typeof currentPage.setData === 'function') {
+        currentPage.setData({ searchVisible: false });
+      }
     }
   },
 

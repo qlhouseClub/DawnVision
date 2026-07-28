@@ -1,13 +1,24 @@
 // pages/about/about.js
+// 关于页：严格复刻网站的作者展示页
+var i18nUtil = require('../../utils/i18n.js');
 
 Page({
   data: {
-    version: '1.0.0'
+    version: '1.0.0',
+    searchVisible: false,
+    lang: 'zh',
+    i18n: {}
   },
 
-  onLoad: function (options) {
-    // 获取版本信息
-    const accountInfo = wx.getAccountInfoSync ? wx.getAccountInfoSync() : null;
+  onLoad: function() {
+    var app = getApp();
+    var lang = (app && app.globalData && app.globalData.lang) || 'zh';
+    this.setData({
+      lang: lang,
+      i18n: i18nUtil.getMessages(lang)
+    });
+
+    var accountInfo = wx.getAccountInfoSync ? wx.getAccountInfoSync() : null;
     if (accountInfo && accountInfo.miniProgram) {
       this.setData({
         version: accountInfo.miniProgram.version || '1.0.0'
@@ -15,37 +26,35 @@ Page({
     }
   },
 
-  // 复制网站地址
-  copyWebsite: function () {
+  copyPhone: function() {
     wx.setClipboardData({
-      data: 'https://www.dawnvision.cn',
-      success: function () {
-        wx.showToast({
-          title: '网址已复制',
-          icon: 'success'
-        });
+      data: '18622454349',
+      success: function() {
+        wx.showToast({ title: '已复制', icon: 'success' });
       }
     });
   },
 
-  // 复制 RSS 地址
-  copyRss: function () {
-    wx.setClipboardData({
-      data: 'https://www.dawnvision.cn/rss.xml',
-      success: function () {
-        wx.showToast({
-          title: 'RSS 地址已复制',
-          icon: 'success'
-        });
-      }
+  onSearchClose: function() {
+    this.setData({ searchVisible: false });
+  },
+
+  onLangChange: function(e) {
+    var lang = e.detail.lang;
+    this.setData({
+      lang: lang,
+      i18n: i18nUtil.getMessages(lang)
     });
   },
 
-  // 分享
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
     return {
-      title: 'Dawn Vision - 穿越嘈杂，洞见留声',
+      title: 'Dawn Vision',
       path: '/pages/about/about'
     };
+  },
+
+  onShareTimeline: function() {
+    return { title: 'Dawn Vision' };
   }
 });

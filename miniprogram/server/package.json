@@ -1,0 +1,17 @@
+{
+  "name": "dawnvision-sync",
+  "version": "1.0.0",
+  "description": "Dawn Vision content sync service - fetches website JSON into MySQL",
+  "main": "sync.js",
+  "scripts": {
+    "sync": "node sync.js",
+    "api": "node api-server.js",
+    "start": "node api-server.js"
+  },
+  "dependencies": {
+    "mysql2": "^3.11.0",
+    "express": "^4.21.0",
+    "cors": "^2.8.5",
+    "node-fetch": "^2.7.0"
+  }
+}

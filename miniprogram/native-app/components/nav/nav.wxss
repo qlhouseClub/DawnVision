@@ -1,0 +1,167 @@
+/* components/nav/nav.wxss - 自定义导航组件（仅4链接+搜索）*/
+
+/* ============================================
+   导航容器
+   ============================================ */
+.dv-nav {
+  width: 100%;
+  z-index: 100;
+}
+
+/* Home 变体 - 透明叠在克莱因蓝 Hero 上 */
+.dv-nav--home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+
+/* Inner 变体 - 白色磨砂玻璃吸顶 */
+.dv-nav--inner {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(32rpx) saturate(1.5);
+  -webkit-backdrop-filter: blur(32rpx) saturate(1.5);
+  box-shadow: 0 1rpx 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Cao 变体 - 深色磨砂玻璃吸顶 */
+.dv-nav--cao {
+  position: sticky;
+  top: 0;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(32rpx) saturate(1.5);
+  -webkit-backdrop-filter: blur(32rpx) saturate(1.5);
+  box-shadow: 0 1rpx 0 rgba(255, 255, 255, 0.06);
+}
+
+/* ============================================
+   导航内部布局 - flex（4链接 + 搜索）
+   ============================================ */
+.dv-nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 32rpx;
+}
+
+/* ============================================
+   链接组
+   ============================================ */
+.dv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 36rpx;
+}
+
+/* 单个链接 */
+.dv-nav__link {
+  font-size: 22rpx;
+  font-weight: 700;
+  letter-spacing: 4rpx;
+  text-transform: uppercase;
+  font-family: 'Noto Serif SC', Georgia, 'Times New Roman', serif;
+  transition: color 0.15s ease;
+  position: relative;
+  padding-bottom: 6rpx;
+}
+
+/* 底部蓝线动画（active 状态） */
+.dv-nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3rpx;
+  background: #002FA7;
+  transition: width 0.2s ease;
+}
+
+.dv-nav__link--active::after {
+  width: 100%;
+}
+
+/* Home 变体链接颜色 */
+.dv-nav--home .dv-nav__link {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.dv-nav--home .dv-nav__link--active {
+  color: #ffffff;
+}
+
+.dv-nav--home .dv-nav__link--active::after {
+  background: #ffffff;
+}
+
+/* Inner 变体链接颜色 */
+.dv-nav--inner .dv-nav__link {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.dv-nav--inner .dv-nav__link--active {
+  color: #0a0a0a;
+}
+
+/* Cao 变体链接颜色 */
+.dv-nav--cao .dv-nav__link {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dv-nav--cao .dv-nav__link--active {
+  color: #ffffff;
+}
+
+.dv-nav--cao .dv-nav__link--active::after {
+  background: #ffffff;
+}
+
+/* ============================================
+   搜索按钮
+   ============================================ */
+.dv-nav__search {
+  width: 56rpx;
+  height: 56rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.dv-nav__search:active {
+  transform: scale(0.92);
+}
+
+.dv-nav__search-icon {
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+/* Home 变体搜索 */
+.dv-nav--home .dv-nav__search-icon {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.dv-nav--home .dv-nav__search:active .dv-nav__search-icon {
+  color: #ffffff;
+}
+
+/* Inner 变体搜索 */
+.dv-nav--inner .dv-nav__search-icon {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.dv-nav--inner .dv-nav__search:active .dv-nav__search-icon {
+  color: #002FA7;
+}
+
+/* Cao 变体搜索 */
+.dv-nav--cao .dv-nav__search-icon {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dv-nav--cao .dv-nav__search:active .dv-nav__search-icon {
+  color: #ffffff;
+}

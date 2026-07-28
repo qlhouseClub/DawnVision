@@ -1,17 +1,10 @@
 <!--pages/index/index.wxml-->
 <view class="home-page">
-  <!-- 顶部品牌头（透明，叠加在 Hero 上） -->
-  <view class="brand-header brand-header--transparent">
-    <view class="brand-header__inner">
-      <view class="brand-header__logo">
-        <text class="brand-header__name">DAWN VISION</text>
-        <text class="brand-header__tagline">穿越嘈杂，洞见留声</text>
-      </view>
-    </view>
-  </view>
-
   <!-- 全屏克莱因蓝 Hero -->
   <view class="hero">
+    <!-- 自定义导航（home 变体：透明叠在 Hero 上） -->
+    <dv-nav variant="home" active="home"></dv-nav>
+
     <!-- 背景光斑 -->
     <view class="blobs">
       <view class="blob blob-1"></view>
@@ -23,53 +16,53 @@
       <!-- 封面卡片（白色） -->
       <view class="teaser-card" wx:if="{{!loading && latestCover}}" bindtap="goToCoverArticle">
         <view class="teaser-label">
-          <text class="teaser-label-text">FOCUS · 焦点</text>
+          <text class="teaser-label-text">{{i18n.section_focus}}</text>
         </view>
         <view class="teaser-title">
-          <text>{{latestCover.title_short || latestCover.title}}</text>
+          <text>{{latestCover.title}}</text>
         </view>
         <view class="teaser-deck">
           <text>{{latestCover.deck}}</text>
         </view>
         <view class="teaser-btn">
-          <text class="teaser-btn-text">READ MORE</text>
-          <text class="teaser-btn-arrow">→</text>
+          <text class="teaser-btn-text">{{i18n.btn_readMore}}</text>
+          <text class="teaser-btn-arrow">-></text>
         </view>
       </view>
 
       <!-- 加载中 -->
       <view class="teaser-card teaser-loading" wx:if="{{loading}}">
         <view class="teaser-label">
-          <text class="teaser-label-text">FOCUS · 焦点</text>
+          <text class="teaser-label-text">{{i18n.section_focus}}</text>
         </view>
         <view class="teaser-title teaser-title--skeleton"></view>
         <view class="teaser-deck teaser-deck--skeleton"></view>
         <view class="teaser-btn">
-          <text class="teaser-btn-text">LOADING...</text>
+          <text class="teaser-btn-text">{{i18n.btn_loading}}</text>
         </view>
       </view>
 
       <!-- 错误/空状态 -->
       <view class="teaser-card" wx:if="{{!loading && !latestCover}}">
         <view class="teaser-label">
-          <text class="teaser-label-text">FOCUS · 焦点</text>
+          <text class="teaser-label-text">{{i18n.section_focus}}</text>
         </view>
         <view class="teaser-empty">
-          <text>{{error || '暂无内容'}}</text>
+          <text>{{error || i18n.status_empty}}</text>
         </view>
       </view>
 
       <!-- 主标语 -->
       <view class="main-title">
-        <text class="main-title-line">THROUGH THE CLAMOR,</text>
-        <text class="main-title-line">INSIGHT ECHOES.</text>
-        <text class="main-title-line">READ.</text>
+        <text class="main-title-line">{{i18n.tagline_en1}}</text>
+        <text class="main-title-line">{{i18n.tagline_en2}}</text>
+        <text class="main-title-line">{{i18n.tagline_en3}}</text>
       </view>
 
-      <!-- 副标语（中文） -->
+      <!-- 副标语 -->
       <view class="main-tagline">
-        <text class="tagline-line">穿越嘈杂，</text>
-        <text class="tagline-line">洞见留声。</text>
+        <text class="tagline-line">{{i18n.tagline_zh1}}</text>
+        <text class="tagline-line">{{i18n.tagline_zh2}}</text>
       </view>
     </view>
   </view>
@@ -86,11 +79,11 @@
       <!-- 进入期刊库 -->
       <view class="cta-section">
         <view class="cta-btn" bindtap="goToArticles">
-          <text class="cta-btn-text">BROWSE ALL ISSUES</text>
-          <text class="cta-btn-arrow">→</text>
+          <text class="cta-btn-text">{{i18n.btn_browseAll}}</text>
+          <text class="cta-btn-arrow">-></text>
         </view>
         <view class="cta-sub">
-          <text>浏览全部期刊</text>
+          <text>{{i18n.btn_browseAllSub}}</text>
         </view>
       </view>
     </view>
@@ -99,8 +92,14 @@
   <!-- 底部克莱因蓝块 -->
   <view class="bottom-brand">
     <view class="bottom-brand-inner">
-      <text class="bottom-brand-name">DAWN VISION</text>
-      <text class="bottom-brand-tag">穿越嘈杂，洞见留声</text>
+      <text class="bottom-brand-name">{{i18n.footer_brand}}</text>
+      <text class="bottom-brand-tag">{{i18n.footer_tagline}}</text>
     </view>
   </view>
+
+  <!-- 搜索模态框 -->
+  <search-modal visible="{{searchVisible}}" bind:close="onSearchClose"></search-modal>
+
+  <!-- 语言切换 -->
+  <lang-switch bind:change="onLangChange"></lang-switch>
 </view>

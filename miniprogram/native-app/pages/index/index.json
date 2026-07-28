@@ -1,5 +1,9 @@
 {
   "enablePullDownRefresh": true,
   "backgroundTextStyle": "light",
-  "usingComponents": {}
+  "usingComponents": {
+    "dv-nav": "/components/nav/nav",
+    "search-modal": "/components/search-modal/search-modal",
+    "lang-switch": "/components/lang-switch/lang-switch"
+  }
 }

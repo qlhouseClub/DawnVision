@@ -1,0 +1,25 @@
+<!--components/nav/nav.wxml - 自定义导航组件（仅4链接+搜索）-->
+<view class="dv-nav dv-nav--{{variant}}">
+  <view class="dv-nav__inner">
+    <!-- 四个导航链接 -->
+    <view class="dv-nav__links">
+      <view class="dv-nav__link {{active === 'home' ? 'dv-nav__link--active' : ''}}" bindtap="goPage" data-page="home">
+        <text>Home</text>
+      </view>
+      <view class="dv-nav__link {{active === 'articles' ? 'dv-nav__link--active' : ''}}" bindtap="goPage" data-page="articles">
+        <text>Articles</text>
+      </view>
+      <view class="dv-nav__link {{active === 'cao' ? 'dv-nav__link--active' : ''}}" bindtap="goPage" data-page="cao">
+        <text>Cao</text>
+      </view>
+      <view class="dv-nav__link {{active === 'about' ? 'dv-nav__link--active' : ''}}" bindtap="goPage" data-page="about">
+        <text>About</text>
+      </view>
+    </view>
+
+    <!-- 搜索按钮 -->
+    <view class="dv-nav__search" bindtap="onSearch">
+      <text class="dv-nav__search-icon">⌕</text>
+    </view>
+  </view>
+</view>

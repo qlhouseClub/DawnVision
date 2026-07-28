@@ -1,0 +1,74 @@
+<!--components/search-modal/search-modal.wxml-->
+<view class="search-overlay {{visible ? 'is-open' : ''}}" wx:if="{{visible}}" bindtap="onOverlayTap">
+  <view class="search-modal" catchtap="onModalTap">
+    <!-- 输入区 -->
+    <view class="search-modal__input-wrap">
+      <view class="search-modal__icon">
+        <text>⌕</text>
+      </view>
+      <input
+        class="search-modal__input"
+        placeholder="{{i18n.search_placeholder}}"
+        placeholder-class="search-modal__placeholder"
+        value="{{query}}"
+        bindinput="onInput"
+        confirm-type="search"
+        bindconfirm="onConfirm"
+        focus="{{visible}}"
+        adjust-position="{{true}}"
+      />
+      <view class="search-modal__close-hint" bindtap="close">
+        <text>ESC</text>
+      </view>
+    </view>
+
+    <!-- 结果区 -->
+    <scroll-view class="search-modal__results" scroll-y="{{true}}" wx:if="{{query.length > 0}}">
+      <!-- 加载中 -->
+      <view class="search-modal__loading" wx:if="{{searching}}">
+        <text>{{i18n.search_loading}}</text>
+      </view>
+
+      <!-- 无结果 -->
+      <view class="search-modal__empty" wx:if="{{!searching && results.length === 0}}">
+        <text>{{i18n.search_noResults}}</text>
+      </view>
+
+      <!-- 结果列表 -->
+      <block wx:if="{{!searching && results.length > 0}}">
+        <view
+          class="search-result"
+          wx:for="{{results}}"
+          wx:key="id"
+          wx:for-item="result"
+          wx:for-index="index"
+          bindtap="onResultTap"
+          data-index="{{index}}"
+        >
+          <view class="search-result__category">{{result.category}}</view>
+          <view class="search-result__title">{{result.title}}</view>
+          <view class="search-result__excerpt">{{result.excerpt}}</view>
+        </view>
+      </block>
+    </scroll-view>
+
+    <!-- 初始状态 -->
+    <view class="search-modal__results" wx:if="{{query.length === 0}}">
+      <view class="search-modal__empty">
+        <text>{{i18n.search_empty}}</text>
+      </view>
+    </view>
+
+    <!-- 底部 -->
+    <view class="search-modal__footer">
+      <view class="search-modal__footer-item">
+        <text class="search-modal__kbd">↵</text>
+        <text>{{i18n.search_footer_open}}</text>
+      </view>
+      <view class="search-modal__footer-item">
+        <text class="search-modal__kbd">⌕</text>
+        <text>{{i18n.search_footer_search}}</text>
+      </view>
+    </view>
+  </view>
+</view>
