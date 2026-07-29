@@ -13,17 +13,20 @@ Page({
     currentIssueData: null,
     issues: [],
     // 四级联动筛选
-    filterTree: [],           // 年 -> 月 -> 上/下半月 -> 期数
-    selectedYear: '',
-    selectedMonth: '',
-    selectedHalf: '',
-    selectedIssue: '',
+    filterTree: [],
+    yearOptions: [],
     monthOptions: [],
     halfOptions: [],
     issueOptions: [],
+    yearIndex: 0,
+    monthIndex: 0,
+    halfIndex: 0,
+    issueIndex: 0,
     searchVisible: false,
     lang: 'zh',
-    i18n: {}
+    i18n: {},
+    hasPrev: false,
+    hasNext: false
   },
 
   onLoad: function() {
@@ -73,10 +76,8 @@ Page({
       self._applyIssues();
       self._buildFilterTree();
 
-      // 默认加载最新一期
       if (rawIssues && rawIssues.length > 0) {
-        var latest = rawIssues[0];
-        var latestNum = latest.issue.number;
+        var latestNum = rawIssues[0].issue.number;
         return self.loadIssueDetail(latestNum);
       } else {
         self.setData({ loading: false });
@@ -87,7 +88,6 @@ Page({
     });
   },
 
-  // 从缓存提取期数列表
   _applyIssues: function() {
     var lang = this.data.lang;
     var issues = (this._rawIssues || []).map(function(item) {
@@ -96,7 +96,7 @@ Page({
     this.setData({ issues: issues });
   },
 
-  // 构建四级联动筛选树（年 -> 月 -> 上/下半月 -> 期数）
+  // 构建四级联动筛选树
   _buildFilterTree: function() {
     var rawIssues = this._rawIssues || [];
     if (rawIssues.length === 0) return;
@@ -120,7 +120,7 @@ Page({
       treeMap[year][month][half].push(num);
     });
 
-    // 转为数组结构
+    // 转为数组结构，降序排列（最新在前）
     var tree = Object.keys(treeMap).sort().reverse().map(function(year) {
       var months = Object.keys(treeMap[year]).sort().reverse().map(function(month) {
         var halves = Object.keys(treeMap[year][month]).sort().reverse().map(function(half) {
@@ -140,124 +140,134 @@ Page({
       return { year: year, months: months };
     });
 
-    // 默认选最新一期（tree[0] -> months[0] -> halves[0] -> issues[0]）
+    // 默认选最新一期：tree[0] -> months[0] -> halves[0] -> issues[0]
     var latestYear = tree[0];
     var latestMonth = latestYear.months[0];
     var latestHalf = latestMonth.halves[0];
-    var latestIssue = latestHalf.issues[0];
 
-    this.setData({
-      filterTree: tree,
-      selectedYear: latestYear.year,
-      monthOptions: latestYear.months.map(function(m) { return { value: m.month, label: m.label }; }),
-      selectedMonth: latestMonth.month,
-      halfOptions: latestMonth.halves.map(function(h) { return { value: h.half, label: h.label }; }),
-      selectedHalf: latestHalf.half,
-      issueOptions: latestHalf.issues.map(function(num) {
-        return { value: num, label: 'Issue ' + num };
-      }),
-      selectedIssue: latestIssue
-    });
-  },
-
-  // 年份切换
-  onYearChange: function(e) {
-    var year = e.detail.value;
-    var yearData = this.data.filterTree.find(function(y) { return y.year === year; });
-    if (!yearData) return;
-
-    var months = yearData.months.map(function(m) { return { value: m.month, label: m.label }; });
-    var firstMonth = months[0];
-    var monthData = yearData.months[0];
-    var halves = monthData.halves.map(function(h) { return { value: h.half, label: h.label }; });
-    var firstHalf = halves[0];
-    var issues = monthData.halves[0].issues.map(function(num) {
+    var yearOptions = tree.map(function(y) { return { value: y.year, label: y.year }; });
+    var monthOptions = latestYear.months.map(function(m) { return { value: m.month, label: m.label }; });
+    var halfOptions = latestMonth.halves.map(function(h) { return { value: h.half, label: h.label }; });
+    var issueOptions = latestHalf.issues.map(function(num) {
       return { value: num, label: 'Issue ' + num };
     });
 
     this.setData({
-      selectedYear: year,
-      selectedMonth: firstMonth.value,
-      monthOptions: months,
-      selectedHalf: firstHalf.value,
-      halfOptions: halves,
-      selectedIssue: issues[0] ? issues[0].value : '',
-      issueOptions: issues
+      filterTree: tree,
+      yearOptions: yearOptions,
+      monthOptions: monthOptions,
+      halfOptions: halfOptions,
+      issueOptions: issueOptions,
+      yearIndex: 0,
+      monthIndex: 0,
+      halfIndex: 0,
+      issueIndex: 0
+    });
+  },
+
+  // 年份切换（picker 返回的是索引）
+  onYearChange: function(e) {
+    var yearIdx = parseInt(e.detail.value, 10);
+    var yearData = this.data.filterTree[yearIdx];
+    if (!yearData) return;
+
+    var monthOptions = yearData.months.map(function(m) { return { value: m.month, label: m.label }; });
+    var monthData = yearData.months[0];
+    var halfOptions = monthData.halves.map(function(h) { return { value: h.half, label: h.label }; });
+    var halfData = monthData.halves[0];
+    var issueOptions = halfData.issues.map(function(num) {
+      return { value: num, label: 'Issue ' + num };
     });
 
-    if (issues[0]) {
-      this.loadIssueDetail(issues[0].value);
+    this.setData({
+      yearIndex: yearIdx,
+      monthOptions: monthOptions,
+      monthIndex: 0,
+      halfOptions: halfOptions,
+      halfIndex: 0,
+      issueOptions: issueOptions,
+      issueIndex: 0
+    });
+
+    if (issueOptions.length > 0) {
+      this.loadIssueDetail(issueOptions[0].value);
     }
   },
 
   // 月份切换
   onMonthChange: function(e) {
-    var month = e.detail.value;
-    var yearData = this.data.filterTree.find(function(y) { return y.year === this.data.selectedYear; }, this);
+    var monthIdx = parseInt(e.detail.value, 10);
+    var yearData = this.data.filterTree[this.data.yearIndex];
     if (!yearData) return;
-    var monthData = yearData.months.find(function(m) { return m.month === month; });
+    var monthData = yearData.months[monthIdx];
     if (!monthData) return;
 
-    var halves = monthData.halves.map(function(h) { return { value: h.half, label: h.label }; });
-    var issues = monthData.halves[0].issues.map(function(num) {
+    var halfOptions = monthData.halves.map(function(h) { return { value: h.half, label: h.label }; });
+    var halfData = monthData.halves[0];
+    var issueOptions = halfData.issues.map(function(num) {
       return { value: num, label: 'Issue ' + num };
     });
 
     this.setData({
-      selectedMonth: month,
-      selectedHalf: halves[0].value,
-      halfOptions: halves,
-      selectedIssue: issues[0] ? issues[0].value : '',
-      issueOptions: issues
+      monthIndex: monthIdx,
+      halfOptions: halfOptions,
+      halfIndex: 0,
+      issueOptions: issueOptions,
+      issueIndex: 0
     });
 
-    if (issues[0]) {
-      this.loadIssueDetail(issues[0].value);
+    if (issueOptions.length > 0) {
+      this.loadIssueDetail(issueOptions[0].value);
     }
   },
 
   // 上/下半月切换
   onHalfChange: function(e) {
-    var half = e.detail.value;
-    var yearData = this.data.filterTree.find(function(y) { return y.year === this.data.selectedYear; }, this);
+    var halfIdx = parseInt(e.detail.value, 10);
+    var yearData = this.data.filterTree[this.data.yearIndex];
     if (!yearData) return;
-    var monthData = yearData.months.find(function(m) { return m.month === this.data.selectedMonth; }, this);
+    var monthData = yearData.months[this.data.monthIndex];
     if (!monthData) return;
-    var halfData = monthData.halves.find(function(h) { return h.half === half; });
+    var halfData = monthData.halves[halfIdx];
     if (!halfData) return;
 
-    var issues = halfData.issues.map(function(num) {
+    var issueOptions = halfData.issues.map(function(num) {
       return { value: num, label: 'Issue ' + num };
     });
 
     this.setData({
-      selectedHalf: half,
-      selectedIssue: issues[0] ? issues[0].value : '',
-      issueOptions: issues
+      halfIndex: halfIdx,
+      issueOptions: issueOptions,
+      issueIndex: 0
     });
 
-    if (issues[0]) {
-      this.loadIssueDetail(issues[0].value);
+    if (issueOptions.length > 0) {
+      this.loadIssueDetail(issueOptions[0].value);
     }
   },
 
   // 期数切换
   onIssueChange: function(e) {
-    var issueNum = e.detail.value;
-    this.setData({ selectedIssue: issueNum });
-    this.loadIssueDetail(issueNum);
+    var issueIdx = parseInt(e.detail.value, 10);
+    var issueOpt = this.data.issueOptions[issueIdx];
+    if (!issueOpt) return;
+
+    this.setData({ issueIndex: issueIdx });
+    this.loadIssueDetail(issueOpt.value);
   },
 
-  // 加载单期详情
   loadIssueDetail: function(issueNum) {
     var self = this;
 
     if (this._rawIssueDetails[issueNum]) {
       var extracted = i18nContent.extractIssue(this._rawIssueDetails[issueNum], this.data.lang);
+      var nav = this._getNavState(issueNum);
       this.setData({
         loading: false,
         currentIssueNum: issueNum,
-        currentIssueData: extracted
+        currentIssueData: extracted,
+        hasPrev: nav.hasPrev,
+        hasNext: nav.hasNext
       });
       return Promise.resolve();
     }
@@ -272,11 +282,14 @@ Page({
 
       self._rawIssueDetails[issueNum] = issueData;
       var extracted = i18nContent.extractIssue(issueData, self.data.lang);
+      var nav = self._getNavState(issueNum);
 
       self.setData({
         loading: false,
         currentIssueNum: issueNum,
-        currentIssueData: extracted
+        currentIssueData: extracted,
+        hasPrev: nav.hasPrev,
+        hasNext: nav.hasNext
       });
     }).catch(function(err) {
       console.error('加载期数详情失败', err);
@@ -312,6 +325,113 @@ Page({
 
   onSearchClose: function() {
     this.setData({ searchVisible: false });
+  },
+
+  // 获取分页状态
+  _getNavState: function(issueNum) {
+    var issues = this._rawIssues || [];
+    if (issues.length === 0) return { hasPrev: false, hasNext: false };
+    var idx = -1;
+    for (var i = 0; i < issues.length; i++) {
+      if (issues[i].issue.number === issueNum) { idx = i; break; }
+    }
+    // issues[0] 是最新，issues[length-1] 是最早
+    // hasPrev = 有更早的期（idx < length-1）
+    // hasNext = 有更新的期（idx > 0）
+    return {
+      hasPrev: idx >= 0 && idx < issues.length - 1,
+      hasNext: idx > 0
+    };
+  },
+
+  // 上一期
+  prevIssue: function() {
+    var issues = this._rawIssues || [];
+    if (issues.length === 0) return;
+    var currentIdx = -1;
+    for (var i = 0; i < issues.length; i++) {
+      if (issues[i].issue.number === this.data.currentIssueNum) {
+        currentIdx = i;
+        break;
+      }
+    }
+    if (currentIdx < 0 || currentIdx >= issues.length - 1) return;
+    var prevNum = issues[currentIdx + 1].issue.number;
+    this.loadIssueDetail(prevNum);
+    this._syncFilterToIssue(prevNum);
+  },
+
+  // 下一期
+  nextIssue: function() {
+    var issues = this._rawIssues || [];
+    if (issues.length === 0) return;
+    var currentIdx = -1;
+    for (var i = 0; i < issues.length; i++) {
+      if (issues[i].issue.number === this.data.currentIssueNum) {
+        currentIdx = i;
+        break;
+      }
+    }
+    if (currentIdx <= 0) return;
+    var nextNum = issues[currentIdx - 1].issue.number;
+    this.loadIssueDetail(nextNum);
+    this._syncFilterToIssue(nextNum);
+  },
+
+  // 同步筛选器到指定期数
+  _syncFilterToIssue: function(issueNum) {
+    var tree = this.data.filterTree;
+    var rawIssues = this._rawIssues || [];
+    var issueData = null;
+    for (var i = 0; i < rawIssues.length; i++) {
+      if (rawIssues[i].issue.number === issueNum) {
+        issueData = rawIssues[i];
+        break;
+      }
+    }
+    if (!issueData) return;
+
+    var date = issueData.issue.date || '';
+    var parts = date.split('-');
+    var year = parts[0];
+    var month = parts[1];
+    var day = parseInt(parts[2] || '1', 10);
+    var half = day <= 15 ? 'H1' : 'H2';
+
+    var yearIdx = 0, monthIdx = 0, halfIdx = 0, issueIdx = 0;
+    for (var y = 0; y < tree.length; y++) {
+      if (tree[y].year === year) { yearIdx = y; break; }
+    }
+    var yearData = tree[yearIdx];
+    if (!yearData) return;
+    var monthOptions = yearData.months.map(function(m) { return { value: m.month, label: m.label }; });
+    for (var m = 0; m < yearData.months.length; m++) {
+      if (yearData.months[m].month === month) { monthIdx = m; break; }
+    }
+    var monthData = yearData.months[monthIdx];
+    if (!monthData) return;
+    var halfOptions = monthData.halves.map(function(h) { return { value: h.half, label: h.label }; });
+    for (var h = 0; h < monthData.halves.length; h++) {
+      if (monthData.halves[h].half === half) { halfIdx = h; break; }
+    }
+    var halfData = monthData.halves[halfIdx];
+    if (!halfData) return;
+    var issueOptions = halfData.issues.map(function(num) {
+      return { value: num, label: 'Issue ' + num };
+    });
+    for (var n = 0; n < halfData.issues.length; n++) {
+      if (halfData.issues[n] === issueNum) { issueIdx = n; break; }
+    }
+
+    this.setData({
+      yearIndex: yearIdx,
+      monthOptions: monthOptions,
+      monthIndex: monthIdx,
+      halfOptions: halfOptions,
+      halfIndex: halfIdx,
+      issueOptions: issueOptions,
+      issueIndex: issueIdx
+    });
   },
 
   onLangChange: function(e) {

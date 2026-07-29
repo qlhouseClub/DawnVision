@@ -1,5 +1,5 @@
 // components/search-modal/search-modal.js
-// 搜索组件：调用服务器端搜索 API，支持双语显示
+// 搜索组件：调用服务器端搜索 API，支持双语显示和关键词高亮
 var api = require('../../utils/api.js');
 var i18nContent = require('../../utils/i18n-content.js');
 var i18nUtil = require('../../utils/i18n.js');
@@ -40,7 +40,6 @@ Component({
   },
 
   methods: {
-    // 输入处理（防抖）
     onInput: function(e) {
       var query = e.detail.value;
       this.setData({ query: query });
@@ -62,11 +61,16 @@ Component({
       }, 250);
     },
 
-    // 调用服务器搜索 API
     doSearch: function(query) {
       var self = this;
       api.search(query).then(function(rawResults) {
         var results = i18nContent.extractSearchResults(rawResults, self.data.lang);
+        // 给每个结果添加高亮后的富文本字段
+        var keyword = query.trim();
+        results.forEach(function(r) {
+          r.titleHtml = self.highlightKeyword(r.title || '', keyword);
+          r.excerptHtml = self.highlightKeyword(r.excerpt || '', keyword);
+        });
         self.setData({
           results: results,
           searching: false
@@ -77,7 +81,17 @@ Component({
       });
     },
 
-    // 点击结果跳转
+    // 关键词高亮：返回 rich-text 可用的 HTML
+    highlightKeyword: function(text, keyword) {
+      if (!text || !keyword) return text || '';
+      // 转义 HTML 特殊字符
+      var escaped = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      // 转义关键词中的正则特殊字符
+      var escapedKeyword = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      var regex = new RegExp('(' + escapedKeyword + ')', 'gi');
+      return escaped.replace(regex, '<span style="color:#002FA7;font-weight:700;">$1</span>');
+    },
+
     onResultTap: function(e) {
       var index = e.currentTarget.dataset.index;
       var result = this.data.results[index];
@@ -89,14 +103,12 @@ Component({
       });
     },
 
-    // 确认搜索
     onConfirm: function() {
       if (this.data.results.length > 0) {
         this.onResultTap({ currentTarget: { dataset: { index: 0 } } });
       }
     },
 
-    // 点击遮罩关闭
     onOverlayTap: function() {
       this.close();
     },
@@ -107,14 +119,12 @@ Component({
       this.triggerEvent('close');
     },
 
-    // 语言切换响应
     onLangChange: function(e) {
       var lang = e.detail.lang;
       this.setData({
         lang: lang,
         i18n: i18nUtil.getMessages(lang)
       });
-      // 如果有搜索结果，重新提取当前语言的显示
       if (this.data.query.trim() && this.data.results.length > 0) {
         this.doSearch(this.data.query);
       }

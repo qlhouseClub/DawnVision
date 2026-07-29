@@ -48,8 +48,9 @@
     <view class="about-tipjar">
       <text class="about-tipjar-label">Tip Jar</text>
       <view class="about-qr-wrap">
-        <image class="about-qr" src="/images/reward-qr.webp" mode="aspectFit" lazy-load="{{true}}" />
+        <image class="about-qr" src="https://www.dawnvision.cn/images/tip-jar.png" mode="aspectFit" lazy-load="{{true}}" show-menu-by-longpress="{{true}}" bindlongpress="previewQr" />
       </view>
+      <text class="about-tipjar-hint">{{lang === 'en' ? 'Long press to recognize' : '长按识别二维码'}}</text>
       <text class="about-tipjar-quote">{{lang === 'en' ? '"Thanks for the bubble tea!"' : '"谢谢老板请我喝奶茶"'}}</text>
     </view>
   </view>

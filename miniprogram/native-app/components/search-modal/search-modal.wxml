@@ -17,9 +17,6 @@
         focus="{{visible}}"
         adjust-position="{{true}}"
       />
-      <view class="search-modal__close-hint" bindtap="close">
-        <text>ESC</text>
-      </view>
     </view>
 
     <!-- 结果区 -->
@@ -34,7 +31,7 @@
         <text>{{i18n.search_noResults}}</text>
       </view>
 
-      <!-- 结果列表 -->
+      <!-- 结果列表（高亮关键词） -->
       <block wx:if="{{!searching && results.length > 0}}">
         <view
           class="search-result"
@@ -46,8 +43,8 @@
           data-index="{{index}}"
         >
           <view class="search-result__category">{{result.category}}</view>
-          <view class="search-result__title">{{result.title}}</view>
-          <view class="search-result__excerpt">{{result.excerpt}}</view>
+          <rich-text class="search-result__title" nodes="{{result.titleHtml}}"></rich-text>
+          <rich-text class="search-result__excerpt" nodes="{{result.excerptHtml}}"></rich-text>
         </view>
       </block>
     </scroll-view>
@@ -56,18 +53,6 @@
     <view class="search-modal__results" wx:if="{{query.length === 0}}">
       <view class="search-modal__empty">
         <text>{{i18n.search_empty}}</text>
-      </view>
-    </view>
-
-    <!-- 底部 -->
-    <view class="search-modal__footer">
-      <view class="search-modal__footer-item">
-        <text class="search-modal__kbd">↵</text>
-        <text>{{i18n.search_footer_open}}</text>
-      </view>
-      <view class="search-modal__footer-item">
-        <text class="search-modal__kbd">⌕</text>
-        <text>{{i18n.search_footer_search}}</text>
       </view>
     </view>
   </view>

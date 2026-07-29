@@ -17,9 +17,6 @@
       <view class="cao-hero-subtitle">
         <text>{{i18n.cao_intro}}</text>
       </view>
-      <view class="cao-hero-subtitle-en" wx:if="{{lang === 'en'}}">
-        <text>A little rant a day keeps the sanity away.</text>
-      </view>
     </view>
   </view>
 
@@ -31,11 +28,11 @@
         <text class="loading-text">{{i18n.status_loading}}</text>
       </view>
 
-      <!-- 列表 -->
-      <block wx:if="{{!loading && caoList.length > 0}}">
+      <!-- 列表（当前页8条） -->
+      <block wx:if="{{!loading && displayList.length > 0}}">
         <view
           class="cao-item"
-          wx:for="{{caoList}}"
+          wx:for="{{displayList}}"
           wx:key="slug"
           bindtap="goToArticle"
           data-issue="{{item.issue.number}}"
@@ -55,8 +52,29 @@
       </block>
 
       <!-- 空状态 -->
-      <view class="empty-wrap" wx:if="{{!loading && caoList.length === 0}}">
+      <view class="empty-wrap" wx:if="{{!loading && displayList.length === 0}}">
         <text class="empty-text">{{i18n.status_emptyCao}}</text>
+      </view>
+    </view>
+
+    <!-- 分页 -->
+    <view class="cao-pagination" wx:if="{{!loading && totalPages > 1}}">
+      <view class="cao-pagination__btn {{!hasPrev ? 'is-disabled' : ''}}" wx:if="{{hasPrev}}" bindtap="prevPage">
+        <text class="cao-pagination__arrow">←</text>
+        <text class="cao-pagination__text">上一页</text>
+      </view>
+      <view class="cao-pagination__btn is-disabled" wx:else>
+        <text class="cao-pagination__text">第一页</text>
+      </view>
+
+      <text class="cao-pagination__info">{{currentPage}} / {{totalPages}}</text>
+
+      <view class="cao-pagination__btn {{!hasNext ? 'is-disabled' : ''}}" wx:if="{{hasNext}}" bindtap="nextPage">
+        <text class="cao-pagination__text">下一页</text>
+        <text class="cao-pagination__arrow">-></text>
+      </view>
+      <view class="cao-pagination__btn is-disabled" wx:else>
+        <text class="cao-pagination__text">最后一页</text>
       </view>
     </view>
   </view>

@@ -187,17 +187,16 @@
   padding-top: 40rpx;
 }
 
-/* 蓝色分区标签 */
+/* 分区标签（内联，非通栏） */
 .section-label {
-  display: block;
-  width: 100%;
+  display: inline-block;
   font-size: 22rpx;
   font-weight: 700;
   letter-spacing: 8rpx;
   text-transform: uppercase;
   color: #ffffff;
   background: #002FA7;
-  padding: 20rpx 32rpx;
+  padding: 10rpx 24rpx;
   margin-bottom: 32rpx;
   font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
 }
@@ -304,6 +303,44 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* ============================================
+   分页
+   ============================================ */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48rpx 0 24rpx;
+}
+
+.pagination__btn {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  padding: 16rpx 24rpx;
+  font-size: 20rpx;
+  font-weight: 700;
+  letter-spacing: 2rpx;
+  text-transform: uppercase;
+  color: #002FA7;
+  border: 1rpx solid #002FA7;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+}
+
+.pagination__btn:active {
+  background: #002FA7;
+  color: #ffffff;
+}
+
+.pagination__btn.is-disabled {
+  color: #cccccc;
+  border-color: #e8e8e8;
+}
+
+.pagination__arrow {
+  font-size: 24rpx;
 }
 
 /* ============================================

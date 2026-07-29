@@ -151,6 +151,16 @@
   font-family: 'Noto Serif SC', Georgia, serif;
 }
 
+.about-tipjar-hint {
+  display: block;
+  font-size: 20rpx;
+  letter-spacing: 2rpx;
+  color: #002FA7;
+  font-weight: 700;
+  margin-bottom: 16rpx;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+}
+
 /* ============================================
    底部留白
    ============================================ */

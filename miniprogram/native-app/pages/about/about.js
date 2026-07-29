@@ -35,6 +35,14 @@ Page({
     });
   },
 
+  // 长按预览大图（可识别二维码）
+  previewQr: function() {
+    wx.previewImage({
+      current: 'https://www.dawnvision.cn/images/reward-qr.png',
+      urls: ['https://www.dawnvision.cn/images/reward-qr.png']
+    });
+  },
+
   onSearchClose: function() {
     this.setData({ searchVisible: false });
   },

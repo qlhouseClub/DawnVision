@@ -12,11 +12,11 @@
         <picker
           class="filter-picker"
           mode="selector"
-          range="{{filterTree}}"
-          range-key="year"
-          value="0"
+          range="{{yearOptions}}"
+          range-key="label"
+          value="{{yearIndex}}"
           bindchange="onYearChange">
-          <view class="filter-picker-text">{{selectedYear}}</view>
+          <view class="filter-picker-text">{{yearOptions[yearIndex].label}}</view>
         </picker>
         <!-- 月 -->
         <picker
@@ -24,9 +24,9 @@
           mode="selector"
           range="{{monthOptions}}"
           range-key="label"
-          value="0"
+          value="{{monthIndex}}"
           bindchange="onMonthChange">
-          <view class="filter-picker-text">{{selectedMonth ? (parseInt(selectedMonth, 10) + '月') : ''}}</view>
+          <view class="filter-picker-text">{{monthOptions[monthIndex].label}}</view>
         </picker>
         <!-- 上/下半月 -->
         <picker
@@ -34,9 +34,9 @@
           mode="selector"
           range="{{halfOptions}}"
           range-key="label"
-          value="0"
+          value="{{halfIndex}}"
           bindchange="onHalfChange">
-          <view class="filter-picker-text">{{selectedHalf === 'H1' ? '上半月' : '下半月'}}</view>
+          <view class="filter-picker-text">{{halfOptions[halfIndex].label}}</view>
         </picker>
         <!-- 期数 -->
         <picker
@@ -44,9 +44,9 @@
           mode="selector"
           range="{{issueOptions}}"
           range-key="label"
-          value="0"
+          value="{{issueIndex}}"
           bindchange="onIssueChange">
-          <view class="filter-picker-text">{{selectedIssue ? ('Issue ' + selectedIssue) : ''}}</view>
+          <view class="filter-picker-text">{{issueOptions[issueIndex].label}}</view>
         </picker>
       </view>
     </view>
@@ -89,7 +89,9 @@
     <view class="articles-body">
       <!-- Focus 封面 -->
       <view class="section" wx:if="{{currentIssueData.cover}}">
-        <view class="section-label">{{i18n.section_focus}}</view>
+        <view class="section-label">
+          <text class="section-label-text">{{i18n.section_focus}}</text>
+        </view>
         <view class="cover-card" bindtap="goToCoverArticle">
           <view class="cover-card__title">
             <text>{{currentIssueData.cover.title}}</text>
@@ -105,7 +107,9 @@
 
       <!-- Brief 资讯 -->
       <view class="section" wx:if="{{currentIssueData.briefs.length > 0}}">
-        <view class="section-label">{{i18n.section_brief}}</view>
+        <view class="section-label">
+          <text class="section-label-text">{{i18n.section_brief}}</text>
+        </view>
         <view class="brief-grid">
           <view
             class="brief-card"
@@ -119,6 +123,25 @@
             <view class="brief-card__deck">{{item.deck}}</view>
           </view>
         </view>
+      </view>
+    </view>
+
+    <!-- 分页 -->
+    <view class="pagination" wx:if="{{!loading && currentIssueData}}">
+      <view class="pagination__btn {{!hasPrev ? 'is-disabled' : ''}}" wx:if="{{hasPrev}}" bindtap="prevIssue">
+        <text class="pagination__arrow">←</text>
+        <text class="pagination__text">上一期</text>
+      </view>
+      <view class="pagination__btn is-disabled" wx:else>
+        <text class="pagination__text">最早一期</text>
+      </view>
+
+      <view class="pagination__btn {{!hasNext ? 'is-disabled' : ''}}" wx:if="{{hasNext}}" bindtap="nextIssue">
+        <text class="pagination__text">下一期</text>
+        <text class="pagination__arrow">→</text>
+      </view>
+      <view class="pagination__btn is-disabled" wx:else>
+        <text class="pagination__text">最新一期</text>
       </view>
     </view>
 

@@ -1,0 +1,394 @@
+{
+  "date": "2026-07-29",
+  "issue": "024",
+  "generated_at": "2026-07-29 15:20:00",
+  "total_topics": 8,
+  "total_claims": 32,
+  "confirmed_claims": 27,
+  "single_source_claims": 4,
+  "disputed_claims": 1,
+  "topics": [
+    {
+      "topic": "封面：JiuwenSwarm鸿蒙PC版发布",
+      "slug": "jiuwenswarm-harmonyos-pc-ai-workbench-open-source-multi-agent",
+      "confidence": "high",
+      "primary_source": "量子位 - 首个鸿蒙PC开源AI统一工作台JiuwenSwarm，办公编程一站式搞定",
+      "primary_source_url": "https://www.qbitai.com/2026/07/462065.html",
+      "verified_data": [
+        {
+          "claim": "openJiuwen联合华为终端团队发布JiuwenSwarm蜂群智能体鸿蒙PC版",
+          "sources": [
+            "量子位", "IT之家", "腾讯新闻", "凤凰网科技"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        },
+        {
+          "claim": "首个面向鸿蒙PC的开源AI统一工作台",
+          "sources": [
+            "量子位", "IT之家", "头条科技"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        },
+        {
+          "claim": "提出HITS（Human in the Swarm）人机协同新范式",
+          "sources": [
+            "量子位", "IT之家", "头条科技"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        },
+        {
+          "claim": "工作模式和Code模式合并为统一工作台",
+          "sources": [
+            "量子位", "头条科技"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        },
+        {
+          "claim": "Coordination Engineering（协同工程）技术体系",
+          "sources": [
+            "量子位", "IT之家"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        }
+      ],
+      "disputes": [],
+      "notes": "多个中文科技媒体确认该发布事件。'首个'称号为厂商自称，目前公开信息中确实没有其他鸿蒙PC原生AI统一工作台的报道。建议保留'首个'但标注为厂商声称。"
+    },
+    {
+      "topic": "Brief 1：Google Gemini API Managed Agents",
+      "slug": "google-gemini-api-managed-agents-3-6-flash-hooks",
+      "confidence": "high",
+      "primary_source": "Google AI Blog - Gemini API Managed Agents: 3.6 Flash, hooks, and more",
+      "primary_source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/",
+      "verified_data": [
+        {
+          "claim": "Google发布Gemini API Managed Agents更新",
+          "sources": [
+            "Google AI Blog（官方）", "TechCrunch", "头条科技"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        },
+        {
+          "claim": "底座模型切换到Gemini 3.6 Flash（默认）",
+          "sources": [
+            "Google AI Blog（官方）", "头条科技"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        },
+        {
+          "claim": "新增环境hooks（生命周期钩子）功能",
+          "sources": [
+            "Google AI Blog（官方）", "头条科技"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        },
+        {
+          "claim": "新增预算控制、定时触发、免费层访问",
+          "sources": [
+            "Google AI Blog（官方）"
+          ],
+          "status": "single_source",
+          "cross_checked": false
+        },
+        {
+          "claim": "Gemini 3.6 Flash于2026年7月21日发布",
+          "sources": [
+            "百科", "头条科技"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        }
+      ],
+      "disputes": [],
+      "notes": "核心功能来自Google官方博客，可信度高。预算控制、定时触发等细节只有单来源，写作时建议用'据Google官方博客称'标注。"
+    },
+    {
+      "topic": "Brief 2：Fish Audio $5200万种子轮",
+      "slug": "fish-audio-52m-seed-ai-voice-21m-arr",
+      "confidence": "medium",
+      "primary_source": "TechCrunch - Fish Audio raises $52M seed to build AI voice models",
+      "primary_source_url": "https://techcrunch.com/2026/07/28/fish-audio-raises-50m-seed-to-build-ai-voice-models-for-creators-and-enterprises/",
+      "verified_data": [
+        {
+          "claim": "Fish Audio完成5200万美元种子轮融资",
+          "sources": [
+            "TechCrunch", "头条科技"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        },
+        {
+          "claim": "Coreline Ventures和今日资本领投",
+          "sources": [
+            "头条科技"
+          ],
+          "status": "single_source",
+          "cross_checked": false
+        },
+        {
+          "claim": "800万开源用户、$2100万ARR",
+          "sources": [
+            "TechCrunch"
+          ],
+          "status": "single_source",
+          "cross_checked": false
+        }
+      ],
+      "disputes": [
+        {
+          "claim": "$2100万ARR数据",
+          "details": "该数据仅来自TechCrunch的单一报道，且大概率来自公司自述，未经第三方审计验证。"
+        }
+      ],
+      "notes": "融资金额有两个来源确认，但ARR和用户数只有TechCrunch单一来源（很可能来自公司PR稿）。写作时对$2100万ARR和800万用户应标注'据TechCrunch报道'或'公司称'，不宜作为确定性事实呈现。"
+    },
+    {
+      "topic": "Brief 3：德塔智能半年6轮近5亿元融资",
+      "slug": "delta-intelligence-500m-angel-humanoid-robot-foundation-model",
+      "confidence": "high",
+      "primary_source": "36氪 - UCLA博士团队创业做人形机器人基础模型，拿下近5亿元天使++轮融资",
+      "primary_source_url": "https://36kr.com/p/3913213962540164?f=rss",
+      "verified_data": [
+        {
+          "claim": "德塔智能完成近5亿元天使++轮融资",
+          "sources": [
+            "36氪", "环球网科技", "财经涂鸦", "头条科技×3"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        },
+        {
+          "claim": "成立半年融资6轮",
+          "sources": [
+            "36氪", "头条科技", "环球网科技"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        },
+        {
+          "claim": "做人形机器人基础模型",
+          "sources": [
+            "36氪", "环球网科技", "财经涂鸦", "头条科技"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        },
+        {
+          "claim": "投资方包括上市公司产业方和头部财务投资机构",
+          "sources": [
+            "36氪", "环球网科技", "头条科技"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        },
+        {
+          "claim": "核心团队来自UCLA",
+          "sources": [
+            "36氪"
+          ],
+          "status": "single_source",
+          "cross_checked": false
+        }
+      ],
+      "disputes": [],
+      "notes": "融资金额和轮次有多个媒体交叉确认。UCLA团队背景只有36氪单源，写作时可保留但标注'据36氪报道'。'智元、乐聚等主机厂'这一细节来自36氪正文中的投资方列举，多源报道中均提及'产业方'，但具体到智元/乐聚名称的只有36氪，建议保留但标注来源。"
+    },
+    {
+      "topic": "Brief 4：豆包搜索服务 + Google AI Overviews 43%",
+      "slug": "doubao-search-volcengine-agent-infrastructure-google-ai-overviews",
+      "confidence": "high",
+      "primary_source": "火山引擎官方 - 豆包搜索服务上线",
+      "primary_source_url": "https://www.volcengine.com/",
+      "verified_data": [
+        {
+          "claim": "火山引擎7月28日上线豆包搜索服务",
+          "sources": [
+            "凤凰网科技", "搜狐科技", "人民财讯", "网易新闻", "IT之家"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        },
+        {
+          "claim": "为AI Agent提供联网信息查询能力",
+          "sources": [
+            "凤凰网科技", "搜狐科技", "网易新闻"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        },
+        {
+          "claim": "Google AI Overviews出现率从15%升至43%",
+          "sources": [
+            "Similarweb数据 × 多个科技媒体报道"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        },
+        {
+          "claim": "数据来源为Similarweb 2026年生成式AI行业报告",
+          "sources": [
+            "头条科技×2"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        },
+        {
+          "claim": "AI Mode月访问量2.79亿",
+          "sources": [
+            "头条科技"
+          ],
+          "status": "single_source",
+          "cross_checked": false
+        }
+      ],
+      "disputes": [],
+      "notes": "豆包搜索上线有5+个媒体确认，可信度高。Google 43%数据来自Similarweb报告，多个媒体引用同一数据源，属于间接确认。写作时应保留'Similarweb数据显示'的表述，不宜直接陈述为确定性事实。"
+    },
+    {
+      "topic": "Brief 5：OpenAI科学计算报告",
+      "slug": "openai-scientific-computing-agentic-ai-coding-research",
+      "confidence": "high",
+      "primary_source": "OpenAI Blog - Scientific computing in the age of agentic AI",
+      "primary_source_url": "https://openai.com/index/scientific-computing-agentic-ai",
+      "verified_data": [
+        {
+          "claim": "OpenAI发布agentic AI时代科学计算实地报告",
+          "sources": [
+            "OpenAI官方博客"
+          ],
+          "status": "confirmed",
+          "cross_checked": false,
+          "note": "一手来源，直接来自OpenAI"
+        },
+        {
+          "claim": "展示基因组学、气候建模、天文、粒子物理等领域应用",
+          "sources": [
+            "OpenAI官方博客"
+          ],
+          "status": "confirmed",
+          "cross_checked": false,
+          "note": "一手来源"
+        },
+        {
+          "claim": "AI coding agents帮助重构遗留科学计算代码",
+          "sources": [
+            "OpenAI官方博客"
+          ],
+          "status": "confirmed",
+          "cross_checked": false,
+          "note": "一手来源"
+        }
+      ],
+      "disputes": [],
+      "notes": "这篇文章直接基于OpenAI官方博客，属于一手来源。虽然只有单一来源，但来源是发布方本身，可信度高。写作时正常引用即可。"
+    },
+    {
+      "topic": "Brief 6：深信服AI CyberGym全球前四",
+      "slug": "sangfor-ai-cybergym-top-four-domestic-first-glm-5-2",
+      "confidence": "high",
+      "primary_source": "36氪 - 深信服AI在CyberGym评测跻身全球前四，国内第一",
+      "primary_source_url": "https://36kr.com/newsflashes/3916244683468418?f=rss",
+      "verified_data": [
+        {
+          "claim": "深信服AI在CyberGym评测中跻身全球前四、国内第一",
+          "sources": [
+            "36氪", "网易科技", "ZAKER新闻", "头条科技×2"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        },
+        {
+          "claim": "依托纯国产基座模型GLM-5.2",
+          "sources": [
+            "36氪", "网易科技", "ZAKER新闻", "头条科技"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        },
+        {
+          "claim": "1507项任务成功解决1301项，成功率86.3%",
+          "sources": [
+            "36氪", "头条科技", "ZAKER新闻"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        },
+        {
+          "claim": "测试涵盖ARVO与OSS-Fuzz全量高难度漏洞",
+          "sources": [
+            "36氪", "网易科技"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        }
+      ],
+      "disputes": [],
+      "notes": "成绩数据有多个媒体交叉确认。需要注意的是，'全球前四'的具体排名（第4名还是并列前四）各报道表述略有差异，统一使用'全球前四'较为稳妥。该成绩数据来自深信服官方公布，写作时可标注'据深信服公布的数据'以保持客观。"
+    },
+    {
+      "topic": "Cao：Runlayer起诉Rippling",
+      "slug": "runlayer-sues-rippling-mcp-gateway-product-idea-theft",
+      "confidence": "medium",
+      "primary_source": "TechCrunch - MCP startup Runlayer accuses Rippling of stealing its product idea",
+      "primary_source_url": "https://techcrunch.com/2026/07/28/mcp-startup-runlayer-accuses-rippling-of-stealing-its-product-idea/",
+      "verified_data": [
+        {
+          "claim": "MCP网关初创公司Runlayer对Rippling提起诉讼",
+          "sources": [
+            "TechCrunch", "头条科技"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        },
+        {
+          "claim": "指控Rippling在产品试用期间窃取技术成果/产品创意",
+          "sources": [
+            "TechCrunch", "头条科技"
+          ],
+          "status": "confirmed",
+          "cross_checked": true
+        },
+        {
+          "claim": "Rippling是HR SaaS公司，估值超百亿美元",
+          "sources": [
+            "TechCrunch"
+          ],
+          "status": "single_source",
+          "cross_checked": false
+        }
+      ],
+      "disputes": [
+        {
+          "claim": "Rippling是否真的'抄袭'了产品",
+          "details": "这是Runlayer单方面的诉状指控，Rippling尚未回应。案件还在法律程序中，不能认定Rippling确实有抄袭行为。Cao的吐槽风格应保持'根据诉状指控'的表述，不能当作已证实的事实。"
+        }
+      ],
+      "notes": "诉讼事件本身是真实的（有TechCrunch和中文媒体双源确认），但指控内容是单方面的。作为Cao栏目，吐槽风格没问题，但应明确是'据Runlayer诉状称'，避免构成诽谤风险。文章中的'反派'等戏谑说法可以保留，但事实层面要与指控区分开。"
+    }
+  ],
+  "summary": {
+    "overall_confidence": "high",
+    "fact_check_method": "多源交叉验证 + 一手来源优先 + 单一来源标注",
+    "key_findings": [
+      "8篇文章的核心事件均为真实，有2个以上独立来源确认",
+      "Fish Audio的$2100万ARR和800万用户数据为单源（公司PR），需标注来源",
+      "Runlayer诉讼案事实存在但指控为单方面，Cao写作时应保持'据诉状称'的表述",
+      "德塔智能UCLA团队背景为单源，建议标注'据36氪报道'",
+      "其余核心数据均有2+来源交叉验证，可信度较高"
+    ],
+    "writing_guidelines": [
+      "confirmed数据可直接引用",
+      "single_source数据需标注'据XX报道'或'XX称'",
+      "disputed数据需呈现各方说法，不可单方面下结论",
+      "Cao栏目允许吐槽风格，但事实层面需与指控区分开"
+    ]
+  }
+}

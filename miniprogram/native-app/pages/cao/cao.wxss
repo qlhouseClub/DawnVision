@@ -171,6 +171,52 @@
 }
 
 /* ============================================
+   分页
+   ============================================ */
+.cao-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48rpx 0 0;
+}
+
+.cao-pagination__btn {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  padding: 16rpx 24rpx;
+  font-size: 20rpx;
+  font-weight: 700;
+  letter-spacing: 2rpx;
+  text-transform: uppercase;
+  color: #002FA7;
+  border: 1rpx solid #002FA7;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+}
+
+.cao-pagination__btn:active {
+  background: #002FA7;
+  color: #ffffff;
+}
+
+.cao-pagination__btn.is-disabled {
+  color: #cccccc;
+  border-color: #e8e8e8;
+}
+
+.cao-pagination__arrow {
+  font-size: 24rpx;
+}
+
+.cao-pagination__info {
+  font-size: 22rpx;
+  font-weight: 700;
+  color: #999999;
+  letter-spacing: 2rpx;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+}
+
+/* ============================================
    加载/空状态
    ============================================ */
 .loading-wrap {

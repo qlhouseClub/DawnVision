@@ -5,16 +5,18 @@ Dawn Vision 全流程一键脚本（Astro 新版）
 用法:
   python tools/run.py collect   # 第一步：采集信号
   python tools/run.py draft     # 第二步：选题+生成Prompt
-  python tools/run.py process   # 第三步：校验JSON→入库→Astro构建
-  python tools/run.py verify    # 第四步：验证（构建+预览检查）
-  python tools/run.py publish   # 第五步：验证+发布
-  python tools/run.py full      # 全流程：采集→选题→（AI二创）→构建→验证
+  python tools/run.py factcheck # 第三步：多源证伪（事实核查+数据交叉验证）
+  python tools/run.py process   # 第四步：校验JSON->入库->Astro构建
+  python tools/run.py verify    # 第五步：验证（构建+预览检查）
+  python tools/run.py publish   # 第六步：验证+发布
+  python tools/run.py full      # 全流程：采集->选题->多源证伪->（AI二创）->构建->验证
   python tools/run.py status    # 查看当前工作流状态
 
 完整日报工作流:
   14:00  采集资讯 (collect)
   14:10  选题+生成Prompt (draft)
-  14:15  AI主编基于采集信号和写作规范进行二创，输出JSON
+  14:15  多源证伪：反向搜索验证关键事实和数据 (factcheck)
+  14:30  AI主编基于采集信号+已验证数据进行二创，输出JSON
   15:00  JSON保存到 tools/data/issue-NNN.json
   15:30  校验入库+构建 (process)
   16:00  浏览器预览检查，必要时微调
@@ -125,6 +127,64 @@ def cmd_draft(args):
     if args.auto:
         cmd.append("--auto")
     run_step(cmd)
+
+
+def cmd_factcheck(args):
+    """多源证伪：对选题中的关键事实和数据进行交叉验证"""
+    issue_num = args.issue_num or next_issue_number()
+    date = args.date or next_workday()[0]
+    signals_file = DATA_DIR / f"raw-signals-{date}.json"
+    prompt_file = DATA_DIR / f"prompt-{issue_num}-{date}.md"
+    verified_file = DATA_DIR / f"verified-signals-{date}.json"
+
+    print(f"\n{'='*60}")
+    print(f"多源证伪 (Fact-Check Gate)")
+    print(f"{'='*60}")
+
+    if not signals_file.exists():
+        print(f"❌ 未找到信号文件 {signals_file}")
+        print(f"   先运行: python tools/run.py collect")
+        sys.exit(1)
+
+    if not prompt_file.exists():
+        print(f"❌ 未找到选题Prompt {prompt_file}")
+        print(f"   先运行: python tools/run.py draft")
+        sys.exit(1)
+
+    print(f"  信号文件: {signals_file.name}")
+    print(f"  选题文件: {prompt_file.name}")
+    print(f"  输出文件: {verified_file.name}")
+    print()
+    print("  AI主编需要执行以下核查：")
+    print("  1. 原始来源溯源：对每个选题的核心事件，反向搜索找到一手来源")
+    print("     （官方公告/财报/论文/发布会原文），而非二手转述")
+    print("  2. 数据交叉验证：关键数据（金额/百分比/日期/用户数/估值/排名）")
+    print("     至少2个独立来源确认，选出确信度最高的版本")
+    print("  3. 事件真实性确认：确认事件确实发生过，非误传/谣言/旧闻翻新")
+    print("  4. 时效性确认：确认是最新事件，不是过时新闻被翻炒")
+    print("  5. 置信度标注：high/medium/low，low置信度的选题直接淘汰替换")
+    print()
+    print("  【核心原则】")
+    print("  - 多源证伪是后台质量把关环节，行文中完全不提及证伪细节")
+    print("  - 矛盾数据以确信度最高版本为准，不呈现各方说法")
+    print("  - 低置信度选题直接换掉，不写进日报")
+    print()
+    print("  输出格式 (verified-signals-*.json):")
+    print('    {')
+    print('      "date":"YYYY-MM-DD", "issue":"NNN",')
+    print('      "topics":[{')
+    print('        "topic":"...", "slug":"...", "confidence":"high",')
+    print('        "primary_source":"...", "primary_source_url":"...",')
+    print('        "verified_facts":[{"fact":"...","final_value":"...","sources":[...]}],')
+    print('        "rejected_claims":[{"claim":"...","reason":"..."}],')
+    print('        "writing_notes":"写作注意事项（后台用，不写入文章）"')
+    print('      }],')
+    print('      "summary":{"overall_confidence":"high","replaced_topics":[...],"key_corrections":[...]}')
+    print('    }')
+    print()
+    print(f"  ⏸️  多源证伪完成后，将结果保存到 {verified_file}")
+    print(f"  二创写作时使用 verified_facts 中的 final_value，行文中不提及证伪")
+    input("  证伪完成后按 Enter 继续...")
 
 
 def cmd_process(args):
@@ -371,6 +431,7 @@ def cmd_status(args):
     steps = [
         ("采集 (collect)", DATA_DIR / f"raw-signals-{date}.json"),
         ("选题Prompt (draft)", DATA_DIR / f"prompt-{issue_num}-{date}.md"),
+        ("多源证伪 (factcheck)", DATA_DIR / f"verified-signals-{date}.json"),
         ("内容JSON (issue)", DATA_DIR / f"issue-{issue_num}.json"),
     ]
 
@@ -416,7 +477,7 @@ def cmd_status(args):
     if all_done:
         print("  🎯 可以发布: python tools/run.py publish")
     else:
-        print("  → 按步骤执行: collect → draft → (AI二创) → process → publish")
+        print("  → 按步骤执行: collect → draft → factcheck → (AI二创) → process → publish")
 
 
 def cmd_full(args):
@@ -442,17 +503,40 @@ def cmd_full(args):
     else:
         print(f"\n✅ Issue文件已存在: {issue_file.name}")
 
-    # 提示AI二创
+    # Step 2.5: Fact-Check (多源证伪)
+    verified_file = DATA_DIR / f"verified-signals-{date}.json"
+    if not verified_file.exists() or args.force:
+        print(f"\n{'='*60}")
+        print("🔍 多源证伪 (Fact-Check Gate)")
+        print(f"{'='*60}")
+        print(f"  后台质量把关，行文中完全不提及证伪细节：")
+        print(f"  - 原始来源溯源（找一手来源，非二手转述）")
+        print(f"  - 数据交叉验证（金额/百分比/日期/用户数/估值至少2个来源）")
+        print(f"  - 事件真实性 + 时效性确认")
+        print(f"  - 矛盾数据选确信度最高版本，低置信度直接淘汰")
+        print(f"  输出: {verified_file.name}")
+        print(f"  二创时使用 verified_facts 中的 final_value")
+        print()
+        input("  多源证伪完成后按 Enter 继续...")
+    else:
+        print(f"\n✅ 证伪文件已存在: {verified_file.name}")
+
+    # 提示AI二创（基于已验证数据）
     print(f"\n{'='*60}")
-    print("⏸️  AI二创阶段")
+    print("⏸️  中英双语二创阶段（基于已验证数据）")
     print(f"{'='*60}")
     print(f"  作为AI主编，你需要：")
     print(f"  1. 读取 {DATA_DIR / f'prompt-{issue_num}-{date}.md'} 中的选题和Prompt")
     print(f"  2. 读取 {DATA_DIR / f'raw-signals-{date}.json'} 中的采集信号")
-    print(f"  3. 读取 tools/config/writing-style.md 了解写作规范")
-    print(f"  4. 读取 tools/config/sources.json 了解信源配置")
-    print(f"  5. 读取 web/src/content/issues/007.json 作为格式参考")
-    print(f"  6. 进行二创写作，输出完整JSON保存到 {issue_file}")
+    print(f"  3. 读取 {verified_file} 中的已验证数据（使用 verified_facts.final_value）")
+    print(f"  4. 读取 tools/config/writing-style.md 了解写作规范")
+    print(f"  5. 读取 tools/config/sources.json 了解信源配置")
+    print(f"  6. 读取 web/src/content/issues/010.json 作为最新格式参考")
+    print(f"  7. 基于已验证数据进行中英双语二创写作")
+    print(f"     - 中文：Cover 2000-2800字 / Brief 700-900字 / Cao 600-900字")
+    print(f"     - 英文：语义翻译 + edgy voice，不是机翻")
+    print(f"     - 行文中完全不提及证伪、来源标注等后台内容")
+    print(f"  8. 输出完整JSON保存到 {issue_file}")
     print()
     input("  二创完成后按 Enter 继续构建...")
 
@@ -488,6 +572,11 @@ def main():
     p_draft.add_argument("--date", help="日期 YYYY-MM-DD")
     p_draft.add_argument("--issue-num", help="期号")
     p_draft.add_argument("--auto", action="store_true", help="自动选题")
+
+    # factcheck
+    p_factcheck = sub.add_parser("factcheck", help="多源证伪：事实核查+数据交叉验证")
+    p_factcheck.add_argument("--date", help="日期 YYYY-MM-DD")
+    p_factcheck.add_argument("--issue-num", help="期号")
 
     # process
     p_process = sub.add_parser("process", help="校验JSON→入库→Astro构建")
@@ -527,6 +616,7 @@ def main():
     commands = {
         "collect": cmd_collect,
         "draft": cmd_draft,
+        "factcheck": cmd_factcheck,
         "process": cmd_process,
         "verify": cmd_verify,
         "knowledge": cmd_knowledge,
