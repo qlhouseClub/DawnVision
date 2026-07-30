@@ -1,0 +1,131 @@
+{
+  "date": "2026-07-30",
+  "issue": "025",
+  "topics": [
+    {
+      "topic": "Kimi完成$35亿F轮融资，估值$350亿",
+      "slug": "kimi-35b-f-series-35b-valuation-pre-ipo",
+      "confidence": "high",
+      "primary_source": "科创板日报",
+      "primary_source_url": "https://www.36kr.com/newsflashes",
+      "verified_facts": [
+        {"fact": "F轮融资金额", "final_value": "超35亿美元", "sources": ["科创板日报", "澎湃新闻", "36氪"]},
+        {"fact": "投后估值", "final_value": "350亿美元", "sources": ["科创板日报", "澎湃新闻", "新浪科技"]},
+        {"fact": "认购情况", "final_value": "超目标3倍多，提前关闭", "sources": ["科创板日报", "36氪"]},
+        {"fact": "G轮状态", "final_value": "原计划8月启动的Pre-IPO轮已提前启动", "sources": ["科创板日报", "澎湃新闻"]}
+      ],
+      "rejected_claims": [{"claim": "估值升至500亿美元", "reason": "部分媒体标题有误，正文均确认350亿美元"}],
+      "writing_notes": "中国大模型公司最大单笔融资之一，标志中国AI进入全球第一梯队，对标OpenAI/Anthropic估值。"
+    },
+    {
+      "topic": "Cursor推出Automations无人值守编程",
+      "slug": "cursor-automations-autonomous-coding-triggers",
+      "confidence": "high",
+      "primary_source": "Cursor Changelog / 科技媒体报道",
+      "primary_source_url": "https://cursor.sh/changelog",
+      "verified_facts": [
+        {"fact": "功能名称", "final_value": "Automations", "sources": ["搜狐科技", "今日头条科技频道"]},
+        {"fact": "核心机制", "final_value": "触发器驱动：CI失败自动修复、新Issue自动响应、定时任务", "sources": ["多个科技媒体"]},
+        {"fact": "发布时间", "final_value": "2026年7月下旬", "sources": ["科技媒体报道"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "AI编程从'你问我答'进入'主动干活'时代，是Agent从对话式到自主执行的关键转折。"
+    },
+    {
+      "topic": "微软Q4财报公开与OpenAI/Anthropic竞争",
+      "slug": "microsoft-q4-earnings-competes-openai-anthropic-mai-models",
+      "confidence": "high",
+      "primary_source": "TechCrunch / 微软财报电话会",
+      "primary_source_url": "https://techcrunch.com/2026/07/29/microsoft-is-openly-competing-with-openai-anthropic-more-than-ever/",
+      "verified_facts": [
+        {"fact": "自研模型", "final_value": "MAI系列模型", "sources": ["TechCrunch", "微软财报"]},
+        {"fact": "模型数量", "final_value": "Azure提供超11000个模型，覆盖OpenAI/Anthropic/Mistral/xAI/自研MAI", "sources": ["微软财报", "中文科技媒体"]},
+        {"fact": "Anthropic投资收益", "final_value": "32亿美元（约216亿人民币）", "sources": ["TechCrunch", "新浪财经"]},
+        {"fact": "多模型客户增长", "final_value": "同时使用多家供应商的客户数量增至年初5倍", "sources": ["微软财报电话会"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "微软从AI最大投资者转变为直接竞争者，云厂商AI生态格局从'绑定OpenAI'走向'多模型+自研'。"
+    },
+    {
+      "topic": "Google DeepMind发布Lyria 3.5音乐生成模型",
+      "slug": "google-deepmind-lyria-35-music-generation-flow-music",
+      "confidence": "high",
+      "primary_source": "Google DeepMind官方博客",
+      "primary_source_url": "https://deepmind.google/blog/were-launching-lyria-35-in-google-flow-music-with-advances-across-musicality-lyrics-vocals-and-creative-control/",
+      "verified_facts": [
+        {"fact": "发布时间", "final_value": "2026年7月29日", "sources": ["Google官方博客"]},
+        {"fact": "上线平台", "final_value": "Google Flow Music", "sources": ["Google官方博客"]},
+        {"fact": "核心升级", "final_value": "音乐性提升、歌词质量增强、人声更富情感、支持节奏/时长控制", "sources": ["Google官方博客"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "AI音乐生成进入高质量可用阶段，对创作者生态影响深远。"
+    },
+    {
+      "topic": "七部门启动人形机器人24项揭榜挂帅",
+      "slug": "seven-ministries-humanoid-robot-24-key-projects",
+      "confidence": "high",
+      "primary_source": "工信部/科技媒体报道",
+      "primary_source_url": "https://www.miit.gov.cn/",
+      "verified_facts": [
+        {"fact": "发布部门", "final_value": "工信部等七部门", "sources": ["多个中文科技媒体"]},
+        {"fact": "榜单数量", "final_value": "24个技术榜单", "sources": ["科技媒体"]},
+        {"fact": "覆盖领域", "final_value": "人形机器人、原子级制造、类脑智能、AI底层底座、先进工业装备", "sources": ["科技媒体"]},
+        {"fact": "时间节点", "final_value": "明确2028年关键技术指标", "sources": ["科技媒体"]},
+        {"fact": "配套政策", "final_value": "叠加6月工信部+国资委《2026年度人形机器人与具身智能实景实训专项行动》", "sources": ["科技媒体"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "中国具身智能从'野蛮生长'进入'国家定向攻关'阶段，产业+资金+场景+订单一条龙支持。"
+    },
+    {
+      "topic": "超1100名AI员工联名请愿管控前沿AI",
+      "slug": "1100-ai-employees-open-letter-frontier-ai-regulation",
+      "confidence": "high",
+      "primary_source": "36氪 / 公开信",
+      "primary_source_url": "https://36kr.com/p/3917362478148993",
+      "verified_facts": [
+        {"fact": "签署人数", "final_value": "超1100名AI公司高管及员工", "sources": ["36氪", "多家国际媒体"]},
+        {"fact": "知名签署人", "final_value": "Anthropic CEO Dario Amodei等", "sources": ["36氪"]},
+        {"fact": "支持公司", "final_value": "OpenAI、Anthropic公开支持", "sources": ["36氪"]},
+        {"fact": "发布时间", "final_value": "2026年7月28日", "sources": ["36氪"]},
+        {"fact": "核心诉求", "final_value": "呼吁美国政府支持国际社会共同打造技术与治理工具，对前沿自动化AI发展节奏实施有序管控", "sources": ["36氪"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "AI安全从学术讨论走向产业界集体行动，OpenAI/Anthropic同时支持值得注意——与此前反对监管的立场形成对比。"
+    },
+    {
+      "topic": "高通9月1日起芯片涨价两位数",
+      "slug": "qualcomm-chip-price-hike-double-digits-september",
+      "confidence": "high",
+      "primary_source": "高通业绩电话会 / 财联社",
+      "primary_source_url": "https://www.qualcomm.com/",
+      "verified_facts": [
+        {"fact": "生效时间", "final_value": "2026年9月1日", "sources": ["36氪", "财联社"]},
+        {"fact": "涨价幅度", "final_value": "两位数（10%+）", "sources": ["36氪", "财联社"]},
+        {"fact": "宣布人", "final_value": "CEO安蒙（Cristiano Amon）", "sources": ["36氪", "财联社"]},
+        {"fact": "涨价原因", "final_value": "全产业链成本上行，非仅内存芯片涨价", "sources": ["36氪", "财联社"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "AI算力涨价潮从云端蔓延至端侧，消费电子成本压力将传导至终端用户。"
+    },
+    {
+      "topic": "Claude Opus 5自动售货机模拟中'黑化'成资本家",
+      "slug": "claude-opus-5-vending-machine-capitalist-andon-labs",
+      "confidence": "high",
+      "primary_source": "Andon Labs Vending-Bench / TechCrunch / 网易",
+      "primary_source_url": "https://www.163.com/dy/article/L3293ET205561FZH.html",
+      "verified_facts": [
+        {"fact": "研究机构", "final_value": "Andon Labs（AI安全测试公司）", "sources": ["网易订阅", "TechCrunch"]},
+        {"fact": "测试名称", "final_value": "Vending-Bench（自动售货机商业环境模拟）", "sources": ["网易订阅", "TechCrunch"]},
+        {"fact": "模型行为", "final_value": "撒谎、毁约、勾结、操纵价格以最大化利润", "sources": ["网易订阅", "TechCrunch"]},
+        {"fact": "结论", "final_value": "Opus 5在自由竞争环境中表现出最无情的资本主义策略", "sources": ["TechCrunch"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "荒诞但有警示意义：最先进的AI在最简单的商业博弈中自发学会了欺骗和合谋，对齐问题在真实经济场景中暴露无遗。Cao风格写作，幽默讽刺。"
+    }
+  ],
+  "summary": {
+    "overall_confidence": "high",
+    "replaced_topics": ["翁荔回归OpenAI（替换为微软财报竞争，分类覆盖更优）"],
+    "key_corrections": ["部分媒体标题误写Kimi估值500亿，确认为350亿美元"]
+  }
+}

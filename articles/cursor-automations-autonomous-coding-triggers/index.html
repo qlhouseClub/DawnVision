@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="zh-CN" data-lang="zh"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Cursor推出Automations无人值守编程 — Dawn Vision</title><meta name="description" content="Cursor推出Automations触发器驱动编程：CI失败自动修复、Issue自动响应，AI编程进入无人值守时代。"><meta name="author" content="Dawn Vision 编辑部"><meta name="keywords" content="Dawn Vision, AI资讯, AI日报, 人工智能, 大模型, AI Agent, GPT, Claude, 具身智能, AI商业化, 一人公司, AI编程, 深度分析, AI观察, LLM, AIGC, 槽点, 吐槽, AI吐槽, Cao, AI吐槽专栏, AI趣闻, AI翻车, AI fails, AI roasting, tech rant, AI humor"><link rel="canonical" href="https://www.dawnvision.net/articles/cursor-automations-autonomous-coding-triggers/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&family=Noto+Sans+SC:wght@400;500;700&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&family=Noto+Sans+SC:wght@400;500;700&display=swap"></noscript><meta property="og:type" content="article"><meta property="og:title" content="Cursor推出Automations无人值守编程 — Dawn Vision"><meta property="og:description" content="Cursor推出Automations触发器驱动编程：CI失败自动修复、Issue自动响应，AI编程进入无人值守时代。"><meta property="og:url" content="https://www.dawnvision.net/articles/cursor-automations-autonomous-coding-triggers/"><meta property="og:image" content="https://www.dawnvision.net/images/og-image.png"><meta property="og:site_name" content="Dawn Vision"><meta property="og:locale" content="zh_CN"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Cursor推出Automations无人值守编程 — Dawn Vision"><meta name="twitter:description" content="Cursor推出Automations触发器驱动编程：CI失败自动修复、Issue自动响应，AI编程进入无人值守时代。"><meta name="twitter:image" content="https://www.dawnvision.net/images/og-image.png"><meta name="robots" content="index, follow"><meta name="applicable-device" content="pc,mobile"><meta name="format-detection" content="telephone=no"><meta name="baidu-site-verification" content><script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Cursor推出Automations：CI挂了自动修、Issue提了自动改，AI编程开始\"不等你了\"","description":"Cursor推出Automations触发器驱动编程：CI失败自动修复、Issue自动响应，AI编程进入无人值守时代。","datePublished":"2026-07-30","dateModified":"2026-07-30","author":{"@type":"Organization","name":"Dawn Vision 编辑部"},"publisher":{"@type":"Organization","name":"Dawn Vision","url":"https://www.dawnvision.net/","logo":{"@type":"ImageObject","url":"https://www.dawnvision.net/images/og-image.png","width":1200,"height":630}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.dawnvision.net/articles/cursor-automations-autonomous-coding-triggers"},"url":"https://www.dawnvision.net/articles/cursor-automations-autonomous-coding-triggers","inLanguage":"zh-CN","articleSection":"AI 编程 · 工具竞争","keywords":"Dawn Vision, Cursor, Automations, AI编程, 无人值守编程, CI自动修复, Agent, 编程工具","wordCount":800}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://www.dawnvision.net/"},{"@type":"ListItem","position":2,"name":"文章","item":"https://www.dawnvision.net/articles/"},{"@type":"ListItem","position":3,"name":"Cursor推出Automations无人值守编程"}]}</script><style>
+    /* Language toggle: show/hide content based on data-lang */
+    :root {
+      --dv-lang: 'zh';
+    }
+    html[data-lang="zh"] .dv-en { display: none !important; }
+    html[data-lang="en"] .dv-zh { display: none !important; }
+
+    /* When English is active, swap visible text for title/description */
+    html[data-lang="en"] head > title { display: none; }
+
+    /* Floating language switch button */
+    .dv-lang-switch {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 900;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: none;
+      background: #ffffff;
+      color: #002FA7;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .dv-lang-switch:hover {
+      background: #002FA7;
+      color: #fff;
+      transform: scale(1.08);
+      box-shadow: 0 4px 24px rgba(0,47,167,0.3);
+    }
+    @media (max-width: 700px) {
+      .dv-lang-switch {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+        font-size: 10px;
+      }
+    }
+  </style><link rel="stylesheet" href="/_astro/502.Dsp8BFs5.css">
+<style>@keyframes blobFloat{0%,to{transform:translate(0) scale(1)}33%{transform:translate(3vw,4vh) scale(1.05)}66%{transform:translate(-2vw,-3vh) scale(.97)}}.blobs--home{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--home .blob{position:absolute;border-radius:50%;filter:blur(120px);opacity:.5;animation:blobFloat 25s ease-in-out infinite;will-change:transform}.blobs--home .blob--1{width:50vw;height:50vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-5%;left:-5%;animation-delay:0s;animation-duration:30s}.blobs--home .blob--2{width:55vw;height:55vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-10s;animation-duration:28s;opacity:.6}.blobs--home .blob--3{width:40vw;height:40vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:30%;right:5%;animation-delay:-15s;animation-duration:32s;opacity:.4}.blobs--home .blob--4{width:35vw;height:35vw;background:radial-gradient(circle,rgba(80,130,255,.3) 0%,transparent 70%);top:0%;left:25%;animation-delay:-5s;animation-duration:35s;opacity:.35}.blobs--home .blob--5,.blobs--home .blob--6{display:none}.blobs--section{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--section .blob{position:absolute;border-radius:50%;filter:blur(100px);opacity:.45;animation:blobFloat 28s ease-in-out infinite;will-change:transform}.blobs--section .blob--1{width:45vw;height:45vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-10%;left:-8%;animation-delay:0s;animation-duration:30s}.blobs--section .blob--2{width:50vw;height:50vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-8s;animation-duration:26s;opacity:.55}.blobs--section .blob--3{width:35vw;height:35vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:20%;right:5%;animation-delay:-14s;animation-duration:32s}.blobs--section .blob--4,.blobs--section .blob--5{display:none}@media(max-width:700px){.blobs--home .blob{filter:blur(80px)}.blobs--section .blob{filter:blur(60px)}}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.CY1OParl.css"></head> <body class>  <a href="#main-content" class="skip-link">跳至主要内容</a>  <nav class="nav nav--inner notranslate" role="navigation" aria-label="主导航" data-pagefind-ignore translate="no"> <div class="nav__inner"> <div class="nav__group"> <a href="/" class="nav__link ">Home</a> <a href="/articles/" class="nav__link nav__link--active" aria-current="page">Articles</a> </div> <a href="/" class="nav__brand" aria-label="Dawn Vision 首页" translate="no">
+Dawn Vision
+<small>Daily Briefing</small> </a> <div class="nav__group"> <a href="/cao/" class="nav__link ">Cao</a> <a href="/about/" class="nav__link ">About</a> </div> </div> </nav> <main id="main-content"> <a href="/articles/" class="dv-back-btn" aria-label="返回文章列表" title="返回文章列表"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"> <polyline points="15 18 9 12 15 6"></polyline> </svg> </a> <section class="article-hero "> <div class="blobs blobs--section" aria-hidden="true"> <div class="blob blob--1"></div><div class="blob blob--2"></div><div class="blob blob--3"></div><div class="blob blob--4"></div><div class="blob blob--5"></div> </div> <div class="container--narrow" style="position:relative;z-index:1;"> <div data-pagefind-meta="category" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">AI 编程 · 工具竞争</div>  <h1 class="article-hero__title dv-zh" data-pagefind-meta="title">Cursor推出Automations<br>CI挂了自动修，AI编程开始"不等你了"</h1>  <h1 class="article-hero__title dv-en">Cursor Launches Automations<br>Fix CI on Autopilot, AI Coding Stops Waiting</h1> <p class="article-hero__deck dv-zh">Cursor 7月下旬悄然上线Automations功能：触发器驱动的无人值守编程，CI失败自动修复、Issue自动响应，AI从&quot;你问我答&quot;进入&quot;主动干活&quot;时代。</p> <p class="article-hero__deck dv-en">Cursor quietly rolled out Automations in late July: trigger-driven autonomous coding that auto-fixes CI failures and triages issues — AI shifts from &quot;ask and answer&quot; to &quot;proactive execution.&quot;</p> <div class="article-hero__meta"> <span class="article-hero__issue notranslate">No.025</span> <span>2026.07.30</span> <span class="dv-zh">约 5 分钟阅读</span> <span class="dv-en">~5 min read</span> </div> </div> </section> <article class="container--narrow" style="padding-top: clamp(40px, 6vw, 64px); padding-bottom: 0;">  <div class="article-body dv-zh" data-pagefind-body><p>如果你是Cursor用户，最近打开设置可能会发现一个悄悄上线的新功能：<strong>Automations</strong>。界面很朴素——一个触发器列表，默认显示"Fix CI failures on main"（修复main分支CI失败），状态是Inactive。但这个看似不起眼的功能，可能是AI编程工具从"副驾驶"走向"自动驾驶"的关键一步。</p>
+      <h2>Automations到底是什么</h2>
+      <p>简单说：你可以给Cursor设定触发条件——CI挂了、有人提了新Issue、到了指定时间——然后它自己就开始干活，不需要你打开IDE、不需要你点按钮、甚至不需要你醒着。</p>
+      <p>第一个默认触发器是<strong>"Fix CI failures on main"</strong>。想象一下这个场景：你晚上8点提交代码下班，9点CI跑挂了（可能是个lint错误、可能是个类型问题、可能是个测试用例因为时序问题flaky了）。以前你要第二天早上到公司才发现，然后花20分钟定位修复；现在如果Automations开着，它会在CI挂掉的第一时间被触发，自动拉取失败日志、定位问题、生成修复代码、提交PR、甚至可以配置自动merge。第二天你到公司，CI已经是绿的。</p>
+      <p>第二个即将上线的触发器是<strong>Issue自动响应</strong>：有人在GitHub/GitLab提了新Issue，Automations可以自动分析问题、尝试复现、如果是bug就生成修复PR、如果是功能请求就生成初步实现方案。</p>
+      <p>这和以前的AI编程有本质区别。Copilot、Cursor Tab、甚至Agent模式的本质都是"你提问/下指令，AI响应"——你是驾驶员，AI是副驾驶。Automations的本质是<strong>AI自己成为驾驶员</strong>，你只需要设定规则和边界，它在规则内自主决策、自主执行。</p>
+      <div class="pull-quote">"以前是你加班修bug，现在是AI在你睡觉的时候修bug。AI编程工具的终极形态，是把工程师从'操作工'变成'监工'。"<span class="pull-quote__attr">—— Dawn Vision编辑部</span></div>
+      <h2>从Copilot到Autopilot，量变到质变</h2>
+      <p>回顾AI编程工具的进化路径，你会发现一条清晰的脉络：</p>
+      <p><strong>2021-2022年：Copilot时代</strong>——AI是代码补全工具，你写开头它补结尾，本质是"高级自动补全"。</p>
+      <p><strong>2023-2024年：Chat时代</strong>——你可以用自然语言描述需求，AI生成代码块，本质是"会说话的Stack Overflow"。</p>
+      <p><strong>2025年：Agent时代</strong>——Cursor Composer、Windsurf Cascade等模式出现，AI可以跨文件理解上下文、执行多步编辑、运行终端命令，本质是"初级实习生，你需要盯着它干活"。</p>
+      <p><strong>2026年下半年：Autopilot时代</strong>——Automations这类功能的出现，意味着AI开始在没有人盯着的情况下自主执行任务。从"副驾驶"到"自动驾驶"，这不是功能迭代，是<strong>范式转移</strong>。</p>
+      <p>当然，担忧是真实存在的：AI自动改代码会不会引入新bug？权限边界怎么控制？自动merge到main出了生产事故谁负责？这些问题都需要时间和工程实践来回答。但方向是清晰的：AI编程工具的进化终点，不是"帮你写代码"，而是<strong>"帮你管代码"</strong>——从写代码的工具，变成管理代码生命周期的自治系统。</p>
+      <p>程序员该焦虑吗？短期看，会修CI、会改小bug的初级程序员确实面临被替代的压力；但长期看，真正的工程师会被解放出来去做更有价值的事——架构设计、产品思考、复杂系统决策。就像IDE和编译器没有消灭程序员，只是把程序员从汇编和打孔卡时代解放出来一样。</p>
+      <p>明天见。</p>
+
+<div class="article-sources">
+  <div class="article-sources__label">Sources · 参考来源</div>
+  <ul class="article-sources__list">
+    <li><a href="https://m.sohu.com/a/993333583_362225/" target="_blank" rel="noopener noreferrer nofollow">搜狐科技 - Cursor推出Automations工具：AI编程自动化</a></li>
+    <li><a href="http://m.toutiao.com/group/7667381851081720356/" target="_blank" rel="noopener noreferrer nofollow">今日头条 - Cursor推出自动化功能：AI编程进入"无人值守"时代</a></li>
+  </ul>
+  <p class="article-sources__note">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，标题、观点、行文均为原创，仅供参考，不构成任何投资建议或决策依据。如有侵权请联系删除。</p>
+</div>
+<div class="article-page__footnote">
+  <p>本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：搜狐科技、今日头条科技频道。</p>
+  <p>相关入库笔记：Cursor · Automations · AI编程 · 无人值守编程 · CI自动修复 · Agent自主执行</p>
+</div></div>  <div class="article-body dv-en"><p>If you're a Cursor user, opening settings recently may have revealed a quietly launched feature: <strong>Automations</strong>. The interface is understated — a list of triggers, with "Fix CI failures on main" shown by default, status set to Inactive. But this seemingly modest feature may be the critical step where AI coding tools shift from "copilot" to "autopilot."</p>
+      <h2>What Exactly Are Automations?</h2>
+      <p>Simply put: you set trigger conditions for Cursor — CI goes red, someone files a new Issue, a scheduled time arrives — and it starts working on its own. No need to open your IDE, no button clicks, you don't even need to be awake.</p>
+      <p>The first default trigger is <strong>"Fix CI failures on main."</strong> Imagine this scenario: you push code at 8 PM and clock out; at 9 PM CI goes red (maybe a lint error, a type issue, a flaky test due to timing). Previously you wouldn't find out until you reached the office the next morning, then spend 20 minutes triaging and fixing. Now, if Automations is on, it fires the moment CI breaks — automatically pulls failure logs, locates the issue, generates a fix, submits a PR, and can even be configured to auto-merge. By the time you arrive, CI is green.</p>
+      <p>The second trigger coming soon is <strong>automated Issue triage</strong>: when someone files a new Issue on GitHub/GitLab, Automations can auto-analyze, attempt reproduction, generate a fix PR if it's a bug, or produce an initial implementation plan if it's a feature request.</p>
+      <p>This is fundamentally different from prior AI coding. Copilot, Cursor Tab, even Agent mode were essentially "you ask/prompt, AI responds" — you're the driver, AI is the copilot. Automations' essence is <strong>AI becoming the driver itself</strong>. You set rules and boundaries; it makes decisions and executes autonomously within them.</p>
+      <div class="pull-quote">"Before, you stayed up late fixing bugs. Now AI fixes bugs while you sleep. The ultimate form of AI coding tools is turning engineers from 'operators' into 'supervisors.'"<span class="pull-quote__attr">—— The Dawn Vision Editorial Desk</span></div>
+      <h2>From Copilot to Autopilot: Quantitative to Qualitative Change</h2>
+      <p>Looking back at AI coding tools' evolution, a clear thread emerges:</p>
+      <p><strong>2021-2022: Copilot era</strong> — AI as code completion; you start, it finishes; essentially "advanced autocomplete."</p>
+      <p><strong>2023-2024: Chat era</strong> — you describe needs in natural language, AI generates code blocks; essentially "Stack Overflow that talks back."</p>
+      <p><strong>2025: Agent era</strong> — Cursor Composer, Windsurf Cascade arrive; AI understands cross-file context, performs multi-step edits, runs terminal commands; essentially "a junior intern you need to watch over."</p>
+      <p><strong>Late 2026: Autopilot era</strong> — features like Automations mean AI starts executing tasks without human supervision. From copilot to autopilot is not a feature iteration — it's a <strong>paradigm shift</strong>.</p>
+      <p>Concerns are real, of course: will AI auto-editing introduce new bugs? How do you control permission boundaries? Who's responsible if an auto-merge causes a production incident? These questions need time and engineering practice to answer. But the direction is clear: the endpoint of AI coding tools isn't "helping you write code" — it's <strong>"helping you manage code"</strong> — from code-writing tools to autonomous systems managing the code lifecycle.</p>
+      <p>Should programmers be anxious? In the short term, junior engineers who only fix CI and small bugs do face replacement pressure. But in the long run, real engineers will be liberated to do higher-value work — architecture design, product thinking, complex system decisions. Just as IDEs and compilers didn't eliminate programmers but freed them from assembly and punch cards.</p>
+      <p>See you tomorrow.</p>
+
+<div class="article-sources">
+  <div class="article-sources__label">Sources · 参考来源</div>
+  <ul class="article-sources__list">
+    <li><a href="https://m.sohu.com/a/993333583_362225/" target="_blank" rel="noopener noreferrer nofollow">Sohu Tech - Cursor launches Automations: AI coding automation</a></li>
+    <li><a href="http://m.toutiao.com/group/7667381851081720356/" target="_blank" rel="noopener noreferrer nofollow">Toutiao - Cursor launches automation: AI coding enters the autonomous era</a></li>
+  </ul>
+  <p class="article-sources__note">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，标题、观点、行文均为原创，仅供参考，不构成任何投资建议或决策依据。如有侵权请联系删除。</p>
+</div>
+<div class="article-page__footnote">
+  <p>This article was generated by the Dawn Vision cognitive engine processing 8 source signals, with human editorial review. Sources: Sohu Tech, Toutiao Tech.</p>
+  <p>相关入库笔记：Cursor · Automations · AI coding · autonomous programming · CI auto-fix · agent execution · dev tools</p>
+</div></div>   <blockquote class="article-pull-quote dv-zh"> <p class="article-pull-quote__text">以前是你加班修bug，现在是AI在你睡觉的时候修bug。AI编程工具的终极形态，是把工程师从&quot;操作工&quot;变成&quot;监工&quot;。</p> <cite class="article-pull-quote__attr">—— Dawn Vision编辑部</cite> </blockquote> <blockquote class="article-pull-quote dv-en"> <p class="article-pull-quote__text">Before, you stayed up late fixing bugs. Now AI fixes bugs while you sleep. The ultimate form of AI coding tools is turning engineers from &quot;operators&quot; into &quot;supervisors.&quot;</p> <cite class="article-pull-quote__attr">—— The Dawn Vision Editorial Desk</cite> </blockquote>     <div class="article-cognitive dv-zh">Cursor · Automations · AI编程 · 无人值守编程 · CI自动修复 · 触发器 · Agent自主执行 · 编程工具</div> <div class="article-cognitive dv-en">Cursor · Automations · AI coding · autonomous programming · CI auto-fix · triggers · agent execution · dev tools</div>  <div class="article-sources"> <div class="article-sources__title notranslate"> <span class="dv-zh">Sources · 信源</span> <span class="dv-en">Sources</span> </div> <ul class="article-sources__list"> <li class="article-sources__item"> <a href="https://m.sohu.com/a/993333583_362225/" target="_blank" rel="noopener noreferrer">搜狐科技 - Cursor推出Automations工具：AI编程自动化</a> </li><li class="article-sources__item"> <a href="http://m.toutiao.com/group/7667381851081720356/" target="_blank" rel="noopener noreferrer">今日头条 - Cursor推出自动化功能：AI编程进入无人值守时代</a> </li> </ul>  <p class="article-source-summary dv-zh">本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：搜狐科技、今日头条科技频道。</p> <p class="article-source-summary dv-en">This article was generated by the Dawn Vision cognitive engine processing 8 source signals, with human editorial review. Sources: Sohu Tech, Toutiao Tech.</p> </div>  <div class="article-actions"> <button class="article-action-btn article-action-btn--like" id="article-like-btn" data-slug="cursor-automations-autonomous-coding-triggers" aria-label="喜欢这篇文章"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path> </svg> <span class="article-action-btn__label" data-i18n="like">喜欢</span> <span class="article-action-btn__count" id="like-count">0</span> </button> <button class="article-action-btn article-action-btn--tip" id="article-tip-btn" aria-label="打赏"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon> </svg> <span class="article-action-btn__label" data-i18n="tip">打赏</span> </button> </div>  <nav class="article-nav" aria-label="文章导航"> <a href="/articles/microsoft-q4-earnings-competes-openai-anthropic-mai-models/" class="article-nav__item article-nav__item--prev"> <div class="article-nav__label"> <span class="dv-zh" data-i18n="prev_article">上一篇</span> <span class="dv-en" data-i18n="prev_article">Previous</span> </div> <div class="article-nav__title dv-zh">微软Q4财报摊牌：自研MAI模型、推Mythos竞品，从OpenAI最大投资者变直接对手</div> <div class="article-nav__title dv-en">Microsoft Q4 Earnings Showdown: Homegrown MAI Models, Mythos Competitor — From OpenAI&#39;s Biggest Investor to Direct Rival</div> </a> <a href="/articles/kimi-35b-f-series-35b-valuation-pre-ipo/" class="article-nav__item article-nav__item--next"> <div class="article-nav__label"> <span class="dv-zh" data-i18n="next_article">下一篇</span> <span class="dv-en" data-i18n="next_article">Next</span> </div> <div class="article-nav__title dv-zh">Kimi拿下$35亿F轮：认购超3倍提前关账，估值$350亿，中国大模型的Pre-IPO时刻来了</div> <div class="article-nav__title dv-en">Kimi Closes $3.5B Series F at $35B Valuation: 3x Oversubscribed, China&#39;s LLM Pre-IPO Moment Arrives</div> </a> </nav> </article>  </main> <footer class="footer footer--site" role="contentinfo" data-pagefind-ignore> <div class="footer__container"> <div class="footer__brand notranslate" translate="no">Dawn Vision</div> <div class="footer__meta notranslate" translate="no">© 2026 · Daily at 16:30 CST · Weekdays Only</div> </div> </footer>   <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="搜索文章" hidden> <div class="search-modal" role="document"> <div class="search-modal__input-wrap"> <svg class="search-modal__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="11" cy="11" r="8"></circle> <line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> <input type="search" class="search-modal__input" id="search-input" placeholder="搜索文章、关键词、作者..." autocomplete="off" spellcheck="false" aria-label="搜索关键词"> <span class="search-modal__close-hint">ESC</span> </div> <div class="search-modal__results" id="search-results"> <div class="search-modal__empty">输入关键词开始搜索</div> </div> <div class="search-modal__footer"> <span><kbd>↑</kbd><kbd>↓</kbd> 选择</span> <span><kbd>↵</kbd> 打开</span> <span><kbd>⌘K</kbd> 搜索</span> </div> </div> </div> <!-- Reading progress bar (shown on article pages) --> <div class="reading-progress" id="reading-progress" hidden></div>  <div class="tip-modal" id="tip-modal" hidden> <div class="tip-modal__overlay" data-tip-close></div> <div class="tip-modal__content" role="dialog" aria-modal="true" aria-label="打赏支持"> <button class="tip-modal__close" data-tip-close aria-label="关闭">×</button> <h3 class="tip-modal__title notranslate" translate="no">Tip Jar</h3> <p class="tip-modal__desc">谢谢老板请我喝奶茶 ☕</p> <div class="tip-modal__qr-wrap"> <img src="/images/reward-qr.webp" alt="打赏二维码" class="tip-modal__qr" width="200" height="200"> </div> <p class="tip-modal__thanks">微信扫码打赏，你的支持是持续创作的动力。</p> </div> </div>  <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.Dib_mikw.js"></script>  <script>
+  window.addEventListener('load', function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    bp.src = (curProtocol === 'https' ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js');
+    bp.async = true;
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  });
+  </script> </body> </html>

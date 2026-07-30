@@ -45,10 +45,109 @@
       </view>
     </view>
 
-    <!-- 2. 正文区域 -->
+    <!-- 2. 正文区域（原生组件渲染，完全可控的排版） -->
     <view class="body-section">
       <view class="article-body">
-        <rich-text nodes="{{processedHtml}}"></rich-text>
+        <block wx:for="{{bodyNodes}}" wx:key="index" wx:for-item="node">
+
+          <!-- 段落（首段带 Lede 样式） -->
+          <view class="node-p {{node.isLede ? 'node-lede' : ''}} {{node.isCaption ? 'node-caption' : ''}}" wx:if="{{node.type === 'p'}}">
+            <block wx:for="{{node.children}}" wx:key="index" wx:for-item="child">
+              <text wx:if="{{child.type === 'text'}}" class="inline-text">{{child.content}}</text>
+              <text wx:elif="{{child.type === 'strong'}}" class="inline-strong">{{child.content}}</text>
+              <text wx:elif="{{child.type === 'em'}}" class="inline-em">{{child.content}}</text>
+              <text wx:elif="{{child.type === 'a'}}" class="inline-a">{{child.content}}</text>
+              <text wx:elif="{{child.type === 'code'}}" class="inline-code">{{child.content}}</text>
+              <text wx:elif="{{child.type === 'del'}}" class="inline-del">{{child.content}}</text>
+              <text wx:elif="{{child.type === 'u'}}" class="inline-u">{{child.content}}</text>
+              <text wx:elif="{{child.type === 'small'}}" class="inline-small">{{child.content}}</text>
+              <text wx:elif="{{child.type === 'mark'}}" class="inline-mark">{{child.content}}</text>
+              <text wx:elif="{{child.type === 'sup'}}" class="inline-sup">{{child.content}}</text>
+              <text wx:elif="{{child.type === 'sub'}}" class="inline-sub">{{child.content}}</text>
+              <text wx:else class="inline-text">{{child.content}}</text>
+            </block>
+          </view>
+
+          <!-- H2 标题 -->
+          <view class="node-h2" wx:elif="{{node.type === 'h2'}}">
+            <block wx:for="{{node.children}}" wx:key="index" wx:for-item="child">
+              <text wx:if="{{child.type === 'text'}}" class="h2-text">{{child.content}}</text>
+              <text wx:elif="{{child.type === 'strong'}}" class="h2-strong">{{child.content}}</text>
+              <text wx:else class="h2-text">{{child.content}}</text>
+            </block>
+          </view>
+
+          <!-- H3 标题 -->
+          <view class="node-h3" wx:elif="{{node.type === 'h3'}}">
+            <block wx:for="{{node.children}}" wx:key="index" wx:for-item="child">
+              <text wx:if="{{child.type === 'text'}}" class="h3-text">{{child.content}}</text>
+              <text wx:else class="h3-text">{{child.content}}</text>
+            </block>
+          </view>
+
+          <!-- H1 标题 -->
+          <view class="node-h1" wx:elif="{{node.type === 'h1'}}">
+            <block wx:for="{{node.children}}" wx:key="index" wx:for-item="child">
+              <text class="h1-text">{{child.content}}</text>
+            </block>
+          </view>
+
+          <!-- 引用块 -->
+          <view class="node-blockquote" wx:elif="{{node.type === 'blockquote'}}">
+            <block wx:for="{{node.children}}" wx:key="index" wx:for-item="child">
+              <text wx:if="{{child.type === 'text'}}" class="bq-text">{{child.content}}</text>
+              <text wx:elif="{{child.type === 'strong'}}" class="bq-strong">{{child.content}}</text>
+              <text wx:elif="{{child.type === 'em'}}" class="bq-em">{{child.content}}</text>
+              <text wx:else class="bq-text">{{child.content}}</text>
+            </block>
+          </view>
+
+          <!-- 无序列表 -->
+          <view class="node-list" wx:elif="{{node.type === 'ul'}}">
+            <view class="list-item" wx:for="{{node.items}}" wx:key="index" wx:for-item="li">
+              <text class="list-bullet">·</text>
+              <view class="list-content">
+                <block wx:for="{{li}}" wx:key="i" wx:for-item="span">
+                  <text wx:if="{{span.type === 'text'}}" class="li-text">{{span.content}}</text>
+                  <text wx:elif="{{span.type === 'strong'}}" class="li-strong">{{span.content}}</text>
+                  <text wx:elif="{{span.type === 'em'}}" class="li-em">{{span.content}}</text>
+                  <text wx:else class="li-text">{{span.content}}</text>
+                </block>
+              </view>
+            </view>
+          </view>
+
+          <!-- 有序列表 -->
+          <view class="node-list" wx:elif="{{node.type === 'ol'}}">
+            <view class="list-item" wx:for="{{node.items}}" wx:key="index" wx:for-item="li">
+              <text class="list-num">{{index + 1}}.</text>
+              <view class="list-content">
+                <block wx:for="{{li}}" wx:key="i" wx:for-item="span">
+                  <text wx:if="{{span.type === 'text'}}" class="li-text">{{span.content}}</text>
+                  <text wx:elif="{{span.type === 'strong'}}" class="li-strong">{{span.content}}</text>
+                  <text wx:elif="{{span.type === 'em'}}" class="li-em">{{span.content}}</text>
+                  <text wx:else class="li-text">{{span.content}}</text>
+                </block>
+              </view>
+            </view>
+          </view>
+
+          <!-- 图片 -->
+          <view class="node-img" wx:elif="{{node.type === 'img'}}">
+            <image src="{{node.src}}" mode="widthFix" class="article-image" lazy-load="{{true}}" bindtap="previewImage" data-src="{{node.src}}" />
+          </view>
+
+          <!-- 分割线 -->
+          <view class="node-hr" wx:elif="{{node.type === 'hr'}}"></view>
+
+          <!-- Pull Quote -->
+          <view class="node-pullquote" wx:elif="{{node.type === 'pull-quote'}}">
+            <view class="pq-mark">"</view>
+            <view class="pq-text">{{node.text}}</view>
+            <view class="pq-attr" wx:if="{{node.attr}}">- {{node.attr}}</view>
+          </view>
+
+        </block>
       </view>
     </view>
 

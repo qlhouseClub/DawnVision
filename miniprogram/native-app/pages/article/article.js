@@ -3,6 +3,7 @@ var api = require('../../utils/api.js');
 var format = require('../../utils/format.js');
 var i18nContent = require('../../utils/i18n-content.js');
 var i18nUtil = require('../../utils/i18n.js');
+var htmlParser = require('../../utils/html-parser.js');
 
 Page({
   data: {
@@ -13,6 +14,7 @@ Page({
     issueNumberDisplay: '',
     articleSlug: '',
     processedHtml: '',
+    bodyNodes: [],
     relatedArticles: [],
     errorMsg: '',
     searchVisible: false,
@@ -50,6 +52,15 @@ Page({
     this.loadArticle(issueNum, slug);
   },
 
+  previewImage: function(e) {
+    var src = e.currentTarget.dataset.src;
+    if (!src) return;
+    wx.previewImage({
+      urls: [src],
+      current: src
+    });
+  },
+
   onPullDownRefresh: function() {
     var self = this;
     var data = this.data;
@@ -79,13 +90,13 @@ Page({
 
       // 保存原始数据，提取当前语言版本
       var extracted = i18nContent.extractArticle(article, self.data.lang);
-      var processedHtml = format.processRichTextHtml(extracted.bodyHtml || '');
+      var bodyNodes = htmlParser.parseArticleHtml(extracted.bodyHtml || '');
 
       self.setData({
         loading: false,
         rawArticle: article,
         article: extracted,
-        processedHtml: processedHtml
+        bodyNodes: bodyNodes
       });
 
       // 加载相关推荐
@@ -161,10 +172,10 @@ Page({
     // 如果已有原始数据，直接重新提取（不重新请求网络）
     if (this.data.rawArticle) {
       var extracted = i18nContent.extractArticle(this.data.rawArticle, lang);
-      var processedHtml = format.processRichTextHtml(extracted.bodyHtml || '');
+      var bodyNodes = htmlParser.parseArticleHtml(extracted.bodyHtml || '');
       this.setData({
         article: extracted,
-        processedHtml: processedHtml
+        bodyNodes: bodyNodes
       });
 
       // 重新提取相关推荐
