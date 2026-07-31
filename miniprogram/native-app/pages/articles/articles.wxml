@@ -1,5 +1,13 @@
 <!--pages/articles/articles.wxml-->
 <view class="articles-page">
+  <!-- 新内容通知条 -->
+  <new-content-banner
+    visible="{{newContentVisible}}"
+    issue-number="{{newContentIssue}}"
+    bind:action="onNewContentAction"
+    bind:dismiss="onNewContentDismiss">
+  </new-content-banner>
+
   <!-- 导航 -->
   <dv-nav variant="inner" active="articles"></dv-nav>
 

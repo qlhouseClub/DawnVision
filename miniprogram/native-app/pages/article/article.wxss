@@ -35,7 +35,7 @@
   font-style: italic;
   color: #999999;
   letter-spacing: 2rpx;
-  font-family: 'Noto Serif SC', Georgia, serif;
+  font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
 }
 
 /* ============================================
@@ -119,7 +119,7 @@
   letter-spacing: -0.6rpx;
   color: #ffffff;
   margin-bottom: 28rpx;
-  font-family: 'Noto Serif SC', Georgia, serif;
+  font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
 }
 
 /* Deck：斜体 白色 75% 透明度 */
@@ -129,7 +129,7 @@
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.75);
   margin-bottom: 36rpx;
-  font-family: 'Noto Serif SC', Georgia, serif;
+  font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
 }
 
 /* Meta：10px 大写 白色 50% 透明度 字间距 2px */
@@ -137,6 +137,24 @@
   display: flex;
   align-items: center;
   gap: 16rpx;
+}
+
+/* Hero 英文样式覆盖 */
+.hero.lang-en .hero-title {
+  font-size: 64rpx;
+  line-height: 1.05;
+  letter-spacing: -0.4rpx;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
+}
+
+.hero.lang-en .hero-deck {
+  font-size: 28rpx;
+  line-height: 1.5;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
+}
+
+.hero.lang-en .hero-meta-item {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
 }
 
 .hero-meta-item {
@@ -158,227 +176,408 @@
    ============================================ */
 .body-section {
   background: #ffffff;
-  padding: 80rpx 0 56rpx;
+  padding: 80rpx 0 48rpx;
 }
 
 .article-body {
+  padding: 0 72rpx;
+}
+
+/* ============================================
+   英文排版覆盖
+   英文与中文排版的核心差异：
+   1. 左对齐（窄栏下 justify 会导致字间距不均匀，出现"河流"）
+   2. 字宽更宽（英文最佳 50-75 字符/行）
+   3. 字体栈不同（Georgia/Charter 等西文衬线优先）
+   4. 行高略小（西文 x-height 小，不需要那么大行距）
+   5. 字号整体略小（西文视觉上比中文大）
+   ============================================ */
+.article-body.lang-en {
   padding: 0 56rpx;
+}
+
+/* 英文段落：左对齐 + 行高 1.55 + 段距略小 */
+.article-body.lang-en .node-p {
+  text-align: left;
+  line-height: 1.55;
+  font-size: 30rpx;
+  margin-bottom: 40rpx;
+  letter-spacing: 0;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
+}
+
+/* 英文行内元素：同步字号和行高 */
+.article-body.lang-en .inline-text,
+.article-body.lang-en .inline-strong,
+.article-body.lang-en .inline-em,
+.article-body.lang-en .inline-a,
+.article-body.lang-en .inline-del,
+.article-body.lang-en .inline-u,
+.article-body.lang-en .inline-mark {
+  font-size: 30rpx;
+  line-height: 1.55;
+  letter-spacing: 0;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
+}
+
+.article-body.lang-en .inline-small {
+  font-size: 26rpx;
+  line-height: 1.55;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
+}
+
+.article-body.lang-en .inline-code {
+  font-size: 26rpx;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
+}
+
+.article-body.lang-en .inline-sup {
+  font-size: 22rpx;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
+}
+
+.article-body.lang-en .inline-sub {
+  font-size: 22rpx;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
+}
+
+/* 英文 Lede：左对齐 + 行高更紧 */
+.article-body.lang-en .node-lede {
+  font-size: 36rpx;
+  line-height: 1.45;
+  text-align: left;
+  margin-bottom: 56rpx;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
+}
+
+/* 英文标题：字重稍低 + 行高更紧 + 左对齐 */
+.article-body.lang-en .node-h1,
+.article-body.lang-en .h1-text {
+  font-size: 48rpx;
+  line-height: 1.15;
+  letter-spacing: -0.3rpx;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
+}
+
+.article-body.lang-en .node-h2,
+.article-body.lang-en .h2-text {
+  font-size: 40rpx;
+  line-height: 1.2;
+  letter-spacing: -0.2rpx;
+  margin-top: 80rpx;
+  margin-bottom: 16rpx;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
+}
+
+.article-body.lang-en .h2-strong {
+  font-size: 40rpx;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
+}
+
+.article-body.lang-en .node-h3,
+.article-body.lang-en .h3-text {
+  font-size: 34rpx;
+  line-height: 1.3;
+  letter-spacing: -0.1rpx;
+  margin-top: 56rpx;
+  margin-bottom: 12rpx;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
+}
+
+/* 英文引用块 */
+.article-body.lang-en .node-blockquote,
+.article-body.lang-en .bq-text,
+.article-body.lang-en .bq-strong,
+.article-body.lang-en .bq-em {
+  font-size: 28rpx;
+  line-height: 1.55;
+  text-align: left;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
+}
+
+/* 英文列表 */
+.article-body.lang-en .list-content,
+.article-body.lang-en .li-text,
+.article-body.lang-en .li-strong,
+.article-body.lang-en .li-em {
+  font-size: 28rpx;
+  line-height: 1.55;
+  text-align: left;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
+}
+
+/* 英文 Pull Quote（正文中的） */
+.article-body.lang-en .node-pullquote .pq-text {
+  font-size: 30rpx;
+  line-height: 1.5;
+  text-align: left;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
+}
+
+.article-body.lang-en .node-pullquote .pq-attr {
+  font-size: 22rpx;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+}
+
+/* 英文图片 caption */
+.article-body.lang-en .node-caption {
+  font-size: 24rpx;
+  line-height: 1.5;
+  text-align: center;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
 }
 
 /* ============================================
    正文节点样式 · 垂直韵律系统
    ============================================ */
 
-/* 基准：正文字号 30rpx，行高 1.75 → 1行高 ≈ 52.5rpx */
+/* 基准：正文字号 32rpx，行高 1.6 → 1行高 ≈ 51.2rpx */
 
 /* ---------- 段落 ---------- */
-/* 段距 60rpx（≈ 1.15 行高，清晰换气但不割裂） */
+/* 字号体系基准：32rpx = 16px @375px（移动端阅读黄金字号） */
+/* 字宽：72rpx 两侧边距 → 约 19-21 字/行，舒适阅读宽度 */
+/* 行高：1.6 — 中文衬线体的甜区，段内紧凑有"块感" */
+/* 段距：52rpx ≈ 1 行高 — 轻柔换气，段落边界清晰 */
+/* 无首行缩进 — 段间距是唯一的段落分隔信号 */
+/* 字间距：0.4rpx — 稍微松一点点，提升中文可读性 */
 .node-p {
-  font-size: 30rpx;
-  line-height: 1.75;
+  font-size: 32rpx;
+  line-height: 1.6;
   color: #222;
   text-align: justify;
-  text-indent: 2em;
-  margin-bottom: 60rpx;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  margin-bottom: 52rpx;
+  letter-spacing: 0.4rpx;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 /* 首段：Lede 样式 — 更大字号 + 左侧克莱因蓝竖线 */
+/* 字号差：38rpx vs 32rpx = 1.19x，明确的层级差 */
+/* 字重 700，更有开篇的分量感 */
+/* 负字距：大标题级文字需要收紧字距，显高级感 */
 .node-lede {
-  font-size: 34rpx;
-  line-height: 1.7;
-  color: #111;
-  font-weight: 600;
+  font-size: 38rpx;
+  line-height: 1.5;
+  color: #0a0a0a;
+  font-weight: 700;
   text-indent: 0;
-  padding-left: 22rpx;
-  border-left: 4rpx solid #002FA7;
-  letter-spacing: -0.2rpx;
-  margin-bottom: 72rpx;
+  padding-left: 24rpx;
+  border-left: 5rpx solid #002FA7;
+  letter-spacing: -0.3rpx;
+  margin-bottom: 64rpx;
 }
 
 /* 行内文字样式 */
 .inline-text {
-  font-size: 30rpx;
-  line-height: 1.75;
+  font-size: 32rpx;
+  line-height: 1.6;
   color: #222;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  letter-spacing: 0.4rpx;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 .inline-strong {
   font-weight: 700;
   color: #002FA7;
-  font-size: 30rpx;
-  line-height: 1.75;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  font-size: 32rpx;
+  line-height: 1.6;
+  letter-spacing: 0.4rpx;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 .inline-em {
   font-style: italic;
   color: #222;
-  font-size: 30rpx;
-  line-height: 1.75;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  font-size: 32rpx;
+  line-height: 1.6;
+  letter-spacing: 0.4rpx;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 .inline-a {
   color: #002FA7;
-  text-decoration: underline;
-  font-size: 30rpx;
-  line-height: 1.75;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  text-decoration: none;
+  border-bottom: 1rpx solid rgba(0, 47, 167, 0.4);
+  font-size: 32rpx;
+  line-height: 1.6;
+  letter-spacing: 0.4rpx;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+}
+
+/* 链接点击态包裹 */
+.inline-a-wrap {
+  display: inline;
+  line-height: 1.6;
+}
+
+.inline-a-hover .inline-a {
+  color: #002080;
+  border-bottom-color: rgba(0, 47, 167, 0.8);
 }
 
 .inline-code {
   font-family: 'SF Mono', Menlo, monospace;
-  font-size: 26rpx;
+  font-size: 28rpx;
   background: #f5f5f0;
   padding: 4rpx 10rpx;
   border-radius: 6rpx;
   color: #333;
+  letter-spacing: 0;
 }
 
 .inline-del {
   text-decoration: line-through;
   color: #999;
-  font-size: 30rpx;
-  line-height: 1.75;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  font-size: 32rpx;
+  line-height: 1.6;
+  letter-spacing: 0.4rpx;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 .inline-u {
   text-decoration: underline;
-  font-size: 30rpx;
-  line-height: 1.75;
+  font-size: 32rpx;
+  line-height: 1.6;
   color: #222;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  letter-spacing: 0.4rpx;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 .inline-small {
-  font-size: 26rpx;
+  font-size: 28rpx;
   color: #666;
-  line-height: 1.75;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  line-height: 1.6;
+  letter-spacing: 0.4rpx;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 .inline-mark {
   background: rgba(255, 220, 0, 0.3);
   padding: 2rpx 6rpx;
   border-radius: 4rpx;
-  font-size: 30rpx;
-  line-height: 1.75;
+  font-size: 32rpx;
+  line-height: 1.6;
   color: #222;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  letter-spacing: 0.4rpx;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 .inline-sup {
-  font-size: 22rpx;
+  font-size: 24rpx;
   vertical-align: super;
   color: #002FA7;
   font-weight: 600;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  letter-spacing: 0;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 .inline-sub {
-  font-size: 22rpx;
+  font-size: 24rpx;
   vertical-align: sub;
   color: #222;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  letter-spacing: 0;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 /* ---------- H2 标题 ---------- */
-/* 前距 120rpx（≈ 2.3 行高，章节级大呼吸） */
-/* 后距 36rpx（≈ 0.7 行高，内容贴标题） */
+/* 字号：44rpx（与正文 1.375:1，章节级标题应有足够分量） */
+/* 前距：96rpx ≈ 1.9 行高（章节级大呼吸） */
+/* 后距：20rpx（内容贴标题，层级锐利） */
+/* 竖线：6rpx 粗，与标题 x-height 视觉对齐 */
 .node-h2 {
-  font-size: 38rpx;
+  font-size: 44rpx;
   font-weight: 800;
-  line-height: 1.3;
+  line-height: 1.25;
   color: #0a0a0a;
-  margin-top: 120rpx;
-  margin-bottom: 36rpx;
-  padding-left: 22rpx;
-  border-left: 4rpx solid #002FA7;
-  letter-spacing: -0.3rpx;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  margin-top: 96rpx;
+  margin-bottom: 20rpx;
+  padding-left: 24rpx;
+  border-left: 6rpx solid #002FA7;
+  letter-spacing: -0.5rpx;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 .h2-text {
-  font-size: 38rpx;
+  font-size: 44rpx;
   font-weight: 800;
-  line-height: 1.3;
+  line-height: 1.25;
   color: #0a0a0a;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 .h2-strong {
   font-weight: 900;
   color: #002FA7;
-  font-size: 38rpx;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  font-size: 44rpx;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 /* ---------- H3 标题 ---------- */
-/* 前距 80rpx（≈ 1.5 行高，小节停顿） */
-/* 后距 28rpx（≈ 0.5 行高） */
+/* 字号：36rpx（与正文 1.125:1，小节标题轻量但明确） */
+/* 前距：64rpx ≈ 1.25 行高（小节停顿） */
+/* 后距：16rpx（内容贴标题） */
 .node-h3 {
-  font-size: 32rpx;
+  font-size: 36rpx;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.35;
   color: #0a0a0a;
-  margin-top: 80rpx;
-  margin-bottom: 28rpx;
-  letter-spacing: -0.1rpx;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  margin-top: 64rpx;
+  margin-bottom: 16rpx;
+  letter-spacing: -0.2rpx;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 .h3-text {
-  font-size: 32rpx;
+  font-size: 36rpx;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.35;
   color: #0a0a0a;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 /* ---------- H1 标题 ---------- */
 .node-h1 {
-  font-size: 46rpx;
+  font-size: 52rpx;
   font-weight: 800;
-  line-height: 1.25;
+  line-height: 1.2;
   color: #0a0a0a;
-  margin-top: 100rpx;
-  margin-bottom: 40rpx;
-  letter-spacing: -0.5rpx;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  margin-top: 80rpx;
+  margin-bottom: 24rpx;
+  letter-spacing: -0.6rpx;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 .h1-text {
-  font-size: 46rpx;
+  font-size: 52rpx;
   font-weight: 800;
-  line-height: 1.25;
+  line-height: 1.2;
   color: #0a0a0a;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 /* ---------- 引用块 ---------- */
-/* 前后距 60rpx，与段落间距一致（引用是段落级元素） */
+/* 字号：30rpx（比正文小一号，引用是"低声部"） */
+/* 前后距 56rpx（≈ 1.1 行高，引用是段落级强调元素） */
 .node-blockquote {
-  margin: 60rpx 0;
-  padding: 28rpx 32rpx;
+  margin: 56rpx 0;
+  padding: 24rpx 28rpx;
   border-left: 4rpx solid #002FA7;
   background: rgba(0, 47, 167, 0.05);
   border-radius: 0 8rpx 8rpx 0;
   font-style: italic;
-  line-height: 1.75;
+  line-height: 1.6;
   color: #333;
   font-size: 30rpx;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  letter-spacing: 0.3rpx;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 .bq-text {
   font-size: 30rpx;
-  line-height: 1.75;
+  line-height: 1.6;
   color: #333;
   font-style: italic;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  letter-spacing: 0.3rpx;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 .bq-strong {
@@ -386,30 +585,33 @@
   color: #002FA7;
   font-style: italic;
   font-size: 30rpx;
-  line-height: 1.75;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  line-height: 1.6;
+  letter-spacing: 0.3rpx;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 .bq-em {
   font-style: italic;
   color: #333;
   font-size: 30rpx;
-  line-height: 1.75;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  line-height: 1.6;
+  letter-spacing: 0.3rpx;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 /* ---------- 列表 ---------- */
-/* 前后距 48rpx（比段落略小，列表是段落内的补充） */
+/* 字号：30rpx（比正文小一号，列表密度略高） */
+/* 前后距 40rpx（列表是段落内的补充，密度略高） */
 .node-list {
-  margin: 48rpx 0;
-  padding-left: 16rpx;
+  margin: 40rpx 0;
+  padding-left: 8rpx;
 }
 
 .list-item {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 20rpx;
-  line-height: 1.7;
+  margin-bottom: 16rpx;
+  line-height: 1.6;
 }
 
 .list-item:last-child {
@@ -418,78 +620,121 @@
 
 .list-bullet {
   flex-shrink: 0;
-  width: 32rpx;
+  width: 28rpx;
   font-size: 30rpx;
   color: #002FA7;
   font-weight: 700;
-  line-height: 1.7;
+  line-height: 1.6;
   text-align: center;
 }
 
 .list-num {
   flex-shrink: 0;
-  width: 44rpx;
+  width: 40rpx;
   font-size: 28rpx;
   color: #002FA7;
   font-weight: 700;
-  line-height: 1.7;
+  line-height: 1.6;
   font-family: 'SF Mono', Menlo, monospace;
 }
 
 .list-content {
   flex: 1;
   font-size: 30rpx;
-  line-height: 1.7;
+  line-height: 1.6;
   color: #222;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  letter-spacing: 0.3rpx;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 .li-text {
   font-size: 30rpx;
-  line-height: 1.7;
+  line-height: 1.6;
   color: #222;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  letter-spacing: 0.3rpx;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 .li-strong {
   font-weight: 700;
   color: #002FA7;
   font-size: 30rpx;
-  line-height: 1.7;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  line-height: 1.6;
+  letter-spacing: 0.3rpx;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 .li-em {
   font-style: italic;
   color: #222;
   font-size: 30rpx;
-  line-height: 1.7;
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  line-height: 1.6;
+  letter-spacing: 0.3rpx;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 /* ---------- 图片 ---------- */
+/* 全出血设计，图片突破正文宽度 */
+/* 上下间距 72rpx ≈ 1.5 行高，图片是呼吸点 */
 .node-img {
-  margin: 56rpx -56rpx;
+  margin: 72rpx -72rpx;
 }
 
 .article-image {
   width: 100%;
   display: block;
-  border-radius: 4rpx;
+  border-radius: 0;
+}
+
+/* 图片 caption */
+/* 字号：26rpx = 13px @375px（辅助文字，比正文小两号） */
+.node-caption {
+  font-size: 26rpx;
+  line-height: 1.6;
+  color: #888;
+  font-style: italic;
+  text-align: center;
+  text-indent: 0;
+  margin-top: -48rpx;
+  margin-bottom: 56rpx;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 /* ---------- 分割线 ---------- */
 .node-hr {
-  margin: 72rpx 80rpx;
+  margin: 64rpx 100rpx;
   height: 1rpx;
   background: #E8E8E0;
 }
 
-/* ---------- Pull Quote ---------- */
+/* ---------- 正文结束标记 ---------- */
+/* 正文与补充内容之间的视觉停顿，告诉读者"正文完了" */
+.body-end-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16rpx 0 0;
+}
+
+.body-end-line {
+  flex: 1;
+  height: 1rpx;
+  background: linear-gradient(to right, transparent, #ddd, transparent);
+  max-width: 120rpx;
+}
+
+.body-end-dot {
+  font-size: 18rpx;
+  color: #bbb;
+  margin: 0 20rpx;
+  line-height: 1;
+}
+
+/* ---------- Pull Quote 引用卡片 ---------- */
 .node-pullquote {
   position: relative;
-  margin: 72rpx -16rpx;
-  padding: 56rpx 40rpx 44rpx;
+  margin: 64rpx -24rpx;
+  padding: 48rpx 36rpx 36rpx;
   background: rgba(0, 47, 167, 0.04);
   border-left: 6rpx solid #002FA7;
   border-radius: 0 12rpx 12rpx 0;
@@ -497,30 +742,31 @@
 
 .pq-mark {
   position: absolute;
-  top: 20rpx;
-  left: 32rpx;
-  font-size: 100rpx;
+  top: 16rpx;
+  left: 28rpx;
+  font-size: 80rpx;
   font-weight: 900;
-  color: rgba(0, 47, 167, 0.15);
+  color: rgba(0, 47, 167, 0.12);
   font-family: Georgia, serif;
   line-height: 1;
   user-select: none;
 }
 
 .pq-text {
-  font-family: 'Noto Serif SC', Georgia, serif;
+  font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
   font-size: 32rpx;
-  line-height: 1.65;
+  line-height: 1.6;
   color: #1a1a1a;
-  padding-bottom: 20rpx;
+  padding-bottom: 16rpx;
   font-style: italic;
+  font-weight: 600;
 }
 
 .pq-attr {
   font-size: 24rpx;
-  color: #666;
+  color: #888;
   text-align: right;
-  letter-spacing: 4rpx;
+  letter-spacing: 3rpx;
   font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
 }
 
@@ -528,7 +774,7 @@
    3. Pull Quote 引用卡片
    ============================================ */
 .pull-quote-section {
-  padding: 48rpx 56rpx;
+  padding: 48rpx 72rpx;
 }
 
 .pull-quote-card {
@@ -553,7 +799,7 @@
 }
 
 .pull-quote-text {
-  font-family: 'Noto Serif SC', Georgia, serif;
+  font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
   font-size: 34rpx;
   font-weight: 600;
   font-style: italic;
@@ -569,7 +815,7 @@
   color: #6b6b6b;
   font-style: italic;
   letter-spacing: 1rpx;
-  font-family: 'Noto Serif SC', Georgia, serif;
+  font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
   position: relative;
   z-index: 1;
 }
@@ -578,7 +824,7 @@
    4. 认知笔记区
    ============================================ */
 .cognitive-section {
-  padding: 28rpx 56rpx;
+  padding: 20rpx 72rpx;
 }
 
 .cognitive-card {
@@ -616,14 +862,14 @@
   font-size: 26rpx;
   line-height: 1.8;
   color: #555555;
-  font-family: 'Noto Serif SC', Georgia, serif;
+  font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
 }
 
 /* ============================================
    5. 来源说明区
    ============================================ */
 .source-section {
-  padding: 28rpx 56rpx;
+  padding: 20rpx 72rpx;
 }
 
 .source-card {
@@ -649,7 +895,7 @@
   font-size: 24rpx;
   line-height: 1.8;
   color: #6b6b6b;
-  font-family: 'Noto Serif SC', Georgia, serif;
+  font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
 }
 
 /* 来源链接列表 */
@@ -673,7 +919,7 @@
   font-size: 24rpx;
   line-height: 1.6;
   color: #333333;
-  font-family: 'Noto Serif SC', Georgia, serif;
+  font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
 }
 
 .source-item-url {
@@ -689,7 +935,7 @@
    6. 相关推荐区
    ============================================ */
 .related-section {
-  padding: 68rpx 56rpx 28rpx;
+  padding: 56rpx 72rpx 28rpx;
 }
 
 .related-header {
@@ -751,7 +997,7 @@
 }
 
 .related-item-title {
-  font-family: 'Noto Serif SC', Georgia, serif;
+  font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
   font-size: 30rpx;
   font-weight: 600;
   color: #0a0a0a;
@@ -770,7 +1016,7 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  font-family: 'Noto Serif SC', Georgia, serif;
+  font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
 }
 
 .related-item-arrow {
@@ -826,7 +1072,7 @@
   color: rgba(255, 255, 255, 0.5);
   letter-spacing: 2rpx;
   margin-bottom: 32rpx;
-  font-family: 'Noto Serif SC', Georgia, serif;
+  font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
   position: relative;
   z-index: 1;
 }
@@ -864,5 +1110,89 @@
   font-style: italic;
   color: #999999;
   letter-spacing: 1rpx;
-  font-family: 'Noto Serif SC', Georgia, serif;
+  font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
+}
+
+/* ============================================
+   全局英文排版覆盖
+   ============================================ */
+
+/* Pull Quote 卡片 */
+.page.lang-en .pull-quote-text {
+  font-size: 32rpx;
+  line-height: 1.45;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
+}
+
+.page.lang-en .pull-quote-attr {
+  font-size: 22rpx;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
+}
+
+/* 认知笔记 */
+.page.lang-en .cognitive-content {
+  font-size: 26rpx;
+  line-height: 1.6;
+  text-align: left;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
+}
+
+.page.lang-en .cognitive-label-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+}
+
+/* 来源说明 */
+.page.lang-en .source-content {
+  font-size: 24rpx;
+  line-height: 1.6;
+  text-align: left;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
+}
+
+.page.lang-en .source-label-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+}
+
+.page.lang-en .source-item-text {
+  font-size: 26rpx;
+  line-height: 1.5;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
+}
+
+.page.lang-en .source-item-url {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+}
+
+/* 相关推荐 */
+.page.lang-en .related-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+}
+
+.page.lang-en .related-item-title {
+  font-size: 28rpx;
+  line-height: 1.4;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
+}
+
+.page.lang-en .related-item-deck {
+  font-size: 24rpx;
+  line-height: 1.5;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
+}
+
+.page.lang-en .related-item-cat {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+}
+
+/* 底部品牌块 */
+.page.lang-en .footer-brand {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+}
+
+.page.lang-en .footer-tagline {
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', 'Noto Serif SC', serif;
+}
+
+.page.lang-en .footer-issue {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
 }

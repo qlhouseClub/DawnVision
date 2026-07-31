@@ -61,6 +61,47 @@ Page({
     });
   },
 
+  /**
+   * 点击正文中的链接
+   * 弹出操作菜单：复制链接 / 在浏览器打开
+   */
+  onLinkTap: function(e) {
+    var href = e.currentTarget.dataset.href;
+    if (!href) return;
+
+    var self = this;
+    wx.showActionSheet({
+      itemList: ['复制链接', '在浏览器打开'],
+      success: function(res) {
+        if (res.tapIndex === 0) {
+          // 复制链接
+          wx.setClipboardData({
+            data: href,
+            success: function() {
+              wx.showToast({
+                title: '链接已复制',
+                icon: 'success',
+                duration: 1500
+              });
+            }
+          });
+        } else if (res.tapIndex === 1) {
+          // 在浏览器打开
+          wx.setClipboardData({
+            data: href,
+            success: function() {
+              wx.showToast({
+                title: '链接已复制，请在浏览器粘贴',
+                icon: 'none',
+                duration: 2000
+              });
+            }
+          });
+        }
+      }
+    });
+  },
+
   onPullDownRefresh: function() {
     var self = this;
     var data = this.data;

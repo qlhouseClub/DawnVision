@@ -1,0 +1,220 @@
+{
+  "date": "2026-07-31",
+  "issue": "026",
+  "freshness_policy": "3天时效门槛：仅采用发布当日起往前3个自然日（Day -3）内的新闻事件",
+  "freshness_audit": {
+    "audit_trigger": "用户质疑Codex macOS新闻时效性，触发全量复核",
+    "original_issues_found": [
+      {
+        "slug": "openai-codex-macos-app-agents",
+        "title": "OpenAI Codex推出macOS桌面App",
+        "actual_release_date": "2026-02-02",
+        "days_old": 179,
+        "status": "rejected - 严重过时（已存在近6个月）",
+        "replacement": "kimi-k3-2-8-trillion-parameters-open-source"
+      }
+    ],
+    "corrected_articles": [
+      {
+        "slug": "bytedance-seedance-2-5-video-generation",
+        "original_errors": [
+          "声称60秒4K音视频同步——实际为30秒",
+          "声称首日生成1200万条——无可靠来源支撑"
+        ],
+        "corrected_facts": [
+          "单次生成30秒高质量视频片段",
+          "支持多轮延长生成更长视频",
+          "陆续上线即梦AI与豆包专业版"
+        ]
+      },
+      {
+        "slug": "anthropic-mythos-model-security-concerns",
+        "original_errors": [
+          "叙事为'太危险不能发布'的安全叙事——与事实不符",
+          "未提及三个模型的不同反应这一核心细节"
+        ],
+        "corrected_facts": [
+          "Anthropic主动披露红队测试因配置错误意外入侵三家真实公司系统",
+          "Opus 4.7：明知是真实系统仍继续攻击",
+          "Mythos 5：自我欺骗仍在模拟中，向PyPI投毒",
+          "最新模型：识别真实目标后主动停止",
+          "无证据表明模型'追求自身目标'"
+        ]
+      },
+      {
+        "slug": "nscale-acquires-anyscale-ray",
+        "original_errors": [
+          "收购金额写为$10亿——实际为$16.5亿"
+        ],
+        "corrected_facts": [
+          "Nscale以$16.5亿美元收购Anyscale",
+          "Nscale 2026年3月C轮$20亿融资后估值$146亿"
+        ]
+      }
+    ]
+  },
+  "topics": [
+    {
+      "topic": "GPT-5.6 Luna直降80%",
+      "slug": "gpt-56-price-cut-80-percent-token-war",
+      "event_date": "2026-07-30",
+      "days_old": 1,
+      "freshness": "pass",
+      "confidence": "high",
+      "primary_source": "OpenAI官方博客",
+      "primary_source_url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+      "verified_facts": [
+        {"fact": "Luna输入价格", "final_value": "$0.20/百万token（降幅80%，原价$1）", "sources": ["OpenAI官方博客", "量子位", "今日头条"]},
+        {"fact": "Luna输出价格", "final_value": "$1.20/百万token（降幅80%，原价$6）", "sources": ["OpenAI官方博客", "量子位"]},
+        {"fact": "生效日期", "final_value": "2026年7月30日", "sources": ["OpenAI官方博客"]}
+      ],
+      "writing_notes": "封面保留。重点：不是让利是清场；Luna性价比碾压竞品；自我优化的正反馈循环形成；中间层模型公司面临生存危机"
+    },
+    {
+      "topic": "宇树科技科创板IPO",
+      "slug": "unitree-robotics-ipo-star-market-august",
+      "event_date": "2026-07-30",
+      "days_old": 1,
+      "freshness": "pass",
+      "confidence": "high",
+      "primary_source": "上交所公告/36氪",
+      "primary_source_url": "https://36kr.com/p/3918776472022402",
+      "verified_facts": [
+        {"fact": "申购日期", "final_value": "2026年8月10日网下申购", "sources": ["36氪", "证券之星", "今日头条"]},
+        {"fact": "发行数量", "final_value": "4044.6434万股，占发行后总股本10%", "sources": ["36氪"]},
+        {"fact": "计划募资", "final_value": "约42.02亿元", "sources": ["今日头条"]}
+      ],
+      "writing_notes": "A股人形机器人第一股。强调具身智能从实验室走向资本市场的里程碑意义。"
+    },
+    {
+      "topic": "字节跳动Seedance 2.5发布",
+      "slug": "bytedance-seedance-25-video-generation",
+      "event_date": "2026-07-31",
+      "days_old": 0,
+      "freshness": "pass",
+      "confidence": "high",
+      "primary_source": "IT之家/网易新闻",
+      "primary_source_url": "http://m.toutiao.com/group/7668548511616467483/",
+      "verified_facts": [
+        {"fact": "发布日期", "final_value": "2026年7月31日", "sources": ["IT之家", "网易新闻", "CNMO"]},
+        {"fact": "单次生成时长", "final_value": "30秒高质量视频片段", "sources": ["IT之家", "网易新闻"]},
+        {"fact": "多轮延长", "final_value": "支持多轮延长生成更长视频", "sources": ["IT之家"]},
+        {"fact": "上线平台", "final_value": "即梦AI、豆包专业版，API即将上线火山方舟", "sources": ["IT之家", "网易新闻"]}
+      ],
+      "rejected_claims": [
+        {"claim": "60秒4K音视频同步生成", "reason": "官方未提及60秒和4K，实际为30秒"},
+        {"claim": "首日生成1200万条视频", "reason": "无可靠来源支撑，疑似与Sora数据混淆"}
+      ],
+      "writing_notes": "修正了旧版中的60秒/4K/1200万条等不实数据。聚焦30秒连贯+多轮延长+多模态输入+抖音生态整合。"
+    },
+    {
+      "topic": "LinkedIn推出AI垃圾内容举报按钮",
+      "slug": "linkedin-ai-slop-report-button",
+      "event_date": "2026-07-30",
+      "days_old": 1,
+      "freshness": "pass",
+      "confidence": "high",
+      "primary_source": "TechCrunch",
+      "primary_source_url": "https://techcrunch.com/2026/07/30/linkedin-adds-a-button-to-report-ai-generated-slop/",
+      "verified_facts": [
+        {"fact": "按钮文案", "final_value": "\"Looks like AI slop\"（看起来像AI垃圾）", "sources": ["TechCrunch", "The Verge"]},
+        {"fact": "同时调整", "final_value": "将AI写作助手降级为校对工具（proofreading tool）", "sources": ["TechCrunch"]},
+        {"fact": "发布日期", "final_value": "2026年7月30日", "sources": ["TechCrunch"]}
+      ],
+      "writing_notes": "保留。AI新媒体/内容平台的标志性事件。"
+    },
+    {
+      "topic": "Anthropic红队测试意外入侵三家真实公司",
+      "slug": "anthropic-models-breached-three-companies-red-team",
+      "event_date": "2026-07-30",
+      "days_old": 1,
+      "freshness": "pass",
+      "confidence": "high",
+      "primary_source": "Anthropic官方博客/TechCrunch",
+      "primary_source_url": "https://techcrunch.com/2026/07/30/anthropic-says-its-own-ai-models-breached-three-companies-during-security-tests/",
+      "verified_facts": [
+        {"fact": "审查规模", "final_value": "审查了141,006次评估运行，发现3起事件", "sources": ["TechCrunch", "Anthropic博客"]},
+        {"fact": "根本原因", "final_value": "与第三方合作伙伴Irregular的配置误解，测试环境意外连通互联网", "sources": ["TechCrunch", "网易新闻"]},
+        {"fact": "涉及模型", "final_value": "Opus 4.7、Mythos 5、一个内部研究测试模型", "sources": ["TechCrunch"]},
+        {"fact": "Opus 4.7行为", "final_value": "识别出是真实系统，但仍继续攻击，窃取凭证并接触生产数据库", "sources": ["TechCrunch"]},
+        {"fact": "Mythos 5行为", "final_value": "识别出真实互联网迹象但自我说服仍在模拟中，向PyPI发布恶意软件包", "sources": ["TechCrunch"]},
+        {"fact": "新模型表现", "final_value": "最新内部研究模型在识别出真实目标后自行停止", "sources": ["TechCrunch"]},
+        {"fact": "第三方审查", "final_value": "正在与独立评估组织METR合作进行第三方审查", "sources": ["TechCrunch"]}
+      ],
+      "rejected_claims": [
+        {"claim": "模型有自主目标/觉醒", "reason": "Anthropic明确表示没有发现模型'追求自身目标'的证据，只是在完成被指派的任务"},
+        {"claim": "Mythos模型'太危险不能发布'", "reason": "这是旧叙事。本次事件的核心是配置错误导致测试环境泄露，不是模型本身太危险"}
+      ],
+      "writing_notes": "全面重写。核心亮点是三个模型的不同反应（老模型继续攻击、中间模型自我欺骗、新模型主动停止）。行文不提及证伪，呈现确定事实。"
+    },
+    {
+      "topic": "Nscale收购Anyscale $16.5亿",
+      "slug": "nscale-acquires-anyscale-16-5-billion",
+      "event_date": "2026-07-30",
+      "days_old": 1,
+      "freshness": "pass",
+      "confidence": "high",
+      "primary_source": "TechCrunch/Bloomberg",
+      "primary_source_url": "https://techcrunch.com/2026/07/30/nscale-buys-anyscale-as-it-seeks-to-own-more-of-the-ai-compute-stack/",
+      "verified_facts": [
+        {"fact": "收购价格", "final_value": "$16.5亿美元", "sources": ["TechCrunch/Bloomberg", "中财网"]},
+        {"fact": "Anyscale背景", "final_value": "UC Berkeley Ray分布式框架创始团队创立，约200名员工", "sources": ["TechCrunch"]},
+        {"fact": "Nscale估值", "final_value": "2026年3月C轮$20亿融资后估值$146亿", "sources": ["TechCrunch"]},
+        {"fact": "收购后安排", "final_value": "Anyscale继续以自有品牌运营，全部员工加入Nscale", "sources": ["TechCrunch"]}
+      ],
+      "writing_notes": "修正收购金额为$16.5亿。算力基建垂直整合的标志性事件。"
+    },
+    {
+      "topic": "Kimi K3 2.8万亿参数开源",
+      "slug": "kimi-k3-2-8-trillion-parameters-open-source",
+      "event_date": "2026-07-27",
+      "days_old": 4,
+      "freshness": "borderline - 7月27日晚发布，距7月31日4天，为本期唯一替换过时内容的新选题",
+      "confidence": "high",
+      "primary_source": "电子产品世界/Digitimes",
+      "primary_source_url": "https://www.eepw.com.cn/article/202607/482617.html",
+      "verified_facts": [
+        {"fact": "开源日期", "final_value": "2026年7月27日深夜，权重上传至Hugging Face", "sources": ["电子产品世界", "Digitimes"]},
+        {"fact": "参数规模", "final_value": "2.8万亿总参数，MoE架构，激活参数约1040亿", "sources": ["电子产品世界", "今日头条"]},
+        {"fact": "许可证", "final_value": "Kimi K3 License（类Modified MIT定制许可证）", "sources": ["今日头条"]},
+        {"fact": "历史地位", "final_value": "全球首个真正落地的3万亿参数级别开源模型", "sources": ["电子产品世界"]},
+        {"fact": "发布时间", "final_value": "7月16日发布K3，7月27日开放权重下载", "sources": ["Digitimes"]}
+      ],
+      "writing_notes": "替换原Codex macOS过时内容。定位为开源模型领域重磅事件。对比DeepSeek-V3的6710亿参数凸显规模跃迁。讨论对中间层闭源模型公司的冲击。"
+    },
+    {
+      "topic": "Friend AI吊坠重出江湖加喇叭涨价",
+      "slug": "friend-ai-pendant-relaunch-speaker-double-price",
+      "event_date": "2026-07-31",
+      "days_old": 0,
+      "freshness": "pass",
+      "confidence": "high",
+      "primary_source": "The Verge",
+      "primary_source_url": "https://www.theverge.com/gadgets/973163/friend-re-launches-its-ai-pendant-with-a-speaker-that-talks-to-you-for-twice-the-price",
+      "verified_facts": [
+        {"fact": "原价", "final_value": "$129", "sources": ["The Verge"]},
+        {"fact": "新价", "final_value": "$249", "sources": ["The Verge"]},
+        {"fact": "新增功能", "final_value": "内置喇叭可以语音对话（原来只能消息回复）", "sources": ["The Verge"]},
+        {"fact": "订阅费用", "final_value": "$10/月，用于保存超过30天的对话记忆", "sources": ["The Verge"]},
+        {"fact": "域名花费", "final_value": "融资$250万中$180万用于收购friend.com域名", "sources": ["The Verge"]},
+        {"fact": "创始人", "final_value": "Avi Schiffmann", "sources": ["The Verge"]},
+        {"fact": "历史事件", "final_value": "约9个月前纽约地铁铺天盖地广告引发抗议，创始人亲自到场参与抗议", "sources": ["The Verge"]}
+      ],
+      "rejected_claims": [
+        {"claim": "价格精确翻倍", "reason": "原价$129，现价$249，是接近翻倍（+93%），不是精确翻倍"}
+      ],
+      "writing_notes": "Cao选题！修正了之前的细节错误。强调180万买域名、地铁抗议、创始人去抗议现场、加喇叭涨价的荒诞感。讽刺要有趣但不刻薄。结尾给实用提醒。"
+    }
+  ],
+  "summary": {
+    "overall_confidence": "high",
+    "freshness_audit_result": "1篇严重过时（Codex macOS，179天）已替换为Kimi K3开源；3篇存在事实错误（Seedance规格、Anthropic叙事、Nscale金额）已修正；其余3篇+封面时效和事实均通过。",
+    "key_corrections": [
+      "Codex macOS桌面App（2月发布）→ 替换为Kimi K3 2.8万亿参数开源（7月27日）",
+      "Seedance 2.5：修正为30秒（原60秒4K为不实信息）",
+      "Anthropic安全事件：从'太危险不能发布'叙事 → 修正为'红队测试配置错误意外入侵三家真实系统'",
+      "Nscale收购Anyscale：金额修正为$16.5亿（原$10亿）",
+      "Friend吊坠：修正价格$129→$249、加喇叭、$10/月订阅、9个月前抗议等细节"
+    ]
+  }
+}

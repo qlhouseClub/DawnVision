@@ -170,7 +170,7 @@ function processRichTextHtml(html) {
   );
   result = result.replace(
     /class="pull-quote-text"/g,
-    'style="font-family:Noto Serif SC,Georgia,serif;font-size:32rpx;line-height:1.65;color:#1a1a1a;padding-bottom:16rpx;font-style:italic;"'
+    'style="font-family:Source Serif 4,Noto Serif SC,Georgia,serif;font-size:32rpx;line-height:1.65;color:#1a1a1a;padding-bottom:16rpx;font-style:italic;"'
   );
   result = result.replace(
     /class="pull-quote-attr"/g,
@@ -181,11 +181,11 @@ function processRichTextHtml(html) {
   // 后距靠标题自身行高，内容紧贴标题
   result = result.replace(
     /<h1>/g,
-    '<h1 style="font-family:Noto Serif SC,Source Han Serif SC,Georgia,serif;font-size:46rpx;font-weight:800;line-height:1.2;color:#0a0a0a;letter-spacing:-0.5rpx;">'
+    '<h1 style="font-family:Source Serif 4,Noto Serif SC,Source Han Serif SC,Georgia,serif;font-size:46rpx;font-weight:800;line-height:1.2;color:#0a0a0a;letter-spacing:-0.5rpx;">'
   );
   result = result.replace(
     /<h1 /g,
-    '<h1 style="font-family:Noto Serif SC,Source Han Serif SC,Georgia,serif;font-size:46rpx;font-weight:800;line-height:1.2;color:#0a0a0a;letter-spacing:-0.5rpx;" '
+    '<h1 style="font-family:Source Serif 4,Noto Serif SC,Source Han Serif SC,Georgia,serif;font-size:46rpx;font-weight:800;line-height:1.2;color:#0a0a0a;letter-spacing:-0.5rpx;" '
   );
 
   // ---- H2 标题：左侧克莱因蓝竖线 ----
@@ -193,22 +193,22 @@ function processRichTextHtml(html) {
   // 后距靠行高，内容贴标题
   result = result.replace(
     /<h2>/g,
-    '<h2 style="font-family:Noto Serif SC,Source Han Serif SC,Georgia,serif;font-size:38rpx;font-weight:800;line-height:1.25;color:#0a0a0a;border-left:4px solid #002FA7;padding-left:22rpx;letter-spacing:-0.3rpx;">'
+    '<h2 style="font-family:Source Serif 4,Noto Serif SC,Source Han Serif SC,Georgia,serif;font-size:38rpx;font-weight:800;line-height:1.25;color:#0a0a0a;border-left:4px solid #002FA7;padding-left:22rpx;letter-spacing:-0.3rpx;">'
   );
   result = result.replace(
     /<h2 /g,
-    '<h2 style="font-family:Noto Serif SC,Source Han Serif SC,Georgia,serif;font-size:38rpx;font-weight:800;line-height:1.25;color:#0a0a0a;border-left:4px solid #002FA7;padding-left:22rpx;letter-spacing:-0.3rpx;" '
+    '<h2 style="font-family:Source Serif 4,Noto Serif SC,Source Han Serif SC,Georgia,serif;font-size:38rpx;font-weight:800;line-height:1.25;color:#0a0a0a;border-left:4px solid #002FA7;padding-left:22rpx;letter-spacing:-0.3rpx;" '
   );
 
   // ---- H3 标题 ----
   // 前距 3br（小节停顿）
   result = result.replace(
     /<h3>/g,
-    '<h3 style="font-family:Noto Serif SC,Source Han Serif SC,Georgia,serif;font-size:32rpx;font-weight:700;line-height:1.35;color:#0a0a0a;">'
+    '<h3 style="font-family:Source Serif 4,Noto Serif SC,Source Han Serif SC,Georgia,serif;font-size:32rpx;font-weight:700;line-height:1.35;color:#0a0a0a;">'
   );
   result = result.replace(
     /<h3 /g,
-    '<h3 style="font-family:Noto Serif SC,Source Han Serif SC,Georgia,serif;font-size:32rpx;font-weight:700;line-height:1.35;color:#0a0a0a;" '
+    '<h3 style="font-family:Source Serif 4,Noto Serif SC,Source Han Serif SC,Georgia,serif;font-size:32rpx;font-weight:700;line-height:1.35;color:#0a0a0a;" '
   );
 
   // ---- Strong 加粗：克莱因蓝色 ----
@@ -268,11 +268,11 @@ function processRichTextHtml(html) {
   // 首行缩进 2em，两端对齐
   result = result.replace(
     /<p>/g,
-    '<p style="margin:0;padding:0;line-height:1.75;font-size:30rpx;color:#222;text-align:justify;text-indent:2em;font-family:Noto Serif SC,Source Han Serif SC,Georgia,serif;">'
+    '<p style="margin:0;padding:0;line-height:1.75;font-size:30rpx;color:#222;text-align:justify;text-indent:2em;font-family:Source Serif 4,Noto Serif SC,Source Han Serif SC,Georgia,serif;">'
   );
   result = result.replace(
     /<p /g,
-    '<p style="margin:0;padding:0;line-height:1.75;font-size:30rpx;color:#222;text-align:justify;text-indent:2em;font-family:Noto Serif SC,Source Han Serif SC,Georgia,serif;" '
+    '<p style="margin:0;padding:0;line-height:1.75;font-size:30rpx;color:#222;text-align:justify;text-indent:2em;font-family:Source Serif 4,Noto Serif SC,Source Han Serif SC,Georgia,serif;" '
   );
 
   // ---- 首段 Lede 样式 ----
@@ -280,7 +280,7 @@ function processRichTextHtml(html) {
   // 作为文章的"视觉锚点"
   result = result.replace(
     /(<p style="[^"]*">)/,
-    '<p style="font-size:34rpx;line-height:1.7;color:#111;font-weight:600;margin:0;padding:0 0 0 22rpx;border-left:4px solid #002FA7;text-align:justify;text-indent:0;font-family:Noto Serif SC,Source Han Serif SC,Georgia,serif;letter-spacing:-0.2rpx;">'
+    '<p style="font-size:34rpx;line-height:1.7;color:#111;font-weight:600;margin:0;padding:0 0 0 22rpx;border-left:4px solid #002FA7;text-align:justify;text-indent:0;font-family:Source Serif 4,Noto Serif SC,Source Han Serif SC,Georgia,serif;letter-spacing:-0.2rpx;">'
   );
 
   return result;

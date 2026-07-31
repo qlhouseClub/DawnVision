@@ -1,5 +1,5 @@
 <!--pages/article/article.wxml-->
-<view class="page">
+<view class="page lang-{{lang}}">
 
   <!-- 加载中 -->
   <view class="loading-wrap" wx:if="{{loading}}">
@@ -10,7 +10,7 @@
   <block wx:if="{{!loading && article}}">
 
     <!-- 1. 克莱因蓝 Hero 区 -->
-    <view class="hero">
+    <view class="hero lang-{{lang}}">
       <dv-nav variant="home" active=""></dv-nav>
 
       <!-- 背景光斑 -->
@@ -47,7 +47,7 @@
 
     <!-- 2. 正文区域（原生组件渲染，完全可控的排版） -->
     <view class="body-section">
-      <view class="article-body">
+      <view class="article-body lang-{{lang}}">
         <block wx:for="{{bodyNodes}}" wx:key="index" wx:for-item="node">
 
           <!-- 段落（首段带 Lede 样式） -->
@@ -56,7 +56,9 @@
               <text wx:if="{{child.type === 'text'}}" class="inline-text">{{child.content}}</text>
               <text wx:elif="{{child.type === 'strong'}}" class="inline-strong">{{child.content}}</text>
               <text wx:elif="{{child.type === 'em'}}" class="inline-em">{{child.content}}</text>
-              <text wx:elif="{{child.type === 'a'}}" class="inline-a">{{child.content}}</text>
+              <view wx:elif="{{child.type === 'a'}}" class="inline-a-wrap" hover-class="inline-a-hover" data-href="{{child.href}}" bindtap="onLinkTap">
+                <text class="inline-a">{{child.content}}</text>
+              </view>
               <text wx:elif="{{child.type === 'code'}}" class="inline-code">{{child.content}}</text>
               <text wx:elif="{{child.type === 'del'}}" class="inline-del">{{child.content}}</text>
               <text wx:elif="{{child.type === 'u'}}" class="inline-u">{{child.content}}</text>
@@ -134,7 +136,7 @@
 
           <!-- 图片 -->
           <view class="node-img" wx:elif="{{node.type === 'img'}}">
-            <image src="{{node.src}}" mode="widthFix" class="article-image" lazy-load="{{true}}" bindtap="previewImage" data-src="{{node.src}}" />
+            <image src="{{node.src}}" mode="widthFix" class="article-image" lazy-load="{{true}}" bindtap="previewImage" data-src="{{node.src}}" aria-label="{{node.alt || '文章配图'}}" />
           </view>
 
           <!-- 分割线 -->
@@ -148,6 +150,13 @@
           </view>
 
         </block>
+      </view>
+
+      <!-- 正文结束标记 · 视觉停顿 -->
+      <view class="body-end-mark" wx:if="{{bodyNodes.length > 0}}">
+        <view class="body-end-line"></view>
+        <view class="body-end-dot">◆</view>
+        <view class="body-end-line"></view>
       </view>
     </view>
 

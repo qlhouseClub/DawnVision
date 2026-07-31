@@ -71,6 +71,11 @@ const messages = {
     // 底部品牌
     'footer.brand': 'DAWN VISION',
     'footer.tagline': '穿越嘈杂，洞见留声',
+    // 新内容通知
+    'newContent.title': '有新内容发布',
+    'newContent.desc': '新一期已上线，点击查看',
+    'newContent.action': '查看',
+    'newContent.dismiss': '稍后',
   },
   en: {
     // Search
@@ -142,6 +147,11 @@ const messages = {
     // Footer
     'footer.brand': 'DAWN VISION',
     'footer.tagline': 'Through the Clamor, Insight Echoes.',
+    // New content banner
+    'newContent.title': 'New content available',
+    'newContent.desc': 'A new issue has been published.',
+    'newContent.action': 'View',
+    'newContent.dismiss': 'Later',
   }
 };
 

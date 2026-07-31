@@ -26,7 +26,9 @@ Page({
     lang: 'zh',
     i18n: {},
     hasPrev: false,
-    hasNext: false
+    hasNext: false,
+    newContentVisible: false,
+    newContentIssue: 0
   },
 
   onLoad: function() {
@@ -41,9 +43,77 @@ Page({
   },
 
   onShow: function() {
+    // 无数据时正常加载
     if (!this.data.currentIssueData && !this.data.loading) {
       this.loadData();
+      return;
     }
+    // 有数据时，检查缓存年龄，超过1小时则后台静默刷新
+    if (this._rawIssues && this._rawIssues.length > 0) {
+      var age = api.getCacheAgeHours('dv_issues_v2');
+      if (age > 1) {
+        this._backgroundRefresh();
+      }
+    }
+  },
+
+  /**
+   * 后台静默刷新期数列表
+   * 有新内容时显示通知条，用户点击后才切换
+   */
+  _backgroundRefresh: function() {
+    var self = this;
+    api.getIssues(true).then(function(rawIssues) {
+      if (!rawIssues || rawIssues.length === 0) return;
+
+      var oldLatest = self._rawIssues && self._rawIssues[0]
+        ? self._rawIssues[0].issue.number : 0;
+      var newLatest = rawIssues[0].issue.number;
+
+      // 期数变多了（有新一期），显示通知条
+      if (newLatest > oldLatest && oldLatest > 0) {
+        self._pendingNewIssues = rawIssues;
+        self.setData({
+          newContentVisible: true,
+          newContentIssue: newLatest
+        });
+      }
+    }).catch(function(err) {
+      console.warn('后台刷新期数列表失败', err);
+    });
+  },
+
+  /**
+   * 用户点击通知条"查看"按钮
+   */
+  onNewContentAction: function() {
+    var self = this;
+    var rawIssues = this._pendingNewIssues;
+    if (!rawIssues || rawIssues.length === 0) {
+      this.setData({ newContentVisible: false });
+      return;
+    }
+
+    this._rawIssues = rawIssues;
+    this._applyIssues();
+    this._buildFilterTree();
+
+    var latestNum = rawIssues[0].issue.number;
+    this.loadIssueDetail(latestNum);
+    this._syncFilterToIssue(latestNum);
+
+    this.setData({ newContentVisible: false });
+    this._pendingNewIssues = null;
+
+    wx.pageScrollTo({ scrollTop: 0, duration: 300 });
+  },
+
+  /**
+   * 用户关闭通知条
+   */
+  onNewContentDismiss: function() {
+    this.setData({ newContentVisible: false });
+    this._pendingNewIssues = null;
   },
 
   onPullDownRefresh: function() {

@@ -1,5 +1,13 @@
 <!--pages/index/index.wxml-->
 <view class="home-page">
+  <!-- 新内容通知条 -->
+  <new-content-banner
+    visible="{{newContentVisible}}"
+    issue-number="{{newContentIssue}}"
+    bind:action="onNewContentAction"
+    bind:dismiss="onNewContentDismiss">
+  </new-content-banner>
+
   <!-- 全屏克莱因蓝 Hero -->
   <view class="hero">
     <!-- 自定义导航（home 变体：透明叠在 Hero 上） -->

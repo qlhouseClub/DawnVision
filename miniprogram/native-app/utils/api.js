@@ -45,7 +45,7 @@ function getIssues(forceRefresh) {
   }
   return request({ url: '/issues' }).then(function(data) {
     if (data && data.length > 0 && data[0] && data[0].issue) {
-      setToCache(cacheKey, data, 24);
+      setToCache(cacheKey, data, 6);
     }
     return data || [];
   }).catch(function(err) {
@@ -59,11 +59,23 @@ function getIssues(forceRefresh) {
 /**
  * 获取最新一期封面
  */
-function getLatestCover() {
+function getLatestCover(forceRefresh) {
+  var cacheKey = 'dv_latest_v2';
+  if (!forceRefresh) {
+    var cached = getFromCache(cacheKey);
+    if (cached) {
+      return Promise.resolve(cached);
+    }
+  }
   return request({ url: '/latest' }).then(function(data) {
+    if (data) {
+      setToCache(cacheKey, data, 6);
+    }
     return data;
   }).catch(function(err) {
     console.error('获取最新封面失败', err);
+    var cached = getFromCache(cacheKey);
+    if (cached) return cached;
     throw err;
   });
 }
@@ -182,6 +194,20 @@ function getFromCache(key) {
   }
 }
 
+/**
+ * 获取缓存年龄（小时）
+ * 用于判断是否需要后台静默刷新
+ */
+function getCacheAgeHours(key) {
+  try {
+    var cached = wx.getStorageSync(key);
+    if (!cached || !cached.timestamp) return 999;
+    return (Date.now() - cached.timestamp) / (60 * 60 * 1000);
+  } catch (e) {
+    return 999;
+  }
+}
+
 module.exports = {
   BASE_URL: BASE_URL,
   request: request,
@@ -192,5 +218,6 @@ module.exports = {
   getCaoList: getCaoList,
   search: search,
   setToCache: setToCache,
-  getFromCache: getFromCache
+  getFromCache: getFromCache,
+  getCacheAgeHours: getCacheAgeHours
 };

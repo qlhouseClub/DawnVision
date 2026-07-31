@@ -52,7 +52,7 @@
   font-style: italic;
   color: #6b6b6b;
   line-height: 1.7;
-  font-family: 'Noto Serif SC', Georgia, serif;
+  font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
 }
 
 /* ============================================
@@ -72,7 +72,7 @@
   font-size: 28rpx;
   line-height: 1.8;
   color: #6b6b6b;
-  font-family: 'Noto Serif SC', Georgia, serif;
+  font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
   max-width: 520rpx;
   margin: 0 auto 48rpx;
   text-align: center;
@@ -148,7 +148,7 @@
   font-style: italic;
   color: #6b6b6b;
   opacity: 0.8;
-  font-family: 'Noto Serif SC', Georgia, serif;
+  font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
 }
 
 .about-tipjar-hint {

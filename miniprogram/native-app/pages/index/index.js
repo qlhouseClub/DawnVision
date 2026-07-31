@@ -11,7 +11,9 @@ Page({
     error: '',
     searchVisible: false,
     lang: 'zh',
-    i18n: {}
+    i18n: {},
+    newContentVisible: false,
+    newContentIssue: 0
   },
 
   onLoad: function() {
@@ -22,6 +24,71 @@ Page({
       i18n: i18nUtil.getMessages(lang)
     });
     this.loadData();
+  },
+
+  onShow: function() {
+    // 已有数据时，检查缓存年龄，超过1小时则后台静默刷新
+    if (this.data.latestIssue) {
+      var age = api.getCacheAgeHours('dv_latest_v2');
+      if (age > 1) {
+        this._backgroundRefresh();
+      }
+    }
+  },
+
+  /**
+   * 后台静默刷新最新封面
+   * 有新内容时显示通知条，用户点击后才更新
+   */
+  _backgroundRefresh: function() {
+    var self = this;
+    api.getLatestCover(true).then(function(data) {
+      if (!data) return;
+
+      var oldNum = self.data.latestIssue ? self.data.latestIssue.number : 0;
+      var newNum = data.issue ? data.issue.number : 0;
+
+      // 期数变多了，显示通知条（不直接替换，用户点击"查看"才更新）
+      if (newNum > oldNum && oldNum > 0) {
+        self._pendingNewData = data;
+        self.setData({
+          newContentVisible: true,
+          newContentIssue: newNum
+        });
+      }
+    }).catch(function(err) {
+      console.warn('后台刷新最新封面失败', err);
+    });
+  },
+
+  /**
+   * 用户点击通知条"查看"按钮
+   */
+  onNewContentAction: function() {
+    var data = this._pendingNewData;
+    if (!data) {
+      this.setData({ newContentVisible: false });
+      return;
+    }
+
+    var extracted = i18nContent.extractCover(data, this.data.lang);
+    this.setData({
+      latestIssue: extracted.issue,
+      latestCover: extracted.cover,
+      newContentVisible: false
+    });
+    this._pendingNewData = null;
+
+    // 滚到顶部
+    wx.pageScrollTo({ scrollTop: 0, duration: 300 });
+  },
+
+  /**
+   * 用户关闭通知条
+   */
+  onNewContentDismiss: function() {
+    this.setData({ newContentVisible: false });
+    this._pendingNewData = null;
   },
 
   onPullDownRefresh: function() {
@@ -43,24 +110,11 @@ Page({
         return;
       }
 
-      // 提取当前语言的封面数据
-      var coverData = data.cover ? {
-        slug: data.cover.slug,
-        title: self.data.lang === 'en'
-          ? (data.cover.title_short_en || data.cover.title_en || data.cover.title)
-          : (data.cover.title_short || data.cover.title),
-        deck: self.data.lang === 'en'
-          ? (data.cover.deck_en || data.cover.deck)
-          : data.cover.deck,
-        readTime: self.data.lang === 'en'
-          ? (data.cover.read_time_en || data.cover.read_time)
-          : data.cover.read_time
-      } : null;
-
+      var extracted = i18nContent.extractCover(data, self.data.lang);
       self.setData({
         loading: false,
-        latestIssue: data.issue,
-        latestCover: coverData
+        latestIssue: extracted.issue,
+        latestCover: extracted.cover
       });
     }).catch(function(err) {
       console.error('加载失败', err);

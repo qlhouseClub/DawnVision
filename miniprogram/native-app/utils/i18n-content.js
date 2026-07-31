@@ -9,6 +9,17 @@
 //
 // 当 lang='zh' 时用中文字段，lang='en' 时用英文字段（英文为空则回退中文）
 
+var htmlParser = require('./html-parser.js');
+
+/**
+ * 给中文文本加中英文空格（仅中文模式）
+ * 英文模式直接返回原文（英文不需要）
+ */
+function cjkSpace(text, isEn) {
+  if (isEn) return text || '';
+  return htmlParser.addCjkSpacingText(text || '');
+}
+
 /**
  * 从文章对象提取当前语言的展示数据
  * @param {object} article - 数据库返回的原始文章对象
@@ -21,14 +32,14 @@ function extractArticle(article, lang) {
   var isEn = lang === 'en';
 
   // 标题：英文为空时回退中文
-  var title = isEn ? (article.title_en || article.title) : article.title;
-  var titleShort = isEn ? (article.title_short_en || article.title_short) : (article.title_short || article.title);
-  var deck = isEn ? (article.deck_en || article.deck) : article.deck;
+  var title = cjkSpace(isEn ? (article.title_en || article.title) : article.title, isEn);
+  var titleShort = cjkSpace(isEn ? (article.title_short_en || article.title_short) : (article.title_short || article.title), isEn);
+  var deck = cjkSpace(isEn ? (article.deck_en || article.deck) : article.deck, isEn);
   var bodyHtml = isEn ? (article.body_html_en || article.body_html) : article.body_html;
-  var readTime = isEn ? (article.read_time_en || article.read_time) : article.read_time;
-  var cognitiveNotes = isEn ? (article.cognitive_notes_en || article.cognitive_notes) : article.cognitive_notes;
-  var sourceSummary = isEn ? (article.source_summary_en || article.source_summary) : article.source_summary;
-  var keywords = isEn ? (article.keywords_en || article.keywords) : article.keywords;
+  var readTime = cjkSpace(isEn ? (article.read_time_en || article.read_time) : article.read_time, isEn);
+  var cognitiveNotes = cjkSpace(isEn ? (article.cognitive_notes_en || article.cognitive_notes) : article.cognitive_notes, isEn);
+  var sourceSummary = cjkSpace(isEn ? (article.source_summary_en || article.source_summary) : article.source_summary, isEn);
+  var keywords = cjkSpace(isEn ? (article.keywords_en || article.keywords) : article.keywords, isEn);
 
   // 分类
   var category = '';
@@ -38,28 +49,34 @@ function extractArticle(article, lang) {
     category = isEn ? 'Cao!' : '槽点';
   } else {
     // brief
-    category = isEn ? (article.category_en || article.category || 'Brief') : (article.category || '资讯');
+    category = cjkSpace(isEn ? (article.category_en || article.category || 'Brief') : (article.category || '资讯'), isEn);
   }
 
   // Pull Quote
   var pullQuote = null;
   if (article.pull_quote) {
-    var pqText = isEn ? (article.pull_quote.text_en || article.pull_quote.text) : article.pull_quote.text;
-    var pqAttr = isEn ? (article.pull_quote.attr_en || article.pull_quote.attr) : article.pull_quote.attr;
+    var pqText = cjkSpace(isEn ? (article.pull_quote.text_en || article.pull_quote.text) : article.pull_quote.text, isEn);
+    var pqAttr = cjkSpace(isEn ? (article.pull_quote.attr_en || article.pull_quote.attr) : article.pull_quote.attr, isEn);
     if (pqText) {
       pullQuote = { text: pqText, attr: pqAttr || '' };
     }
   } else {
     // 数据库 API 返回的扁平字段
-    var pqTextFlat = isEn ? (article.pull_quote_text_en || article.pull_quote_text) : article.pull_quote_text;
-    var pqAttrFlat = isEn ? (article.pull_quote_attr_en || article.pull_quote_attr) : article.pull_quote_attr;
+    var pqTextFlat = cjkSpace(isEn ? (article.pull_quote_text_en || article.pull_quote_text) : article.pull_quote_text, isEn);
+    var pqAttrFlat = cjkSpace(isEn ? (article.pull_quote_attr_en || article.pull_quote_attr) : article.pull_quote_attr, isEn);
     if (pqTextFlat) {
       pullQuote = { text: pqTextFlat, attr: pqAttrFlat || '' };
     }
   }
 
-  // Sources（通用，不区分语言）
-  var sources = article.sources || [];
+  // Sources（来源标题也加中英文空格）
+  var sources = (article.sources || []).map(function(s) {
+    return {
+      title: cjkSpace(s.title || '', isEn),
+      url: s.url || '',
+      site: s.site || ''
+    };
+  });
 
   return {
     slug: article.slug,
@@ -94,9 +111,9 @@ function extractIssueListItem(item, lang) {
   if (cover) {
     coverDisplay = {
       slug: cover.slug,
-      title: isEn ? (cover.title_short_en || cover.title_en || cover.title) : (cover.title_short || cover.title),
-      deck: isEn ? (cover.deck_en || cover.deck) : cover.deck,
-      readTime: isEn ? (cover.read_time_en || cover.read_time) : cover.read_time
+      title: cjkSpace(isEn ? (cover.title_short_en || cover.title_en || cover.title) : (cover.title_short || cover.title), isEn),
+      deck: cjkSpace(isEn ? (cover.deck_en || cover.deck) : cover.deck, isEn),
+      readTime: cjkSpace(isEn ? (cover.read_time_en || cover.read_time) : cover.read_time, isEn)
     };
   }
 
@@ -140,11 +157,11 @@ function extractSearchResults(results, lang) {
       id: r.id,
       slug: r.slug,
       issue: r.issue,
-      title: isEn ? (r.title_en || r.title) : r.title,
-      titleShort: isEn ? (r.title_short_en || r.title_short || r.title_en || r.title) : (r.title_short || r.title),
-      deck: isEn ? (r.deck_en || r.deck) : r.deck,
-      category: isEn ? (r.category_en || r.category) : r.category,
-      excerpt: isEn ? (r.deck_en || r.deck || r.excerpt) : (r.deck || r.excerpt)
+      title: cjkSpace(isEn ? (r.title_en || r.title) : r.title, isEn),
+      titleShort: cjkSpace(isEn ? (r.title_short_en || r.title_short || r.title_en || r.title) : (r.title_short || r.title), isEn),
+      deck: cjkSpace(isEn ? (r.deck_en || r.deck) : r.deck, isEn),
+      category: cjkSpace(isEn ? (r.category_en || r.category) : r.category, isEn),
+      excerpt: cjkSpace(isEn ? (r.deck_en || r.deck || r.excerpt) : (r.deck || r.excerpt), isEn)
     };
   });
 }
@@ -162,12 +179,34 @@ function extractCaoList(caoList, lang) {
   return caoList.map(function(item) {
     return {
       slug: item.slug,
-      title: isEn ? (item.title_en || item.title) : item.title,
-      deck: isEn ? (item.deck_en || item.deck) : item.deck,
-      readTime: isEn ? (item.read_time_en || item.read_time) : item.read_time,
+      title: cjkSpace(isEn ? (item.title_en || item.title) : item.title, isEn),
+      deck: cjkSpace(isEn ? (item.deck_en || item.deck) : item.deck, isEn),
+      readTime: cjkSpace(isEn ? (item.read_time_en || item.read_time) : item.read_time, isEn),
       issue: item.issue
     };
   });
+}
+
+/**
+ * 从最新封面数据中提取展示数据（首页用）
+ * @param {object} data - { issue, cover }
+ * @param {string} lang
+ * @returns {object}
+ */
+function extractCover(data, lang) {
+  if (!data || !data.cover) return { issue: data ? data.issue : null, cover: null };
+  var isEn = lang === 'en';
+  var cover = data.cover;
+  var coverDisplay = {
+    slug: cover.slug,
+    title: cjkSpace(isEn ? (cover.title_short_en || cover.title_en || cover.title) : (cover.title_short || cover.title), isEn),
+    deck: cjkSpace(isEn ? (cover.deck_en || cover.deck) : cover.deck, isEn),
+    readTime: cjkSpace(isEn ? (cover.read_time_en || cover.read_time) : cover.read_time, isEn)
+  };
+  return {
+    issue: data.issue,
+    cover: coverDisplay
+  };
 }
 
 module.exports = {
@@ -175,5 +214,6 @@ module.exports = {
   extractIssueListItem: extractIssueListItem,
   extractIssue: extractIssue,
   extractSearchResults: extractSearchResults,
-  extractCaoList: extractCaoList
+  extractCaoList: extractCaoList,
+  extractCover: extractCover
 };

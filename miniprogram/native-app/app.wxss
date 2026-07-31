@@ -22,7 +22,7 @@ page {
   --color-border-light: #e8e8e8;
   --color-border-brand: #002FA7;
 
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, 'Times New Roman', serif;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, 'Times New Roman', serif;
   font-size: 28rpx;
   line-height: 1.7;
   color: #0a0a0a;
@@ -38,7 +38,7 @@ page {
 
 /* 字体 */
 .font-serif {
-  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  font-family: 'Source Serif 4', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
 }
 
 .font-sans {

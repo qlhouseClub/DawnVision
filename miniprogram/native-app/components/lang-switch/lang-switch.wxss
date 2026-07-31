@@ -13,7 +13,7 @@
   font-size: 22rpx;
   font-weight: 700;
   letter-spacing: 1rpx;
-  font-family: 'Noto Serif SC', Georgia, serif;
+  font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
   display: flex;
   align-items: center;
   justify-content: center;

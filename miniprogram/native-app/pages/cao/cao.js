@@ -19,7 +19,8 @@ Page({
     error: '',
     searchVisible: false,
     lang: 'zh',
-    i18n: {}
+    i18n: {},
+    newContentVisible: false
   },
 
   onLoad: function() {
@@ -33,9 +34,68 @@ Page({
   },
 
   onShow: function() {
+    // 无数据时正常加载
     if (!this.data.loading && this.data.rawCaoList.length === 0) {
       this.loadCaoList();
+      return;
     }
+    // 有数据时，检查缓存年龄，超过2小时则后台静默刷新
+    if (this.data.rawCaoList.length > 0) {
+      var age = api.getCacheAgeHours('dv_cao_v2');
+      if (age > 2) {
+        this._backgroundRefresh();
+      }
+    }
+  },
+
+  /**
+   * 后台静默刷新槽点列表
+   * 有新内容时显示通知条
+   */
+  _backgroundRefresh: function() {
+    var self = this;
+    api.getCaoList(true).then(function(list) {
+      if (!list) return;
+      var oldLen = self.data.rawCaoList.length;
+      var newLen = list.length;
+
+      // 有新内容，显示通知条（不直接替换）
+      if (newLen > oldLen && oldLen > 0) {
+        self._pendingNewCaoList = list;
+        self.setData({ newContentVisible: true });
+      }
+    }).catch(function(err) {
+      console.warn('后台刷新槽点列表失败', err);
+    });
+  },
+
+  /**
+   * 用户点击通知条"查看"按钮
+   */
+  onNewContentAction: function() {
+    var list = this._pendingNewCaoList;
+    if (!list) {
+      this.setData({ newContentVisible: false });
+      return;
+    }
+
+    this.setData({
+      rawCaoList: list,
+      currentPage: 1,
+      newContentVisible: false
+    });
+    this.renderCaoList();
+    this._pendingNewCaoList = null;
+
+    wx.pageScrollTo({ scrollTop: 0, duration: 300 });
+  },
+
+  /**
+   * 用户关闭通知条
+   */
+  onNewContentDismiss: function() {
+    this.setData({ newContentVisible: false });
+    this._pendingNewCaoList = null;
   },
 
   onPullDownRefresh: function() {

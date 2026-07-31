@@ -83,7 +83,10 @@ function parseArticleHtml(html) {
   //    （文章底部结构化来源卡片会替代这部分内容，避免重复）
   nodes = removeTrailingSources(nodes);
 
-  // 3. 标记第一个段落为 lede（首段特殊样式）
+  // 3. 中文与英文/数字之间自动插入空格（排版最佳实践）
+  nodes = addCjkSpacing(nodes);
+
+  // 4. 标记第一个段落为 lede（首段特殊样式）
   var firstPFound = false;
   for (var i = 0; i < nodes.length; i++) {
     if (nodes[i].type === 'p' && !firstPFound) {
@@ -148,7 +151,7 @@ function parseNextBlock(html) {
     if (imgMatch) {
       var attrs = parseAttrs(imgMatch[1]);
       return {
-        node: { type: 'img', src: attrs.src || '' },
+        node: { type: 'img', src: attrs.src || '', alt: attrs.alt || '' },
         remaining: html.substring(imgMatch[0].length),
         consumed: true
       };
@@ -219,9 +222,10 @@ function parseNextBlock(html) {
       } else if (tagName === 'figure') {
         // figure：提取里面的 img 和 figcaption
         var figImgMatch = innerHtml.match(/<img\s+[^>]*src="([^"]+)"[^>]*>/i);
+        var figAltMatch = innerHtml.match(/<img\s+[^>]*alt="([^"]*)"[^>]*>/i);
         var figCapMatch = innerHtml.match(/<figcaption[^>]*>([\s\S]*?)<\/figcaption>/i);
         if (figImgMatch) {
-          node = { type: 'img', src: figImgMatch[1] };
+          node = { type: 'img', src: figImgMatch[1], alt: figAltMatch ? figAltMatch[1] : '' };
           if (figCapMatch) {
             // 有 caption 的话，图片后加个说明段落
             // 简化处理：先返回图片，caption 后续再说
@@ -676,6 +680,112 @@ function childrenToText(children) {
 }
 
 /**
+ * 给中英文混排的文本加空格（纯文本处理）
+ *
+ * 中文排版最佳实践：中英文混排时，英文/数字与汉字之间应有半个字宽的间距。
+ *
+ * 规则：
+ * - 中文字符 ↔ 英文字母 → 加空格
+ * - 中文字符 ↔ 数字 → 加空格
+ * - 标点符号不加空格（中英文标点都紧贴汉字）
+ * - 已有空格的地方不重复加
+ *
+ * 中文字符范围：CJK Unified Ideographs + CJK Ext A
+ * 英文/数字：a-z A-Z 0-9
+ */
+// 中文字符正则（CJK 基本区 + 扩展A）
+var _cjkRe = /[\u4e00-\u9fff\u3400-\u4dbf]/;
+// 英文或数字
+var _latinNumRe = /[a-zA-Z0-9]/;
+
+function processCjkSpacingText(text) {
+  if (!text) return text;
+
+  var chars = text.split('');
+  var result = [];
+
+  for (var i = 0; i < chars.length; i++) {
+    var cur = chars[i];
+
+    // 如果不是第一个字符，检查前一个字符和当前字符的类型
+    if (i > 0) {
+      var prev = chars[i - 1];
+
+      // 跳过已有的空格
+      if (prev === ' ' || cur === ' ') {
+        result.push(cur);
+        continue;
+      }
+
+      var prevIsCjk = _cjkRe.test(prev);
+      var prevIsLatin = _latinNumRe.test(prev);
+      var curIsCjk = _cjkRe.test(cur);
+      var curIsLatin = _latinNumRe.test(cur);
+
+      // 中文 → 英文/数字 → 加空格
+      if (prevIsCjk && curIsLatin) {
+        result.push(' ');
+      }
+      // 英文/数字 → 中文 → 加空格
+      else if (prevIsLatin && curIsCjk) {
+        result.push(' ');
+      }
+    }
+
+    result.push(cur);
+  }
+
+  return result.join('');
+}
+
+/**
+ * 中文与英文/数字之间自动插入空格（节点数组版本）
+ */
+function addCjkSpacing(nodes) {
+  if (!nodes || nodes.length === 0) return nodes;
+
+  /**
+   * 递归处理 children 数组
+   */
+  function processChildren(children) {
+    if (!children || children.length === 0) return children;
+
+    for (var i = 0; i < children.length; i++) {
+      if (children[i].content) {
+        children[i].content = processCjkSpacingText(children[i].content);
+      }
+    }
+
+    return children;
+  }
+
+  // 遍历所有节点
+  for (var i = 0; i < nodes.length; i++) {
+    var node = nodes[i];
+
+    if (node.children) {
+      node.children = processChildren(node.children);
+    }
+
+    if (node.items) {
+      for (var j = 0; j < node.items.length; j++) {
+        node.items[j] = processChildren(node.items[j]);
+      }
+    }
+
+    if (node.text && typeof node.text === 'string') {
+      node.text = processCjkSpacingText(node.text);
+    }
+
+    if (node.attr && typeof node.attr === 'string') {
+      node.attr = processCjkSpacingText(node.attr);
+    }
+  }
+
+  return nodes;
+}
+
+/**
  * 移除文末的 Sources / 参考来源区块
  *
  * 策略：从末尾往前扫描，找到"来源/Sources"相关的标题/段落作为起点，
@@ -787,5 +897,14 @@ function removeTrailingSources(nodes) {
 }
 
 module.exports = {
-  parseArticleHtml: parseArticleHtml
+  parseArticleHtml: parseArticleHtml,
+  /**
+   * 给中英文混排的文本加空格（纯文本版本）
+   * @param {string} text - 输入文本
+   * @returns {string} 加了空格的文本
+   */
+  addCjkSpacingText: function(text) {
+    if (!text || typeof text !== 'string') return text;
+    return processCjkSpacingText(text);
+  }
 };

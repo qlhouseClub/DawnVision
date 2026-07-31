@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="zh-CN" data-lang="zh"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>OpenAI Codex推出macOS桌面App — Dawn Vision</title><meta name="description" content="OpenAI Codex发布macOS桌面应用，支持跨应用多Agent操作，AI编程进入桌面Agent时代。"><meta name="author" content="Dawn Vision 编辑部"><meta name="keywords" content="Dawn Vision, AI资讯, AI日报, 人工智能, 大模型, AI Agent, GPT, Claude, 具身智能, AI商业化, 一人公司, AI编程, 深度分析, AI观察, LLM, AIGC, 槽点, 吐槽, AI吐槽, Cao, AI吐槽专栏, AI趣闻, AI翻车, AI fails, AI roasting, tech rant, AI humor"><link rel="canonical" href="https://www.dawnvision.net/articles/openai-codex-macos-app-agents/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&family=Noto+Sans+SC:wght@400;500;700&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&family=Noto+Sans+SC:wght@400;500;700&display=swap"></noscript><meta property="og:type" content="article"><meta property="og:title" content="OpenAI Codex推出macOS桌面App — Dawn Vision"><meta property="og:description" content="OpenAI Codex发布macOS桌面应用，支持跨应用多Agent操作，AI编程进入桌面Agent时代。"><meta property="og:url" content="https://www.dawnvision.net/articles/openai-codex-macos-app-agents/"><meta property="og:image" content="https://www.dawnvision.net/images/og-image.png"><meta property="og:site_name" content="Dawn Vision"><meta property="og:locale" content="zh_CN"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="OpenAI Codex推出macOS桌面App — Dawn Vision"><meta name="twitter:description" content="OpenAI Codex发布macOS桌面应用，支持跨应用多Agent操作，AI编程进入桌面Agent时代。"><meta name="twitter:image" content="https://www.dawnvision.net/images/og-image.png"><meta name="robots" content="index, follow"><meta name="applicable-device" content="pc,mobile"><meta name="format-detection" content="telephone=no"><meta name="baidu-site-verification" content><script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"OpenAI Codex推出macOS桌面App：AI编程从\"编辑器插件\"变成\"电脑里的同事\"","description":"OpenAI Codex发布macOS桌面应用，支持跨应用多Agent操作，AI编程进入桌面Agent时代。","datePublished":"2026-07-31","dateModified":"2026-07-31","author":{"@type":"Organization","name":"Dawn Vision 编辑部"},"publisher":{"@type":"Organization","name":"Dawn Vision","url":"https://www.dawnvision.net/","logo":{"@type":"ImageObject","url":"https://www.dawnvision.net/images/og-image.png","width":1200,"height":630}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.dawnvision.net/articles/openai-codex-macos-app-agents"},"url":"https://www.dawnvision.net/articles/openai-codex-macos-app-agents","inLanguage":"zh-CN","articleSection":"AI编程","keywords":"Dawn Vision, OpenAI, Codex, macOS App, AI编程, Agent","wordCount":750}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://www.dawnvision.net/"},{"@type":"ListItem","position":2,"name":"文章","item":"https://www.dawnvision.net/articles/"},{"@type":"ListItem","position":3,"name":"OpenAI Codex推出macOS桌面App"}]}</script><style>
+    /* Language toggle: show/hide content based on data-lang */
+    :root {
+      --dv-lang: 'zh';
+    }
+    html[data-lang="zh"] .dv-en { display: none !important; }
+    html[data-lang="en"] .dv-zh { display: none !important; }
+
+    /* When English is active, swap visible text for title/description */
+    html[data-lang="en"] head > title { display: none; }
+
+    /* Floating language switch button */
+    .dv-lang-switch {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 900;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: none;
+      background: #ffffff;
+      color: #002FA7;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .dv-lang-switch:hover {
+      background: #002FA7;
+      color: #fff;
+      transform: scale(1.08);
+      box-shadow: 0 4px 24px rgba(0,47,167,0.3);
+    }
+    @media (max-width: 700px) {
+      .dv-lang-switch {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+        font-size: 10px;
+      }
+    }
+  </style><link rel="stylesheet" href="/_astro/502.Dsp8BFs5.css">
+<style>@keyframes blobFloat{0%,to{transform:translate(0) scale(1)}33%{transform:translate(3vw,4vh) scale(1.05)}66%{transform:translate(-2vw,-3vh) scale(.97)}}.blobs--home{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--home .blob{position:absolute;border-radius:50%;filter:blur(120px);opacity:.5;animation:blobFloat 25s ease-in-out infinite;will-change:transform}.blobs--home .blob--1{width:50vw;height:50vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-5%;left:-5%;animation-delay:0s;animation-duration:30s}.blobs--home .blob--2{width:55vw;height:55vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-10s;animation-duration:28s;opacity:.6}.blobs--home .blob--3{width:40vw;height:40vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:30%;right:5%;animation-delay:-15s;animation-duration:32s;opacity:.4}.blobs--home .blob--4{width:35vw;height:35vw;background:radial-gradient(circle,rgba(80,130,255,.3) 0%,transparent 70%);top:0%;left:25%;animation-delay:-5s;animation-duration:35s;opacity:.35}.blobs--home .blob--5,.blobs--home .blob--6{display:none}.blobs--section{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--section .blob{position:absolute;border-radius:50%;filter:blur(100px);opacity:.45;animation:blobFloat 28s ease-in-out infinite;will-change:transform}.blobs--section .blob--1{width:45vw;height:45vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-10%;left:-8%;animation-delay:0s;animation-duration:30s}.blobs--section .blob--2{width:50vw;height:50vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-8s;animation-duration:26s;opacity:.55}.blobs--section .blob--3{width:35vw;height:35vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:20%;right:5%;animation-delay:-14s;animation-duration:32s}.blobs--section .blob--4,.blobs--section .blob--5{display:none}@media(max-width:700px){.blobs--home .blob{filter:blur(80px)}.blobs--section .blob{filter:blur(60px)}}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.CY1OParl.css"></head> <body class>  <a href="#main-content" class="skip-link">跳至主要内容</a>  <nav class="nav nav--inner notranslate" role="navigation" aria-label="主导航" data-pagefind-ignore translate="no"> <div class="nav__inner"> <div class="nav__group"> <a href="/" class="nav__link ">Home</a> <a href="/articles/" class="nav__link nav__link--active" aria-current="page">Articles</a> </div> <a href="/" class="nav__brand" aria-label="Dawn Vision 首页" translate="no">
+Dawn Vision
+<small>Daily Briefing</small> </a> <div class="nav__group"> <a href="/cao/" class="nav__link ">Cao</a> <a href="/about/" class="nav__link ">About</a> </div> </div> </nav> <main id="main-content"> <a href="/articles/" class="dv-back-btn" aria-label="返回文章列表" title="返回文章列表"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"> <polyline points="15 18 9 12 15 6"></polyline> </svg> </a> <section class="article-hero "> <div class="blobs blobs--section" aria-hidden="true"> <div class="blob blob--1"></div><div class="blob blob--2"></div><div class="blob blob--3"></div><div class="blob blob--4"></div><div class="blob blob--5"></div> </div> <div class="container--narrow" style="position:relative;z-index:1;"> <div data-pagefind-meta="category" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">AI编程</div>  <h1 class="article-hero__title dv-zh" data-pagefind-meta="title">OpenAI Codex推出macOS桌面App<br>AI编程从"编辑器插件"变成"电脑里的同事"</h1>  <h1 class="article-hero__title dv-en">OpenAI Codex macOS Desktop App<br>AI Coding Goes from 'Plugin' to 'Colleague'</h1> <p class="article-hero__deck dv-zh">OpenAI发布Codex macOS桌面应用，支持跨应用操作、多Agent并行执行，AI编程工具进入桌面Agent时代。</p> <p class="article-hero__deck dv-en">OpenAI releases Codex macOS desktop app with cross-app operations, parallel multi-agent execution, marking desktop agent era for AI coding.</p> <div class="article-hero__meta"> <span class="article-hero__issue notranslate">No.026</span> <span>2026.07.31</span> <span class="dv-zh">约 4 分钟阅读</span> <span class="dv-en">~4 min read</span> </div> </div> </section> <article class="container--narrow" style="padding-top: clamp(40px, 6vw, 64px); padding-bottom: 0;">  <div class="article-body dv-zh" data-pagefind-body><p>7月30日，OpenAI在GPT-5.6降价的同一天，悄悄发布了另一个重要产品：<strong>Codex macOS桌面应用</strong>。这不是VS Code插件的升级版，而是一个独立的桌面Agent，能够直接操作你的<strong>终端、浏览器、编辑器、文件系统</strong>。</p>
+<p>最重磅的功能是<strong>多Agent并行执行</strong>：你可以同时让3-5个Codex Agent在不同任务上并行工作——一个修bug，一个写新功能，一个跑测试。</p>
+<h2>从"补全"到"干活"的质变</h2>
+<p>AI编程工具的进化经历了三个阶段：<strong>代码补全</strong>（2021-2023，Copilot为代表）→ <strong>编辑器内Agent</strong>（2024-2025，Cursor为代表）→ <strong>桌面Agent</strong>（2026-，Codex macOS为标志）。</p>
+<p>在第三阶段，AI不再被关在编辑器里，它可以操作你电脑上的任何应用：打开Chrome查文档、在Figma看设计稿、在Terminal跑部署脚本、在Slack发消息。</p>
+<div class="pull-quote">"当AI Agent能操作你的整个电脑而不只是编辑器里的补全建议，'AI辅助编程'这个说法就不准确了。它不再是'辅助'，它是在你的电脑里跑着一个独立干活的程序员。"<span class="pull-quote__attr">—— Dawn Vision编辑部</span></div>
+<h2>Cursor们的压力来了</h2>
+<p>Codex桌面App首当其冲冲击<strong>以Cursor为代表的AI编辑器创业公司</strong>。如果Codex能在操作系统层面操作任何编辑器，"AI编辑器"这个品类本身会被消解。</p>
+<p>需要警惕的是<strong>权限和安全</strong>：一个能操作你整个电脑的AI Agent，一旦出错或被prompt注入攻击，可能删除文件、泄露密钥。Codex在沙箱隔离上做了设计，但这是全新的安全边界。</p>
+<p>如果AI能写80%的代码，程序员的核心价值在哪里？答案是<strong>向上游迁移</strong>：系统设计、产品思维、业务理解。</p>
+<p>明天见。</p>
+<div class="article-sources">
+  <div class="article-sources__label">Sources · 参考来源</div>
+  <ul class="article-sources__list">
+    <li><span style="border-bottom:1px dashed">OpenAI Blog - Codex updates</span></li>
+    <li><span style="border-bottom:1px dashed">TechCrunch - Codex macOS</span></li>
+  </ul>
+  <p class="article-sources__note">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，仅供参考。</p>
+</div>
+<div class="article-page__footnote">
+  <p>本文基于 Dawn Vision 认知引擎处理的 6 个源信号生成，经编辑部人工审核。</p>
+  <p>相关入库笔记：OpenAI Codex · macOS App · AI编程 · 桌面Agent</p>
+</div></div>  <div class="article-body dv-en"><p>On July 30 — same day as GPT-5.6 cuts — OpenAI launched the <strong>Codex macOS desktop app</strong>: a standalone desktop agent that can directly operate your <strong>terminal, browser, editor, and filesystem</strong>, with <strong>parallel multi-agent execution</strong> of 3-5 concurrent tasks.</p>
+<h2>From 'Completing' to 'Doing'</h2>
+<p>AI coding's three phases: <strong>code completion</strong> (2021-2023, Copilot) → <strong>in-editor agents</strong> (2024-2025, Cursor) → <strong>desktop agents</strong> (2026-, Codex macOS). In phase 3, AI operates any app on your computer — Chrome, Figma, Terminal, Slack.</p>
+<div class="pull-quote">"When an AI agent can operate your entire computer rather than suggest completions, 'AI-assisted coding' becomes inaccurate. There's an independent programmer working inside your machine."<span class="pull-quote__attr">—— The Dawn Vision Editorial Desk</span></div>
+<h2>Pressure on Cursor</h2>
+<p>Codex desktop threatens <strong>AI editor startups like Cursor</strong>. If Codex works at the OS level across any editor, the "AI editor" category dissolves. Watch out for <strong>permissions and security</strong> — an agent with full computer access is a new security boundary.</p>
+<p>Programmer value migrates upstream: system design, product thinking, business understanding.</p>
+<p>See you tomorrow.</p>
+<div class="article-sources">
+  <div class="article-sources__label">Sources · 参考来源</div>
+  <ul class="article-sources__list">
+    <li><span style="border-bottom:1px dashed">OpenAI Blog - Codex</span></li>
+  </ul>
+  <p class="article-sources__note">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，仅供参考。</p>
+</div></div>   <blockquote class="article-pull-quote dv-zh"> <p class="article-pull-quote__text">当AI Agent能操作你的整个电脑而不只是编辑器里的补全建议，&#39;AI辅助编程&#39;这个说法就不准确了。它不再是&#39;辅助&#39;，它是在你的电脑里跑着一个独立干活的程序员。</p> <cite class="article-pull-quote__attr">—— Dawn Vision编辑部</cite> </blockquote> <blockquote class="article-pull-quote dv-en"> <p class="article-pull-quote__text">When an AI agent can operate your entire computer, &#39;AI-assisted coding&#39; becomes inaccurate.</p> <cite class="article-pull-quote__attr">—— The Dawn Vision Editorial Desk</cite> </blockquote>     <div class="article-cognitive dv-zh">OpenAI Codex · macOS App · AI编程 · 桌面Agent · 多Agent并行</div> <div class="article-cognitive dv-en">OpenAI Codex · macOS app · AI coding · desktop agent · multi-agent</div>  <div class="article-sources"> <div class="article-sources__title notranslate"> <span class="dv-zh">Sources · 信源</span> <span class="dv-en">Sources</span> </div> <ul class="article-sources__list"> <li class="article-sources__item"> <a href="https://openai.com/" target="_blank" rel="noopener noreferrer">OpenAI Blog - Codex updates</a> </li><li class="article-sources__item"> <a href="https://techcrunch.com/" target="_blank" rel="noopener noreferrer">TechCrunch - Codex macOS</a> </li> </ul>  <p class="article-source-summary dv-zh">本文基于 Dawn Vision 认知引擎处理的 6 个源信号生成，经编辑部人工审核。</p> <p class="article-source-summary dv-en">Processing 6 source signals with editorial review.</p> </div>  <div class="article-actions"> <button class="article-action-btn article-action-btn--like" id="article-like-btn" data-slug="openai-codex-macos-app-agents" aria-label="喜欢这篇文章"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path> </svg> <span class="article-action-btn__label" data-i18n="like">喜欢</span> <span class="article-action-btn__count" id="like-count">0</span> </button> <button class="article-action-btn article-action-btn--tip" id="article-tip-btn" aria-label="打赏"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon> </svg> <span class="article-action-btn__label" data-i18n="tip">打赏</span> </button> </div>  <nav class="article-nav" aria-label="文章导航"> <a href="/articles/friend-ai-pendant-relaunch-crash/" class="article-nav__item article-nav__item--prev"> <div class="article-nav__label"> <span class="dv-zh" data-i18n="prev_article">上一篇</span> <span class="dv-en" data-i18n="prev_article">Previous</span> </div> <div class="article-nav__title dv-zh">Friend AI吊坠2.0重启：卖200万美元的&#39;AI朋友&#39;，连发货都没搞定</div> <div class="article-nav__title dv-en">Friend AI Pendant 2.0 Relaunch: The &#39;$2M AI Friend&#39; That Couldn&#39;t Even Ship</div> </a> <a href="/articles/nscale-acquires-anyscale-ray/" class="article-nav__item article-nav__item--next"> <div class="article-nav__label"> <span class="dv-zh" data-i18n="next_article">下一篇</span> <span class="dv-en" data-i18n="next_article">Next</span> </div> <div class="article-nav__title dv-zh">Nscale收购Anyscale：当AI云计算开始并购整合，Ray的独立时代结束了</div> <div class="article-nav__title dv-en">Nscale Acquires Anyscale: As AI Cloud Consolidation Begins, Ray&#39;s Independent Era Is Over</div> </a> </nav> </article>  </main> <footer class="footer footer--site" role="contentinfo" data-pagefind-ignore> <div class="footer__container"> <div class="footer__brand notranslate" translate="no">Dawn Vision</div> <div class="footer__meta notranslate" translate="no">© 2026 · Daily at 16:30 CST · Weekdays Only</div> </div> </footer>   <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="搜索文章" hidden> <div class="search-modal" role="document"> <div class="search-modal__input-wrap"> <svg class="search-modal__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="11" cy="11" r="8"></circle> <line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> <input type="search" class="search-modal__input" id="search-input" placeholder="搜索文章、关键词、作者..." autocomplete="off" spellcheck="false" aria-label="搜索关键词"> <span class="search-modal__close-hint">ESC</span> </div> <div class="search-modal__results" id="search-results"> <div class="search-modal__empty">输入关键词开始搜索</div> </div> <div class="search-modal__footer"> <span><kbd>↑</kbd><kbd>↓</kbd> 选择</span> <span><kbd>↵</kbd> 打开</span> <span><kbd>⌘K</kbd> 搜索</span> </div> </div> </div> <!-- Reading progress bar (shown on article pages) --> <div class="reading-progress" id="reading-progress" hidden></div>  <div class="tip-modal" id="tip-modal" hidden> <div class="tip-modal__overlay" data-tip-close></div> <div class="tip-modal__content" role="dialog" aria-modal="true" aria-label="打赏支持"> <button class="tip-modal__close" data-tip-close aria-label="关闭">×</button> <h3 class="tip-modal__title notranslate" translate="no">Tip Jar</h3> <p class="tip-modal__desc">谢谢老板请我喝奶茶 ☕</p> <div class="tip-modal__qr-wrap"> <img src="/images/reward-qr.webp" alt="打赏二维码" class="tip-modal__qr" width="200" height="200"> </div> <p class="tip-modal__thanks">微信扫码打赏，你的支持是持续创作的动力。</p> </div> </div>  <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.Dib_mikw.js"></script>  <script>
+  window.addEventListener('load', function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    bp.src = (curProtocol === 'https' ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js');
+    bp.async = true;
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  });
+  </script> </body> </html>

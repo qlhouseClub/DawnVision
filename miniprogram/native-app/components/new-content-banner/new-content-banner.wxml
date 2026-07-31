@@ -1,0 +1,24 @@
+<!--components/new-content-banner/new-content-banner.wxml-->
+<view class="dv-new-content {{animShow ? 'dv-new-content--show' : ''}}" wx:if="{{show}}">
+  <view class="dv-new-content__inner">
+    <!-- 星星图标 -->
+    <view class="dv-new-content__icon">
+      <text class="dv-new-content__icon-star">★</text>
+    </view>
+    <!-- 文案 -->
+    <view class="dv-new-content__body">
+      <view class="dv-new-content__title">{{i18n.newContent_title}}</view>
+      <view class="dv-new-content__desc">{{i18n.newContent_desc}}</view>
+    </view>
+    <!-- 操作按钮 -->
+    <view class="dv-new-content__actions">
+      <view class="dv-new-content__btn dv-new-content__btn--primary" bindtap="onAction">
+        <text>{{i18n.newContent_action}}</text>
+      </view>
+    </view>
+    <!-- 关闭按钮 -->
+    <view class="dv-new-content__close" bindtap="onDismiss">
+      <text>×</text>
+    </view>
+  </view>
+</view>

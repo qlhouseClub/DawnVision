@@ -28,6 +28,56 @@ App({
     } catch (e) {
       console.warn('读取缓存失败', e);
     }
+
+    // 加载 Source Serif 4 字体（数字/英文/符号字形对齐网站）
+    this._loadSourceSerif4();
+  },
+
+  /**
+   * 加载 Source Serif 4 字体
+   * 对齐网站字体，确保数字、符号（尤其 0、$ 等）字形一致
+   * 加载失败则静默回退到 Noto Serif SC / Georgia
+   */
+  _loadSourceSerif4: function () {
+    // 同一个 App 会话内只加载一次
+    if (this._sourceSerifLoaded) return;
+    this._sourceSerifLoaded = true;
+
+    var fontUrl = 'https://cdn.jsdelivr.net/npm/@fontsource/source-serif-4@5/files/source-serif-4-latin-400-normal.woff2';
+    var fontUrlBold = 'https://cdn.jsdelivr.net/npm/@fontsource/source-serif-4@5/files/source-serif-4-latin-700-normal.woff2';
+    var fontUrlBlack = 'https://cdn.jsdelivr.net/npm/@fontsource/source-serif-4@5/files/source-serif-4-latin-900-normal.woff2';
+    var fontUrlItalic = 'https://cdn.jsdelivr.net/npm/@fontsource/source-serif-4@5/files/source-serif-4-latin-400-italic.woff2';
+    var fontUrlBoldItalic = 'https://cdn.jsdelivr.net/npm/@fontsource/source-serif-4@5/files/source-serif-4-latin-700-italic.woff2';
+    var fontUrlBlackItalic = 'https://cdn.jsdelivr.net/npm/@fontsource/source-serif-4@5/files/source-serif-4-latin-900-italic.woff2';
+
+    // 逐个加载不同字重
+    var fonts = [
+      { family: 'Source Serif 4', weight: 400, style: 'normal', source: fontUrl },
+      { family: 'Source Serif 4', weight: 700, style: 'normal', source: fontUrlBold },
+      { family: 'Source Serif 4', weight: 900, style: 'normal', source: fontUrlBlack },
+      { family: 'Source Serif 4', weight: 400, style: 'italic', source: fontUrlItalic },
+      { family: 'Source Serif 4', weight: 700, style: 'italic', source: fontUrlBoldItalic },
+      { family: 'Source Serif 4', weight: 900, style: 'italic', source: fontUrlBlackItalic }
+    ];
+
+    fonts.forEach(function (f) {
+      try {
+        wx.loadFontFace({
+          family: f.family,
+          weight: f.weight.toString(),
+          style: f.style,
+          source: 'url("' + f.source + '")',
+          success: function () {
+            // 字体加载成功
+          },
+          fail: function (res) {
+            console.warn('Source Serif 4 加载失败（' + f.weight + '/' + f.style + '）', res);
+          }
+        });
+      } catch (e) {
+        console.warn('字体加载调用异常', e);
+      }
+    });
   },
 
   // 打开搜索
