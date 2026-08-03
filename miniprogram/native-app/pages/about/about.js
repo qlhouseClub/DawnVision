@@ -36,10 +36,17 @@ Page({
   },
 
   // 长按预览大图（可识别二维码）
-  previewQr: function() {
+  previewTipJar: function() {
     wx.previewImage({
-      current: 'https://www.dawnvision.cn/images/reward-qr.png',
-      urls: ['https://www.dawnvision.cn/images/reward-qr.png']
+      current: '/images/tip-jar.png',
+      urls: ['/images/tip-jar.png']
+    });
+  },
+
+  previewWechatQr: function() {
+    wx.previewImage({
+      current: '/images/wechat-qr.jpg',
+      urls: ['/images/wechat-qr.jpg']
     });
   },
 

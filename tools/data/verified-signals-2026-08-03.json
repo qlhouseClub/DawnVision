@@ -1,0 +1,164 @@
+{
+  "date": "2026-08-03",
+  "issue": "027",
+  "topics": [
+    {
+      "topic": "OpenAI Astra攻克10项数学难题",
+      "slug": "openai-astra-ten-math-proofs-formal-verification",
+      "confidence": "high",
+      "primary_source": "OpenAI官方研究博客《Ten advances in mathematics and theoretical computer science》",
+      "primary_source_url": "https://openai.com/research",
+      "verified_facts": [
+        {"fact": "发布日期", "final_value": "2026年8月1日发布，8月2日公开详细论文", "sources": ["OpenAI官方", "量子位", "科技媒体综合报道"]},
+        {"fact": "成果数量", "final_value": "10个数学和理论计算机科学未解难题", "sources": ["OpenAI官方", "多家媒体确认"]},
+        {"fact": "形式化证明", "final_value": "全部提供Lean形式化证明，可在GitHub独立验证", "sources": ["OpenAI官方", "GitHub仓库"]},
+        {"fact": "计算成本", "final_value": "约2000美元（按Sol API价格计算）", "sources": ["OpenAI官方披露", "多家科技媒体报道"]},
+        {"fact": "论文规模", "final_value": "249页论文+62页解题思路", "sources": ["科技媒体报道"]},
+        {"fact": "Lean形式化耗时", "final_value": "约1周", "sources": ["科技媒体报道"]},
+        {"fact": "Astra定位", "final_value": "OpenAI下一代旗舰模型家族的内部研究版本，通过数学成果首次公开亮相", "sources": ["OpenAI官方", "媒体分析"]}
+      ],
+      "rejected_claims": [
+        {"claim": "Astra在IMO 2026的10道题中拿了高分", "reason": "Astra解决的是研究级开放问题，不是IMO竞赛题"},
+        {"claim": "Astra是已发布的产品", "reason": "Astra目前是内部研究模型/系统，尚未作为产品发布"}
+      ],
+      "writing_notes": "强调$2000成本的颠覆性意义；形式化验证让结果不可造假；注意不要写成'AGI来了'"
+    },
+    {
+      "topic": "阿里Qwen3.8-Max发布",
+      "slug": "qwen3-8-max-release-16-days-autonomous-coding",
+      "confidence": "high",
+      "primary_source": "阿里千问官方发布",
+      "primary_source_url": "https://qwenlm.github.io/",
+      "verified_facts": [
+        {"fact": "发布日期", "final_value": "2026年8月3日正式发布上线", "sources": ["阿里千问官方", "IT之家", "太平洋科技"]},
+        {"fact": "总参数量", "final_value": "2.4万亿（MoE架构，激活95B）", "sources": ["官方披露", "多家科技媒体"]},
+        {"fact": "上下文长度", "final_value": "1M Tokens", "sources": ["官方披露"]},
+        {"fact": "自主编程项目", "final_value": "oh-my-cli框架，16天几乎无人干预自主完成", "sources": ["官方披露", "GitHub项目"]},
+        {"fact": "PaperBench分数", "final_value": "93.0分，较上代提升28.2分", "sources": ["官方披露"]},
+        {"fact": "OSWorld-Verified分数", "final_value": "86.1分，主流模型首位", "sources": ["官方披露"]},
+        {"fact": "API定价（国内）", "final_value": "输入12元/百万Tokens，输出36元/百万Tokens，缓存1.5元/百万", "sources": ["官方定价"]},
+        {"fact": "开源计划", "final_value": "Max级别模型权重将于下周首次开源", "sources": ["官方披露", "CNMO"]},
+        {"fact": "同日发布产品", "final_value": "Agent产品'千问办公'", "sources": ["官方发布"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "重点突出自主编程能力的范式跃迁；价格策略攻击性；强调是国内首个Max级别开源"
+    },
+    {
+      "topic": "MiniMax H3开源",
+      "slug": "minimax-h3-open-source-video-generation",
+      "confidence": "high",
+      "primary_source": "MiniMax官方发布",
+      "primary_source_url": "https://www.minimaxi.com/",
+      "verified_facts": [
+        {"fact": "开源日期", "final_value": "2026年8月3日零点正式开源权重", "sources": ["MiniMax官方", "PChome", "IT之家"]},
+        {"fact": "发布宣布日期", "final_value": "2026年7月31日官宣发布", "sources": ["官方公告"]},
+        {"fact": "最高分辨率", "final_value": "2K", "sources": ["官方披露", "PChome"]},
+        {"fact": "最长时长", "final_value": "15秒", "sources": ["官方披露"]},
+        {"fact": "模态支持", "final_value": "文本、图像、视频、音频全模态理解与生成", "sources": ["官方披露"]},
+        {"fact": "开源协议", "final_value": "免费商用", "sources": ["PChome", "官方披露"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "重点：免费商用+全模态统一架构，视频赛道开源竞争白热化"
+    },
+    {
+      "topic": "欧盟AI法案8月2日正式执法",
+      "slug": "eu-ai-act-enforcement-august-2-transparency",
+      "confidence": "high",
+      "primary_source": "欧盟委员会官方公告",
+      "primary_source_url": "https://digital-strategy.ec.europa.eu/",
+      "verified_facts": [
+        {"fact": "执法起始日期", "final_value": "2026年8月2日起，欧盟AI办公室与各成员国主管部门共同开始执行", "sources": ["欧盟委员会", "国内媒体报道"]},
+        {"fact": "首批生效内容", "final_value": "人工智能透明度要求正式生效", "sources": ["官方公告"]},
+        {"fact": "执法主体", "final_value": "欧盟委员会人工智能办公室 + 各成员国主管部门", "sources": ["官方公告"]},
+        {"fact": "法案整体生效", "final_value": "2024年8月1日正式落地生效，8月2日进入实质执法阶段", "sources": ["官方文件"]}
+      ],
+      "rejected_claims": [
+        {"claim": "EU AI Act 8月2日才生效", "reason": "法案2024年8月1日已生效，8月2日是透明度要求的执法起始日"}
+      ],
+      "writing_notes": "明确区分'法案生效'和'开始执法/透明度要求生效'；强调透明度义务是企业最先面对的合规要求"
+    },
+    {
+      "topic": "OpenRouter调用量排名中国模型包揽前五",
+      "slug": "chinese-models-dominate-openrouter-top-five",
+      "confidence": "high",
+      "primary_source": "OpenRouter平台公开排名数据",
+      "primary_source_url": "https://openrouter.ai/rankings",
+      "verified_facts": [
+        {"fact": "统计口径", "final_value": "调用量（tokens用量）排名，非能力/质量排名", "sources": ["OpenRouter平台"]},
+        {"fact": "前五全部中国模型", "final_value": "2026年8月第一周，调用量前五名全部为中国企业自研大模型", "sources": ["OpenRouter数据", "科技媒体报道"]},
+        {"fact": "第一名", "final_value": "小米MiMo V2.5，单周8T tokens调用量", "sources": ["媒体报道OpenRouter数据"]},
+        {"fact": "驱动因素", "final_value": "性价比优势——能力进入可用区间后，价格和速度决定调用量", "sources": ["行业分析"]}
+      ],
+      "rejected_claims": [
+        {"claim": "中国模型能力全球前五", "reason": "是调用量排名，不是能力/质量排名；能力排行榜Claude等仍居前列"}
+      ],
+      "writing_notes": "必须明确是'调用量'排名而非'能力'排名；核心论点是性价比战争而非能力超越"
+    },
+    {
+      "topic": "华为诺亚开源MindMemOS记忆框架",
+      "slug": "huawei-mindmemos-agent-memory-open-source",
+      "confidence": "high",
+      "primary_source": "华为诺亚方舟实验室官方发布",
+      "primary_source_url": "https://www.noahlab.com.hk/",
+      "verified_facts": [
+        {"fact": "项目名称", "final_value": "MindMemOS（非MindMemos）", "sources": ["华为诺亚官方", "量子位"]},
+        {"fact": "发布/开源时间", "final_value": "2026年7月29日发布，8月初持续传播", "sources": ["量子位", "搜狐科技"]},
+        {"fact": "项目定位", "final_value": "面向AI Agent的可迁移、自演进记忆操作层", "sources": ["华为诺亚官方"]},
+        {"fact": "核心特性", "final_value": "记忆从单个Agent解耦，三维记忆建模（实体、属性、时间），Skill协同进化", "sources": ["官方披露", "媒体报道"]},
+        {"fact": "发布方", "final_value": "华为诺亚方舟实验室", "sources": ["官方"]}
+      ],
+      "rejected_claims": [
+        {"claim": "项目名称为MindMemos", "reason": "官方名称为MindMemOS，MindMemos为误传"}
+      ],
+      "writing_notes": "名称必须用MindMemOS；定位为记忆操作层（区别于Mem0等RAG式记忆）"
+    },
+    {
+      "topic": "蚂蚁灵波启动15亿独立融资",
+      "slug": "ant-lingbo-15b-funding-embodied-ai-spinout",
+      "confidence": "high",
+      "primary_source": "晚点LatePost独家报道",
+      "primary_source_url": "https://www.latepost.com/",
+      "verified_facts": [
+        {"fact": "公司名称", "final_value": "灵波科技（蚂蚁灵波），非领博机器人", "sources": ["晚点LatePost", "蓝鲸科技", "36氪"]},
+        {"fact": "融资状态", "final_value": "已启动首轮独立融资，拟募资15亿元，非已完成融资", "sources": ["晚点LatePost独家", "网易新闻"]},
+        {"fact": "二轮融资目标", "final_value": "目标2026年底完成二轮融资", "sources": ["晚点LatePost"]},
+        {"fact": "背景", "final_value": "蚂蚁集团旗下具身智能企业，从内部孵化走向独立融资", "sources": ["多家媒体确认"]},
+        {"fact": "核心动因", "final_value": "算力资源被集团大模型业务挤压（资源挤压）", "sources": ["知情人士/媒体报道"]},
+        {"fact": "消息日期", "final_value": "2026年8月3日消息", "sources": ["晚点LatePost", "蓝鲸科技"]}
+      ],
+      "rejected_claims": [
+        {"claim": "公司名称为领博机器人", "reason": "应为灵波科技（蚂蚁灵波），'领博'为错误名称"},
+        {"claim": "已完成5亿元融资", "reason": "5亿元Pre-A是乐享科技的数据，灵波是拟募资15亿且刚启动"},
+        {"claim": "蚂蚁已投资乐享科技近5亿", "reason": "乐享科技7月2日官宣5亿Pre-A由蚂蚁领投，但灵波是另一家公司"}
+      ],
+      "writing_notes": "公司名称必须是灵波科技/蚂蚁灵波；融资是'拟募资15亿'刚启动，非已完成；可对比乐享科技5亿Pre-A作背景"
+    },
+    {
+      "topic": "AI培训投诉暴涨450%",
+      "slug": "ai-training-complaints-450-percent-surge-scam",
+      "confidence": "high",
+      "primary_source": "中国消费者协会2026年上半年报告",
+      "primary_source_url": "https://www.cca.org.cn/",
+      "verified_facts": [
+        {"fact": "投诉增幅", "final_value": "2026年上半年AI培训相关投诉同比暴涨450%", "sources": ["中国消费者协会报告", "多家媒体报道"]},
+        {"fact": "投诉前三名", "final_value": "1.虚假薪资宣传 2.退费纠纷 3.违规培训贷", "sources": ["中消协报告"]},
+        {"fact": "黑猫投诉数据", "final_value": "AI课程相关投诉超2000条", "sources": ["黑猫投诉平台"]},
+        {"fact": "发布时间", "final_value": "2026年5月发布上半年报告，数据持续更新至8月仍在增长", "sources": ["中消协", "媒体报道"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "Cao风格：幽默口语化、讽刺性；结尾给实用提醒；不要指名道姓攻击特定机构，聚焦行业现象"
+    }
+  ],
+  "summary": {
+    "overall_confidence": "high",
+    "replaced_topics": [
+      "Tau Robotics保洁机器人（替换为AI培训投诉暴涨450%）——Tau Robotics缺乏可靠信源，置信度过低"
+    ],
+    "key_corrections": [
+      "华为记忆框架名称：MindMemos → MindMemOS（官方正确名称）",
+      "蚂蚁具身智能公司：领博机器人 → 灵波科技（蚂蚁灵波），融资5亿已完成 → 拟募资15亿刚启动",
+      "OpenRouter排名：明确为调用量排名，非能力排名（前五是中国模型，但能力榜Claude仍居前）",
+      "Tau Robotics因缺乏可靠信源被替换"
+    ]
+  }
+}
