@@ -1,0 +1,136 @@
+{
+  "date": "2026-08-04",
+  "issue": "028",
+  "topics": [
+    {
+      "topic": "OpenAI正式反击Apple诉讼",
+      "slug": "openai-fights-back-apple-lawsuit-wrong",
+      "confidence": "high",
+      "primary_source": "OpenAI官方博客",
+      "primary_source_url": "https://openai.com/index/apple-is-getting-this-wrong",
+      "verified_facts": [
+        {"fact": "OpenAI发布官方回应文章时间", "final_value": "2026年8月3日晚", "sources": ["OpenAI Blog", "TechCrunch"]},
+        {"fact": "回应文章标题", "final_value": "Apple is getting this wrong", "sources": ["OpenAI Blog"]},
+        {"fact": "OpenAI核心反驳点", "final_value": "反驳Apple商业秘密指控，公布员工聊天记录作为证据", "sources": ["OpenAI Blog", "科技媒体综合报道"]},
+        {"fact": "前序事件", "final_value": "Apple于2026年7月底起诉OpenAI侵犯商业秘密", "sources": ["026期已验证", "公开记录"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "这是026期Apple-OpenAI诉讼的直接后续，新进展，时效性强。写作重点：科技巨头战争从产品到法律，OpenAI选择公开证据而非私下和解的信号意义。"
+    },
+    {
+      "topic": "白宫AI安全测试框架会议",
+      "slug": "white-house-ai-safety-testing-framework-august-4",
+      "confidence": "high",
+      "primary_source": "路透社",
+      "primary_source_url": "",
+      "verified_facts": [
+        {"fact": "会议时间", "final_value": "美国时间2026年8月4日", "sources": ["路透社", "多家中文媒体"]},
+        {"fact": "参会企业", "final_value": "OpenAI、Anthropic、Google、Meta四巨头", "sources": ["路透社", "白宫官员声明"]},
+        {"fact": "会议内容", "final_value": "审议美国首个前沿AI模型自愿网络安全测试框架", "sources": ["路透社", "白宫记者会"]},
+        {"fact": "行政令依据", "final_value": "2026年6月2日行政令设定8月1日为期限", "sources": ["公开行政令记录"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "政策类选题，注意区分'自愿'与'强制'。框架核心是测试模型黑客能力，不是通用监管。"
+    },
+    {
+      "topic": "DeepSeek V4 Flash API因访问量过载宕机",
+      "slug": "deepseek-v4-flash-api-outage-capacity",
+      "confidence": "high",
+      "primary_source": "36氪/第一财经",
+      "primary_source_url": "",
+      "verified_facts": [
+        {"fact": "事件时间", "final_value": "2026年8月4日上午", "sources": ["36氪", "OpenCode官方公告"]},
+        {"fact": "故障原因", "final_value": "前所未有的访问量导致容量不足", "sources": ["DeepSeek官方", "OpenCode"]},
+        {"fact": "恢复情况", "final_value": "当日已恢复服务", "sources": ["DeepSeek官方披露"]},
+        {"fact": "历史参照", "final_value": "Kimi K3发布48小时后也曾因访问量过载暂停新用户订阅", "sources": ["公开报道"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "不是技术故障，是成功的烦恼——国产模型能力上来了，但算力容量和可用性仍是短板。对比Kimi K3事件，形成行业观察。"
+    },
+    {
+      "topic": "具身智能大脑派单日两笔融资超2亿美元",
+      "slug": "embodied-ai-brain-funding-pokebot-qiuzhi",
+      "confidence": "high",
+      "primary_source": "证券时报/36氪",
+      "primary_source_url": "",
+      "verified_facts": [
+        {"fact": "事件时间", "final_value": "2026年8月3日", "sources": ["证券时报", "36氪首发"]},
+        {"fact": "破壳机器人融资", "final_value": "亿美元级Pre-A轮，顺为资本与经纬创投领投", "sources": ["36氪", "投资界"]},
+        {"fact": "求之科技融资", "final_value": "1亿美元天使+轮", "sources": ["证券时报"]},
+        {"fact": "共同点", "final_value": "两家均聚焦机器人「大脑」层面", "sources": ["证券时报"]},
+        {"fact": "行业数据", "final_value": "2026上半年国内具身智能融资约438亿元，超一半涌入大脑派公司", "sources": ["证券时报"]}
+      ],
+      "rejected_claims": [
+        {"claim": "蚂蚁灵波15亿融资是今日新闻", "reason": "蚂蚁灵波融资是027期已写内容，虽8月3日有回应但非新事件，本期不重复"}
+      ],
+      "writing_notes": "027期写了蚂蚁灵波，本期聚焦新的两家融资和'大脑派'趋势——具身智能从拼硬件到拼大脑，Demo高估值时代结束，生产力算账。"
+    },
+    {
+      "topic": "Palantir单季利润10亿美元，CEO炮轰AI行业",
+      "slug": "palantir-1b-profit-karp-marxist-ai-industry",
+      "confidence": "high",
+      "primary_source": "TechCrunch",
+      "primary_source_url": "https://techcrunch.com/2026/08/03/after-killer-quarter-palantir-ceo-alex-karp-calls-ai-industry-marxist/",
+      "verified_facts": [
+        {"fact": "财报时间", "final_value": "2026年8月3日", "sources": ["TechCrunch", "Palantir财报"]},
+        {"fact": "业绩数据", "final_value": "单季度利润10亿美元", "sources": ["TechCrunch", "财报数据"]},
+        {"fact": "Karp言论", "final_value": "称AI前沿实验室对企业来说'太不可信'，称AI行业倾向'马克思主义'", "sources": ["TechCrunch", "Karp公开讲话"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "Palantir是AI to B商业化最成功的案例之一，Karp以言论犀利著称。重点：真正赚到钱的AI公司怎么看前沿实验室的'乌托邦'。"
+    },
+    {
+      "topic": "Design Arena融资790万美元为AI模型提供人类审美",
+      "slug": "design-arena-7-9m-funding-human-taste-ai",
+      "confidence": "high",
+      "primary_source": "TechCrunch",
+      "primary_source_url": "https://techcrunch.com/2026/08/03/designarena-creators-raise-7-9-million-to-bring-taste-to-ai-models/",
+      "verified_facts": [
+        {"fact": "融资时间", "final_value": "2026年8月3日", "sources": ["TechCrunch"]},
+        {"fact": "融资金额", "final_value": "790万美元", "sources": ["TechCrunch"]},
+        {"fact": "用户规模", "final_value": "全球530万用户", "sources": ["TechCrunch"]},
+        {"fact": "业务模式", "final_value": "为前沿AI实验室提供关键的人类审美评估", "sources": ["TechCrunch"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "AI设计方向的有趣切口——AI什么都能生成，但'审美'和'品味'仍然需要人类打分。RLHF的垂直化：从通用反馈到专业审美反馈。"
+    },
+    {
+      "topic": "亿级日活App跨云架构砍掉75% GPU集群",
+      "slug": "100m-dau-app-cross-cloud-75-percent-gpu-cut",
+      "confidence": "medium",
+      "primary_source": "量子位",
+      "primary_source_url": "https://www.qbitai.com/2026/08/465732.html",
+      "verified_facts": [
+        {"fact": "发布时间", "final_value": "2026年8月4日", "sources": ["量子位"]},
+        {"fact": "核心数据", "final_value": "通过跨云架构砍掉75% GPU集群", "sources": ["量子位报道"]},
+        {"fact": "背景问题", "final_value": "出海AI应用面临推理成本倒挂问题", "sources": ["量子位"]},
+        {"fact": "具体公司", "final_value": "报道中匿名", "sources": ["量子位"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "算力成本是2026年AI行业的真问题。报道中公司匿名但数据具体，可写行业趋势：不是算力越多越好，是架构优化比堆卡更重要。"
+    },
+    {
+      "topic": "OpenAI网红奢华之旅引发全网批评",
+      "slug": "openai-influencer-luxury-retreat-backlash",
+      "confidence": "high",
+      "primary_source": "Business Insider/TechCrunch",
+      "primary_source_url": "https://techcrunch.com/2026/08/03/influencers-draw-backlash-for-attending-openais-first-luxury-trip/",
+      "verified_facts": [
+        {"fact": "活动时间", "final_value": "2026年8月初", "sources": ["Business Insider", "TechCrunch"]},
+        {"fact": "活动地点", "final_value": "纽约哈德逊河谷豪华度假村，周末房价每晚超2000美元", "sources": ["Business Insider", "量子位/网易"]},
+        {"fact": "活动内容", "final_value": "农场疗愈、采蜂蜜、绘画等田园活动，推广ChatGPT Work", "sources": ["Business Insider"]},
+        {"fact": "参与人员", "final_value": "生活方式、职场、个人成长类网红创作者，非传统科技媒体", "sources": ["TechCrunch"]},
+        {"fact": "网友反应", "final_value": "批评'虚伪'，已有参与者删除相关视频", "sources": ["Business Insider", "社交平台"]},
+        {"fact": "官方回应", "final_value": "OpenAI称创作者是社区重要组成部分，未回应是否付费、是否包差旅", "sources": ["Business Insider"]},
+        {"fact": "背景争议", "final_value": "OpenAI俄亥俄数据中心项目超5000亿美元投资，近期引发环境讨论", "sources": ["公开报道"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "Cao选题，幽默吐槽风格。反差：一边是'A造福全人类'的宏大叙事，一边是2000美元一晚的农场采蜂蜜。Anthropic和微软也办过类似活动，但OpenAI这次因为时机问题被骂得最惨。"
+    }
+  ],
+  "summary": {
+    "overall_confidence": "high",
+    "replaced_topics": [],
+    "key_corrections": ["蚂蚁灵波融资为027期已覆盖内容，本期替换为破壳机器人+求之科技两起新融资事件"]
+  }
+}
