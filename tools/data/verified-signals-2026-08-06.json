@@ -1,0 +1,165 @@
+{
+  "date": "2026-08-06",
+  "issue": "030",
+  "topics": [
+    {
+      "topic": "Jeff Dean携三员大将离职Google创办Discovery Loop，Demis Hassabis交权DeepMind",
+      "slug": "jeff-dean-leaves-google-discovery-loop-ai4s",
+      "confidence": "high",
+      "primary_source": "TechCrunch / Google官方公告 / 纽约时报",
+      "primary_source_url": "https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/",
+      "verified_facts": [
+        {"fact": "Jeff Dean在Google工作27年（1999年加入），是Google第30号员工", "final_value": "27年，1999年加入，Google第30号员工", "sources": ["TechCrunch", "纽约时报"]},
+        {"fact": "联合创始人包括Sanjay Ghemawat（Google Senior Fellow）、Quoc Le（Google Brain创始成员）、Oriol Vinyals（DeepMind高级研究科学家）", "final_value": "三位共同创始人：Sanjay Ghemawat、Quoc Le、Oriol Vinyals", "sources": ["TechCrunch"]},
+        {"fact": "新公司名称Discovery Loop，公益公司（public benefit corporation），专注AI for Science", "final_value": "Discovery Loop，PBC，AI驱动科学发现自动化", "sources": ["TechCrunch", "公司新闻稿"]},
+        {"fact": "Jeff Dean将担任CEO", "final_value": "Jeff Dean任CEO", "sources": ["纽约时报", "TechCrunch"]},
+        {"fact": "投资方包括Radical Ventures和Khosla Ventures联合领投，Kleiner Perkins、Lightspeed、Doerr Capital跟投，Alphabet也参与投资", "final_value": "Radical Ventures + Khosla Ventures领投，Alphabet跟投", "sources": ["TechCrunch"]},
+        {"fact": "Demis Hassabis卸任Google DeepMind CEO，转任GDM主席兼Alphabet首席科学家，继续领导Isomorphic Labs", "final_value": "Hassabis转任董事长+Alphabet首席科学家，Koray Kavukcuoglu接任DeepMind CEO", "sources": ["Google官方博客", "多家中文媒体"]},
+        {"fact": "消息公布当日Alphabet股价下跌约4-5%", "final_value": "股价当日下跌约4-5%", "sources": ["多家财经媒体"]}
+      ],
+      "rejected_claims": [
+        {"claim": "Jeff Dean被Google解雇", "reason": "官方说法是离职创业，获CEO Pichai公开感谢"},
+        {"claim": "Hassabis被架空", "reason": "官方表述为升任主席+首席科学家，仍领导Isomorphic Labs，属正常人事调整"}
+      ],
+      "writing_notes": "这是Google AI历史上最大人才地震。Jeff Dean是MapReduce、BigTable、TensorFlow等核心基础设施的缔造者，与Sanjay Ghemawat的搭档是Google工程传奇。Quoc Le是Seq2Seq、AutoML等关键AI技术的发明者。Oriol Vinyals是AlphaStar、Gemini多模态核心成员。封面要写出人才流失对Google AI的结构性打击，以及AI4S（AI for Science）赛道升温的趋势。注意Hassabis部分不是'被赶走'而是权力重组。"
+    },
+    {
+      "topic": "Meta发布Muse Code AI编程Agent，由Alexandr Wang主导，对标Claude Code和Codex",
+      "slug": "meta-muse-code-ai-coding-agent",
+      "confidence": "high",
+      "primary_source": "TechCrunch / Meta官方 / 扎克伯格社交媒体",
+      "primary_source_url": "https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/",
+      "verified_facts": [
+        {"fact": "Meta于2026年8月5日发布首款AI编程Agent产品Muse Code", "final_value": "8月5日发布公测", "sources": ["TechCrunch", "中文科技媒体"]},
+        {"fact": "定位为Claude Code和OpenAI Codex的低价替代方案", "final_value": "直接对标Claude Code和Codex", "sources": ["多家媒体报道"]},
+        {"fact": "由Meta超级智能实验室负责人Alexandr Wang（Scale AI创始人）主导", "final_value": "Alexandr Wang主导开发", "sources": ["中文科技媒体"]},
+        {"fact": "核心差异化：持久后台Agent（persistent background agents），非每次spawn新agent", "final_value": "持久后台Agent架构，跨session保持上下文", "sources": ["中文科技媒体报道"]},
+        {"fact": "能跨大型代码仓库完成完整软件工程任务，包括重构、debug、新功能开发", "final_value": "支持大型代码库的完整软件工程任务", "sources": ["扎克伯格社交媒体", "TechCrunch"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "这是AI编程工具战场的重要入场。Meta凭借Llama开源生态+Scale AI的Alexandr Wang加入，直接杀入由Claude Code和Codex主导的Agent编程市场。重点写AI编程从Copilot时代（补全）到Agent时代（完整任务执行）的竞争格局变化。"
+    },
+    {
+      "topic": "Sand.ai开源MAGI-2 Preview全球首个千亿MoE视频生成模型",
+      "slug": "sand-ai-magi-2-moe-video-model-open-source",
+      "confidence": "high",
+      "primary_source": "量子位 / Sand.ai GitHub",
+      "primary_source_url": "https://www.qbitai.com/2026/08/466847.html",
+      "verified_facts": [
+        {"fact": "Sand.ai（清华系团队，创始人曹越，Swin Transformer共同一作）于8月5日发布并开源MAGI-2 Preview", "final_value": "8月5日发布，清华系团队，创始人曹越", "sources": ["量子位"]},
+        {"fact": "总参数114B（1140亿），单次前向激活约6B（60亿）参数", "final_value": "114B总参/6B激活", "sources": ["量子位"]},
+        {"fact": "生成10秒1080P视频成本约0.5元人民币，约为行业主流模型的十分之一", "final_value": "10秒1080P约0.5元，主流模型1/10成本", "sources": ["量子位"]},
+        {"fact": "在AA视频生成榜单排名第六", "final_value": "AA榜单第六", "sources": ["量子位"]},
+        {"fact": "采用Multi-Head LatentMoE架构，单流统一Transformer（文本/视频/音频同一主干），自研MagiMoE kernel库", "final_value": "单流架构+Multi-Head MoE+自研kernel", "sources": ["量子位"]},
+        {"fact": "李开复评价其为'AI视频生成界的DeepSeek'", "final_value": "李开复公开推荐", "sources": ["量子位"]},
+        {"fact": "模型权重在GitHub和HuggingFace开源", "final_value": "完全开源", "sources": ["量子位", "GitHub"]}
+      ],
+      "rejected_claims": [
+        {"claim": "效果达到闭源第一梯队水平", "reason": "AA排第六，文章表述为'接近第一梯队'，非超越"}
+      ],
+      "writing_notes": "这是视频生成领域的重要事件：MoE架构首次被成功扩展到千亿级视频模型，且开源。核心叙事是'视频模型Scaling不能照抄LLM'，Sand.ai从底层重构了架构。重点写视频生成的'不可能三角'（更大模型/更长视频/可控成本）如何被MoE打破，以及开源对闭源视频模型（Sora、Kling、Runway）的冲击。"
+    },
+    {
+      "topic": "Anthropic组建自研AI芯片团队为Claude定制芯片",
+      "slug": "anthropic-custom-ai-chip-claude",
+      "confidence": "high",
+      "primary_source": "TechCrunch / Business Insider / Anthropic官方确认",
+      "primary_source_url": "https://techcrunch.com/2026/08/05/anthropic-is-hiring-an-ai-chip-design-team/",
+      "verified_facts": [
+        {"fact": "Anthropic于8月5日确认正在组建内部定制芯片团队，为Claude设计专用AI芯片", "final_value": "8月5日官方确认", "sources": ["TechCrunch", "Business Insider"]},
+        {"fact": "计划软硬件协同设计（co-design），让Claude运行更快更高效", "final_value": "软硬件协同设计", "sources": ["TechCrunch"]},
+        {"fact": "此前The Information报道Anthropic曾接触三星作为潜在芯片制造合作伙伴", "final_value": "曾与三星洽谈制造合作", "sources": ["The Information", "TechCrunch"]},
+        {"fact": "不是第一家自研芯片的AI公司：OpenAI 6月发布Broadcom代工的Jalapeño推理芯片，Google长期使用TPU，Meta有MTIA加速器", "final_value": "追随OpenAI Jalapeño、Google TPU、Meta MTIA", "sources": ["TechCrunch"]},
+        {"fact": "芯片设计岗位年薪32万-48.5万美元", "final_value": "年薪$320K-$485K", "sources": ["中文媒体（网易）"]},
+        {"fact": "此前已与AWS、Google、Nvidia、AMD签署算力采购协议", "final_value": "已有多云算力合作，自研是补充", "sources": ["TechCrunch"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "Anthropic自研芯片标志着AI前沿公司从'买GPU'到'造芯片'的产业链上移。结合近期Anthropic签署Volta（$10B/6年）和TeraWulf（$19B/20年）算力长约，这是全栈布局。重点写AI芯片自研潮：从云厂商（Google TPU、AWS Trainium）到模型公司（OpenAI Jalapeño、Anthropic custom chip），算力自主权成为前沿AI公司的核心竞争力。"
+    },
+    {
+      "topic": "SpaceX上市后首份财报：AI营收暴涨247%但百亿美元资本开支吓退市场",
+      "slug": "spacex-q2-earnings-ai-revenue-capex",
+      "confidence": "high",
+      "primary_source": "SpaceX财报 / 量子位 / 多家财经媒体",
+      "primary_source_url": "https://www.qbitai.com/2026/08/466454.html",
+      "verified_facts": [
+        {"fact": "SpaceX于8月4日盘后发布上市后首份季度财报（2026 Q2，截至6月30日）", "final_value": "8月4日盘后发布，6月12日上市后首份财报", "sources": ["量子位", "多家财经媒体"]},
+        {"fact": "Q2总营收78.14亿美元，同比增长92%，超市场预期（约69亿美元）", "final_value": "$7.814B营收，+92% YoY", "sources": ["量子位", "财经媒体"]},
+        {"fact": "AI业务收入25.61亿美元，同比暴增247%，占总营收约三分之一", "final_value": "$2.56B AI营收，+247% YoY，占比~33%", "sources": ["量子位"]},
+        {"fact": "AI资本开支约158亿美元（季度），日均AI投入约1.7亿美元", "final_value": "季度AI capex约$15.8B，日均$170M", "sources": ["量子位", "财经媒体"]},
+        {"fact": "调整后EBITDA首次转正（Q1为-6亿美元）", "final_value": "调整后EBITDA转正", "sources": ["财经媒体"]},
+        {"fact": "尽管营收超预期，盘后股价仍下跌7-8%", "final_value": "盘后跌7-8%", "sources": ["多家财经媒体"]},
+        {"fact": "马斯克公开表示SpaceX只用英伟达GPU", "final_value": "只用Nvidia GPU", "sources": ["量子位"]},
+        {"fact": "Colossus数据中心算力转售是AI收入核心来源（此前签给Anthropic等客户）", "final_value": "Colossus算力转售为核心AI收入", "sources": ["量子位", "此前报道"]}
+      ],
+      "rejected_claims": [
+        {"claim": "AI收入超过火箭发射收入", "reason": "AI收入占比约1/3，尚未超过发射业务，但增长速度极快"}
+      ],
+      "writing_notes": "SpaceX财报的核心矛盾：营收暴增、AI成第二增长曲线，但市场被百亿美元级AI资本开支吓退。重点写SpaceX的身份转变：从火箭公司变成'AI算力公司'，Colossus数据中心卖GPU算力比发射卫星更赚钱。同时点出市场担忧：AI算力军备竞赛的投入产出比何时能见拐点？"
+    },
+    {
+      "topic": "微软叫停Tokenmaxxing：全业务部门设AI Token预算，企业AI进入ROI考核时代",
+      "slug": "microsoft-token-budget-tokenmaxxing-ends",
+      "confidence": "high",
+      "primary_source": "404 Media / 量子位 / 内部邮件",
+      "primary_source_url": "https://www.qbitai.com/2026/08/466739.html",
+      "verified_facts": [
+        {"fact": "微软从2026年7月起为各业务部门设置'AI Token预算目标'，执行副总裁Jay Parikh内部邮件明确'Tokenmaxxing不是优化目标'", "final_value": "7月起设Token预算，Jay Parikh内部邮件", "sources": ["量子位", "404 Media"]},
+        {"fact": "内部默认模型从原选项切换为GPT-5.6，原因是更便宜", "final_value": "默认模型换GPT-5.6（更便宜）", "sources": ["量子位"]},
+        {"fact": "员工可查看个人AI token支出，许多工程师月花费在几百到几千美元", "final_value": "工程师月token花费$数百-$数千", "sources": ["量子位"]},
+        {"fact": "Uber到4月就烧光了2026全年AI编程预算，Cursor报价涨至4-5倍，后规定每人每种Agent工具月限$1500", "final_value": "Uber 4个月烧完全年AI编程预算", "sources": ["量子位", "404 Media"]},
+        {"fact": "Atlassian月度AI支出不到一年增至3倍超1500万美元", "final_value": "Atlassian月AI支出超$15M", "sources": ["404 Media"]},
+        {"fact": "黄仁勋3月在All-In Podcast表示'年薪50万工程师每年应消耗至少25万美元token'，GTC 2026再提愿给工程师提供一半年薪的token预算", "final_value": "黄仁勋公开倡导Tokenmaxxing", "sources": ["量子位"]},
+        {"fact": "OpenAI曾有员工一周处理2100亿token（填满维基百科33遍），Meta内部有Claudeonomics排行榜", "final_value": "OpenAI员工周处理2100亿token，Meta有Claudeonomics排行榜", "sources": ["量子位"]},
+        {"fact": "Adobe、Citi、Amazon等公司也在收紧员工AI使用权限", "final_value": "多家大厂收紧AI使用", "sources": ["量子位", "404 Media"]},
+        {"fact": "纳德拉6月播客承认自己也是Tokenmaxxer，但强调生产率边际收益必须匹配边际成本", "final_value": "纳德拉从刷token到算ROI", "sources": ["量子位"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "Tokenmaxxing这个词本身就是互联网文化产物（gymmaxxing/looksmaxxing的变体）。故事弧线：从大厂鼓励刷token（排行榜、KiroRank、虚拟称号）→发现激励token用量只会得到token泡沫→微软带头设预算→行业从'用得越多越好'转向'看产出ROI'。数据点丰富，适合写企业AI落地的真实困境。"
+    },
+    {
+      "topic": "宇树科技科创板IPO询价启动，人形机器人第一股8月10日申购",
+      "slug": "unitree-robotics-ipo-star-market-humanoid",
+      "confidence": "high",
+      "primary_source": "央视财经 / 宇树科技公告 / 多家财经媒体",
+      "primary_source_url": "http://m.toutiao.com/group/7670389322973217316/",
+      "verified_facts": [
+        {"fact": "宇树科技8月5日正式启动科创板IPO初步询价", "final_value": "8月5日启动初步询价", "sources": ["央视财经", "宇树科技公告"]},
+        {"fact": "网上网下申购时间为8月10日", "final_value": "8月10日申购", "sources": ["财经媒体"]},
+        {"fact": "发行估值约420亿元人民币，预计发行价约104元/股，一签缴款约5.2万元", "final_value": "估值约420亿元，发行价约104元/股", "sources": ["财经媒体"]},
+        {"fact": "保荐人为主承销商中信证券", "final_value": "中信证券保荐", "sources": ["公告"]},
+        {"fact": "8月7日举行网上路演", "final_value": "8月7日路演", "sources": ["公告"]},
+        {"fact": "被称为'A股首家专注于人形机器人领域的上市公司'，全球足式机器人龙头，与英伟达有合作", "final_value": "人形机器人第一股，英伟达合作，全产业链自研", "sources": ["央视财经", "多家媒体"]},
+        {"fact": "预计8月下旬挂牌上市", "final_value": "预计8月下旬上市", "sources": ["财经媒体"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "宇树科技IPO是具身智能资本化的标志性事件。从春晚机器狗到人形机器人，宇树是中国机器人产业的名片。结合此前蚂蚁灵波15亿融资、LimX Dynamics 20亿pre-IPO、七部委24项人形机器人重点项目，写具身智能从demo走向产业化+资本化的拐点。注意不要写得像券商研报，要保持DawnVision的判断风格。"
+    },
+    {
+      "topic": "普华永道中东4份专业报告被测出100%AI生成，虚构概念编造参考文献",
+      "slug": "pwc-middle-east-reports-100-percent-ai-generated-fake-citations",
+      "confidence": "high",
+      "primary_source": "多家媒体报道 / 中华网 / 网易",
+      "primary_source_url": "https://3g.china.com/act/news/10000169/20260806/49658017.html",
+      "verified_facts": [
+        {"fact": "普华永道中东分支机构（PwC Middle East）2024-2026年间发布的4份研究报告被发现充斥AI幻觉", "final_value": "PwC中东，4份报告（2024-2026）", "sources": ["中华网", "网易", "今日头条"]},
+        {"fact": "问题包括：虚构概念、错误引用、编造参考文献（虚假脚注）、错误归因、无法验证的信息", "final_value": "虚构概念+编造文献+虚假脚注", "sources": ["多家媒体"]},
+        {"fact": "其中《转型治理》（Transformation Governance）报告被检测工具判定为100%由AI生成（正文部分无一字出自人类之手）", "final_value": "一份报告正文100% AI生成", "sources": ["多家媒体"]},
+        {"fact": "报告主题涉及人工智能和电动汽车等领域", "final_value": "涉AI和电动汽车研究报告", "sources": ["媒体报道"]},
+        {"fact": "这是四大会计师事务所首次因仓促使用AI生成内容引发重大争议", "final_value": "四大首次因AI生成报告引发重大争议", "sources": ["媒体评论"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "Cao选题！核心讽刺点：全球最顶级的专业服务机构之一，盖着普华永道印章的'专业报告'，正文连一个人写的字都没有，还编造假文献假引用。就像你去米其林三星餐厅吃饭，发现后厨全是料理包还贴了假产地标签。结尾实用提醒：1）专业服务领域AI生成内容必须有人工审核流程；2）不要盲目信任大牌机构的AI产出；3）AI幻觉问题在专业场景可能造成严重后果。风格要幽默口语化。"
+    }
+  ],
+  "summary": {
+    "overall_confidence": "high",
+    "replaced_topics": ["最初考虑的Infinity AI Agent 10小时凿CUDA选题因存在过度宣传嫌疑（实际是为d-Matrix芯片构建CUDA兼容层，非真正替代CUDA），替换为Meta Muse Code和微软Tokenmaxxing两个更扎实的选题；AISI/OpenAI网络安全测试选题因19起越权事件中仅2起涉及GPT-5.6 Sol、其余为其他实验室模型，且事件发生在受控测试环境中，媒体报道有夸大（'攻击真人'说法不准确），故替换为宇树科技IPO（具身智能方向）"],
+    "key_corrections": [
+      "AISI报告19起未授权事件中仅2起涉及OpenAI GPT-5.6 Sol，其余为另一实验室（Anthropic）模型；非'122次测试19次越权'均为同一模型",
+      "SpaceX AI资本开支约为158亿美元季度（非184亿美元），AI营收25.6亿美元为季度数据",
+      "Jeff Dean是Google第30号员工（非'首批员工'泛泛表述），1999年加入共27年",
+      "MAGI-2在AA榜单排名第六（非第一），表述为'接近第一梯队'而非'超越'"
+    ]
+  }
+}
