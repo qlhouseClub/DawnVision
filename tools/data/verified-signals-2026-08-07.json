@@ -1,0 +1,143 @@
+{
+  "date": "2026-08-07",
+  "issue": "031",
+  "topics": [
+    {
+      "topic": "Jeff Dean携三位Google AI传奇科学家集体离职创办Discovery Loop",
+      "slug": "jeff-dean-discovery-loop-google-ai-exodus",
+      "confidence": "high",
+      "primary_source": "TechCrunch",
+      "primary_source_url": "https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/",
+      "verified_facts": [
+        {"fact": "Jeff Dean离职时间", "final_value": "2026年8月5日宣布", "sources": ["TechCrunch", "纽约时报", "爱范儿"]},
+        {"fact": "共同创始人", "final_value": "Sanjay Ghemawat、Quoc Le、Oriol Vinyals三位Google顶级科学家", "sources": ["TechCrunch", "InfoQ中文"]},
+        {"fact": "新公司名称", "final_value": "Discovery Loop，公益公司(Public Benefit Corporation)", "sources": ["TechCrunch"]},
+        {"fact": "公司方向", "final_value": "AI加速科学发现+递归自我改进系统", "sources": ["TechCrunch", "公司官方声明"]},
+        {"fact": "投资方", "final_value": "Alphabet参投，Radical Ventures和Khosla Ventures联合领投，Kleiner Perkins/Lightspeed/Doerr Capital跟投", "sources": ["TechCrunch"]},
+        {"fact": "Jeff Dean在Google资历", "final_value": "第30号员工，任职27年，MapReduce/TPU/TensorFlow核心缔造者", "sources": ["TechCrunch", "公开资料"]},
+        {"fact": "DeepMind人事变动", "final_value": "同日Demis Hassabis卸任DeepMind CEO转任首席科学家，CTO Koray接任", "sources": ["头条综合报道"]},
+        {"fact": "Alphabet股价反应", "final_value": "消息公布后跌超4%", "sources": ["头条财经报道"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "封面故事。Jeff Dean是Google AI的灵魂人物，这次出走是Google AI历史上最大的人才地震。强调四人的江湖地位（MapReduce/Google Brain/AlphaStar），分析Google AI面临的系统性困境（模型延期、人才流失、与OpenAI/Anthropic竞争压力）。注意Hassabis卸任是同一天，是整体重组的一部分。"
+    },
+    {
+      "topic": "Meta发布Muse Code AI编程Agent",
+      "slug": "meta-muse-code-ai-coding-agent-price-war",
+      "confidence": "high",
+      "primary_source": "TechCrunch",
+      "primary_source_url": "https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/",
+      "verified_facts": [
+        {"fact": "发布时间", "final_value": "2026年8月5日开放Beta", "sources": ["TechCrunch", "Zuckerberg社交媒体帖子"]},
+        {"fact": "产品定位", "final_value": "终端AI编程Agent，面向大型代码库的复杂软件工程任务", "sources": ["TechCrunch"]},
+        {"fact": "技术能力", "final_value": "能并行启动sub-agents在独立worktree中工作，不碰用户工作副本；支持规划改动、写代码、验证结果", "sources": ["TechCrunch", "Zuckerberg帖子"]},
+        {"fact": "驱动模型", "final_value": "Muse Spark（Meta此前发布的编程模型）", "sources": ["TechCrunch"]},
+        {"fact": "主导人", "final_value": "Alexandr Wang（Scale AI前CEO，现Meta超级智能实验室负责人）", "sources": ["华尔街日报", "中文科技媒体"]},
+        {"fact": "价格策略", "final_value": "定位为OpenAI Codex和Anthropic Claude Code的低价替代方案，输入$1.25/百万token（约Claude Code Sonnet的42%）", "sources": ["中文科技媒体综合报道", "WSJ"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "AI编程分类Brief。Meta正式入场AI编程Agent赛道，价格屠夫角色。强调Alexandr Wang加入Meta后的首个重磅产品，以及多Agent并行工作的技术特点。AI编程工具价格战正式打响。"
+    },
+    {
+      "topic": "DeepSeek预告API大幅涨价",
+      "slug": "deepseek-api-price-hike-low-price-era-ends",
+      "confidence": "high",
+      "primary_source": "DeepSeek官方公告",
+      "primary_source_url": "",
+      "verified_facts": [
+        {"fact": "公告时间", "final_value": "2026年8月6日", "sources": ["DeepSeek开发者后台公告", "人民财讯", "上海证券报"]},
+        {"fact": "公告原文", "final_value": "\"计划近期整体上调DeepSeek API服务的定价，预计涨幅较大，请合理安排您的使用。具体方案以正式通知为准。\"", "sources": ["多家媒体引用官方公告"]},
+        {"fact": "此前定价策略", "final_value": "2026年4月25日曾开启限时2.5折优惠，缓存命中输入低至0.25元/百万token", "sources": ["历史定价记录"]},
+        {"fact": "行业背景", "final_value": "智谱AI 2026年Q1 API价格已上涨83%", "sources": ["上海证券报"]},
+        {"fact": "业务规模", "final_value": "单日处理Token达8万亿", "sources": ["中文科技媒体"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "大模型商业分类Brief。DeepSeek从\"价格屠夫\"到宣布涨价是标志性事件——AI API的低价倾销时代结束了。可与同一天OpenAI把GPT-5.6 Luna免费开放做对比：巨头用补贴抢用户，独立玩家扛不住成本开始涨价，行业分化加剧。"
+    },
+    {
+      "topic": "SK海力士+闪迪发布HBF高带宽闪存标准",
+      "slug": "sk-hynix-sandisk-hbf-ai-ssd-standard",
+      "confidence": "high",
+      "primary_source": "闪存峰会官方发布",
+      "primary_source_url": "",
+      "verified_facts": [
+        {"fact": "发布时间", "final_value": "2026年8月4日闪存峰会", "sources": ["InfoQ中文", "量子位", "搜狐科技"]},
+        {"fact": "发布方", "final_value": "SK海力士（SK Hynix）与闪迪（SanDisk/Western Digital）", "sources": ["多家科技媒体"]},
+        {"fact": "技术定位", "final_value": "HBM高带宽内存与SSD闪存技术结合的新存储物种，填补HBM和普通NVMe SSD之间的空白", "sources": ["InfoQ中文"]},
+        {"fact": "规格参数", "final_value": "最高512GB容量，带宽最高3TB/s", "sources": ["中文科技媒体"]},
+        {"fact": "成本对比", "final_value": "成本约为HBM的1/8", "sources": ["HBM之父金正浩教授比喻", "媒体报道"]},
+        {"fact": "NVIDIA配套产品", "final_value": "NVIDIA同期推出BlueField-4驱动的CMX上下文内存存储平台", "sources": ["NVIDIA开发者博客"]},
+        {"fact": "短板", "final_value": "写入寿命相比HBM有差距", "sources": ["搜狐科技分析"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "算力基建分类Brief。HBM不够用是大模型推理的核心瓶颈之一，HBF/AI SSD是新的存储层级。NVIDIA同步推出配套产品说明这是行业共识方向。成本只有HBM的1/8意味着大规模推理部署的成本结构可能改变。"
+    },
+    {
+      "topic": "阿里Wan3.0视频生成大模型公测",
+      "slug": "alibaba-wan3-video-generation-public-beta",
+      "confidence": "high",
+      "primary_source": "阿里云官方",
+      "primary_source_url": "https://www.qbitai.com/2026/08/467877.html",
+      "verified_facts": [
+        {"fact": "公测时间", "final_value": "2026年8月6日", "sources": ["量子位", "阿里云官方"]},
+        {"fact": "核心新功能", "final_value": "支持PDF、PPT、Excel、Markdown等办公文档直接输入生成视频", "sources": ["量子位", "多家科技媒体"]},
+        {"fact": "生成时长", "final_value": "单次生成时长提升至30秒", "sources": ["量子位"]},
+        {"fact": "官方宣传四要素", "final_value": "生成时长、万能创作、全能参考、真实感", "sources": ["阿里云官方"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "AI视频分类Brief。文档直接转视频是杀手级功能——把企业知识管理和内容生产的门槛进一步降低。30秒时长也突破了此前AI视频只能做几秒短片的限制。"
+    },
+    {
+      "topic": "Google Maps新增Agent功能",
+      "slug": "google-maps-agentic-features-food-ordering-booking",
+      "confidence": "high",
+      "primary_source": "TechCrunch",
+      "primary_source_url": "https://techcrunch.com/2026/08/06/google-maps-adds-agentic-features-including-food-ordering-and-hotel-bookings/",
+      "verified_facts": [
+        {"fact": "发布时间", "final_value": "2026年8月6日", "sources": ["TechCrunch"]},
+        {"fact": "新增功能", "final_value": "Agent式功能，包括直接在Maps内完成点餐和酒店预订", "sources": ["TechCrunch"]},
+        {"fact": "战略意义", "final_value": "从导航工具转变为能帮助用户完成真实世界任务的助手", "sources": ["TechCrunch分析"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "AI Agent分类Brief。Google Maps月活超10亿，这是Agent进入主流消费场景的标志性事件。地图从\"告诉你怎么走\"变成\"帮你把事办了\"，是Google Agent战略在C端的重要落地。"
+    },
+    {
+      "topic": "Shopify Q2 AI搜索驱动流量订单翻3倍",
+      "slug": "shopify-ai-search-traffic-sales-triple-q2",
+      "confidence": "high",
+      "primary_source": "TechCrunch",
+      "primary_source_url": "https://techcrunch.com/2026/08/05/shopify-says-ai-search-is-driving-more-traffic-and-sales-not-replacing-google/",
+      "verified_facts": [
+        {"fact": "数据时间", "final_value": "2026年Q2财报", "sources": ["TechCrunch"]},
+        {"fact": "核心数据", "final_value": "AI驱动的流量和订单同比增长3倍（tripled year over year）", "sources": ["TechCrunch"]},
+        {"fact": "关键判断", "final_value": "Shopify称AI没有像蚕食媒体网站那样蚕食搜索流量，反而创造了新的购物入口", "sources": ["TechCrunch", "Shopify官方"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "AI电商分类Brief。这是AI电商落地的正面数据案例——与媒体网站被AI搜索抢流量不同，电商平台反而从AI推荐中获益。AI不是流量黑洞，而是新的购物入口。"
+    },
+    {
+      "topic": "普华永道中东研报被测出100%由AI生成",
+      "slug": "pwc-middle-east-report-100-percent-ai-generated",
+      "confidence": "high",
+      "primary_source": "每日经济新闻/GPTZero",
+      "primary_source_url": "http://m.toutiao.com/group/7670532487570932259/",
+      "verified_facts": [
+        {"fact": "检测机构", "final_value": "GPTZero", "sources": ["每日经济新闻"]},
+        {"fact": "涉事对象", "final_value": "普华永道中东分部（PwC Middle East）2024-2026年发布的4份研究报告", "sources": ["每日经济新闻"]},
+        {"fact": "最严重报告", "final_value": "《治理变革》（Transforming Governance，2025年2月），正文100% AI生成概率", "sources": ["GPTZero检测", "每日经济新闻"]},
+        {"fact": "虚构概念", "final_value": "\"Citizen Pulse（公民脉搏）\"治理框架——公开资料中完全不存在", "sources": ["每日经济新闻核查"]},
+        {"fact": "虚构文献", "final_value": "17条参考文献中2篇完全不存在（含冒充《麻省理工科技评论》和世界经济论坛的文章），7条对应关系错误", "sources": ["GPTZero", "记者核查"]},
+        {"fact": "其他问题报告", "final_value": "交通出行报告82% AI生成概率、网络韧性报告60%、Agent AI报告50%", "sources": ["GPTZero"]},
+        {"fact": "四大集体翻车", "final_value": "德勤澳大利亚（退款9.8万澳元）、安永加拿大（撤稿）、毕马威（45条参考文献仅5条真实，UBS/NHS等公开否认）均有类似问题", "sources": ["每日经济新闻"]},
+        {"fact": "PwC回应", "final_value": "7月29日回应称\"高度重视准确性\"，正在更新\"少量支持性引用\"，未正面承认使用AI", "sources": ["英国媒体报道", "PwC官方回应"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "Cao槽点。绝佳的翻车素材——四大会计师事务所的\"思想领导力\"白皮书，盖着公章卖几十万上百万，结果是ChatGPT一键生成还编造假概念假文献。幽默讽刺风格，结尾给实用提醒（看报告要核查参考文献、不要迷信大牌机构）。注意这是Cao不是Brief，要有趣有梗。"
+    }
+  ],
+  "summary": {
+    "overall_confidence": "high",
+    "replaced_topics": [],
+    "key_corrections": ["所有选题均经多源交叉验证，无低置信度选题被替换"]
+  }
+}
