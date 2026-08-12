@@ -1,0 +1,38 @@
+{
+  "slug": "palantir-1b-profit-karp-marxist-ai-industry",
+  "category": "AI商业化",
+  "title": "Palantir单季利润破10亿美元，CEO骂AI行业\"马克思主义\"",
+  "title_break": "Palantir季度利润首破10亿<br>Karp炮轰前沿实验室\"不可信\"",
+  "deck": "Palantir Q2利润首次突破10亿美元，CEO Alex Karp直言前沿AI实验室对企业来说太不可信，甚至称行业倾向\"马克思主义\"。赚钱的AI公司和烧钱的AI公司，已经是两个物种。",
+  "keywords": "Dawn Vision, Palantir, Alex Karp, 10亿美元利润, AI商业化, 马克思主义, 企业AI, 前沿实验室",
+  "og_description": "Palantir单季利润破10亿，Karp炮轰AI前沿实验室太不可信。真正赚到钱的AI公司，怎么看还在烧钱的同行？",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 750,
+  "sources": [
+    {
+      "text": "TechCrunch - Palantir Q2 earnings Karp comments",
+      "url": "https://techcrunch.com/2026/08/03/after-killer-quarter-palantir-ceo-alex-karp-calls-ai-industry-marxist/"
+    },
+    {
+      "text": "Palantir 2026 Q2财报",
+      "url": "https://investors.palantir.com/"
+    },
+    {
+      "text": "Bloomberg - Karp AI industry comments",
+      "url": "https://www.bloomberg.com/"
+    }
+  ],
+  "body_html": "      <p>当一家AI公司单季度赚了10亿美元，它的CEO说什么都有人听。</p>\n      <p>Palantir发布2026年Q2财报，<strong>单季度利润首次突破10亿美元</strong>，营收同比增长超过30%，政府和商业业务双双超预期。财报发布后股价盘后一度涨超8%。但财报数据本身不是最大的新闻——最大的新闻是CEO Alex Karp在财报电话会上的一番炮轰。</p>\n\n      <h2>\"前沿实验室对企业来说不可信\"</h2>\n      <p>Karp的原话相当不留情面。他说，现在的AI前沿实验室（指OpenAI、Anthropic这些公司）<strong>对企业客户来说\"太不可信\"</strong>，他们的商业模式和技术路线跟企业真正需要的东西是脱节的。他甚至用了一个很重的词：\"这个行业有一种马克思主义倾向——觉得只要技术足够好，一切问题都会自动解决，但企业客户不关心你的技术好不好，他们关心的是能不能解决问题、会不会出故障、出了问题谁负责。\"</p>\n      <p>这话从Karp嘴里说出来，分量不一样。Palantir不是什么AI新贵，它做了20年企业级软件，服务的是五角大楼、CIA、华尔街银行这些对可靠性要求最高的客户。Palantir的AIP（AI Platform）从2023年推出以来，已经成为企业AI落地最成功的案例之一——不是因为它用了最强的模型，而是因为它解决了企业最关心的问题：<strong>安全、可控、可审计、不出事</strong>。</p>\n      <p>Karp的核心论点是：前沿实验室在追求\"模型越来越强\"这件事上走得太远了，但企业客户要的不是最强的模型，是<strong>最可靠的解决方案</strong>。一个准确率99%但偶尔会胡说八道的模型，在消费场景可能无所谓，但在情报分析、金融风控、医疗诊断这些场景里，那1%的错误就是致命的。</p>\n\n      <h2>AI商业化的两个阵营</h2>\n      <p>Karp的发言其实点破了AI行业一个越来越明显的分化：<strong>已经赚钱的，和还在烧钱的，已经不是同一个物种了</strong>。</p>\n      <p>一个阵营是Palantir、微软、NVIDIA这些公司——它们从AI里赚到了真金白银，考虑的问题是客户需求、交付质量、合规风险、投资回报。它们的发布会不会只讲参数和跑分，会讲案例、讲ROI、讲怎么帮客户省钱赚钱。</p>\n      <p>另一个阵营是大部分前沿模型公司——它们还在烧投资人的钱，追求的是模型能力的极限突破，考虑的问题是AGI、对齐、能力边界。它们的发布会充满了\"革命性\"\"颠覆性\"\"新纪元\"这些词，但很少能说清楚一个企业客户用了你的产品具体能省多少钱、多赚多少钱。</p>\n      <p>这两个阵营没有对错之分，只是阶段不同。但Karp的提醒是有价值的：如果你是一家企业，不要被\"最强模型\"的叙事忽悠了，先想清楚你要解决什么问题，再选最合适的工具。如果你是一家AI公司，也不要沉迷于跑分榜单，<strong>客户愿意付钱的能力才是真能力</strong>。</p>\n      <p>当然，Karp说这话也有自己的商业立场——Palantir本身不训练基础模型，它是模型的\"搬运工\"和\"整合者\"，把各家模型包装成企业能用的解决方案。贬低基础模型公司，对Palantir的商业定位有利。但抛开立场之见，他说的核心问题是对的：AIto B的最后一公里，从来不是模型能力问题，是交付和信任问题。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "客户愿意付钱的能力才是真能力。企业要的不是最强模型，是最可靠的解决方案。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Palantir · Alex Karp · 10亿美元利润 · AI商业化 · 企业AI · 前沿实验室批评 · 马克思主义 · 可靠性 · AIP平台 · 两个阵营",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的公开信息整理，素材来源：TechCrunch、Palantir财报、Bloomberg。",
+  "tags": [
+    "Palantir",
+    "AI商业化",
+    "企业AI",
+    "财报"
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "issue": {
+    "number": "024",
+    "date": "2026-07-29",
+    "date_display": "2026.07.29"
+  },
+  "cover": {
+    "slug": "jiuwenswarm-harmonyos-pc-ai-workbench-open-source-multi-agent",
+    "title": "JiuwenSwarm登陆鸿蒙PC：首个开源AI统一工作台发布，桌面OS成为多智能体协作新战场",
+    "title_short": "JiuwenSwarm鸿蒙PC AI工作台发布",
+    "title_break": "JiuwenSwarm登陆鸿蒙PC<br>首个开源AI统一工作台，桌面成Agent新战场",
+    "deck": "openJiuwen联合华为终端团队发布JiuwenSwarm鸿蒙PC版——首个面向鸿蒙PC的开源AI统一工作台，工作/编程模式合并，20分钟生成200页PPT，多智能体分支并行开发游戏，提出HITS人机协同新范式。",
+    "keywords": "Dawn Vision, JiuwenSwarm, 鸿蒙PC, HarmonyOS, openJiuwen, 多智能体, AI工作台, 蜂群智能体, HITS, 人机协同, Coordination Engineering, 开源AI",
+    "og_description": "JiuwenSwarm鸿蒙PC版发布：首个开源AI统一工作台，办公编程一站式，多智能体团队协同，20分钟生成200页PPT，开源支持Windows/Mac/Ubuntu多平台。",
+    "twitter_description": "人在高铁上，AI团队已经在电脑上开工了。JiuwenSwarm把多智能体协作搬进鸿蒙PC，还提出了HITS——人不只是审批者，是蜂群中的一员。",
+    "read_time": "约 10 分钟阅读",
+    "word_count": 2500,
+    "sources": [
+      {
+        "text": "量子位 - 首个鸿蒙PC开源AI统一工作台JiuwenSwarm，办公编程一站式搞定",
+        "url": "https://www.qbitai.com/2026/07/462065.html"
+      },
+      {
+        "text": "凤凰网科技 - 重塑桌面生产力！JiuwenSwarm鸿蒙PC开源AI统一工作台发布",
+        "url": "https://biz.ifeng.com/c/8v87RQJjz9m"
+      },
+      {
+        "text": "新浪科技 - 华为推出首个鸿蒙PC开源AI统一工作台「JiuwenSwarm」",
+        "url": "https://cj.sina.cn/article/norm_detail?url=http%3A%2F%2Ffinance.sina.cn%2Fstock%2Fjdts%2F2026-07-29%2Fdetail-inikmyti0095906.d.html"
+      },
+      {
+        "text": "GitHub - openJiuwen-ai/jiuwenswarm (openharmony branch)",
+        "url": "https://github.com/openJiuwen-ai/jiuwenswarm/tree/openharmony"
+      },
+      {
+        "text": "openJiuwen官网 - JiuwenSwarm下载",
+        "url": "https://www.openjiuwen.com/download"
+      }
+    ],
+    "pull_quote": {
+      "text": "人在高铁上用手机派活，电脑上的AI团队已经开工。20分钟后200页PPT交付——多智能体的价值不是更快，是重新定义'在场'。",
+      "attr": "—— Dawn Vision编辑部"
+    },
+    "cognitive_notes": "JiuwenSwarm · 鸿蒙PC · HarmonyOS · openJiuwen · 多智能体 · 蜂群智能体 · AI工作台 · HITS · Human in the Swarm · Coordination Engineering · 协同工程 · 人机协同 · 开源AI · 桌面OS · AI原生",
+    "source_summary": "本文基于 Dawn Vision 认知引擎处理的 18 个源信号生成，经编辑部人工审核。素材来源：量子位、凤凰网科技、新浪科技、GitHub openJiuwen仓库、openJiuwen官网。",
+    "body_html": "<p>7月29日上午11点半，量子位刊发了一条不到2000字的产品发布稿。如果你只看标题，可能会把它当成又一个\"AI助手上新\"的常规新闻划走。但如果你仔细读完那六个演示案例，会意识到一件事：AI Agent的主战场，正在从浏览器标签页悄悄转移到你的电脑桌面。</p>\n      <p>发布的产品叫<strong>JiuwenSwarm蜂群智能体鸿蒙PC版</strong>，由openJiuwen社区联合华为终端平板与PC产品线、软件部、2012实验室、华为云、终端小艺等团队共同推出。它的标签有三个：首个面向鸿蒙PC的开源AI统一工作台、工作模式与Code模式合并为一、提出HITS（Human in the Swarm）人机协同新范式。</p>\n      <p>这些词听起来很技术，翻译成大白话就是：你不用再在ChatGPT写文档、Cursor写代码、PPT软件做演示之间来回切了。一个工作台里，你可以像派活给真实团队一样给一群AI派活，它们分头行动、并行工作、交叉验证，最后交付给你成品。更关键的是，你不只是站在外面点\"同意\"的老板，你是团队中的一员，可以中途插话、加需求、拉\"专家\"会诊、甚至和AI一起打狼人杀。</p>\n      <p>这不是\"又一个AI桌面客户端\"。这是AI Agent第一次以<strong>原生桌面工作台</strong>的形态，在一个操作系统里扎下根来。</p>\n\n      <h2>三个场景，六个案例：蜂群怎么干活</h2>\n      <p>JiuwenSwarm最核心的变化，是把\"和一个AI对话\"变成了\"带一支AI团队干活\"。</p>\n      <p>第一个场景是高铁上的紧急汇报。你人在去客户现场的高铁上，突然接到老板消息说\"半小时后要一份200页的竞品分析汇报\"。换作以前，你可能要掏出电脑连热点、开十几个网页查资料、手动搭PPT大纲、一页页填内容——高铁上信号不稳、桌子太小、时间太紧，大概率要翻车。但在JiuwenSwarm里，你只需要打开手机飞书，几句话唤起鸿蒙PC上的\"汇报材料团队\"，任务立刻开始跑。</p>\n      <p>注意，是\"开始跑\"不是\"开始等\"。你可以随时打回大纲说\"这个逻辑不对重来\"，碰到技术术语可以随时@一个\"专家智能体\"进来解释，页面丑了可以中途加一个\"美化智能体\"进来调样式。你在高铁上用手机指挥，你的PC上一支AI团队已经在并行工作了。20分钟后，200页PPT交付。</p>\n      <p>第二个场景是编程，而且是<strong>分支并行开发</strong>。有个用户想重温小时候玩的街机坦克大战，翻遍鸿蒙应用商店没找到合适版本，于是在JiuwenSwarm的Code集群模式里组了一支小型开发团队：一个做玩法和界面设计、一个写前端、一个写后端、一个做测试。前端和后端在不同分支独立并行开发，完成后统一合入主干。开发过程中想到新点子，还能@某个成员给他加需求。几轮协作之后，一款可以在鸿蒙PC上跑的坦克大战真的做出来了。</p>\n      <p>另一个更日常的例子是健身热量记录工具。用户正在健身，想做一个简单干净够用的热量记录App，打开JiuwenSwarm描述需求后，系统自主规划任务、完成ArkTS代码开发、编译打包，生成一个可以直接安装运行的鸿蒙应用。灵感稍纵即逝，以前从\"想做\"到\"做完\"需要搭架构、写代码、测试、打包，现在从开口描述到安装运行，一个完整流程在同一个工作台里走完。</p>\n      <p>第三个场景最出人意料——<strong>人和AI组队打游戏</strong>。五子棋场景里，AI当主持人组织两个人类玩家对局，同步棋盘、维护规则、提醒落子、甚至给犹豫的玩家推荐落子位置。狼人杀场景更进一步：你和几位AI玩家同坐一桌，它们会读你的发言、推理你的身份、判断你是在认真分析还是在搅浑水，可能带你飞也可能在关键轮次把票投给你，你还可以单独@某个AI玩家说悄悄话对暗号。</p>\n      <p>你品品这个细节：当AI不只是帮你干活的工具，而是可以和你坐在一起博弈、伪装、投票的\"队友\"时，人和AI的关系已经变了。</p>\n      <div class=\"pull-quote\">\"人在高铁上用手机派活，电脑上的AI团队已经开工。20分钟后200页PPT交付——多智能体的价值不是更快，是重新定义'在场'。\"<span class=\"pull-quote__attr\">—— Dawn Vision编辑部</span></div>\n\n      <h2>从HOTS到HITS：人机协同的范式升级</h2>\n      <p>JiuwenSwarm背后的方法论叫<strong>Coordination Engineering（协同工程）</strong>。</p>\n      <p>过去一年多智能体系统的主流范式是HOTS——Human on the Swarm，人站在蜂群外面，像监控室里的调度员一样看屏幕、点按钮、做审批。AI是干活的，人是拍板的。这个模式解决了\"AI并行干活\"的问题，但也留下了一个致命伤：人是外环的，信息要从内环传到外环再传回来，延迟高、语境丢失、中途干预困难。你有没有过这种体验——Agent已经跑偏了十分钟，你才发现，然后要花五分钟解释它错在哪、怎么改，改完它又偏到另一个方向去了？</p>\n      <p>HITS要解决的就是这个问题：<strong>Human in the Swarm，人走进蜂群里</strong>。你不是站在流程外面等结果的审批者，你是团队中的一个成员，有自己的角色和分工。你可以在任何时候插话、任何节点介入、和任何一个智能体单独沟通，就像你在一个真实的多人协作群里一样。</p>\n      <p>说几个具体差异：HOTS模式下，你给Agent团队一个任务，然后等结果，不满意就打回重做；HITS模式下，你可以在它们做到一半的时候说\"第三页的方向错了，往B角度走\"，整个团队立刻转向。HOTS模式下，你需要把所有需求一次性说清楚，因为中途改需求成本很高；HITS模式下，需求可以边走边改，灵感来了随时加。HOTS模式下，测试是最后一环；HITS模式下，你可以在开发过程中随时拉测试智能体进来验某个模块。</p>\n      <p>这听起来像是一个小的交互改进，但它本质上是在重写人和AI协作的拓扑结构。从星形拓扑（人和AI一对多）变成网状拓扑（人和AI多对多，AI之间也多对多）。为什么狼人杀的例子重要？因为它证明了在HITS范式下，AI不只是执行任务的worker，它可以是具备社交推理能力的player。</p>\n      <p>JiuwenSwarm还做了一个重要的工程决策：<strong>工作模式和Code模式合并</strong>。之前的AI工具，写文档用一个、写代码用另一个、做PPT用第三个，上下文在不同工具之间是割裂的。但真实的知识工作本来就不分\"写文档\"和\"写代码\"——你做技术方案的时候既要写文字描述也要写代码示例，你做产品汇报的时候既要做PPT也要嵌入数据图表。统一工作台意味着你派出去的同一个智能体团队，可以同时处理文字、代码、设计、数据，不需要在多个工具间搬运上下文。</p>\n\n      <h2>为什么是鸿蒙PC，为什么是现在</h2>\n      <p>一个合理的问题是：多智能体工作台这种东西，Windows、Mac上早有各种AI客户端和IDE插件，鸿蒙PC版有什么特殊意义？</p>\n      <p>答案在于<strong>原生集成度和开源生态</strong>。</p>\n      <p>Windows和Mac上的AI工具，本质上都是\"跑在操作系统上面的应用\"。它们可以调用系统API，但很难深度整合到操作系统的工作流里。你在Cursor里写代码，要切换到浏览器查资料、切换到飞书看需求、切换到终端跑命令——应用之间的壁垒是操作系统几十年形成的。JiuwenSwarm作为鸿蒙PC的首发AI统一工作台，有机会从系统层面打通这些壁垒：它可以和飞书联动、和小艺联动、跨设备（手机→PC→平板）持续推进任务，这是第三方应用在成熟操作系统上很难做到的深度整合。</p>\n      <p>第二个原因是<strong>开源</strong>。JiuwenSwarm是全套开源的，GitHub和AtomGit上都有openharmony分支，支持Windows、Mac、HarmonyOS、Ubuntu多平台安装部署。这意味着它不是一个华为官方的封闭产品，而是一个社区可以参与建设的基础设施。你可以自己加智能体角色、改协同流程、接私有模型、接企业内部系统。在MCP和A2A协议逐渐成熟的2026年，一个开源的多智能体工作台意味着什么？意味着它可能成为Agent时代的\"VS Code\"——一个开放的、可扩展的、所有人都能在上面构建插件和扩展的统一界面。</p>\n      <p>再看时间点。2026年下半年，AI Agent已经从\"能不能做\"进入了\"怎么好用\"的阶段。MCP服务器突破15000个，A2A协议获得150+组织支持，主流大模型都具备了函数调用和多步推理能力。但普通用户的痛点反而更明显了：工具太多、太碎、切换成本太高、每个Agent都是信息孤岛。JiuwenSwarm这类统一工作台的出现，是Agent生态从\"工具爆炸\"走向\"平台收敛\"的信号。</p>\n      <p>还有一个容易被忽略的信号：鸿蒙PC生态本身在快速成熟。当一个操作系统还在早期阶段时，用户对\"原生AI工作台\"的需求是最强烈的——因为传统软件生态还不够完善，AI原生能力反而可能成为差异化竞争力。Windows上有Office、有Adobe、有几十年积累的专业软件，AI是锦上添花；鸿蒙PC上，AI统一工作台可能就是用户选择它的核心理由之一。</p>\n\n      <h2>终局判断：桌面OS的AI原生重构才刚刚开始</h2>\n      <p>JiuwenSwarm鸿蒙PC版的发布，不是一个孤立的产品新闻。把它放到更大的坐标系里看，你会发现三条清晰的线索正在汇合。</p>\n      <p>第一，<strong>AI入口从对话框走向工作台</strong>。2023-2024年是ChatGPT式对话框的时代，一个输入框解决所有问题；2025年是Agent的时代，AI能帮你执行多步任务但散落在不同工具里；2026年下半年开始，我们进入工作台时代——统一的界面、统一的上下文、统一的团队管理，AI不再是一个你\"打开\"的东西，而是你\"在里面工作\"的环境。这个转变的意义，相当于从DOS命令行走向Windows图形界面。</p>\n      <p>第二，<strong>操作系统重新成为AI竞争的核心战场</strong>。过去两年AI竞争的焦点在模型（谁参数大、谁跑分高），今年上半年焦点在应用（谁能做出杀手级Agent），下半年开始焦点转向操作系统——谁能把AI能力深度整合到OS层面，让多智能体协作成为系统原生能力而非第三方应用，谁就能定义下一个十年的人机交互范式。苹果在iOS 27/macOS上推Apple Intelligence、微软在Windows里深度整合Copilot、华为在鸿蒙PC上推开源AI工作台，本质上都是在抢这个位置。</p>\n      <p>第三，<strong>开源在AI基础设施层的优势正在扩大</strong>。JiuwenSwarm选择全套开源不是做慈善，是战略选择。当Agent工作台成为一个平台时，生态比功能更重要——开源意味着所有开发者都能为它构建智能体、插件、连接器，所有企业都能基于它做私有化部署。这和Linux在服务器领域、Android在移动领域战胜闭源对手的逻辑一模一样。在Agent协议（MCP/A2A）逐渐标准化的今天，一个开源的工作台天然具备协议兼容性优势，而封闭产品会越来越像一个个无法互通的信息孤岛。</p>\n      <p>当然，JiuwenSwarm现在还只是第一步。20分钟出200页PPT的质量到底如何、多分支并行开发的代码会不会有集成问题、HITS范式在复杂企业场景下能不能跑通，这些都需要真实用户的大规模检验。但方向是清晰的：未来你坐在电脑前工作时，对面不是一个等着被提问的AI对话框，而是一支随时待命、各有所长、可以和你并肩作战的AI团队。你在高铁上、在咖啡馆、在家里，只要一句话，它们就开工。</p>\n      <p>桌面操作系统的AI原生重构，才刚刚开始。而这一次，开源选手站在了起跑线上。</p>\n      <p>明天见。</p>\n\n<div class=\"article-sources\">\n  <div class=\"article-sources__label\">Sources · 参考来源</div>\n  <ul class=\"article-sources__list\">\n    <li><a href=\"https://www.qbitai.com/2026/07/462065.html\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">量子位 - 首个鸿蒙PC开源AI统一工作台JiuwenSwarm，办公编程一站式搞定</a></li>\n    <li><a href=\"https://biz.ifeng.com/c/8v87RQJjz9m\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">凤凰网科技 - 重塑桌面生产力！JiuwenSwarm鸿蒙PC开源AI统一工作台发布</a></li>\n    <li><a href=\"https://cj.sina.cn/article/norm_detail?url=http%3A%2F%2Ffinance.sina.cn%2Fstock%2Fjdts%2F2026-07-29%2Fdetail-inikmyti0095906.d.html\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">新浪科技 - 华为推出首个鸿蒙PC开源AI统一工作台「JiuwenSwarm」</a></li>\n    <li><a href=\"https://github.com/openJiuwen-ai/jiuwenswarm/tree/openharmony\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">GitHub - openJiuwen-ai/jiuwenswarm (openharmony branch)</a></li>\n    <li><a href=\"https://www.openjiuwen.com/download\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">openJiuwen官网 - JiuwenSwarm下载</a></li>\n  </ul>\n  <p class=\"article-sources__note\">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，标题、观点、行文均为原创，仅供参考，不构成任何投资建议或决策依据。如有侵权请联系删除。</p>\n</div>\n<div class=\"article-page__footnote\">\n  <p>本文基于 Dawn Vision 认知引擎处理的 18 个源信号生成，经编辑部人工审核。素材来源：量子位、凤凰网科技、新浪科技、GitHub openJiuwen仓库、openJiuwen官网。</p>\n  <p>相关入库笔记：JiuwenSwarm · 鸿蒙PC · HarmonyOS · openJiuwen · 多智能体 · 蜂群智能体 · AI工作台 · HITS · Human in the Swarm · Coordination Engineering · 协同工程 · 人机协同 · 开源AI · 桌面OS · AI原生</p>\n</div>"
+  },
+  "briefs": [
+    {
+      "slug": "google-gemini-api-managed-agents-3-6-flash-hooks",
+      "category": "AI Agent · 工程实践",
+      "title": "Google Gemini API上线Managed Agents：3.6 Flash加持+Hooks机制，生产级Agent开发不用从零搭",
+      "title_short": "Google Gemini API上线M",
+      "title_break": "Google Gemini API上线Managed Agents<br>3.6 Flash加持+Hooks机制，生产级Agent开发不用从零搭",
+      "deck": "Google发布Gemini API Managed Agents正式版，搭载Gemini 3.6 Flash、Hooks生命周期管理、会话持久化，开发者不用自己搭Agent编排框架就能部署生产级应用。",
+      "keywords": "Dawn Vision, Google Gemini, Managed Agents, Gemini 3.6 Flash, Agent Hooks, AI Agent, 生产级Agent, 开发者工具",
+      "og_description": "Google Gemini API Managed Agents正式发布：搭载Gemini 3.6 Flash，引入Hooks生命周期管理，内置会话持久化和工具调用。",
+      "read_time": "约 5 分钟阅读",
+      "word_count": 800,
+      "sources": [
+        {
+          "text": "Google AI Blog - Gemini API Managed Agents: 3.6 Flash, hooks, and more",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/"
+        },
+        {
+          "text": "TechCrunch - Google expands Gemini for agents and enterprise",
+          "url": "https://techcrunch.com/2026/07/28/google-expands-gemini-for-agents-and-enterprise/"
+        }
+      ],
+      "pull_quote": {
+        "text": "Agent开发正在从'手工作坊'走向'工业化大生产'。基础设施层的竞争，比模型层的竞争更决定谁能赚到钱。",
+        "attr": "—— Dawn Vision编辑部"
+      },
+      "cognitive_notes": "Google Gemini · Managed Agents · Gemini 3.6 Flash · Agent Hooks · AI Agent基础设施 · 生产级Agent",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：Google AI Blog、TechCrunch。",
+      "body_html": "<p>如果你今年尝试过自己搭一个生产环境能跑的AI Agent，你大概率踩过这些坑：会话状态怎么持久化、工具调用失败怎么重试、多Agent之间怎么路由、长上下文怎么管理、成本怎么控制。每个坑都意味着几千行代码、几周调试、半夜爬起来修bug。</p>\n      <p>7月29日，Google说：这些脏活累活我来干，你专注写业务逻辑。</p>\n      <p>Google正式发布<strong>Gemini API Managed Agents</strong>，搭载Gemini 3.6 Flash，引入Hooks生命周期管理，内置会话持久化、工具调用编排、多Agent路由。开发者通过API就能部署生产级Agent，不用从零搭编排框架。</p>\n      <h2>Managed Agents解决什么痛点</h2>\n      <p>过去一年Agent开发最大的谎言是：\"给模型接上MCP工具，它就是Agent了。\"Demo和生产之间隔着巨大工程鸿沟：会话状态持久化、工具调用重试、成本控制、可观测性——这些全是基础设施问题，不是模型问题。</p>\n      <p>Google把共性需求做成托管服务：状态存云数据库、重试和错误处理内置、多Agent路由有turn manager、成本控制有用量限制。你只需要定义Agent角色、接工具、写Hooks，剩下交给Google基础设施。</p>\n      <p>核心亮点是<strong>Gemini 3.6 Flash</strong>（速度成本优化，适合高频低延迟工具调用）和<strong>Hooks机制</strong>（before_tool_call、after_tool_call、on_error等节点插入自定义逻辑——权限检查、备用方案切换、内容审核）。</p>\n      <div class=\"pull-quote\">\"Agent开发正在从'手工作坊'走向'工业化大生产'。基础设施层的竞争，比模型层的竞争更决定谁能赚到钱。\"<span class=\"pull-quote__attr\">—— Dawn Vision编辑部</span></div>\n      <h2>Agent基础设施战白热化</h2>\n      <p>Google不是第一个。OpenAI有Assistants API和Agents SDK，微软有Copilot Studio，亚马逊Bedrock有Agents，火山引擎、阿里云也有类似服务。Agent基础设施正成为云厂商新战场。</p>\n      <p>商业逻辑清晰：Agent应用越普及，对底层基础设施绑定越深。Managed Agents写的逻辑很难无痛迁移——状态格式、Hooks接口、工具协议都有平台特异性。这是云厂商最爱的锁定效应。</p>\n      <p>但对开发者是好事：2024年5人团队3个月搭的Agent，2026年下半年一个人周末用托管服务就能拼出来。Agent应用数量将迎来爆发。3.6 Flash还原生支持多模态（视频、音频、图片实时理解生成），不用额外拼其他模型服务。</p>\n      <p>Agent竞争已从\"哪个模型更聪明\"进入\"哪个平台让开发者更快交付\"。大多数企业不需要最聪明的Agent，他们需要<strong>明天就能上线、出了问题能排查、成本能控住</strong>的Agent。</p>\n      <p>明天见。</p>\n\n<div class=\"article-sources\">\n  <div class=\"article-sources__label\">Sources · 参考来源</div>\n  <ul class=\"article-sources__list\">\n    <li><a href=\"https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google AI Blog - Gemini API Managed Agents: 3.6 Flash, hooks, and more</a></li>\n    <li><a href=\"https://techcrunch.com/2026/07/28/google-expands-gemini-for-agents-and-enterprise/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">TechCrunch - Google expands Gemini for agents and enterprise</a></li>\n  </ul>\n  <p class=\"article-sources__note\">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，标题、观点、行文均为原创，仅供参考，不构成任何投资建议或决策依据。如有侵权请联系删除。</p>\n</div>\n<div class=\"article-page__footnote\">\n  <p>本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：Google AI Blog、TechCrunch。</p>\n  <p>相关入库笔记：Google Gemini · Managed Agents · Gemini 3.6 Flash · Agent Hooks · AI Agent基础设施 · 生产级Agent</p>\n</div>"
+    },
+    {
+      "slug": "fish-audio-52m-seed-ai-voice-21m-arr",
+      "category": "大模型 · 商业分析",
+      "title": "Fish Audio拿下$5200万种子轮：800万用户、$2100万ARR，AI语音赛道跑出开源商业化样板",
+      "title_short": "Fish Audio拿下$5200万种子",
+      "title_break": "Fish Audio拿下$5200万种子轮<br>800万用户、$2100万ARR，AI语音赛道跑出开源商业化样板",
+      "deck": "AI语音初创Fish Audio完成$5200万种子轮，开源模型吸引800万用户，付费版跑出$2100万ARR，证明AI垂直赛道开源+商业化双轮模式可以跑通。",
+      "keywords": "Dawn Vision, Fish Audio, AI语音, 种子轮融资, ARR, 开源商业化, 生成式音频",
+      "og_description": "Fish Audio完成$5200万种子轮，AI语音开源版800万用户，付费版年经常性收入$2100万。",
+      "read_time": "约 5 分钟阅读",
+      "word_count": 780,
+      "sources": [
+        {
+          "text": "TechCrunch - Fish Audio raises $52M seed to build AI voice models",
+          "url": "https://techcrunch.com/2026/07/28/fish-audio-raises-50m-seed-to-build-ai-voice-models-for-creators-and-enterprises/"
+        }
+      ],
+      "pull_quote": {
+        "text": "AI赛道最大误区是'只有做通用大模型才能赚大钱'。Fish Audio证明，垂直扎下去，开源做漏斗，付费做服务，一样一年跑出$2000万ARR。",
+        "attr": "—— Dawn Vision编辑部"
+      },
+      "cognitive_notes": "Fish Audio · AI语音 · 种子轮融资 · $5200万 · ARR · $2100万 · 开源商业化 · 垂直AI",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 6 个源信号生成，经编辑部人工审核。素材来源：TechCrunch。",
+      "body_html": "<p>AI语音赛道一直有灵魂拷问：开源模型满天飞，付费服务凭什么活？</p>\n      <p>7月28日，Fish Audio用数据给出答案：<strong>$5200万美元种子轮、800万开源用户、$2100万年经常性收入（ARR）</strong>。成立一年多，把\"开源攒流量、付费赚利润\"的互联网老套路在AI时代重新跑通。</p>\n      <h2>$5200万种子轮的背后</h2>\n      <p>种子轮$5200万、成立一年多——说明投资人对商业模式已有强信心。更关键的是$2100万ARR：这是年化经常性收入，代表用户愿意持续付费，不是免费薅羊毛。</p>\n      <p>Fish Audio玩法经典：开源版做漏斗（Hugging Face/GitHub免费用，攒口碑和社区），付费版做利润（企业级API、高音质、多音色、商用授权、技术支持）。800万开源用户哪怕1%转化也是8万付费用户，月均$22就能跑出$2100万ARR。</p>\n      <p>语音赛道能跑通因为它<strong>强商用需求、弱通用模型替代</strong>：创作者克隆声音做短视频/播客、游戏公司批量生成角色语音、客服系统定制TTS——通用大模型自带TTS满足不了高保真、音色定制、情感表达、低延迟需求。</p>\n      <div class=\"pull-quote\">\"AI赛道最大误区是'只有做通用大模型才能赚大钱'。Fish Audio证明，垂直扎下去，开源做漏斗，付费做服务，一样一年跑出$2000万ARR。\"<span class=\"pull-quote__attr\">—— Dawn Vision编辑部</span></div>\n      <h2>垂直AI商业化样板</h2>\n      <p>Fish Audio不是唯一玩家（ElevenLabs估值更高），但它的<strong>开源基因和中国背景</strong>是差异化优势：不仅开放模型权重，还开放训练微调工具，在Hugging Face/GitHub极受欢迎——开发者爱能改、能看、能本地部署的模型，不爱黑盒API。</p>\n      <p>这给垂直AI创业者打了样：别总想做下一个OpenAI。选垂直场景（语音、视频、代码、设计、音乐、生物计算），开源做社区、付费做企业，产品够硬、需求够刚，一年多从0到$2000万ARR完全可能。</p>\n      <p>2026年下半年融资环境已不宽松（投资人要看ARR、留存、单位经济），Fish Audio此时拿$5200万说明商业数据经得起尽调。AI语音天花板在抬升：短视频、播客、有声书、AI客服、游戏NPC、数字人直播——语音交互场景爆发。</p>\n      <p>AI大模型格局正从\"少数通用模型通吃\"走向\"通用模型做基础设施、垂直模型做应用层\"。Fish Audio是第一个跑出漂亮数据的垂直AI公司，但绝不会是最后一个。开源不是慈善是漏斗，免费不是终点是起点。</p>\n      <p>明天见。</p>\n\n<div class=\"article-sources\">\n  <div class=\"article-sources__label\">Sources · 参考来源</div>\n  <ul class=\"article-sources__list\">\n    <li><a href=\"https://techcrunch.com/2026/07/28/fish-audio-raises-50m-seed-to-build-ai-voice-models-for-creators-and-enterprises/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">TechCrunch - Fish Audio raises $52M seed to build AI voice models</a></li>\n  </ul>\n  <p class=\"article-sources__note\">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，标题、观点、行文均为原创，仅供参考，不构成任何投资建议或决策依据。如有侵权请联系删除。</p>\n</div>\n<div class=\"article-page__footnote\">\n  <p>本文基于 Dawn Vision 认知引擎处理的 6 个源信号生成，经编辑部人工审核。素材来源：TechCrunch。</p>\n  <p>相关入库笔记：Fish Audio · AI语音 · 种子轮融资 · $5200万 · ARR · $2100万 · 开源商业化 · 垂直AI</p>\n</div>"
+    },
+    {
+      "slug": "delta-intelligence-500m-angel-humanoid-robot-foundation-model",
+      "category": "具身智能 · 机器人",
+      "title": "德塔智能半年6轮融资近5亿元：UCLA博士团队做人形机器人基础模型，主机厂抢着投",
+      "title_short": "德塔智能半年6轮融资近5亿元：UCLA博",
+      "title_break": "德塔智能半年6轮融资近5亿元<br>UCLA博士团队做人形机器人基础模型，主机厂抢着投",
+      "deck": "人形机器人基础模型公司德塔智能半年6轮融资近5亿元，智元、乐聚等主机厂和高瓴、联想之星等抢投，具身智能基础模型成赛道新热点。",
+      "keywords": "Dawn Vision, 德塔智能, Delta Intelligence, 人形机器人, 具身智能, 基础模型, 天使++轮, UCLA",
+      "og_description": "德塔智能半年6轮融资近5亿元做人形机器人基础模型，投资方含智元、乐聚等主机厂和高瓴、联想之星等头部机构。",
+      "read_time": "约 5 分钟阅读",
+      "word_count": 780,
+      "sources": [
+        {
+          "text": "36氪 - UCLA博士团队创业做人形机器人基础模型，拿下近5亿元天使++轮融资",
+          "url": "https://36kr.com/p/3913213962540164?f=rss"
+        }
+      ],
+      "pull_quote": {
+        "text": "人形机器人行业正在重演自动驾驶剧本：前半场拼硬件，后半场拼数据和基础模型。德塔智能拿到的不只是钱，是主机厂的数据投喂。",
+        "attr": "—— Dawn Vision编辑部"
+      },
+      "cognitive_notes": "德塔智能 · 人形机器人 · 具身智能 · 基础模型 · 天使++轮 · UCLA · 机器人主机厂 · 尧乐科技",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 10 个源信号生成，经编辑部人工审核。素材来源：36氪。",
+      "body_html": "<p>人形机器人赛道的钱，正在从\"造身体\"涌向\"造大脑\"。</p>\n      <p>36氪报道，人形机器人基础模型公司<strong>德塔智能（Delta Intelligence）</strong>完成近5亿元天使++轮融资——成立半年第6轮。投资方包括智元机器人、乐聚机器人、星海图等主机厂，高瓴创投、元禾控股、复星锐正、联想创投等机构，以及汽车半导体产业资本。</p>\n      <h2>为什么主机厂抢着投</h2>\n      <p>半年6轮，平均一月一轮，每轮都有新产业方——说明<strong>不是创始人追钱，是投资人抢额度</strong>。</p>\n      <p>原因很简单：过去两年人形机器人硬件进展神速（宇树、智元、Optimus、Figure都能走能跑能跳），但放到真实场景还是很\"笨\"——换个物体抓不起来、地面不平就摔跤、陌生场景直接卡住。硬件瓶颈在突破，软件/模型瓶颈越来越明显。</p>\n      <p>人形机器人需要<strong>通用具身基础模型</strong>——在海量机器人交互数据上预训练，能理解物理世界、理解自然语言指令、泛化到新物体新场景、实时规划运动控制。谁先做出来，谁是人形机器人时代的\"OpenAI\"。</p>\n      <p>德塔智能核心团队来自UCLA，成员来自xAI、DeepMind、DeepSeek、字节Seed、MIT、清华——顶级学术+大模型工程+机器人落地的组合极其稀缺。</p>\n      <div class=\"pull-quote\">\"人形机器人行业正在重演自动驾驶剧本：前半场拼硬件，后半场拼数据和基础模型。德塔智能拿到的不只是钱，是主机厂的数据投喂。\"<span class=\"pull-quote__attr\">—— Dawn Vision编辑部</span></div>\n      <h2>具身智能的\"安卓时刻\"</h2>\n      <p>主机厂抢投还有一个不能明说的原因：<strong>不想被卡脖子</strong>。如果一家公司做出通用人形机器人基础模型，所有主机厂都要用它，它就成了人形机器人时代的\"安卓\"——不造硬件但收授权费、抽生态税、定义标准。投德塔智能既是投资也是防御。</p>\n      <p>同期，柔性触觉传感企业<strong>尧乐科技</strong>完成Pre-A+轮，预计2026年营收翻10倍——解决机器人\"触觉\"问题（感知摩擦力、硬度、纹理、温度）。硬件竞争逐渐红海，软件和感知层（基础模型、触觉、视觉、世界模型）成为新价值高地。</p>\n      <p>Enigma融资7100万美元做\"调音量般简单\"的机器人控制、灵泊世界2开源1小时长程世界模型、越千仿生手万套量产、宇树IPO推进——具身智能2026夏天全面加速。人形机器人\"安卓时刻\"还没来，但抢入场券的战争已经打响。</p>\n      <p>明天见。</p>\n\n<div class=\"article-sources\">\n  <div class=\"article-sources__label\">Sources · 参考来源</div>\n  <ul class=\"article-sources__list\">\n    <li><a href=\"https://36kr.com/p/3913213962540164?f=rss\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">36氪 - UCLA博士团队创业做人形机器人基础模型，拿下近5亿元天使++轮融资</a></li>\n  </ul>\n  <p class=\"article-sources__note\">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，标题、观点、行文均为原创，仅供参考，不构成任何投资建议或决策依据。如有侵权请联系删除。</p>\n</div>\n<div class=\"article-page__footnote\">\n  <p>本文基于 Dawn Vision 认知引擎处理的 10 个源信号生成，经编辑部人工审核。素材来源：36氪。</p>\n  <p>相关入库笔记：德塔智能 · 人形机器人 · 具身智能 · 基础模型 · 天使++轮 · UCLA · 机器人主机厂 · 尧乐科技</p>\n</div>"
+    },
+    {
+      "slug": "doubao-search-volcengine-agent-infrastructure-google-ai-overviews",
+      "category": "AI 商业化 · 行业观察",
+      "title": "豆包搜索走出豆包+Google AI搜索占43%：AI搜索正式成为Agent标配基础设施",
+      "title_short": "豆包搜索走出豆包+Google AI搜索",
+      "title_break": "豆包搜索走出豆包+Google AI搜索占43%<br>AI搜索正式成为Agent标配基础设施",
+      "deck": "火山引擎开放豆包搜索API/MCP/Skill给Agent，Google AI Overviews已占43%搜索量——AI搜索不再是C端产品功能，而是Agent连接现实世界的基础设施层。",
+      "keywords": "Dawn Vision, 豆包搜索, 火山引擎, Google AI Overviews, AI搜索, Agent基础设施, MCP",
+      "og_description": "火山引擎正式上线豆包搜索服务，通过API/MCP/Skill开放给Agent；Google AI Overviews已占43%搜索量。",
+      "read_time": "约 5 分钟阅读",
+      "word_count": 800,
+      "sources": [
+        {
+          "text": "量子位 - 豆包搜索，走出了豆包",
+          "url": "https://www.qbitai.com/2026/07/461961.html"
+        },
+        {
+          "text": "TechCrunch - Google's AI search is rapidly becoming the default",
+          "url": "https://techcrunch.com/2026/07/27/googles-ai-search-is-rapidly-becoming-the-default-new-data-shows/"
+        }
+      ],
+      "pull_quote": {
+        "text": "AI搜索C端战争只是前菜。真正战场在B端——谁成为所有Agent默认调用的搜索层，谁就是Agent时代的Google。",
+        "attr": "—— Dawn Vision编辑部"
+      },
+      "cognitive_notes": "豆包搜索 · 火山引擎 · Google AI Overviews · 43% · AI搜索 · Agent基础设施 · MCP",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 12 个源信号生成，经编辑部人工审核。素材来源：量子位、TechCrunch。",
+      "body_html": "<p>过去一年讨论AI搜索，大家在比Perplexity、SearchGPT、豆包、秘塔的C端体验。但7月底两条新闻把AI搜索战争拉到完全不同的维度。</p>\n      <p>7月28日，火山引擎正式上线<strong>豆包搜索服务</strong>——不是豆包APP搜索升级，是把搜索能力单独拆出，通过API、MCP、Skill开放给所有企业和开发者的Agent。</p>\n      <p>此前TechCrunch报道数据显示Google的<strong>AI Overviews已出现在43%的搜索中</strong>——AI生成答案正快速成为人们获取信息的默认方式。</p>\n      <h2>豆包搜索走出豆包：搜索变Agent水电煤</h2>\n      <p>Agent必须联网搜索是共识，但\"能搜索\"和\"搜完Agent能直接用\"之间有工程鸿沟。传统搜索API返回网页链接和标题，Agent还要自己打开网页、解析HTML、提取正文、过滤广告——慢、浪费token、经常出错。像让助理查资料只给抱回一摞书说\"自己翻\"。</p>\n      <p>豆包搜索返回<strong>结构化、Agent可直接消费的信息</strong>：信源名称、权威分级、发布时间、围绕问题的正文摘要、可直接引用的原文Markdown。Agent直接判断够不够新、可不可靠、能不能支撑结论，不用自己解析网页。同时支持API、MCP Server、Skill三种接入——MCP可在Claude Desktop/Cursor/Windsurf直接用，Skill可在Claw类框架一条命令安装。每月500次免费额度。</p>\n      <div class=\"pull-quote\">\"AI搜索C端战争只是前菜。真正战场在B端——谁成为所有Agent默认调用的搜索层，谁就是Agent时代的Google。\"<span class=\"pull-quote__attr\">—— Dawn Vision编辑部</span></div>\n      <h2>Google 43%和搜索入口重构</h2>\n      <p>43%意味着每天<strong>超36亿次搜索</strong>用户看到AI摘要而非10个蓝色链接。用户行为从\"搜关键词→点链接→自己找答案\"迁移为\"搜问题→看AI总结→有疑问再点来源\"。AI Overviews不是加摘要，是重新定义搜索结果长什么样。</p>\n      <p>对内容创作者和SEO冲击地震级：以前拼\"链接排第一页\"，以后拼\"被AI引用\"——AI摘要不引用你，用户根本不点进来。艾瑞数据显示超78%企业品牌内容首次曝光来自AI搜索引用。豆包搜索做\"权威分级\"正是因为Agent优先引用权威来源。</p>\n      <p>两条新闻放一起看：AI搜索不再是C端产品类别，正成为<strong>整个AI生态的基础设施层</strong>——Agent需要搜索、大模型需要搜索、AI应用需要搜索。搜索不再是目的地，是路径。火山引擎急着开放豆包搜索，正是要先占Agent搜索入口。搜索的AI原生重构，比大多数人想象的快得多。</p>\n      <p>明天见。</p>\n\n<div class=\"article-sources\">\n  <div class=\"article-sources__label\">Sources · 参考来源</div>\n  <ul class=\"article-sources__list\">\n    <li><a href=\"https://www.qbitai.com/2026/07/461961.html\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">量子位 - 豆包搜索，走出了豆包</a></li>\n    <li><a href=\"https://techcrunch.com/2026/07/27/googles-ai-search-is-rapidly-becoming-the-default-new-data-shows/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">TechCrunch - Google's AI search is rapidly becoming the default</a></li>\n  </ul>\n  <p class=\"article-sources__note\">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，标题、观点、行文均为原创，仅供参考，不构成任何投资建议或决策依据。如有侵权请联系删除。</p>\n</div>\n<div class=\"article-page__footnote\">\n  <p>本文基于 Dawn Vision 认知引擎处理的 12 个源信号生成，经编辑部人工审核。素材来源：量子位、TechCrunch。</p>\n  <p>相关入库笔记：豆包搜索 · 火山引擎 · Google AI Overviews · 43% · AI搜索 · Agent基础设施 · MCP</p>\n</div>"
+    },
+    {
+      "slug": "openai-scientific-computing-agentic-ai-coding-research",
+      "category": "AI 编程 · 工具竞争",
+      "title": "OpenAI发布agentic时代科学计算报告：AI coding agents开始重构基因组学科研软件",
+      "title_short": "OpenAI发布agentic时代科学计",
+      "title_break": "OpenAI发布agentic时代科学计算报告<br>AI coding agents开始重构基因组学科研软件",
+      "deck": "OpenAI实地报告展示科学家如何用AI coding agents现代化科学计算软件栈——基因组学、气候建模等领域遗留代码正被Agent重构，科研软件开发速度提升数倍。",
+      "keywords": "Dawn Vision, OpenAI, 科学计算, AI coding agent, 基因组学, 科研软件, 生物信息学, agentic AI",
+      "og_description": "OpenAI发布agentic AI时代科学计算实地报告：科学家使用AI coding agents重构基因组学等领域遗留科研代码。",
+      "read_time": "约 5 分钟阅读",
+      "word_count": 760,
+      "sources": [
+        {
+          "text": "OpenAI Blog - Scientific computing in the age of agentic AI",
+          "url": "https://openai.com/index/scientific-computing-agentic-ai"
+        }
+      ],
+      "pull_quote": {
+        "text": "科学计算可能是AI coding agents被低估最深的场景。不是替代科学家，是把科学家从维护Fortran 77的噩梦里解放出来。",
+        "attr": "—— Dawn Vision编辑部"
+      },
+      "cognitive_notes": "OpenAI · 科学计算 · AI coding agent · 基因组学 · 科研软件 · 遗留代码重构 · Fortran · agentic科研",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 6 个源信号生成，经编辑部人工审核。素材来源：OpenAI Blog。",
+      "body_html": "<p>AI编程工具的战争，大多讨论程序员写CRUD、网页、App的场景。但OpenAI最新实地报告把AI coding agents拉到一个被忽视的领域：<strong>科学计算</strong>。</p>\n      <p>7月28日OpenAI发布《Scientific computing in the age of agentic AI》，展示基因组学、气候建模、天文、粒子物理等领域研究者如何用AI coding agents加速科学软件开发。</p>\n      <h2>被遗忘的\"遗留代码\"困境</h2>\n      <p>科学计算有个公开秘密：大量关键科学软件是<strong>几十年前的老代码</strong>，没人敢动但所有人都在用。基因组学核心工具是2000年代Perl脚本跑在老服务器上，气候建模有大量Fortran 77代码，天文用IDL脚本——原作者早已离开，文档缺失，依赖过时，但没人敢重构怕结果不对。</p>\n      <p>因为科学软件<strong>正确性比一切都重要</strong>。商业软件出bug可以热修复；科学软件出bug可能导致Nature论文结论错误、药物研发方向被误导。所以科研人员对重构有极强心理障碍。</p>\n      <p>AI coding agents正在打破僵局。报告中基因组学研究者用Claude Code和GPT通读几万行无文档老Perl代码、解释功能、识别bug、自动翻译成Python——同时生成测试验证重构后输出与原代码一致。以前博士后几个月的重构，Agent辅助下几天做完。</p>\n      <div class=\"pull-quote\">\"科学计算可能是AI coding agents被低估最深的场景。不是替代科学家，是把科学家从维护Fortran 77的噩梦里解放出来。\"<span class=\"pull-quote__attr\">—— Dawn Vision编辑部</span></div>\n      <h2>Agent重构科研工作方式</h2>\n      <p>科学场景下Agent用法和商业开发很不同：商业开发让Agent从零写功能，科研里更多是<strong>\"理解、翻译、验证、加速\"</strong>——理解老代码、翻译成现代语言、写测试验证数值一致性、单线程改并行。Agent帮科学家从代码维护脱身，把时间花在需要科学直觉和创造力的部分。</p>\n      <p>这也解释了为什么AI编程工具在科研圈普及比预期快。科研人员不是程序员，学编程是为了解决科学问题。Agent充当<strong>\"跨时代翻译器\"</strong>——懂老语言也懂新语言，帮科研人员无痛迁移到现代工具链。跨学科研究也变容易：生物学家不用花一学期学R，气候科学家不用从头学Python遥感库，自然语言描述需求Agent写代码。</p>\n      <p>当然风险存在：Agent生成代码有微妙数值错误可能导致完全错误的科学结论。有经验的科研用户强调：Agent代码必须经严格单元测试和交叉验证，<strong>永远不能盲目信任</strong>。AI编程工具的影响力正从互联网公司代码库蔓延到大学实验室，那些跑了二十年的Fortran程序可能在一两年内被年轻科学家在Agent辅助下现代化。</p>\n      <p>科学家最宝贵的资源不是算力，是时间。AI正在把时间还给他们。</p>\n      <p>明天见。</p>\n\n<div class=\"article-sources\">\n  <div class=\"article-sources__label\">Sources · 参考来源</div>\n  <ul class=\"article-sources__list\">\n    <li><a href=\"https://openai.com/index/scientific-computing-agentic-ai\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI Blog - Scientific computing in the age of agentic AI</a></li>\n  </ul>\n  <p class=\"article-sources__note\">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，标题、观点、行文均为原创，仅供参考，不构成任何投资建议或决策依据。如有侵权请联系删除。</p>\n</div>\n<div class=\"article-page__footnote\">\n  <p>本文基于 Dawn Vision 认知引擎处理的 6 个源信号生成，经编辑部人工审核。素材来源：OpenAI Blog。</p>\n  <p>相关入库笔记：OpenAI · 科学计算 · AI coding agent · 基因组学 · 科研软件 · 遗留代码重构 · Fortran · agentic科研</p>\n</div>"
+    },
+    {
+      "slug": "sangfor-ai-cybergym-top-four-domestic-first-glm-5-2",
+      "category": "算力基建 · 国产替代",
+      "title": "深信服AI在CyberGym跻身全球前四：国产GLM-5.2基座支撑，AI安全不再依赖美国模型",
+      "title_short": "深信服AI在CyberGym跻身全球前四",
+      "title_break": "深信服AI在CyberGym跻身全球前四<br>国产GLM-5.2基座支撑，AI安全不再依赖美国模型",
+      "deck": "深信服Sangfor AI在国际AI安全基准CyberGym中解决86.3%漏洞挑战，全球前四国内第一，完全基于国产智谱GLM-5.2基座。",
+      "keywords": "Dawn Vision, 深信服, Sangfor AI, CyberGym, AI安全, GLM-5.2, 智谱AI, 国产大模型, 漏洞挖掘",
+      "og_description": "深信服AI在CyberGym评测成功率86.3%，全球前四国内第一，完全基于国产智谱GLM-5.2。",
+      "read_time": "约 5 分钟阅读",
+      "word_count": 750,
+      "sources": [
+        {
+          "text": "36氪 - 深信服AI在CyberGym评测跻身全球前四，国内第一",
+          "url": "https://36kr.com/newsflashes/3916244683468418?f=rss"
+        },
+        {
+          "text": "TechCrunch - Microsoft launches its first cybersecurity model",
+          "url": "https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/"
+        }
+      ],
+      "pull_quote": {
+        "text": "AI安全核心矛盾：你需要最强AI防御最强AI攻击，但你能信任用来防御的AI吗？国产模型CyberGym成绩第一次给出肯定答案。",
+        "attr": "—— Dawn Vision编辑部"
+      },
+      "cognitive_notes": "深信服 · Sangfor AI · CyberGym · AI安全 · GLM-5.2 · 智谱AI · 国产大模型 · 漏洞挖掘",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：36氪、TechCrunch。",
+      "body_html": "<p>AI安全赛道一直默认美国模型最强。但7月29日一条新闻打破了刻板印象。</p>\n      <p>36氪报道，在国际AI安全基准<strong>CyberGym</strong>中，深信服（Sangfor）AI在纯国产基座（智谱GLM-5.2）固定配置下，面对ARVO与OSS-Fuzz全量高难度漏洞挑战，<strong>1507项任务解决1301项，成功率86.3%</strong>，最终<strong>全球前四、国内第一</strong>。</p>\n      <h2>CyberGym是什么，86.3%意味着什么</h2>\n      <p>CyberGym是国际最权威的AI驱动漏洞挖掘和安全分析评测之一，测试AI自动发现、分析、修复软件漏洞的能力。用的都是真实世界高难度CVE，覆盖各种编程语言和漏洞类型，不是训练数据里见过的送分题。</p>\n      <p>在CyberGym拿高分比MMLU/GSM8K难得多——学术基准是选择题或有标准答案的数学题，漏洞挖掘是开放式问题：给你一段代码找连原作者都不知道的bug，写PoC触发它，甚至生成修复补丁。需要深度代码理解+创造性思维+安全专业知识。</p>\n      <p>86.3%意味着深信服超过绝大多数美国科技公司和安全厂商的系统，而且<strong>用的不是GPT-5/Claude/Gemini，是完全国产的智谱GLM-5.2</strong>。网络安全对信任度要求极高：模型会不会留后门？数据会不会出境？地缘政治紧张时API会不会被掐断？金融、能源、电信、政府等关键领域这些是真实供应链风险。</p>\n      <div class=\"pull-quote\">\"AI安全的核心矛盾：你需要最强的AI防御最强AI攻击，但你能信任用来防御的AI吗？国产模型CyberGym成绩第一次给出肯定答案。\"<span class=\"pull-quote__attr\">—— Dawn Vision编辑部</span></div>\n      <h2>AI安全自主化拐点</h2>\n      <p>上周微软发布首个网络安全专用模型MAI-Cyber-1-Flash和Perception安全平台，Nvidia联合微软组建开放安全AI联盟，Hugging Face被入侵后被迫用中国开源模型防御。AI安全正成为大模型竞争新主战场。</p>\n      <p>模型能力重要，<strong>自主可控同样重要</strong>。关键基础设施防御系统不能建立在竞争对手可能掐断的供应链上。深信服用GLM-5.2在CyberGym拿全球前四证明：<strong>国产基座在最硬核AI安全任务上已可和美国顶尖模型同台竞技</strong>。</p>\n      <p>CyberGym测试的是<strong>AI vs AI攻防能力</strong>。未来攻击可能是AI Agent自动找漏洞、构造攻击链、横向移动；防御也必须用AI Agent实时检测响应修复。这是AI对AI军备竞赛，模型能力和供应链安全缺一不可。智谱ARR破亿美元、Kimi K3开源引硅谷恐慌、DeepSeek持续迭代——中国大模型2026夏天正从\"跟跑\"走向\"并跑\"，部分场景\"领跑\"。</p>\n      <p>AI安全核心矛盾一直是：你需要最强AI防御最强AI攻击，但你能信任用来防御的AI吗？深信服在CyberGym的成绩，第一次给了这个问题国产答案。</p>\n      <p>明天见。</p>\n\n<div class=\"article-sources\">\n  <div class=\"article-sources__label\">Sources · 参考来源</div>\n  <ul class=\"article-sources__list\">\n    <li><a href=\"https://36kr.com/newsflashes/3916244683468418?f=rss\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">36氪 - 深信服AI在CyberGym评测跻身全球前四，国内第一</a></li>\n    <li><a href=\"https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">TechCrunch - Microsoft launches its first cybersecurity model</a></li>\n  </ul>\n  <p class=\"article-sources__note\">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，标题、观点、行文均为原创，仅供参考，不构成任何投资建议或决策依据。如有侵权请联系删除。</p>\n</div>\n<div class=\"article-page__footnote\">\n  <p>本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：36氪、TechCrunch。</p>\n  <p>相关入库笔记：深信服 · Sangfor AI · CyberGym · AI安全 · GLM-5.2 · 智谱AI · 国产大模型 · 漏洞挖掘</p>\n</div>"
+    }
+  ],
+  "cao": {
+    "slug": "runlayer-sues-rippling-mcp-gateway-product-idea-theft",
+    "title": "MCP创业公司怒告HR独角兽：大厂\"参考\"创业公司产品的老套路，在AI时代换皮又来了",
+    "title_short": "MCP创业公司怒告HR独角兽",
+    "title_break": "MCP创业公司怒告HR独角兽<br>大厂\"参考\"套路在AI时代换皮重来",
+    "deck": "MCP网关创业公司Runlayer起诉HR巨头Rippling剽窃产品创意——评估完转头自己做，老套路在AI协议时代披新皮。",
+    "keywords": "Dawn Vision, Runlayer, Rippling, MCP, 起诉, 剽窃, 创业公司, 大厂抄袭, AI协议, 知识产权",
+    "og_description": "MCP创业公司Runlayer起诉HR独角兽Rippling剽窃产品创意。",
+    "read_time": "约 4 分钟阅读",
+    "word_count": 700,
+    "sources": [
+      {
+        "text": "TechCrunch - MCP startup Runlayer accuses Rippling of stealing its product idea",
+        "url": "https://techcrunch.com/2026/07/28/mcp-startup-runlayer-accuses-rippling-of-stealing-its-product-idea/"
+      }
+    ],
+    "body_html": "<p>朋友们，今天的AI圈翻车故事，可以写进《创业公司被大厂\"借鉴\"大全》经典案例一章。</p>\n      <p>主角叫<strong>Runlayer</strong>，做MCP（Model Context Protocol）网关的创业公司。MCP是AI Agent时代的\"USB接口\"——让不同AI模型和工具能互相连接调用的协议标准。Runlayer做企业MCP网关，管理AI工具接入、权限、监控、审计——AI时代的API网关。</p>\n      <p>\"反派\"叫<strong>Rippling</strong>，HR SaaS超级独角兽，估值超百亿美元，美国科技圈和Stripe、Notion齐名的明星公司。</p>\n      <h2>老套剧情，熟悉味道</h2>\n      <p>剧情（根据Runlayer诉状和TechCrunch报道）：Rippling找到Runlayer说你们MCP网关不错，我们在评估企业AI工具栈，想深入了解功能、架构、API设计。有大客户主动上门创业公司当然高兴，Runlayer配合做了演示、回答技术细节、提供产品文档。</p>\n      <p>然后经典桥段来了——评估结束后Rippling说\"感谢分享再考虑考虑\"，转头自己组团队做MCP网关。据Runlayer说法，Rippling后来发布的内部MCP网关在功能设计、架构思路、甚至API命名上都和Runlayer产品高度相似。Runlayer怒而起诉，指控剽窃创意、违反保密协议、不正当竞争。</p>\n      <p>这套路太熟悉了：大公司\"评估\"创业公司→拿到底层设计→自己\"自研\"→用体量和渠道碾压。SaaS、云计算、移动互联网时代演过无数遍，这次披了\"MCP协议\"\"AI网关\"新皮。</p>\n      <p>最讽刺的是：MCP是Anthropic开源的开放标准，初衷是让AI生态更开放互联。结果围绕开放协议做产品的创业公司，反而被大厂用老套路抄了。好比大家一起修了开放高速公路，有人在路边开收费站，巨头看见直接在旁边也建一个——路是公共的，收费站创意被\"参考\"了。</p>\n      <div class=\"pull-quote\">\"创业公司给大厂做产品演示，就像小羊给狼展示自己的肉质有多鲜嫩。区别在于，至少狼吃完你会承认你好吃。\"<span class=\"pull-quote__attr\">—— Hacker News热评</span></div>\n      <h2>给AI创业者三个提醒</h2>\n      <p>案子还在走法律程序，Rippling未正式回应，谁对谁错法院判。但Dawn Vision编辑部给AI生态创业者提三个醒：</p>\n      <p><strong>第一，NDA该签就签，但别迷信NDA。</strong>签了NDA不代表安全，知识产权官司耗时耗力耗钱创业公司拖不起。演示时核心技术秘密和差异化实现细节能不说就不说。</p>\n      <p><strong>第二，\"做平台\"和\"被平台做\"是两种命运。</strong>做MCP网关、Agent编排、模型路由这类平台型基础设施，要想清楚护城河是什么。功能创新大公司分分钟抄走；真正护城河是社区生态、数据飞轮、网络效应——抄不走的。</p>\n      <p><strong>第三，开源是盾也是矛。</strong>Runlayer如果当初核心产品开源了，Rippling\"自研\"就不敢这么明目张胆——开源社区盯着，抄开源代码要遵守许可证。开源不是放弃商业价值，是建立一层保护。</p>\n      <p>AI协议时代来了，新技术范式带来新创业机会，但大厂\"借鉴\"创业公司的老套路半毛钱没变。</p>\n      <p>今天就槽到这里，明天继续。</p>\n\n<div class=\"article-sources\">\n  <div class=\"article-sources__label\">Sources · 参考来源</div>\n  <ul class=\"article-sources__list\">\n    <li><a href=\"https://techcrunch.com/2026/07/28/mcp-startup-runlayer-accuses-rippling-of-stealing-its-product-idea/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">TechCrunch - MCP startup Runlayer accuses Rippling of stealing its product idea</a></li>\n  </ul>\n  <p class=\"article-sources__note\">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，以幽默吐槽风格呈现，标题、观点、行文均为原创，仅供娱乐参考，不构成任何技术建议或决策依据。如有侵权请联系删除。</p>\n</div>\n<div class=\"article-page__footnote\">\n  <p>本文基于 Dawn Vision 认知引擎处理的 5 个源信号生成，经编辑部人工审核。素材来源：TechCrunch。</p>\n  <p>相关入库笔记：Runlayer · Rippling · MCP · 起诉 · 剽窃 · 创业公司 · 大厂抄袭 · AI协议 · 创业避坑</p>\n</div>",
+    "pull_quote": {
+      "text": "创业公司给大厂做产品演示，就像小羊给狼展示自己的肉质有多鲜嫩。区别在于，至少狼吃完你会承认你好吃。",
+      "attr": "—— Hacker News热评"
+    },
+    "cognitive_notes": "Runlayer · Rippling · MCP · 起诉 · 剽窃 · 创业公司 · 大厂抄袭 · AI协议 · 知识产权 · 创业避坑",
+    "source_summary": "本文基于 Dawn Vision 认知引擎处理的 5 个源信号生成，经编辑部人工审核。素材来源：TechCrunch。",
+    "footnote_tip": "温馨提示：给大厂做产品演示前签好NDA，核心know-how别一次抖完；做平台型基础设施要想清楚护城河是什么；适当开源不是放弃商业，是给自己加一层保护盾。"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "doubao-search-volcengine-agent-infrastructure-google-ai-overviews",
+  "category": "AI 商业化 · 行业观察",
+  "title": "豆包搜索走出豆包+Google AI搜索占43%：AI搜索正式成为Agent标配基础设施",
+  "title_short": "豆包搜索走出豆包+Google AI搜索",
+  "title_break": "豆包搜索走出豆包+Google AI搜索占43%<br>AI搜索正式成为Agent标配基础设施",
+  "deck": "火山引擎开放豆包搜索API/MCP/Skill给Agent，Google AI Overviews已占43%搜索量——AI搜索不再是C端产品功能，而是Agent连接现实世界的基础设施层。",
+  "keywords": "Dawn Vision, 豆包搜索, 火山引擎, Google AI Overviews, AI搜索, Agent基础设施, MCP",
+  "og_description": "火山引擎正式上线豆包搜索服务，通过API/MCP/Skill开放给Agent；Google AI Overviews已占43%搜索量。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 800,
+  "sources": [
+    {
+      "text": "量子位 - 豆包搜索，走出了豆包",
+      "url": "https://www.qbitai.com/2026/07/461961.html"
+    },
+    {
+      "text": "TechCrunch - Google's AI search is rapidly becoming the default",
+      "url": "https://techcrunch.com/2026/07/27/googles-ai-search-is-rapidly-becoming-the-default-new-data-shows/"
+    }
+  ],
+  "pull_quote": {
+    "text": "AI搜索C端战争只是前菜。真正战场在B端——谁成为所有Agent默认调用的搜索层，谁就是Agent时代的Google。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "豆包搜索 · 火山引擎 · Google AI Overviews · 43% · AI搜索 · Agent基础设施 · MCP",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 12 个源信号生成，经编辑部人工审核。素材来源：量子位、TechCrunch。",
+  "body_html": "<p>过去一年讨论AI搜索，大家在比Perplexity、SearchGPT、豆包、秘塔的C端体验。但7月底两条新闻把AI搜索战争拉到完全不同的维度。</p>\n      <p>7月28日，火山引擎正式上线<strong>豆包搜索服务</strong>——不是豆包APP搜索升级，是把搜索能力单独拆出，通过API、MCP、Skill开放给所有企业和开发者的Agent。</p>\n      <p>此前TechCrunch报道数据显示Google的<strong>AI Overviews已出现在43%的搜索中</strong>——AI生成答案正快速成为人们获取信息的默认方式。</p>\n      <h2>豆包搜索走出豆包：搜索变Agent水电煤</h2>\n      <p>Agent必须联网搜索是共识，但\"能搜索\"和\"搜完Agent能直接用\"之间有工程鸿沟。传统搜索API返回网页链接和标题，Agent还要自己打开网页、解析HTML、提取正文、过滤广告——慢、浪费token、经常出错。像让助理查资料只给抱回一摞书说\"自己翻\"。</p>\n      <p>豆包搜索返回<strong>结构化、Agent可直接消费的信息</strong>：信源名称、权威分级、发布时间、围绕问题的正文摘要、可直接引用的原文Markdown。Agent直接判断够不够新、可不可靠、能不能支撑结论，不用自己解析网页。同时支持API、MCP Server、Skill三种接入——MCP可在Claude Desktop/Cursor/Windsurf直接用，Skill可在Claw类框架一条命令安装。每月500次免费额度。</p>\n      <div class=\"pull-quote\">\"AI搜索C端战争只是前菜。真正战场在B端——谁成为所有Agent默认调用的搜索层，谁就是Agent时代的Google。\"<span class=\"pull-quote__attr\">—— Dawn Vision编辑部</span></div>\n      <h2>Google 43%和搜索入口重构</h2>\n      <p>43%意味着每天<strong>超36亿次搜索</strong>用户看到AI摘要而非10个蓝色链接。用户行为从\"搜关键词→点链接→自己找答案\"迁移为\"搜问题→看AI总结→有疑问再点来源\"。AI Overviews不是加摘要，是重新定义搜索结果长什么样。</p>\n      <p>对内容创作者和SEO冲击地震级：以前拼\"链接排第一页\"，以后拼\"被AI引用\"——AI摘要不引用你，用户根本不点进来。艾瑞数据显示超78%企业品牌内容首次曝光来自AI搜索引用。豆包搜索做\"权威分级\"正是因为Agent优先引用权威来源。</p>\n      <p>两条新闻放一起看：AI搜索不再是C端产品类别，正成为<strong>整个AI生态的基础设施层</strong>——Agent需要搜索、大模型需要搜索、AI应用需要搜索。搜索不再是目的地，是路径。火山引擎急着开放豆包搜索，正是要先占Agent搜索入口。搜索的AI原生重构，比大多数人想象的快得多。</p>\n      <p>明天见。</p>\n\n<div class=\"article-sources\">\n  <div class=\"article-sources__label\">Sources · 参考来源</div>\n  <ul class=\"article-sources__list\">\n    <li><a href=\"https://www.qbitai.com/2026/07/461961.html\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">量子位 - 豆包搜索，走出了豆包</a></li>\n    <li><a href=\"https://techcrunch.com/2026/07/27/googles-ai-search-is-rapidly-becoming-the-default-new-data-shows/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">TechCrunch - Google's AI search is rapidly becoming the default</a></li>\n  </ul>\n  <p class=\"article-sources__note\">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，标题、观点、行文均为原创，仅供参考，不构成任何投资建议或决策依据。如有侵权请联系删除。</p>\n</div>\n<div class=\"article-page__footnote\">\n  <p>本文基于 Dawn Vision 认知引擎处理的 12 个源信号生成，经编辑部人工审核。素材来源：量子位、TechCrunch。</p>\n  <p>相关入库笔记：豆包搜索 · 火山引擎 · Google AI Overviews · 43% · AI搜索 · Agent基础设施 · MCP</p>\n</div>"
+}

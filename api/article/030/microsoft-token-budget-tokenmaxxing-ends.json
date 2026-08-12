@@ -1,0 +1,32 @@
+{
+  "slug": "microsoft-token-budget-tokenmaxxing-ends",
+  "category": "AI商业化",
+  "title": "微软带头喊停Tokenmaxxing：全公司设AI Token预算，企业AI从\"刷量时代\"进入\"ROI时代\"",
+  "title_break": "微软叫停Tokenmaxxing<br>企业AI进入ROI考核时代",
+  "deck": "从鼓励员工刷token排行榜到给每个部门设预算上限，微软带头转向，Uber四个月烧完全年AI预算，行业集体梦醒。",
+  "keywords": "Dawn Vision, 微软, Tokenmaxxing, Token预算, AI ROI, Uber, Atlassian, Cursor, 黄仁勋, 纳德拉",
+  "og_description": "微软为全业务部门设AI Token预算，叫停Tokenmaxxing文化；Uber四个月烧完全年AI编程预算，Atlassian月AI支出超1500万美元，企业AI进入ROI考核时代。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 830,
+  "sources": [
+    {
+      "text": "量子位 - 微软全面叫停\"Tokenmaxxing\"：全业务部门设定AI Token预算目标",
+      "url": "https://www.qbitai.com/2026/08/466739.html"
+    },
+    {
+      "text": "404 Media - Microsoft sets token budgets as AI costs spiral",
+      "url": "https://www.404media.co"
+    },
+    {
+      "text": "Jay Parikh内部邮件",
+      "url": ""
+    }
+  ],
+  "body_html": "      <p>Tokenmaxxing这个词，可能要进历史书了。</p>\n      <p>2026年7月，微软执行副总裁Jay Parikh发出内部邮件，明确要求公司各业务部门设定\"AI Token预算目标\"，邮件里有一句话在硅谷疯传：<strong>\"Tokenmaxxing不是优化目标。\"</strong></p>\n      <p>什么是Tokenmaxxing？这个词是从互联网亚文化里的looksmaxxing（颜值最大化）、gymmaxxing（健身最大化）演变来的，意思是\"Token使用量最大化\"——鼓励员工尽可能多地消耗AI Token，用得越多说明你越拥抱AI、越先进。就在半年前，微软内部还有各种\"AI使用排行榜\"，Meta有\"Claudeonomics\"排行榜，OpenAI有员工一周处理2100亿token（相当于填满维基百科33遍）的\"英雄事迹\"被内部传颂。黄仁勋在多个场合公开倡导：\"年薪50万美元的工程师，每年应该消耗至少25万美元的token。\"</p>\n      <p>现在，风向变了。</p>\n\n      <h2>从\"用得越多越好\"到\"算投入产出比\"</h2>\n      <p>微软不是第一个踩刹车的，但它是第一个明确喊停的大厂。</p>\n      <p>内部邮件显示，微软不仅给各部门设了Token预算上限，还把内部默认模型从之前的选项切换到了<strong>GPT-5.6</strong>——原因很简单：更便宜。员工现在可以在内部系统看到自己个人的AI token支出，很多工程师看到自己一个月花了几千美元在AI工具上，自己都吓了一跳。</p>\n      <p>Uber的例子更夸张。今年年初Uber给全年AI编程工具做了预算，结果到4月份就烧光了。Cursor等AI编程工具因为需求爆炸，报价涨了4-5倍。Uber后来不得不出台硬性规定：每人每种Agent工具每月限额<strong>1500美元</strong>，超了自己掏钱或者走特殊审批。Atlassian更夸张，月度AI支出不到一年增长了3倍，超过<strong>1500万美元</strong>。Adobe、Citi、Amazon等公司也都在悄悄收紧员工的AI使用权限。</p>\n      <p>为什么会突然转向？因为大家算完账发现一个尴尬的事实：<strong>Token消耗和生产率提升不是线性相关的</strong>。你给工程师无限量的AI额度，他可能会用AI写邮件、做PPT、写一些无关紧要的代码，甚至让AI帮他刷社交媒体文案——这些消耗了大量token，但并没有带来对应的产出。有工程师匿名承认：自己有30-40%的AI token花在了\"和工作无关的事情上\"。</p>\n      <div class=\"pull-quote\">\"Tokenmaxxing时代大家比谁用AI用得多，ROI时代大家比谁用同样的token产出更多。这是企业AI从青春期进入成年期的标志。\"<span class=\"pull-quote__attr\">—— 一位企业IT采购负责人</span></div>\n      <p>纳德拉今年6月在播客里承认自己也是个Tokenmaxxer——他承认自己每天用各种AI工具消耗大量token。但他话锋一转：\"问题不是你用了多少token，而是每花一美元在AI上，你赚回了多少美元。边际生产率收益必须匹配边际成本。\"这句话从微软CEO嘴里说出来，基本上就是给Tokenmaxxing时代盖棺定论了。</p>\n\n      <h2>企业AI落地的真实困境</h2>\n      <p>微软带头设Token预算这件事，折射出企业AI落地过程中的一个普遍困境：大家都知道AI有用，但没人知道它到底值多少钱。</p>\n      <p>过去两年，企业采购AI工具基本上是\"运动式\"的——CEO喊一句\"all in AI\"，各部门就疯狂买licenses、上项目、搞培训，没人算ROI，因为算ROI就显得你\"不拥抱变化\"\"保守落后\"。AI公司销售打单的时候最喜欢说的一句话就是：\"现在不布局AI，三年后你的公司就不存在了。\"在这种焦虑营销下，企业的AI支出像脱缰的野马一样暴涨。</p>\n      <p>但到了2026年，上市公司要交财报了，CFO们开始算账了。一算发现不对：AI支出涨了5倍10倍，对应的生产率提升在哪里？成本节约在哪里？收入增长在哪里？很多时候答案是模糊的。员工确实在用AI，但到底是真的提升了效率，还是只是把原来的工作换了一种方式做？没人能说清楚。</p>\n      <p>这不是说AI没用。AI确实在编程、客服、内容创作、数据分析等场景带来了显著的效率提升。但问题是：提升了多少？值不值得这个价格？哪些场景ROI最高？哪些场景用AI纯属浪费钱？这些问题过去没人认真回答，现在CFO们要求答案了。</p>\n      <p>从刷token排行榜到设部门预算，从\"用得越多越先进\"到\"每一分钱都要算ROI\"，企业AI正在经历一次理性回归。这不是AI泡沫破了，而是AI落地进入了更健康的阶段——任何技术革命都要经历从hype到理性的过程，互联网是这样，云计算是这样，AI也不会例外。</p>\n      <p>黄仁勋说\"工程师每年应该消耗25万美元token\"，这句话在2025年是政治正确，在2026年你再说这句话，CFO会找你谈话。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "Tokenmaxxing时代大家比谁用AI用得多，ROI时代大家比谁用同样的token产出更多。这是企业AI从青春期进入成年期的标志。",
+    "attr": "—— 一位企业IT采购负责人"
+  },
+  "cognitive_notes": "微软 · Tokenmaxxing · Token预算 · AI ROI · Jay Parikh · Uber · Atlassian · Cursor · 黄仁勋 · 纳德拉 · 企业AI落地 · 成本控制",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 14 个源信号生成，经编辑部人工审核。素材来源：量子位、404 Media、Jay Parikh内部邮件。"
+}

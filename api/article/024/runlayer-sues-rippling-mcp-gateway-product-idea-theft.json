@@ -1,0 +1,25 @@
+{
+  "slug": "runlayer-sues-rippling-mcp-gateway-product-idea-theft",
+  "title": "MCP创业公司怒告HR独角兽：大厂\"参考\"创业公司产品的老套路，在AI时代换皮又来了",
+  "title_short": "MCP创业公司怒告HR独角兽",
+  "title_break": "MCP创业公司怒告HR独角兽<br>大厂\"参考\"套路在AI时代换皮重来",
+  "deck": "MCP网关创业公司Runlayer起诉HR巨头Rippling剽窃产品创意——评估完转头自己做，老套路在AI协议时代披新皮。",
+  "keywords": "Dawn Vision, Runlayer, Rippling, MCP, 起诉, 剽窃, 创业公司, 大厂抄袭, AI协议, 知识产权",
+  "og_description": "MCP创业公司Runlayer起诉HR独角兽Rippling剽窃产品创意。",
+  "read_time": "约 4 分钟阅读",
+  "word_count": 700,
+  "sources": [
+    {
+      "text": "TechCrunch - MCP startup Runlayer accuses Rippling of stealing its product idea",
+      "url": "https://techcrunch.com/2026/07/28/mcp-startup-runlayer-accuses-rippling-of-stealing-its-product-idea/"
+    }
+  ],
+  "body_html": "<p>朋友们，今天的AI圈翻车故事，可以写进《创业公司被大厂\"借鉴\"大全》经典案例一章。</p>\n      <p>主角叫<strong>Runlayer</strong>，做MCP（Model Context Protocol）网关的创业公司。MCP是AI Agent时代的\"USB接口\"——让不同AI模型和工具能互相连接调用的协议标准。Runlayer做企业MCP网关，管理AI工具接入、权限、监控、审计——AI时代的API网关。</p>\n      <p>\"反派\"叫<strong>Rippling</strong>，HR SaaS超级独角兽，估值超百亿美元，美国科技圈和Stripe、Notion齐名的明星公司。</p>\n      <h2>老套剧情，熟悉味道</h2>\n      <p>剧情（根据Runlayer诉状和TechCrunch报道）：Rippling找到Runlayer说你们MCP网关不错，我们在评估企业AI工具栈，想深入了解功能、架构、API设计。有大客户主动上门创业公司当然高兴，Runlayer配合做了演示、回答技术细节、提供产品文档。</p>\n      <p>然后经典桥段来了——评估结束后Rippling说\"感谢分享再考虑考虑\"，转头自己组团队做MCP网关。据Runlayer说法，Rippling后来发布的内部MCP网关在功能设计、架构思路、甚至API命名上都和Runlayer产品高度相似。Runlayer怒而起诉，指控剽窃创意、违反保密协议、不正当竞争。</p>\n      <p>这套路太熟悉了：大公司\"评估\"创业公司→拿到底层设计→自己\"自研\"→用体量和渠道碾压。SaaS、云计算、移动互联网时代演过无数遍，这次披了\"MCP协议\"\"AI网关\"新皮。</p>\n      <p>最讽刺的是：MCP是Anthropic开源的开放标准，初衷是让AI生态更开放互联。结果围绕开放协议做产品的创业公司，反而被大厂用老套路抄了。好比大家一起修了开放高速公路，有人在路边开收费站，巨头看见直接在旁边也建一个——路是公共的，收费站创意被\"参考\"了。</p>\n      <div class=\"pull-quote\">\"创业公司给大厂做产品演示，就像小羊给狼展示自己的肉质有多鲜嫩。区别在于，至少狼吃完你会承认你好吃。\"<span class=\"pull-quote__attr\">—— Hacker News热评</span></div>\n      <h2>给AI创业者三个提醒</h2>\n      <p>案子还在走法律程序，Rippling未正式回应，谁对谁错法院判。但Dawn Vision编辑部给AI生态创业者提三个醒：</p>\n      <p><strong>第一，NDA该签就签，但别迷信NDA。</strong>签了NDA不代表安全，知识产权官司耗时耗力耗钱创业公司拖不起。演示时核心技术秘密和差异化实现细节能不说就不说。</p>\n      <p><strong>第二，\"做平台\"和\"被平台做\"是两种命运。</strong>做MCP网关、Agent编排、模型路由这类平台型基础设施，要想清楚护城河是什么。功能创新大公司分分钟抄走；真正护城河是社区生态、数据飞轮、网络效应——抄不走的。</p>\n      <p><strong>第三，开源是盾也是矛。</strong>Runlayer如果当初核心产品开源了，Rippling\"自研\"就不敢这么明目张胆——开源社区盯着，抄开源代码要遵守许可证。开源不是放弃商业价值，是建立一层保护。</p>\n      <p>AI协议时代来了，新技术范式带来新创业机会，但大厂\"借鉴\"创业公司的老套路半毛钱没变。</p>\n      <p>今天就槽到这里，明天继续。</p>\n\n<div class=\"article-sources\">\n  <div class=\"article-sources__label\">Sources · 参考来源</div>\n  <ul class=\"article-sources__list\">\n    <li><a href=\"https://techcrunch.com/2026/07/28/mcp-startup-runlayer-accuses-rippling-of-stealing-its-product-idea/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">TechCrunch - MCP startup Runlayer accuses Rippling of stealing its product idea</a></li>\n  </ul>\n  <p class=\"article-sources__note\">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，以幽默吐槽风格呈现，标题、观点、行文均为原创，仅供娱乐参考，不构成任何技术建议或决策依据。如有侵权请联系删除。</p>\n</div>\n<div class=\"article-page__footnote\">\n  <p>本文基于 Dawn Vision 认知引擎处理的 5 个源信号生成，经编辑部人工审核。素材来源：TechCrunch。</p>\n  <p>相关入库笔记：Runlayer · Rippling · MCP · 起诉 · 剽窃 · 创业公司 · 大厂抄袭 · AI协议 · 创业避坑</p>\n</div>",
+  "pull_quote": {
+    "text": "创业公司给大厂做产品演示，就像小羊给狼展示自己的肉质有多鲜嫩。区别在于，至少狼吃完你会承认你好吃。",
+    "attr": "—— Hacker News热评"
+  },
+  "cognitive_notes": "Runlayer · Rippling · MCP · 起诉 · 剽窃 · 创业公司 · 大厂抄袭 · AI协议 · 知识产权 · 创业避坑",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 5 个源信号生成，经编辑部人工审核。素材来源：TechCrunch。",
+  "footnote_tip": "温馨提示：给大厂做产品演示前签好NDA，核心know-how别一次抖完；做平台型基础设施要想清楚护城河是什么；适当开源不是放弃商业，是给自己加一层保护盾。"
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "google-ai-overviews-43-percent-search-default-destination",
+  "category": "AI 新媒体 · 内容创作",
+  "title": "Google AI搜索渗透率达43%：AI Overviews一年翻三倍，搜索从\"入口\"变\"目的地\"",
+  "title_break": "Google AI搜索达43%渗透率<br>从蓝色链接到AI目的地",
+  "deck": "Similarweb报告：AI Overviews一年从15%飙至43%搜索覆盖，AI Mode月访问2.79亿。出版商流量被截但引用增5倍，Google正从\"互联网入口\"变成\"回答终点\"。",
+  "keywords": "Dawn Vision, Google, AI搜索, AI Overviews, AI Mode, Similarweb, 搜索引擎, 出版商, 流量, 内容创作",
+  "og_description": "Similarweb报告显示Google AI Overviews覆盖率从15%升至43%，AI Mode月访问量2.79亿，AI搜索正从蓝色链接入口变成AI回答目的地，出版商流量格局巨变。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 780,
+  "sources": [
+    {
+      "text": "TechCrunch - Google's AI search is rapidly becoming the default, new data shows",
+      "url": "https://techcrunch.com/2026/07/27/googles-ai-search-is-rapidly-becoming-the-default-new-data-shows/"
+    },
+    {
+      "text": "Similarweb - The 2026 Generative AI Landscape",
+      "url": "https://www.similarweb.com/corp/the-2026-generative-ai-landscape/"
+    }
+  ],
+  "body_html": "\n      <p>你有多久没点击过Google搜索结果的第二页了？如果最近连第一页的蓝色链接都越点越少了，那你已经是AI搜索时代的用户了。</p>\n      <p>市场情报公司Similarweb发布的《2026生成式AI格局》报告给出了一组惊人的数据：Google的AI生成回答功能<strong>AI Overviews</strong>在仅仅一年时间里，从出现在15%的搜索结果中飙升到<strong>43%</strong>。也就是说，现在将近一半的Google搜索，用户看到的不再是蓝色链接列表，而是AI直接生成的答案。</p>\n\n      <h2>从\"帮你找\"到\"直接答\"：搜索的范式转移</h2>\n      <p>一年前，AI Overviews还只是搜索页面顶部的一个\"AI层\"——你可以看AI的总结，也可以继续往下滑点链接。现在，AI Overviews已经成为搜索旅程本身的一部分：用户先看到AI答案，然后可以通过更具对话性的<strong>AI Mode</strong>继续深入研究，而不必离开Google。</p>\n      <p>数据支撑了这个趋势：AI Mode的月访问量从2025年6月的<strong>1.26亿</strong>增长到2026年5月的<strong>2.79亿</strong>，翻了一倍还多。用户在Google上的平均搜索时长也在增加，说明人们正在用更长的自然语言对话式查询取代短关键词搜索——这正是AI对话式搜索鼓励的行为。</p>\n      <p>这个变化对Google来说是好消息——用户在Google平台上停留的时间更长了，Google不再只是通往其他网站的入口，它自己就是目的地。但对依赖搜索引荐流量的出版商和内容创作者来说，这是一个生存级别的挑战。</p>\n\n      <h2>出版商的困境：被截胡的流量和不够用的引用</h2>\n      <p>过去一年，出版商的哀嚎声此起彼伏。Similarweb去年就报道过AI Overviews对新闻出版商流量的毁灭性打击——用户在Google上直接看到了答案，就没有动力再点击链接去原文了。Cloudflare在7月1日推出了新政策和工具，允许出版商屏蔽AI爬虫或通过其市场向AI公司收费访问内容，本质上是在给内容创作者提供武器反抗。</p>\n      <p>但数据呈现出复杂的画面。虽然AI回答导致直接点击率下降，但AI回答中包含引用链接的比例在过去一年增长了<strong>5倍以上</strong>。也就是说，AI越来越多地在回答中标注信息来源。这对出版商来说是一线希望——如果AI的回答能带来精准的高意向流量，即使总量少了，质量可能更高。</p>\n      <p>不过引用率的绝对水平仍然很低。截至2026年5月，美国桌面端ChatGPT查询中只有<strong>6.8%</strong>包含引用链接（旅游、零售和体育类稍好）。Google没有公布自己的引用率数据，但从Similarweb的监测来看，Google的AI Overviews引用比例比ChatGPT高，但仍然远低于100%。</p>\n      <p>一个积极信号是：在5月7日搜索更新后，ChatGPT对网页的引荐比例从2026年3月的25%翻倍到了5月底的近<strong>60%</strong>。这说明当AI搜索结果中的蓝色链接更醒目时，用户确实会点击——人们不是不想看原文，而是AI界面把原文藏得太深了。</p>\n\n      <h2>内容创作者的新生存法则</h2>\n      <p>面对搜索从\"入口\"到\"目的地\"的转变，内容创作者需要重新思考自己的定位。</p>\n      <p>如果你的内容只是在回答事实性问题（\"什么是X\"\"X的步骤是什么\"），那AI Overviews会直接替代你——因为AI可以更快速、更便捷地给出同样的答案。但如果你的内容提供<strong>独特观点、深度分析、一手经验、社区归属感</strong>——这些是AI生成不了的，也是AI回答会引用但无法替代的。</p>\n      <p>换句话说，\"信息提供者\"的角色在贬值，\"观点塑造者\"和\"体验构建者\"的价值在上升。这不是内容的末日，而是内容的升级——只不过升级的方向，是往更难、更独特、更有人味的方向走。</p>\n      <p>当搜索不再需要点击，能让人主动找上门的内容，才是真正有价值的内容。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "当搜索框直接给答案，'信息提供者'在贬值，'观点塑造者'和'体验构建者'的价值在上升。能让人主动找上门的内容，才是AI时代真正有价值的内容。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Google · AI Overviews · AI搜索 · 43%渗透率 · AI Mode · 2.79亿月活 · 出版商流量 · Similarweb · 内容创作 · 搜索范式转移",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：TechCrunch、Similarweb。"
+}

@@ -1,0 +1,44 @@
+{
+  "slug": "chatgpt-free-deepseek-price-hike-llm-price-war",
+  "title": "大模型价格战冰火两重天：ChatGPT免费无限用，DeepSeek却要大幅涨价",
+  "title_short": "ChatGPT免费 vs DeepSeek涨价",
+  "title_break": "ChatGPT免费开放GPT-5.6 Luna<br>DeepSeek却宣布大幅涨价",
+  "deck": "一边是OpenAI把GPT-5.6下放到免费用户且取消次数限制，一边是DeepSeek预告API大幅涨价——大模型战争的分化加速了。",
+  "keywords": "Dawn Vision, ChatGPT, GPT-5.6, Luna, OpenAI, DeepSeek, API涨价, 大模型价格战, 大模型商业",
+  "og_description": "ChatGPT免费用户默认模型升级为GPT-5.6 Luna且取消次数限制，同日DeepSeek预告API大幅涨价——巨头补贴抢市场，独立玩家扛不住成本。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 780,
+  "category": "大模型商业",
+  "tags": [
+    "ChatGPT",
+    "DeepSeek",
+    "价格战",
+    "大模型"
+  ],
+  "sources": [
+    {
+      "text": "OpenAI官方 - Improving GPT-5.6 Sol in ChatGPT",
+      "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt"
+    },
+    {
+      "text": "DeepSeek开发者公告 - API定价调整预告",
+      "url": ""
+    },
+    {
+      "text": "上海证券报 - DeepSeek计划上调API服务定价",
+      "url": ""
+    },
+    {
+      "text": "每经AI - ChatGPT免费版史诗升级",
+      "url": "http://m.toutiao.com/group/7671122992743367208/"
+    }
+  ],
+  "body_html": "      <p>8月6日，两条大模型行业的新闻放在一起看，特别有戏剧性。</p>\n      <p>一条来自OpenAI：ChatGPT免费用户的默认模型正式升级为<strong>GPT-5.6 Luna</strong>，而且Chat模式<strong>不再有使用次数限制</strong>——想聊多久聊多久，想聊多少轮聊多少轮，完全免费。Plus和Pro用户的5.6 Sol也同步获得专精升级，事实准确性更高、回答更聚焦，还新增了思考深度调节滑块。</p>\n      <p>另一条来自DeepSeek：公司在开发者后台发布公告，称<strong>计划近期整体上调DeepSeek API服务的定价，预计涨幅较大</strong>，请开发者合理安排使用。没有说涨多少，但\"涨幅较大\"这个措辞已经够让人紧张了。</p>\n      <p>一边是全球最大的大模型公司用顶级模型免费送的方式抢用户，一边是中国最有竞争力的独立大模型公司扛不住成本要涨价。大模型行业的冰火两重天，从来没有像今天这么清晰过。</p>\n\n      <h2>免费的底气：巨头的补贴逻辑</h2>\n      <p>OpenAI为什么敢把GPT-5.6 Luna免费放出来？因为它的商业模式和独立玩家完全不一样。</p>\n      <p>对于OpenAI来说，免费版ChatGPT不是一个赚钱的产品，而是一个<strong>获客漏斗和数据金矿</strong>。免费用户用得越多，产生的对话数据越多，模型就能迭代得越好；免费用户里转化为Plus/Pro/Enterprise付费用户的比例越高，整体ROI就越好看。而且ChatGPT有超过两亿月活用户，这个流量入口本身就有巨大的商业价值——未来不管是做搜索、做应用商店、做企业服务，都是基于这个用户池。</p>\n      <p>更关键的是，OpenAI有<strong>微软</strong>这个爸爸在背后撑着。算力成本、数据中心建设、研发投入，这些都是百亿美元级别的开支，没有几个公司能扛得住长期补贴。但微软可以——它把OpenAI的AI能力整合进Azure、Office、Windows、Bing，从别的地方把钱赚回来。对微软来说，ChatGPT免费不是亏损，是战略投资。</p>\n      <p>而DeepSeek的处境完全不同。作为一家独立的大模型公司，它没有微软那样的生态互补，也没有两亿C端用户做漏斗。它的主要收入来源就是API调用费。当行业竞争加剧、算力成本居高不下、价格战把利润空间越打越薄的时候，涨价几乎是必然的选择。</p>\n      <p>这不是第一家涨价的中国大模型公司。上海证券报的数据显示，<strong>智谱AI 2026年一季度API价格已经上涨了83%</strong>。DeepSeek这次跟进，说明中国大模型行业的低价倾销阶段已经走到头了。</p>\n\n      <h2>价格分化背后：行业加速洗牌</h2>\n      <p>大模型行业正在经历一场残酷的分化。</p>\n      <p>一端是有生态、有流量、有钱的巨头——OpenAI+微软、Google、Meta、亚马逊。它们可以用补贴策略快速抢占市场份额，把模型能力下放到免费用户，用规模效应摊薄成本。它们不靠卖API赚钱，它们靠生态赚钱。</p>\n      <p>另一端是独立大模型公司——Anthropic、Cohere、DeepSeek、智谱、月之暗面，等等。它们的核心资产是模型能力，核心商业模式是卖API。但当巨头把模型能力免费送的时候，独立公司的生存空间就被急剧压缩了。</p>\n      <p>出路在哪里？大概有三条。</p>\n      <p>第一，<strong>做垂直、做行业、做巨头不愿做的脏活累活</strong>。通用大模型是巨头的战场，但法律、医疗、金融、工业这些垂直领域，巨头很难深耕。谁能在某个垂直领域做到不可替代，谁就能活下来。</p>\n      <p>第二，<strong>做Agent、做应用、从卖模型变成卖解决方案</strong>。单纯卖token的生意越来越难做了，但如果能把模型包装成具体的产品和服务，价值就能往上走。这也是为什么现在所有大模型公司都在往Agent方向转。</p>\n      <p>第三，<strong>拥抱巨头、被收购、或者成为巨头生态的一部分</strong>。这可能是大多数独立大模型公司最终的归宿——不是每家公司都能成为OpenAI，但做OpenAI生态里的重要玩家，也不失为一个好的结局。</p>\n      <p>DeepSeek的涨价不是终点，只是开始。未来一两年，大模型行业的洗牌会越来越剧烈。能活下来的，要么是有生态的巨头，要么是有绝活的垂直玩家。中间那些不上不下的，会很难受。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "当巨头把模型能力免费送的时候，独立公司的生存空间就被急剧压缩了。",
+    "attr": "—— Dawn Vision 判断"
+  },
+  "cognitive_notes": "大模型商业 · ChatGPT · GPT-5.6 Luna · OpenAI · DeepSeek · API涨价 · 价格战 · 行业洗牌 · 免费策略 · 补贴逻辑",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的公开信息整理，素材来源：OpenAI官方博客、DeepSeek开发者公告、上海证券报、每经AI。",
+  "footnote_tip": ""
+}

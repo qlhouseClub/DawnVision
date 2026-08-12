@@ -1,0 +1,29 @@
+{
+  "slug": "google-gemini-api-managed-agents-3-6-flash-hooks",
+  "category": "AI Agent · 工程实践",
+  "title": "Google Gemini API上线Managed Agents：3.6 Flash加持+Hooks机制，生产级Agent开发不用从零搭",
+  "title_short": "Google Gemini API上线M",
+  "title_break": "Google Gemini API上线Managed Agents<br>3.6 Flash加持+Hooks机制，生产级Agent开发不用从零搭",
+  "deck": "Google发布Gemini API Managed Agents正式版，搭载Gemini 3.6 Flash、Hooks生命周期管理、会话持久化，开发者不用自己搭Agent编排框架就能部署生产级应用。",
+  "keywords": "Dawn Vision, Google Gemini, Managed Agents, Gemini 3.6 Flash, Agent Hooks, AI Agent, 生产级Agent, 开发者工具",
+  "og_description": "Google Gemini API Managed Agents正式发布：搭载Gemini 3.6 Flash，引入Hooks生命周期管理，内置会话持久化和工具调用。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 800,
+  "sources": [
+    {
+      "text": "Google AI Blog - Gemini API Managed Agents: 3.6 Flash, hooks, and more",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/"
+    },
+    {
+      "text": "TechCrunch - Google expands Gemini for agents and enterprise",
+      "url": "https://techcrunch.com/2026/07/28/google-expands-gemini-for-agents-and-enterprise/"
+    }
+  ],
+  "pull_quote": {
+    "text": "Agent开发正在从'手工作坊'走向'工业化大生产'。基础设施层的竞争，比模型层的竞争更决定谁能赚到钱。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Google Gemini · Managed Agents · Gemini 3.6 Flash · Agent Hooks · AI Agent基础设施 · 生产级Agent",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：Google AI Blog、TechCrunch。",
+  "body_html": "<p>如果你今年尝试过自己搭一个生产环境能跑的AI Agent，你大概率踩过这些坑：会话状态怎么持久化、工具调用失败怎么重试、多Agent之间怎么路由、长上下文怎么管理、成本怎么控制。每个坑都意味着几千行代码、几周调试、半夜爬起来修bug。</p>\n      <p>7月29日，Google说：这些脏活累活我来干，你专注写业务逻辑。</p>\n      <p>Google正式发布<strong>Gemini API Managed Agents</strong>，搭载Gemini 3.6 Flash，引入Hooks生命周期管理，内置会话持久化、工具调用编排、多Agent路由。开发者通过API就能部署生产级Agent，不用从零搭编排框架。</p>\n      <h2>Managed Agents解决什么痛点</h2>\n      <p>过去一年Agent开发最大的谎言是：\"给模型接上MCP工具，它就是Agent了。\"Demo和生产之间隔着巨大工程鸿沟：会话状态持久化、工具调用重试、成本控制、可观测性——这些全是基础设施问题，不是模型问题。</p>\n      <p>Google把共性需求做成托管服务：状态存云数据库、重试和错误处理内置、多Agent路由有turn manager、成本控制有用量限制。你只需要定义Agent角色、接工具、写Hooks，剩下交给Google基础设施。</p>\n      <p>核心亮点是<strong>Gemini 3.6 Flash</strong>（速度成本优化，适合高频低延迟工具调用）和<strong>Hooks机制</strong>（before_tool_call、after_tool_call、on_error等节点插入自定义逻辑——权限检查、备用方案切换、内容审核）。</p>\n      <div class=\"pull-quote\">\"Agent开发正在从'手工作坊'走向'工业化大生产'。基础设施层的竞争，比模型层的竞争更决定谁能赚到钱。\"<span class=\"pull-quote__attr\">—— Dawn Vision编辑部</span></div>\n      <h2>Agent基础设施战白热化</h2>\n      <p>Google不是第一个。OpenAI有Assistants API和Agents SDK，微软有Copilot Studio，亚马逊Bedrock有Agents，火山引擎、阿里云也有类似服务。Agent基础设施正成为云厂商新战场。</p>\n      <p>商业逻辑清晰：Agent应用越普及，对底层基础设施绑定越深。Managed Agents写的逻辑很难无痛迁移——状态格式、Hooks接口、工具协议都有平台特异性。这是云厂商最爱的锁定效应。</p>\n      <p>但对开发者是好事：2024年5人团队3个月搭的Agent，2026年下半年一个人周末用托管服务就能拼出来。Agent应用数量将迎来爆发。3.6 Flash还原生支持多模态（视频、音频、图片实时理解生成），不用额外拼其他模型服务。</p>\n      <p>Agent竞争已从\"哪个模型更聪明\"进入\"哪个平台让开发者更快交付\"。大多数企业不需要最聪明的Agent，他们需要<strong>明天就能上线、出了问题能排查、成本能控住</strong>的Agent。</p>\n      <p>明天见。</p>\n\n<div class=\"article-sources\">\n  <div class=\"article-sources__label\">Sources · 参考来源</div>\n  <ul class=\"article-sources__list\">\n    <li><a href=\"https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google AI Blog - Gemini API Managed Agents: 3.6 Flash, hooks, and more</a></li>\n    <li><a href=\"https://techcrunch.com/2026/07/28/google-expands-gemini-for-agents-and-enterprise/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">TechCrunch - Google expands Gemini for agents and enterprise</a></li>\n  </ul>\n  <p class=\"article-sources__note\">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，标题、观点、行文均为原创，仅供参考，不构成任何投资建议或决策依据。如有侵权请联系删除。</p>\n</div>\n<div class=\"article-page__footnote\">\n  <p>本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：Google AI Blog、TechCrunch。</p>\n  <p>相关入库笔记：Google Gemini · Managed Agents · Gemini 3.6 Flash · Agent Hooks · AI Agent基础设施 · 生产级Agent</p>\n</div>"
+}

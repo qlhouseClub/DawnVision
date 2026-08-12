@@ -1,0 +1,32 @@
+{
+  "slug": "harness-engineering-steering-paradigm",
+  "category": "AI编程",
+  "title": "Harness Engineering：从Vibe Coding到给Agent装缰绳，AI编程进入驾驭工程时代",
+  "title_break": "Harness Engineering<br>给AI Agent装方向盘和刹车",
+  "deck": "Terraform缔造者Mitchell Hashimoto提出Harness Engineering概念，OpenAI六天后采纳——AI编程从\"靠感觉写代码\"进入\"工程化驾驭\"新阶段。",
+  "keywords": "Dawn Vision, Harness Engineering, Vibe Coding, Mitchell Hashimoto, AI编程, Agent缰绳, Terraform, OpenAI",
+  "og_description": "Harness Engineering概念走红：从Vibe Coding到给Agent装方向盘和刹车，AI编程进入工程化驾驭新阶段。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 820,
+  "sources": [
+    {
+      "text": "InfoQ中文 - 给Agent装上方向盘和刹车，Harness时代的工程新范式",
+      "url": "https://www.infoq.cn/article/QxdM6J3uFpZA0CXgNhDq"
+    },
+    {
+      "text": "Mitchell Hashimoto - My AI Adoption Journey",
+      "url": "https://mitchellh.com"
+    },
+    {
+      "text": "OpenAI - Million-line code experiment report",
+      "url": ""
+    }
+  ],
+  "body_html": "      <p>如果你在2025年说自己是\"Vibe Coding\"，大家会觉得你很酷——跟着感觉走，描述需求让AI写代码，像指挥家一样挥洒自如。但到了2026年夏天，真正在生产环境里用AI写代码的工程师们开始承认一个尴尬的事实：Vibe Coding写demo很爽，写生产系统很痛。</p>\n      <p>你花在审查AI产出、纠正偏差、处理幻觉、对齐需求上的时间，有时候比自己写代码还多。AI像一匹脱缰的野马——能力很强，但方向感和边界感极差。HashiCorp联合创始人、Terraform缔造者Mitchell Hashimoto在2月5日的一篇博客里给这个问题起了个名字：<strong>Harness Engineering</strong>（驾驭工程）。六天后，OpenAI在他们的百万行代码实验报告里直接使用了这个术语。8月4日，InfoQ中文发布专题长文，标志着这个概念正式进入主流技术视野。</p>\n\n      <h2>为什么需要\"缰绳\"？AI编程的三重失控</h2>\n      <p>Harness的英文原意是马具——缰绳、马鞍、马镫。不是把马绑死不让它跑，而是给它方向和约束，让它的力量用在正确的路上。</p>\n      <p>为什么AI编程需要缰绳？因为过去一年半的生产实践暴露了三重失控。</p>\n      <p>第一重：<strong>方向失控</strong>。你让AI写一个用户认证模块，它可能自作主张加了一堆你不需要的第三方登录、OAuth集成、权限系统，把简单问题复杂化。你说\"加个排序功能\"，它可能重写了整个数据访问层。Vibe Coding时代的Prompt是模糊的、自然语言的，AI的理解也是模糊的、发散的。</p>\n      <p>第二重：<strong>质量失控</strong>。AI生成的代码能跑起来，但边界条件处理得一塌糊涂：空指针、并发问题、SQL注入、资源泄漏、错误吞掉。这些问题在Code Review阶段很难全部发现，上线后就是生产事故。更麻烦的是，AI写的代码风格不统一、注释缺失、命名混乱，后续维护的人看得头大。</p>\n      <p>第三重：<strong>权限失控</strong>。这是最危险的。当AI Agent拥有文件系统访问权、数据库写入权、部署权限时，一个误解的指令就可能酿成大祸——删库、泄露密钥、把测试数据推到生产环境。2025年下半年到2026年初发生的多起AI编程事故，本质上都是权限缰绳没有勒紧。</p>\n      <p>Harness Engineering的核心思想很简单：<strong>不要试图让AI变成完美的程序员，而是建立一套工程化的\"马具系统\"来驾驭AI的能力</strong>。</p>\n\n      <h2>Harness的四件套：从Prompt到工程系统</h2>\n      <p>Harness不是一个工具，而是一套工程方法论。InfoQ的文章和社区讨论中，逐渐浮现出四个核心组件。</p>\n      <p>第一是<strong>结构化约束</strong>。从自然语言Prompt转向结构化的任务描述——明确输入输出格式、明确边界条件、明确禁止操作、明确验收标准。把\"帮我写个API\"变成\"在src/api/下创建user.ts，使用现有中间件authMiddleware，只实现GET和POST，不允许删除数据，单元测试覆盖率不低于80%\"。这本质上是把产品经理的需求文档思维应用到AI编程上。</p>\n      <p>第二是<strong>沙箱和权限围栏</strong>。给AI Agent最小必要权限：文件系统访问限制在特定目录、数据库只给只读权限或测试库权限、部署操作必须人工确认。就像马不能随便跑上高速公路，AI不能随便操作生产环境。</p>\n      <p>第三是<strong>自动化验证闭环</strong>。AI写完代码不是结束，而是开始——自动跑lint、自动跑单元测试、自动跑类型检查、自动跑安全扫描，任何一关不通过就打回让AI修正。Hashimoto在博客里提到他的工作流：AI写完代码，他先看测试结果而不是代码本身。测试全绿再看代码，测试红了直接打回。</p>\n      <p>第四是<strong>人机协作的交接点设计</strong>。明确哪些决策AI可以自主做、哪些必须人来拍板。架构设计、技术选型、数据模型变更、生产部署——这些高风险决策点必须有人在环（human-in-the-loop）。变量命名、代码格式化、简单函数实现——这些低风险决策可以让AI自主完成。</p>\n      <div class=\"pull-quote\">\"Vibe Coding是'你说我写'的浪漫想象，Harness Engineering是'你写我查、你错我拦'的工程现实。\"<span class=\"pull-quote__attr\">—— InfoQ技术编辑</span></div>\n      <p>从Vibe Coding到Harness Engineering，不是AI编程能力退步了，而是它进入了生产环境后必须面对的工程化成熟。就像早期的汽车没有安全带、没有ABS、没有转向灯，能开但很危险；等汽车普及了，这些安全装置就成了标配。AI编程正在经历同样的过程。</p>\n      <p>值得注意的是，Harness Engineering的提出者不是学术研究者，而是Hashimoto这样创造过Terraform这类世界级基础设施工具的实战派工程师。这本身就说明问题：AI编程的瓶颈已经从\"AI能不能写代码\"转向了\"我们能不能安全、可靠、可重复地用AI写代码\"。</p>\n      <p>当你下次让AI写代码的时候，别光顾着Vibe——记得给它套上Harness。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "Vibe Coding是'你说我写'的浪漫想象，Harness Engineering是'你写我查、你错我拦'的工程现实。",
+    "attr": "—— InfoQ技术编辑"
+  },
+  "cognitive_notes": "Harness Engineering · Vibe Coding · Mitchell Hashimoto · Terraform · AI编程 · Agent缰绳 · 工程范式 · 沙箱权限 · 自动化验证 · 人机协作",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 12 个源信号生成，经编辑部人工审核。素材来源：InfoQ中文、Mitchell Hashimoto博客、OpenAI工程报告。"
+}

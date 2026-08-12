@@ -1,0 +1,29 @@
+{
+  "slug": "kimi-k3-2-8-trillion-parameters-open-source",
+  "category": "开源模型",
+  "title": "Kimi K3 2.8万亿参数开源：全球最大开源模型落地，月之暗面把核弹图纸扔上了Hugging Face",
+  "title_short": "Kimi K3 2.8万亿参数开源",
+  "title_break": "Kimi K3 2.8万亿参数开源<br>全球最大开源模型落地，月之暗面把核弹图纸扔上了Hugging Face",
+  "deck": "7月27日月之暗面将Kimi K3完整权重上传至Hugging Face，2.8万亿参数MoE模型，全球开源模型有史以来最大。",
+  "keywords": "Dawn Vision, Kimi K3, 月之暗面, Moonshot AI, 开源模型, 大模型, MoE, Hugging Face",
+  "og_description": "月之暗面Kimi K3 2.8万亿参数模型开源，成为全球最大开源模型，上传Hugging Face供下载。",
+  "read_time": "约 4 分钟阅读",
+  "word_count": 700,
+  "sources": [
+    {
+      "text": "电子产品世界 - 全球最大开源模型正式发布!Kimi K3开放权重下载",
+      "url": "https://www.eepw.com.cn/article/202607/482617.html"
+    },
+    {
+      "text": "Digitimes - Kimi K3亮相10天后月之暗面兑现承诺开放权重下载",
+      "url": "https://gb-www.digitimes.com.tw/tech/dt/n/shwnws.asp?id=0000763091_B9ZLGSK5LZG1JL0JAFAK4"
+    }
+  ],
+  "pull_quote": {
+    "text": "2.8万亿参数的模型扔上Hugging Face，就像有人把一颗小型核弹的设计图纸放到了GitHub上。能不能造出来是一回事，但图纸免费了——这件事本身就在改变游戏规则。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Kimi K3 · 月之暗面 · 开源模型 · 2.8万亿参数 · MoE · Hugging Face",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 7 个源信号生成，经编辑部人工审核。素材来源：电子产品世界、Digitimes。",
+  "body_html": "<p>7月27日深夜，月之暗面（Moonshot AI）将<strong>Kimi K3</strong>的完整模型权重上传至Hugging Face开源仓库。<strong>2.8万亿参数</strong>，全球开源模型有史以来最大。技术报告同步发布于GitHub，采用Kimi K3 License定制许可证（类Modified MIT）。</p>\n<p>K3是全球首个真正落地的3万亿参数级别MoE（混合专家）开源模型，激活参数约1040亿。作为对比，上一代开源最大模型DeepSeek-V3是6710亿总参数、370亿激活参数。K3在参数规模上直接跳升了一个数量级。</p>\n<h2>为什么选择现在开源</h2>\n<p>一个有趣的时间线：7月16日发布K3，7月20日官方因算力紧张暂停K3 Plus的Plus服务扩容，7月27日开放权重下载。这三件事放在一起看，逻辑就清晰了。</p>\n<p><strong>第一，释放算力压力。</strong>开源权重后，有能力的企业和开发者可以自己部署，减少对月之暗面API的依赖，缓解官方算力紧张的局面。</p>\n<p><strong>第二，争夺生态主导权。</strong>最大开源模型的名头本身就是最好的品牌建设。开发者用K3做fine-tune、做二次开发，生态就建立起来了。</p>\n<p><strong>第三，配合融资节奏。</strong>当开源社区都在讨论K3的时候，下一轮融资的估值故事就有了新素材。</p>\n<div class=\"pull-quote\">\"2.8万亿参数的模型扔上Hugging Face，就像有人把一颗小型核弹的设计图纸放到了GitHub上。能不能造出来是一回事，但图纸免费了——这件事本身就在改变游戏规则。\"<span class=\"pull-quote__attr\">—— Dawn Vision编辑部</span></div>\n<h2>对开源生态的影响</h2>\n<p>K3开源最大的冲击对象不是OpenAI和Anthropic，而是<strong>中间层闭源模型公司</strong>。以前你可以说\"我有一个比开源强的闭源模型，收API费用\"，现在K3把开源模型的上限拉到了2.8万亿，你的卖点还有多少？</p>\n<p>对云厂商来说是利好——更多企业需要部署超大模型，GPU需求会进一步增长。对中小开发者来说可能是坏消息——2.8万亿参数的模型不是一台消费级GPU能跑的，开源不等于免费可用。</p>\n<p>但无论如何，把2.8万亿参数的模型开放下载，这件事本身就推动了整个行业的水位线向上走。</p>\n<p>明天见。</p><div class=\"article-sources\"><div class=\"article-sources__label\">Sources · 参考来源</div><ul class=\"article-sources__list\"><li><a href=\"https://www.eepw.com.cn/article/202607/482617.html\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">电子产品世界 - 全球最大开源模型正式发布!Kimi K3开放权重下载</a></li><li><a href=\"https://gb-www.digitimes.com.tw/tech/dt/n/shwnws.asp?id=0000763091_B9ZLGSK5LZG1JL0JAFAK4\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Digitimes - Kimi K3亮相10天后月之暗面兑现承诺开放权重下载</a></li></ul><p class=\"article-sources__note\">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，仅供参考。</p></div><div class=\"article-page__footnote\"><p>本文基于 Dawn Vision 认知引擎处理的 7 个源信号生成，经编辑部人工审核。素材来源：电子产品世界、Digitimes。</p><p>相关入库笔记：Kimi K3 · 月之暗面 · 开源模型 · 2.8万亿参数 · MoE · Hugging Face</p></div>"
+}

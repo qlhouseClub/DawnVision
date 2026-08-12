@@ -1,0 +1,32 @@
+{
+  "slug": "sand-ai-magi-2-moe-video-model-open-source",
+  "category": "AI视频",
+  "title": "1140亿参数MoE视频模型开源：MAGI-2把10秒1080P打到5毛钱，视频生成的成本天花板塌了",
+  "title_break": "1140亿参数MoE开源<br>10秒1080P只要5毛钱",
+  "deck": "清华系团队Sand.ai发布MAGI-2 Preview，千亿参数单流MoE架构，成本仅主流模型十分之一，AA榜单排名第六，完全开源。",
+  "keywords": "Dawn Vision, Sand.ai, MAGI-2, MoE, 视频生成, 开源, 曹越, Swin Transformer, AI视频, 成本",
+  "og_description": "Sand.ai开源1140亿参数MAGI-2视频生成模型，10秒1080P成本约0.5元，为行业主流十分之一，采用Multi-Head LatentMoE架构。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 800,
+  "sources": [
+    {
+      "text": "量子位 - 1140亿参数MoE视频模型开源，10秒1080P不到5毛钱",
+      "url": "https://www.qbitai.com/2026/08/466847.html"
+    },
+    {
+      "text": "Sand.ai GitHub - MAGI-2 Preview model weights",
+      "url": "https://github.com/sand-ai"
+    },
+    {
+      "text": "HuggingFace - MAGI-2 Preview",
+      "url": "https://huggingface.co/sand-ai"
+    }
+  ],
+  "body_html": "      <p>视频生成领域的\"DeepSeek时刻\"，可能真的来了。</p>\n      <p>8月5日，清华系AI创业公司Sand.ai发布并完全开源了千亿级视频生成模型<strong>MAGI-2 Preview</strong>。创始人曹越是Swin Transformer的共同一作，在计算机视觉领域是成名已久的大佬。这次他们放出的东西，参数规模和效果都接近闭源第一梯队，但生成成本直接打到了主流模型的十分之一。</p>\n      <p>具体数字很夸张：总参数<strong>1140亿</strong>（114B），单次前向激活约60亿参数；生成一段10秒1080P视频的成本约<strong>0.5元人民币</strong>——而现在市面上主流闭源视频模型（Sora、Kling、Runway Gen-3）生成同样规格视频的成本大约是5-8元。十分之一的价格，效果还接近第一梯队，AA视频生成榜单排名第六。李开复看完直接给出评价：\"这就是AI视频生成界的DeepSeek。\"</p>\n\n      <h2>为什么视频模型不能照抄LLM的Scaling路线？</h2>\n      <p>MAGI-2最核心的突破不是参数大，而是它证明了：视频生成的Scaling不能照抄LLM的路线，必须从底层重构架构。</p>\n      <p>过去一年多，很多公司做视频生成模型都是在LLM的架构上修修补补——把文本token换成视频token，把大语言模型的Transformer直接拿来做视频生成。结果是什么？模型越做越大，训练和推理成本飙升，但生成效果的提升却边际递减。更长的视频、更高的分辨率、更好的时序一致性，每一项都要付出指数级增长的算力代价。这就是视频生成的\"不可能三角\"：更大的模型、更长的视频、可控的成本，三者你最多选两个。</p>\n      <p>MAGI-2用MoE（Mixture of Experts，混合专家）架构打破了这个三角。但不是简单把LLM里的MoE搬过来——他们设计了专门针对视频的<strong>Multi-Head LatentMoE</strong>架构，还有三个关键创新：</p>\n      <p>第一，<strong>单流统一Transformer</strong>。文本、视频、音频三种模态用同一个主干网络处理，不是三个独立的编码器拼接。这意味着模型能更原生地理解文本描述和视频内容、音频之间的对应关系，多模态对齐效果更好。</p>\n      <p>第二，<strong>自研MagiMoE kernel库</strong>。MoE架构的推理效率一直是个大问题——路由选择、专家并行、负载均衡任何一个环节做不好，都会导致MoE比稠密模型还慢。Sand.ai没有用现成的MoE实现，而是从头写了专门针对视频生成场景优化的kernel，把激活稀疏性的效率吃到了极致。</p>\n      <p>第三，<strong>视频时序建模的特殊优化</strong>。视频和文本最大的区别是有时序维度——帧与帧之间必须连贯，不能闪烁、不能跳变、不能物体突然消失又出现。MAGI-2在注意力机制里加入了专门的时序一致性约束，不需要靠大量后处理就能生成比较稳定的长视频。</p>\n      <p>这三个创新加在一起，才实现了\"千亿参数但推理成本极低\"的效果。114B总参数听起来吓人，但每次生成只激活6B左右的参数，相当于用6B模型的成本跑出了接近千亿模型的效果。这就是MoE架构的威力，也是为什么DeepSeek、Mistral等公司在LLM领域早就用MoE把成本打下来了，而视频领域直到现在才有人真正做对。</p>\n\n      <h2>开源视频模型的冲击波</h2>\n      <p>MAGI-2完全开源（模型权重在GitHub和HuggingFace都可以下载），这件事的影响可能比模型本身的效果还大。</p>\n      <div class=\"pull-quote\">\"当一个效果接近第一梯队的视频模型可以免费下载、在消费级GPU上跑起来的时候，所有闭源视频公司的定价模型都要重写。\"<span class=\"pull-quote__attr\">—— 一位AI视频领域投资人</span></div>\n      <p>第一波冲击是价格。现在Sora、Kling、Runway的定价还是\"按秒收费\"的奢侈品逻辑，生成一分钟高质量视频要几百块钱。MAGI-2把成本打到十分之一，而且开源意味着任何人都可以基于它做二次开发、部署自己的视频生成服务——未来一年，视频生成API的价格大概率会像当年的大模型API一样雪崩式下跌。视频生成从\"专业人士的工具\"变成\"人人用得起的基础设施\"，这一步可能比所有人预想的都快。</p>\n      <p>第二波冲击是生态。开源模型会催生出大量的垂直应用：短视频创作者用它批量生成素材、电商平台用它批量做商品视频、广告公司用它快速出片、教育公司用它做课程视频。就像Stable Diffusion开源后图片生成领域爆发了几百个创业公司一样，视频生成领域的创业浪潮，可能马上就要被MAGI-2点爆。</p>\n      <p>当然，MAGI-2现在还是Preview版本，AA榜单排第六，和Sora、Kling这些闭源第一梯队比还有差距——特别是复杂运动场景、长视频一致性、文本渲染这些老大难问题，它还没有完全解决。但它证明了一件事：视频生成不需要闭源、不需要天价算力、不需要垄断，用创新的架构设计和开源的方式，同样能做出接近顶级水平的东西。</p>\n      <p>这就是开源的力量。当年Llama开源彻底改变了大模型的竞争格局，MAGI-2会不会对视频生成领域做同样的事？我们拭目以待。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "当一个效果接近第一梯队的视频模型可以免费下载、在消费级GPU上跑起来的时候，所有闭源视频公司的定价模型都要重写。",
+    "attr": "—— 一位AI视频领域投资人"
+  },
+  "cognitive_notes": "Sand.ai · MAGI-2 · 曹越 · MoE · Multi-Head LatentMoE · 视频生成 · 开源 · 1140亿参数 · 成本下降 · Swin Transformer · 单流Transformer · 李开复",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：量子位、Sand.ai GitHub、HuggingFace。"
+}

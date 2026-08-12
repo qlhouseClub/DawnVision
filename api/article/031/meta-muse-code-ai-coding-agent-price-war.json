@@ -1,0 +1,40 @@
+{
+  "slug": "meta-muse-code-ai-coding-agent-price-war",
+  "title": "Meta杀入AI编程Agent战团：Muse Code多Agent并行干活，价格只要Claude的一半",
+  "title_short": "Meta发布Muse Code编程Agent",
+  "title_break": "Meta Muse Code正式开放Beta<br>多Agent并行，价格屠夫入场",
+  "deck": "Meta发布终端AI编程Agent Muse Code，可并行启动子Agent在独立工作树中同时开发多个功能，成本约为竞品的40%。",
+  "keywords": "Dawn Vision, Meta, Muse Code, AI编程, AI Agent, Alexandr Wang, 编程助手, 多Agent",
+  "og_description": "Meta发布Muse Code AI编程Agent，支持多Agent并行开发、隔离工作树，由Alexandr Wang领导，定位为OpenAI Codex和Claude Code的低价替代方案。",
+  "read_time": "约 4 分钟阅读",
+  "word_count": 720,
+  "category": "AI编程",
+  "tags": [
+    "Meta",
+    "Muse Code",
+    "AI编程",
+    "Agent"
+  ],
+  "sources": [
+    {
+      "text": "TechCrunch - Meta launches Muse Code, an AI agent for large code bases",
+      "url": "https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/"
+    },
+    {
+      "text": "Mark Zuckerberg X帖子 - Muse Code发布",
+      "url": "https://x.com/finkd/status/2085080750034940201"
+    },
+    {
+      "text": "华尔街日报 - Meta AI chief Alexandr Wang谈编程Agent战略",
+      "url": "https://www.wsj.com"
+    }
+  ],
+  "body_html": "      <p>AI编程Agent赛道，又进来一个重量级选手。</p>\n      <p>8月5日，Meta正式发布<strong>Muse Code</strong>——一个终端AI编程Agent，目前开放Beta测试。一条命令就能安装，可以处理大型代码仓库中的完整软件工程任务：规划改动、写代码、验证结果，全套流程自动化。</p>\n      <p>这款产品的技术特点很有意思：<strong>多Agent并行</strong>。当任务足够大时，Muse Code会自动拆分子任务，启动多个子Agent在独立的工作树（worktree）中并行工作，互不干扰，你的工作副本完全不会被碰到。Zuckerberg亲自站台说：测试中我们让它同时为一个游戏构建了6个功能，没有任何冲突。</p>\n      <p>驱动Muse Code的是Meta此前发布的编程模型<strong>Muse Spark</strong>。而领导这个产品的人，是今年刚刚加入Meta的<strong>Alexandr Wang</strong>——Scale AI的前CEO，现在是Meta超级智能实验室的负责人。</p>\n\n      <h2>价格屠夫入场</h2>\n      <p>Meta切入AI编程赛道的姿势，和它切入其他AI赛道一样：<strong>用价格开路。</strong></p>\n      <p>目前AI编程Agent的头部玩家是OpenAI Codex和Anthropic Claude Code。以Claude Code Sonnet为例，输入价格约为3美元/百万token。而Muse Code的输入价格是<strong>1.25美元/百万token</strong>——差不多是Claude Code Sonnet的<strong>42%</strong>。</p>\n      <p>接近一半的价格，功能上却没有明显缩水。Alexandr Wang在接受华尔街日报采访时的说法很直白：\"我们认为，对于很多工作流和使用场景来说，这会是一个非常好的选择，尤其是从成本角度考虑。\"</p>\n      <p>翻译一下就是：我们便宜，而且够用。对于很多中小团队和个人开发者来说，够用+便宜就是硬道理。</p>\n      <p>这招Meta在开源大模型上已经验证过了。Llama系列靠开源+免费+性能接近闭源模型，迅速占据了大模型开源生态的头把交椅。现在它想用同样的打法打AI编程市场：性能不比你差多少，但价格只有你的一半，你怎么跟我打？</p>\n\n      <h2>AI编程的价格战开打了</h2>\n      <p>Muse Code的发布标志着一件事：<strong>AI编程工具的价格战正式打响了。</strong></p>\n      <p>过去一年，AI编程助手从Copilot单代模式进化到了Agent全流程模式。Codex、Claude Code、Cursor、Devin、Windsurf……产品越来越多，能力越来越强，但价格也水涨船高。顶级编程Agent的月费动辄几十上百美元，对于个人开发者和小团队来说并不便宜。</p>\n      <p>Meta进来之后，这个局面会被打破。它有算力、有模型、有开源生态，打价格战没人打得过它。更重要的是，Meta做AI编程Agent不是为了靠这个赚钱——它是为了构建生态、吸引开发者、完善它的AI工具链。只要能把开发者留在Meta的AI生态里，Muse Code哪怕不赚钱也没关系。</p>\n      <p>对于开发者来说，这当然是好事。选择变多了，价格变低了，工具变强了。但对于其他AI编程创业公司来说，压力就大了——当Meta把价格打到这个位置，你要么降价（利润更薄），要么做差异化（难度很大），要么等死。</p>\n      <p>AI编程是AI落地最快、付费意愿最强的赛道之一。但随着巨头入场，这个赛道的创业窗口正在快速关闭。未来能活下来的AI编程公司，要么有极强的产品体验和用户粘性，要么有不可替代的垂直能力——否则在巨头的价格攻势面前，真的很难扛。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "当Meta把价格打到这个位置，你要么降价，要么做差异化，要么等死。",
+    "attr": "—— Dawn Vision 判断"
+  },
+  "cognitive_notes": "AI编程 · Meta · Muse Code · Alexandr Wang · 多Agent · 价格战 · OpenAI Codex · Claude Code · 编程助手 · 开源生态",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的公开信息整理，素材来源：TechCrunch、华尔街日报、Zuckerberg社交媒体帖子。",
+  "footnote_tip": ""
+}

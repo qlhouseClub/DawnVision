@@ -1,0 +1,40 @@
+{
+  "slug": "situational-awareness-400m-source-foundry-chip",
+  "title": "AI基建股暴跌后，最狂的AI对冲基金逆势加注4亿美元：钱正在涌向'芯片制造'这一环",
+  "title_short": "AI对冲基金4亿加注芯片制造",
+  "title_break": "AUM腰斩仍逆势加码<br>4亿美元涌向芯片制造",
+  "deck": "AUM从200亿跌到100亿、刚清仓公开持仓的Situational Awareness，本周再投4亿美元给斯坦福背景的芯片制造创业公司Source Foundry。",
+  "keywords": "Dawn Vision, Situational Awareness, Source Foundry, 芯片制造, AI对冲基金, Aschenbrenner, 算力基建, 融资",
+  "og_description": "前OpenAI研究员Leopold Aschenbrenner创立的AI对冲基金Situational Awareness，在AI基建股暴跌、AUM腰斩后仍向芯片制造创业公司Source Foundry追加4亿美元投资，累计5亿美元。",
+  "read_time": "约 4 分钟阅读",
+  "word_count": 720,
+  "category": "算力基建",
+  "tags": [
+    "AI算力",
+    "芯片制造",
+    "对冲基金",
+    "融资"
+  ],
+  "sources": [
+    {
+      "text": "TechCrunch - Embattled hedge fund Situational Awareness invests $400M in chip startup Source Foundry",
+      "url": "https://techcrunch.com/2026/08/09/embattled-hedge-fund-situational-awareness-invests-400m-in-chip-startup-source-foundry/"
+    },
+    {
+      "text": "华尔街日报 - Situational Awareness bets $400 million on stealth chip startup after crash",
+      "url": ""
+    },
+    {
+      "text": "TechCrunch - AI hedge fund kept its Anthropic shares after selling public portfolio",
+      "url": "https://techcrunch.com/2026/07/30/ai-hedge-fund-situational-awareness-may-have-sold-its-public-portfolio-but-it-still-has-its-anthropic-shares/"
+    }
+  ],
+  "body_html": "      <p>一个AUM从200亿美元跌到100亿、刚把公开持仓清得差不多的AI对冲基金，本周又砸出4亿美元。</p>\n      <p>据TechCrunch报道，Situational Awareness本周向<strong>Source Foundry</strong>投资<strong>4亿美元</strong>——一家由斯坦福研究人员创立的芯片制造创业公司，目标是让芯片制造“更快、更便宜”。加上此前的投资，该基金对Source Foundry的总投入已达到<strong>5亿美元</strong>。</p>\n      <p>一边是AI基建股暴跌、基金被迫割肉回撤，一边是对芯片制造环节的重仓加码。这笔反差感拉满的交易，把AI资本的最新流向摆到了台面上：<strong>钱正在从'卖铲子的'，流向'造铲子的人'。</strong></p>\n\n      <h2>最狂的AI对冲基金：从All in到逆势All in</h2>\n      <p>Situational Awareness这个名字，在AI圈几乎是“疯狂”的代名词。创始人Leopold Aschenbrenner是前OpenAI研究员，二十多岁，2024年创立基金时没有任何交易经验，却靠重仓AI基础设施股票在早期拿到了惊人的回报。他写过的长文《Situational Awareness》至今仍是AI投资圈的一份“圣经”式文本。</p>\n      <p>但今年夏天，风向变了。AI基础设施股票大幅回撤，基金遭遇严重亏损；7月底，它把大部分公开持仓卖给了Ken Griffin的Citadel，只保留了Anthropic的股份。AUM从200亿美元缩水到100亿美元——对普通基金这是灾难，对这家基金，更像是一次主动换仓。</p>\n      <p>因为就在“割肉”之后不到两周，它又对Source Foundry追加了4亿美元。这种“刚清仓就重仓”的节奏，与其说是抄底，不如说是它一直以来的打法：<strong>极度集中、极度自信、只押自己看得懂的叙事。</strong></p>\n\n      <h2>为什么是芯片制造</h2>\n      <p>这笔投资踩中的，是AI算力供应链里最稀缺、也最被忽视的一环。过去两年，AI资本疯狂涌向GPU、数据中心、电力——英伟达吃肉，云厂商喝汤，创业公司啃骨头。但芯片制造（foundry）本身，始终是少数寡头的游戏：晶圆代工门槛极高，新玩家几乎进不来。</p>\n      <p>Source Foundry试图打破的就是这个格局：让芯片制造更快、更便宜，把造芯的门槛降下来。如果这条路走得通，它改变的不只是一家公司的估值——而是整个AI算力供给的游戏规则。对一个坚信“算力是新时代石油”的基金来说，投制造环节，等于投石油时代的炼油厂。</p>\n      <p>当然，这笔交易也带着鲜明的赌性：Source Foundry还是stealth状态，技术细节没有公开；4亿美元的估值依据，更多是创始团队的出身和赛道想象力。<strong>在AI基建股的暴跌声里下重注，要么是看到了别人没看到的东西，要么是信仰足够深。</strong></p>\n      <p>对行业观察者来说，比单笔交易更有意义的，是资金流向的指示作用：当最懂AI的一批人（前OpenAI研究员、AI安全圈的核心人物）开始把真金白银押在“芯片制造”上，说明算力焦虑已经从“买不到卡”，升级到了“卡不够造”。算力基建的下半场，可能不在云端，而在晶圆厂里。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "当最懂AI的一批人把真金白银押在'芯片制造'上，算力焦虑已经从'买不到卡'，升级到了'卡不够造'。",
+    "attr": "—— Dawn Vision 判断"
+  },
+  "cognitive_notes": "算力基建 · Situational Awareness · Source Foundry · 芯片制造 · Aschenbrenner · AI对冲基金 · 晶圆代工 · 融资 · 算力焦虑",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的公开信息整理，素材来源：TechCrunch、华尔街日报、TechCrunch后续报道。",
+  "footnote_tip": ""
+}

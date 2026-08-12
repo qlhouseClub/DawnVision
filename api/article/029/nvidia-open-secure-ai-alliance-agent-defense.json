@@ -1,0 +1,32 @@
+{
+  "slug": "nvidia-open-secure-ai-alliance-agent-defense",
+  "category": "Agent协议",
+  "title": "Nvidia安全联盟成立九天120+公司加入：Agent防御标准从提案到落地加速",
+  "title_break": "Nvidia牵头AI安全联盟<br>九天120+公司加入",
+  "deck": "7月27日成立时37家创始成员，8月4日已超120家并发布Agent防御提案，AI安全标准化速度前所未有。",
+  "keywords": "Dawn Vision, Nvidia, Open Secure AI Alliance, OSAA, AI安全, Agent防御, 黄仁勋, 安全标准",
+  "og_description": "Nvidia牵头Open Secure AI Alliance九天破120家公司，发布AI Agent防御提案，安全标准化加速。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 780,
+  "sources": [
+    {
+      "text": "TechCrunch - Nvidia doesn't mess around: A week after open AI industry group formed",
+      "url": "https://techcrunch.com/2026/08/04/nvidia-doesnt-mess-around-a-week-after-open-ai-industry-group-formed-its-already-showing-progress/"
+    },
+    {
+      "text": "搜狐 - 英伟达牵头成立OSAA，争夺AI安全规则话语权",
+      "url": "https://m.sohu.com/a/1055462302_121123928/"
+    },
+    {
+      "text": "黄仁勋X平台帖文",
+      "url": "https://x.com/nvidia"
+    }
+  ],
+  "body_html": "      <p>7月27日，黄仁勋在X上发了两条推文，宣布联合37家企业成立Open Secure AI Alliance（OSAA，开放安全AI联盟）。九天后，TechCrunch在8月4日报道：联盟成员已经超过<strong>120家</strong>，并且已经拿出了第一份AI Agent防御相关的技术提案。</p>\n      <p>这个扩张速度在科技行业标准组织的历史上几乎是前所未有的。通常一个行业联盟从成立到拿出第一份像样的技术提案，需要半年到一年；成员从30多家扩张到120家，通常需要一两年。OSAA九天完成了别人两年的工作量，这背后是整个AI行业对Agent安全问题的集体焦虑。</p>\n\n      <h2>为什么是Nvidia拉群？</h2>\n      <p>OSAA的创始成员名单堪称\"美国科技圈复仇者联盟\"：芯片厂商（英伟达、戴尔、HPE）、云巨头（微软、IBM、Salesforce）、安全公司（CrowdStrike、Palo Alto Networks）、AI实验室（虽然OpenAI、Anthropic、Google DeepMind的名字缺席了创始名单，但据传都在以观察员身份参与）。</p>\n      <p>牵头的是Nvidia而不是OpenAI或Anthropic，这件事本身就很有意思。黄仁勋在成立帖文里的措辞很直接：<strong>\"攻击者已经掌握了前沿AI，防御方必须联合起来。\"</strong></p>\n      <p>为什么是Nvidia？因为它是AI产业链上唯一一个\"所有人都需要、但不直接和任何AI应用厂商竞争\"的玩家。Nvidia卖铲子，不管谁挖着金子它都赚钱。由它来牵头做安全标准，各方都能接受——不会像OpenAI牵头那样被质疑\"既当运动员又当裁判员\"。</p>\n      <p>触发联盟成立的直接导火索是7月下旬集中曝光的多起AI Agent安全事件：红队测试中AI Agent成功入侵真实公司系统、开源模型被用于生成恶意代码、公开的GitHub Issue可以诱导Agent泄露私有代码。这些事件传递了一个清晰的信号：AI Agent的能力已经强到可以造成真实损害，但整个行业还没有一套统一的防御标准。</p>\n\n      <h2>Agent防御提案的核心内容</h2>\n      <p>虽然OSAA的完整提案还没有公开，但从TechCrunch的报道和相关讨论中，可以看到三个核心方向。</p>\n      <p>第一是<strong>Agent行为溯源和审计标准</strong>。要求所有Agent在执行敏感操作（文件写入、网络请求、数据库修改、外部通信）时留下不可篡改的审计日志，包括：谁给的指令、Agent做了什么决策、调用了哪些工具、产生了什么结果。出了安全事件能追溯，这是防御的基础。</p>\n      <p>第二是<strong>Agent权限沙箱的标准化接口</strong>。不同厂商的Agent框架（LangChain、AutoGen、CrewAI、Vercel AI SDK等）目前权限模型各不相同，OSAA想推动一套统一的沙箱接口标准，让安全工具可以跨框架监控和拦截Agent的危险操作。就像网络安全领域的WAF（Web应用防火墙）一样，未来可能出现\"Agent WAF\"。</p>\n      <p>第三是<strong>模型越狱和恶意提示的检测数据集与基准</strong>。联盟计划开源一套标准化的红队测试数据集和评测基准，用来评估模型和Agent框架对抗越狱、提示注入、数据窃取的能力。这相当于给AI安全做了一个\"碰撞测试标准\"——你的Agent安全不安全，跑一遍基准就知道。</p>\n      <p>速度是OSAA最大的武器。九天拿出提案、九天扩到120家成员，这种速度在以前的科技标准组织里不可想象。这也说明AI行业的安全共识已经到了\"不得不做\"的临界点。</p>\n      <p>当然也有质疑的声音。有人指出OSAA的成员里缺少了OpenAI、Anthropic、Google这三家最前沿的模型厂商作为正式成员，影响力会打折扣；也有人担心Nvidia主导的标准会偏向Nvidia的硬件生态；还有人说120家成员里有多少是真心做安全、多少是来蹭热点贴logo，要打个问号。</p>\n      <p>但不管怎么说，AI Agent安全从\"各家自扫门前雪\"进入\"行业联盟联合防御\"阶段，这是好事。Agent协议的战争（MCP、A2A、ACP、AG-UI）还在继续，但安全防御是所有协议都必须支持的底层能力——OSAA可能成为第一个跨协议的安全标准。</p>\n      <p>当AI Agent开始真正走进企业、走进生产系统，一把所有人都认可的安全锁，比一把无人能开的超级锁更有价值。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "攻击者已经掌握了前沿AI，防御方必须联合起来。",
+    "attr": "—— 黄仁勋，OSAA成立声明"
+  },
+  "cognitive_notes": "Open Secure AI Alliance · OSAA · Nvidia · 黄仁勋 · AI安全 · Agent防御 · 安全标准 · 120家成员 · 行为审计 · 沙箱标准",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 9 个源信号生成，经编辑部人工审核。素材来源：TechCrunch、搜狐科技、黄仁勋X平台。"
+}

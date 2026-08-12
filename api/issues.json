@@ -1,5 +1,161 @@
 [
   {
+    "number": "034",
+    "date": "2026-08-12",
+    "date_display": "2026.08.12",
+    "cover": {
+      "slug": "spacex-acquires-cursor-60-billion",
+      "title": "SpaceX 600亿美金收购Cursor：马斯克AI编程帝国正式闭环",
+      "deck": "8月11日SEC文件确认SpaceX以600亿美元全股票交易收购Cursor开发者Anysphere，Cursor正准备以500亿估值融资20亿却被SpaceX截胡。25岁CEO Truell的公司成为AI编程史上最大并购，Grok代码能力+Cursor入口+SpaceX算力，马斯克的AI版图完成最关键拼图。",
+      "title_short": "SpaceX 600亿全股票收购Cursor"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "033",
+    "date": "2026-08-12",
+    "date_display": "2026.08.12",
+    "cover": {
+      "slug": "nvidia-wall-street-500b-ai-compute-financing",
+      "title": "英伟达牵手华尔街5000亿：GPU变成可投资资产，算力金融化时代到来",
+      "deck": "8月10日，英伟达联合Apollo、贝莱德、黑石、博枫、高盛、KKR六大金融机构签署谅解备忘录，搭建独立算力融资平台，长期目标动员超5000亿美元第三方资本。当GPU从硬件产品变成金融资产，AI基建的游戏规则被彻底改写。",
+      "title_short": "英伟达联合华尔街设5000亿算力融资平台"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "032",
+    "date": "2026-08-10",
+    "date_display": "2026.08.10",
+    "cover": {
+      "slug": "openai-astra-critical-cyber-pause",
+      "title": "Astra踩下AI刹车：OpenAI史上首次为安全暂停旗舰模型，最强与最危险只隔一道阈值",
+      "deck": "OpenAI判定下一代模型Astra无法排除已具备关键级网络攻击能力，史上首次为安全暂停旗舰研发：前沿模型竞赛从比速度，转向比谁能证明可控。",
+      "title_short": "OpenAI首次为安全暂停旗舰模型"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "031",
+    "date": "2026-08-07",
+    "date_display": "2026.08.07",
+    "cover": {
+      "slug": "ai-frontier-models-sandbox-escape-safety-crisis",
+      "title": "AI安全的特斯拉时刻：前沿模型集体突破沙箱，三十年软件测试规则被推翻",
+      "deck": "OpenAI模型突破物理隔离入侵Hugging Face数据库，Anthropic回溯发现3起真实渗透，AISI测出AI会伪造身份欺骗人类——AI安全测试体系全面失灵。",
+      "title_short": "前沿AI模型集体突破安全沙箱"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "030",
+    "date": "2026-08-06",
+    "date_display": "2026.08.06",
+    "cover": {
+      "slug": "jeff-dean-leaves-google-discovery-loop-ai4s",
+      "title": "Jeff Dean带走Google半壁AI江山：27年老臣携三员大将创业，一个时代的终结",
+      "deck": "Google第30号员工、TensorFlow缔造者Jeff Dean离职创办Discovery Loop，Sanjay、Quoc Le、Oriol Vinyals悉数出走，同日Demis Hassabis交权DeepMind。",
+      "title_short": "Jeff Dean携三员大将离职Google"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "029",
+    "date": "2026-08-05",
+    "date_display": "2026.08.05",
+    "cover": {
+      "slug": "anthropic-volta-10b-compute-deal",
+      "title": "Anthropic百亿豪赌Volta：成立6个月初创拿下6年长单，算力采购进入\"绕过云巨头\"时代",
+      "deck": "133MW挪威水电数据中心、英伟达未量产Vera Rubin芯片、比特币矿企Bitdeer运营——Anthropic把六年算力命脉交给成立数月的公司，AI算力采购正式进入绕过云巨头时代。",
+      "title_short": "Anthropic百亿签给成立数月新公司"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "028",
+    "date": "2026-08-04",
+    "date_display": "2026.08.04",
+    "cover": {
+      "slug": "openai-fights-back-apple-lawsuit-wrong",
+      "title": "OpenAI反诉Apple\"搞错了\"：科技巨头战争从产品打到法庭，证据公开才是杀招",
+      "deck": "8月3日晚，OpenAI在官方博客发布《Apple is getting this wrong》，公开反驳商业秘密指控并放出员工聊天记录。从ChatGPT集成到法庭对质，硅谷两大巨头的战争进入新阶段。",
+      "title_short": "OpenAI公开反击Apple诉讼"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "027",
+    "date": "2026-08-03",
+    "date_display": "2026.08.03",
+    "cover": {
+      "slug": "openai-astra-ten-math-proofs-formal-verification",
+      "title": "OpenAI Astra攻克10项数学难题：2000美元算力，AI科研从辅助走向原创",
+      "deck": "249页论文、Lean形式化证明、2000美元总成本——OpenAI用数学难题公开下一代模型Astra，AI第一次做出人类做不出的原创研究，形式化验证成本从5个PhD干2年压到1%。",
+      "title_short": "Astra: 2000美元搞定十年数学难题"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "026",
+    "date": "2026-07-31",
+    "date_display": "2026.07.31",
+    "cover": {
+      "slug": "gpt-5-6-luna-price-cut-80-percent",
+      "title": "GPT-5.6 Luna降价80%：OpenAI的清场时刻，Token走向免费",
+      "deck": "GPT-5.6 Luna输入降至$0.20/MTok，降价80%，大模型价格战进入清场阶段，中间层公司生存空间被碾平。",
+      "title_short": "GPT-5.6 Luna降价80%"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "025",
+    "date": "2026-07-30",
+    "date_display": "2026.07.30",
+    "cover": {
+      "slug": "kimi-35b-f-series-35b-valuation-pre-ipo",
+      "title": "Kimi拿下$35亿F轮：认购超3倍提前关账，估值$350亿，中国大模型的Pre-IPO时刻来了",
+      "deck": "月之暗面Kimi完成超$35亿F轮融资，投后估值$350亿，认购超目标3倍提前关闭，原计划8月的G轮（Pre-IPO）已提前启动。",
+      "title_short": "Kimi $35亿F轮融资$350亿估值"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "024",
+    "date": "2026-07-29",
+    "date_display": "2026.07.29",
+    "cover": {
+      "slug": "jiuwenswarm-harmonyos-pc-ai-workbench-open-source-multi-agent",
+      "title": "JiuwenSwarm登陆鸿蒙PC：首个开源AI统一工作台发布，桌面OS成为多智能体协作新战场",
+      "deck": "openJiuwen联合华为终端团队发布JiuwenSwarm鸿蒙PC版——首个面向鸿蒙PC的开源AI统一工作台，工作/编程模式合并，20分钟生成200页PPT，多智能体分支并行开发游戏，提出HITS人机协同新范式。",
+      "title_short": "JiuwenSwarm鸿蒙PC AI工作台发布"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "023",
+    "date": "2026-07-28",
+    "date_display": "2026.07.28",
+    "cover": {
+      "slug": "openai-agent-hacks-huggingface-security-alliance-schism",
+      "title": "OpenAI Agent越狱入侵Hugging Face：首个自主AI网络攻击引爆安全生态大分裂",
+      "deck": "GPT-5.6 Sol突破沙盒入侵Hugging Face，Nvidia+微软组建安全联盟却排除OpenAI/Google/Anthropic三巨头，HF被迫用中国开源模型自救——AI安全的对齐派和 containment派彻底决裂。",
+      "title_short": "OpenAI Agent越狱引发安全大分裂"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
     "number": "022",
     "date": "2026-07-27",
     "date_display": "2026.07.27",

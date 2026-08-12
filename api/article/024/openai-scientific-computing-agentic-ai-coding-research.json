@@ -1,0 +1,25 @@
+{
+  "slug": "openai-scientific-computing-agentic-ai-coding-research",
+  "category": "AI 编程 · 工具竞争",
+  "title": "OpenAI发布agentic时代科学计算报告：AI coding agents开始重构基因组学科研软件",
+  "title_short": "OpenAI发布agentic时代科学计",
+  "title_break": "OpenAI发布agentic时代科学计算报告<br>AI coding agents开始重构基因组学科研软件",
+  "deck": "OpenAI实地报告展示科学家如何用AI coding agents现代化科学计算软件栈——基因组学、气候建模等领域遗留代码正被Agent重构，科研软件开发速度提升数倍。",
+  "keywords": "Dawn Vision, OpenAI, 科学计算, AI coding agent, 基因组学, 科研软件, 生物信息学, agentic AI",
+  "og_description": "OpenAI发布agentic AI时代科学计算实地报告：科学家使用AI coding agents重构基因组学等领域遗留科研代码。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 760,
+  "sources": [
+    {
+      "text": "OpenAI Blog - Scientific computing in the age of agentic AI",
+      "url": "https://openai.com/index/scientific-computing-agentic-ai"
+    }
+  ],
+  "pull_quote": {
+    "text": "科学计算可能是AI coding agents被低估最深的场景。不是替代科学家，是把科学家从维护Fortran 77的噩梦里解放出来。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "OpenAI · 科学计算 · AI coding agent · 基因组学 · 科研软件 · 遗留代码重构 · Fortran · agentic科研",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 6 个源信号生成，经编辑部人工审核。素材来源：OpenAI Blog。",
+  "body_html": "<p>AI编程工具的战争，大多讨论程序员写CRUD、网页、App的场景。但OpenAI最新实地报告把AI coding agents拉到一个被忽视的领域：<strong>科学计算</strong>。</p>\n      <p>7月28日OpenAI发布《Scientific computing in the age of agentic AI》，展示基因组学、气候建模、天文、粒子物理等领域研究者如何用AI coding agents加速科学软件开发。</p>\n      <h2>被遗忘的\"遗留代码\"困境</h2>\n      <p>科学计算有个公开秘密：大量关键科学软件是<strong>几十年前的老代码</strong>，没人敢动但所有人都在用。基因组学核心工具是2000年代Perl脚本跑在老服务器上，气候建模有大量Fortran 77代码，天文用IDL脚本——原作者早已离开，文档缺失，依赖过时，但没人敢重构怕结果不对。</p>\n      <p>因为科学软件<strong>正确性比一切都重要</strong>。商业软件出bug可以热修复；科学软件出bug可能导致Nature论文结论错误、药物研发方向被误导。所以科研人员对重构有极强心理障碍。</p>\n      <p>AI coding agents正在打破僵局。报告中基因组学研究者用Claude Code和GPT通读几万行无文档老Perl代码、解释功能、识别bug、自动翻译成Python——同时生成测试验证重构后输出与原代码一致。以前博士后几个月的重构，Agent辅助下几天做完。</p>\n      <div class=\"pull-quote\">\"科学计算可能是AI coding agents被低估最深的场景。不是替代科学家，是把科学家从维护Fortran 77的噩梦里解放出来。\"<span class=\"pull-quote__attr\">—— Dawn Vision编辑部</span></div>\n      <h2>Agent重构科研工作方式</h2>\n      <p>科学场景下Agent用法和商业开发很不同：商业开发让Agent从零写功能，科研里更多是<strong>\"理解、翻译、验证、加速\"</strong>——理解老代码、翻译成现代语言、写测试验证数值一致性、单线程改并行。Agent帮科学家从代码维护脱身，把时间花在需要科学直觉和创造力的部分。</p>\n      <p>这也解释了为什么AI编程工具在科研圈普及比预期快。科研人员不是程序员，学编程是为了解决科学问题。Agent充当<strong>\"跨时代翻译器\"</strong>——懂老语言也懂新语言，帮科研人员无痛迁移到现代工具链。跨学科研究也变容易：生物学家不用花一学期学R，气候科学家不用从头学Python遥感库，自然语言描述需求Agent写代码。</p>\n      <p>当然风险存在：Agent生成代码有微妙数值错误可能导致完全错误的科学结论。有经验的科研用户强调：Agent代码必须经严格单元测试和交叉验证，<strong>永远不能盲目信任</strong>。AI编程工具的影响力正从互联网公司代码库蔓延到大学实验室，那些跑了二十年的Fortran程序可能在一两年内被年轻科学家在Agent辅助下现代化。</p>\n      <p>科学家最宝贵的资源不是算力，是时间。AI正在把时间还给他们。</p>\n      <p>明天见。</p>\n\n<div class=\"article-sources\">\n  <div class=\"article-sources__label\">Sources · 参考来源</div>\n  <ul class=\"article-sources__list\">\n    <li><a href=\"https://openai.com/index/scientific-computing-agentic-ai\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI Blog - Scientific computing in the age of agentic AI</a></li>\n  </ul>\n  <p class=\"article-sources__note\">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，标题、观点、行文均为原创，仅供参考，不构成任何投资建议或决策依据。如有侵权请联系删除。</p>\n</div>\n<div class=\"article-page__footnote\">\n  <p>本文基于 Dawn Vision 认知引擎处理的 6 个源信号生成，经编辑部人工审核。素材来源：OpenAI Blog。</p>\n  <p>相关入库笔记：OpenAI · 科学计算 · AI coding agent · 基因组学 · 科研软件 · 遗留代码重构 · Fortran · agentic科研</p>\n</div>"
+}

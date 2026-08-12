@@ -1,0 +1,29 @@
+{
+  "slug": "bytedance-seedance-2-5-video-generation",
+  "category": "AI视频",
+  "title": "Seedance 2.5正式上线：字节视频生成模型升级30秒连贯输出，多模态输入能力翻倍",
+  "title_short": "Seedance 2.5上线：30秒视频生成",
+  "title_break": "Seedance 2.5正式上线<br>字节视频生成模型30秒连贯输出，多模态输入能力翻倍",
+  "deck": "7月31日字节跳动旗下豆包正式发布Seedance 2.5视频生成模型，支持单次生成30秒高质量视频，陆续上线即梦AI与豆包专业版。",
+  "keywords": "Dawn Vision, Seedance, 字节跳动, 豆包, AI视频, 视频生成模型",
+  "og_description": "字节跳动Seedance 2.5视频生成模型7月31日正式发布，支持单次30秒高质量视频生成，多模态输入能力增强。",
+  "read_time": "约 4 分钟阅读",
+  "word_count": 700,
+  "sources": [
+    {
+      "text": "IT之家 - 字节跳动推出Seedance 2.5模型",
+      "url": "http://m.toutiao.com/group/7668548511616467483/"
+    },
+    {
+      "text": "网易新闻 - 字节跳动发布Seedance 2.5",
+      "url": "https://c.m.163.com/news/a/L35SIFGR0534A4SC.html"
+    }
+  ],
+  "pull_quote": {
+    "text": "视频生成的竞争不再是'谁能生成更长的视频'，而是'谁能把生成能力嵌入用户的真实工作流'。Seedance选择从抖音生态出发向下扎根，Sora选择从技术上限出发向上突破——两条路线，两个终点。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Seedance 2.5 · 字节跳动 · 豆包 · AI视频 · 30秒生成 · 多模态输入",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 6 个源信号生成，经编辑部人工审核。素材来源：IT之家、网易新闻。",
+  "body_html": "<p>7月31日，字节跳动旗下豆包大模型正式发布新一代视频创作模型<strong>Seedance 2.5</strong>，支持<strong>单次生成30秒高质量视频片段</strong>，并支持多轮延长生成更长视频。模型正在陆续上线即梦AI、豆包专业版，API服务也将于近期上线火山方舟。</p>\n<p>据官方介绍，Seedance 2.5延续了Seedance 2.0统一的多模态音视频联合生成架构，重点突破了长时一致性和多模态控制能力。</p>\n<h2>核心升级点</h2>\n<p><strong>第一，30秒连贯+多轮延长。</strong>相比上一代，Seedance 2.5单次生成时长显著提升，且支持对话式延长——用户可以基于已生成的视频继续扩展，理论上没有上限。这让短视频创作从\"生成片段\"变成了\"生成完整作品\"。</p>\n<p><strong>第二，多模态输入能力增强。</strong>支持图片、视频、音频等多种输入形式的混合控制，创作者可以用参考图定风格、用参考视频定动作、用音频定节奏。</p>\n<p><strong>第三，抖音生态深度整合。</strong>生成的视频可以在抖音、剪映、即梦之间无缝流转，直接使用热门BGM库、特效和模板。</p>\n<div class=\"pull-quote\">\"视频生成的竞争不再是'谁能生成更长的视频'，而是'谁能把生成能力嵌入用户的真实工作流'。Seedance选择从抖音生态出发向下扎根，Sora选择从技术上限出发向上突破——两条路线，两个终点。\"<span class=\"pull-quote__attr\">—— Dawn Vision编辑部</span></div>\n<h2>AI视频的竞争格局</h2>\n<p>2026年的AI视频赛道，已经从\"比谁能生成\"变成了\"比谁能用\"。Sora依然保持技术标杆地位，但在产品落地和生态整合上，中国公司速度更快。</p>\n<p>对独立AI视频创业公司来说，出路越来越清晰：<strong>做深垂直场景</strong>——电商商品视频、教育课件、广告制作，这些需要的不是最先进的模型，而是最贴合工作流的解决方案。</p>\n<p>明天见。</p><div class=\"article-sources\"><div class=\"article-sources__label\">Sources · 参考来源</div><ul class=\"article-sources__list\"><li><a href=\"http://m.toutiao.com/group/7668548511616467483/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">IT之家 - 字节跳动推出Seedance 2.5模型</a></li><li><a href=\"https://c.m.163.com/news/a/L35SIFGR0534A4SC.html\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">网易新闻 - 字节跳动发布Seedance 2.5</a></li></ul><p class=\"article-sources__note\">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，仅供参考。</p></div><div class=\"article-page__footnote\"><p>本文基于 Dawn Vision 认知引擎处理的 6 个源信号生成，经编辑部人工审核。素材来源：IT之家、网易新闻。</p><p>相关入库笔记：Seedance 2.5 · 字节跳动 · 豆包 · AI视频 · 30秒生成 · 多模态输入</p></div>"
+}

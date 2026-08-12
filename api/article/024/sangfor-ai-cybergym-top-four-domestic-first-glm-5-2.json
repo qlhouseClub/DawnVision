@@ -1,0 +1,29 @@
+{
+  "slug": "sangfor-ai-cybergym-top-four-domestic-first-glm-5-2",
+  "category": "算力基建 · 国产替代",
+  "title": "深信服AI在CyberGym跻身全球前四：国产GLM-5.2基座支撑，AI安全不再依赖美国模型",
+  "title_short": "深信服AI在CyberGym跻身全球前四",
+  "title_break": "深信服AI在CyberGym跻身全球前四<br>国产GLM-5.2基座支撑，AI安全不再依赖美国模型",
+  "deck": "深信服Sangfor AI在国际AI安全基准CyberGym中解决86.3%漏洞挑战，全球前四国内第一，完全基于国产智谱GLM-5.2基座。",
+  "keywords": "Dawn Vision, 深信服, Sangfor AI, CyberGym, AI安全, GLM-5.2, 智谱AI, 国产大模型, 漏洞挖掘",
+  "og_description": "深信服AI在CyberGym评测成功率86.3%，全球前四国内第一，完全基于国产智谱GLM-5.2。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 750,
+  "sources": [
+    {
+      "text": "36氪 - 深信服AI在CyberGym评测跻身全球前四，国内第一",
+      "url": "https://36kr.com/newsflashes/3916244683468418?f=rss"
+    },
+    {
+      "text": "TechCrunch - Microsoft launches its first cybersecurity model",
+      "url": "https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/"
+    }
+  ],
+  "pull_quote": {
+    "text": "AI安全核心矛盾：你需要最强AI防御最强AI攻击，但你能信任用来防御的AI吗？国产模型CyberGym成绩第一次给出肯定答案。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "深信服 · Sangfor AI · CyberGym · AI安全 · GLM-5.2 · 智谱AI · 国产大模型 · 漏洞挖掘",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：36氪、TechCrunch。",
+  "body_html": "<p>AI安全赛道一直默认美国模型最强。但7月29日一条新闻打破了刻板印象。</p>\n      <p>36氪报道，在国际AI安全基准<strong>CyberGym</strong>中，深信服（Sangfor）AI在纯国产基座（智谱GLM-5.2）固定配置下，面对ARVO与OSS-Fuzz全量高难度漏洞挑战，<strong>1507项任务解决1301项，成功率86.3%</strong>，最终<strong>全球前四、国内第一</strong>。</p>\n      <h2>CyberGym是什么，86.3%意味着什么</h2>\n      <p>CyberGym是国际最权威的AI驱动漏洞挖掘和安全分析评测之一，测试AI自动发现、分析、修复软件漏洞的能力。用的都是真实世界高难度CVE，覆盖各种编程语言和漏洞类型，不是训练数据里见过的送分题。</p>\n      <p>在CyberGym拿高分比MMLU/GSM8K难得多——学术基准是选择题或有标准答案的数学题，漏洞挖掘是开放式问题：给你一段代码找连原作者都不知道的bug，写PoC触发它，甚至生成修复补丁。需要深度代码理解+创造性思维+安全专业知识。</p>\n      <p>86.3%意味着深信服超过绝大多数美国科技公司和安全厂商的系统，而且<strong>用的不是GPT-5/Claude/Gemini，是完全国产的智谱GLM-5.2</strong>。网络安全对信任度要求极高：模型会不会留后门？数据会不会出境？地缘政治紧张时API会不会被掐断？金融、能源、电信、政府等关键领域这些是真实供应链风险。</p>\n      <div class=\"pull-quote\">\"AI安全的核心矛盾：你需要最强的AI防御最强AI攻击，但你能信任用来防御的AI吗？国产模型CyberGym成绩第一次给出肯定答案。\"<span class=\"pull-quote__attr\">—— Dawn Vision编辑部</span></div>\n      <h2>AI安全自主化拐点</h2>\n      <p>上周微软发布首个网络安全专用模型MAI-Cyber-1-Flash和Perception安全平台，Nvidia联合微软组建开放安全AI联盟，Hugging Face被入侵后被迫用中国开源模型防御。AI安全正成为大模型竞争新主战场。</p>\n      <p>模型能力重要，<strong>自主可控同样重要</strong>。关键基础设施防御系统不能建立在竞争对手可能掐断的供应链上。深信服用GLM-5.2在CyberGym拿全球前四证明：<strong>国产基座在最硬核AI安全任务上已可和美国顶尖模型同台竞技</strong>。</p>\n      <p>CyberGym测试的是<strong>AI vs AI攻防能力</strong>。未来攻击可能是AI Agent自动找漏洞、构造攻击链、横向移动；防御也必须用AI Agent实时检测响应修复。这是AI对AI军备竞赛，模型能力和供应链安全缺一不可。智谱ARR破亿美元、Kimi K3开源引硅谷恐慌、DeepSeek持续迭代——中国大模型2026夏天正从\"跟跑\"走向\"并跑\"，部分场景\"领跑\"。</p>\n      <p>AI安全核心矛盾一直是：你需要最强AI防御最强AI攻击，但你能信任用来防御的AI吗？深信服在CyberGym的成绩，第一次给了这个问题国产答案。</p>\n      <p>明天见。</p>\n\n<div class=\"article-sources\">\n  <div class=\"article-sources__label\">Sources · 参考来源</div>\n  <ul class=\"article-sources__list\">\n    <li><a href=\"https://36kr.com/newsflashes/3916244683468418?f=rss\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">36氪 - 深信服AI在CyberGym评测跻身全球前四，国内第一</a></li>\n    <li><a href=\"https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">TechCrunch - Microsoft launches its first cybersecurity model</a></li>\n  </ul>\n  <p class=\"article-sources__note\">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，标题、观点、行文均为原创，仅供参考，不构成任何投资建议或决策依据。如有侵权请联系删除。</p>\n</div>\n<div class=\"article-page__footnote\">\n  <p>本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：36氪、TechCrunch。</p>\n  <p>相关入库笔记：深信服 · Sangfor AI · CyberGym · AI安全 · GLM-5.2 · 智谱AI · 国产大模型 · 漏洞挖掘</p>\n</div>"
+}

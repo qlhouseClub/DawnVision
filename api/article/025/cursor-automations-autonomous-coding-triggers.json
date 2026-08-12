@@ -1,0 +1,29 @@
+{
+  "slug": "cursor-automations-autonomous-coding-triggers",
+  "category": "AI 编程 · 工具竞争",
+  "title": "Cursor推出Automations：CI挂了自动修、Issue提了自动改，AI编程开始\"不等你了\"",
+  "title_short": "Cursor推出Automations无人值守编程",
+  "title_break": "Cursor推出Automations<br>CI挂了自动修，AI编程开始\"不等你了\"",
+  "deck": "Cursor 7月下旬悄然上线Automations功能：触发器驱动的无人值守编程，CI失败自动修复、Issue自动响应，AI从\"你问我答\"进入\"主动干活\"时代。",
+  "keywords": "Dawn Vision, Cursor, Automations, AI编程, 无人值守编程, CI自动修复, Agent, 编程工具",
+  "og_description": "Cursor推出Automations触发器驱动编程：CI失败自动修复、Issue自动响应，AI编程进入无人值守时代。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 800,
+  "sources": [
+    {
+      "text": "搜狐科技 - Cursor推出Automations工具：AI编程自动化",
+      "url": "https://m.sohu.com/a/993333583_362225/"
+    },
+    {
+      "text": "今日头条 - Cursor推出自动化功能：AI编程进入无人值守时代",
+      "url": "http://m.toutiao.com/group/7667381851081720356/"
+    }
+  ],
+  "pull_quote": {
+    "text": "以前是你加班修bug，现在是AI在你睡觉的时候修bug。AI编程工具的终极形态，是把工程师从\"操作工\"变成\"监工\"。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Cursor · Automations · AI编程 · 无人值守编程 · CI自动修复 · 触发器 · Agent自主执行 · 编程工具",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：搜狐科技、今日头条科技频道。",
+  "body_html": "<p>如果你是Cursor用户，最近打开设置可能会发现一个悄悄上线的新功能：<strong>Automations</strong>。界面很朴素——一个触发器列表，默认显示\"Fix CI failures on main\"（修复main分支CI失败），状态是Inactive。但这个看似不起眼的功能，可能是AI编程工具从\"副驾驶\"走向\"自动驾驶\"的关键一步。</p>\n      <h2>Automations到底是什么</h2>\n      <p>简单说：你可以给Cursor设定触发条件——CI挂了、有人提了新Issue、到了指定时间——然后它自己就开始干活，不需要你打开IDE、不需要你点按钮、甚至不需要你醒着。</p>\n      <p>第一个默认触发器是<strong>\"Fix CI failures on main\"</strong>。想象一下这个场景：你晚上8点提交代码下班，9点CI跑挂了（可能是个lint错误、可能是个类型问题、可能是个测试用例因为时序问题flaky了）。以前你要第二天早上到公司才发现，然后花20分钟定位修复；现在如果Automations开着，它会在CI挂掉的第一时间被触发，自动拉取失败日志、定位问题、生成修复代码、提交PR、甚至可以配置自动merge。第二天你到公司，CI已经是绿的。</p>\n      <p>第二个即将上线的触发器是<strong>Issue自动响应</strong>：有人在GitHub/GitLab提了新Issue，Automations可以自动分析问题、尝试复现、如果是bug就生成修复PR、如果是功能请求就生成初步实现方案。</p>\n      <p>这和以前的AI编程有本质区别。Copilot、Cursor Tab、甚至Agent模式的本质都是\"你提问/下指令，AI响应\"——你是驾驶员，AI是副驾驶。Automations的本质是<strong>AI自己成为驾驶员</strong>，你只需要设定规则和边界，它在规则内自主决策、自主执行。</p>\n      <div class=\"pull-quote\">\"以前是你加班修bug，现在是AI在你睡觉的时候修bug。AI编程工具的终极形态，是把工程师从'操作工'变成'监工'。\"<span class=\"pull-quote__attr\">—— Dawn Vision编辑部</span></div>\n      <h2>从Copilot到Autopilot，量变到质变</h2>\n      <p>回顾AI编程工具的进化路径，你会发现一条清晰的脉络：</p>\n      <p><strong>2021-2022年：Copilot时代</strong>——AI是代码补全工具，你写开头它补结尾，本质是\"高级自动补全\"。</p>\n      <p><strong>2023-2024年：Chat时代</strong>——你可以用自然语言描述需求，AI生成代码块，本质是\"会说话的Stack Overflow\"。</p>\n      <p><strong>2025年：Agent时代</strong>——Cursor Composer、Windsurf Cascade等模式出现，AI可以跨文件理解上下文、执行多步编辑、运行终端命令，本质是\"初级实习生，你需要盯着它干活\"。</p>\n      <p><strong>2026年下半年：Autopilot时代</strong>——Automations这类功能的出现，意味着AI开始在没有人盯着的情况下自主执行任务。从\"副驾驶\"到\"自动驾驶\"，这不是功能迭代，是<strong>范式转移</strong>。</p>\n      <p>当然，担忧是真实存在的：AI自动改代码会不会引入新bug？权限边界怎么控制？自动merge到main出了生产事故谁负责？这些问题都需要时间和工程实践来回答。但方向是清晰的：AI编程工具的进化终点，不是\"帮你写代码\"，而是<strong>\"帮你管代码\"</strong>——从写代码的工具，变成管理代码生命周期的自治系统。</p>\n      <p>程序员该焦虑吗？短期看，会修CI、会改小bug的初级程序员确实面临被替代的压力；但长期看，真正的工程师会被解放出来去做更有价值的事——架构设计、产品思考、复杂系统决策。就像IDE和编译器没有消灭程序员，只是把程序员从汇编和打孔卡时代解放出来一样。</p>\n      <p>明天见。</p>\n\n<div class=\"article-sources\">\n  <div class=\"article-sources__label\">Sources · 参考来源</div>\n  <ul class=\"article-sources__list\">\n    <li><a href=\"https://m.sohu.com/a/993333583_362225/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">搜狐科技 - Cursor推出Automations工具：AI编程自动化</a></li>\n    <li><a href=\"http://m.toutiao.com/group/7667381851081720356/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">今日头条 - Cursor推出自动化功能：AI编程进入\"无人值守\"时代</a></li>\n  </ul>\n  <p class=\"article-sources__note\">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，标题、观点、行文均为原创，仅供参考，不构成任何投资建议或决策依据。如有侵权请联系删除。</p>\n</div>\n<div class=\"article-page__footnote\">\n  <p>本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：搜狐科技、今日头条科技频道。</p>\n  <p>相关入库笔记：Cursor · Automations · AI编程 · 无人值守编程 · CI自动修复 · Agent自主执行</p>\n</div>"
+}

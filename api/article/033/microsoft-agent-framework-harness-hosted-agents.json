@@ -1,0 +1,32 @@
+{
+  "slug": "microsoft-agent-framework-harness-hosted-agents",
+  "category": "AI Agent · 工程实践",
+  "title": "微软Agent Framework推Harness：Agent从SDK时代进入生产运行时时代",
+  "title_break": "微软推Agent Harness运行时<br>Agent从SDK走向生产级",
+  "deck": "微软将Agent Framework从SDK推进至生产运行时，Harness模块封装Agent运行时基础设施，三个文件即可搭建一个Agent。Agent落地的工程门槛正在被系统性降低。",
+  "keywords": "Dawn Vision,微软,Agent Framework,Harness,Hosted Agents,AI Agent,生产运行时,Agent工程化",
+  "og_description": "微软Agent Framework推出Harness运行时和Hosted Agents托管服务，Agent从SDK时代进入生产运行时时代，工程门槛大幅降低。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 800,
+  "sources": [
+    {
+      "text": "InfoQ中文 - 微软正式发布Agent Framework Harness 和 Hosted Agents",
+      "url": "https://www.infoq.cn/article/aDEJegvNSKwvue2JZ0yI"
+    },
+    {
+      "text": "今日头条技术 - 认识Agent Harness：三步搭一个理财助手",
+      "url": "http://m.toutiao.com/group/7655140135587136015/"
+    },
+    {
+      "text": "今日头条技术 - 一文讲清：Agent、Agent Framework、Agent Harness的本质区别",
+      "url": "http://m.toutiao.com/group/7611717313239073332/"
+    }
+  ],
+  "body_html": "      <p>2026年做一个AI Agent到底有多难？</p>\n      <p>如果你在半年前问这个问题，答案可能是：挺难的。你需要自己处理模型调用、工具集成、状态管理、对话历史、错误重试、权限控制、日志监控……写一个Agent的核心逻辑可能只需要几百行代码，但围绕它的基础设施和胶水代码可能要写几千行。大部分团队不是死在Agent的智商不够，而是死在工程化太麻烦。</p>\n      <p>微软正在系统性地改变这个局面。Microsoft Agent Framework已经从SDK阶段推进到<strong>生产运行时</strong>——新推出的Harness模块，把Agent运行时需要的所有基础设施封装成了一个几乎不用写胶水代码的\"壳\"。配合Hosted Agents托管服务，企业可以直接在Azure上部署和运行Agent，不用自己搭基础设施。</p>\n\n      <h2>Harness是什么？Agent的应用服务器</h2>\n      <p>理解Harness的最好方式，是把它和Web开发的历史做个类比。</p>\n      <p>早期Web开发的时候，每个团队都要自己写HTTP服务器、Session管理、路由分发、模板引擎——每个项目都在重复造轮子。直到Tomcat、Node.js、Django这些框架和应用服务器出现，把这些通用基础设施都封装好了，开发者只需要写业务逻辑。开发效率一下子提升了一个量级。</p>\n      <p>现在的Agent开发，就处在Web开发的\"史前时代\"——每个团队都在自己写Agent的运行时、状态管理、工具注册、对话历史、监控告警。Harness要做的，就是Agent领域的<strong>应用服务器</strong>：把通用的运行时基础设施全部封装好，开发者只需要定义Agent的能力（用什么模型、挂什么工具、遵循什么规则），剩下的交给Harness。</p>\n      <p>Harness的核心类型是Microsoft.Agents.AI.Harness这个门面类，它装配了一堆Provider：Todo Provider管理任务队列、Model Provider处理模型调用、File Provider管理文件读写、History Provider维护对话历史……以前你要自己一个个接，现在Harness全给你装好了，配置一下就能用。</p>\n      <p>有多简单？官方教程里，搭一个个人理财Agent只需要<strong>三个文件</strong>：一个定义Agent的类、一个配置文件、一个启动入口。不需要写HTTP服务器，不需要处理认证，不需要写状态持久化——这些Harness都帮你做了。</p>\n\n      <h2>从\"能跑\"到\"能在生产环境跑\"的距离</h2>\n      <p>Agent Framework 1.0在4月发布的时候，更多是一个开发者玩具——你可以用它快速做个Agent Demo，但要放到生产环境用，还差得远。</p>\n      <p>生产环境需要什么？高可用、可观测、可扩展、安全审计、权限控制、版本管理、灰度发布……这些东西每一个都是大工程。大多数Agent项目之所以卡在Demo阶段，不是模型能力不够，而是<strong>把一个Demo变成生产服务的工程量太大了</strong>。</p>\n      <p>Harness + Hosted Agents瞄准的就是这个缺口。Harness提供生产级的运行时，Hosted Agents提供Azure上的托管服务——相当于微软帮你搞定了部署、扩容、监控、安全这些运维工作，你只需要专注于Agent的业务逻辑和工具集成。</p>\n      <div class=\"pull-quote\">\"过去一年大家在比谁的Agent更聪明；接下来一年，大家要比谁的Agent能在生产环境稳定跑一年不宕机。\"<span class=\"pull-quote__attr\">—— 一位企业AI架构师</span></div>\n      <p>这也是微软在AI Agent赛道的策略：不和OpenAI、Anthropic比模型能力，而是靠Azure的云基础设施和企业服务能力，做Agent落地的\"水电煤\"。你想用谁家的模型都行——GPT、Claude、Gemini、Phi——但运行时、托管、安全、监控这些都用微软的。就像当年Windows平台上跑各种应用一样，微软想做Agent时代的操作系统。</p>\n      <p>当然，现在说胜负还太早。Vercel的Skills在做技能包生态，MCP在做工具协议标准，A2A在做Agent间通信，各家都在从不同角度切Agent基础设施这块蛋糕。但微软的优势很明显：它有最庞大的企业客户群、最成熟的云服务体系、最深的企业服务基因。Agent落地如果真的进入企业市场，微软不会缺席。</p>\n      <p>Harness的发布，标志着Agent工程化进入了新阶段。当越来越多的开发者发现\"原来搭一个生产级Agent不用从零开始\"，当企业看到\"把Agent部署到Azure上和部署一个Web应用一样简单\"——AI Agent才真正从概念验证走向规模落地。</p>\n      <p>明天见。</p>\n",
+  "pull_quote": {
+    "text": "过去一年大家在比谁的Agent更聪明；接下来一年，大家要比谁的Agent能在生产环境稳定跑一年不宕机。",
+    "attr": "—— 一位企业AI架构师"
+  },
+  "cognitive_notes": "微软 · Agent Framework · Harness · Hosted Agents · AI Agent · 生产运行时 · Agent工程化 · Azure",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 10 个源信号生成，经编辑部人工审核。素材来源：InfoQ中文、今日头条技术、微软官方文档。"
+}

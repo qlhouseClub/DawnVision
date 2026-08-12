@@ -1,0 +1,32 @@
+{
+  "slug": "ai-coding-tools-price-hike-july-2026",
+  "category": "AI 编程 · 工具竞争",
+  "title": "AI编程工具七月涨价潮：Copilot破$100/月、Windsurf翻倍，\"无限编程\"时代终结",
+  "title_break": "AI编程工具七月集体涨价<br>Copilot破百，Windsurf翻倍",
+  "deck": "Dev.to追踪35款工具七周内37次调价，Copilot新增三档最高破百美元，Windsurf团队版涨超一倍。按Token计费全面取代固定订阅，AI编程的\"无限自助餐\"时代正式结束。",
+  "keywords": "Dawn Vision, AI编程, GitHub Copilot, Windsurf, Cursor, 涨价, Token计费, 开发者工具, 订阅制, AI编程成本",
+  "og_description": "AI编程工具七月集体涨价：GitHub Copilot新增付费层级最高突破$100/月，Windsurf团队版翻倍，从固定订阅转向按Token计费成为行业大趋势。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 780,
+  "sources": [
+    {
+      "text": "今日头条 - Copilot破$100/月、Windsurf翻倍：AI编程工具的七月涨价潮",
+      "url": "http://m.toutiao.com/group/7667385198085964342/"
+    },
+    {
+      "text": "今日头条 - GitHub Copilot一夜涨价60倍：AI编程的「无限卡」时代今天终结",
+      "url": "http://m.toutiao.com/group/7646629732226581027/"
+    },
+    {
+      "text": "GitHub Blog - The harness is all you need (mostly)",
+      "url": "https://github.blog/ai-and-ml/github-copilot/the-harness-is-all-you-need-mostly/"
+    }
+  ],
+  "body_html": "\n      <p>如果你这个月打开AI编程工具的订阅账单时愣了一下，那不是你的错觉。</p>\n      <p>Dev.to的开发者工具定价追踪系统记录了一组令人咋舌的数据：<strong>35款AI编程工具在七周内发生了37次定价变动</strong>。2026年7月，AI编程赛道迎来了一场集体涨价潮，其力度和密度前所未有。GitHub Copilot在5月到7月之间新增了三个付费层级，最高档突破每月100美元；Windsurf的团队版从40美元/人/月涨到80美元基础费加40美元/人/月，翻了一倍还多；Cursor经历了两次定价结构调整后才找到平衡点。</p>\n\n      <h2>从\"自助餐\"到\"点菜\"：计费模式的根本转向</h2>\n      <p>这次涨价潮背后不只是价格数字的变化，是<strong>整个计费模式的范式转移</strong>。</p>\n      <p>过去两年，AI编程工具的主流定价策略是\"无限自助餐\"模式：你付一笔固定月费（通常是$10-40/月），就可以无限使用AI补全、聊天、Agent功能。这种模式对开发者非常友好——你不用担心用多了账单爆炸，可以尽情让AI帮你写代码。</p>\n      <p>但工具商很快发现了一个问题：重度用户的token消耗是轻度用户的几十倍甚至上百倍。当Agent模式普及后，一个任务可能消耗数万甚至数十万token——AI要读整个代码库、生成多个方案、反复调试。固定月费根本覆盖不了成本。</p>\n      <p>于是从GitHub Copilot宣布6月1日起转向按Token计费开始，多米诺骨牌一张张倒下：Windsurf改、Cursor改、Codeium改……新的定价模式是\"基础订阅+用量计费\"——你付一笔入门费获得基本额度，超出部分按Token消耗量收费。就像手机套餐从\"无限流量\"回到了\"套餐+流量包\"。</p>\n      <p>这个转变的影响怎么强调都不为过。以前你可以放心让AI读整个项目、做大规模重构，因为成本是固定的。现在每一次Agent调用都是钱，开发者必须开始学会\"省着用AI\"——这本身就会改变工作流。</p>\n\n      <h2>为什么所有人都在看Copilot的脸色</h2>\n      <p>这轮涨价潮中最关键的玩家是GitHub Copilot。不是因为它最贵，而是因为它是<strong>市场份额最大、开发者基数最广</strong>的AI编程工具。它的定价策略，就是整个行业的定价风向标。</p>\n      <p>有评论者说得很直白：\"Copilot今天按Token收费，Cursor、Windsurf、Codeium全都在旁边看着——如果Copilot这么改用户不跑，它们明天就全跟。\"这不是孤立事件，而是整个AI工具赛道从\"烧钱抢用户\"阶段进入\"变现求生存\"阶段的标志。</p>\n      <p>微软在企业端也已经取消了Copilot的无限用量承诺。企业客户现在需要为超出配额的部分支付额外费用。这传递的信号很清楚：AI编程的成本已经高到连微软这种巨头都补贴不起了。</p>\n      <p>那开发者怎么办？一些人转向了Claude Code——Anthropic的编程工具因为编程能力强、个人使用性价比高而被频繁推荐。另一些人开始自建本地模型，用Ollama跑开源编程模型。但对于需要最强能力的专业开发者来说，付费是不可避免的——只是以前的\"一杯咖啡钱\"变成了\"一顿火锅钱\"。</p>\n      <p>AI编程确实提升了效率，但当你的AI\"同事\"每个月要花掉你100美元，而且它还在不断要求涨薪——你不得不重新算一笔账：它到底帮你多赚了多少钱？</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "AI编程工具从\"无限自助餐\"变回了\"按菜点菜\"。以前你担心AI写得够不够多，现在你担心AI写得够不够省。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "AI编程 · GitHub Copilot · Windsurf · Cursor · 涨价潮 · Token计费 · 订阅制终结 · 开发者工具 · AI成本",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 9 个源信号生成，经编辑部人工审核。素材来源：今日头条、GitHub Blog、Dev.to定价追踪。"
+}

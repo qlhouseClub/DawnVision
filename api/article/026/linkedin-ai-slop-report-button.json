@@ -1,0 +1,29 @@
+{
+  "slug": "linkedin-ai-slop-report-button",
+  "category": "AI新媒体",
+  "title": "LinkedIn上线\"举报AI垃圾内容\"按钮：AI生成内容终于被平台正式盖章为\"垃圾\"",
+  "title_short": "LinkedIn上线AI垃圾内容举报按钮",
+  "title_break": "LinkedIn上线\"举报AI垃圾内容\"按钮<br>AI生成内容终于被平台正式盖章为\"垃圾\"",
+  "deck": "LinkedIn新增\"Looks like AI slop\"举报选项，AI垃圾信息正式进入平台治理清单，同时将AI写作助手降级为校对工具。",
+  "keywords": "Dawn Vision, LinkedIn, AI垃圾, AI slop, 内容平台, 内容治理",
+  "og_description": "LinkedIn新增AI生成低质量内容举报选项，AI垃圾内容正式被平台认定为需要治理的问题。",
+  "read_time": "约 4 分钟阅读",
+  "word_count": 700,
+  "sources": [
+    {
+      "text": "TechCrunch - LinkedIn adds button to report AI-generated slop",
+      "url": "https://techcrunch.com/2026/07/30/linkedin-adds-a-button-to-report-ai-generated-slop/"
+    },
+    {
+      "text": "网易 - LinkedIn新增'疑似AI水文'举报钮",
+      "url": "https://www.163.com/dy/article/L351QHM805561FY1.html"
+    }
+  ],
+  "pull_quote": {
+    "text": "当一个职业社交平台需要专门设置一个按钮让用户举报'AI垃圾'，这本身就是对过去一年AI内容泛滥最讽刺的注脚。你用GPT写的那篇'10个职场建议'，在LinkedIn眼里和垃圾邮件没有区别。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "LinkedIn · AI垃圾 · AI slop · 内容举报 · AI内容治理",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 5 个源信号生成，经编辑部人工审核。素材来源：TechCrunch、网易。",
+  "body_html": "<p>7月30日，LinkedIn悄然在内容举报菜单中新增了一个选项：<strong>\"Looks like AI slop\"（看起来像AI垃圾）</strong>。用户刷到AI批量生成、毫无个人观点的帖子时，可以直接选择这个分类举报。被举报的内容经审核后可能被降低曝光或下架。</p>\n<p>这是主流社交平台第一次将\"AI生成\"作为垃圾内容的独立分类。更耐人寻味的是，LinkedIn同时将自己的AI写作助手从\"写作助手\"降级为<strong>\"校对工具\"（proofreading tool）</strong>——平台自己都不再鼓励用户用AI写完整帖子。</p>\n<h2>LinkedIn上的AI垃圾有多严重</h2>\n<p>任何过去一年刷过LinkedIn的人都有体会：feed里充斥着\"The 5 things successful people do before 7 AM\"这类千篇一律的帖子。开头反常识钩子，中间5-7个编号要点，结尾\"Agree? Like and share!\"——典型的AI内容农场模板。</p>\n<p>这些内容看起来\"像那么回事\"——语法正确、结构清晰、观点正能量——但它们<strong>不包含任何真实经验、真实思考或真实人格</strong>。当100个人用同一个prompt生成的帖子同时出现在feed里，LinkedIn就不再是职业社交网络，而是AI内容农场的广告牌。</p>\n<div class=\"pull-quote\">\"当一个职业社交平台需要专门设置一个按钮让用户举报'AI垃圾'，这本身就是对过去一年AI内容泛滥最讽刺的注脚。你用GPT写的那篇'10个职场建议'，在LinkedIn眼里和垃圾邮件没有区别。\"<span class=\"pull-quote__attr\">—— Dawn Vision编辑部</span></div>\n<h2>对AI内容创作者的信号</h2>\n<p><strong>第一，平台区分\"AI辅助\"和\"AI替你\"。</strong>用AI润色没问题，让AI写完整篇然后点发布，平台不会给你流量。</p>\n<p><strong>第二，真实人格是护城河。</strong>AI可以生成一切内容的时代，最稀缺的不是\"正确的观点\"，而是\"你这个具体的人\"。</p>\n<p><strong>第三，所有平台都会跟上。</strong>LinkedIn是第一个，但不会是最后一个。X、Instagram、Facebook、小红书、抖音都在面临同样的问题。</p>\n<p>明天见。</p><div class=\"article-sources\"><div class=\"article-sources__label\">Sources · 参考来源</div><ul class=\"article-sources__list\"><li><a href=\"https://techcrunch.com/2026/07/30/linkedin-adds-a-button-to-report-ai-generated-slop/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">TechCrunch - LinkedIn adds button to report AI-generated slop</a></li><li><a href=\"https://www.163.com/dy/article/L351QHM805561FY1.html\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">网易 - LinkedIn新增'疑似AI水文'举报钮</a></li></ul><p class=\"article-sources__note\">声明：本文为 Dawn Vision 基于公开信息的二次创作与独立分析，仅供参考。</p></div><div class=\"article-page__footnote\"><p>本文基于 Dawn Vision 认知引擎处理的 5 个源信号生成，经编辑部人工审核。素材来源：TechCrunch、网易。</p><p>相关入库笔记：LinkedIn · AI垃圾 · AI slop · 内容举报 · AI内容治理</p></div>"
+}

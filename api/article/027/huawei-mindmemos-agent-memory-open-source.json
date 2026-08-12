@@ -1,0 +1,28 @@
+{
+  "slug": "huawei-mindmemos-agent-memory-open-source",
+  "category": "AI Agent",
+  "title": "华为开源MindMemOS记忆框架：Agent长期记忆问题，终于有了工程级解法",
+  "title_break": "华为开源Agent记忆操作系统<br>从'用完即忘'到'可迁移可进化'",
+  "deck": "华为诺亚方舟实验室开源Agent记忆操作层MindMemOS，将记忆从单个Agent中解耦，实现跨Agent迁移和自演进。记忆框架从RAG走向操作层，Agent的\"用完即忘\"顽疾有望被系统性解决。",
+  "keywords": "Dawn Vision, MindMemOS, 华为诺亚, Agent记忆, 长期记忆, 多智能体, Dreaming, Skill演进, MIT开源",
+  "og_description": "华为诺亚方舟实验室开源MindMemOS，面向AI Agent的可迁移、自演进记忆操作层，三维记忆建模+技能协同进化，Agent记忆终于从补丁变成基础设施。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 790,
+  "sources": [
+    {
+      "text": "量子位 - Agent终于不再用完即忘：华为诺亚开源MindMemOS",
+      "url": ""
+    },
+    {
+      "text": "GitHub - MindMemOS开源仓库",
+      "url": ""
+    }
+  ],
+  "body_html": "      <p>每换一个Agent甚至换一个session，就像换了一个完全不了解你的新员工——用户偏好、项目背景、踩坑经验全部清零，只能从头解释，再把新Agent\"重新养一遍\"。这是当前Agent体验最尴尬的痛点。</p>\n      <p>华为诺亚方舟实验室开源的<strong>MindMemOS</strong>，想从根本上解决这个问题。它不是又一个RAG方案，而是一个面向AI Agent的<strong>可迁移、自演进记忆操作层</strong>——把记忆从单个Agent的私有缓存，变成可以跨应用、跨框架复用的独立资产。</p>\n\n      <h2>三维记忆结构：实体、属性、时间</h2>\n      <p>传统Agent记忆方案把记忆保存为文本片段或向量块，检索时做个相似度匹配。MindMemOS完全重构了记忆的组织方式，用一个三维坐标系统描述开放世界：<strong>实体（Entity）</strong>是人、项目、文件、工具等对象；<strong>属性（Property）</strong>是对象的事实、偏好、状态；<strong>时间（Time）</strong>记录属性何时成立、何时变化。</p>\n      <p>这意味着\"用户以前喜欢X\"和\"用户现在改用Y\"不再是两段不相干的文本，而是同一实体同一属性在时间轴上的两个状态。检索时，系统不是找\"最像问题的一段话\"，而是在记忆图中搜索覆盖信息最充分的路径。</p>\n      <p>最有意思的是<strong>Dreaming机制</strong>。人类会在睡眠中整理记忆——合并重复、淘汰过时、从经历中形成抽象认识。MindMemOS的Dreaming模块在Agent空闲时做同样的事：消解冲突记忆、归档过时信息、把约五分之一的活跃记忆转入归档（不主动召回），反而在多项测试中提升了准确率。在MemoryAgentBench测试中，Dreaming压缩<strong>19.4%-23.5%</strong>活跃记忆的同时，问答准确率最高提升<strong>10.3个百分点</strong>——少即是多，减少干扰本身就是提升质量。</p>\n\n      <h2>Skill也能进化：从静态提示词到动态能力</h2>\n      <p>如果说事实记忆让Agent更懂用户，Skill演进则决定了它能不能把经验变成能力。MindMemOS发现了一个反直觉的事实：<strong>未经优化的初始Skill甚至不如没有Skill</strong>。在SpreadsheetBench测试中，给Agent一份openpyxl/pandas使用说明作为初始Skill，成功率反而低于不给任何提示的No-skill基线——过时、冗余的规则制造了干扰。</p>\n      <p>MindMemOS通过收集真实任务轨迹，无监督地从成功路径和失败模式中演进Skill规则。比如它从失败中学到：\"不要把公式文本当数值\"\"筛选排序前先构造源表快照\"\"保存后必须重新打开文件复核\"。这些不是额外的API教程，是把踩坑历史压缩成通用避错规则。最终任务成功率从51.3%提升到<strong>57.2%</strong>。</p>\n      <p>在基准测试上，MindMemOS在LoCoMo长期对话记忆上达到<strong>94.03分</strong>SOTA，PersonaMem个性化记忆达到70.63%。项目采用MIT协议开源，提供FastAPI接口、Python SDK、CLI和OpenClaw插件，云服务mindmemos.cn已开放试用。</p>\n      <p>Agent长期智能的差距，从来不在于一次任务能做多好，而在于完成一百次任务之后留下了什么。MindMemOS给出的答案是一套能追踪变化、主动整理、接受纠正、持续进化的记忆系统。这或许是Agent从\"一次性工具\"走向\"长期协作者\"必须补上的基础设施。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "未经优化的初始Skill甚至不如没有Skill——过时规则反成干扰。记忆和Skill都需要从经验中进化，而不是写完就不动。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "MindMemOS · 华为诺亚 · Agent记忆 · 实体-属性-时间 · Dreaming机制 · Skill演进 · LoCoMo 94分 · MIT开源 · 长期记忆操作系统",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：量子位、GitHub。"
+}

@@ -1,0 +1,32 @@
+{
+  "slug": "qwen3-8-max-release-16-days-autonomous-coding",
+  "category": "AI编程",
+  "title": "Qwen3.8-Max今日发布：2.4万亿参数，自主编程16天从零搓出Hermes级Agent",
+  "title_break": "2.4万亿参数旗舰今日上线<br>16天自主编程交付完整Agent",
+  "deck": "从空文件夹起步，Qwen3.8-Max独立编程16天，自主完成了一个Hermes Agent级别的自进化智能体框架oh-my-cli并开源。API定价仅为Opus5的40%/24%。",
+  "keywords": "Dawn Vision, Qwen3.8, 阿里千问, 自主编程, AI编程, oh-my-cli, MoE, 2.4万亿参数, Agent框架",
+  "og_description": "阿里Qwen3.8-Max发布：2.4万亿参数MoE旗舰，16天自主编程构建oh-my-cli智能体框架，PaperBench 93分创新高。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 850,
+  "sources": [
+    {
+      "text": "潮新闻 - 阿里\"超大杯\"Qwen3.8正式发布",
+      "url": ""
+    },
+    {
+      "text": "IT之家 - Qwen3.8-Max正式上线",
+      "url": ""
+    },
+    {
+      "text": "GitHub - oh-my-cli开源仓库",
+      "url": ""
+    }
+  ],
+  "body_html": "      <p>给大模型一句指令\"创建一个自进化的智能体Harness\"，然后等16天——回来的时候，它已经从一个空文件夹里写出了一个完整的、可生产使用的Agent框架。这不是科幻，这是阿里今天发布的Qwen3.8-Max干出来的事。</p>\n      <p>8月3日，阿里巴巴正式发布新一代旗舰基座大模型<strong>Qwen3.8-Max</strong>，总参数量<strong>2.4万亿</strong>（MoE架构，激活95B），上下文长度1M Tokens，支持视觉理解。Arena全球排行榜上，Qwen系列仅次于Claude，位列全球第一梯队。但真正炸场的不是参数规模，是它的自主编程能力。</p>\n\n      <h2>16天：从空文件夹到开源Agent框架</h2>\n      <p>AI编程工具进化到了什么程度？两年前的前沿模型能帮你补全函数、写个小组件；去年的模型能根据需求写出完整的应用代码；Qwen3.8-Max做的事情是：接到一句指令，自己搭建循环工程框架，编排智能体自动领取任务、执行任务、检查结果、修复bug，在<strong>16天几乎无人干预</strong>的情况下，从零完成了一个Hermes Agent级别的真实可用框架——<strong>oh-my-cli</strong>。</p>\n      <p>项目已完全开源，完整过程公开在GitHub上。人类工程师可以通过钉钉给Qwen3.8提新要求，但核心开发工作是模型自主完成的。这意味着AI编程的范式已经从\"AI辅助写代码\"进化到了\"AI自主交付项目\"——你不需要逐行review代码，你只需要验收最终产物。</p>\n      <p>评测数据支撑了这个能力跃迁：PaperBench科研复现评测中，Qwen3.8-Max拿到<strong>93.0分</strong>，较上代提升28.2分，创下评测新高；CodeArena全球第四；评估智能体电脑操作能力的OSWorld-Verified以<strong>86.1分</strong>位居主流模型首位；指令遵循IF Bench 82.8分，科学推理GPQA Diamond 92.6分。</p>\n\n      <h2>定价直接砍到Opus5的四分之一</h2>\n      <p>如果能力是弹药，定价就是扣扳机的手指。Qwen3.8-Max的API定价策略攻击性十足：国内输入<strong>12元/百万Tokens</strong>，输出<strong>36元/百万Tokens</strong>，隐式缓存命中低至<strong>1.5元/百万Tokens</strong>。国际价格更狠：输入为Claude Opus5的40%，输出仅为24%——不到四分之一的价格，提供第一梯队的能力。</p>\n      <p>同时发布的还有Agent产品\"千问办公\"，定位专业办公场景。Qwen3.8-Max的视觉能力也大幅提升，Vision Arena排名全球第二，不仅能读懂200页PDF财报、看懂超100小时长视频，还能在无源代码、无联网的情况下，仅凭交互反馈从零复刻整个应用。</p>\n      <p>开源计划同样激进：Qwen3.8-Max预计下周开源，同时开源Qwen3.8-27B。阿里真武M890超节点已完成适配，Agentic推理场景最多可实现1.5倍性能提升。</p>\n      <p>从GPT-4时代的\"AI帮你写代码\"到今天的\"AI自己交付项目\"，这个进化速度比大多数人预期的快得多。当一个模型可以连续工作16天、自主搭建框架、修复bug、交付可用产品的时候，程序员的角色确实在从\"写代码的人\"变成\"给AI提需求、验成果的人\"。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "AI编程从'帮你写代码'到'自己交付项目'——16天无人干预从零写出一个Agent框架，这是范式切换。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Qwen3.8-Max · 阿里千问 · 2.4万亿参数 · 自主编程16天 · oh-my-cli · PaperBench 93分 · AI编程范式迁移 · 千问办公 · 模型定价战",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 12 个源信号生成，经编辑部人工审核。素材来源：潮新闻、IT之家、GitHub。"
+}
