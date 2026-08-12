@@ -1,0 +1,18 @@
+{
+  "slug": "bytedance-10-trillion-parameter-model",
+  "category": "算力基建 · 国产替代",
+  "category_en": "Compute · Infrastructure",
+  "title": "字节跳动被曝预训练10万亿参数模型：大模型参数竞赛从未停止",
+  "title_en": "ByteDance Reported Pretraining 10-Trillion Parameter Model: The Parameter Arms Race Never Stops",
+  "title_break": "字节预训练10万亿参数模型<br>大模型参数天花板继续上推",
+  "title_break_en": "ByteDance Pretrains 10T Parameter Model<br>LLM Parameter Ceiling Keeps Rising",
+  "deck": "金融时报援引知情人士报道，字节跳动正在预训练一个最高可能达到10万亿参数的超级AI模型，同时新成立一级部门专管此事。参数竞赛没有因为DeepSeek低价革命而停止——巨头们还在往更高的数字冲。",
+  "deck_en": "Financial Times cites insiders reporting ByteDance is pretraining a super AI model potentially reaching 10 trillion parameters, while establishing a new tier-1 department to oversee it. The parameter race hasn't stopped despite DeepSeek's low-price revolution — giants keep pushing higher numbers.",
+  "keywords": "Dawn Vision,字节跳动,10万亿参数,大模型,预训练,算力基础设施,超级模型",
+  "keywords_en": "Dawn Vision, ByteDance, 10 trillion parameters, large model, pretraining, compute infrastructure, supermodel",
+  "og_description": "据金融时报报道，字节跳动正在预训练10万亿参数级超级模型并成立新部门。大模型参数竞赛从未停歇，参数天花板持续被推高。",
+  "og_description_en": "Per Financial Times report, ByteDance is pretraining a 10T-parameter supermodel and establishing a new department. The parameter arms race never stops — the ceiling keeps rising.",
+  "read_time": "约 5 分钟阅读",
+  "read_time_en": "~5 min read",
+  "word_count": 750
+}

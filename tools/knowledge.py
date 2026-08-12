@@ -40,7 +40,22 @@ def load_knowledge_topics():
     if not config_file.exists():
         return {}
     try:
-        return json.loads(config_file.read_text(encoding='utf-8'))
+        data = json.loads(config_file.read_text(encoding='utf-8'))
+        # 兼容两种配置：
+        # 1. 旧版 {"标签": "主题"}
+        # 2. 新版 {"topics": [{"title": "主题", "tags": [...]}, ...]}
+        if isinstance(data, dict) and isinstance(data.get('topics'), list):
+            topic_map = defaultdict(list)
+            for topic in data['topics']:
+                title = str(topic.get('title', '')).strip()
+                if not title:
+                    continue
+                for tag in topic.get('tags', []):
+                    tag = str(tag).strip()
+                    if tag and title not in topic_map[tag]:
+                        topic_map[tag].append(title)
+            return dict(topic_map)
+        return data if isinstance(data, dict) else {}
     except Exception:
         return {}
 

@@ -1,0 +1,44 @@
+{
+  "slug": "bytedance-10-trillion-parameter-model",
+  "category": "算力基建 · 国产替代",
+  "category_en": "Compute · Infrastructure",
+  "title": "字节跳动被曝预训练10万亿参数模型：大模型参数竞赛从未停止",
+  "title_en": "ByteDance Reported Pretraining 10-Trillion Parameter Model: The Parameter Arms Race Never Stops",
+  "title_break": "字节预训练10万亿参数模型<br>大模型参数天花板继续上推",
+  "title_break_en": "ByteDance Pretrains 10T Parameter Model<br>LLM Parameter Ceiling Keeps Rising",
+  "deck": "金融时报援引知情人士报道，字节跳动正在预训练一个最高可能达到10万亿参数的超级AI模型，同时新成立一级部门专管此事。参数竞赛没有因为DeepSeek低价革命而停止——巨头们还在往更高的数字冲。",
+  "deck_en": "Per Financial Times, ByteDance is pretraining a supermodel potentially reaching 10 trillion parameters while establishing a new tier-1 department. The parameter race hasn't stopped despite DeepSeek's low-price revolution — giants keep pushing higher numbers.",
+  "keywords": "Dawn Vision,字节跳动,10万亿参数,大模型,预训练,算力基础设施,超级模型",
+  "keywords_en": "Dawn Vision, ByteDance, 10 trillion parameters, large model, pretraining, compute infrastructure, supermodel",
+  "og_description": "据金融时报报道，字节跳动正在预训练10万亿参数级超级模型并成立新部门。大模型参数竞赛从未停歇，参数天花板持续被推高。",
+  "og_description_en": "Per Financial Times, ByteDance is pretraining a 10T-parameter supermodel and establishing a new department. The parameter arms race never stops — the ceiling keeps rising.",
+  "read_time": "约 5 分钟阅读",
+  "read_time_en": "~5 min read",
+  "word_count": 750,
+  "sources": [
+    {
+      "text": "金融时报 - ByteDance AI Model Report",
+      "url": "https://www.ft.com/"
+    },
+    {
+      "text": "界面新闻 - 字节跳动预训练10万亿参数模型",
+      "url": "https://m.jiemian.com/article/14910507.html"
+    },
+    {
+      "text": "36氪 - 字节跳动超级大模型",
+      "url": "https://36kr.com/"
+    }
+  ],
+  "body_html": "<p>10万亿参数。</p>\n<p>如果金融时报的报道准确，字节跳动正在预训练的AI模型，参数规模可能达到这个数字——比目前已知最大的公开模型还要大10倍以上。</p>\n<p>消息是在8月中旬被披露的。据金融时报援引三位知情人士报道，字节跳动已经在新成立的一级部门下启动了超级大模型的预训练，目标参数规模最高可能达到10万亿。这个消息目前尚未得到字节跳动的官方确认，但从组织调整的节奏来看，可信度不低。</p>\n\n<h2>10万亿参数的含义：算力与金钱的双重豪赌</h2>\n<p>要理解10万亿参数意味着什么，需要先看看目前的基准线在哪里。</p>\n<p>截至2026年8月，公开信息中最大规模的大模型是GPT-4，估计参数规模在1.8万亿到2万亿之间。中国的DeepSeek-V3参数量约6700亿，韩国的NVIDIA-Hopper联合研发的模型约1.5万亿。如果字节跳动的10万亿参数模型属实，它将大幅领先于所有已知模型。</p>\n<p>但参数规模只是硬币的一面。更大的问题是：<strong>10万亿参数的模型，需要多少算力？需要多少钱？需要多少时间？</strong></p>\n<p>根据行业估算，训练一个万亿参数级别的模型，需要数万块高端GPU运行数月至一年不等。以当前市场最贵的H100 GPU为例，单块价格约3万美元，一万块的总成本就超过3亿美元——还不算电力、冷却、数据中心的运营成本。更不用说10万亿参数的模型，其训练成本可能是万亿参数模型的10倍。</p>\n<div class=\"pull-quote\">\"10万亿参数的竞赛不是技术问题，是资本问题——只有那些真正财力雄厚的公司，才有资格参与这场参数军备竞赛。\"—— 一位算力基础设施从业者</div>\n<p>字节跳动有足够的财力支撑这场豪赌吗？答案是：从目前的信息来看，很可能有。字节跳动2025年的营收超过1500亿美元，利润规模足以支撑数百亿美元的AI投资。更重要的是，字节跳动已经有了成熟的算力基础设施——从自研的芯片到大规模数据中心，再到覆盖全球的云服务网络。</p>\n\n<h2>超级大模型的竞争逻辑：参数越多越好吗？</h2>\n<p>但\"更大\"真的等于\"更好\"吗？这是AI行业长期争论的命题。</p>\n<p>支持\"更大\"的一方认为：参数规模与模型能力之间存在明确的正相关关系。更大的模型能理解更复杂的任务、生成更高质量的输出、处理更多的上下文信息。从Scaling Law的角度看，只要数据和算力跟得上，参数规模的扩大几乎总是带来性能的提升。</p>\n<p>反对的一方则指出：参数规模的边际效益正在递减。当模型达到一定规模后，继续增加参数的成本远高于性能提升的收益。此外，超大模型还面临推理成本高、部署难度大、能耗惊人等问题——这些实际限制正在倒逼行业寻找更高效的技术路径。</p>\n<p>字节跳动选择在这个时间点宣布10万亿参数计划，背后可能有一个更重要的战略考量：<strong>在大模型市场形成最终格局之前，先用参数规模建立心智占位</strong>。当前全球大模型市场仍然处于\"跑马圈地\"阶段，谁先宣布\"最大模型\"，谁就能在用户心智中占据\"最强模型\"的位置。</p>\n<div class=\"pull-quote\">\"10万亿参数的宣布本身，就是一种竞争策略——在结果出来之前，先用数字说话。\"—— 一位科技记者的判断</div>\n<p>字节跳动同时进行了组织调整：原AI数据与安全负责人傅越将于近期离职，由原TikTok平台责任团队负责人王赢磊接任。这个人事变动传递了一个信号：字节正在把AI放在更高优先级的位置，从数据安全、内容审核到模型训练，整个AI链条都在重新整合。</p>\n<p>无论这个10万亿参数的模型最终能否训练成功，字节跳动的这次布局都再次证明了：超级大模型的竞争从来没有停止过。即使DeepSeek已经用低价革命动摇了市场格局，即使OpenAI和Anthropic已经在盈利能力上遥遥领先，中国科技巨头们仍然在往更高的数字冲。</p>\n<p>明天见。</p>",
+  "body_html_en": "<p>10 trillion parameters.</p>\n<p>If the Financial Times report is accurate, ByteDance is pretraining an AI model whose parameter scale may reach that number — more than 10× larger than all currently known public models.</p>\n<p>The news broke in mid-August. Citing three insiders, the FT reported that ByteDance has launched super-model pretraining under a newly established tier-1 department, targeting a parameter scale that could reach up to 10 trillion. ByteDance hasn't officially confirmed this, but the organizational restructuring节奏 lends credibility to the report.</p>\n\n<h2>What 10 Trillion Parameters Means: A Dual Bet on Compute and Capital</h2>\n<p>To understand what 10 trillion parameters entails, we need to establish the current benchmark.</p>\n<p>As of August 2026, the largest publicly known model is GPT-4, estimated at 1.8 to 2 trillion parameters. China's DeepSeek-V3 sits at roughly 670 billion; NVIDIA-Hopper joint efforts reached about 1.5 trillion. If ByteDance's 10 trillion figure is accurate, it would significantly outpace all known models.</p>\n<p>But parameters are only one side of the coin. The bigger questions are: <strong>how much compute does a 10T-parameter model require? How much money? How much time?</strong></p>\n<p>Industry estimates suggest training a trillion-parameter model requires tens of thousands of high-end GPUs running for months to a year. At ~$30,000 per H100 GPU, ten thousand cards alone exceed $300 million — not counting power, cooling, and data center operating costs. A 10 trillion-parameter model would cost roughly 10× that.</p>\n<div class=\"pull-quote\">\"The 10-trillion-parameter race isn't a technical question — it's a capital question. Only companies with truly deep pockets can afford to play in this parameter arms race.\" — A Compute Infrastructure Practitioner</div>\n<p>Does ByteDance have the financial muscle? Based on available information, likely yes. ByteDance's 2025 revenue exceeded $150 billion, with profit scales sufficient to support billions in AI investment. More importantly, ByteDance already has mature compute infrastructure — from self-developed chips to large-scale data centers to a globally distributed cloud network.</p>\n\n<h2>The Competitive Logic of Supermodels: Is Bigger Always Better?</h2>\n<p>But does \"bigger\" actually mean \"better\"? This has been a long-debated命题 in the AI industry.</p>\n<p>The \"bigger is better\" camp argues: there's a clear positive correlation between parameter scale and model capability. Larger models handle more complex tasks, generate higher-quality outputs, and process more context. From a Scaling Law perspective, as long as data and compute keep up, increasing parameters nearly always improves performance.</p>\n<p>The opposing camp points out: the marginal returns of parameter scaling are diminishing. Once models reach a certain scale, the cost of adding more parameters far exceeds the performance gains. Additionally, super-large models face high inference costs, deployment difficulties, and staggering energy consumption — practical constraints driving the industry toward more efficient technical paths.</p>\n<p>ByteDance's decision to announce the 10 trillion plan at this moment may reflect a deeper strategic consideration: <strong>before the final supermodel格局 crystallizes, use parameter scale to claim mindshare</strong>. The global supermodel market remains in a \"land grab\" phase — whoever announces the \"largest model\" first occupies the \"most powerful model\" position in users' minds.</p>\n<div class=\"pull-quote\">\"The 10-trillion announcement itself is a competitive strategy — speak with numbers before the results arrive.\" — A Tech Journalist</div>\n<p>ByteDance is simultaneously reshuffling leadership: former AI data-and-security lead Fu Yue is departing, replaced by Wang Yinglei, formerly head of the TikTok Platform Responsibility team. This personnel move sends a clear signal: ByteDance is elevating AI to a higher priority, re-integrating the entire AI chain from data security and content moderation to model training.</p>\n<p>Whether this 10 trillion-parameter model ever trains successfully or not, ByteDance's move once again proves: the supermodel race has never stopped. Even after DeepSeek's low-price revolution shook the market and OpenAI and Anthropic pulled ahead in profitability, Chinese tech giants are still pushing toward higher numbers.</p>\n<p>See you tomorrow.</p>",
+  "pull_quote": {
+    "text": "10万亿参数的竞赛不是技术问题，是资本问题——只有财力雄厚的公司才有资格参与这场参数军备竞赛。",
+    "text_en": "The 10-trillion-parameter race isn't a technical question — it's a capital question. Only companies with deep pockets can afford this parameter arms race.",
+    "attr": "—— 一位算力基础设施从业者",
+    "attr_en": "— A Compute Infrastructure Practitioner"
+  },
+  "cognitive_notes": "字节跳动,10万亿参数,大模型,预训练,算力,超级模型",
+  "cognitive_notes_en": "ByteDance,10T parameters,large model,pretraining,compute,supermodel",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 7 个源信号生成，经编辑部人工审核。素材来源：金融时报、界面新闻、36氪。",
+  "source_summary_en": "Generated by the Dawn Vision cognitive engine processing 7 source signals, with human editorial review. Sources: Financial Times, Jiemian News, 36Kr."
+}

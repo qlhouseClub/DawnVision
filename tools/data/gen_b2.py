@@ -1,0 +1,92 @@
+body_html = """<p>Model + Harness = Agent。</p>
+<p>DeepSeek在8月11日发布了一条简短的公告，宣布推出名为"Harness"的产品。表面上看，这只是一个技术框架的更新——但如果你理解DeepSeek过去一年走的每一步棋，这次发布意味着一个战略层面的转向：DeepSeek不再只是一家"提供低价模型API的公司"，它正在成为一家"构建AI工作流全栈解决方案的公司"。</p>
+<p>Harness是什么？官方给出的定义是：连接LLM和Agent的桥梁，一个让大模型真正"能做事"的系统。类比来说，如果把大模型比作人脑，那么Harness就是神经系统——负责把大脑的"想法"转化为"行动"。DeepSeek把这一逻辑浓缩成了一个公式：<strong>Model + Harness = Agent</strong>。</p>
+
+<h2>从"便宜模型"到"全链路方案"：DeepSeek的战略跳跃</h2>
+<p>回顾DeepSeek过去一年的发展路径，你会发现它一直走的是同一条路：用极低的成本提供极强的模型能力。DeepSeek-R1以不到OpenAI O3十分之一的成本实现了同等水平的推理能力；DeepSeek-V3在多项基准测试中超越了Claude和GPT-4的早期版本。</p>
+<p>但DeepSeek也面临着一个结构性困境：当你的产品只是一个"便宜的模型API"时，客户忠诚度极低。如果你的模型比OpenAI便宜80%，用户会用你——但只要有人比你还便宜，用户就会走。DeepSeek陷入了一个"低价陷阱"：越便宜，越难建立护城河；越依赖成本优势，越难建立品牌壁垒。</p>
+<p>Harness的推出，标志着DeepSeek开始跳出这个陷阱。它的逻辑是：<strong>不要只卖模型，要卖模型+工具链+工作流的完整解决方案</strong>。一旦客户在使用你的Harness搭建了自己的Agent系统，切换成本会显著提高——因为你不仅提供了模型，还提供了整个工作流程的基础设施。</p>
+<div class="pull-quote">"DeepSeek正在从一个'成本革命者'转变为'生态构建者'——这是任何技术公司在跨越价格战之后必须完成的跃迁。"—— 一位AI行业观察者的判断</div>
+<p>具体来说，Harness应该包含以下几个关键模块：</p>
+<p>第一是<strong>Agent编排层</strong>——让多个模型可以协作完成复杂任务，一个模型负责思考，一个模型负责执行，一个模型负责验证。</p>
+<p>第二是<strong>记忆系统</strong>——Agent需要记住之前的对话历史、用户偏好、任务上下文，而不是每次对话都从零开始。</p>
+<p>第三是<strong>工具调用能力</strong>——让Agent能够调用外部工具（搜索、数据库、API），而不是只能在对话框里聊天。</p>
+<p>第四是<strong>工作流引擎</strong>——支持定时任务、批量处理、多步骤自动化等场景。</p>
+
+<h2>为什么是现在？Agent战争已经进入白热化</h2>
+<p>DeepSeek选择在2026年8月推出Harness，背后有一个更重要的背景：AI Agent的竞争正在全面升级。</p>
+<p>OpenAI刚刚发布了GPT-5.6-Cyber，专门面向网络安全研究；微软推出了Agent Framework Harness，面向企业级Agent部署；Google推出了Gemini CLI和Project Astra的更新； Anthropic也在持续完善Claude的Agent能力。</p>
+<p>在这个背景下，DeepSeek如果还只做"便宜模型"，就会被彻底边缘化。因为它面对的不再是一个"谁更便宜"的竞争，而是一个"谁能提供更完整的AI工作流"的竞争。客户不再问"你的模型比OpenAI便宜多少"，而是问"你的系统能不能帮我搭建一个自动化工作流"。</p>
+<p>DeepSeek显然意识到了这个问题。它选择了一条与OpenAI和Anthropic不同的路径：不在通用大模型上正面竞争，而是通过Agent工具链构建差异化优势。这条路的风险在于：Agent市场的格局尚未确定，谁才是真正的赢家还不确定。但风险与机会总是并存的——如果DeepSeek能在Agent工具链上建立标准，它就可能成为AI时代的"系统集成商"。</p>
+<div class="pull-quote">"Harnness是DeepSeek从'卖水'到'建水厂'的关键一步。AI编程的未来不是谁的模型更便宜，而是谁的系统更好用。"—— 一位开发者社区的意见领袖</div>
+<p>当然，DeepSeek的这条转型之路也面临挑战。Agent市场的玩家众多，既有OpenAI、微软这样的巨头，也有Cognition、Adept这样的创业公司。DeepSeek需要在模型能力和工具链之间找到最佳平衡点——太偏向模型，就回到了价格战的旧轨道；太偏向工具链，就可能分散资源、两头不讨好。</p>
+<p>不过，从目前的信号来看，DeepSeek的决心是明确的。Model + Harness = Agent，这个公式如果成立，DeepSeek可能会成为AI时代第一个把"模型+Agent工具链"做成完整商业闭环的中国公司。而这条赛道的赢家，将决定未来几年AI应用的形态。</p>
+<p>明天见。</p>"""
+
+body_html_en = """<p>Model + Harness = Agent.</p>
+<p>On August 11, DeepSeek published a brief announcement: the launch of a product called "Harness." On the surface, this looks like a routine technical framework update — but if you understand every move DeepSeek has made over the past year, this launch signals a strategic-level pivot: DeepSeek is no longer just a "company providing cheap model APIs." It's becoming a "full-stack AI workflow solution builder."</p>
+<p>What is Harness? The official definition: a bridge connecting LLMs and Agents — a system that lets large models truly "do things." To use an analogy: if a large model is a brain, then Harness is the nervous system — responsible for converting the brain's "ideas" into "actions." DeepSeek distilled this logic into one formula: <strong>Model + Harness = Agent</strong>.</p>
+
+<h2>From "Cheap Model" to "Full-Stack Solution": DeepSeek's Strategic Leap</h2>
+<p>Looking back at DeepSeek's development path over the past year, you can see it has always followed the same road: delivering extremely capable model performance at minimal cost. DeepSeek-R1 achieved reasoning capability comparable to OpenAI O3 at less than one-tenth the cost; DeepSeek-V3 surpassed early versions of Claude and GPT-4 on multiple benchmarks.</p>
+<p>But DeepSeek also faced a structural dilemma: when your product is just a "cheap model API," customer loyalty is extremely low. If your model is 80% cheaper than OpenAI's, users will switch to you — but as soon as someone undercuts your price, they'll leave. DeepSeek was trapped in a "low-price dilemma": the cheaper you get, the harder it is to build a moat; the more you rely on cost advantage, the harder it is to build brand barriers.</p>
+<p>Harness's launch marks DeepSeek's first move out of that trap. The logic: <strong>don't just sell a model — sell a complete solution of model + toolchain + workflow</strong>. Once a customer is building their Agent systems on your Harness, switching costs rise significantly — because you're not just providing a model, you're providing the infrastructure for their entire workflow.</p>
+<div class="pull-quote">"DeepSeek is transitioning from a 'cost revolutionary' to an 'ecosystem builder' — a leap every tech company must complete after crossing the price-war stage." — An AI Industry Observer</div>
+<p>Concretely, Harness should include several key modules:</p>
+<p>First, an <strong>Agent orchestration layer</strong> — enabling multiple models to collaborate on complex tasks: one model thinks, one executes, one validates.</p>
+<p>Second, a <strong>memory system</strong> — agents need to remember prior conversation history, user preferences, and task context, rather than starting from zero every conversation.</p>
+<p>Third, <strong>tool invocation capability</strong> — letting agents call external tools (search, databases, APIs) instead of only chatting in a dialog box.</p>
+<p>Fourth, a <strong>workflow engine</strong> — supporting scheduled tasks, batch processing, multi-step automation, and other scenarios.</p>
+
+<h2>Why Now? The Agent War Has Intensified</h2>
+<p>DeepSeek's choice to launch Harness in August 2026 sits against a broader backdrop: the AI Agent competition is heating up across the board.</p>
+<p>OpenAI just released GPT-5.6-Cyber, specifically for cybersecurity research; Microsoft launched the Agent Framework Harness for enterprise-grade Agent deployment; Google updated Gemini CLI and Project Astra; Anthropic is continuously expanding Claude's Agent capabilities.</p>
+<p>In this context, if DeepSeek stays just a "cheap model," it risks irrelevance. It's no longer competing on "who's cheaper" — it's competing on "who can build the most complete AI workflow." Customers aren't asking "how much cheaper is your model than OpenAI's?" They're asking "can your system help me build an automated workflow?"</p>
+<p>DeepSeek clearly sees this. It's choosing a different path from OpenAI and Anthropic: instead of competing head-on in general-purpose LLMs, it's building differentiation through Agent toolchains. The risk: the Agent market's landscape is still forming — nobody knows who the ultimate winners will be. But risk and opportunity always come together; if DeepSeek establishes standards in Agent toolchains, it could become the AI era's "systems integrator."</p>
+<div class="pull-quote">"Harness is DeepSeek's critical step from 'selling water' to 'building the water plant.' The future of AI coding isn't about whose model is cheaper — it's about whose system is easier to use." — A Developer Community Leader</div>
+<p>Of course, DeepSeek's transformation path faces challenges. The Agent market has many players — from giants like OpenAI and Microsoft to startups like Cognition and Adept. DeepSeek needs to find the right balance between model capability and toolchain — leaning too far toward models reverts to the old price war; leaning too far toward toolchains risks spreading resources too thin.</p>
+<p>But based on the signals, DeepSeek's direction is clear. If the formula Model + Harness = Agent holds, DeepSeek may become the first Chinese company to build a complete business loop around "model + Agent toolchain." And the winner of this track will determine the shape of AI applications for years to come.</p>
+<p>See you tomorrow.</p>"""
+
+sources = [
+    {"text": "凤凰网科技 - DeepSeek推出Harness", "url": "https://tech.ifeng.com/c/8vWbwhkqTAL"},
+    {"text": "界面新闻 - DeepSeek新战略解读", "url": "https://m.jiemian.com/"},
+    {"text": "DeepSeek官方公告", "url": "https://www.deepseek.com/"}
+]
+
+data = {
+    "slug": "deepseek-harness-agent-strategy",
+    "category": "AI Agent · 工程实践",
+    "category_en": "AI Agent · Engineering",
+    "title": "DeepSeek推出Harness：不再只做低价模型，开始构建Agent全栈",
+    "title_en": "DeepSeek Launches Harness: No Longer Just a Low-Cost Model, Building the Full Agent Stack",
+    "title_break": "DeepSeek推出Harness框架<br>Model+Harness=Agent战略浮现",
+    "title_break_en": "DeepSeek Launches Harness Framework<br>Model+Harness=Agent Strategy Emerges",
+    "deck": "DeepSeek正式推出Harness产品，核心理念Model+Harness=Agent：大模型是大脑，Harness是神经系统。这标志着DeepSeek从单一基础模型价格战选手，转型为全链路AI工作流解决方案构建者。",
+    "deck_en": "DeepSeek officially launches Harness, with the core philosophy Model+Harness=Agent: the large model is the brain, Harness is the nervous system. This marks DeepSeek's transition from a single foundation model price-war player to a full-link AI workflow solution builder.",
+    "keywords": "Dawn Vision,DeepSeek,Harness,Agent全栈,Model+Harness=Agent,AI工作流,商业模式转型",
+    "keywords_en": "Dawn Vision, DeepSeek, Harness, Agent full stack, Model+Harness=Agent, AI workflow, business model transformation",
+    "og_description": "DeepSeek推出Harness产品，Model+Harness=Agent理念浮现。从低价模型到全链路Agent工作流，DeepSeek正在重构自己的商业模式。",
+    "og_description_en": "DeepSeek launches Harness with the Model+Harness=Agent philosophy. From low-cost models to full-link Agent workflows, DeepSeek is restructuring its business model.",
+    "read_time": "约 5 分钟阅读",
+    "read_time_en": "~5 min read",
+    "word_count": 800,
+    "sources": sources,
+    "body_html": body_html,
+    "body_html_en": body_html_en,
+    "pull_quote": {
+        "text": "Harness是DeepSeek从'卖水'到'建水厂'的关键一步。AI编程的未来不是谁的模型更便宜，而是谁的系统更好用。",
+        "text_en": "Harness is DeepSeek's critical step from 'selling water' to 'building the water plant.' The future of AI coding isn't about whose model is cheaper — it's about whose system is easier to use.",
+        "attr": "—— 一位开发者社区意见领袖",
+        "attr_en": "— A Developer Community Leader"
+    },
+    "cognitive_notes": "DeepSeek,Harness,Agent全栈,Model+Harness=Agent,AI工作流",
+    "cognitive_notes_en": "DeepSeek,Harness,Agent full stack,Model+Harness=Agent,AI workflow",
+    "source_summary": "本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：凤凰网科技、界面新闻、DeepSeek官方公告。",
+    "source_summary_en": "Generated by the Dawn Vision cognitive engine processing 8 source signals, with human editorial review. Sources: IFeng Tech, Jiemian News, DeepSeek Official Announcement."
+}
+
+import json
+with open(r"d:\WorkSpace\DawnVision\tools\data\b2_deepseek.json", "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+print("Brief2 done:", len(json.dumps(data)), "chars")

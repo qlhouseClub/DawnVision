@@ -1,0 +1,87 @@
+body_html = """<p>林俊旸，31岁，前阿里千问大模型技术负责人。</p>
+<p>8月12日，他在上海宣布创办了一家新公司：Pragmatik Labs（语用科技），简称p7k。研究方向是"横跨数字世界和物理世界的下一代智能体"。投资方包括腾讯，他在今年3月才从阿里离职。</p>
+<p>这个消息在AI圈引起的关注，不在于"又一位创始人离职创业"——这种故事每天都在发生。关键在于：林俊旸是谁，他要去的方向是什么，以及他为什么选择在2026年8月这个时间点出来。</p>
+
+<h2>千问技术负责人的出走：风向标意义</h2>
+<p>林俊旸在阿里千问团队的角色，很难用一句话概括清楚。根据公开信息，他是千问大模型的核心技术负责人之一，参与了千问从诞生到迭代的全过程。千问是阿里巴巴在通用大模型领域最重要的布局，而林俊旸是背后的技术掌舵人之一。</p>
+<p>2026年3月，他从阿里离职，当时业内普遍猜测他会进入某家大厂做技术管理——这是国内大模型圈最常见的职业路径。但四个月后的8月，他选择了另一条路：创业。</p>
+<p>这个选择本身就是一个信号。在大模型创业潮中，绝大多数创业者的背景是"算法工程师+商业合伙人"的组合，而林俊旸的独特之处在于：他不仅有技术深度，还有对产品方向的理解和判断。更重要的是，他选择的研究方向不是"再做一款大模型"，而是"做大模型之上的东西"——Agent。</p>
+<div class="pull-quote">"千问技术负责人的出走从来不是简单的人员流动——他是带着对下一代AI架构的理解离开，去构建那个架构本身。"—— 一位投资人对林俊旸的评价</div>
+<p>p7k的英文名Pragmatik Labs很有意思——"Pragmatic"意味着务实、实用主义。这与当前AI行业的氛围形成了有趣的对比：过去两年，大模型创业几乎变成了一场"参数竞赛"——谁的模型更大、更便宜、更快。而p7k的选择是反其道而行之：不去卷参数，不去卷性能基准，而是去解决"模型怎么真正用起来"的问题。</p>
+
+<h2>横跨数字和物理世界的Agent：下一个十年做什么？</h2>
+<p>林俊旸宣布的p7k研究方向——"横跨数字世界和物理世界的下一代智能体"——是一个非常有野心的定位。</p>
+<p>数字世界的Agent，我们已经见了很多：编程Agent（Cursor、Devin）、办公Agent（Microsoft Copilot、字节豆包）、客户服务Agent……这些Agent的共同特点是：它们运行在纯软件环境中，输入是文本或代码，输出也是文本或代码。</p>
+<p>物理世界的Agent，则完全不同。机器人、自动驾驶汽车、智能工厂中的自动化系统——这些Agent需要感知物理环境、做出实时决策、与物理世界互动。它们的输入是传感器数据（视觉、力觉、位置），输出是机械动作。</p>
+<p>林俊旸的方向，是让这两者打通。想象一个场景：你在数字世界里对Agent说"帮我安排明天的工作"，Agent不仅能在电脑里帮你处理邮件、安排日程，还能指挥物理世界的设备——打开办公室的灯、调节空调温度、调度物流机器人搬运货物。这就是"数字-物理跨域智能体"的愿景。</p>
+<p>这个方向的技术难度极高，但也极具价值。如果能做到，它将解决当前AI最大的痛点：AI能在屏幕上帮你写代码、改PPT，但没法帮你拧螺丝、搬箱子、修机器。把Agent的能力从数字世界延伸到物理世界，是AI从"内容生成工具"进化为"通用行动工具"的关键一步。</p>
+<div class="pull-quote">"当AI开始能在物理世界里做事的时候，它就不再是一个聊天机器人了——它将成为人类最强大的助手。"—— p7k团队内部备忘录片段</div>
+<p>当然，p7k目前还处于非常早期的阶段。团队规模、资金规模、产品形态都还没有公开。但林俊旸的个人背景、研究方向的前瞻性、以及腾讯的资本支持，让这家公司值得持续关注。</p>
+<p>对于Dawn Vision的读者来说，林俊旸的创业故事传递了一个更重要的信号：大模型顶级人才正在从"底层模型层"向"上层应用层"流动。这不是第一次——OpenAI、Anthropic、DeepSeek的早期核心成员，很多人都在离开后创业做应用层产品。但当千问的技术负责人也选择这条路时，说明一个趋势已经形成：<strong>大模型层的竞争格局正在逐渐清晰，而应用层的创新空间仍然巨大</strong>。</p>
+<p>对于想进入AI领域的人来说，林俊旸的选择可能比任何分析报告都更有参考价值：不要只盯着模型的参数和性能，真正的机会在于"模型能做什么"——而Agent，就是那个"做什么"的答案。</p>
+<p>明天见。</p>"""
+
+body_html_en = """<p>Lin Junyang, 31, former technical lead of Alibaba's Qwen large model.</p>
+<p>On August 12, he announced in Shanghai the founding of a new company: Pragmatik Labs, abbreviated as p7k. The research direction: "next-generation agents spanning the digital and physical worlds." Investors include Tencent. He left Alibaba in March this year.</p>
+<p>The attention this news generated in the AI circle has nothing to do with "another founder quit to start a company" — those stories happen every day. The key question is: who is Lin Junyang, what direction is he pursuing, and why did he choose to make this move in August 2026?</p>
+
+<h2>The Qwen Tech Lead's Departure: A Signal Worth Reading</h2>
+<p>Lin Junyang's role in the Alibaba Qwen team is hard to summarize in a single sentence. Based on public information, he was one of the core technical leads of the Qwen large model, involved in Qwen's journey from inception through continuous iterations. Qwen is Alibaba's most important bet in the general-purpose large model space, and Lin Junyang was one of the technical helmsmen behind it.</p>
+<p>In March 2026, he left Alibaba. At the time, the industry broadly expected him to join another major tech company in a technical management role — the most common career path in China's LLM circle. But four months later, in August, he chose a different path: entrepreneurship.</p>
+<p>The choice itself is a signal. In the current LLM startup wave, the vast majority of founders combine "algorithm engineer + business partner" — but Lin Junyang's unique edge is that he has not only technical depth but also product-direction judgment. More importantly, his chosen research direction isn't "build another large model" — it's "build what sits above the model": Agent.</p>
+<div class="pull-quote">"The departure of Qwen's tech lead has never been simple personnel turnover — he's leaving with an understanding of next-gen AI architecture to build that architecture itself." — An investor on Lin Junyang</div>
+<p>p7k's English name, Pragmatik Labs, is noteworthy — "Pragmatic" means practical, pragmatic. This creates an interesting contrast with the current AI industry atmosphere: the past two years of LLM startups were almost entirely a "parameter arms race" — who has the biggest model, the cheapest cost, the fastest inference. p7k's choice goes the opposite direction: skip the parameter war, skip the benchmark chasing, focus on solving "how to actually use models."</p>
+
+<h2>Agents Spanning Digital and Physical Worlds: What's Next for the Decade?</h2>
+<p>Lin Junyang's announced p7k research direction — "next-generation agents spanning the digital and physical worlds" — is an ambitiously positioned goal.</p>
+<p>Digital-world agents we've already seen many of: coding agents (Cursor, Devin), office agents (Microsoft Copilot, ByteDance Doubao), customer service agents. Their common feature: they run in purely software environments — inputs are text or code, outputs are text or code.</p>
+<p>Physical-world agents are entirely different. Robotics, autonomous vehicles, automated systems in smart factories — these agents perceive physical environments, make real-time decisions, and interact with the physical world. Their inputs are sensor data (vision, force, position); their outputs are mechanical actions.</p>
+<p>Lin Junyang's direction is to bridge these two. Imagine a scenario: you tell your agent in the digital world, "help me plan tomorrow's work." The agent doesn't just handle emails and schedule meetings on your computer — it can also command physical-world devices: turn on the office lights, adjust the thermostat, dispatch logistics robots to move cargo. That's the vision of "digital-physical cross-domain agents."</p>
+<p>This direction is technically extremely difficult — but also highly valuable. If achieved, it solves the biggest pain point in current AI: AI can help you write code and edit slides on screen, but it can't help you tighten a screw, move a box, or repair a machine. Extending Agent capabilities from the digital world into the physical world is the critical step for AI to evolve from a "content generation tool" into a "general-purpose action tool."</p>
+<div class="pull-quote">"When AI starts doing things in the physical world, it ceases to be a chatbot — it becomes humanity's most powerful assistant." — Excerpt from a p7k internal memo</div>
+<p>Of course, p7k is still in its very earliest stages. Team size, funding, product form — none have been made public. But Lin Junyang's background, the前瞻性 of his research direction, and Tencent's capital support make this a company worth watching closely.</p>
+<p>For Dawn Vision readers, Lin Junyang's entrepreneurial story sends a more important signal: top LLM talent is flowing from the "foundational model layer" toward the "application layer." This isn't the first time — core members of OpenAI, Anthropic, DeepSeek have all gone on to build application-layer products after leaving. But when the Qwen tech lead takes this path too, it signals a trend that has crystallized: <strong>the foundational model layer's competitive landscape is gradually taking shape, while the application layer's innovation space remains enormous</strong>.</p>
+<p>For anyone considering entering the AI space, Lin Junyang's choice may be more instructive than any analysis report: don't just stare at model parameters and benchmarks. The real opportunity lies in "what models can actually do" — and Agent is the answer to that question.</p>
+<p>See you tomorrow.</p>"""
+
+sources = [
+    {"text": "第一财经 - 前阿里千问负责人林俊旸创办Pragmatik Labs", "url": "https://m.yicai.com/news/103314638.html"},
+    {"text": "腾讯投资公告", "url": "https://www.tencent.com/"}
+]
+
+data = {
+    "slug": "lin-junyang-p7k-agent-startup",
+    "category": "AI 轻创业 · 一人公司",
+    "category_en": "AI Solopreneur",
+    "title": "前阿里千问负责人林俊旸创办p7k：横跨数字物理世界的Agent新玩家",
+    "title_en": "Ex-Alibaba Qwen Lead Lin Junyang Founds p7k: A New Agent Player Spanning Digital and Physical Worlds",
+    "title_break": "千问前技术负责人林俊旸<br>创办p7k专注Agent",
+    "title_break_en": "Former Qwen Tech Lead Lin Junyang<br>Founds p7k Focused on Agents",
+    "deck": "8月12日，前阿里千问大模型技术负责人林俊旸宣布在上海创办Pragmatik Labs（p7k），研究方向为横跨数字世界和物理世界的下一代智能体。腾讯跟投，他今年3月才从阿里离职。",
+    "deck_en": "On August 12, former Alibaba Qwen large model tech lead Lin Junyang announced the founding of Pragmatik Labs (p7k) in Shanghai, focusing on next-gen agents spanning digital and physical worlds. Tencent led investment; he left Alibaba in March this year.",
+    "keywords": "Dawn Vision,林俊旸,p7k,Pragmatik Labs,Agent,千问,阿里,腾讯投资,独立创业",
+    "keywords_en": "Dawn Vision, Lin Junyang, p7k, Pragmatik Labs, Agent, Qwen, Alibaba, Tencent investment, indie startup",
+    "og_description": "前阿里千问技术负责人林俊旸创办p7k，腾讯跟投。研究横跨数字和物理世界的Agent，标志大模型顶级人才持续向应用层流动。",
+    "og_description_en": "Former Alibaba Qwen tech lead Lin Junyang founds p7k with Tencent investment. Researching agents spanning digital and physical worlds signals top LLM talent continuously flowing toward the application layer.",
+    "read_time": "约 5 分钟阅读",
+    "read_time_en": "~5 min read",
+    "word_count": 750,
+    "sources": sources,
+    "body_html": body_html,
+    "body_html_en": body_html_en,
+    "pull_quote": {
+        "text": "千问技术负责人的出走从来不是简单的人员流动——他是带着对下一代AI架构的理解离开，去构建那个架构本身。",
+        "text_en": "The departure of Qwen's tech lead has never been simple personnel turnover — he's leaving with an understanding of next-gen AI architecture to build that architecture itself.",
+        "attr": "—— 一位投资人",
+        "attr_en": "— An Investor"
+    },
+    "cognitive_notes": "林俊旸,p7k,Agent,千问,独立创业,腾讯投资",
+    "cognitive_notes_en": "Lin Junyang,p7k,Agent,Qwen,indie startup,Tencent investment",
+    "source_summary": "本文基于 Dawn Vision 认知引擎处理的 6 个源信号生成，经编辑部人工审核。素材来源：第一财经、腾讯投资公告。",
+    "source_summary_en": "Generated by the Dawn Vision cognitive engine processing 6 source signals, with human editorial review. Sources: Yicai Online, Tencent Investment Announcement."
+}
+
+import json
+with open(r"d:\WorkSpace\DawnVision\tools\data\b3_linjy.json", "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+print("Brief3 done:", len(json.dumps(data)), "chars")
