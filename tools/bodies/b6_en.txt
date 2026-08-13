@@ -1,0 +1,29 @@
+<p>19,100 units. Same period last year: 5,100.</p>
+<p>In the first half of 2026, global humanoid robot shipments reached approximately <strong>19,100 units</strong>, growing <strong>275%+ year-over-year</strong>. Two years ago, this number would have been unimaginable - in 2024, total annual global humanoid robot shipments were under 10,000 units.</p>
+<p>The growth is explosive. But what matters more than the speed of growth is <strong>who's driving it</strong>.</p>
+<p>Chinese manufacturers account for <strong>over 97%</strong> of global shipments. In 2025, that figure was 84.7%. In one year, from dominant advantage to near-monopoly.</p>
+<p>Breaking it down by company: ZhiYuan Robotics shipped 8,400 units in H1, a <strong>44%</strong> global share, surpassing Unitree to claim the global #1 spot. Unitree follows with 5,900 units and 31% share. The top two combined account for 75% of global shipments.</p>
+<p>On this leaderboard, you can barely find foreign company names. Tesla Optimus, Figure, Boston Dynamics - these names are loud in the media, but on the shipments leaderboard, they might not even crack the top ten.</p>
+
+<h2>From Follower to Leader - How Did China Pull It Off?</h2>
+<p>Two years ago, the humanoid robot narrative was "America leads, China follows." When Tesla's Optimus reveal went viral, Chinese humanoid robot companies were still building prototypes.</p>
+<p>How did the tables turn so fast?</p>
+<p>The answer isn't complicated - three keywords: <strong>supply chain, cost, and use cases</strong>.</p>
+<p>First is <strong>supply chain advantage</strong>. China is the world's largest manufacturing nation. Motors, reducers, sensors, controllers - the core components robots need, China has complete supply chains for all of them. And not just capable of making them - making them cheaply. The same humanoid robot might cost a third or less to produce in China versus the US.</p>
+<p>Second is <strong>price competitiveness from cost advantage</strong>. While American companies still sell humanoid robots for hundreds of thousands of dollars each, Chinese companies have pushed prices down to tens of thousands. One order of magnitude cheaper - and one order of magnitude more deployable scenarios.</p>
+<p>Third is <strong>fast scenario deployment</strong>. China has the world's richest industrial scenarios - auto factories, 3C production lines, logistics warehouses, retail stores. From prototype to field testing, humanoid robots find plenty of early-adopter customers in China. Data shows real-scene deployment ratio already exceeded 70% in H1, up from 50% last year.</p>
+<div class="pull-quote">"While American humanoid robot companies were still shooting launch videos, Chinese companies were already putting robots to work in factories. Different routes, different results." - A Robotics Industry Veteran</div>
+<p>But the comeback story shouldn't be oversold. One fact requires sobriety: <strong>shipment leadership doesn't equal technology leadership</strong>. Most humanoid robots being shipped today perform relatively simple, repetitive tasks - moving, sorting, basic manipulation. True, complex general manipulation capability? Everyone's still in the early stages.</p>
+<p>US companies ship less, in large part because they've chosen a harder route - pursuing stronger general capability rather than faster commercialization. Which approach ultimately wins remains an open question.</p>
+
+<h2>Concerns Behind the Boom: Don't Let Capacity Outpace Technology</h2>
+<p>Skyrocketing shipments are good news, but there are concerns too.</p>
+<p>The biggest worry: <strong>capacity expansion may already be outpacing technological iteration</strong>.</p>
+<p>Look at the numbers: 19,100 units shipped in H1, SAG agency estimates nearly 60,000 for the full year. Many companies are expanding production, racing for capacity, competing to see who can build robots faster. But the core capabilities - motion control, hand-eye coordination, autonomous decision-making - can technology's pace match the capacity race?</p>
+<p>If technology can't keep up, more shipments could mean more problems. Customers buy robots and find they don't work well, can't do the job, have high failure rates - and what's lost isn't just one order, it's the entire industry's credibility.</p>
+<p>History has precedent. The service robot, robot vacuum, and companion robot tracks of recent years all went through cycles of "shipment surge - poor experience - reputation collapse - industry cooldown." Will humanoid robots repeat the pattern?</p>
+<p>Another concern is <strong>homogenized competition</strong>. China has many humanoid robot companies, but many are building similar things - similar appearance, similar features, similar application scenarios. Everyone's competing on price and shipments, but few have real core technological moats.</p>
+<p>The good news is that leading companies are already moving toward deeper technology. Companies like ZhiYuan and Unitree aren't just building robot bodies - they're building core components, AI models, end-to-end solutions. Their goal isn't to make the most robots, but the best robots.</p>
+<p>The humanoid robot race is still in its very early stages. Shipments going from thousands to tens of thousands is just step one. Going from tens of thousands to hundreds of thousands to millions won't require more factories - it'll require <strong>stronger technical capability and more mature application scenarios</strong>.</p>
+<p>Chinese humanoid robots have taken the first-half lead. But the second half is just beginning.</p>
+<p>See you tomorrow.</p>

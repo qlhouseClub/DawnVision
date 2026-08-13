@@ -1,0 +1,27 @@
+<p>September. One month from now.</p>
+<p>At a SpaceX all-hands meeting, Elon Musk dropped one line: <strong>the company's AI revenue will surpass all other businesses combined in September</strong>, and will lead decisively in Q4.</p>
+<p>The weight of that statement can't be overstated. What is SpaceX? It's the world's largest commercial rocket launch company, it's Starlink, it's a multi-hundred-billion-dollar aerospace giant. "All other businesses" - rocket launches, Starlink, Starship - combined, represent tens of billions in annual revenue.</p>
+<p>And the AI business? Two years ago, it barely existed.</p>
+<p>On August 13, SpaceXAI officially launched Grok 4.6. The core of this upgrade isn't routine reasoning improvement - it's strengthened <strong>long-running agent tasks, complex interaction, visual work, and coding capability</strong>. In other words, Grok is evolving from a "chat model" to a "model that gets work done."</p>
+
+<h2>The Pivot From Cost Center to Profit Center</h2>
+<p>Two years ago, xAI was just a money-burning AI lab under Musk's umbrella. Grok 1's launch felt more like a toy - performance lagging behind GPT and Claude, users mostly hardcore fans on the X platform.</p>
+<p>But things changed faster than anyone expected. In February 2026, SpaceX absorbed xAI - this wasn't a simple org change, it was a strategic resource consolidation. After the merger, xAI gained SpaceX's compute infrastructure, engineering teams, and distribution channels, while SpaceX got its ticket to the AI era.</p>
+<p>Looking back now, this move was extraordinarily well-timed.</p>
+<p>Grok's commercialization path isn't OpenAI's pure API + subscription route. It's directly embedded in SpaceX's entire product matrix:</p>
+<p><strong>First, the coding entry point.</strong> After SpaceX acquired Cursor for $60B, Grok became one of Cursor's default models. Tens of millions of developers' attention and data directly convert into Grok's training fuel and revenue.</p>
+<p><strong>Second, the product entry point.</strong> Grok Build, Grok Code, and other tools plug directly into developer workflows. First-week double-credit promotions accelerate user acquisition.</p>
+<p><strong>Third, the enterprise entry point.</strong> Through xAI's enterprise solutions, Grok is penetrating the enterprise AI market.</p>
+<div class="pull-quote">"Rockets are Musk's dream; AI is Musk's business. The day AI revenue exceeds rocket revenue, SpaceX stops being an aerospace company - it's an AI company that happens to build rockets." - A Tech Industry Analyst</div>
+<p>If Musk's prediction holds - AI revenue surpassing all other businesses combined in September - it means SpaceX's revenue structure undergoes a fundamental shift. A company built on rocket launches ends up with AI as its primary income source. This transformation may be more symbolically significant than any technological breakthrough.</p>
+
+<h2>Why Is AI Revenue Growing So Fast?</h2>
+<p>Many people might ask: Grok clearly isn't the strongest model - why is revenue growing so quickly?</p>
+<p>The answer: <strong>AI revenue's key driver isn't how strong the model is - it's how broad the distribution channels are</strong>.</p>
+<p>OpenAI's ChatGPT has massive users, but its distribution is essentially one channel - its own product. Anthropic's Claude is very capable, but distribution relies mainly on AWS and third-party developers.</p>
+<p>What does Musk's AI landscape have? The X platform (hundreds of millions of users), Cursor (tens of millions of developers), SpaceX compute (self-built supercomputers), Tesla (in-vehicle entry point), Neuralink (BCI) - each of these channels can directly convert into AI product users.</p>
+<p>More importantly, these channels form a <strong>positive flywheel</strong>: X platform data trains Grok models, Grok's improvements make Cursor better, Cursor's user data in turn improves Grok, stronger Grok attracts more enterprise customers - the entire loop completes within Musk's ecosystem.</p>
+<p>This is why Grok may not be the global leader in technical specs, yet its revenue growth could be the fastest. It isn't an isolated AI product - it's one link in a massive ecosystem.</p>
+<p>Of course, Musk's revenue prediction is from an internal speech, not realized financial results. Whether reality matches expectations awaits earnings confirmation. But even if the numbers differ, the direction is clear: <strong>AI is shifting from SpaceX's "future business" to "current main business."</strong></p>
+<p>When a rocket company's AI revenue exceeds its rocket revenue, one thing is certain: the power structure of the AI era has been completely rewritten.</p>
+<p>See you tomorrow.</p>

@@ -1,0 +1,157 @@
+{
+  "date": "2026-08-13",
+  "issue": "035",
+  "topics": [
+    {
+      "topic": "DeepSeek V4 Pro深夜换芯：Agent跑分翻5倍",
+      "slug": "deepseek-v4-pro-agent-benchmark-5x",
+      "confidence": "high",
+      "primary_source": "DeepSeek官方API文档更新",
+      "primary_source_url": "https://www.deepseek.com/",
+      "verified_facts": [
+        {"fact": "DeepSeek V4-Pro-0813上线时间", "final_value": "2026年8月13日凌晨，API页面静默更新", "sources": ["DeepSeek官方API文档", "今日头条技术号报道"]},
+        {"fact": "DeepSWE跑分跃升幅度", "final_value": "从12.8分升至62.7分，提升约4.9倍（近5倍）", "sources": ["DeepSeek官方跑分图", "今日头条深度分析", "cnbeta报道"]},
+        {"fact": "Terminal Bench跑分", "final_value": "87.9分，Kimi-K3为88.3分，差距0.4分处于误差范围内", "sources": ["DeepSeek官方对比图", "技术自媒体测评"]},
+        {"fact": "上下文窗口大小", "final_value": "100万token上下文，38.4万token最大输出", "sources": ["DeepSeek官方API定价页", "aibase新闻"]},
+        {"fact": "定价（V4 Pro）", "final_value": "缓存命中输入0.025元/百万token，未命中输入3元/百万token，输出6元/百万token；并发上限500", "sources": ["DeepSeek官方定价页", "cnbeta报道"]},
+        {"fact": "Cybergym安全跑分", "final_value": "83.3分", "sources": ["DeepSeek官方跑分图"]}
+      ],
+      "rejected_claims": [
+        {"claim": "DeepSeek V4 Pro是全新模型名称", "reason": "模型名仍为deepseek-v4-pro，仅版本号更新为0813，属于静默升级"}
+      ],
+      "writing_notes": "重点突出Agent能力跃升而非纯推理，对比Kimi/Opus等第一梯队模型，强调无短板特性。注意引用跑分数据时标注为官方公布数据。"
+    },
+    {
+      "topic": "Grok 4.6发布与马斯克AI收入预测",
+      "slug": "grok-4-6-musk-ai-revenue-surpasses",
+      "confidence": "high",
+      "primary_source": "SpaceX/xAI官方发布",
+      "primary_source_url": "https://x.ai/",
+      "verified_facts": [
+        {"fact": "Grok 4.6发布日期", "final_value": "2026年8月13日", "sources": ["SpaceXAI官方公告", "InfoQ AI快讯", "readhub早报"]},
+        {"fact": "Grok 4.6核心升级方向", "final_value": "长时运行智能体任务、复杂交互、视觉工作、编码能力强化", "sources": ["xAI官方公告", "InfoQ报道"]},
+        {"fact": "马斯克AI收入预测", "final_value": "在SpaceX内部全员会议上称AI收入将于9月超过其他所有业务收入，Q4大幅领先", "sources": ["readhub报道", "多家科技媒体转述"]},
+        {"fact": "Grok 4.6定价", "final_value": "每百万输入token 2美元、输出token 6美元，更快版本价格翻倍", "sources": ["readhub早报", "官方API文档"]},
+        {"fact": "Grok 4.6接入平台", "final_value": "已在Cursor、Grok Build上线，首周提供两倍使用额度", "sources": ["xAI官方公告", "readhub"]}
+      ],
+      "rejected_claims": [
+        {"claim": "Grok 4.6在Artificial Analysis Intelligence Index上明确超越GPT-5.6 Sol", "reason": "官方称'达到前沿水平'，readhub提及'成绩相同'但缺乏独立第三方完整验证，写作时谨慎表述为'与GPT-5.6 Sol处于同一梯队'"}
+      ],
+      "writing_notes": "重点不是Grok 4.6本身的技术参数，而是商业意义——AI收入即将超过火箭业务，马斯克的AI版图从成本中心变成利润中心。注意：收入预测为马斯克内部讲话内容，不是已实现数据。"
+    },
+    {
+      "topic": "Meta Muse Glimmer 30B开源本地Agent模型",
+      "slug": "meta-muse-glimmer-30b-open-source-local-agent",
+      "confidence": "high",
+      "primary_source": "Meta官方公告 & 扎克伯格长文",
+      "primary_source_url": "https://www.meta.com/thefutureisforeveryone/",
+      "verified_facts": [
+        {"fact": "Muse Glimmer发布时间", "final_value": "2026年8月11日晚", "sources": ["扎克伯格X平台长文", "智东西报道", "ai-damn.com"]},
+        {"fact": "模型参数与定位", "final_value": "300亿参数稠密模型，Apache 2.0协议开源，定位本地个人Agent基础模型", "sources": ["Meta官方", "智东西", "Hugging Face页面"]},
+        {"fact": "运行硬件要求", "final_value": "24GB显存显卡可本地运行，量化后不到20GB，部分Mac可运行", "sources": ["Meta官方技术博客", "开发者实测"]},
+        {"fact": "22项基准测试成绩", "final_value": "拿下12项SOTA，优势集中在Agent任务和部分推理测试；桌面操作、编程、多模态弱于Qwen 3.6", "sources": ["Meta公布的基准测试结果", "智东西报道"]},
+        {"fact": "扎克伯格立场", "final_value": "呼吁减少美国对开源AI模型的限制，支持继续实施芯片出口管制，宣布设立10亿美元'未来属于每个人'基金", "sources": ["扎克伯格长文", "Axios确认基金规模"]}
+      ],
+      "rejected_claims": [
+        {"claim": "Muse Spark 1.2已同步开源", "reason": "扎克伯格预告即将开放，但尚未正式发布，写作时用'即将开放'表述"}
+      ],
+      "writing_notes": "重点是开源vs闭源的路线之争，不是单纯的技术更新。Meta的战略意图——用开源对抗闭源巨头，用本地Agent抢占个人AI入口。"
+    },
+    {
+      "topic": "Lovable估值133亿美元：欧洲AI编程新星",
+      "slug": "lovable-13-3b-valuation-european-ai-coding",
+      "confidence": "medium",
+      "primary_source": "TechCrunch报道",
+      "primary_source_url": "https://techcrunch.com/",
+      "verified_facts": [
+        {"fact": "Lovable估值", "final_value": "133亿美元（约13.3B）", "sources": ["TechCrunch", "aibase新闻", "ai-damn.com"]},
+        {"fact": "C轮融资规模", "final_value": "4亿美元，由Menlo Ventures和Scaleup Europe Fund领投", "sources": ["aibase", "TechCrunch"]},
+        {"fact": "此前融资记录", "final_value": "2025年12月融资3.3亿美元，当时估值66亿美元", "sources": ["aibase新闻"]},
+        {"fact": "公司所在地", "final_value": "欧洲（具体国家不同来源说法不一，写作时用'欧洲'即可）", "sources": ["多家报道一致称欧洲公司"]}
+      ],
+      "rejected_claims": [
+        {"claim": "Lovable已实现10亿美元收入", "reason": "不同来源对收入数据说法不一，Cognition Devin的10亿收入容易与Lovable混淆，写作时不引用具体收入数字"}
+      ],
+      "writing_notes": "重点放在'非硅谷AI创业的崛起'这个角度，而不是Lovable本身。对比Cognition（美国）、Cursor（被SpaceX收购）等北美选手，欧洲也跑出了百亿级AI编程公司。"
+    },
+    {
+      "topic": "Anthropic为Claude添加隐形水印",
+      "slug": "anthropic-claude-invisible-watermark-eu-ai-act",
+      "confidence": "high",
+      "primary_source": "Anthropic官方公告 & TechCrunch",
+      "primary_source_url": "https://www.anthropic.com/",
+      "verified_facts": [
+        {"fact": "水印实施时间", "final_value": "2026年8月中旬开始逐步推行", "sources": ["TechCrunch报道", "cnbeta报道"]},
+        {"fact": "水印技术方式", "final_value": "在Claude生成的文本中嵌入可被计算机识别的隐形代码标记（Unicode隐写/零宽字符方式）", "sources": ["TechCrunch", "cnbeta"]},
+        {"fact": "监管背景", "final_value": "为满足欧盟《人工智能法案》(EU AI Act)透明度准则要求", "sources": ["TechCrunch", "cnbeta"]},
+        {"fact": "用户担忧", "final_value": "部分用户担忧职场与课堂中AI使用会被识别，影响个人隐私和职业评价", "sources": ["TechCrunch用户评论", "社交媒体讨论"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "角度：监管倒逼的技术合规，以及AI内容溯源时代的个人隐私困境。不要写成纯技术介绍，要有判断。"
+    },
+    {
+      "topic": "AI选秀节目热度骤降现象",
+      "slug": "ai-idol-show-heat-plunge-personality-gap",
+      "confidence": "high",
+      "primary_source": "界面新闻 / 娱乐独角兽",
+      "primary_source_url": "https://m.jiemian.com/article/14914255.html",
+      "verified_facts": [
+        {"fact": "《12星练赛》抖音粉丝数", "final_value": "超过53.9万", "sources": ["界面新闻/娱乐独角兽报道"]},
+        {"fact": "初舞台评级视频点赞量", "final_value": "超过76.5万，先导片超过73.4万", "sources": ["界面新闻"]},
+        {"fact": "8月夏日运动会视频点赞量", "final_value": "约7.5万和5.3万，较峰值大幅下降", "sources": ["界面新闻"]},
+        {"fact": "天秤座选手个人账号粉丝", "final_value": "约11.9万，断层领先", "sources": ["界面新闻"]}
+      ],
+      "rejected_claims": [
+        {"claim": "AI选秀已经完全失败", "reason": "虽然热度下降，但IP化和陪伴式运营仍有潜力，写作时需客观呈现热度下降而非全盘否定"}
+      ],
+      "writing_notes": "AI新媒体分类，核心论点：AI可以复制选秀的形式和规则，但复制不了真实人格魅力和成长感。热度从峰值暴跌是必然，但AI内容有自己的生存方式——低成本陪伴式IP。"
+    },
+    {
+      "topic": "人形机器人上半年出货量与国产份额",
+      "slug": "humanoid-robot-h1-2026-shipments-china-dominate",
+      "confidence": "high",
+      "primary_source": "SAG机构报告 & 国内券商研报",
+      "primary_source_url": "http://m.toutiao.com/group/7673039405476495923/",
+      "verified_facts": [
+        {"fact": "2026上半年全球人形机器人出货量", "final_value": "约1.91万台，同比增长275%以上（2025年同期约5100台）", "sources": ["盘面分析文章引用行业数据", "SAG机构预估"]},
+        {"fact": "国产厂商全球出货份额", "final_value": "超过97%（2025全年为84.7%）", "sources": ["行业统计数据", "盘面分析"]},
+        {"fact": "智元机器人出货量与份额", "final_value": "上半年出货8400台，全球占比44%，超越宇树登顶", "sources": ["行业数据", "盘面分析"]},
+        {"fact": "宇树科技出货量与份额", "final_value": "出货5900台，全球占比31%", "sources": ["行业数据"]},
+        {"fact": "真实场景部署比例", "final_value": "超过70%（2025年同期为50%）", "sources": ["行业统计"]},
+        {"fact": "2026全年预估出货量", "final_value": "SAG预估接近6万台，行业整体营收约16亿美元", "sources": ["SAG报告"]}
+      ],
+      "rejected_claims": [
+        {"claim": "2032年50.2万台出货量为确定预测值", "reason": "不同机构预测差异较大，写作时用'机构预估'并标注来源，不把远期预测当事实"}
+      ],
+      "writing_notes": "具身智能分类，不要写成简单的出货量播报。核心判断：国产人形机器人已经从'跟跑'变成'领跑'，但需要警惕产能扩张快于技术迭代的问题。"
+    },
+    {
+      "topic": "90%高管承认AI没提升生产力",
+      "slug": "90-percent-executives-ai-productivity-myth-layoffs",
+      "confidence": "medium",
+      "primary_source": "亚特兰大联储调查 / aibase报道",
+      "primary_source_url": "https://news.aibase.cn/news/30310",
+      "verified_facts": [
+        {"fact": "调查机构", "final_value": "亚特兰大联储（Federal Reserve Bank of Atlanta）相关研究", "sources": ["aibase新闻报道"]},
+        {"fact": "核心数据", "final_value": "约九成企业高管认为AI尚未提高公司生产力", "sources": ["aibase报道"]},
+        {"fact": "研究方法", "final_value": "交叉分析美国上市公司数据，结合问卷调查", "sources": ["aibase"]},
+        {"fact": "2021年以来生产力提升来源", "final_value": "主要源于疫情远程办公红利，而非AI", "sources": ["aibase报道"]}
+      ],
+      "rejected_claims": [
+        {"claim": "AI完全无法提升生产力", "reason": "调查说的是'尚未提高'，是当前时点的判断，不代表未来也不能。写作时注意区分短期现状和长期潜力。"},
+        {"claim": "这是亚特兰大联储官方发布的正式报告", "reason": "来源为aibase转述，需查证原始出处，写作时用'亚特兰大联储相关调查显示'而非下结论式表述"}
+      ],
+      "writing_notes": "Cao槽点风格。讽刺点：企业一边裁人一边押注AI，以为AI能替代老员工，结果发现老员工才是真正的生产力。结尾给实用提醒。"
+    }
+  ],
+  "summary": {
+    "overall_confidence": "high",
+    "replaced_topics": [],
+    "key_corrections": [
+      "Lovable收入数据不确切，写作时不引用具体ARR数字",
+      "Grok 4.6超越GPT-5.6的说法缺乏独立第三方验证，谨慎表述为'同一梯队'",
+      "人形机器人远期预测数据标注为机构预估而非既成事实",
+      "AI生产力调查来源为媒体转述联储研究，非官方正式报告"
+    ]
+  }
+}

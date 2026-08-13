@@ -1,0 +1,26 @@
+<p>30 billion parameters. 24GB VRAM. Runs locally.</p>
+<p>On the evening of August 11, Mark Zuckerberg published a long essay and did one thing: <strong>Meta released Muse Glimmer - a 30-billion-parameter local agent model, fully open source</strong>. This is also the first time Meta's Superintelligence Lab has opened model weights since its founding.</p>
+<p>What is Muse Glimmer? It isn't another huge, powerful general model. Its positioning is clear: <strong>a local foundation model for personal agents</strong>. Quantized to under 20GB, it runs on consumer GPUs or even some Macs, and can execute tasks without an internet connection. Organizing files, managing schedules, drafting messages, local coding - things that don't require sending data to the cloud, it handles right on your machine.</p>
+<p>Technically, the model has its highlights but isn't exactly crushing the competition. Of the 22 benchmarks Meta published, it took 12 SOTAs, with advantages concentrated in Agent tasks and some reasoning tests. But on desktop operations, coding, and multimodal tasks, it trails Qwen 3.6.</p>
+<p>What really matters isn't the model itself - it's <strong>the card Zuckerberg is playing with it</strong>.</p>
+
+<h2>Open Source Is a Weapon, Not Charity</h2>
+<p>Zuckerberg's long essay has a provocative title - "The Future Is For Everyone." The core thesis is simple: <strong>superintelligence shouldn't be concentrated in the hands of a few companies or individuals</strong>.</p>
+<p>He announced several things. First, Meta's Superintelligence Lab will resume open-sourcing some models, offering free or low-cost personal agents to billions of users. Second, launching a fully private mode where not even Meta can read user data. Third, establishing a $1 billion "Future Is For Everyone Fund" to support communities around US data center construction.</p>
+<p>But the most controversial is the fourth: <strong>he's calling for fewer US restrictions on open-source AI models, while supporting continued chip export controls</strong>.</p>
+<p>This position seems contradictory - arguing AI should be open, yet chips shouldn't be sold to China. But seen through Meta's commercial interests, it's perfectly consistent:</p>
+<p><strong>Open-source models are Meta's weapon against OpenAI and Google.</strong> OpenAI and Google make money from closed models; Meta undercuts them with open source - what you charge for, I give away. Developers using my open models build ecological dependencies, which in turn strengthen Meta's platform position.</p>
+<p><strong>Chip controls are Meta's tool against Chinese competitors.</strong> Open models can run on lower-end hardware, but training the strongest models still requires high-end chips. Limiting chip exports limits Chinese companies' ability to train models that compete with Meta.</p>
+<div class="pull-quote">"When Zuckerberg talks about open source, you hear idealism. But when you watch his business moves - it's all realism. Open source isn't charity. It's a moat." - An AI Industry Observer</div>
+<p>Meta has used this playbook before. When Meta open-sourced LLaMA, it directly spawned the global open-source LLM ecosystem boom - but who benefited the most? Meta. Because all those open-source developers are essentially adding bricks to Meta's ecosystem.</p>
+
+<h2>Local Agents: The Next Battlefield</h2>
+<p>Muse Glimmer's release also points to the AI industry's next battlefield: <strong>local AI</strong>.</p>
+<p>For the past few years, the trend has been cloud-based - all compute in the cloud, users just need a browser. But cloud AI has several unsolvable knots: privacy issues (your data goes to someone else's server), latency (bad internet means no service), cost (cloud compute is pay-per-use).</p>
+<p>Local AI flips this. The model runs on your own computer, data never leaves your device, no latency, no API fees - the only cost is the GPU you bought.</p>
+<p>But local AI's biggest problem is <strong>insufficient capability</strong>. Models that run on consumer GPUs have limited parameter scale and naturally can't match trillion-parameter cloud models.</p>
+<p>If Meta's 30B model really delivers the Agent capability it claims, that's an important milestone - it proves <strong>30-billion-class models can also reach practical Agent capability</strong>. If a 24GB GPU can run an agent that actually helps you work, the barrier to local AI adoption drops dramatically.</p>
+<p>What does this mean for the industry? It means AI might evolve from "centralized cloud service" toward "distributed local intelligence." In the future, everyone's computer, phone, even smartwatch could run a personal local agent - one that knows your habits, handles your daily tasks, and <strong>keeps all your data on your own device</strong>.</p>
+<p>Of course, it's still early. Muse Glimmer's real performance awaits community validation, and use cases for local agents are still being explored. But Meta betting on this direction is itself a strong signal -</p>
+<p>The era of closed models monopolizing AI may be gradually broken by the forces of open source. And every time it breaks, users benefit.</p>
+<p>See you tomorrow.</p>

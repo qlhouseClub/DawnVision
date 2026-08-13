@@ -1,0 +1,50 @@
+<p>No launch event. No slides. No teaser posters.</p>
+<p>In the early hours of August 13, DeepSeek's API page quietly updated a version number: <strong>DeepSeek-V4-Pro-0813</strong>. The model name stayed the same, the API call stayed the same, the docs stayed the same - but the API you're calling today isn't the same model as yesterday.</p>
+<p>The most direct evidence is a single number's leap: <strong>DeepSWE score jumped from 12.8 straight to 62.7 - nearly 5x</strong>. The preview version from a month ago, next to the official release, looks like a different species entirely.</p>
+<p>This isn't a routine minor version bump. This is a landmark pivot for the entire LLM industry. For the past two years, the race was about reasoning - Olympiad math, programming contests, knowledge QA. But every benchmark that skyrocketed this time points in the same direction: <strong>making models work for extended periods, across multiple steps, in real environments</strong>.</p>
+<p>In industry jargon: Agent capability. In plain English: <strong>previous models were honor students; this upgrade's direction is blue-collar workers.</strong></p>
+
+<h2>What Jumped 5x Wasn't IQ - It Was Getting Work Done</h2>
+<p>Let's compare. On the left, the preview version from a month ago. On the right, the official release that went live August 13:</p>
+<p>Terminal Bench: 72.1 to 87.9, +15.8. DeepSWE: 12.8 to 62.7, nearly 5x. AutomationBench: 12.8 to 31.8, +19.0. DSBench-FullStack: 41.8 to 71.1, +29.3. DSBench-Hard: 31.1 to 67.2, +36.1. Cybergym: 52.7 to 83.3, +30.6.</p>
+<p>What's most notable in this table isn't the gains themselves - it's where the gains are happening.</p>
+<p>Terminal Bench tests a model's ability to actually operate inside a terminal. DeepSWE tests software engineering tasks. AutomationBench tests automated workflows. Cybergym tests security offense and defense. <strong>All of these are "getting work done" tests, not "answering questions" tests</strong>.</p>
+<div class="pull-quote">"For two years LLMs competed on 'can you get the right answer.' Now they're competing on 'can you get the job done.' These aren't the same exam." - An AI Industry Practitioner</div>
+<p>Why does this pivot matter? Because no matter how strong reasoning capability is, if a model can't continuously execute tasks in real environments, its commercial value remains stuck at the "chat assistant" level. Agent capability - a model's ability to call tools, operate a computer, complete multi-step tasks - is the critical leap from "toy" to "productivity tool."</p>
+<p>The signal DeepSeek is sending with this midnight upgrade is clear: it's no longer satisfied being a "cheap reasoning model." It's going straight for the Agent main battlefield.</p>
+
+<h2>Side by Side: No Weaknesses Is the Hardest Feat</h2>
+<p>Beating your own preview version only proves you've improved fast. The real question: where does DeepSeek V4 Pro stand at the global table?</p>
+<p>Pitting the official release against the current first-tier models: on Terminal Bench, Kimi-K3 leads at 88.3; V4 Pro sits at 87.9 - a 0.4 difference, barely more than test noise. On HLE with tools, Fable 5's 63.0 still leads. On NL2Repo, Opus-4.8's 69.7 holds the edge. On Cybergym, 83.3 ranks among the highest published scores.</p>
+<p>How to read this chart? Two observations.</p>
+<p>First, <strong>it's not first in every category</strong>. Every sub-discipline has a stronger player - some excel at coding, some at reasoning, some at security. V4 Pro isn't the undisputed king of any single benchmark.</p>
+<p>Second - and this is the more crucial point - <strong>it doesn't fall out of the first tier in any of them</strong>.</p>
+<p>This is precisely the hardest thing for an Agent model to achieve. Reasoning models can afford to be lopsided - great at math, mediocre at writing, and still sell. But an agent working through real tasks has to code, use tools, look things up, fix bugs, run pipelines. Fail at any one link and the whole task breaks.</p>
+<div class="pull-quote">"Not first in everything, but never outside the top tier - that's the hardest no-weakness bar for Agent models." - An AI Tech Blogger</div>
+<p>Summarizing the current landscape in one sentence: <strong>Chinese AI is one step away from overseas flagships</strong>. And that step is closing, measured in months.</p>
+<p>If half a year ago Chinese LLMs were still "catching up" to overseas flagships, the landscape has now shifted to "alternating leads." You lead on this benchmark, I lead on that one. The first tier is no longer an exclusive club for American companies.</p>
+
+<h2>Floor-Price Strategy: The Economics of 1M Context</h2>
+<p>Capability covered, now let's talk money. This pricing play is calculated.</p>
+<p>First, what you get: <strong>1 million token context window, 384,000 token max output</strong>. To put that in perspective: a million tokens is roughly seven or eight full-length novels, or the entire codebase of a medium-sized project. For agents running long tasks, long context and large output aren't nice-to-haves - they're hard requirements. Too short a context, and the agent forgets earlier instructions halfway through.</p>
+<p>Now what you pay. V4 Pro pricing: cached input <strong>0.025 yuan</strong>/M tokens, uncached input <strong>3 yuan</strong>/M tokens, output <strong>6 yuan</strong>/M tokens, concurrency limit 500.</p>
+<p>Two details stand out.</p>
+<p>First, <strong>cached input priced at 0.025 yuan</strong>. Repeated context goes through cache and costs essentially nothing - this is clearly encouraging developers to move long tasks and multi-turn conversations onto this model. Compared to overseas flagship prices in the tens of dollars, this price is literally a fraction. <strong>The same work, for pocket change.</strong></p>
+<p>Second, <strong>concurrency dropped from 2500 (Flash) to 500</strong>. Why? The more capable the model, the more compute each inference burns - especially with thinking mode enabled by default. The concurrency contraction also tells you something: V4 Pro's compute cost is significantly higher than V4 Flash's, yet DeepSeek still compressed the price to a brutally competitive level.</p>
+<p>The business logic is clear: <strong>low prices for volume, volume for data, data for even better capability</strong>. DeepSeek isn't a charity - its low-price strategy is an investment. Today's low price buys tomorrow's market share and data accumulation.</p>
+
+<h2>The Model War's Second Half: From Smarts to Work</h2>
+<p>DeepSeek V4 Pro's midnight upgrade, viewed against the broader industry backdrop, means far more than a single model update.</p>
+<p>It signals that competition in the LLM industry is undergoing a fundamental pivot.</p>
+<p>The first half's theme was <strong>"who's smarter"</strong>. Competing on parameter scale, reasoning capability, benchmark scores. Every company's keynote centered on "our model surpassed X on benchmark Y." Users cared about "can this model ace the test."</p>
+<p>The second half's theme is becoming <strong>"who gets work done"</strong>. Competing on Agent capability, tool use, real-world task completion. Benchmarks aren't MMLU and GSM8K anymore - they're Terminal Bench, DeepSWE, Cybergym, tests that actually measure "getting things done."</p>
+<p>What does this pivot mean for the industry?</p>
+<p>First, <strong>a shift in evaluation</strong>. We used to judge models by "how smart they are." Going forward, we'll judge by "how much work they can do." These dimensions correlate but aren't identical - a model can nail reasoning questions yet completely fall apart in real environments.</p>
+<p>Second, <strong>a shift in business models</strong>. The commercial ceiling of pure chat models is becoming clearer - subscriptions, API calls, these growth curves are flattening. Agent models directly plug into real workflows - coding, office operations, customer service - each a multi-trillion-dollar market.</p>
+<p>Third, <strong>a reshuffle of the competitive landscape</strong>. Companies that won the first half won't necessarily win the second. Strong reasoning doesn't equal strong Agent capability. Lots of data doesn't equal a complete toolchain. Agent systems are systems engineering - you can't just throw a model at it and call it done.</p>
+<div class="pull-quote">"When the model name stays the same but the inside is a whole new generation, you know how fast this industry iterates. Last year's strongest model might not even make second tier this year." - An AI Investor</div>
+<p>DeepSeek choosing to release this silently in the middle of the night - no announcement, no press event - is itself a display of confidence. When the product speaks for itself, marketing is the least important thing. One benchmark chart beats ten launch events.</p>
+<p>But the competition is far from over. V4 Pro's Agent capability is up - but what about V5? What about OpenAI's next version? What about Anthropic's Claude Next? This war, shifting from "who's smarter" to "who gets work done," is just entering its white-hot phase.</p>
+<p>One thing is certain: in the months ahead, we'll see more and more models trading leads on Agent benchmarks. For users, this is the best of times - models keep getting stronger, prices keep dropping, options keep multiplying.</p>
+<p>For LLM companies, it's also the worst of times - just when you think you're ahead, someone swaps cores on you at midnight and surges past.</p>
+<p>See you tomorrow.</p>

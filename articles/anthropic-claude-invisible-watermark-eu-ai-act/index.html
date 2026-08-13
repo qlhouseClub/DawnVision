@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="zh-CN" data-lang="zh"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Claude嵌入隐形水印满足EU AI Act — Dawn Vision</title><meta name="description" content="Anthropic为Claude添加隐形水印，满足欧盟AI法案透明度要求。AI内容溯源时代到来，你的每一段AI生成文字，都可能带着看不见的标记。"><meta name="author" content="Dawn Vision 编辑部"><meta name="keywords" content="Dawn Vision, AI资讯, AI日报, 人工智能, 大模型, AI Agent, GPT, Claude, 具身智能, AI商业化, 一人公司, AI编程, 深度分析, AI观察, LLM, AIGC, 槽点, 吐槽, AI吐槽, Cao, AI吐槽专栏, AI趣闻, AI翻车, AI fails, AI roasting, tech rant, AI humor"><link rel="canonical" href="https://www.dawnvision.net/articles/anthropic-claude-invisible-watermark-eu-ai-act/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&family=Noto+Sans+SC:wght@400;500;700&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&family=Noto+Sans+SC:wght@400;500;700&display=swap"></noscript><meta property="og:type" content="article"><meta property="og:title" content="Claude嵌入隐形水印满足EU AI Act — Dawn Vision"><meta property="og:description" content="Anthropic为Claude添加隐形水印，满足欧盟AI法案透明度要求。AI内容溯源时代到来，你的每一段AI生成文字，都可能带着看不见的标记。"><meta property="og:url" content="https://www.dawnvision.net/articles/anthropic-claude-invisible-watermark-eu-ai-act/"><meta property="og:image" content="https://www.dawnvision.net/images/og-image.png"><meta property="og:site_name" content="Dawn Vision"><meta property="og:locale" content="zh_CN"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Claude嵌入隐形水印满足EU AI Act — Dawn Vision"><meta name="twitter:description" content="Anthropic为Claude添加隐形水印，满足欧盟AI法案透明度要求。AI内容溯源时代到来，你的每一段AI生成文字，都可能带着看不见的标记。"><meta name="twitter:image" content="https://www.dawnvision.net/images/og-image.png"><meta name="robots" content="index, follow"><meta name="applicable-device" content="pc,mobile"><meta name="format-detection" content="telephone=no"><meta name="baidu-site-verification" content><script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Anthropic为Claude加隐形水印：EU AI Act落地，你的AI输出正在被悄悄标记","description":"Anthropic为Claude添加隐形水印，满足欧盟AI法案透明度要求。AI内容溯源时代到来，你的每一段AI生成文字，都可能带着看不见的标记。","datePublished":"2026-08-13","dateModified":"2026-08-13","author":{"@type":"Organization","name":"Dawn Vision 编辑部"},"publisher":{"@type":"Organization","name":"Dawn Vision","url":"https://www.dawnvision.net/","logo":{"@type":"ImageObject","url":"https://www.dawnvision.net/images/og-image.png","width":1200,"height":630}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.dawnvision.net/articles/anthropic-claude-invisible-watermark-eu-ai-act"},"url":"https://www.dawnvision.net/articles/anthropic-claude-invisible-watermark-eu-ai-act","inLanguage":"zh-CN","articleSection":"AI 监管 · 政策伦理","keywords":"Dawn Vision,Anthropic,Claude,隐形水印,EU AI Act,AI监管,内容溯源,隐私","wordCount":700}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://www.dawnvision.net/"},{"@type":"ListItem","position":2,"name":"文章","item":"https://www.dawnvision.net/articles/"},{"@type":"ListItem","position":3,"name":"Claude嵌入隐形水印满足EU AI Act"}]}</script><style>
+    /* Language toggle: show/hide content based on data-lang */
+    :root {
+      --dv-lang: 'zh';
+    }
+    html[data-lang="zh"] .dv-en { display: none !important; }
+    html[data-lang="en"] .dv-zh { display: none !important; }
+
+    /* When English is active, swap visible text for title/description */
+    html[data-lang="en"] head > title { display: none; }
+
+    /* Floating language switch button */
+    .dv-lang-switch {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 900;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: none;
+      background: #ffffff;
+      color: #002FA7;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .dv-lang-switch:hover {
+      background: #002FA7;
+      color: #fff;
+      transform: scale(1.08);
+      box-shadow: 0 4px 24px rgba(0,47,167,0.3);
+    }
+    @media (max-width: 700px) {
+      .dv-lang-switch {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+        font-size: 10px;
+      }
+    }
+  </style><link rel="stylesheet" href="/_astro/502.Dsp8BFs5.css">
+<style>@keyframes blobFloat{0%,to{transform:translate(0) scale(1)}33%{transform:translate(3vw,4vh) scale(1.05)}66%{transform:translate(-2vw,-3vh) scale(.97)}}.blobs--home{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--home .blob{position:absolute;border-radius:50%;filter:blur(120px);opacity:.5;animation:blobFloat 25s ease-in-out infinite;will-change:transform}.blobs--home .blob--1{width:50vw;height:50vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-5%;left:-5%;animation-delay:0s;animation-duration:30s}.blobs--home .blob--2{width:55vw;height:55vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-10s;animation-duration:28s;opacity:.6}.blobs--home .blob--3{width:40vw;height:40vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:30%;right:5%;animation-delay:-15s;animation-duration:32s;opacity:.4}.blobs--home .blob--4{width:35vw;height:35vw;background:radial-gradient(circle,rgba(80,130,255,.3) 0%,transparent 70%);top:0%;left:25%;animation-delay:-5s;animation-duration:35s;opacity:.35}.blobs--home .blob--5,.blobs--home .blob--6{display:none}.blobs--section{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--section .blob{position:absolute;border-radius:50%;filter:blur(100px);opacity:.45;animation:blobFloat 28s ease-in-out infinite;will-change:transform}.blobs--section .blob--1{width:45vw;height:45vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-10%;left:-8%;animation-delay:0s;animation-duration:30s}.blobs--section .blob--2{width:50vw;height:50vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-8s;animation-duration:26s;opacity:.55}.blobs--section .blob--3{width:35vw;height:35vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:20%;right:5%;animation-delay:-14s;animation-duration:32s}.blobs--section .blob--4,.blobs--section .blob--5{display:none}@media(max-width:700px){.blobs--home .blob{filter:blur(80px)}.blobs--section .blob{filter:blur(60px)}}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.CY1OParl.css"></head> <body class>  <a href="#main-content" class="skip-link">跳至主要内容</a>  <nav class="nav nav--inner notranslate" role="navigation" aria-label="主导航" data-pagefind-ignore translate="no"> <div class="nav__inner"> <div class="nav__group"> <a href="/" class="nav__link ">Home</a> <a href="/articles/" class="nav__link nav__link--active" aria-current="page">Articles</a> </div> <a href="/" class="nav__brand" aria-label="Dawn Vision 首页" translate="no">
+Dawn Vision
+<small>Daily Briefing</small> </a> <div class="nav__group"> <a href="/cao/" class="nav__link ">Cao</a> <a href="/about/" class="nav__link ">About</a> </div> </div> </nav> <main id="main-content"> <a href="/articles/" class="dv-back-btn" aria-label="返回文章列表" title="返回文章列表"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"> <polyline points="15 18 9 12 15 6"></polyline> </svg> </a> <section class="article-hero "> <div class="blobs blobs--section" aria-hidden="true"> <div class="blob blob--1"></div><div class="blob blob--2"></div><div class="blob blob--3"></div><div class="blob blob--4"></div><div class="blob blob--5"></div> </div> <div class="container--narrow" style="position:relative;z-index:1;"> <div data-pagefind-meta="category" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">AI 监管 · 政策伦理</div>  <h1 class="article-hero__title dv-zh" data-pagefind-meta="title">Claude输出嵌入隐形水印<br>EU AI Act倒逼内容溯源</h1>  <h1 class="article-hero__title dv-en">Claude Output Gets Invisible Watermarks<br>EU AI Act Forces Content Traceability</h1> <p class="article-hero__deck dv-zh">Anthropic宣布将在Claude生成的文本中嵌入隐形水印，以满足欧盟AI法案透明度要求。水印对人眼不可见但可被机器识别。职场写邮件、学生写论文——你用AI产出的内容，正在变成可以溯源的。</p> <p class="article-hero__deck dv-en">Anthropic announces invisible watermarks in Claude-generated text to meet EU AI Act transparency rules. Invisible to human eyes but machine-detectable. Your AI output is becoming traceable.</p> <div class="article-hero__meta"> <span class="article-hero__issue notranslate">No.035</span> <span>2026.08.13</span> <span class="dv-zh">约 4 分钟阅读</span> <span class="dv-en">~4 min read</span> </div> </div> </section> <article class="container--narrow" style="padding-top: clamp(40px, 6vw, 64px); padding-bottom: 0;">  <div class="article-body dv-zh" data-pagefind-body><p>你用Claude写的每一段文字，正在被悄悄盖上一个戳。</p>
+<p>Anthropic宣布，将逐步在Claude生成的文本中嵌入<strong>隐形水印</strong>。这个水印对人眼完全不可见——你读的时候感觉不到任何不同——但它可以被计算机识别。换句话说，你写的东西是不是AI写的，技术上有办法查出来。</p>
+<p>官方说法是为了满足<strong>欧盟《人工智能法案》(EU AI Act)</strong>的透明度准则要求。简单说：监管要求AI生成的内容必须能被识别出来，不能和人类创作的内容混在一起。</p>
+<p>这件事听起来很技术，但它的影响可能比大多数人意识到的要深远得多。</p>
+
+<h2>水印怎么加的？为什么你看不见？</h2>
+<p>文本隐形水印的原理，说穿了不难。常见的做法有几种：</p>
+<p>一种是<strong>零宽字符隐写</strong>——在文字之间插入人类看不见但机器能读的零宽字符，用这些字符的排列组合来编码信息。就像在白纸上用隐形墨水写字，肉眼看不见，用特殊的灯一照就显形。</p>
+<p>另一种是<strong>同义词替换</strong>——在不改变语义的前提下，选择特定的同义词组合来传递信息。比如"因为"和"由于"意思差不多，但选哪个词本身就可以编码数据。</p>
+<p>还有一种是<strong>标点和空格的微妙调整</strong>——在你注意不到的地方微调空格数量、标点使用习惯，同样可以嵌入信息。</p>
+<p>Anthropic没有公开具体用的是哪种技术，但效果是一样的：<strong>你读起来完全正常的一段文字，里面藏着只有Claude系统才能识别的"指纹"</strong>。</p>
+<p>这个指纹能干嘛？理论上，只要拿到一段文字，Anthropic就能判断它是不是Claude生成的，甚至可能追溯到具体是哪个用户、哪个会话生成的。</p>
+
+<h2>监管的正当性和个人的焦虑</h2>
+<p>站在监管的角度，这个逻辑非常通顺。</p>
+<p>AI生成的内容越来越多，越来越逼真。如果没有办法区分AI内容和人类内容，会有什么问题？假新闻泛滥、网络水军自动化、学术造假成本为零、诈骗效率指数级提升……这些都是真实存在的风险。</p>
+<p>所以EU AI Act要求通用AI模型的输出必须可识别，这个政策出发点是好的——<strong>让AI内容显形，让人类有知情权</strong>。</p>
+<p>但站在个人用户的角度，事情就没那么简单了。</p>
+<p>很多人用AI写工作邮件、做报告草稿、整理会议纪要。这些内容最终都是以"人的产出"的名义提交的。现在，如果你的老板、你的客户、你的同事，有办法查出来你这段文字是AI写的——</p>
+<p><strong>你用AI辅助工作这件事，就不再是你自己的秘密了。</strong></p>
+<p>学生用AI写论文更不用说了。以前老师抓AI写作，主要靠"文风不对"这种主观判断，准确率有限。有了隐形水印之后，检测就变成了客观、精准、百分之百的事情。</p>
+<div class="pull-quote">"监管说的是'透明度'，用户听到的是'被监控'。同一个技术，不同的角度，完全是两回事。"—— 一位AI隐私研究者</div>
+<p>更令人担忧的是边界问题。今天水印是为了满足监管要求，那明天呢？这个能力会不会被用来做更多事？比如检测员工有没有在工作中用AI、追踪信息泄露的源头、甚至给每个用户的AI输出打上独有的身份标记？</p>
+<p>技术一旦被部署，它的用途往往会超出最初的设计目的。这是历史反复告诉我们的教训。</p>
+
+<h2>每个人都要面对的选择题</h2>
+<p>隐形水印不是Anthropic一家的事。EU AI Act是欧盟的法律，任何想在欧盟运营的AI公司都得遵守。可以预见，OpenAI、Google、DeepSeek——只要做欧洲市场，最终都会加上类似的水印机制。</p>
+<p>这意味着什么？意味着未来你从任何主流AI产品里拿到的文本，都可能带着看不见的标记。</p>
+<p>对于普通用户，这不是一个可以选"用不用"的功能——因为它是默认开启的，而且你看不见。你能选的只有：<strong>你要不要继续用这些会给你输出打水印的AI工具？</strong></p>
+<p>当然，也会有对策。比如专门去掉水印的工具、本地运行的开源模型（它们的输出没有水印）、各种"AI内容洗白"的服务……监管和反监管的军备竞赛，在内容溯源这个领域又要开始新一轮了。</p>
+<p>但更深层的问题是：<strong>当AI内容和人类内容可以被精确区分的时候，我们评判一段文字的标准，会从"写得好不好"变成"是不是人写的"吗？</strong></p>
+<p>如果答案是肯定的，那损失的可能不是效率，而是我们对好内容本身的定义。</p>
+<p>明天见。</p></div>  <div class="article-body dv-en"><p>Every paragraph you write with Claude is getting quietly stamped.</p>
+<p>Anthropic has announced it's gradually embedding <strong>invisible watermarks</strong> in Claude-generated text. These watermarks are completely invisible to the human eye - you can't tell the difference when reading - but they're machine-detectable. In other words: whether something you wrote was actually AI-generated can, technically, be found out.</p>
+<p>The official line is that this meets the transparency requirements of the <strong>EU AI Act</strong>. Simply put: regulators are demanding that AI-generated content be identifiable, not mixed in with human creation.</p>
+<p>This sounds like a technical detail, but its implications may be far deeper than most people realize.</p>
+
+<h2>How Do Watermarks Work? Why Can't You See Them?</h2>
+<p>The principle of invisible text watermarking isn't hard to explain. Common approaches:</p>
+<p>One method is <strong>zero-width character steganography</strong> - inserting invisible zero-width characters between words, using their arrangement to encode information. Like writing with invisible ink on white paper - invisible to the naked eye, but revealed under a special light.</p>
+<p>Another is <strong>synonym substitution</strong> - without changing meaning, choosing specific synonym combinations to convey data. "Because" and "since" mean roughly the same thing, but which word you choose can itself encode data.</p>
+<p>And there's <strong>subtle punctuation and spacing adjustments</strong> - micro-tweaks to spacing and punctuation habits in places you'd never notice, also capable of embedding information.</p>
+<p>Anthropic hasn't disclosed which specific technique it uses, but the effect is the same: <strong>a paragraph that reads perfectly normally contains a "fingerprint" only Claude's system can recognize</strong>.</p>
+<p>What can this fingerprint do? In theory, given any text, Anthropic could determine whether it was generated by Claude - and possibly even trace it back to a specific user or conversation.</p>
+
+<h2>Regulatory Legitimacy vs. Personal Anxiety</h2>
+<p>From a regulatory perspective, the logic is straightforward.</p>
+<p>AI-generated content keeps growing and getting more realistic. Without a way to distinguish AI from human content, what happens? Fake news floods in, bot armies automate, academic plagiarism becomes zero-cost, scam efficiency explodes exponentially - these are real risks.</p>
+<p>So the EU AI Act requires general AI model output to be identifiable. The policy starts from a good place - <strong>making AI content visible, giving humans the right to know</strong>.</p>
+<p>But from an individual user's perspective, it's not that simple.</p>
+<p>Many people use AI for work emails, report drafts, meeting notes. This content is ultimately submitted as "human output." Now, if your boss, your client, your colleague could detect that this text was written by AI -</p>
+<p><strong>the fact that you use AI to help with work is no longer just your secret.</strong></p>
+<p>For students writing papers, it's even more straightforward. Before, teachers caught AI writing mainly through subjective judgments like "this style feels off" - accuracy was limited. With invisible watermarks, detection becomes objective, precise, 100%.</p>
+<div class="pull-quote">"Regulators call it 'transparency.' Users hear 'surveillance.' Same technology, different angles - two completely different things." - An AI Privacy Researcher</div>
+<p>More concerning is the boundary problem. Today watermarks are for regulatory compliance - but tomorrow? Could this capability be used for more? Detecting whether employees use AI at work, tracing information leaks, even stamping each user's AI output with a unique identifier?</p>
+<p>Once a technology is deployed, its uses tend to expand beyond the original purpose. That's a lesson history has taught us repeatedly.</p>
+
+<h2>A Choice Everyone Faces</h2>
+<p>Invisible watermarks aren't just an Anthropic thing. The EU AI Act is EU law - any AI company operating in Europe has to comply. We can expect OpenAI, Google, DeepSeek - anyone serving the European market will eventually add similar watermarking mechanisms.</p>
+<p>What does that mean? It means in the future, any text you get from any mainstream AI product may carry an invisible tag.</p>
+<p>For ordinary users, this isn't a feature you can opt into or out of - it's on by default, and you can't see it. Your choice is only: <strong>do you keep using AI tools that watermark their output?</strong></p>
+<p>Of course, countermeasures will emerge. Tools specifically designed to remove watermarks, locally-run open source models (their output has no watermarks), various "AI content laundering" services - the cat-and-mouse game between regulation and countermeasures starts a new round in content traceability.</p>
+<p>But the deeper question is: <strong>when AI content and human content can be precisely distinguished, will our standard for judging a piece of writing shift from 'is it good?' to 'was it written by a human?'</strong></p>
+<p>If the answer is yes, what we lose might not be efficiency - it could be our very definition of good content.</p>
+<p>See you tomorrow.</p></div>   <blockquote class="article-pull-quote dv-zh"> <p class="article-pull-quote__text">监管说的是&#39;透明度&#39;，用户听到的是&#39;被监控&#39;。同一个技术，不同的角度，完全是两回事。</p> <cite class="article-pull-quote__attr">—— 一位AI隐私研究者</cite> </blockquote> <blockquote class="article-pull-quote dv-en"> <p class="article-pull-quote__text">Regulators call it &#39;transparency.&#39; Users hear &#39;surveillance.&#39; Same technology, different angles - two completely different things.</p> <cite class="article-pull-quote__attr">- An AI Privacy Researcher</cite> </blockquote>     <div class="article-cognitive dv-zh">Anthropic,Claude,隐形水印,EU AI Act,AI监管,内容溯源</div> <div class="article-cognitive dv-en">Anthropic,Claude,invisible watermark,EU AI Act,AI regulation,content traceability</div>  <div class="article-sources"> <div class="article-sources__title notranslate"> <span class="dv-zh">Sources · 信源</span> <span class="dv-en">Sources</span> </div> <ul class="article-sources__list"> <li class="article-sources__item"> <a href="https://techcrunch.com/" target="_blank" rel="noopener noreferrer">TechCrunch - Anthropic is rolling out invisible watermarks</a> </li><li class="article-sources__item"> <a href="https://www.cnbeta.com.tw/articles/tech/1572743.htm" target="_blank" rel="noopener noreferrer">cnBeta - 为符合欧盟AI法案透明度规定</a> </li> </ul>  <p class="article-source-summary dv-zh">本文基于 Dawn Vision 认知引擎处理的 5 个源信号生成，经编辑部人工审核。素材来源：TechCrunch、cnBeta。</p> <p class="article-source-summary dv-en">Generated by the Dawn Vision cognitive engine processing 5 source signals, with human editorial review. Sources: TechCrunch, cnBeta.</p> </div>  <div class="article-actions"> <button class="article-action-btn article-action-btn--like" id="article-like-btn" data-slug="anthropic-claude-invisible-watermark-eu-ai-act" aria-label="喜欢这篇文章"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path> </svg> <span class="article-action-btn__label" data-i18n="like">喜欢</span> <span class="article-action-btn__count" id="like-count">0</span> </button> <button class="article-action-btn article-action-btn--tip" id="article-tip-btn" aria-label="打赏"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon> </svg> <span class="article-action-btn__label" data-i18n="tip">打赏</span> </button> </div>  <nav class="article-nav" aria-label="文章导航"> <a href="/articles/ai-idol-show-heat-plunge-personality-gap/" class="article-nav__item article-nav__item--prev"> <div class="article-nav__label"> <span class="dv-zh" data-i18n="prev_article">上一篇</span> <span class="dv-en" data-i18n="prev_article">Previous</span> </div> <div class="article-nav__title dv-zh">AI选秀热度骤降：53万粉丝点赞从76万跌到5万，AI偶像缺的不是脸是灵魂</div> <div class="article-nav__title dv-en">AI Idol Show Heat Plunges: 530K Fans, Likes Drop From 760K to 50K - AI Idols Lack Soul, Not Faces</div> </a> <a href="/articles/lovable-13-3b-valuation-european-ai-coding/" class="article-nav__item article-nav__item--next"> <div class="article-nav__label"> <span class="dv-zh" data-i18n="next_article">下一篇</span> <span class="dv-en" data-i18n="next_article">Next</span> </div> <div class="article-nav__title dv-zh">Lovable估值133亿美元：欧洲AI编程新星半年翻番，非硅谷也能跑出独角兽</div> <div class="article-nav__title dv-en">Lovable at $13.3B Valuation: European AI Coding Star Doubles in 6 Months - Unicorns Don&#39;t Need Silicon Valley</div> </a> </nav> </article>  </main> <footer class="footer footer--site" role="contentinfo" data-pagefind-ignore> <div class="footer__container"> <div class="footer__brand notranslate" translate="no">Dawn Vision</div> <div class="footer__meta notranslate" translate="no">© 2026 · Daily at 16:30 CST · Weekdays Only</div> </div> </footer>   <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="搜索文章" hidden> <div class="search-modal" role="document"> <div class="search-modal__input-wrap"> <svg class="search-modal__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="11" cy="11" r="8"></circle> <line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> <input type="search" class="search-modal__input" id="search-input" placeholder="搜索文章、关键词、作者..." autocomplete="off" spellcheck="false" aria-label="搜索关键词"> <span class="search-modal__close-hint">ESC</span> </div> <div class="search-modal__results" id="search-results"> <div class="search-modal__empty">输入关键词开始搜索</div> </div> <div class="search-modal__footer"> <span><kbd>↑</kbd><kbd>↓</kbd> 选择</span> <span><kbd>↵</kbd> 打开</span> <span><kbd>⌘K</kbd> 搜索</span> </div> </div> </div> <!-- Reading progress bar (shown on article pages) --> <div class="reading-progress" id="reading-progress" hidden></div>  <div class="tip-modal" id="tip-modal" hidden> <div class="tip-modal__overlay" data-tip-close></div> <div class="tip-modal__content" role="dialog" aria-modal="true" aria-label="打赏支持"> <button class="tip-modal__close" data-tip-close aria-label="关闭">×</button> <h3 class="tip-modal__title notranslate" translate="no">Tip Jar</h3> <p class="tip-modal__desc">谢谢老板请我喝奶茶 ☕</p> <div class="tip-modal__qr-wrap"> <img src="/images/reward-qr.webp" alt="打赏二维码" class="tip-modal__qr" width="200" height="200"> </div> <p class="tip-modal__thanks">微信扫码打赏，你的支持是持续创作的动力。</p> </div> </div>  <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.Dib_mikw.js"></script>  <script>
+  window.addEventListener('load', function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    bp.src = (curProtocol === 'https' ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js');
+    bp.async = true;
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  });
+  </script> </body> </html>
