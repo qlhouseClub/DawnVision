@@ -1,5 +1,18 @@
 [
   {
+    "number": "035",
+    "date": "2026-08-13",
+    "date_display": "2026.08.13",
+    "cover": {
+      "slug": "deepseek-v4-pro-agent-benchmark-5x",
+      "title": "DeepSeek V4 Pro深夜换芯：Agent跑分翻5倍，模型战争从谁更聪明转向谁更能干活",
+      "deck": "8月13日凌晨，DeepSeek V4-Pro-0813静默上线，DeepSWE跑分从12.8飙升至62.7翻近5倍，Terminal Bench 87.9直逼Kimi-K3的88.3。模型名没变，里子换了一代——大模型竞争从比推理，正式转向比Agent干活能力。",
+      "title_short": "DeepSeek深夜换芯Agent跑分翻5倍"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
     "number": "034",
     "date": "2026-08-12",
     "date_display": "2026.08.12",

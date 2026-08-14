@@ -1,0 +1,154 @@
+{
+  "date": "2026-08-14",
+  "issue": "036",
+  "topics": [
+    {
+      "topic": "OpenAI年化营收突破400亿美元，万亿估值IPO加速",
+      "slug": "openai-40b-annual-revenue-ipo-trillion-valuation",
+      "confidence": "high",
+      "primary_source": "新浪财经",
+      "primary_source_url": "http://m.toutiao.com/group/7673634903409443366/",
+      "verified_facts": [
+        {"fact": "OpenAI年化营收突破400亿美元", "final_value": "400亿美元年化营收", "sources": ["新浪财经", "AIBase", "CoinStats"]},
+        {"fact": "7月营收环比增速", "final_value": "超20%环比增长", "sources": ["AIBase", "新浪财经"]},
+        {"fact": "较2025年底营收翻倍", "final_value": "较2025年底大致翻倍", "sources": ["新浪财经", "AsiaICT"]},
+        {"fact": "IPO估值目标", "final_value": "约1万亿美元", "sources": ["CoinStats", "AsiaICT", "CSDN"]},
+        {"fact": "营收增长主要来源", "final_value": "AI编码软件、订阅业务、广告业务、C端扩张", "sources": ["新浪财经"]}
+      ],
+      "rejected_claims": [
+        {"claim": "OpenAI已确定IPO日期", "reason": "多家媒体报道为'加速推进'、'计划在2026年底至2027年间'，无确切日期"}
+      ],
+      "writing_notes": "营收数据来自知情人士透露，非官方财报。写作时用'年化营收突破400亿美元'的表述，不要写成'年营收400亿'。IPO时间点表述为'加速推进上市'即可，不要给出确切时间。"
+    },
+    {
+      "topic": "智谱GLM-5.3发布：后训练Scaling，开源编程能力跃升50%",
+      "slug": "glm-5-3-post-training-scaling-open-source-coding",
+      "confidence": "high",
+      "primary_source": "智谱官方",
+      "primary_source_url": "https://z.ai/blog/glm-5.3",
+      "verified_facts": [
+        {"fact": "GLM-5.3基座模型是否变化", "final_value": "基座模型不变，全部提升来自后训练Scaling", "sources": ["36氪", "爱范儿", "智谱官方博客", "AIBase"]},
+        {"fact": "编程能力提升幅度", "final_value": "内部体感评测较GLM-5.2提升约50%", "sources": ["36氪", "AIBase", "智谱官方"]},
+        {"fact": "Terminal Bench 3.0分数", "final_value": "从4.6提升至28.3", "sources": ["AIBase"]},
+        {"fact": "DeepSWE v1.1分数", "final_value": "从46.2提升至66.9", "sources": ["AIBase"]},
+        {"fact": "开源时间", "final_value": "两周内完成安全加固后开源权重", "sources": ["爱范儿", "36氪"]},
+        {"fact": "新增能力方向", "final_value": "编程、网络安全防御、长时Agent任务", "sources": ["智谱官方博客", "新浪财经"]}
+      ],
+      "rejected_claims": [
+        {"claim": "GLM-5.3全面超越Fable 5", "reason": "官方表述为'逼近Fable 5'、'开源SOTA'，并非全面超越闭源旗舰模型"}
+      ],
+      "writing_notes": "重点突出'后训练Scaling'这个新范式——不换底座、只炼后训就能大幅提升能力。这是对Scaling Law的新探索。编程提升50%是内部体感评测数据，注明是内部评测。"
+    },
+    {
+      "topic": "Writer Palmyra X6：智能体无人值守连跑8小时",
+      "slug": "palmyra-x6-8-hour-agent-0-12-dollar-per-task",
+      "confidence": "high",
+      "primary_source": "Writer官方博客",
+      "primary_source_url": "https://writer.com/blog/aug-roundup-new-at-writer/",
+      "verified_facts": [
+        {"fact": "最长无人值守运行时间", "final_value": "8小时", "sources": ["Writer官方博客", "Writer官方Models页", "PressReleaseHub"]},
+        {"fact": "单任务平均成本", "final_value": "约0.12美元/任务", "sources": ["Atyun", "品玩"]},
+        {"fact": "单任务平均完成时间", "final_value": "26秒", "sources": ["PressReleaseHub"]},
+        {"fact": "生成速度", "final_value": "82 tokens/秒", "sources": ["PressReleaseHub"]},
+        {"fact": "基础模型来源", "final_value": "基于GLM-5.2进行后训练", "sources": ["品玩", "TechCrunch"]},
+        {"fact": "成本降幅", "final_value": "较上一代成本最高降低50%", "sources": ["品玩", "Writer官方"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "重点是'长时Agent'——8小时不漂移。这是Agent从辅助工具变成背景自动化的关键一步。面向企业营销场景，不是通用Agent。"
+    },
+    {
+      "topic": "腾讯混元人事调整：徐灿转岗微信WeLM",
+      "slug": "tencent-xu-can-wechat-welm-ai-reshuffle",
+      "confidence": "high",
+      "primary_source": "IT时代网（独家报道）",
+      "primary_source_url": "http://m.163.com/dy/article/L4A2QQCI05527PMU.html",
+      "verified_facts": [
+        {"fact": "徐灿身份", "final_value": "原混元资深研究员，WizardLM第一作者，Evol-Instruct提出者", "sources": ["IT时代网", "AIBase"]},
+        {"fact": "转岗去向", "final_value": "微信事业群WeLM团队", "sources": ["IT时代网", "AIBase", "微博"]},
+        {"fact": "负责方向", "final_value": "后训练与Agent研发", "sources": ["AIBase", "IT时代网"]},
+        {"fact": "背景", "final_value": "微软亚洲研究院背景，合成数据、强化学习、自动评估领域专家", "sources": ["AIBase"]}
+      ],
+      "rejected_claims": [
+        {"claim": "徐灿与姚顺雨不和导致转岗", "reason": "微博传言，无确凿证据，属于八卦猜测，不写入正文"}
+      ],
+      "writing_notes": "这是独家报道，来源为IT时代网援引知情人士。写作时聚焦于'微信AI加速'这个战略信号，不要深入人事八卦。重点分析微信作为超级App的Agent化潜力。"
+    },
+    {
+      "topic": "阿里云灵骏真武M890超节点上线",
+      "slug": "aliyun-zhenwu-m890-supernode-2-trillion-params",
+      "confidence": "high",
+      "primary_source": "阿里云官方",
+      "primary_source_url": "https://36kr.com/newsflashes/3935927510973575",
+      "verified_facts": [
+        {"fact": "上线时间", "final_value": "2026年8月12日正式上线", "sources": ["36氪", "环球网", "金融界", "太平洋科技"]},
+        {"fact": "首批上线地域", "final_value": "乌兰察布", "sources": ["环球网", "金融界", "36氪"]},
+        {"fact": "算力规格", "final_value": "64卡高速互联算力单元", "sources": ["环球网", "36氪"]},
+        {"fact": "已验证最大模型规模", "final_value": "成功运行超2万亿参数大模型", "sources": ["环球网", "金融界", "36氪", "科创板日报"]},
+        {"fact": "最高承载能力", "final_value": "十万亿参数级MoE大模型推理", "sources": ["环球网", "36氪"]},
+        {"fact": "已跑通的模型", "final_value": "Kimi K3、Qwen3.8 Max", "sources": ["环球网", "金融界", "科创板日报"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "重点是'超节点'形态——云上64卡高速互联，企业无需自建机房。这代表国产算力从单芯片竞争转向系统级竞争。'2万亿参数'是已成功运行的，'十万亿参数'是最高承载能力，不要混淆。"
+    },
+    {
+      "topic": "贝壳科技发布AI创作者MCN品牌「生成者」",
+      "slug": "beike-ai-mcn-shengchengzhe-aigc-content",
+      "confidence": "high",
+      "primary_source": "经济观察报",
+      "primary_source_url": "http://m.toutiao.com/group/7673455384975229492/",
+      "verified_facts": [
+        {"fact": "发布时间", "final_value": "2026年8月12日", "sources": ["经济观察报", "齐鲁壹点"]},
+        {"fact": "品牌名称", "final_value": "「生成者」", "sources": ["经济观察报", "齐鲁壹点", "泰山财经"]},
+        {"fact": "定位", "final_value": "行业首个AI创作者MCN", "sources": ["经济观察报"]},
+        {"fact": "模式", "final_value": "商单驱动+AI赋能", "sources": ["经济观察报", "齐鲁壹点"]},
+        {"fact": "贝壳科技背景", "final_value": "前身为贝壳视频MCN，成立于2014年，2024年后转型AIGC", "sources": ["泰山财经", "经济观察报"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "重点分析MCN行业的AI转型——从造真人网红到造AI账号。这是内容生产方式的根本性变化。注意贝壳科技（贝壳视频）和贝壳找房不是同一家公司，不要混淆。"
+    },
+    {
+      "topic": "索塔无界：原生物理世界模型落地商超，3年千台",
+      "slug": "sota-wujie-physical-world-model-retail-robots",
+      "confidence": "medium",
+      "primary_source": "36氪",
+      "primary_source_url": "https://36kr.com/p/3936504864701830",
+      "verified_facts": [
+        {"fact": "创始人", "final_value": "胡德波，开普勒前CEO，华为背景", "sources": ["36氪", "腾讯新闻"]},
+        {"fact": "产品定位", "final_value": "原生物理世界模型/机器人大脑，不造硬件", "sources": ["36氪"]},
+        {"fact": "落地场景", "final_value": "商超零售场景", "sources": ["36氪"]},
+        {"fact": "3年部署规划", "final_value": "超过1000台具身智能机器人", "sources": ["36氪"]},
+        {"fact": "技术路径", "final_value": "4D世界动作模型，场景收敛+通用泛化", "sources": ["36氪"]}
+      ],
+      "rejected_claims": [
+        {"claim": "已大规模部署", "reason": "目前是合作规划阶段，3年千台是目标，不是已完成数"}
+      ],
+      "writing_notes": "置信度medium，因为主要信息来自单一媒体36氪。重点是'物理世界模型'这个技术路线——不做机器人本体，做机器人大脑。3年千台是规划目标，不是已部署数量，写作时要表述清楚。"
+    },
+    {
+      "topic": "AI客服私自打2折：98万订单直接蒸发",
+      "slug": "ai-chatbot-80-percent-discount-india-fail",
+      "confidence": "high",
+      "primary_source": "TechShots",
+      "primary_source_url": "https://www.techshotsapp.com/technology/internet-mocks-business-owner-after-bot-grants-80-discount",
+      "verified_facts": [
+        {"fact": "事件发生地", "final_value": "印度", "sources": ["TechShots"]},
+        {"fact": "折扣幅度", "final_value": "80%折扣（即打2折）", "sources": ["TechShots"]},
+        {"fact": "订单金额", "final_value": "98万卢比（₹9.8 lakh）", "sources": ["TechShots"]},
+        {"fact": "报道时间", "final_value": "2026年8月13日", "sources": ["TechShots"]}
+      ],
+      "rejected_claims": [
+        {"claim": "商家最终损失了98万卢比", "reason": "报道未明确说明订单是否最终执行，只说面临'潜在巨额损失'"}
+      ],
+      "writing_notes": "Cao栏目，幽默风格。重点是'AI客服翻车'的荒诞感和自动化的风险。订单金额用98万卢比，不要换算成人民币制造距离感。结尾给3条实用提醒：AI客服必须设权限上限、关键操作需人工复核、自动化越成熟越要监控。"
+    }
+  ],
+  "summary": {
+    "overall_confidence": "high",
+    "replaced_topics": [],
+    "key_corrections": [
+      "索塔无界3年千台是规划目标而非已部署数量",
+      "GLM-5.3是开源SOTA而非全面超越闭源旗舰",
+      "OpenAI IPO时间点为加速推进中，无确切日期"
+    ]
+  }
+}
