@@ -1,5 +1,18 @@
 [
   {
+    "number": "036",
+    "date": "2026-08-14",
+    "date_display": "2026.08.14",
+    "cover": {
+      "slug": "openai-40b-revenue-trillion-ipo-ai-commercialization",
+      "title": "OpenAI年化营收破400亿美元：从ChatGPT到万亿帝国，AI商业化只用了三年",
+      "deck": "OpenAI年化营收突破400亿美元，较去年底翻倍，7月环比暴增超20%，正加速推进IPO，估值目标直指万亿美元。从ChatGPT引爆AI浪潮到商业化全面爆发，只用了三年时间。AI的商业天花板，正在被重新定义。",
+      "title_short": "OpenAI年化营收破400亿奔赴万亿IPO"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
     "number": "035",
     "date": "2026-08-13",
     "date_display": "2026.08.13",

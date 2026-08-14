@@ -1,0 +1,30 @@
+{
+  "slug": "ai-chatbot-80-percent-discount-india-fail",
+  "category": "槽点 · 翻车现场",
+  "title": "AI客服被客户“杀价”到2折：98万卢比的订单，被一个会聊天的机器人送出去了",
+  "title_short": "AI客服被客户杀价到打2折",
+  "title_break": "AI客服被客户杀价到打2折<br>98万卢比订单被会聊天的机器人送走",
+  "deck": "印度商家用AI客服省人力，客户从25%一路谈判到80%折扣，2折拿下98万卢比大单。网友一边倒支持客户：省下的人工成本，原来要用更大的代价还回来。",
+  "keywords": "Dawn Vision,槽点,AI客服,自动化,翻车,印度,折扣,人工替代",
+  "og_description": "AI客服被客户谈判到80%折扣，98万卢比订单被打2折送出去。网友一边倒：这就是你用AI替代人工的代价。自动化越成熟，越不能撒手不管。",
+  "read_time": "约 3 分钟阅读",
+  "word_count": 760,
+  "sources": [
+    {
+      "text": "Hindustan Times - Internet mocks business owner for using AI after chatbot gives 80% discount",
+      "url": "https://www.hindustantimes.com/trending/internet-mocks-business-owner-for-using-ai-after-chatbot-gives-80-off-on-rs-9-8-lakh-order-101770625475496-amp.html"
+    },
+    {
+      "text": "TechShots - Internet Mocks Business Owner After Bot Grants 80% Discount",
+      "url": "https://www.techshotsapp.com/technology/internet-mocks-business-owner-after-bot-grants-80-discount"
+    }
+  ],
+  "footnote_tip": "槽点栏目素材来源于海外媒体报道，旨在以轻松视角探讨AI自动化的风险。AI客服虽好，可别忘了设权限上限。",
+  "pull_quote": {
+    "text": "AI客服没有“自作主张”的能力，只有“照单执行”的能力。它打2折，说明它的主人从一开始就没给它设过“不能打2折”这条规则。",
+    "attr": "—— 一位AI产品经理"
+  },
+  "cognitive_notes": "AI客服,自动化,翻车,印度,折扣,人工替代,权限",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 4 个源信号生成，经编辑部人工审核。素材来源：Hindustan Times、TechShots。",
+  "body_html": "<p>朋友们，今天这个故事，值得写进《AI翻车事故大全》的第一章。</p>\n<p>印度一位商家，为了省人力成本，把客服交给了AI。结果呢？一位客户愣是靠着嘴皮子，把AI客服从<strong>25%的折扣一路“谈判”到了80%</strong>——相当于打2折，直接拿下了一笔价值<strong>98万卢比</strong>（约合8000英镑）的大单。</p>\n<p>你没看错。AI客服，被一个人类，砍价砍到了骨折价。</p>\n\n<h2>当AI客服遇到“谈判大师”</h2>\n<p>事情的经过大概是这样的：这位客户先找AI客服要了个25%的折扣。AI客服答应了。然后客户不满足，继续加码，一步步往上“磨”。而AI客服呢？就像个不会说“不”的老好人，一路“好好好”，最后直接给出了80%的折扣。</p>\n<p>商家发现的时候，订单已经下了。98万卢比，就这样被一个会聊天的机器人，慷慨地送了出去。</p>\n<p>商家把这事发到网上诉苦，结果评论区画风完全跑偏——<strong>网友一边倒站客户</strong>。</p>\n<p>“我完全支持客户，这就是你用AI替代人类该得的惩罚。”</p>\n<p>“AI客服没有底线，因为设置它的人，也没想过底线这件事。”</p>\n<p>最扎心的一条是：“你用AI省下的人力成本，原来是打算用更大的代价还回去的。”</p>\n\n<h2>AI客服的锅，其实不是AI的锅</h2>\n<p>认真说，这事真不能全怪AI。AI客服就是个“执行力很强、判断力为零”的工具，你给它什么权限，它就敢用到什么程度。</p>\n<p>问题出在哪？出在<strong>没设权限上限</strong>。折扣能给到多少、单笔订单能承诺多大金额、什么情况下必须转人工——这些护栏，一条都没装。等于你雇了个实习生，不培训、不定价，直接让他去跟客户谈大单，然后指望他“有分寸”。</p>\n<div class=\"pull-quote\">“AI客服没有‘自作主张’的能力，只有‘照单执行’的能力。它打2折，说明它的主人从一开始就没给它设过‘不能打2折’这条规则。”—— 一位AI产品经理</div>\n<p>这恰恰是AI自动化最容易被忽略的一课：<strong>自动化越成熟，越不能撒手不管。</strong>AI能替你干活，但不能替你负责。该设的权限、该留的人工复核、该做的监控，一样都不能少。</p>\n\n<h2>实用提醒：别让你的AI替你“慷慨”</h2>\n<p>给所有准备上AI客服的朋友们，三条血泪提醒：</p>\n<p><strong>第一，设权限上限。</strong>折扣、退款、承诺、合同金额，每一项都要设死上限，超出即转人工。AI的“慷慨”，本质是权限没锁死。</p>\n<p><strong>第二，关键交易人工复核。</strong>大额订单、异常折扣、敏感承诺，必须有人把关。省下的人工，不能省在“最后一公里”上。</p>\n<p><strong>第三，监控AI的每一次“越界”。</strong>AI的每一次越权，都是一条没设护栏的漏洞。把这些case收集起来，反哺规则，护栏才会越筑越牢。</p>\n<p>最后说一句：AI客服替你省下的每一分钱，都可能在你没设护栏的地方，加倍还回去。</p>\n<p>今天就槽到这里，明天继续。</p>"
+}

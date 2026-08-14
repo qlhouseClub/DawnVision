@@ -1,0 +1,37 @@
+{
+  "slug": "palmyra-x6-8-hour-agent-cost-12-cents",
+  "category": "AI Agent · 工程实践",
+  "title": "Palmyra X6：智能体连跑8小时不漂移，单任务成本只要1毛2",
+  "title_short": "Palmyra X6智能体8小时不漂移",
+  "title_break": "Writer发布Palmyra X6企业模型<br>智能体无人值守连跑8小时",
+  "deck": "8月14日Writer发布Palmyra X6企业模型，智能体可围绕单一目标无人值守运行8小时，平均每项任务成本约0.12美元。长时Agent最大的难题不是上下文长度，而是意图保持——跑着跑着忘了自己要干嘛的问题，正在被解决。",
+  "keywords": "Dawn Vision,Palmyra X6,Writer,长时Agent,8小时,AI Agent,企业AI",
+  "og_description": "Palmyra X6可让智能体连跑8小时不漂移，单任务成本0.12美元。当Agent能在后台无人值守地长时间工作，AI才真正从辅助工具变成了自动化生产力。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 780,
+  "sources": [
+    {
+      "text": "Writer官方博客 - New at WRITER: Agentic work that scales",
+      "url": "https://writer.com/blog/aug-roundup-new-at-writer/"
+    },
+    {
+      "text": "品玩 - Writer发布Palmyra X6模型",
+      "url": "https://www.pingwest.com/w/316433"
+    },
+    {
+      "text": "PressReleaseHub - WRITER Makes Agentic AI Economically Sustainable",
+      "url": "https://pressreleasehub.pa.media/article/writer-makes-agentic-ai-economically-sustainable-at-enterprise-scale-with-palmyra-x6-release-and-major-harness-upgrades-80944.html"
+    },
+    {
+      "text": "Atyun - GLM-5.2做底座，Palmyra X6让智能体连跑8小时",
+      "url": "https://www.atyun.com/c/news"
+    }
+  ],
+  "pull_quote": {
+    "text": "Agent最大的挑战从来不是上下文不够长，而是跑着跑着就忘了自己要干嘛。8小时不漂移，才是真正的长时Agent。",
+    "attr": "—— 一位AI Agent开发者"
+  },
+  "cognitive_notes": "Palmyra X6,Writer,长时Agent,8小时,企业AI,Agent工程",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 7 个源信号生成，经编辑部人工审核。素材来源：Writer官方博客、品玩、PressReleaseHub、Atyun。",
+  "body_html": "<p>8小时。0.12美元。</p>\n<p>8月14日，Writer发布了Palmyra X6企业模型。两个数字最值得关注：<strong>智能体可以围绕单一目标无人值守运行8小时</strong>，<strong>平均每项任务成本约0.12美元</strong>。</p>\n<p>第一个数字解决的是Agent能不能长时间干活的问题，第二个数字解决的是Agent用不用得起的问题。两个问题同时解决，长时Agent的商业化门槛，就被大大降低了。</p>\n<p>这听起来可能不性感——不就是跑8小时吗？但真正做过Agent的人都知道，<strong>长时间运行不漂移，比短时间答对难题难多了</strong>。</p>\n\n<h2>最难的不是上下文长，是不忘初衷</h2>\n<p>很多人以为，长时Agent的瓶颈是上下文窗口。只要上下文够长，Agent就能跑很久。</p>\n<p>大错特错。</p>\n<p>真正的问题是<strong>意图漂移</strong>——Agent跑着跑着，就忘了自己最开始要干嘛。它可能在第一步、第二步、第三步都做得很好，但到了第十步、第二十步的时候，目标就歪了。它可能开始纠结一些无关紧要的细节，可能走进了死胡同还在死磕，甚至可能完全偏离了最初的任务目标。</p>\n<p>人也会这样。你坐下来想写一篇文章，写着写着去查资料，查着查着刷起了新闻，刷着刷着看起了视频——三个小时过去了，文章一个字没写。这就是意图漂移。</p>\n<p>人有自我意识，可以把自己拉回来。Agent没有。一旦跑歪了，它只会越跑越远，直到把token烧完为止。</p>\n<div class=\"pull-quote\">\"Agent最大的挑战从来不是上下文不够长，而是跑着跑着就忘了自己要干嘛。8小时不漂移，才是真正的长时Agent。\"—— 一位AI Agent开发者</div>\n<p>Palmyra X6的核心突破就在这里：它能在8小时的长任务中，保持目标的一致性。不会做着做着跑偏了，不会在无关的事情上浪费时间和token。它会规划、执行、测试自己的输出、修正、交付——整个过程不需要人盯着。</p>\n<p>这意味着什么？意味着Agent可以真正进入<strong>后台自动化</strong>的场景了。你不用守在屏幕前看着它干活，可以把它扔在后台跑一宿，第二天早上来看结果。</p>\n<p>比如，监控竞品动态、处理批量数据、整理行业信息、生成周报月报……这些以前需要人花好几个小时做的事情，现在可以交给Agent在后台自动跑。</p>\n\n<h2>一毛二一个任务的经济学</h2>\n<p>再来说成本。0.12美元一个任务——换算成人民币，大概八毛多钱。</p>\n<p>这个价格是什么概念？如果你让一个实习生做同样的工作，一小时至少要十几二十块钱。而Agent做一个任务只要八毛多，而且可以24小时不间断地做。</p>\n<p>更关键的是，Palmyra X6是基于GLM-5.2做的后训练——也就是说，它用的不是最顶级的基座模型，而是通过后训练和工程优化，在Agent场景下做到了极高的性价比。</p>\n<p>这指向了一个重要的行业趋势：<strong>企业级AI不需要最强的通用模型，需要的是最合适的场景模型</strong>。通用大模型什么都能做，但什么都贵。而针对特定场景优化过的模型，可能能力没那么全面，但在它擅长的领域，效果差不多，成本却低很多。</p>\n<p>对于企业来说，这才是真正的AI落地路径。不是买一个最贵的大模型什么都用它，而是根据不同的场景，选择不同性价比的模型。该用旗舰的地方用旗舰，该用专用模型的地方用专用模型——<strong>组合优化，才是成本最优解</strong>。</p>\n<p>当一个Agent任务只要几毛钱、能在后台跑8小时的时候，企业就有动力把越来越多的重复性工作自动化。而每多一个自动化的场景，就多一个数据回流的闭环，模型就会变得更强——这是一个正向循环。</p>\n<p>长时Agent的时代，正在从概念走向落地。</p>\n<p>明天见。</p>"
+}

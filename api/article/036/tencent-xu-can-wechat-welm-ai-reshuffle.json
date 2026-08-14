@@ -1,0 +1,33 @@
+{
+  "slug": "tencent-xu-can-wechat-welm-ai-reshuffle",
+  "category": "巨头动态 · 战略调整",
+  "title": "WizardLM作者徐灿转岗微信WeLM：腾讯AI的胜负手，不在混元在微信",
+  "title_short": "WizardLM作者转岗微信WeLM",
+  "title_break": "混元核心研究员转岗微信WeLM<br>超级App的Agent化才是腾讯AI胜负手",
+  "deck": "WizardLM作者徐灿从混元转岗微信WeLM，负责后训练与Agent。微信“小微”已灰度，腾讯单季算力开支527.8亿——超级App的Agent化，才是腾讯AI真正的胜负手。",
+  "keywords": "Dawn Vision,腾讯,混元,微信,WeLM,徐灿,WizardLM,Agent",
+  "og_description": "WizardLM作者徐灿转岗微信WeLM，负责后训练与Agent研发。当16亿用户的微信开始Agent化，腾讯AI的胜负手就不在混元，而在微信。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 850,
+  "sources": [
+    {
+      "text": "36氪·智能涌现 - 独家｜腾讯混元徐灿转岗微信WeLM",
+      "url": "https://m.sohu.com/a/1062779860_121423427/"
+    },
+    {
+      "text": "鞭牛士（新浪财经） - 腾讯AI的双线战争：混元之外，微信WeLM用四年证明另一种可能",
+      "url": "https://finance.sina.com.cn/roll/2026-07-14/doc-inihtvuk5320837.shtml"
+    },
+    {
+      "text": "虎嗅·字母榜 - 腾讯agent舰队初具雏形，就是太“费油”了",
+      "url": "http://m.163.com/dy/article/L48PB65T051188EA.html"
+    }
+  ],
+  "pull_quote": {
+    "text": "混元是腾讯的“正规军”，WeLM是微信的“特种兵”。真正决定腾讯AI天花板高度的，是16亿人的超级App能不能变成一个Agent。",
+    "attr": "—— 一位腾讯前AI研究员"
+  },
+  "cognitive_notes": "腾讯,混元,微信,WeLM,徐灿,WizardLM,Agent,超级App",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：36氪·智能涌现、鞭牛士（新浪财经）、虎嗅·字母榜。",
+  "body_html": "<p>527.8亿。</p>\n<p>这是腾讯上一季度花在算力上的资本开支——同比暴增<strong>176%</strong>，单季自由现金流上市以来首次转负。管理层在财报电话会上的解释很直白：钱，都拿去买卡、囤算力了。</p>\n<p>就在同一时间，一个更值得玩味的人事变动悄然落地：混元资深研究员<strong>徐灿</strong>——WizardLM第一作者、Evol-Instruct方法的提出者——转岗微信事业群，加入WeLM团队，负责后训练与Agent研发。</p>\n<p>把这两件事放在一起看，腾讯AI的路线图就清晰了：<strong>混元是“正规军”，WeLM是“特种兵”，而真正的胜负手，藏在微信这个16亿人的超级App里。</strong></p>\n\n<h2>从WizardLM到WeLM，一个关键人物的流转</h2>\n<p>徐灿是谁？在大模型圈，这个名字和两个技术标签绑定：<strong>WizardLM</strong>和<strong>Evol-Instruct</strong>。</p>\n<p>2023年4月，徐灿以第一作者身份发布WizardLM论文，提出Evol-Instruct方法——让大模型自动给已有任务增加难度、限制条件和推理步骤，再用生成的复杂指令去训练模型。这套方法后来被WizardCoder、WizardMath等项目沿用，成为合成数据与后训练领域绕不开的经典工作。</p>\n<p>微软亚洲研究院出身，长期深耕合成数据、强化学习反馈和自动评测——这些积累，恰好踩在WeLM当前最需要的能力上。</p>\n<p>微信的WeLM其实是个“老牌项目”：2022年10月就发布了100亿参数的中文预训练模型，比ChatGPT还早一个月。此后三年它几乎从公众视野消失，却在暗中迭代——今年1月到7月，微信AI团队连续放出四篇技术博客，完整展示了WeLM的后训练、MoE架构和长序列方案。</p>\n<p>徐灿的加入，补的是<strong>后训练和Agent</strong>这块拼图。公开招聘信息显示，微信近期正在招WeLM推理优化及Agent方向的研究员。</p>\n\n<h2>为什么是微信？超级App的Agent化才是终局</h2>\n<p>要理解这次转岗的分量，得先看清腾讯AI的困境。</p>\n<p>在chatbot赛道，腾讯的元宝被豆包甩开一个数量级；在基座模型上，混元还在追赶SOTA。继续在这两条赛道上死磕，胜算并不大。</p>\n<p>但腾讯手里有一张别人没有的牌：<strong>微信</strong>。16亿用户、每天几小时的停留时长、覆盖支付/社交/内容/服务的完整生态——如果微信本身变成一个Agent入口，那才是真正的大杀器。</p>\n<p>今年6月，微信原生AI助手“小微”已经进入灰度测试，用户可以通过文字或语音操作微信原生功能，还能调用小程序完成服务任务。而“小微”用的不是混元，是WeLM。</p>\n<p>这意味着什么？意味着微信正在走一条和集团混元并行、甚至更激进的路：<strong>不追求基座模型的最强，追求超级App场景里的最好用。</strong></p>\n<div class=\"pull-quote\">“混元是腾讯的‘正规军’，WeLM是微信的‘特种兵’。真正决定腾讯AI天花板高度的，是16亿人的超级App能不能变成一个Agent。”—— 一位腾讯前AI研究员</div>\n<p>从财报数据也能看出这种战略倾斜：上季度腾讯与算力相关的现金流出超过1100亿，管理层明确说这些算力要用于“微信AI举措”。钱往哪投，战略就在哪。</p>\n<p>徐灿的转岗，不是一次普通的人事调动。它是一个信号：<strong>腾讯把AI的胜负手，押在了微信的Agent化上。</strong>混元继续做基座，WeLM专攻场景，两条腿走路，但真正的增长引擎在后者。</p>\n<p>当16亿人的超级App开始变成一个能听懂、能办事的Agent，腾讯在AI时代的门票，可能比所有人预想的都要值钱。</p>\n<p>明天见。</p>"
+}
