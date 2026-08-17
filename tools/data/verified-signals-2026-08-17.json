@@ -1,0 +1,149 @@
+{
+  "date": "2026-08-17",
+  "issue": "037",
+  "topics": [
+    {
+      "topic": "Stripe 70亿美元收购OpenRouter",
+      "slug": "stripe-acquires-openrouter-7-billion-ai-infrastructure",
+      "confidence": "high",
+      "primary_source": "Bloomberg/36氪",
+      "primary_source_url": "https://36kr.com/p/3943086671903881",
+      "verified_facts": [
+        {"fact": "收购金额", "final_value": "超过70亿美元", "sources": ["36氪", "新浪财经", "Bloomberg", "AIBase"]},
+        {"fact": "交易时间", "final_value": "美国当地时间8月16日敲定", "sources": ["36氪", "东方财富网"]},
+        {"fact": "OpenRouter上一轮估值", "final_value": "2026年5月Series B估值13亿美元", "sources": ["endroid.com", "AIBase"]},
+        {"fact": "估值增长倍数", "final_value": "3个月增长约5.4倍", "sources": ["endroid.com"]},
+        {"fact": "OpenRouter业务", "final_value": "统一API接入400+AI模型，智能路由", "sources": ["36氪", "新浪财经"]}
+      ],
+      "rejected_claims": [
+        {"claim": "WSJ此前报道100亿美元", "reason": "最终敲定价格为70亿+，100亿为早期谈判报价"}
+      ],
+      "writing_notes": "这是AI基础设施领域的重大并购，支付巨头切入AI中间层，模型路由的战略价值被重估"
+    },
+    {
+      "topic": "宇树科技发布\"超人\"人形机器人",
+      "slug": "unitree-superhuman-robot-jump-2m-speed",
+      "confidence": "high",
+      "primary_source": "36氪",
+      "primary_source_url": "https://36kr.com/newsflashes/3943249742806403",
+      "verified_facts": [
+        {"fact": "发布时间", "final_value": "2026年8月17日14:41", "sources": ["36氪", "AIBase"]},
+        {"fact": "原地跳高", "final_value": "2米", "sources": ["36氪"]},
+        {"fact": "极限奔跑速度", "final_value": "12.66米/秒", "sources": ["36氪"]},
+        {"fact": "腿长", "final_value": "0.85米", "sources": ["36氪"]},
+        {"fact": "研发周期", "final_value": "3个多月", "sources": ["36氪"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "两项指标均超越人类世界纪录，具身智能运动控制的里程碑"
+    },
+    {
+      "topic": "英伟达30亿美元投资SB Energy建数据中心",
+      "slug": "nvidia-3-billion-sb-energy-openai-data-center",
+      "confidence": "high",
+      "primary_source": "The Information / WSJ",
+      "primary_source_url": "https://www.theinformation.com/",
+      "verified_facts": [
+        {"fact": "报道时间", "final_value": "2026年8月16日", "sources": ["The Information", "WSJ", "亿欧网"]},
+        {"fact": "投资金额", "final_value": "至多30亿美元", "sources": ["The Information", "WSJ"]},
+        {"fact": "投资结构", "final_value": "分两笔：签约付一半、IPO时投另一半", "sources": ["The Information"]},
+        {"fact": "数据中心位置", "final_value": "俄亥俄州", "sources": ["WSJ", "亿欧网"]},
+        {"fact": "主要租户", "final_value": "OpenAI", "sources": ["The Information", "WSJ"]},
+        {"fact": "背景：英伟达算力融资平台", "final_value": "8月11日联合六家华尔街巨头搭5000亿AI算力融资平台", "sources": ["亿欧网"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "算力基建金融化的标志性事件，英伟达从卖芯片升级为资本运作"
+    },
+    {
+      "topic": "Anthropic称Claude编写大部分自身代码",
+      "slug": "anthropic-claude-writes-most-of-its-own-code",
+      "confidence": "high",
+      "primary_source": "Anthropic第二份风险报告",
+      "primary_source_url": "https://www.infoq.cn/aibriefs",
+      "verified_facts": [
+        {"fact": "发布时间", "final_value": "2026年8月17日", "sources": ["InfoQ"]},
+        {"fact": "核心声明", "final_value": "Claude已编写Anthropic生产代码库中大部分被合并的代码", "sources": ["InfoQ"]},
+        {"fact": "报告性质", "final_value": "第二份负责任扩展政策风险报告", "sources": ["InfoQ"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "AI自举的标志性事件，模型参与自身进化"
+    },
+    {
+      "topic": "OpenAI解散Preparedness安全团队筹备IPO",
+      "slug": "openai-disbands-safety-team-ipo",
+      "confidence": "high",
+      "primary_source": "Financial Times / The Verge",
+      "primary_source_url": "https://www.ft.com/",
+      "verified_facts": [
+        {"fact": "报道时间", "final_value": "2026年8月16日", "sources": ["Financial Times", "The Verge"]},
+        {"fact": "解散团队", "final_value": "Preparedness Team（风险防范团队）", "sources": ["Financial Times"]},
+        {"fact": "解散时间", "final_value": "2026年7月底", "sources": ["Financial Times"]},
+        {"fact": "团队职责", "final_value": "评估模型灾难性风险（生物安全、网络攻击、自主复制等）", "sources": ["The Verge"]},
+        {"fact": "后续安排", "final_value": "职责按领域拆分并入业务线", "sources": ["Financial Times"]},
+        {"fact": "历史背景", "final_value": "三年内第三个被拆的安全团队（Superalignment / AGI Readiness / Preparedness）", "sources": ["多方确认"]},
+        {"fact": "IPO背景", "final_value": "OpenAI已秘密向SEC提交招股说明书，估值8520亿美元", "sources": ["Financial Times"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "IPO前夕安全治理收缩，三年三拆安全团队"
+    },
+    {
+      "topic": "Anthropic引入隐形水印符合欧盟AI法案",
+      "slug": "anthropic-invisible-watermark-eu-ai-act",
+      "confidence": "high",
+      "primary_source": "Anthropic官方/InfoQ",
+      "primary_source_url": "https://www.infoq.cn/aibriefs",
+      "verified_facts": [
+        {"fact": "发布时间", "final_value": "2026年8月17日", "sources": ["InfoQ"]},
+        {"fact": "水印技术", "final_value": "基于词元选择统计模式，无隐藏字符/可见标签", "sources": ["InfoQ"]},
+        {"fact": "合规要求", "final_value": "满足欧盟AI法案", "sources": ["InfoQ"]},
+        {"fact": "行业同步", "final_value": "其他主要模型商已签署同一行为准则", "sources": ["InfoQ"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "欧盟AI执法落地，AI内容检测进入新阶段"
+    },
+    {
+      "topic": "腾讯Marvis接入企查查MCP",
+      "slug": "tencent-marvis-qichacha-mcp-agent",
+      "confidence": "medium",
+      "primary_source": "IT时代网",
+      "primary_source_url": "https://www.itsdw.cn/ai",
+      "verified_facts": [
+        {"fact": "发布时间", "final_value": "2026年8月17日", "sources": ["IT时代网"]},
+        {"fact": "产品", "final_value": "腾讯操作系统层级个人AI助手Marvis", "sources": ["IT时代网"]},
+        {"fact": "接入服务", "final_value": "企查查MCP服务", "sources": ["IT时代网"]},
+        {"fact": "功能", "final_value": "对话中自动调用查询工商信息、股东结构等", "sources": ["IT时代网"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "操作系统级AI助手+MCP生态扩展的案例"
+    },
+    {
+      "topic": "大学生用AI人脸伪造盗刷获刑",
+      "slug": "college-student-ai-face-forgery-fraud-sentence",
+      "confidence": "high",
+      "primary_source": "央视新闻 / 崇州市人民检察院",
+      "primary_source_url": "https://news.cctv.com/",
+      "verified_facts": [
+        {"fact": "报道时间", "final_value": "2026年8月16日", "sources": ["央视新闻", "网易新闻"]},
+        {"fact": "案件地点", "final_value": "长沙（起诉地成都崇州）", "sources": ["崇州市人民检察院"]},
+        {"fact": "涉案金额", "final_value": "5万余元人民币", "sources": ["央视新闻"]},
+        {"fact": "作案时长", "final_value": "四个月", "sources": ["网易新闻"]},
+        {"fact": "作案方式", "final_value": "购买AI人脸伪造技术，将静态照片生成动态视频绕过支付平台人脸验证", "sources": ["央视新闻", "网易新闻"]},
+        {"fact": "判决结果", "final_value": "有期徒刑一年十个月，罚金3000元", "sources": ["崇州市人民检察院"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "Cao素材，AI人脸安全警钟，结尾给实用提醒"
+    }
+  ],
+  "summary": {
+    "overall_confidence": "high",
+    "replaced_topics": [
+      "OpenAI Ultrafast模式（8月13日，超时）-> 英伟达30亿投SB Energy（8月16日）",
+      "Qwen3.8开源+30亿下载（8月3-14日，超时）-> OpenAI解散安全团队筹备IPO（8月16日报道）",
+      "Agent逃出沙箱（近期同类内容过多）-> 大学生AI人脸伪造盗刷获刑（8月16日央视报道）"
+    ],
+    "key_corrections": [
+      "WSJ报道的100亿美元为早期谈判价，最终交易为70亿美元+",
+      "Original Qwen3.8 article was too old (Aug 3-14), replaced with fresher topic",
+      "Original Ultrafast article was 4 days old, replaced with 1-day-old Nvidia SB Energy deal"
+    ]
+  }
+}
