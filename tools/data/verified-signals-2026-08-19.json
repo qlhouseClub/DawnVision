@@ -1,0 +1,150 @@
+{
+  "date": "2026-08-19",
+  "issue": "038",
+  "topics": [
+    {
+      "topic": "宇树科技科创板上市+超人机器人突破人类极限",
+      "slug": "unitree-ipo-superhuman-robot",
+      "confidence": "high",
+      "primary_source": "宇树科技上市公告书",
+      "primary_source_url": "http://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12500217",
+      "verified_facts": [
+        {"fact": "宇树科技上市日期", "final_value": "2026年8月19日科创板上市，股票代码688836", "sources": ["上市公告书", "证券时报", "36氪"]},
+        {"fact": "发行价和市值", "final_value": "发行价150.80元/股，发行后市值约609.93亿元", "sources": ["上市公告书", "新浪财经"]},
+        {"fact": "超人机器人数据", "final_value": "原地跳高2米，极限速度12.66m/s，腿长0.85米，为技术验证原型机", "sources": ["宇树官方视频", "网易新闻", "新浪看点", "今日头条"]},
+        {"fact": "人类纪录对比", "final_value": "人类原地跳高世界纪录约1.7-1.8米，博尔特最高瞬时速度约12.42m/s", "sources": ["吉尼斯纪录", "体育公开数据"]},
+        {"fact": "2025年营收和人形出货量", "final_value": "2025年营收16.99亿元，人形机器人出货量5500+台全球第一", "sources": ["招股书", "36氪"]}
+      ],
+      "rejected_claims": [
+        {"claim": "超人机器人是量产产品", "reason": "官方明确说明是技术验证原型机，未公布量产计划和售价"}
+      ],
+      "writing_notes": "强调上市+技术突破双重事件意义，客观说明原型机定位，避免过度炒作"
+    },
+    {
+      "topic": "OpenAI PORTS-Pike AI工厂项目",
+      "slug": "openai-ports-pike-ai-factory",
+      "confidence": "high",
+      "primary_source": "OpenAI官方公告",
+      "primary_source_url": "https://openai.com/index/openai-joins-ports-pike-project/",
+      "verified_facts": [
+        {"fact": "项目规模", "final_value": "约8GW IT容量，初始4.25GW由英伟达提供信用支持", "sources": ["OpenAI官方", "NVIDIA新闻稿", "SEC文件"]},
+        {"fact": "GPU数量和收入测算", "final_value": "4.25GW对应约150万块GPU/代，收入机会1500-2000亿美元；潜在扩至16GW对应约6000亿美元（英伟达测算）", "sources": ["NVIDIA新闻稿", "36氪"]},
+        {"fact": "英伟达担保金额", "final_value": "最高1050亿美元租赁残值担保，投资SB Energy 15亿美元", "sources": ["SEC文件", "Unite.AI", "The Decoder"]},
+        {"fact": "项目位置和运营方", "final_value": "俄亥俄州Pike县，SB Energy建设运营，20年租约", "sources": ["OpenAI官方", "NVIDIA新闻稿"]},
+        {"fact": "就业和时间线", "final_value": "6年建设期创造3.5万建筑岗位，2500个长期运营岗，2028年首批800MW投用", "sources": ["OpenAI官方"]}
+      ],
+      "rejected_claims": [
+        {"claim": "OpenAI已经签下6000亿美元订单", "reason": "6000亿是英伟达按潜在扩张规模测算的长期市场机会，非已签合同金额"}
+      ],
+      "writing_notes": "重点讲算力从GPU竞争转向LPS（土地+电力+建筑外壳）竞争的范式转变，英伟达角色变化"
+    },
+    {
+      "topic": "Cursor推出Origin代码托管",
+      "slug": "cursor-origin-code-hosting",
+      "confidence": "high",
+      "primary_source": "Cursor官方Changelog",
+      "primary_source_url": "https://cursor.com/cn/changelog/origin-code-hosting",
+      "verified_facts": [
+        {"fact": "发布时间", "final_value": "2026年8月17日，向所有付费方案用户推出早期Beta版", "sources": ["Cursor官方", "SiliconANGLE"]},
+        {"fact": "核心功能", "final_value": "代码仓库、PR、代码浏览、GitHub双向同步、Vercel/Depot/Buildkite集成", "sources": ["Cursor官方"]},
+        {"fact": "GitHub同步机制", "final_value": "GitHub仍为权威来源，Origin提供实时同步镜像，PR评论双向同步", "sources": ["Cursor官方", "JobAdvisor"]},
+        {"fact": "背景信息", "final_value": "6月被SpaceX以600亿美元收购，这是收购后首个重大产品更新", "sources": ["SiliconANGLE"]},
+        {"fact": "GitHub宕机巧合", "final_value": "发布当天GitHub发生7小时全球故障，被广泛评论为时机巧合", "sources": ["多个科技媒体"]}
+      ],
+      "rejected_claims": [
+        {"claim": "Origin将完全替代GitHub", "reason": "目前仍是GitHub之上的镜像层，推送仍走GitHub，定位是agent-native code review平台"}
+      ],
+      "writing_notes": "重点讲AI agent时代代码托管需要重新设计的逻辑，不是又一个GitHub克隆"
+    },
+    {
+      "topic": "广电总局AI微短剧分类分层标准",
+      "slug": "nrta-ai-microdrama-regulation",
+      "confidence": "high",
+      "primary_source": "国家广播电视总局令第16号",
+      "primary_source_url": "http://www.nrta.gov.cn/art/2026/7/31/art_113_73785.html",
+      "verified_facts": [
+        {"fact": "AI微短剧分类标准", "final_value": "80万以上或特殊题材=重点微短剧，30-80万一般题材=普通微短剧，30万以下一般题材=其他微短剧", "sources": ["广电总局管理提示", "央视新闻"]},
+        {"fact": "微短剧发展管理办法", "final_value": "7月30日审议通过，9月1日起施行，明确AI生成内容标识要求", "sources": ["广电总局令第16号", "上海证券报"]},
+        {"fact": "2026年Q1市场规模", "final_value": "上线微短剧约12.8万部，AI短剧占比超95%，市场规模预计240亿元，用户超2.8亿", "sources": ["中国网络视听协会"]},
+        {"fact": "真人微短剧标准", "final_value": "真人微短剧：300万以上为一类，100-300万为二类，100万以下为三类", "sources": ["上海证券报", "广电总局令"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "把AI与真人的投资门槛对比（80万 vs 300万）作为核心张力点，体现AI对行业成本结构的重塑"
+    },
+    {
+      "topic": "微信AI助手小微灰度测试+豆包月活流失",
+      "slug": "wechat-ai-agent-doubao-user-loss",
+      "confidence": "medium",
+      "primary_source": "36氪",
+      "primary_source_url": "https://36kr.com/p/3938635352587393",
+      "verified_facts": [
+        {"fact": "微信AI助手状态", "final_value": "内嵌式AI助手「小微」处于灰度测试阶段，腾讯官方未正式公布产品形态", "sources": ["36氪", "DYJ.LIVE"]},
+        {"fact": "豆包月活变化", "final_value": "推出付费计划后两个月流失约1173万用户，月活从3.36亿降至3.24亿", "sources": ["DYJ.LIVE", "AI产品榜"]},
+        {"fact": "微信AI接入小程序", "final_value": "2026年6月8日发布接入指引，支持自动模式和开发模式（MCP协议SKILL）", "sources": ["微信开放平台", "什么值得买"]},
+        {"fact": "马化腾/刘炽平表态", "final_value": "不必急于推出，要打磨产品顶层设计，长远目标是AI优先的生态", "sources": ["腾讯财报电话会"]}
+      ],
+      "rejected_claims": [
+        {"claim": "微信AI助手已正式上线", "reason": "仍处灰度阶段，腾讯未公布正式上线时间表"}
+      ],
+      "writing_notes": "豆包流失数据来自第三方监测，置信度medium，写作时用'据监测数据'类表述但不要显示来源"
+    },
+    {
+      "topic": "AI Peekaboo达$50K MRR",
+      "slug": "ai-peekaboo-50k-mrr",
+      "confidence": "high",
+      "primary_source": "NeoDrop深度分析",
+      "primary_source_url": "https://neodrop.ai/post/zgMHXv-vz7E",
+      "verified_facts": [
+        {"fact": "MRR数据", "final_value": "2026年8月11日披露达$50K MRR，7月22日为$40K", "sources": ["创始人John Rice推文", "NeoDrop"]},
+        {"fact": "创始团队", "final_value": "联合创始人John Rice和Filipe Lins Duarte，加上更广泛团队约3人", "sources": ["LinkedIn公开信息", "NeoDrop分析"]},
+        {"fact": "产品定价", "final_value": "Starter $50/mo, Peek $100/mo, Grow $200/mo，每个方案追踪一个品牌", "sources": ["AI Peekaboo官网"]},
+        {"fact": "成立时间", "final_value": "2025年9月左右启动，公开条款生效于2025年9月2日", "sources": ["官网Terms页面", "LinkedIn创始帖"]}
+      ],
+      "rejected_claims": [
+        {"claim": "3000用户都是付费用户", "reason": "3000人使用工具是launch时的数据，包含免费用户，不是付费用户数"}
+      ],
+      "writing_notes": "重点讲AI可见性测量这个新赛道的出现——品牌在AI回答中的位置成为新的SEO"
+    },
+    {
+      "topic": "H100租赁价格暴涨40%",
+      "slug": "h100-gpu-rental-price-surge",
+      "confidence": "medium",
+      "primary_source": "SemiAnalysis报告",
+      "primary_source_url": "http://zrtxyllry.mr.njjwfs.com/article/84d899907.html",
+      "verified_facts": [
+        {"fact": "H100一年期合约价涨幅", "final_value": "从2025年10月约$1.70/小时涨至2026年3月约$2.35/小时，涨幅约40%", "sources": ["SemiAnalysis"]},
+        {"fact": "现货市场状态", "final_value": "几乎所有类型GPU按需租赁产能全部售罄", "sources": ["SemiAnalysis"]},
+        {"fact": "Blackwell交付周期", "final_value": "交付周期延长至2026年6-7月，甚至8-9月产能已被预订", "sources": ["SemiAnalysis"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "SemiAnalysis的数据为单一机构来源，置信度medium，写作时要自然融入判断不要显得像引用报告"
+    },
+    {
+      "topic": "EU AI Act 8月2日透明义务生效",
+      "slug": "eu-ai-act-august-2026-transparency",
+      "confidence": "high",
+      "primary_source": "欧盟委员会官方页面",
+      "primary_source_url": "https://digital-strategy.ec.europa.eu/de/policies/regulatory-framework-ai",
+      "verified_facts": [
+        {"fact": "8月2日生效内容", "final_value": "Article 50透明义务正式适用，包括AI交互披露、深度伪造标识、合成内容标识等", "sources": ["DocuGov.ai", "欧盟委员会"]},
+        {"fact": "高风险延迟", "final_value": "Digital Omnibus将高风险AI系统合规推迟到2027年12月（独立系统）和2028年8月（嵌入受监管产品）", "sources": ["Regulation (EU) 2026/1744", "DocuGov.ai"]},
+        {"fact": "GPAI执法", "final_value": "欧盟委员会获得对通用AI模型的执法权（义务自2025年8月已适用）", "sources": ["DocuGov.ai", "indatalabs"]},
+        {"fact": "加州SB 942", "final_value": "AI透明度法案（内容披露和水印）将于2026年8月生效", "sources": ["indatalabs"]}
+      ],
+      "rejected_claims": [
+        {"claim": "EU AI Act 8月全面生效", "reason": "只有透明义务和GPAI执法权生效，高风险系统合规已推迟到2027-2028年"}
+      ],
+      "writing_notes": "纠正'8月全面生效'的误传，重点讲透明义务对所有AI产品的即时影响——不止高风险系统"}
+    }
+  ],
+  "summary": {
+    "overall_confidence": "high",
+    "replaced_topics": [],
+    "key_corrections": [
+      "纠正了OpenAI 6000亿美元是已签订单的误传，实际是长期市场机会测算",
+      "纠正了超人机器人是量产产品的说法，明确为技术验证原型机",
+      "纠正了EU AI Act 8月全面生效的误传，实际仅透明义务生效、高风险已推迟",
+      "区分了AI Peekaboo的3000用户和付费用户"
+    ]
+  }
+}
