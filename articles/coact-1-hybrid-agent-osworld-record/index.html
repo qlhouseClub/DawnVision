@@ -1,0 +1,163 @@
+<!DOCTYPE html><html lang="zh-CN" data-lang="zh"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>混合智能体破世界纪录 — Dawn Vision</title><meta name="description" content="Salesforce 与南加州大学联合发布 CoAct-1 混合智能体，OSWorld 基准 60.76% 成功率破世界纪录，代码与 GUI 双模式协同。"><meta name="author" content="Dawn Vision 编辑部"><meta name="keywords" content="Dawn Vision, AI资讯, AI日报, 人工智能, 大模型, AI Agent, GPT, Claude, 具身智能, AI商业化, 一人公司, AI编程, 深度分析, AI观察, LLM, AIGC, 槽点, 吐槽, AI吐槽, Cao, AI吐槽专栏, AI趣闻, AI翻车, AI fails, AI roasting, tech rant, AI humor"><link rel="canonical" href="https://www.dawnvision.net/articles/coact-1-hybrid-agent-osworld-record/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&family=Noto+Sans+SC:wght@400;500;700&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&family=Noto+Sans+SC:wght@400;500;700&display=swap"></noscript><meta property="og:type" content="article"><meta property="og:title" content="混合智能体破世界纪录 — Dawn Vision"><meta property="og:description" content="Salesforce 与南加州大学联合发布 CoAct-1 混合智能体，OSWorld 基准 60.76% 成功率破世界纪录，代码与 GUI 双模式协同。"><meta property="og:url" content="https://www.dawnvision.net/articles/coact-1-hybrid-agent-osworld-record/"><meta property="og:image" content="https://www.dawnvision.net/images/og-image.png"><meta property="og:site_name" content="Dawn Vision"><meta property="og:locale" content="zh_CN"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="混合智能体破世界纪录 — Dawn Vision"><meta name="twitter:description" content="Salesforce 与南加州大学联合发布 CoAct-1 混合智能体，OSWorld 基准 60.76% 成功率破世界纪录，代码与 GUI 双模式协同。"><meta name="twitter:image" content="https://www.dawnvision.net/images/og-image.png"><meta name="robots" content="index, follow"><meta name="applicable-device" content="pc,mobile"><meta name="format-detection" content="telephone=no"><meta name="baidu-site-verification" content><script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Salesforce CoAct-1：代码 + GUI 混合智能体破 OSWorld 纪录","description":"Salesforce 与南加州大学联合发布 CoAct-1 混合智能体，OSWorld 基准 60.76% 成功率破世界纪录，代码与 GUI 双模式协同。","datePublished":"2026-08-20","dateModified":"2026-08-20","author":{"@type":"Organization","name":"Dawn Vision 编辑部"},"publisher":{"@type":"Organization","name":"Dawn Vision","url":"https://www.dawnvision.net/","logo":{"@type":"ImageObject","url":"https://www.dawnvision.net/images/og-image.png","width":1200,"height":630}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.dawnvision.net/articles/coact-1-hybrid-agent-osworld-record"},"url":"https://www.dawnvision.net/articles/coact-1-hybrid-agent-osworld-record","inLanguage":"zh-CN","articleSection":"AI Agent","keywords":"","wordCount":800}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://www.dawnvision.net/"},{"@type":"ListItem","position":2,"name":"文章","item":"https://www.dawnvision.net/articles/"},{"@type":"ListItem","position":3,"name":"混合智能体破世界纪录"}]}</script><style>
+    /* Language toggle: show/hide content based on data-lang */
+    :root {
+      --dv-lang: 'zh';
+    }
+    html[data-lang="zh"] .dv-en { display: none !important; }
+    html[data-lang="en"] .dv-zh { display: none !important; }
+
+    /* When English is active, swap visible text for title/description */
+    html[data-lang="en"] head > title { display: none; }
+
+    /* Floating language switch button */
+    .dv-lang-switch {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 900;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: none;
+      background: #ffffff;
+      color: #002FA7;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .dv-lang-switch:hover {
+      background: #002FA7;
+      color: #fff;
+      transform: scale(1.08);
+      box-shadow: 0 4px 24px rgba(0,47,167,0.3);
+    }
+    @media (max-width: 700px) {
+      .dv-lang-switch {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+        font-size: 10px;
+      }
+    }
+  </style><link rel="stylesheet" href="/_astro/502.Dsp8BFs5.css">
+<style>@keyframes blobFloat{0%,to{transform:translate(0) scale(1)}33%{transform:translate(3vw,4vh) scale(1.05)}66%{transform:translate(-2vw,-3vh) scale(.97)}}.blobs--home{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--home .blob{position:absolute;border-radius:50%;filter:blur(120px);opacity:.5;animation:blobFloat 25s ease-in-out infinite;will-change:transform}.blobs--home .blob--1{width:50vw;height:50vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-5%;left:-5%;animation-delay:0s;animation-duration:30s}.blobs--home .blob--2{width:55vw;height:55vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-10s;animation-duration:28s;opacity:.6}.blobs--home .blob--3{width:40vw;height:40vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:30%;right:5%;animation-delay:-15s;animation-duration:32s;opacity:.4}.blobs--home .blob--4{width:35vw;height:35vw;background:radial-gradient(circle,rgba(80,130,255,.3) 0%,transparent 70%);top:0%;left:25%;animation-delay:-5s;animation-duration:35s;opacity:.35}.blobs--home .blob--5,.blobs--home .blob--6{display:none}.blobs--section{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--section .blob{position:absolute;border-radius:50%;filter:blur(100px);opacity:.45;animation:blobFloat 28s ease-in-out infinite;will-change:transform}.blobs--section .blob--1{width:45vw;height:45vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-10%;left:-8%;animation-delay:0s;animation-duration:30s}.blobs--section .blob--2{width:50vw;height:50vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-8s;animation-duration:26s;opacity:.55}.blobs--section .blob--3{width:35vw;height:35vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:20%;right:5%;animation-delay:-14s;animation-duration:32s}.blobs--section .blob--4,.blobs--section .blob--5{display:none}@media(max-width:700px){.blobs--home .blob{filter:blur(80px)}.blobs--section .blob{filter:blur(60px)}}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.CY1OParl.css"></head> <body class>  <a href="#main-content" class="skip-link">跳至主要内容</a>  <nav class="nav nav--inner notranslate" role="navigation" aria-label="主导航" data-pagefind-ignore translate="no"> <div class="nav__inner"> <div class="nav__group"> <a href="/" class="nav__link ">Home</a> <a href="/articles/" class="nav__link nav__link--active" aria-current="page">Articles</a> </div> <a href="/" class="nav__brand" aria-label="Dawn Vision 首页" translate="no">
+Dawn Vision
+<small>Daily Briefing</small> </a> <div class="nav__group"> <a href="/cao/" class="nav__link ">Cao</a> <a href="/about/" class="nav__link ">About</a> </div> </div> </nav> <main id="main-content"> <a href="/articles/" class="dv-back-btn" aria-label="返回文章列表" title="返回文章列表"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"> <polyline points="15 18 9 12 15 6"></polyline> </svg> </a> <section class="article-hero "> <div class="blobs blobs--section" aria-hidden="true"> <div class="blob blob--1"></div><div class="blob blob--2"></div><div class="blob blob--3"></div><div class="blob blob--4"></div><div class="blob blob--5"></div> </div> <div class="container--narrow" style="position:relative;z-index:1;"> <div data-pagefind-meta="category" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">AI Agent</div>  <h1 class="article-hero__title dv-zh" data-pagefind-meta="title">Salesforce 发布 CoAct-1 混合智能体
+OSWorld 成功率 60.76% 创纪录</h1>  <h1 class="article-hero__title dv-en">Salesforce Unveils CoAct-1 Hybrid Agent
+60.76% OSWorld Success Rate Record</h1> <p class="article-hero__deck dv-zh">三智能体协同架构，能用代码绝不用 GUI，平均 10.15 步完成任务。Agent 演进从单兵作战走向团队协作。</p> <p class="article-hero__deck dv-en">Three-agent collaborative architecture, prefers code over GUI, 10.15 average steps per task. Agent evolution shifts from solo ops to team collaboration.</p> <div class="article-hero__meta"> <span class="article-hero__issue notranslate">No.039</span> <span>2026年8月20日</span> <span class="dv-zh">约 5 分钟阅读</span> <span class="dv-en">~5 min read</span> </div> </div> </section> <article class="container--narrow" style="padding-top: clamp(40px, 6vw, 64px); padding-bottom: 0;">  <div class="article-body dv-zh" data-pagefind-body><p>Salesforce 和南加州大学的研究团队，在 8 月 17 日发布了一个叫 <strong>CoAct-1</strong> 的混合智能体系统，直接把 OSWorld 基准测试的成功率干到了 <strong>60.76%</strong>——新的世界纪录。</p>
+
+<p>OSWorld 是什么？它是目前最硬核的电脑操作智能体测试集，涵盖浏览器、IDE、办公软件等 369 个真实世界任务。之前的 GUI Agent 天花板大概在 50% 左右，CoAct-1 一下提了 10 个百分点。</p>
+
+<p>怎么做到的？核心思路很反直觉——<strong>不是把 GUI Agent 做得更强，而是给它配一个"程序员搭档"</strong>。</p>
+
+<h2>三智能体架构：代码 + GUI 混合作战</h2>
+
+<p>CoAct-1 不是一个 Agent，而是三个 Agent 的协同系统：</p>
+
+<p><strong>编排者（Orchestrator）</strong>：总控中心，负责拆解用户目标、分配子任务、协调整个流程。</p>
+
+<p><strong>程序员（Programmer）</strong>：后端操作专家，通过 Python 和 Bash 脚本直接调用系统接口、处理文件、操作数据库——凡是能靠代码解决的，都交给它。</p>
+
+<p><strong>GUI 操作员（GUI Operator）</strong>：前端操作专家，通过视觉理解屏幕、模拟鼠标键盘——凡是代码搞不定的、必须用图形界面的，才让它上。</p>
+
+<p>关键在于"智能路由"：系统会动态判断每个子任务最适合用什么方式完成——能用代码的，绝不用 GUI。代码执行精准、快速、不会点错；GUI 灵活、能处理没有 API 的遗留系统。两者结合，各取所长。</p>
+
+<p>效果有多明显？平均每个任务只用 10.15 步，而纯 GUI Agent 平均要 15.22 步。步数少了近三分之一，成功率还更高——因为代码操作几乎不会"点错按钮"。</p>
+
+<h2>为什么这是 Agent 演进的关键一步</h2>
+
+<p>很长一段时间里，AI Agent 的发展路径分成了两派。</p>
+
+<p>一派是 <strong>API-first Agent</strong>：通过 API 和 MCP 调用工具，精准可靠，但只能用在有 API 的系统里。企业内部大量遗留软件、SaaS 产品的深层功能，没有 API 就没办法。</p>
+
+<p>另一派是 <strong>GUI Agent</strong>：像人一样看屏幕、点鼠标、敲键盘，理论上什么软件都能操作。但问题是——它太像人了，人会点错，它也会点错。而且越复杂的界面，出错概率越高。</p>
+
+<p>CoAct-1 的意义在于，它证明了 <strong>两条路不是二选一，而是可以融合的</strong>。能用 API 的地方用 API，不能用的地方用 GUI，编排层负责调度。这不是简单的"1+1=2"，而是两种范式的互补——代码的稳定性乘上 GUI 的通用性。</p>
+
+<p>这个思路特别适合企业场景。企业里的软件环境有多杂，做过的人都懂——有新的 SaaS 有 API，有老的 ERP 只能点鼠标，有内部系统要走命令行。单一模式的 Agent 根本吃不下这么复杂的环境。但混合模式可以。</p>
+
+<h2>但离"电脑随便用"还有很远</h2>
+
+<p>60.76% 的成功率听起来不错，但要真的放到生产环境用，还差得远。</p>
+
+<p>想想看：你让 AI 帮你处理 10 个任务，有 4 个会搞砸——这种可靠性，谁敢让它碰真实业务？企业级应用要求的是 99.9% 以上的成功率，60% 连"试用"门槛都够不上。</p>
+
+<p>而且 CoAct-1 暴露了一个更深的问题：Agent 的能力越强，安全风险就越大。一个能同时写代码又操作 GUI 的 Agent，如果出了bug或者被注入了，破坏力比单一模式的 Agent 大得多。代码执行权限、数据访问权限、操作审计……这些都是企业级落地必须解决的问题。</p>
+
+<p>Salesforce 研究团队自己也说了，"人在环路"（human-in-the-loop）模式在短期内仍然是必要的。AI Agent 不是来替代人的，是来帮人干活的——关键操作还是要人来拍板。</p>
+
+<p>所以 CoAct-1 更像是一个里程碑式的信号：<strong>Agent 的进化方向，已经从"单个 Agent 变强"转向"多个 Agent 协作"和"多种范式融合"</strong>。未来的 Agent 系统，不会是一个无所不能的超级智能，而是一个各司其职的智能体团队。</p>
+
+<p>就像人类社会一样——不是每个人什么都会，而是每个人干自己最擅长的，然后协作完成复杂任务。</p>
+
+<p>AI 也在走同样的路。</p>
+
+<p>明天见。</p></div>  <div class="article-body dv-en"><p>Salesforce and USC researchers dropped a hybrid agent system called <strong>CoAct-1</strong> on August 17, and it just crushed the OSWorld benchmark with a <strong>60.76%</strong> success rate — a new world record.</p>
+
+<p>What's OSWorld? It's the hardest benchmark for computer-using agents, with 369 real-world tasks across browsers, IDEs, and office applications. The previous ceiling for GUI agents was around 50%. CoAct-1 just jumped it by ten points.</p>
+
+<p>How'd they do it? The core insight is counterintuitive — <strong>instead of making a better GUI agent, they paired it with a "programmer partner."</strong></p>
+
+<h2>Three-Agent Architecture: Code + GUI Hybrid Warfare</h2>
+
+<p>CoAct-1 isn't one agent. It's a collaborative system of three:</p>
+
+<p><strong>Orchestrator:</strong> Mission control. Breaks down user goals, assigns subtasks, coordinates the whole pipeline.</p>
+
+<p><strong>Programmer:</strong> Backend operations specialist. Handles everything through Python and Bash scripts — system calls, file processing, database operations. If it can be solved with code, this agent does it.</p>
+
+<p><strong>GUI Operator:</strong> Frontend operations specialist. Interprets screens visually, simulates mouse and keyboard. Only steps in when code can't handle it — when you actually need a graphical interface.</p>
+
+<p>The key is "intelligent routing": the system dynamically judges the best way to complete each subtask. If it can use code, it uses code — no GUI required. Code execution is precise, fast, and never misclicks. GUI is flexible and handles legacy systems with no APIs. Together, they cover each other's weaknesses.</p>
+
+<p>How big is the impact? The average task takes just 10.15 steps, compared to 15.22 for pure GUI agents. Nearly a third fewer steps, and a higher success rate — because code operations almost never "click the wrong button."</p>
+
+<h2>Why This Is a Key Step in Agent Evolution</h2>
+
+<p>For a long time, AI agent development split into two camps.</p>
+
+<p>One camp is <strong>API-first agents</strong>: they call tools through APIs and MCP, precise and reliable — but they only work where APIs exist. Enterprise environments are full of legacy software, deep SaaS features, and internal systems with no API surface. API agents hit a wall fast.</p>
+
+<p>The other camp is <strong>GUI agents</strong>: they look at screens, click mice, and type keyboards just like humans. Theoretically, they can operate any software. But the problem is — they're too much like humans. Humans make misclicks, and so do they. And the more complex the interface, the higher the error rate.</p>
+
+<p>CoAct-1 proves that <strong>these two paths don't have to be an either/or — they can merge</strong>. Use APIs where available, GUI where not, and let the orchestration layer handle scheduling. This isn't just "1+1=2" — it's the complementarity of two paradigms: the stability of code multiplied by the generality of GUI.</p>
+
+<p>This approach is especially relevant for enterprise scenarios. Anyone who's worked in corporate IT knows how messy the software environment gets — new SaaS with APIs, old ERPs that only work via mouse, internal systems running on command lines. A single-mode agent can't handle that complexity. A hybrid mode can.</p>
+
+<h2>But "Use Any Computer" Is Still Far Away</h2>
+
+<p>A 60.76% success rate sounds impressive, but for actual production use, it's nowhere near enough.</p>
+
+<p>Think about it: you ask AI to handle 10 tasks, and 4 of them go wrong. At that reliability level, who would let it touch real business operations? Enterprise-grade applications need 99.9%+ success rates. 60% doesn't even clear the "trial" bar.</p>
+
+<p>And CoAct-1 exposes a deeper issue: the more capable an agent is, the bigger the security risk. An agent that can both write code and operate a GUI — if it bugs out or gets prompt-injected — can do way more damage than a single-mode agent. Code execution permissions, data access controls, audit trails… these are all mandatory for enterprise deployment.</p>
+
+<p>Salesforce's own research team acknowledges that a human-in-the-loop model will remain necessary for the foreseeable future. AI agents aren't here to replace humans — they're here to help humans get work done. Humans still call the shots on critical operations.</p>
+
+<p>So CoAct-1 is more of a milestone signal: <strong>agent evolution has shifted from "making individual agents smarter" to "making multiple agents collaborate" and "fusing multiple paradigms."</strong> The future of agent systems won't be one omniscient super-intelligence — it'll be a team of specialists, each doing what it does best.</p>
+
+<p>Just like human society. Not everyone knows everything. Everyone does what they're best at, and together they tackle complex tasks.</p>
+
+<p>AI is walking the same path.</p>
+
+<p>See you tomorrow.</p></div>        <div class="article-sources"> <div class="article-sources__title notranslate"> <span class="dv-zh">Sources · 信源</span> <span class="dv-en">Sources</span> </div> <ul class="article-sources__list"> <li class="article-sources__item"> <a href="https://ai-damn.com/salesforce-usc-launch-hybrid-ai-agent-coact-1-1-1755126937563" target="_blank" rel="noopener noreferrer">AI DAMN: CoAct-1 报道</a> </li><li class="article-sources__item"> <a href="https://osworld.com/" target="_blank" rel="noopener noreferrer">OSWorld 基准测试官网</a> </li><li class="article-sources__item"> Salesforce Research 官方论文 </li> </ul>  </div>  <div class="article-actions"> <button class="article-action-btn article-action-btn--like" id="article-like-btn" data-slug="coact-1-hybrid-agent-osworld-record" aria-label="喜欢这篇文章"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path> </svg> <span class="article-action-btn__label" data-i18n="like">喜欢</span> <span class="article-action-btn__count" id="like-count">0</span> </button> <button class="article-action-btn article-action-btn--tip" id="article-tip-btn" aria-label="打赏"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon> </svg> <span class="article-action-btn__label" data-i18n="tip">打赏</span> </button> </div>  <nav class="article-nav" aria-label="文章导航"> <a href="/articles/ai-copyright-regulation-digital-passport/" class="article-nav__item article-nav__item--prev"> <div class="article-nav__label"> <span class="dv-zh" data-i18n="prev_article">上一篇</span> <span class="dv-en" data-i18n="prev_article">Previous</span> </div> <div class="article-nav__title dv-zh">AI 监管双线落地：字节-MPA 版权休战 + 智能体数字护照</div> <div class="article-nav__title dv-en">AI Regulation Advances: ByteDance-MPA Copyright Truce + Agent Digital Passports</div> </a> <a href="/articles/qwen3-8-open-source-edge-model/" class="article-nav__item article-nav__item--next"> <div class="article-nav__label"> <span class="dv-zh" data-i18n="next_article">下一篇</span> <span class="dv-en" data-i18n="next_article">Next</span> </div> <div class="article-nav__title dv-zh">Qwen3.8-27B 开源：端侧模型正在获得旗舰级 Agent 能力</div> <div class="article-nav__title dv-en">Qwen3.8-27B Goes Open Source: Edge Models Gain Flagship Agent Capabilities</div> </a> </nav> </article>  </main> <footer class="footer footer--site" role="contentinfo" data-pagefind-ignore> <div class="footer__container"> <div class="footer__brand notranslate" translate="no">Dawn Vision</div> <div class="footer__meta notranslate" translate="no">© 2026 · Daily at 16:30 CST · Weekdays Only</div> </div> </footer>   <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="搜索文章" hidden> <div class="search-modal" role="document"> <div class="search-modal__input-wrap"> <svg class="search-modal__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="11" cy="11" r="8"></circle> <line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> <input type="search" class="search-modal__input" id="search-input" placeholder="搜索文章、关键词、作者..." autocomplete="off" spellcheck="false" aria-label="搜索关键词"> <span class="search-modal__close-hint">ESC</span> </div> <div class="search-modal__results" id="search-results"> <div class="search-modal__empty">输入关键词开始搜索</div> </div> <div class="search-modal__footer"> <span><kbd>↑</kbd><kbd>↓</kbd> 选择</span> <span><kbd>↵</kbd> 打开</span> <span><kbd>⌘K</kbd> 搜索</span> </div> </div> </div> <!-- Reading progress bar (shown on article pages) --> <div class="reading-progress" id="reading-progress" hidden></div>  <div class="tip-modal" id="tip-modal" hidden> <div class="tip-modal__overlay" data-tip-close></div> <div class="tip-modal__content" role="dialog" aria-modal="true" aria-label="打赏支持"> <button class="tip-modal__close" data-tip-close aria-label="关闭">×</button> <h3 class="tip-modal__title notranslate" translate="no">Tip Jar</h3> <p class="tip-modal__desc">谢谢老板请我喝奶茶 ☕</p> <div class="tip-modal__qr-wrap"> <img src="/images/reward-qr.webp" alt="打赏二维码" class="tip-modal__qr" width="200" height="200"> </div> <p class="tip-modal__thanks">微信扫码打赏，你的支持是持续创作的动力。</p> </div> </div>  <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.Dib_mikw.js"></script>  <script>
+  window.addEventListener('load', function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    bp.src = (curProtocol === 'https' ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js');
+    bp.async = true;
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  });
+  </script> </body> </html>

@@ -1,0 +1,166 @@
+{
+  "date": "2026-08-20",
+  "issue": "039",
+  "topics": [
+    {
+      "topic": "Stripe超70亿美元收购OpenRouter",
+      "slug": "stripe-openrouter-acquisition",
+      "confidence": "high",
+      "primary_source": "Bloomberg / Fortune",
+      "primary_source_url": "https://www.fortune.com/2026/08/16/stripe-7-billion-deal-ai-firm-openrouter-acquisition/",
+      "verified_facts": [
+        {"fact": "Stripe收购OpenRouter交易金额", "final_value": "超过70亿美元", "sources": ["Bloomberg/Fortune 2026-08-16", "TechCrunch 2026-08-16", "Forkast 2026-08-17"]},
+        {"fact": "OpenRouter 5月B轮估值", "final_value": "约13亿美元", "sources": ["Fortune", "Forkast", "FourWeekMBA"]},
+        {"fact": "OpenRouter用户规模", "final_value": "800万全球用户", "sources": ["Fortune", "MaxAssistant", "Forkast"]},
+        {"fact": "OpenRouter接入模型数量", "final_value": "400+ AI模型", "sources": ["Forkast", "TechCrunch", "MaxAssistant"]},
+        {"fact": "OpenRouter年化收入（4月）", "final_value": "约5000万美元", "sources": ["Bloomberg/FourWeekMBA"]},
+        {"fact": "交易时间", "final_value": "2026年8月16日报道达成协议", "sources": ["Bloomberg", "Fortune", "TechCrunch"]}
+      ],
+      "rejected_claims": [
+        {"claim": "收购价100亿美元", "reason": "WSJ 7月首次报道谈判时提及约100亿美元，后Bloomberg 8月16日确认最终为70亿+，取后者为准"}
+      ],
+      "writing_notes": "Stripe官方不评论谣言与猜测，但多家权威媒体确认交易已达成。写作时按70亿+美元叙述，不必写'据报道'，但也不用写死精确数字。CEO Alex Atallah此前是OpenSea联合创始人。重点写'计费层即模型路由层'的结构判断。"
+    },
+    {
+      "topic": "Cerebras发布CS-4晶圆级推理芯片",
+      "slug": "cerebras-cs4-wafer-scale-inference",
+      "confidence": "high",
+      "primary_source": "Cerebras官方",
+      "primary_source_url": "https://www.cerebras.ai/cs4",
+      "verified_facts": [
+        {"fact": "CS-4发布时间", "final_value": "2026年8月18日", "sources": ["Cerebras官方", "Converge Digest", "36氪"]},
+        {"fact": "单系统算力", "final_value": "750 PFLOPS", "sources": ["Cerebras官方", "AI/TLDR", "Converge Digest"]},
+        {"fact": "晶圆处理器数量", "final_value": "3颗WSE-3 Turbo", "sources": ["Cerebras官方", "Converge Digest"]},
+        {"fact": "对比GPU推理速度", "final_value": "最高30倍", "sources": ["Cerebras官方", "AI/TLDR", "Converge Digest"]},
+        {"fact": "GPT-OSS-120B单用户token速度", "final_value": ">4,400 tokens/sec/user", "sources": ["Cerebras官方", "Converge Digest"]},
+        {"fact": "能效比提升（对比CS-3）", "final_value": "每瓦吞吐量提升10倍", "sources": ["Cerebras官方", "AI/TLDR"]},
+        {"fact": "单晶圆规格", "final_value": "4万亿晶体管 / 90万AI核心 / 44GB SRAM", "sources": ["Cerebras官方", "Converge Digest"]},
+        {"fact": "内存带宽（整机）", "final_value": "129.6 PB/s", "sources": ["Cerebras官方", "Converge Digest"]},
+        {"fact": "首发时间", "final_value": "2026年Q3开始出货", "sources": ["Cerebras官方", "AI/TLDR"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "CS-4是Nexus Platform Architecture的首个产品，采用Wafer-Scale Backpack模块化设计。支持与AWS Trainium/AMD Instinct协同做prefill-decode解耦。重点写'推理速度是Agent时代的胜负手'的判断。"
+    },
+    {
+      "topic": "阿里开源Qwen3.8-27B + Qwen3.8 Max权重开放",
+      "slug": "qwen3-8-open-source-edge-model",
+      "confidence": "high",
+      "primary_source": "Alibaba Cloud官方",
+      "primary_source_url": "https://www.alibabacloud.com/blog/alibaba-unveils-qwen3-8-27b-and-releases-weights-of-qwen3-8-flagship-model_603463",
+      "verified_facts": [
+        {"fact": "Qwen3.8-27B开源时间", "final_value": "2026年8月14日", "sources": ["Alibaba Cloud官方", "PeopleAreGeek", "阿里巴巴官微"]},
+        {"fact": "Qwen3.8-27B参数规模", "final_value": "270亿参数，稠密模型", "sources": ["Alibaba Cloud官方", "PeopleAreGeek"]},
+        {"fact": "开源协议", "final_value": "Apache 2.0", "sources": ["Alibaba Cloud官方", "PeopleAreGeek"]},
+        {"fact": "原生上下文长度", "final_value": "262K Tokens，可扩展至100万", "sources": ["Alibaba Cloud官方", "PeopleAreGeek"]},
+        {"fact": "Qwen3.8 Max参数规格", "final_value": "2.4万亿总参数 / 950亿激活参数（MoE）", "sources": ["Alibaba Cloud官方", "PeopleAreGeek"]},
+        {"fact": "累计开源模型数量", "final_value": "460+个千问系列模型", "sources": ["Alibaba Cloud官方", "阿里巴巴官微"]},
+        {"fact": "全球下载总量", "final_value": "超30亿次", "sources": ["Alibaba Cloud官方"]},
+        {"fact": "Hugging Face衍生模型数（Qwen）", "final_value": "151,448个，是Meta的2.6倍", "sources": ["Hugging Face/Alibaba Cloud"]},
+        {"fact": "SWE-bench Pro得分", "final_value": "61.7（27B版本）", "sources": ["Alibaba官方测试数据"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "Qwen3.8-27B是原生多模态（文本+图像+视频）。发布两天即登Hugging Face最受欢迎前5。重点写'端侧模型正在获得旗舰级Agent能力'的判断，以及开源生态对Meta的挑战。"
+    },
+    {
+      "topic": "宇树科技登陆科创板 + 超人机器人破纪录",
+      "slug": "unitree-ipo-superhuman-robot",
+      "confidence": "high",
+      "primary_source": "宇树科技招股书/上交所公告",
+      "primary_source_url": "http://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12492964",
+      "verified_facts": [
+        {"fact": "上市日期", "final_value": "2026年8月19日", "sources": ["上交所公告", "证券时报", "每日经济新闻"]},
+        {"fact": "发行价", "final_value": "150.80元/股", "sources": ["发行结果公告", "证券时报"]},
+        {"fact": "发行后市值", "final_value": "约609.93亿元", "sources": ["发行结果公告", "证券时报"]},
+        {"fact": "发行市盈率（扣非摊薄后）", "final_value": "219.23倍", "sources": ["上市公告书", "证券时报"]},
+        {"fact": "募资总额", "final_value": "约60.99亿元", "sources": ["发行结果公告"]},
+        {"fact": "网上中签率", "final_value": "0.0181%（科创板史上最低）", "sources": ["发行结果公告", "上观新闻"]},
+        {"fact": "2025年人形机器人收入", "final_value": "8.68亿元，同比+708.81%", "sources": ["招股书/证券时报"]},
+        {"fact": "2025年人形机器人出货量", "final_value": "超5500台", "sources": ["招股书/证券时报"]},
+        {"fact": "累计生产下线（截至2026年7月）", "final_value": "约1.8万台", "sources": ["证券时报"]},
+        {"fact": "DeepSeek战略配售", "final_value": "获配93.34万股，约1.41亿元，限售36个月", "sources": ["发行结果公告"]}
+      ],
+      "rejected_claims": [
+        {"claim": "超人机器人跳高2米/速度12.66m/s是真的吗", "reason": "官方发布的Demo视频数据，未经过第三方独立验证，写作时用'官方Demo显示'叙述即可，重点写趋势判断"}
+      ],
+      "writing_notes": "A股'人形机器人第一股'。王兴兴有特别表决权，控制约68.78%表决权。重点写'从讲故事到比交付'的行业转折点，以及219倍PE的市场预期与商业化现实之间的张力。"
+    },
+    {
+      "topic": "字节跳动与MPA签署全球首份AI版权协议 + 国内智能体监管落地",
+      "slug": "ai-copyright-regulation-digital-passport",
+      "confidence": "high",
+      "primary_source": "字节跳动/MPA联合公告",
+      "primary_source_url": "https://www.fromgeek.com/info/725385.html",
+      "verified_facts": [
+        {"fact": "字节-MPA协议签署时间", "final_value": "2026年8月17日（当地时间）", "sources": ["洛杉矶时报/央视新闻", "南都N视频", "极客网"]},
+        {"fact": "协议性质", "final_value": "谅解备忘录（MOU），首份好莱坞与AI公司的知识产权框架协议", "sources": ["洛杉矶时报", "网经社", "极客网"]},
+        {"fact": "涉及模型", "final_value": "Seedance视频 + Seedream图像生成模型", "sources": ["字节跳动公告", "央视新闻"]},
+        {"fact": "涉及产品", "final_value": "TikTok、CapCut、Dreamina等", "sources": ["央视新闻", "中国日报网"]},
+        {"fact": "国内智能体监管文件", "final_value": "工信部等十部门《人工智能科技伦理审查与服务办法（试行）》等多份文件", "sources": ["央视/证券时报报道"]},
+        {"fact": "智能体'数字护照'概念", "final_value": "全生命周期身份登记，责任主体可追溯", "sources": ["网信办等三部门《智能体规范应用与创新发展实施意见》"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "MPA成员包括Netflix、迪士尼、派拉蒙、索尼、环球、华纳兄弟。今年2月MPA曾发停止侵权函，半年后转为合作。重点写'AI版权从对抗走向框架化合作'的判断，以及智能体数字护照对行业的深远影响。"
+    },
+    {
+      "topic": "千问办公接入企业微信 + 企微开放CLI/MCP",
+      "slug": "qwenwork-wecom-mcp-agent-integration",
+      "confidence": "high",
+      "primary_source": "企业微信/阿里巴巴官方",
+      "primary_source_url": "https://help.aliyun.com/zh/qwenwork/qw-im-channel",
+      "verified_facts": [
+        {"fact": "千问办公接入企微时间", "final_value": "2026年8月18日", "sources": ["澎湃新闻", "上证报", "36氪"]},
+        {"fact": "千问办公接入的平台", "final_value": "钉钉、飞书、企业微信（国内三大办公平台全覆盖）", "sources": ["澎湃新闻", "上证报"]},
+        {"fact": "企业微信版本", "final_value": "5.0.10", "sources": ["企业微信公告/36氪"]},
+        {"fact": "开放的能力模块", "final_value": "10个：消息、文档、表格、邮件、会议、日程、待办、微盘、通讯录等", "sources": ["36氪", "企业微信公告"]},
+        {"fact": "可接入的Agent", "final_value": "WorkBuddy、DeepSeek Harness、Minimax Code、Kimi Work及企业自建Agent", "sources": ["36氪", "企业微信公告"]},
+        {"fact": "千问办公公测时间", "final_value": "2026年8月3日开启公测", "sources": ["澎湃新闻", "上证报"]},
+        {"fact": "千问办公定位", "final_value": "业内首款支持桌面端/云端/企业协同三端Agent", "sources": ["阿里官方"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "企微开放MCP是行业标志性事件——Agent从'能聊天'走向'能干活'的关键一步。重点写'微信生态+Agent'的巨大潜力，以及私域+AI的新玩法。"
+    },
+    {
+      "topic": "AI内容赛道平台分野",
+      "slug": "ai-content-platform-divergence",
+      "confidence": "medium",
+      "primary_source": "新声Pro/36氪",
+      "primary_source_url": "https://36kr.com/p/3903717337121928",
+      "verified_facts": [
+        {"fact": "抖音AI创作者增长", "final_value": "2025年增长191%，万粉创作者增长160%", "sources": ["运营社/亿邦动力"]},
+        {"fact": "2026上半年AI短剧市场规模", "final_value": "突破110亿元，全年有望达350亿元", "sources": ["运营社/亿邦动力"]},
+        {"fact": "小红书处置AI造假笔记数", "final_value": "累计18万篇，治理超120万个AI托管账号", "sources": ["新剧观察/36氪（2026年5月数据）"]},
+        {"fact": "小红书中长视频播放量增长", "final_value": "同比增长超30%", "sources": ["新剧观察/36氪"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "抖音走精品化IP+情绪路线，B站走先锋创意+造梗路线，小红书走审美表达+活人感路线。这是行业观察类选题，数据多为行业估算，写作注意用'据行业统计''平台数据显示'口吻，但不必标注来源。重点写平台底色决定AI内容生态的判断。"
+    },
+    {
+      "topic": "Groq估值腰斩再融资",
+      "slug": "groq-valuation-half-down-re pivot",
+      "confidence": "high",
+      "primary_source": "TechCrunch / Groq官方",
+      "primary_source_url": "https://techcrunch.com/2026/08/17/groq-raises-350m-to-fuel-its-pivot-from-ai-chips-to-neocloud/",
+      "verified_facts": [
+        {"fact": "本轮融资金额", "final_value": "3.5亿美元A轮", "sources": ["TechCrunch", "36氪/智东西", "Groq官宣"]},
+        {"fact": "投后估值", "final_value": "35亿美元", "sources": ["TechCrunch", "36氪/智东西"]},
+        {"fact": "2025年9月估值", "final_value": "69亿美元", "sources": ["TechCrunch", "36氪/智东西"]},
+        {"fact": "估值跌幅", "final_value": "约49%（近乎腰斩）", "sources": ["TechCrunch", "36氪/智东西"]},
+        {"fact": "本轮领投方", "final_value": "Disruptive", "sources": ["36氪/智东西", "Groq官宣"]},
+        {"fact": "英伟达参投情况", "final_value": "计划参投，尚待交割", "sources": ["Groq官宣/36氪"]},
+        {"fact": "2025年12月英伟达技术授权交易金额", "final_value": "约200亿美元", "sources": ["36氪/智东西"]},
+        {"fact": "Groq运营数据中心数量", "final_value": "13座", "sources": ["Groq官方/36氪"]},
+        {"fact": "当前算力规模", "final_value": "54兆瓦，计划2027年扩至200兆瓦以上", "sources": ["Groq官方/36氪"]},
+        {"fact": "服务开发者数量", "final_value": "超过600万", "sources": ["Groq官方/36氪"]}
+      ],
+      "rejected_claims": [
+        {"claim": "这是降价融资（down round）", "reason": "Groq官方不认为是降价融资，而是英伟达技术授权交易完成后的重新估值。写作时可以提到这个说法但偏向'估值腰斩'的事实描述。"}
+      ],
+      "writing_notes": "Cao文章，幽默口语化。核心槽点：当年喊着用LPU干翻Nvidia的AI芯片独角兽，创始人被Nvidia挖走，公司转型做Nvidia算力的推理云，Nvidia还计划参投——屠龙少年终成恶龙的合作伙伴。结尾给1-3条实用提醒，比如'选赛道要看清终局，算力赛道最后都是Nvidia的供应商'之类。"
+    }
+  ],
+  "summary": {
+    "overall_confidence": "high",
+    "replaced_topics": [],
+    "key_corrections": ["Stripe收购OpenRouter：从WSJ的100亿修正为Bloomberg确认的70亿+美元", "Groq估值：确认从69亿降至35亿，跌幅约49%"]
+  }
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html><html lang="zh-CN" data-lang="zh"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>企微开放 Agent 能力 — Dawn Vision</title><meta name="description" content="千问办公正式接入企业微信，国内三大办公平台全覆盖。企微 5.0.10 开放 CLI/MCP，主流 Agent 直连十大办公能力。"><meta name="author" content="Dawn Vision 编辑部"><meta name="keywords" content="Dawn Vision, AI资讯, AI日报, 人工智能, 大模型, AI Agent, GPT, Claude, 具身智能, AI商业化, 一人公司, AI编程, 深度分析, AI观察, LLM, AIGC, 槽点, 吐槽, AI吐槽, Cao, AI吐槽专栏, AI趣闻, AI翻车, AI fails, AI roasting, tech rant, AI humor"><link rel="canonical" href="https://www.dawnvision.net/articles/qwenwork-wecom-mcp-agent-integration/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&family=Noto+Sans+SC:wght@400;500;700&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&family=Noto+Sans+SC:wght@400;500;700&display=swap"></noscript><meta property="og:type" content="article"><meta property="og:title" content="企微开放 Agent 能力 — Dawn Vision"><meta property="og:description" content="千问办公正式接入企业微信，国内三大办公平台全覆盖。企微 5.0.10 开放 CLI/MCP，主流 Agent 直连十大办公能力。"><meta property="og:url" content="https://www.dawnvision.net/articles/qwenwork-wecom-mcp-agent-integration/"><meta property="og:image" content="https://www.dawnvision.net/images/og-image.png"><meta property="og:site_name" content="Dawn Vision"><meta property="og:locale" content="zh_CN"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="企微开放 Agent 能力 — Dawn Vision"><meta name="twitter:description" content="千问办公正式接入企业微信，国内三大办公平台全覆盖。企微 5.0.10 开放 CLI/MCP，主流 Agent 直连十大办公能力。"><meta name="twitter:image" content="https://www.dawnvision.net/images/og-image.png"><meta name="robots" content="index, follow"><meta name="applicable-device" content="pc,mobile"><meta name="format-detection" content="telephone=no"><meta name="baidu-site-verification" content><script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"千问办公 + 企微开放 MCP：Agent 从聊天机器人变成干活机器人","description":"千问办公正式接入企业微信，国内三大办公平台全覆盖。企微 5.0.10 开放 CLI/MCP，主流 Agent 直连十大办公能力。","datePublished":"2026-08-20","dateModified":"2026-08-20","author":{"@type":"Organization","name":"Dawn Vision 编辑部"},"publisher":{"@type":"Organization","name":"Dawn Vision","url":"https://www.dawnvision.net/","logo":{"@type":"ImageObject","url":"https://www.dawnvision.net/images/og-image.png","width":1200,"height":630}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.dawnvision.net/articles/qwenwork-wecom-mcp-agent-integration"},"url":"https://www.dawnvision.net/articles/qwenwork-wecom-mcp-agent-integration","inLanguage":"zh-CN","articleSection":"微信生态","keywords":"","wordCount":800}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://www.dawnvision.net/"},{"@type":"ListItem","position":2,"name":"文章","item":"https://www.dawnvision.net/articles/"},{"@type":"ListItem","position":3,"name":"企微开放 Agent 能力"}]}</script><style>
+    /* Language toggle: show/hide content based on data-lang */
+    :root {
+      --dv-lang: 'zh';
+    }
+    html[data-lang="zh"] .dv-en { display: none !important; }
+    html[data-lang="en"] .dv-zh { display: none !important; }
+
+    /* When English is active, swap visible text for title/description */
+    html[data-lang="en"] head > title { display: none; }
+
+    /* Floating language switch button */
+    .dv-lang-switch {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 900;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: none;
+      background: #ffffff;
+      color: #002FA7;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .dv-lang-switch:hover {
+      background: #002FA7;
+      color: #fff;
+      transform: scale(1.08);
+      box-shadow: 0 4px 24px rgba(0,47,167,0.3);
+    }
+    @media (max-width: 700px) {
+      .dv-lang-switch {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+        font-size: 10px;
+      }
+    }
+  </style><link rel="stylesheet" href="/_astro/502.Dsp8BFs5.css">
+<style>@keyframes blobFloat{0%,to{transform:translate(0) scale(1)}33%{transform:translate(3vw,4vh) scale(1.05)}66%{transform:translate(-2vw,-3vh) scale(.97)}}.blobs--home{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--home .blob{position:absolute;border-radius:50%;filter:blur(120px);opacity:.5;animation:blobFloat 25s ease-in-out infinite;will-change:transform}.blobs--home .blob--1{width:50vw;height:50vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-5%;left:-5%;animation-delay:0s;animation-duration:30s}.blobs--home .blob--2{width:55vw;height:55vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-10s;animation-duration:28s;opacity:.6}.blobs--home .blob--3{width:40vw;height:40vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:30%;right:5%;animation-delay:-15s;animation-duration:32s;opacity:.4}.blobs--home .blob--4{width:35vw;height:35vw;background:radial-gradient(circle,rgba(80,130,255,.3) 0%,transparent 70%);top:0%;left:25%;animation-delay:-5s;animation-duration:35s;opacity:.35}.blobs--home .blob--5,.blobs--home .blob--6{display:none}.blobs--section{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--section .blob{position:absolute;border-radius:50%;filter:blur(100px);opacity:.45;animation:blobFloat 28s ease-in-out infinite;will-change:transform}.blobs--section .blob--1{width:45vw;height:45vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-10%;left:-8%;animation-delay:0s;animation-duration:30s}.blobs--section .blob--2{width:50vw;height:50vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-8s;animation-duration:26s;opacity:.55}.blobs--section .blob--3{width:35vw;height:35vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:20%;right:5%;animation-delay:-14s;animation-duration:32s}.blobs--section .blob--4,.blobs--section .blob--5{display:none}@media(max-width:700px){.blobs--home .blob{filter:blur(80px)}.blobs--section .blob{filter:blur(60px)}}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.CY1OParl.css"></head> <body class>  <a href="#main-content" class="skip-link">跳至主要内容</a>  <nav class="nav nav--inner notranslate" role="navigation" aria-label="主导航" data-pagefind-ignore translate="no"> <div class="nav__inner"> <div class="nav__group"> <a href="/" class="nav__link ">Home</a> <a href="/articles/" class="nav__link nav__link--active" aria-current="page">Articles</a> </div> <a href="/" class="nav__brand" aria-label="Dawn Vision 首页" translate="no">
+Dawn Vision
+<small>Daily Briefing</small> </a> <div class="nav__group"> <a href="/cao/" class="nav__link ">Cao</a> <a href="/about/" class="nav__link ">About</a> </div> </div> </nav> <main id="main-content"> <a href="/articles/" class="dv-back-btn" aria-label="返回文章列表" title="返回文章列表"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"> <polyline points="15 18 9 12 15 6"></polyline> </svg> </a> <section class="article-hero "> <div class="blobs blobs--section" aria-hidden="true"> <div class="blob blob--1"></div><div class="blob blob--2"></div><div class="blob blob--3"></div><div class="blob blob--4"></div><div class="blob blob--5"></div> </div> <div class="container--narrow" style="position:relative;z-index:1;"> <div data-pagefind-meta="category" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">微信生态</div>  <h1 class="article-hero__title dv-zh" data-pagefind-meta="title">千问办公接入企业微信
+企微开放 CLI 和 MCP 能力</h1>  <h1 class="article-hero__title dv-en">QwenWork Launches on WeCom
+WeCom Opens CLI and MCP Access</h1> <p class="article-hero__deck dv-zh">三大办公平台全覆盖，十大核心模块对外开放。私域 + AI 的新玩法，才是企微 + Agent 最大的想象空间。</p> <p class="article-hero__deck dv-en">All three major office platforms covered, ten core modules fully open. Private traffic + AI is where WeCom + Agent&#39;s biggest potential lies.</p> <div class="article-hero__meta"> <span class="article-hero__issue notranslate">No.039</span> <span>2026年8月20日</span> <span class="dv-zh">约 5 分钟阅读</span> <span class="dv-en">~5 min read</span> </div> </div> </section> <article class="container--narrow" style="padding-top: clamp(40px, 6vw, 64px); padding-bottom: 0;">  <div class="article-body dv-zh" data-pagefind-body><p>8 月 18 日发生的两件事，放在一起看就很有意思。</p>
+
+<p>第一件：阿里旗下"千问办公"正式接入企业微信。加上之前已经接入的钉钉和飞书，国内三大主流办公平台被它全部打通了。</p>
+
+<p>第二件：企业微信 5.0.10 版本上线，全面开放 CLI（命令行接口）和 MCP（模型上下文协议）能力。WorkBuddy、DeepSeek Harness、Kimi Work、Minimax Code……主流 AI Agent 都能直接接入企微，调用文档、表格、邮件、会议等十大核心办公能力。</p>
+
+<p>一个主动接入，一个主动开放。表面上是两件事，骨子里是同一个趋势：<strong>Agent 正式从"聊天机器人"进化为"干活机器人"</strong>，而微信生态是它最重要的战场之一。</p>
+
+<h2>企微拆墙：从封闭花园到开放平台</h2>
+
+<p>企业微信这次的动作，不是小更新，而是拆围墙。</p>
+
+<p>以前的企微是个封闭系统，AI 想进来干活，得绕路、找第三方接口对接、各种踩坑。现在直接把 CLI 和 MCP 全开放了，Agent 可以长驱直入，直接调数据、发消息、写文档、管客户、排日程。</p>
+
+<p>开放的范围很实诚：消息、文档、智能表格、邮件、会议、日程、待办、微盘、通讯录……整整十个核心办公模块，一次性全部敞开。而且不限企业规模——不管你是 5 个人的创业公司还是 5 万人的大企业，都能用。</p>
+
+<p>这步棋的战略意图非常清晰：<strong>企微不想只做"聊天工具"，它要做企业级 AI Agent 的运行平台</strong>。就像手机上的 App Store 一样——企微提供操作系统和基础能力，Agent 就是跑在上面的 App。</p>
+
+<p>如果这个生态做起来，企微的价值会完全不一样。以前它是企业沟通的成本中心，以后可能变成企业效率的增长引擎。</p>
+
+<h2>千问办公的"全平台"策略</h2>
+
+<p>另一边，千问办公的打法也很明确：不站队、全覆盖。</p>
+
+<p>做办公 Agent 最头疼的问题之一，就是用户在哪你就得去哪。你的用户用钉钉，你就得接钉钉；用飞书，你就得接飞书；用企业微信，你就得接企微。少接一个，就少了一大批用户。</p>
+
+<p>千问办公把三个平台全打通了，等于拿到了国内办公市场的"全门票"。不管客户用什么协同工具，它都能进去。这本身就是一种竞争力。</p>
+
+<p>而且千问办公的定位也很巧——它不是替代办公平台，而是增强它们。它不做 IM，不做文档编辑器，它只做那个"帮你干活的 AI 助理"。办公平台继续做基础设施，千问办公在上面做增值服务。这种"不抢地盘、只加能力"的姿态，让它更容易被各个平台接纳。</p>
+
+<h2>私域+AI：下一个红利窗口</h2>
+
+<p>但企微 + Agent 最大的想象空间，不在内部办公，而在<strong>私域运营</strong>。</p>
+
+<p>企业微信连接了中国几乎所有做 To B 和私域生意的企业。之前的玩法是什么？加客户、发朋友圈、群发消息、做社群运营。效率很低，因为大部分工作是人工完成的。</p>
+
+<p>有了 Agent 之后呢？AI 可以自动分析客户对话、识别需求、推荐话术、生成跟进方案、打标签、整理客户档案……销售只需要专注和客户沟通、建立信任、拍板签约。AI 做大脑，真人做手脚——这是已经跑通的模式。</p>
+
+<p>更深远的影响在 GEO（生成式引擎优化）领域。以前 GEO 有个痛点：AI 把客户种草了、引过来了，但转化链路接不上。公域做 GEO 的是一个团队，私域做运营的是另一个团队，数据不通、流程脱节。</p>
+
+<p>现在企微开放 MCP 了，这个闭环补上了。AI 在公域获取的客户信息，可以直接同步到企微的客户档案里；AI 种草之后，可以直接在企微里完成跟进和转化。从"被 AI 推荐"到"最终买单"，整条链路都是 AI 驱动的。</p>
+
+<p>私域的下半场，可能不是更精细化的人工运营，而是 <strong>Agent 驱动的智能运营</strong>。</p>
+
+<p>谁先把企微 + AI 玩明白，谁就能吃到这波红利。</p>
+
+<p>明天见。</p></div>  <div class="article-body dv-en"><p>Two things happened on August 18 that are more interesting when you put them together.</p>
+
+<p>First: Alibaba's "QwenWork" officially launched on WeCom (Enterprise WeChat). Adding to its existing DingTalk and Feishu integrations, QwenWork is now available on all three of China's major enterprise collaboration platforms.</p>
+
+<p>Second: WeCom version 5.0.10 launched, fully opening CLI (Command Line Interface) and MCP (Model Context Protocol) capabilities. Major AI agents — WorkBuddy, DeepSeek Harness, Kimi Work, Minimax Code — can all plug directly into WeCom and access ten core office modules: documents, spreadsheets, email, meetings, and more.</p>
+
+<p>One company proactively integrating, one platform proactively opening up. On the surface, two separate events. Underneath, the same trend: <strong>agents are officially evolving from "chatbots" into "workbots," and the WeChat ecosystem is one of their most important battlefields</strong>.</p>
+
+<h2>WeCom Tears Down the Walls</h2>
+
+<p>This isn't a minor update from WeCom — it's tearing down the garden walls.</p>
+
+<p>WeCom used to be a closed system. If an AI wanted to get in and do work, it had to take detours, find third-party APIs, and navigate all kinds of pitfalls. Now with CLI and MCP fully open, agents can march straight in — access data, send messages, write documents, manage customers, schedule meetings, all directly.</p>
+
+<p>The scope of the opening is substantial: messaging, documents, smart sheets, email, meetings, calendars, tasks, WeDrive, contacts — ten core office modules, all opened at once. And it's available to companies of every size, from 5-person startups to 50,000-person enterprises.</p>
+
+<p>The strategic intent is crystal clear: <strong>WeCom doesn't want to be just a "chat tool" — it wants to be the operating platform for enterprise AI agents</strong>. Like an App Store for the enterprise — WeCom provides the OS and base capabilities, and agents are the apps that run on top of it.</p>
+
+<p>If this ecosystem takes off, WeCom's value proposition changes entirely. It goes from being a cost center for corporate communication to being a growth engine for enterprise efficiency.</p>
+
+<h2>QwenWork's "Every Platform" Strategy</h2>
+
+<p>QwenWork's playbook is equally clear: don't pick sides, cover everything.</p>
+
+<p>One of the biggest headaches in building office agents is that you have to go wherever your users are. If your customers use DingTalk, you need DingTalk integration. If they use Feishu, you need Feishu. If they use WeCom, you need WeCom. Miss one platform, and you miss a huge chunk of users.</p>
+
+<p>By integrating all three, QwenWork has essentially secured "all-access passes" to China's enterprise office market. No matter which collaboration tool a customer uses, QwenWork can get in. That in itself is a competitive advantage.</p>
+
+<p>And QwenWork's positioning is smart — it doesn't try to replace office platforms, it enhances them. It doesn't do IM, it doesn't build document editors. It just does the "AI assistant that helps you get work done." Office platforms continue as the infrastructure; QwenWork adds value on top. This "not competing for territory, just adding capability" posture makes it easier for platforms to accept.</p>
+
+<h2>Private Traffic + AI: The Next红利 Window</h2>
+
+<p>But the biggest imaginative space in WeCom + Agent isn't internal office work — it's <strong>private traffic operations</strong>.</p>
+
+<p>WeCom connects virtually every B2B and private-traffic business in China. The old playbook? Add customers, post to Moments, broadcast messages, run community operations. Low efficiency, because most of the work is manual.</p>
+
+<p>With agents? AI can automatically analyze customer conversations, identify needs, recommend talking points, generate follow-up plans, apply tags, organize customer profiles… Salespeople just focus on talking to customers, building trust, and closing deals. AI as the brain, humans as the hands and feet — this is a model that's already been proven to work.</p>
+
+<p>The even deeper impact is in GEO (Generative Engine Optimization). GEO had a pain point for a long time: AI generates leads, but the conversion pipeline was disconnected. One team does GEO in the public domain, another runs operations in private traffic — data doesn't flow, processes don't connect, leads come in and drop off.</p>
+
+<p>Now that WeCom has opened MCP, that loop closes. Customer information captured by AI in public channels can sync directly to WeCom customer profiles. After AI generates a lead, follow-up and conversion can happen right inside WeCom. From "being recommended by AI" to "making a purchase," the whole chain is AI-driven.</p>
+
+<p>The second half of private traffic might not be more refined manual operations — it might be <strong>agent-driven intelligent operations</strong>.</p>
+
+<p>Whoever figures out WeCom + AI first will capture this wave.</p>
+
+<p>See you tomorrow.</p></div>        <div class="article-sources"> <div class="article-sources__title notranslate"> <span class="dv-zh">Sources · 信源</span> <span class="dv-en">Sources</span> </div> <ul class="article-sources__list"> <li class="article-sources__item"> <a href="https://www.thepaper.cn/" target="_blank" rel="noopener noreferrer">澎湃新闻：千问办公接入企业微信</a> </li><li class="article-sources__item"> <a href="https://help.aliyun.com/zh/qwenwork/qw-im-channel" target="_blank" rel="noopener noreferrer">企业微信帮助中心</a> </li><li class="article-sources__item"> 36氪：企微开放Agent能力 </li> </ul>  </div>  <div class="article-actions"> <button class="article-action-btn article-action-btn--like" id="article-like-btn" data-slug="qwenwork-wecom-mcp-agent-integration" aria-label="喜欢这篇文章"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path> </svg> <span class="article-action-btn__label" data-i18n="like">喜欢</span> <span class="article-action-btn__count" id="like-count">0</span> </button> <button class="article-action-btn article-action-btn--tip" id="article-tip-btn" aria-label="打赏"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon> </svg> <span class="article-action-btn__label" data-i18n="tip">打赏</span> </button> </div>  <nav class="article-nav" aria-label="文章导航"> <a href="/articles/ai-content-platform-divergence/" class="article-nav__item article-nav__item--prev"> <div class="article-nav__label"> <span class="dv-zh" data-i18n="prev_article">上一篇</span> <span class="dv-en" data-i18n="prev_article">Previous</span> </div> <div class="article-nav__title dv-zh">AI 内容赛道平台分野：抖音拼剧情、B 站整活、小红书守活人感</div> <div class="article-nav__title dv-en">AI Content Platform Divergence: Douyin, Bilibili, Xiaohongshu</div> </a> <a href="/articles/ai-copyright-regulation-digital-passport/" class="article-nav__item article-nav__item--next"> <div class="article-nav__label"> <span class="dv-zh" data-i18n="next_article">下一篇</span> <span class="dv-en" data-i18n="next_article">Next</span> </div> <div class="article-nav__title dv-zh">AI 监管双线落地：字节-MPA 版权休战 + 智能体数字护照</div> <div class="article-nav__title dv-en">AI Regulation Advances: ByteDance-MPA Copyright Truce + Agent Digital Passports</div> </a> </nav> </article>  </main> <footer class="footer footer--site" role="contentinfo" data-pagefind-ignore> <div class="footer__container"> <div class="footer__brand notranslate" translate="no">Dawn Vision</div> <div class="footer__meta notranslate" translate="no">© 2026 · Daily at 16:30 CST · Weekdays Only</div> </div> </footer>   <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="搜索文章" hidden> <div class="search-modal" role="document"> <div class="search-modal__input-wrap"> <svg class="search-modal__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="11" cy="11" r="8"></circle> <line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> <input type="search" class="search-modal__input" id="search-input" placeholder="搜索文章、关键词、作者..." autocomplete="off" spellcheck="false" aria-label="搜索关键词"> <span class="search-modal__close-hint">ESC</span> </div> <div class="search-modal__results" id="search-results"> <div class="search-modal__empty">输入关键词开始搜索</div> </div> <div class="search-modal__footer"> <span><kbd>↑</kbd><kbd>↓</kbd> 选择</span> <span><kbd>↵</kbd> 打开</span> <span><kbd>⌘K</kbd> 搜索</span> </div> </div> </div> <!-- Reading progress bar (shown on article pages) --> <div class="reading-progress" id="reading-progress" hidden></div>  <div class="tip-modal" id="tip-modal" hidden> <div class="tip-modal__overlay" data-tip-close></div> <div class="tip-modal__content" role="dialog" aria-modal="true" aria-label="打赏支持"> <button class="tip-modal__close" data-tip-close aria-label="关闭">×</button> <h3 class="tip-modal__title notranslate" translate="no">Tip Jar</h3> <p class="tip-modal__desc">谢谢老板请我喝奶茶 ☕</p> <div class="tip-modal__qr-wrap"> <img src="/images/reward-qr.webp" alt="打赏二维码" class="tip-modal__qr" width="200" height="200"> </div> <p class="tip-modal__thanks">微信扫码打赏，你的支持是持续创作的动力。</p> </div> </div>  <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.Dib_mikw.js"></script>  <script>
+  window.addEventListener('load', function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    bp.src = (curProtocol === 'https' ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js');
+    bp.async = true;
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  });
+  </script> </body> </html>

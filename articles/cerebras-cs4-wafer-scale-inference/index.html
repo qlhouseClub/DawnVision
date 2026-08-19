@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="zh-CN" data-lang="zh"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>CS-4 推理速度 30 倍 GPU — Dawn Vision</title><meta name="description" content="Cerebras 发布第三代晶圆级 AI 加速器 CS-4，推理速度最高达 GPU 30 倍，4400 tokens/s/user，每瓦吞吐量提升 10 倍。"><meta name="author" content="Dawn Vision 编辑部"><meta name="keywords" content="Dawn Vision, AI资讯, AI日报, 人工智能, 大模型, AI Agent, GPT, Claude, 具身智能, AI商业化, 一人公司, AI编程, 深度分析, AI观察, LLM, AIGC, 槽点, 吐槽, AI吐槽, Cao, AI吐槽专栏, AI趣闻, AI翻车, AI fails, AI roasting, tech rant, AI humor"><link rel="canonical" href="https://www.dawnvision.net/articles/cerebras-cs4-wafer-scale-inference/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&family=Noto+Sans+SC:wght@400;500;700&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,600&family=Noto+Sans+SC:wght@400;500;700&display=swap"></noscript><meta property="og:type" content="article"><meta property="og:title" content="CS-4 推理速度 30 倍 GPU — Dawn Vision"><meta property="og:description" content="Cerebras 发布第三代晶圆级 AI 加速器 CS-4，推理速度最高达 GPU 30 倍，4400 tokens/s/user，每瓦吞吐量提升 10 倍。"><meta property="og:url" content="https://www.dawnvision.net/articles/cerebras-cs4-wafer-scale-inference/"><meta property="og:image" content="https://www.dawnvision.net/images/og-image.png"><meta property="og:site_name" content="Dawn Vision"><meta property="og:locale" content="zh_CN"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="CS-4 推理速度 30 倍 GPU — Dawn Vision"><meta name="twitter:description" content="Cerebras 发布第三代晶圆级 AI 加速器 CS-4，推理速度最高达 GPU 30 倍，4400 tokens/s/user，每瓦吞吐量提升 10 倍。"><meta name="twitter:image" content="https://www.dawnvision.net/images/og-image.png"><meta name="robots" content="index, follow"><meta name="applicable-device" content="pc,mobile"><meta name="format-detection" content="telephone=no"><meta name="baidu-site-verification" content><script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Cerebras CS-4：30 倍 GPU 推理速度的晶圆级暴击","description":"Cerebras 发布第三代晶圆级 AI 加速器 CS-4，推理速度最高达 GPU 30 倍，4400 tokens/s/user，每瓦吞吐量提升 10 倍。","datePublished":"2026-08-20","dateModified":"2026-08-20","author":{"@type":"Organization","name":"Dawn Vision 编辑部"},"publisher":{"@type":"Organization","name":"Dawn Vision","url":"https://www.dawnvision.net/","logo":{"@type":"ImageObject","url":"https://www.dawnvision.net/images/og-image.png","width":1200,"height":630}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.dawnvision.net/articles/cerebras-cs4-wafer-scale-inference"},"url":"https://www.dawnvision.net/articles/cerebras-cs4-wafer-scale-inference","inLanguage":"zh-CN","articleSection":"算力基建","keywords":"","wordCount":800}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://www.dawnvision.net/"},{"@type":"ListItem","position":2,"name":"文章","item":"https://www.dawnvision.net/articles/"},{"@type":"ListItem","position":3,"name":"CS-4 推理速度 30 倍 GPU"}]}</script><style>
+    /* Language toggle: show/hide content based on data-lang */
+    :root {
+      --dv-lang: 'zh';
+    }
+    html[data-lang="zh"] .dv-en { display: none !important; }
+    html[data-lang="en"] .dv-zh { display: none !important; }
+
+    /* When English is active, swap visible text for title/description */
+    html[data-lang="en"] head > title { display: none; }
+
+    /* Floating language switch button */
+    .dv-lang-switch {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 900;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: none;
+      background: #ffffff;
+      color: #002FA7;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .dv-lang-switch:hover {
+      background: #002FA7;
+      color: #fff;
+      transform: scale(1.08);
+      box-shadow: 0 4px 24px rgba(0,47,167,0.3);
+    }
+    @media (max-width: 700px) {
+      .dv-lang-switch {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+        font-size: 10px;
+      }
+    }
+  </style><link rel="stylesheet" href="/_astro/502.Dsp8BFs5.css">
+<style>@keyframes blobFloat{0%,to{transform:translate(0) scale(1)}33%{transform:translate(3vw,4vh) scale(1.05)}66%{transform:translate(-2vw,-3vh) scale(.97)}}.blobs--home{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--home .blob{position:absolute;border-radius:50%;filter:blur(120px);opacity:.5;animation:blobFloat 25s ease-in-out infinite;will-change:transform}.blobs--home .blob--1{width:50vw;height:50vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-5%;left:-5%;animation-delay:0s;animation-duration:30s}.blobs--home .blob--2{width:55vw;height:55vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-10s;animation-duration:28s;opacity:.6}.blobs--home .blob--3{width:40vw;height:40vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:30%;right:5%;animation-delay:-15s;animation-duration:32s;opacity:.4}.blobs--home .blob--4{width:35vw;height:35vw;background:radial-gradient(circle,rgba(80,130,255,.3) 0%,transparent 70%);top:0%;left:25%;animation-delay:-5s;animation-duration:35s;opacity:.35}.blobs--home .blob--5,.blobs--home .blob--6{display:none}.blobs--section{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}.blobs--section .blob{position:absolute;border-radius:50%;filter:blur(100px);opacity:.45;animation:blobFloat 28s ease-in-out infinite;will-change:transform}.blobs--section .blob--1{width:45vw;height:45vw;background:radial-gradient(circle,rgba(60,110,230,.6) 0%,transparent 70%);top:-10%;left:-8%;animation-delay:0s;animation-duration:30s}.blobs--section .blob--2{width:50vw;height:50vw;background:radial-gradient(circle,rgba(0,10,60,.7) 0%,transparent 70%);bottom:-10%;right:-8%;animation-delay:-8s;animation-duration:26s;opacity:.55}.blobs--section .blob--3{width:35vw;height:35vw;background:radial-gradient(circle,rgba(30,70,200,.4) 0%,transparent 70%);top:20%;right:5%;animation-delay:-14s;animation-duration:32s}.blobs--section .blob--4,.blobs--section .blob--5{display:none}@media(max-width:700px){.blobs--home .blob{filter:blur(80px)}.blobs--section .blob{filter:blur(60px)}}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.CY1OParl.css"></head> <body class>  <a href="#main-content" class="skip-link">跳至主要内容</a>  <nav class="nav nav--inner notranslate" role="navigation" aria-label="主导航" data-pagefind-ignore translate="no"> <div class="nav__inner"> <div class="nav__group"> <a href="/" class="nav__link ">Home</a> <a href="/articles/" class="nav__link nav__link--active" aria-current="page">Articles</a> </div> <a href="/" class="nav__brand" aria-label="Dawn Vision 首页" translate="no">
+Dawn Vision
+<small>Daily Briefing</small> </a> <div class="nav__group"> <a href="/cao/" class="nav__link ">Cao</a> <a href="/about/" class="nav__link ">About</a> </div> </div> </nav> <main id="main-content"> <a href="/articles/" class="dv-back-btn" aria-label="返回文章列表" title="返回文章列表"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"> <polyline points="15 18 9 12 15 6"></polyline> </svg> </a> <section class="article-hero "> <div class="blobs blobs--section" aria-hidden="true"> <div class="blob blob--1"></div><div class="blob blob--2"></div><div class="blob blob--3"></div><div class="blob blob--4"></div><div class="blob blob--5"></div> </div> <div class="container--narrow" style="position:relative;z-index:1;"> <div data-pagefind-meta="category" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">算力基建</div>  <h1 class="article-hero__title dv-zh" data-pagefind-meta="title">Cerebras CS-4 晶圆级芯片
+推理速度达到 GPU 30 倍</h1>  <h1 class="article-hero__title dv-en">Cerebras CS-4 Wafer-Scale Chip
+30x GPU Inference Speed</h1> <p class="article-hero__deck dv-zh">三颗 WSE-3 Turbo 晶圆引擎，750 PFLOPS 算力，单用户每秒 4400+ tokens。Agent 时代拼的不是训练，是推理速度。</p> <p class="article-hero__deck dv-en">Three WSE-3 Turbo wafer engines, 750 PFLOPS, 4400+ tokens/s/user. In the agent era, inference speed is the new battleground.</p> <div class="article-hero__meta"> <span class="article-hero__issue notranslate">No.039</span> <span>2026年8月20日</span> <span class="dv-zh">约 5 分钟阅读</span> <span class="dv-en">~5 min read</span> </div> </div> </section> <article class="container--narrow" style="padding-top: clamp(40px, 6vw, 64px); padding-bottom: 0;">  <div class="article-body dv-zh" data-pagefind-body><p>Cerebras 在 8 月 18 日甩出了新一代 AI 加速器 CS-4，直接把推理速度拉到了 GPU 的 <strong>30 倍</strong>。这不是又一个"PPT芯片"，而是真的要在今年 Q3 开始出货的产品。</p>
+
+<p>CS-4 的核心配置很硬核：三颗全新 WSE-3 Turbo 晶圆级引擎，整机提供 750 PFLOPS 算力、129.6 PB/s 内存带宽。在 GPT-OSS-120B 测试中，单用户每秒生成超过 4,400 个 Token，每瓦吞吐量比上代 CS-3 提升 10 倍。</p>
+
+<h2>晶圆级架构为什么快</h2>
+
+<p>答案很简单——<strong>它绕开了 GPU 的根本瓶颈：内存带宽</strong>。GPU 做推理的时候，模型权重存在显存里，计算的时候需要不停把权重在显存和计算核心之间搬运。内存带宽就是那个永远不够用的水管。</p>
+
+<p>Cerebras 的思路完全不同：把整颗晶圆当一个芯片用，把模型权重全部常驻在晶圆上的 44GB SRAM 里。SRAM 的速度比 HBM 显存快数量级，而且数据不用"搬家"，直接就近计算。CS-4 单颗晶圆有 4 万亿晶体管、90 万个 AI 核心，三颗晶圆通过 Direct Wafer Links 互联，延迟低到 2 微秒。</p>
+
+<p>简单说，GPU 的推理是"一边搬数据一边算"，CS-4 是"数据都在这儿了，直接算"。这就是为什么它能快 30 倍。</p>
+
+<h2>推理速度是 Agent 时代的胜负手</h2>
+
+<p>为什么现在突然所有人都在拼推理速度？因为 Agent 来了。</p>
+
+<p>以前的 AI 应用是"一问一答"模式——用户发一句话，模型生成一段回答。延迟高个几秒，用户可能也就忍了。但 Agent 不一样，它不是生成一次回答就完事了，而是要走一个完整的思考回路：分析问题→调用工具→读取结果→再推理→再调用工具……一个任务可能要跑十几轮推理。</p>
+
+<p>如果每轮推理要等 5 秒，10 轮就是 50 秒。用户早就不耐烦了。但如果每轮只要 0.5 秒，10 轮也才 5 秒，体验就完全不一样了。<strong>推理速度直接决定了 Agent 能"想"多少步、能用多少工具</strong>。</p>
+
+<p>这也是 Cerebras CTO Sean Lie 说的那句话的真正含义："快 30 倍，意味着智能体系统有了显著更多的推理和工具使用空间。"</p>
+
+<h2>但 GPU 的护城河没那么容易破</h2>
+
+<p>Cerebras 很强，但要说撼动 Nvidia 的地位还太早。</p>
+
+<p>第一，<strong>生态差距巨大</strong>。CUDA 生态发展了十几年，几乎所有 AI 框架和工具都是围绕 GPU 优化的。Cerebras 虽然也支持主流框架，但深度和广度完全不在一个量级。企业客户换硬件，不是换一张卡那么简单——整个软件栈都要跟着调。</p>
+
+<p>第二，<strong>通用性问题</strong>。晶圆级芯片在推理场景下有绝对优势，但训练呢？多模态呢？更复杂的计算图呢？GPU 虽然在单项上可能不如专用芯片，但它什么都能干。对于大多数企业来说，买一堆 GPU 既能训练又能推理，比买专用推理芯片灵活得多。</p>
+
+<p>第三，<strong>商业模式</strong>。CS-4 是整机架卖的，客户一买就是一套完整系统，采购门槛极高。而 GPU 的采购是弹性的，从小规模试用到大规模部署，可以一步步来。</p>
+
+<p>所以 Cerebras 的机会不是"干掉 Nvidia"，而是在推理这个细分战场上，切下一块 GPU 吃不下的蛋糕——比如对延迟极度敏感的 Agent 应用、超大模型的极速推理服务。</p>
+
+<p>30 倍的速度差距，放在任何领域都是降维打击。但 AI 硬件这门生意，从来不只是比谁快。</p>
+
+<p>明天见。</p></div>  <div class="article-body dv-en"><p>On August 18, Cerebras dropped its next-gen AI accelerator, the CS-4, delivering inference speed up to <strong>30x faster</strong> than GPUs. This isn't another "PPT chip" — it's actually shipping starting Q3 this year.</p>
+
+<p>The CS-4 packs a serious punch: three new WSE-3 Turbo wafer-scale engines, 750 PFLOPS of AI compute per rack, and 129.6 PB/s of memory bandwidth. On GPT-OSS-120B, it generates over 4,400 tokens per second per user, with 10x more throughput per watt than the previous CS-3 generation.</p>
+
+<h2>Why Wafer-Scale Is Faster</h2>
+
+<p>The answer is simple — <strong>it bypasses the fundamental GPU bottleneck: memory bandwidth</strong>. When GPUs run inference, model weights live in VRAM and have to be constantly shuttled between memory and compute cores. Memory bandwidth is the pipe that's always too narrow.</p>
+
+<p>Cerebras takes a completely different approach: treat an entire wafer as one chip, and keep the entire model resident in 44 GB of on-wafer SRAM. SRAM is orders of magnitude faster than HBM memory, and the data doesn't have to "travel" — it's computed right where it sits. Each WSE-3 Turbo wafer packs 4 trillion transistors and 900,000 AI-optimized cores, and three wafers are connected via Direct Wafer Links with as little as 2 microseconds of latency.</p>
+
+<p>Put simply: GPUs do inference by "moving data while computing." The CS-4 does it by "data's already here, just compute." That's why it's 30x faster.</p>
+
+<h2>Inference Speed Is the New Battleground</h2>
+
+<p>Why is everyone suddenly racing on inference speed? Because agents are here.</p>
+
+<p>Previous AI applications were "ask once, answer once" — the user sends a prompt, the model generates a response. A few seconds of delay, and users mostly tolerated it. But agents aren't one-and-done. They run a full loop: analyze the problem → call tools → read results → reason again → call more tools… A single task might run a dozen rounds of inference.</p>
+
+<p>If each round takes 5 seconds, 10 rounds means 50 seconds. Users will have already bounced. But if each round takes 0.5 seconds, 10 rounds is still 5 seconds — a completely different experience. <strong>Inference speed directly determines how many steps an agent can "think" and how many tools it can use</strong>.</p>
+
+<p>That's the real meaning behind Cerebras CTO Sean Lie's line: "Being 30 times faster gives agentic systems room for significantly more reasoning and tool use."</p>
+
+<h2>But the GPU Moat Isn't So Easy to Crack</h2>
+
+<p>Cerebras is impressive, but it's still way too early to say it's shaking Nvidia's position.</p>
+
+<p>First, <strong>the ecosystem gap is enormous</strong>. The CUDA ecosystem has grown for over a decade, and virtually every AI framework and tool is optimized around GPUs. Cerebras supports major frameworks too, but the depth and breadth aren't comparable. For enterprise customers, switching hardware isn't just swapping a card — the entire software stack has to be re-tuned.</p>
+
+<p>Second, <strong>versatility matters</strong>. Wafer-scale chips have a decisive advantage in inference, but what about training? Multimodal? More complex computation graphs? GPUs may not be the best at any single thing, but they can do everything. For most enterprises, buying a fleet of GPUs that can both train and inference is way more flexible than buying specialized inference chips.</p>
+
+<p>Third, <strong>the business model</strong>. The CS-4 is sold as a full rack system — a complete turnkey solution with a very high procurement threshold. GPU purchasing is elastic; you can start small and scale up gradually.</p>
+
+<p>So Cerebras's opportunity isn't "killing Nvidia" — it's carving out a piece of the inference pie that GPUs can't easily eat: ultra-low-latency agent applications, lightning-fast inference for frontier-scale models. That kind of thing.</p>
+
+<p>A 30x speed difference is a beatdown in any field. But the AI hardware business has never been just about who's fastest.</p>
+
+<p>See you tomorrow.</p></div>        <div class="article-sources"> <div class="article-sources__title notranslate"> <span class="dv-zh">Sources · 信源</span> <span class="dv-en">Sources</span> </div> <ul class="article-sources__list"> <li class="article-sources__item"> <a href="https://www.cerebras.ai/cs4" target="_blank" rel="noopener noreferrer">Cerebras CS-4 官方页</a> </li><li class="article-sources__item"> <a href="https://convergedigest.com/cerebras-cs4/" target="_blank" rel="noopener noreferrer">Converge Digest: CS-4 深度分析</a> </li><li class="article-sources__item"> 36氪：Cerebras发布CS-4 </li> </ul>  </div>  <div class="article-actions"> <button class="article-action-btn article-action-btn--like" id="article-like-btn" data-slug="cerebras-cs4-wafer-scale-inference" aria-label="喜欢这篇文章"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path> </svg> <span class="article-action-btn__label" data-i18n="like">喜欢</span> <span class="article-action-btn__count" id="like-count">0</span> </button> <button class="article-action-btn article-action-btn--tip" id="article-tip-btn" aria-label="打赏"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon> </svg> <span class="article-action-btn__label" data-i18n="tip">打赏</span> </button> </div>  <nav class="article-nav" aria-label="文章导航"> <a href="/articles/qwen3-8-open-source-edge-model/" class="article-nav__item article-nav__item--prev"> <div class="article-nav__label"> <span class="dv-zh" data-i18n="prev_article">上一篇</span> <span class="dv-en" data-i18n="prev_article">Previous</span> </div> <div class="article-nav__title dv-zh">Qwen3.8-27B 开源：端侧模型正在获得旗舰级 Agent 能力</div> <div class="article-nav__title dv-en">Qwen3.8-27B Goes Open Source: Edge Models Gain Flagship Agent Capabilities</div> </a> <a href="/articles/stripe-openrouter-acquisition/" class="article-nav__item article-nav__item--next"> <div class="article-nav__label"> <span class="dv-zh" data-i18n="next_article">下一篇</span> <span class="dv-en" data-i18n="next_article">Next</span> </div> <div class="article-nav__title dv-zh">Stripe 70 亿美元买下 OpenRouter：AI 基础设施的大整合时代开始了</div> <div class="article-nav__title dv-en">Stripe Buys OpenRouter for $7B+: The Great AI Infrastructure Consolidation Begins</div> </a> </nav> </article>  </main> <footer class="footer footer--site" role="contentinfo" data-pagefind-ignore> <div class="footer__container"> <div class="footer__brand notranslate" translate="no">Dawn Vision</div> <div class="footer__meta notranslate" translate="no">© 2026 · Daily at 16:30 CST · Weekdays Only</div> </div> </footer>   <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="搜索文章" hidden> <div class="search-modal" role="document"> <div class="search-modal__input-wrap"> <svg class="search-modal__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="11" cy="11" r="8"></circle> <line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> <input type="search" class="search-modal__input" id="search-input" placeholder="搜索文章、关键词、作者..." autocomplete="off" spellcheck="false" aria-label="搜索关键词"> <span class="search-modal__close-hint">ESC</span> </div> <div class="search-modal__results" id="search-results"> <div class="search-modal__empty">输入关键词开始搜索</div> </div> <div class="search-modal__footer"> <span><kbd>↑</kbd><kbd>↓</kbd> 选择</span> <span><kbd>↵</kbd> 打开</span> <span><kbd>⌘K</kbd> 搜索</span> </div> </div> </div> <!-- Reading progress bar (shown on article pages) --> <div class="reading-progress" id="reading-progress" hidden></div>  <div class="tip-modal" id="tip-modal" hidden> <div class="tip-modal__overlay" data-tip-close></div> <div class="tip-modal__content" role="dialog" aria-modal="true" aria-label="打赏支持"> <button class="tip-modal__close" data-tip-close aria-label="关闭">×</button> <h3 class="tip-modal__title notranslate" translate="no">Tip Jar</h3> <p class="tip-modal__desc">谢谢老板请我喝奶茶 ☕</p> <div class="tip-modal__qr-wrap"> <img src="/images/reward-qr.webp" alt="打赏二维码" class="tip-modal__qr" width="200" height="200"> </div> <p class="tip-modal__thanks">微信扫码打赏，你的支持是持续创作的动力。</p> </div> </div>  <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.Dib_mikw.js"></script>  <script>
+  window.addEventListener('load', function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    bp.src = (curProtocol === 'https' ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js');
+    bp.async = true;
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  });
+  </script> </body> </html>
