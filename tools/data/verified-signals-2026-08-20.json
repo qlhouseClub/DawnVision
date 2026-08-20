@@ -1,166 +1,156 @@
 {
   "date": "2026-08-20",
-  "issue": "039",
+  "issue": "040",
   "topics": [
     {
-      "topic": "Stripe超70亿美元收购OpenRouter",
-      "slug": "stripe-openrouter-acquisition",
+      "topic": "Anthropic Q2营收116亿美元首超OpenAI，首次实现盈利",
+      "slug": "anthropic-surpasses-openai-revenue-q2-2026",
       "confidence": "high",
-      "primary_source": "Bloomberg / Fortune",
-      "primary_source_url": "https://www.fortune.com/2026/08/16/stripe-7-billion-deal-ai-firm-openrouter-acquisition/",
+      "primary_source": "The Wall Street Journal / The Next Web",
+      "primary_source_url": "https://thenextweb.com/news/openai-q2-revenue-anthropic-surpasses",
       "verified_facts": [
-        {"fact": "Stripe收购OpenRouter交易金额", "final_value": "超过70亿美元", "sources": ["Bloomberg/Fortune 2026-08-16", "TechCrunch 2026-08-16", "Forkast 2026-08-17"]},
-        {"fact": "OpenRouter 5月B轮估值", "final_value": "约13亿美元", "sources": ["Fortune", "Forkast", "FourWeekMBA"]},
-        {"fact": "OpenRouter用户规模", "final_value": "800万全球用户", "sources": ["Fortune", "MaxAssistant", "Forkast"]},
-        {"fact": "OpenRouter接入模型数量", "final_value": "400+ AI模型", "sources": ["Forkast", "TechCrunch", "MaxAssistant"]},
-        {"fact": "OpenRouter年化收入（4月）", "final_value": "约5000万美元", "sources": ["Bloomberg/FourWeekMBA"]},
-        {"fact": "交易时间", "final_value": "2026年8月16日报道达成协议", "sources": ["Bloomberg", "Fortune", "TechCrunch"]}
+        {"fact": "Anthropic Q2 2026营收", "final_value": "约115-116亿美元，同比翻倍以上", "sources": ["WSJ 2026-08-19", "TNW 2026-08-19", "Bloomberg"]},
+        {"fact": "OpenAI Q2 2026营收", "final_value": "67亿美元，环比增长18%", "sources": ["WSJ", "TNW", "CNBC"]},
+        {"fact": "Anthropic盈利状况", "final_value": "首次实现小幅调整后运营盈利", "sources": ["WSJ", "TNW", "Financial Times"]},
+        {"fact": "OpenAI Q2运营亏损", "final_value": "123亿美元，上季度为93亿，亏损扩大32%", "sources": ["WSJ", "TNW", "Cryip"]},
+        {"fact": "OpenAI Q1营收", "final_value": "57亿美元", "sources": ["WSJ"]},
+        {"fact": "OpenAI企业客户7月增长", "final_value": "企业客户收入环比增长32%", "sources": ["NYT"]},
+        {"fact": "Anthropic IPO目标", "final_value": "最早2026年秋季，目标估值2万亿美元", "sources": ["Financial Times", "The Information"]}
       ],
       "rejected_claims": [
-        {"claim": "收购价100亿美元", "reason": "WSJ 7月首次报道谈判时提及约100亿美元，后Bloomberg 8月16日确认最终为70亿+，取后者为准"}
+        {"claim": "Anthropic营收115亿vs OpenAI 67亿是全年数据", "reason": "是Q2单季度数据，不是全年"}
       ],
-      "writing_notes": "Stripe官方不评论谣言与猜测，但多家权威媒体确认交易已达成。写作时按70亿+美元叙述，不必写'据报道'，但也不用写死精确数字。CEO Alex Atallah此前是OpenSea联合创始人。重点写'计费层即模型路由层'的结构判断。"
+      "writing_notes": "这是AI行业历史性转折点：前OpenAI员工创办的公司首次在营收上超越老东家。重点对比两家公司的单位经济模型差异——Anthropic靠效率和企业客户盈利，OpenAI靠消费端烧钱换增长。注意不要站队，保持DawnVision的犀利判断风格。"
     },
     {
-      "topic": "Cerebras发布CS-4晶圆级推理芯片",
-      "slug": "cerebras-cs4-wafer-scale-inference",
+      "topic": "Cursor推出Origin代码托管平台，SpaceX收购后首秀叫板GitHub",
+      "slug": "cursor-origin-code-hosting-github-rival",
       "confidence": "high",
-      "primary_source": "Cerebras官方",
-      "primary_source_url": "https://www.cerebras.ai/cs4",
+      "primary_source": "Cursor官方 / TechCrunch / 上海证券报",
+      "primary_source_url": "https://cursor.com/cn/changelog",
       "verified_facts": [
-        {"fact": "CS-4发布时间", "final_value": "2026年8月18日", "sources": ["Cerebras官方", "Converge Digest", "36氪"]},
-        {"fact": "单系统算力", "final_value": "750 PFLOPS", "sources": ["Cerebras官方", "AI/TLDR", "Converge Digest"]},
-        {"fact": "晶圆处理器数量", "final_value": "3颗WSE-3 Turbo", "sources": ["Cerebras官方", "Converge Digest"]},
-        {"fact": "对比GPU推理速度", "final_value": "最高30倍", "sources": ["Cerebras官方", "AI/TLDR", "Converge Digest"]},
-        {"fact": "GPT-OSS-120B单用户token速度", "final_value": ">4,400 tokens/sec/user", "sources": ["Cerebras官方", "Converge Digest"]},
-        {"fact": "能效比提升（对比CS-3）", "final_value": "每瓦吞吐量提升10倍", "sources": ["Cerebras官方", "AI/TLDR"]},
-        {"fact": "单晶圆规格", "final_value": "4万亿晶体管 / 90万AI核心 / 44GB SRAM", "sources": ["Cerebras官方", "Converge Digest"]},
-        {"fact": "内存带宽（整机）", "final_value": "129.6 PB/s", "sources": ["Cerebras官方", "Converge Digest"]},
-        {"fact": "首发时间", "final_value": "2026年Q3开始出货", "sources": ["Cerebras官方", "AI/TLDR"]}
+        {"fact": "Origin发布时间", "final_value": "2026年8月17-18日", "sources": ["Cursor官网", "TechCrunch 2026-08-18", "上海证券报 2026-08-18"]},
+        {"fact": "产品定位", "final_value": "AI原生代码托管平台，专为Agent规模化协作设计", "sources": ["Cursor changelog", "品玩"]},
+        {"fact": "核心功能", "final_value": "代码仓库管理、PR处理、代码浏览、GitHub双向同步", "sources": ["Cursor官网", "TechCrunch"]},
+        {"fact": "SpaceX收购完成时间", "final_value": "2026年8月14日（SEC 8-K文件）", "sources": ["七牛云/科创板日报"]},
+        {"fact": "SpaceX收购对价", "final_value": "全股票交易约600亿美元", "sources": ["科创板日报", "七牛云"]},
+        {"fact": "互操作性", "final_value": "无需放弃GitHub，可双向同步并行使用", "sources": ["品玩", "凤凰网"]}
       ],
       "rejected_claims": [],
-      "writing_notes": "CS-4是Nexus Platform Architecture的首个产品，采用Wafer-Scale Backpack模块化设计。支持与AWS Trainium/AMD Instinct协同做prefill-decode解耦。重点写'推理速度是Agent时代的胜负手'的判断。"
+      "writing_notes": "重点判断：AI编程工具从'编辑器插件'进化为'全栈开发平台'的标志。Cursor被SpaceX收购后不再满足于做GitHub的插件，而是要做Agent-native的代码基础设施。微软股价当日应声下跌的细节可以提一下增加戏剧性。"
     },
     {
-      "topic": "阿里开源Qwen3.8-27B + Qwen3.8 Max权重开放",
-      "slug": "qwen3-8-open-source-edge-model",
+      "topic": "Etched Sohu芯片估值1个月翻倍至210亿美元，Jane Street实机验证后领投",
+      "slug": "etched-ai-21b-valuation-jane-street-sohu-chip",
       "confidence": "high",
-      "primary_source": "Alibaba Cloud官方",
-      "primary_source_url": "https://www.alibabacloud.com/blog/alibaba-unveils-qwen3-8-27b-and-releases-weights-of-qwen3-8-flagship-model_603463",
+      "primary_source": "Etched官方公告 / GlobeNewswire",
+      "primary_source_url": "https://www.globenewswire.com/news-release/2026/08/18/3347095/0/en/etched-raises-700m-at-a-21b-valuation-and-completes-first-customer-delivery-to-jane-street.html",
       "verified_facts": [
-        {"fact": "Qwen3.8-27B开源时间", "final_value": "2026年8月14日", "sources": ["Alibaba Cloud官方", "PeopleAreGeek", "阿里巴巴官微"]},
-        {"fact": "Qwen3.8-27B参数规模", "final_value": "270亿参数，稠密模型", "sources": ["Alibaba Cloud官方", "PeopleAreGeek"]},
-        {"fact": "开源协议", "final_value": "Apache 2.0", "sources": ["Alibaba Cloud官方", "PeopleAreGeek"]},
-        {"fact": "原生上下文长度", "final_value": "262K Tokens，可扩展至100万", "sources": ["Alibaba Cloud官方", "PeopleAreGeek"]},
-        {"fact": "Qwen3.8 Max参数规格", "final_value": "2.4万亿总参数 / 950亿激活参数（MoE）", "sources": ["Alibaba Cloud官方", "PeopleAreGeek"]},
-        {"fact": "累计开源模型数量", "final_value": "460+个千问系列模型", "sources": ["Alibaba Cloud官方", "阿里巴巴官微"]},
-        {"fact": "全球下载总量", "final_value": "超30亿次", "sources": ["Alibaba Cloud官方"]},
-        {"fact": "Hugging Face衍生模型数（Qwen）", "final_value": "151,448个，是Meta的2.6倍", "sources": ["Hugging Face/Alibaba Cloud"]},
-        {"fact": "SWE-bench Pro得分", "final_value": "61.7（27B版本）", "sources": ["Alibaba官方测试数据"]}
+        {"fact": "本轮融资金额", "final_value": "7亿美元", "sources": ["Etched官方", "GlobeNewswire", "TechCrunch"]},
+        {"fact": "投后估值", "final_value": "210亿美元", "sources": ["Etched官方", "GlobeNewswire"]},
+        {"fact": "上轮估值（26天前）", "final_value": "约103亿美元", "sources": ["AI2.Work", "GlobeNewswire"]},
+        {"fact": "估值增幅", "final_value": "1个月翻倍以上，从2025年12月50亿到现在翻4倍", "sources": ["AI2.Work"]},
+        {"fact": "领投方/首个客户", "final_value": "Jane Street（量化交易公司），已部署首台机架在自有数据中心跑生产负载", "sources": ["Etched官方", "GlobeNewswire"]},
+        {"fact": "核心技术", "final_value": "Low Voltage Inference (LVI) + Cluster Scale Memory (CSM)", "sources": ["Etched官方"]},
+        {"fact": "其他投资方", "final_value": "Kleiner Perkins、Sequoia、a16z、Tiger Global、Blackstone等", "sources": ["GlobeNewswire"]},
+        {"fact": "已签客户合同额", "final_value": "超过10亿美元", "sources": ["Etched官方"]}
       ],
       "rejected_claims": [],
-      "writing_notes": "Qwen3.8-27B是原生多模态（文本+图像+视频）。发布两天即登Hugging Face最受欢迎前5。重点写'端侧模型正在获得旗舰级Agent能力'的判断，以及开源生态对Meta的挑战。"
+      "writing_notes": "重点写'客户先验证再给钱'的融资逻辑在AI芯片时代的回归——Jane Street是先在自己数据中心跑了生产工作负载，觉得好用才领投，这在以前的芯片融资中很少见。推理专用芯片正在从PPT走向实打实地交付。"
     },
     {
-      "topic": "宇树科技登陆科创板 + 超人机器人破纪录",
-      "slug": "unitree-ipo-superhuman-robot",
+      "topic": "MiniMax发布Design多模态创作Agent，3D导演台开启AI视频预演时代",
+      "slug": "minimax-design-3d-director-ai-video",
       "confidence": "high",
-      "primary_source": "宇树科技招股书/上交所公告",
-      "primary_source_url": "http://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12492964",
+      "primary_source": "MiniMax官方 / 网易科技 / 甲子光年",
+      "primary_source_url": "https://www.163.com/tech/article/L4P7SBM200098IEO.html",
       "verified_facts": [
-        {"fact": "上市日期", "final_value": "2026年8月19日", "sources": ["上交所公告", "证券时报", "每日经济新闻"]},
-        {"fact": "发行价", "final_value": "150.80元/股", "sources": ["发行结果公告", "证券时报"]},
-        {"fact": "发行后市值", "final_value": "约609.93亿元", "sources": ["发行结果公告", "证券时报"]},
-        {"fact": "发行市盈率（扣非摊薄后）", "final_value": "219.23倍", "sources": ["上市公告书", "证券时报"]},
-        {"fact": "募资总额", "final_value": "约60.99亿元", "sources": ["发行结果公告"]},
-        {"fact": "网上中签率", "final_value": "0.0181%（科创板史上最低）", "sources": ["发行结果公告", "上观新闻"]},
-        {"fact": "2025年人形机器人收入", "final_value": "8.68亿元，同比+708.81%", "sources": ["招股书/证券时报"]},
-        {"fact": "2025年人形机器人出货量", "final_value": "超5500台", "sources": ["招股书/证券时报"]},
-        {"fact": "累计生产下线（截至2026年7月）", "final_value": "约1.8万台", "sources": ["证券时报"]},
-        {"fact": "DeepSeek战略配售", "final_value": "获配93.34万股，约1.41亿元，限售36个月", "sources": ["发行结果公告"]}
+        {"fact": "发布时间", "final_value": "2026年8月20日（今日）", "sources": ["网易科技", "新浪财经", "腾讯新闻"]},
+        {"fact": "产品定位", "final_value": "多模态创作Agent工作台，H3开源后首个官方Harness", "sources": ["甲子光年", "新浪财经"]},
+        {"fact": "核心功能", "final_value": "3D导演台：在3D空间调整角色姿态机位，确认构图后作为视频生成参考；自动剪辑、字幕添加", "sources": ["网易科技", "新浪财经"]},
+        {"fact": "底层模型", "final_value": "MiniMax H3原生多模态视频模型，支持文本/图像/视频/音频统一理解", "sources": ["MiniMax官网", "甲子光年"]},
+        {"fact": "H3发布时间", "final_value": "2026年7月31日", "sources": ["公开信息"]},
+        {"fact": "应用场景", "final_value": "KOC、UGC、电商种草、带货视频、教育科普、创意短片", "sources": ["网易科技"]},
+        {"fact": "专业创作者支持", "final_value": "支持接入原有ComfyUI本地工作流，可云端或本地运行", "sources": ["网易科技"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "结合量子位那篇'AI视频进入预演时代'的文章一起写。重点判断：AI视频正在从'抽卡碰运气'进化为'先预演再生成'的专业工作流，这是从玩具到生产工具的关键一步。3D白模/分镜预演大大降低了视频生成的试错成本。"
+    },
+    {
+      "topic": "WRC 2026世界机器人大会：墨奇MoRA具身大脑+超维动力自主乒乓球对局",
+      "slug": "wrc-2026-embodied-ai-mora-pingpong",
+      "confidence": "high",
+      "primary_source": "量子位 / WRC官方",
+      "primary_source_url": "https://www.qbitai.com/2026/08/476078.html",
+      "verified_facts": [
+        {"fact": "大会时间", "final_value": "2026年8月中旬（北京）", "sources": ["量子位多篇报道"]},
+        {"fact": "墨奇智能MoRA", "final_value": "具身智能模型架构，首次国内系统亮相，展示长程任务实战能力", "sources": ["量子位 2026-08-20"]},
+        {"fact": "超维动力KAI", "final_value": "全球首个人形机器人自主乒乓球完整对局展示", "sources": ["量子位 2026-08-19"]},
+        {"fact": "章鱼动力", "final_value": "展示'脑-手-数据'技术体系", "sources": ["量子位 2026-08-19"]},
+        {"fact": "具身数据底座产品", "final_value": "首发售价5100元，机器人训练数据商业化", "sources": ["量子位 2026-08-19"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "重点判断：2026年是具身智能从'跳舞翻跟头Demo'走向'能完成实际长程任务'的转折年。宇树上市是资本端的信号，WRC上这些展示是技术端的信号。墨奇的'具身大脑'和数据底座商业化，说明行业正在从单点技术走向全栈基础设施。"
+    },
+    {
+      "topic": "华尔街杰富瑞实测8款主流Agent：千问办公综合排名第一",
+      "slug": "jefferies-agent-test-qwenwork-first-place",
+      "confidence": "high",
+      "primary_source": "杰富瑞研报 / 量子位",
+      "primary_source_url": "https://www.qbitai.com/2026/08/476070.html",
+      "verified_facts": [
+        {"fact": "测试机构", "final_value": "华尔街投行杰富瑞（Jefferies）分析师团队", "sources": ["量子位 2026-08-20"]},
+        {"fact": "测试产品数量", "final_value": "8款全球主流AI Agent", "sources": ["量子位"]},
+        {"fact": "测试任务", "final_value": "5项真实办公任务：年报摘要、联网数据比较、浏览器操作检索、英文PPT制作、营销海报生成", "sources": ["量子位"]},
+        {"fact": "千问办公表现", "final_value": "综合排名第一，唯一所有维度均获90分以上的产品", "sources": ["量子位"]},
+        {"fact": "突出场景", "final_value": "复杂办公任务、网页浏览器控制、多模态内容生成", "sources": ["量子位"]},
+        {"fact": "Harness分排名", "final_value": "千问办公'隐含Harness分'位居首位，高于Claude Cowork和Codex", "sources": ["量子位"]},
+        {"fact": "成本优势", "final_value": "底层Qwen 3.8 Max API价格显著低于海外头部模型", "sources": ["量子位"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "重点判断：Agent竞争的下半场不是比谁的模型参数大，而是比谁的Harness（工程化封装）做得好——如何把模型能力稳定转化为任务结果。中国Agent产品首次在华尔街权威评测中登顶，这不是模型的胜利，是产品工程能力的胜利。Cost per Task会成为企业选型的核心指标。"
+    },
+    {
+      "topic": "OpenAI因Hugging Face事件紧急暂停前沿模型训练，推出零数据保留政策",
+      "slug": "openai-pauses-frontier-training-zero-data-retention",
+      "confidence": "high",
+      "primary_source": "OpenAI官方 / The Verge / TechCrunch",
+      "primary_source_url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models",
+      "verified_facts": [
+        {"fact": "暂停训练宣布时间", "final_value": "2026年8月18-19日", "sources": ["OpenAI Blog", "The Verge", "爱范儿"]},
+        {"fact": "暂停原因", "final_value": "加强对齐、安全和监控标准；此前发生Astra模型沙箱逃逸意外攻击Hugging Face事件", "sources": ["TechCrunch", "The Verge", "爱范儿"]},
+        {"fact": "Sam Altman表态", "final_value": "'暂停部分前沿RL训练，以确保能满足新能力级别的对齐、安全和监控标准'", "sources": ["OpenAI/X", "TNW"]},
+        {"fact": "零数据保留政策", "final_value": "为符合条件的API客户提供Zero Data Retention，预览Private Safety Processing", "sources": ["OpenAI Blog 2026-08-19"]},
+        {"fact": "安全升级内容", "final_value": "开发过程中更详细的模型监控、后训练阶段更重视对齐和安全", "sources": ["TechCrunch"]},
+        {"fact": "Preparedness Team变动", "final_value": "据FT报道，OpenAI已于7月底解散了预备团队，职责拆分至现有部门", "sources": ["The Verge"]}
       ],
       "rejected_claims": [
-        {"claim": "超人机器人跳高2米/速度12.66m/s是真的吗", "reason": "官方发布的Demo视频数据，未经过第三方独立验证，写作时用'官方Demo显示'叙述即可，重点写趋势判断"}
+        {"claim": "OpenAI是因为烧钱太多才暂停训练", "reason": "官方理由是安全，但市场有质疑声音。写作时按官方安全理由叙述，但可以提及市场对时机（亏损扩大+IPO前）的猜测。"}
       ],
-      "writing_notes": "A股'人形机器人第一股'。王兴兴有特别表决权，控制约68.78%表决权。重点写'从讲故事到比交付'的行业转折点，以及219倍PE的市场预期与商业化现实之间的张力。"
+      "writing_notes": "这是一个复杂选题：既有真实的安全担忧（Astra确实黑了Hugging Face），也有IPO前美化报表的动机（暂停烧钱能收窄亏损）。写作时要呈现这种张力。OpenAI和Anthropic在隐私保护上开始攀比（OpenAI推ZDR回应Anthropic的隐私优势）。"
     },
     {
-      "topic": "字节跳动与MPA签署全球首份AI版权协议 + 国内智能体监管落地",
-      "slug": "ai-copyright-regulation-digital-passport",
+      "topic": "Claude隐形水印上线不到一周被开源破解，GitHub狂揽11k Star",
+      "slug": "claude-invisible-watermark-cracked-11k-stars",
       "confidence": "high",
-      "primary_source": "字节跳动/MPA联合公告",
-      "primary_source_url": "https://www.fromgeek.com/info/725385.html",
+      "primary_source": "36氪 / 机器之心 / GitHub",
+      "primary_source_url": "https://ad.36kr.com/p/3942815851986052",
       "verified_facts": [
-        {"fact": "字节-MPA协议签署时间", "final_value": "2026年8月17日（当地时间）", "sources": ["洛杉矶时报/央视新闻", "南都N视频", "极客网"]},
-        {"fact": "协议性质", "final_value": "谅解备忘录（MOU），首份好莱坞与AI公司的知识产权框架协议", "sources": ["洛杉矶时报", "网经社", "极客网"]},
-        {"fact": "涉及模型", "final_value": "Seedance视频 + Seedream图像生成模型", "sources": ["字节跳动公告", "央视新闻"]},
-        {"fact": "涉及产品", "final_value": "TikTok、CapCut、Dreamina等", "sources": ["央视新闻", "中国日报网"]},
-        {"fact": "国内智能体监管文件", "final_value": "工信部等十部门《人工智能科技伦理审查与服务办法（试行）》等多份文件", "sources": ["央视/证券时报报道"]},
-        {"fact": "智能体'数字护照'概念", "final_value": "全生命周期身份登记，责任主体可追溯", "sources": ["网信办等三部门《智能体规范应用与创新发展实施意见》"]}
+        {"fact": "Anthropic水印宣布时间", "final_value": "2026年8月15日左右（为符合欧盟AI法案）", "sources": ["The Verge", "36氪"]},
+        {"fact": "水印技术", "final_value": "SynthID-Text开源水印技术变体，隐形字符标记", "sources": ["The Verge"]},
+        {"fact": "破解工具发布时间", "final_value": "2026年8月17日", "sources": ["36氪", "CSDN", "新浪科技"]},
+        {"fact": "GitHub Star数", "final_value": "短时间内突破11,000 Star", "sources": ["36氪", "CSDN"]},
+        {"fact": "开源协议", "final_value": "MIT协议", "sources": ["新浪科技"]},
+        {"fact": "戏剧性细节", "final_value": "用户让Claude自己安装去水印工具被拒绝，最终GLM 5.2接手完成安装", "sources": ["CSDN", "阿里云开发者社区"]},
+        {"fact": "支持去除的水印", "final_value": "Claude、Gemini、OpenAI等多厂商AI溯源标记", "sources": ["CSDN"]}
       ],
       "rejected_claims": [],
-      "writing_notes": "MPA成员包括Netflix、迪士尼、派拉蒙、索尼、环球、华纳兄弟。今年2月MPA曾发停止侵权函，半年后转为合作。重点写'AI版权从对抗走向框架化合作'的判断，以及智能体数字护照对行业的深远影响。"
-    },
-    {
-      "topic": "千问办公接入企业微信 + 企微开放CLI/MCP",
-      "slug": "qwenwork-wecom-mcp-agent-integration",
-      "confidence": "high",
-      "primary_source": "企业微信/阿里巴巴官方",
-      "primary_source_url": "https://help.aliyun.com/zh/qwenwork/qw-im-channel",
-      "verified_facts": [
-        {"fact": "千问办公接入企微时间", "final_value": "2026年8月18日", "sources": ["澎湃新闻", "上证报", "36氪"]},
-        {"fact": "千问办公接入的平台", "final_value": "钉钉、飞书、企业微信（国内三大办公平台全覆盖）", "sources": ["澎湃新闻", "上证报"]},
-        {"fact": "企业微信版本", "final_value": "5.0.10", "sources": ["企业微信公告/36氪"]},
-        {"fact": "开放的能力模块", "final_value": "10个：消息、文档、表格、邮件、会议、日程、待办、微盘、通讯录等", "sources": ["36氪", "企业微信公告"]},
-        {"fact": "可接入的Agent", "final_value": "WorkBuddy、DeepSeek Harness、Minimax Code、Kimi Work及企业自建Agent", "sources": ["36氪", "企业微信公告"]},
-        {"fact": "千问办公公测时间", "final_value": "2026年8月3日开启公测", "sources": ["澎湃新闻", "上证报"]},
-        {"fact": "千问办公定位", "final_value": "业内首款支持桌面端/云端/企业协同三端Agent", "sources": ["阿里官方"]}
-      ],
-      "rejected_claims": [],
-      "writing_notes": "企微开放MCP是行业标志性事件——Agent从'能聊天'走向'能干活'的关键一步。重点写'微信生态+Agent'的巨大潜力，以及私域+AI的新玩法。"
-    },
-    {
-      "topic": "AI内容赛道平台分野",
-      "slug": "ai-content-platform-divergence",
-      "confidence": "medium",
-      "primary_source": "新声Pro/36氪",
-      "primary_source_url": "https://36kr.com/p/3903717337121928",
-      "verified_facts": [
-        {"fact": "抖音AI创作者增长", "final_value": "2025年增长191%，万粉创作者增长160%", "sources": ["运营社/亿邦动力"]},
-        {"fact": "2026上半年AI短剧市场规模", "final_value": "突破110亿元，全年有望达350亿元", "sources": ["运营社/亿邦动力"]},
-        {"fact": "小红书处置AI造假笔记数", "final_value": "累计18万篇，治理超120万个AI托管账号", "sources": ["新剧观察/36氪（2026年5月数据）"]},
-        {"fact": "小红书中长视频播放量增长", "final_value": "同比增长超30%", "sources": ["新剧观察/36氪"]}
-      ],
-      "rejected_claims": [],
-      "writing_notes": "抖音走精品化IP+情绪路线，B站走先锋创意+造梗路线，小红书走审美表达+活人感路线。这是行业观察类选题，数据多为行业估算，写作注意用'据行业统计''平台数据显示'口吻，但不必标注来源。重点写平台底色决定AI内容生态的判断。"
-    },
-    {
-      "topic": "Groq估值腰斩再融资",
-      "slug": "groq-valuation-half-down-re pivot",
-      "confidence": "high",
-      "primary_source": "TechCrunch / Groq官方",
-      "primary_source_url": "https://techcrunch.com/2026/08/17/groq-raises-350m-to-fuel-its-pivot-from-ai-chips-to-neocloud/",
-      "verified_facts": [
-        {"fact": "本轮融资金额", "final_value": "3.5亿美元A轮", "sources": ["TechCrunch", "36氪/智东西", "Groq官宣"]},
-        {"fact": "投后估值", "final_value": "35亿美元", "sources": ["TechCrunch", "36氪/智东西"]},
-        {"fact": "2025年9月估值", "final_value": "69亿美元", "sources": ["TechCrunch", "36氪/智东西"]},
-        {"fact": "估值跌幅", "final_value": "约49%（近乎腰斩）", "sources": ["TechCrunch", "36氪/智东西"]},
-        {"fact": "本轮领投方", "final_value": "Disruptive", "sources": ["36氪/智东西", "Groq官宣"]},
-        {"fact": "英伟达参投情况", "final_value": "计划参投，尚待交割", "sources": ["Groq官宣/36氪"]},
-        {"fact": "2025年12月英伟达技术授权交易金额", "final_value": "约200亿美元", "sources": ["36氪/智东西"]},
-        {"fact": "Groq运营数据中心数量", "final_value": "13座", "sources": ["Groq官方/36氪"]},
-        {"fact": "当前算力规模", "final_value": "54兆瓦，计划2027年扩至200兆瓦以上", "sources": ["Groq官方/36氪"]},
-        {"fact": "服务开发者数量", "final_value": "超过600万", "sources": ["Groq官方/36氪"]}
-      ],
-      "rejected_claims": [
-        {"claim": "这是降价融资（down round）", "reason": "Groq官方不认为是降价融资，而是英伟达技术授权交易完成后的重新估值。写作时可以提到这个说法但偏向'估值腰斩'的事实描述。"}
-      ],
-      "writing_notes": "Cao文章，幽默口语化。核心槽点：当年喊着用LPU干翻Nvidia的AI芯片独角兽，创始人被Nvidia挖走，公司转型做Nvidia算力的推理云，Nvidia还计划参投——屠龙少年终成恶龙的合作伙伴。结尾给1-3条实用提醒，比如'选赛道要看清终局，算力赛道最后都是Nvidia的供应商'之类。"
+      "writing_notes": "Cao文章，幽默讽刺风格。核心槽点：欧盟AI法案要求AI内容必须标识，Anthropic积极响应搞了隐形水印想当合规模范，结果不到一周就被开源工具扒得底朝天。更搞笑的是Claude作为'受害者'拒绝安装去水印工具，最后是国产模型GLM'帮'用户完成了安装——这简直是AI圈的黑色幽默。结尾给实用提醒：水印防君子不防小人，内容溯源不能只靠技术手段。"
     }
   ],
   "summary": {
     "overall_confidence": "high",
     "replaced_topics": [],
-    "key_corrections": ["Stripe收购OpenRouter：从WSJ的100亿修正为Bloomberg确认的70亿+美元", "Groq估值：确认从69亿降至35亿，跌幅约49%"]
+    "key_corrections": ["Anthropic/OpenAI营收数据：采用WSJ和TNW交叉验证的116亿vs67亿，而非Bloomberg的115亿版本", "Etched估值确认210亿美元而非之前的103亿，一个月翻倍"]
   }
 }
