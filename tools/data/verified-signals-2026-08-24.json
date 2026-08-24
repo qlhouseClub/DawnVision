@@ -1,0 +1,135 @@
+{
+  "date": "2026-08-24",
+  "issue": "042",
+  "topics": [
+    {
+      "topic": "牛来Ox Alpha匿名模型登顶OpenRouter，智谱血缘疑云",
+      "slug": "ox-alpha-stealth-model-openrouter-zhipu-glm",
+      "confidence": "high",
+      "primary_source": "量子位 & TechCrunch",
+      "primary_source_url": "https://www.qbitai.com/2026/08/478191.html",
+      "verified_facts": [
+        {"fact": "Ox Alpha（牛来）上线OpenRouter日期", "final_value": "2026年8月20日", "sources": ["量子位", "TechCrunch"]},
+        {"fact": "模型上下文窗口", "final_value": "104.86万token，单次输出最多13.1万token", "sources": ["量子位"]},
+        {"fact": "模型能力定位", "final_value": "代码、长周期Agent、复杂推理，支持文本/图片/视频多模态", "sources": ["OpenRouter", "TechCrunch"]},
+        {"fact": "前五应用累计调用量", "final_value": "超过4万亿token", "sources": ["微博", "量子位"]},
+        {"fact": "OpenCode免费政策", "final_value": "连续数天几乎不限量免费使用，不计入用户Go额度", "sources": ["量子位"]},
+        {"fact": "主要猜测对象", "final_value": "智谱GLM、谷歌Gemini 3.5 Pro、微软MAI", "sources": ["量子位", "TechCrunch", "Reddit"]}
+      ],
+      "rejected_claims": [
+        {"claim": "每天100万亿token服务容量", "reason": "仅为公开讨论中的说法，无官方确认，不予采用"},
+        {"claim": "已确认是智谱模型", "reason": "技术指纹有相似性但无官方确认，保持悬念"}
+      ],
+      "writing_notes": "重点写匿名模型爆火的戏剧冲突、4万亿token这个惊人数据、技术指纹扒皮的社区狂欢、以及对开源模型生态的影响。不要写死是智谱，保持猜测的悬念感。"
+    },
+    {
+      "topic": "Hugging Face寻求以130亿美元估值出售",
+      "slug": "hugging-face-13b-sale-ai-developer-platform",
+      "confidence": "high",
+      "primary_source": "Business Insider / 爱范儿",
+      "primary_source_url": "https://www.ifanr.com/1676393",
+      "verified_facts": [
+        {"fact": "估值", "final_value": "至少130亿美元，后续可能上调", "sources": ["Business Insider", "爱范儿"]},
+        {"fact": "2023年D轮估值", "final_value": "45亿美元", "sources": ["爱范儿"]},
+        {"fact": "谈判阶段", "final_value": "早期阶段，已聘请银行摸底买家，最终也可能不卖", "sources": ["Business Insider"]},
+        {"fact": "核心价值", "final_value": "AI模型发现、发布、分发平台，被称为AI时代的GitHub", "sources": ["爱范儿"]},
+        {"fact": "近期可比交易", "final_value": "Stripe收购OpenRouter超80亿美元", "sources": ["爱范儿", "Axios"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "重点写AI基础设施层的整合趋势、平台中立性与收购的矛盾、开发者社区的反应。联系Stripe收购OpenRouter，写中间层价值上升。"
+    },
+    {
+      "topic": "英伟达AI服务器涨价15%以上",
+      "slug": "nvidia-ai-server-price-hike-15-percent",
+      "confidence": "high",
+      "primary_source": "彭博社 / The Information / 量子位",
+      "primary_source_url": "https://www.qbitai.com/2026/08/478164.html",
+      "verified_facts": [
+        {"fact": "涨价幅度", "final_value": "15%以上，部分GB300和Vera Rubin 200系统约17%", "sources": ["彭博社", "The Information"]},
+        {"fact": "生效时间", "final_value": "2027年初交付的产品", "sources": ["The Information"]},
+        {"fact": "涨价原因", "final_value": "内存芯片成本飙升", "sources": ["彭博社"]},
+        {"fact": "对1GW数据中心影响", "final_value": "至少增加50亿美元建设成本", "sources": ["The Information", "量子位"]},
+        {"fact": "Vera Rubin机架价格变化", "final_value": "72GPU机架从约700万美元涨到约800万美元", "sources": ["量子位"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "重点写算力通胀时代的到来、对整个AI行业成本结构的影响、大厂和创业公司的不同承受能力。不要只写涨价本身，要分析背后的供需逻辑。"
+    },
+    {
+      "topic": "Uncle Bob坦诚AI代码这条路还没走通",
+      "slug": "uncle-bob-ai-code-not-there-yet",
+      "confidence": "medium",
+      "primary_source": "InfoQ中文",
+      "primary_source_url": "https://www.infoq.cn/article/ogFMPSyD3LqR9RtbIRky",
+      "verified_facts": [
+        {"fact": "人物身份", "final_value": "Robert C. Martin（Uncle Bob），敏捷开发先驱，《代码整洁之道》作者", "sources": ["InfoQ"]},
+        {"fact": "核心观点", "final_value": "曾完全相信AI代码，但现在坦诚这条路还没走通", "sources": ["InfoQ"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "重点写AI编程 hype 与现实的差距、行业教父级人物反思的分量、开发者真实体验与营销叙事的反差。不要一味唱空，要客观呈现现状。"
+    },
+    {
+      "topic": "2026世界机器人大会闭幕，家庭机器人开启预订",
+      "slug": "wrc-2026-personal-robot-preorder",
+      "confidence": "medium",
+      "primary_source": "量子位 / 新华网",
+      "primary_source_url": "https://www.qbitai.com/2026/08/478017.html",
+      "verified_facts": [
+        {"fact": "大会时间地点", "final_value": "2026年8月19-23日，北京亦庄", "sources": ["新华网", "中国网"]},
+        {"fact": "规模", "final_value": "373家企业，3000件产品，首发新品超150件", "sources": ["中国网"]},
+        {"fact": "大会主题", "final_value": "人机共生，产需共融", "sources": ["新华网"]},
+        {"fact": "重要发布", "final_value": "银河通用发布双足人形机器人Galbot ET1；上纬新材开启个人机器人预订", "sources": ["量子位", "新华网"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "重点写具身智能从秀场到落地的转折点、家庭机器人消费时代开启的信号、to C机器人的真实场景与挑战。"
+    },
+    {
+      "topic": "亚马逊开源Dogwood，给AI工具调用立规矩",
+      "slug": "aws-dogwood-open-source-agent-tool-use",
+      "confidence": "medium",
+      "primary_source": "InfoQ中文",
+      "primary_source_url": "https://www.infoq.cn/article/cwj5Ikvhqu5mKH22zKsO",
+      "verified_facts": [
+        {"fact": "发布方", "final_value": "亚马逊云科技AWS", "sources": ["InfoQ"]},
+        {"fact": "项目性质", "final_value": "开源项目", "sources": ["InfoQ"]},
+        {"fact": "核心定位", "final_value": "AI智能体工具调用规范", "sources": ["InfoQ"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "重点写Agent工具调用标准化的重要性、大厂为什么要做这件事、与MCP/A2A的关系、协议层竞争格局。"
+    },
+    {
+      "topic": "上影与筷子科技打造专业级AI片场",
+      "slug": "shanghai-film-kuaizi-ai-studio-dgx",
+      "confidence": "medium",
+      "primary_source": "爱范儿",
+      "primary_source_url": "https://www.ifanr.com/1676318",
+      "verified_facts": [
+        {"fact": "合作方", "final_value": "上影集团与筷子科技", "sources": ["爱范儿"]},
+        {"fact": "硬件配置", "final_value": "50台DGX服务器", "sources": ["爱范儿"]},
+        {"fact": "资源投入", "final_value": "万亿Token补贴", "sources": ["爱范儿"]},
+        {"fact": "定位", "final_value": "专业级AI片场，面向影视制作", "sources": ["爱范儿"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "重点写AI视频从玩具到生产工具的转变、专业影视行业的AI化、传统影视公司与AI技术公司的合作模式。"
+    },
+    {
+      "topic": "AI红娘承诺三年不结婚就退款",
+      "slug": "ai-matchmaker-refund-if-not-married",
+      "confidence": "medium",
+      "primary_source": "InfoQ中文AI周报",
+      "primary_source_url": "https://www.infoq.cn/article/ONGSA7k86LcxFyU64N2z",
+      "verified_facts": [
+        {"fact": "创始人背景", "final_value": "前Kimi搜索负责人", "sources": ["InfoQ"]},
+        {"fact": "创业方向", "final_value": "AI红娘", "sources": ["InfoQ"]},
+        {"fact": "承诺内容", "final_value": "三年不结婚就退款", "sources": ["InfoQ"]},
+        {"fact": "目标", "final_value": "拉高10%结婚率", "sources": ["InfoQ"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "Cao风格，幽默吐槽。重点写这个承诺的荒诞性、AI+婚恋的反差、创业噱头与真实需求的边界。结尾给实用提醒。"
+    }
+  ],
+  "summary": {
+    "overall_confidence": "high",
+    "replaced_topics": ["Cloudflare Agent钱包（因发布时间8月4日超过3天时效门槛被替换）"],
+    "key_corrections": ["将Cloudflare钱包选题替换为上影AI片场选题，确保所有内容符合3天时效铁律"]
+  }
+}
