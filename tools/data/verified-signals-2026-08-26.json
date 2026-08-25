@@ -1,0 +1,159 @@
+{
+  "date": "2026-08-26",
+  "issue": "043",
+  "topics": [
+    {
+      "topic": "小鹏机器人首轮融资超9亿美元，投后估值63亿美元",
+      "slug": "xpeng-robot-900m-funding-6-3b-valuation-tencent-alibaba",
+      "confidence": "high",
+      "primary_source": "小鹏集团官方公告",
+      "primary_source_url": "https://m.thepaper.cn/newsDetail_forward_33840510",
+      "verified_facts": [
+        {"fact": "小鹏机器人完成首轮融资", "final_value": "超9亿美元（首轮融资）", "sources": ["澎湃新闻", "证券时报", "新浪财经", "界面新闻"]},
+        {"fact": "投后估值", "final_value": "超63亿美元（约430亿元人民币）", "sources": ["澎湃新闻", "证券时报", "新浪财经"]},
+        {"fact": "投资机构", "final_value": "IDG资本领投，高榕创投参投，腾讯、阿里巴巴战略投资", "sources": ["澎湃新闻", "界面新闻", "证券时报"]},
+        {"fact": "小鹏IRON参数", "final_value": "全身76个自由度，单手21个自由度，搭载3颗图灵AI芯片，算力2250 TOPS", "sources": ["澎湃新闻", "小鹏集团官网"]},
+        {"fact": "量产时间", "final_value": "2026年底进入量产，2027年正式上市交付", "sources": ["澎湃新闻", "证券时报"]},
+        {"fact": "融资纪录", "final_value": "刷新中国具身智能行业单轮私募股权融资纪录", "sources": ["小鹏集团官方", "澎湃新闻", "新浪财经"]}
+      ],
+      "rejected_claims": [
+        {"claim": "融资金额为10亿美元", "reason": "官方表述为'超9亿美元'，多家权威媒体一致引用，10亿为四舍五入后的近似说法，写作时使用'超9亿美元'更准确"}
+      ],
+      "writing_notes": "强调车厂（小鹏）+ 互联网巨头（腾讯阿里）联合押注的信号意义，突出'车厂降维'这个核心判断。注意：何小鹏称机器人单台毛利或远超汽车这个点可以引用，来自界面新闻采访。"
+    },
+    {
+      "topic": "GPT-5.6 Sol降价20%+，OpenAI一月两降",
+      "slug": "openai-gpt-5-6-sol-price-cut-20-percent-llm-price-war",
+      "confidence": "high",
+      "primary_source": "OpenAI官方开发者论坛",
+      "primary_source_url": "https://community.openai.com/t/20-price-reduction-for-gpt-5-6-sol-api-codex-credits-and-chatgpt-work/1391726",
+      "verified_facts": [
+        {"fact": "降价幅度", "final_value": "输入token降价20%，输出token降价33%，整体表述为'降价20%以上'", "sources": ["OpenAI官方论坛", "WinBuzzer", "腾讯云开发者社区"]},
+        {"fact": "新价格", "final_value": "$4/百万输入token，$20/百万输出token", "sources": ["OpenAI官方论坛", "ExplainX.ai"]},
+        {"fact": "降价时间", "final_value": "2026年8月21日宣布，有效期3个月（至11月21日）", "sources": ["OpenAI官方论坛", "WinBuzzer"]},
+        {"fact": "适用范围", "final_value": "API、ChatGPT Work credits、Codex credits；不适用于Pro/Plus/Business订阅", "sources": ["OpenAI官方论坛", "ExplainX.ai"]},
+        {"fact": "这是一个月内第二次降价", "final_value": "7月底已下调过其他模型价格（中端降20%，低成本降80%）", "sources": ["环球时报", "腾讯云开发者社区"]}
+      ],
+      "rejected_claims": [
+        {"claim": "降价是永久的", "reason": "官方明确说明是'未来三个月内'的限时降价，写作时注意标注限时性质"}
+      ],
+      "writing_notes": "核心判断：前沿模型也开始打价格战了，说明竞争压力从底层模型传导到了最顶端。可以对比DeepSeek的价格（约$0.27/百万输入）来体现差距，但重点是OpenAI自己也在降，而不是只说中国模型便宜。"
+    },
+    {
+      "topic": "字节发布豆包工作Agent产品",
+      "slug": "bytedance-doubao-work-agent-product-feishu-integration",
+      "confidence": "high",
+      "primary_source": "豆包官方发布",
+      "primary_source_url": "https://36kr.com/p/3954390879222917",
+      "verified_facts": [
+        {"fact": "产品名称", "final_value": "豆包工作（面向生产力场景的Agent产品）", "sources": ["36氪", "科创板日报", "中国网科技"]},
+        {"fact": "发布时间", "final_value": "2026年8月25日", "sources": ["科创板日报", "36氪"]},
+        {"fact": "核心功能", "final_value": "支持文档、表格、PPT、图片、视频、网页等多种内容生成与编辑；'指哪改哪'协作编辑；本地文件操作、浏览器操作、Skills技能、定时任务", "sources": ["36氪", "豆包官网", "中国网科技"]},
+        {"fact": "与飞书打通", "final_value": "深度集成飞书权限体系，Agent可在用户权限范围内读取数据和使用工具", "sources": ["36氪", "科创板日报", "财新网"]},
+        {"fact": "底层模型", "final_value": "接入可执行Agent任务的豆包2.1系列模型", "sources": ["豆包官网", "36氪"]}
+      ],
+      "rejected_claims": [
+        {"claim": "产品名为'豆包办公'", "reason": "官方名称为'豆包工作'，'豆包办公'是部分媒体报道时的误写/别称，写作时用官方名称"}
+      ],
+      "writing_notes": "重点写办公Agent赛道的竞争格局：字节（豆包工作+飞书）vs 钉钉AI vs WPS AI。字节这次整合团队统一品牌，说明从'模型能力展示'进入'产品落地竞争'阶段。"
+    },
+    {
+      "topic": "英伟达Groq 3 LPX机架全面量产",
+      "slug": "nvidia-groq-3-lpx-rack-mass-production-20b-acquisition",
+      "confidence": "high",
+      "primary_source": "英伟达官方公告",
+      "primary_source_url": "https://finance.sina.com.cn/tech/digi/2026-08-25/doc-inipnuhy5580781.shtml",
+      "verified_facts": [
+        {"fact": "产品名称", "final_value": "Groq 3 LPX机架", "sources": ["IT之家/新浪科技", "科创板日报", "环球网"]},
+        {"fact": "量产宣布时间", "final_value": "2026年8月24日（当地时间周一）", "sources": ["科创板日报", "新浪财经"]},
+        {"fact": "收购背景", "final_value": "英伟达2025年12月以200亿美元收购Groq，为公司史上最大规模收购", "sources": ["环球网", "新浪财经", "IT之家"]},
+        {"fact": "硬件规格", "final_value": "每机架集成256颗LP30芯片，片上SRAM合计128GB，总带宽40PB/s，专为低延迟推理设计", "sources": ["新浪财经", "看点资讯"]},
+        {"fact": "首批部署", "final_value": "部署在云服务商Nebius数据中心，与Vera CPU、Rubin GPU协同，今年晚些时候上线", "sources": ["科创板日报", "环球网"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "核心判断：英伟达通过收购Groq补齐了'低延迟推理'这块短板，GPU+NPU+CPU的组合策略成型。AI Agent时代对推理延迟的要求极高（要像人一样快地反应），Groq的价值就在这里。注意不要把Groq说成GPU，它是专用推理芯片/LPU。"
+    },
+    {
+      "topic": "River AI两月融11亿美元",
+      "slug": "river-ai-1-1b-funding-two-months-igor-babuschkin-xai",
+      "confidence": "high",
+      "primary_source": "River AI官方（Business Wire）",
+      "primary_source_url": "https://www.businesswire.com/news/home/20260811845258/en/River-AI-Raises-1-1B-Led-by-General-Catalyst-and-AMP-PBC-to-Build-Open-AI-Stack",
+      "verified_facts": [
+        {"fact": "融资金额", "final_value": "11亿美元（种子轮+A轮合计）", "sources": ["Business Wire官方", "SiliconANGLE", "全球独角兽企业500强"]},
+        {"fact": "领投方", "final_value": "General Catalyst与AMP PBC联合领投", "sources": ["Business Wire", "SiliconANGLE"]},
+        {"fact": "投资方", "final_value": "NVIDIA、AMD Ventures战略投资，Y Combinator、淡马锡参投", "sources": ["Business Wire", "AIPressRoom"]},
+        {"fact": "创始人背景", "final_value": "Igor Babuschkin（xAI联合创始人，曾在DeepMind参与AlphaCode）", "sources": ["SiliconANGLE", "WealthEngine"]},
+        {"fact": "公司成立时间", "final_value": "2026年4月20日注册成立，融资公布时仅成立约4个月", "sources": ["全球独角兽企业500强", "WealthEngine"]},
+        {"fact": "公司方向", "final_value": "构建'开放AI栈'，主打个人化AI/AI所有权归用户", "sources": ["AIPressRoom", "Business Wire"]}
+      ],
+      "rejected_claims": [
+        {"claim": "公司成立仅2个月就融资11亿", "reason": "4月注册到8月公布约4个月，但融资可能在之前就完成了。'两月'是部分法语媒体的表述，可能指seed到A轮间隔。写作时用'成立仅数月'更稳妥。"}
+      ],
+      "writing_notes": "重点写AI基础设施创业的疯狂：一个idea+明星团队就能融11亿美元。英伟达和AMD同时战略投资很有意思——既竞争又合作，都想扶持新的AI架构来制衡对方。River AI的方向是'开放AI栈'，对标Anthropic/OpenAI的闭源路线。"
+    },
+    {
+      "topic": "人生副本AI短视频爆火",
+      "slug": "ai-life-simulation-short-video-viral-500k-followers",
+      "confidence": "medium",
+      "primary_source": "抖音平台数据/行业报道",
+      "primary_source_url": "https://m.thepaper.cn/newsDetail_forward_33841994",
+      "verified_facts": [
+        {"fact": "\"人生副本\"类视频热度", "final_value": "话题播放量突破十几亿，大量博主快速涨粉", "sources": ["抖音平台数据", "头条号报道"]},
+        {"fact": "视频模式", "final_value": "第二人称叙事+AI生成漫画风画面+旁白配音，全程无真人出镜", "sources": ["澎湃新闻/叁拾代", "头条号报道"]},
+        {"fact": "制作效率", "final_value": "AI工作流将3分钟动画制作周期从18.5天压缩到3天以内，成本从8000元/分钟降至150元/分钟", "sources": ["提效录行业报告", "CSDN"]},
+        {"fact": "MCN布局", "final_value": "蜂群文化搭建60+AI账号矩阵，目标年底突破100个", "sources": ["澎湃新闻/叁拾代"]},
+        {"fact": "单账号涨粉案例", "final_value": "30天62条视频，总播放1800万，涨粉10.3万（行业平均数据）", "sources": ["讯飞虚拟人平台案例", "提效录"]}
+      ],
+      "rejected_claims": [
+        {"claim": "单个账号一夜涨粉50万", "reason": "50万涨粉是极端案例，非普遍数据，且难以验证具体账号。写作时使用'话题播放量十几亿''最快的账号一夜涨粉数十万'等更稳妥的表述。"}
+      ],
+      "writing_notes": "核心判断：AI短视频已经从'工具革命'进入'范式革命'——不是用AI辅助剪辑，而是整个内容形态都是AI原生的。'人生副本'这种第二人称沉浸式叙事是典型的AI原生内容形态，传统视频制作流程根本做不出这个成本结构。"
+    },
+    {
+      "topic": "General Intuition融资60亿美元估值",
+      "slug": "general-intuition-6b-valuation-ai-physical-robotics",
+      "confidence": "medium",
+      "primary_source": "TechCrunch报道",
+      "primary_source_url": "https://www.jingletree.com/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics-256462.html",
+      "verified_facts": [
+        {"fact": "估值", "final_value": "投前估值60亿美元（谈判中，未最终关闭）", "sources": ["TechCrunch/Jingletree", "Coindesk", "中财网"]},
+        {"fact": "新投资方", "final_value": "Valor Equity Partners、Point72 Ventures、Seven Seven Six（Alexis Ohanian）", "sources": ["TechCrunch", "Coindesk"]},
+        {"fact": "上一轮估值", "final_value": "数月前A轮后估值23亿美元，本次约2.6倍增长", "sources": ["Coindesk", "LilithAI"]},
+        {"fact": "公司方向", "final_value": "构建训练通用智能体的基础模型，主打物理世界/空间推理，从游戏数据训练切入", "sources": ["Jingletree", "LilithAI"]},
+        {"fact": "现有投资方", "final_value": "Khosla Ventures、General Catalyst等将跟投", "sources": ["中财网", "Jingletree"]}
+      ],
+      "rejected_claims": [
+        {"claim": "融资已完成", "reason": "多家媒体表述为'in talks''set to close'，即仍在谈判中，写作时需注明'拟以60亿美元估值融资'或'接近完成'，不要写成既成事实"},
+        {"claim": "这是AI交易Agent公司", "reason": "General Intuition主要做物理AI/具身智能基础模型，不是交易Agent。之前选题方向判断有误，需要调整分类。"}
+      ],
+      "writing_notes": "注意：这不是AI交易Agent公司！General Intuition是做物理世界/空间推理的基础模型公司，面向具身智能和机器人。所以分类应该是'AI商业化·行业观察'而不是'AI轻创业'。核心写AI基础设施创业的估值泡沫和疯狂程度——成立没几年，产品还没完全落地，估值就跳到60亿。"
+    },
+    {
+      "topic": "Google Earth AI功能上线一天被紧急回滚",
+      "slug": "google-earth-ai-feature-rolled-back-one-day-misinformation",
+      "confidence": "high",
+      "primary_source": "TechCrunch/爱范儿",
+      "primary_source_url": "https://ad.36kr.com/p/3924673617918338",
+      "verified_facts": [
+        {"fact": "事件", "final_value": "Google Earth推出AI生成图像功能，上线不到24小时被紧急回滚", "sources": ["爱范儿", "TechCrunch/36氪", "TechBytes"]},
+        {"fact": "问题", "final_value": "用户可在真实地理位置生成虚假场景（倒塌的埃菲尔铁塔、难民营、核设施、车祸等），真假难辨", "sources": ["36氪", "TechBytes", "网易"]},
+        {"fact": "测试者发现", "final_value": "调查记者Henk van Ess成功生成不存在的核电站、边境难民营、阿姆斯特丹致命车祸、战地医院弹坑等", "sources": ["36氪", "爱范儿"]},
+        {"fact": "BBC Verify测试", "final_value": "生成了倒塌的埃菲尔铁塔等虚假场景", "sources": ["36氪", "TechBytes"]},
+        {"fact": "Google地球用户规模", "final_value": "Google地图用户超10亿，与地球高度关联", "sources": ["爱范儿"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "Cao风格：讽刺Google这个'不作恶'的公司，做了一个可能制造全球最大谣言工厂的功能。核心梗：AI本来是用来'寻找真相'的，结果Google直接把'造谣工具'装在了全球最权威的地图上。实用提醒：看到卫星图'大新闻'先别急着转，看看日期是不是2026年以后的。"
+    }
+  ],
+  "summary": {
+    "overall_confidence": "high",
+    "replaced_topics": ["General Intuition的分类从AI轻创业调整为AI商业化（实际为物理AI基模公司，非交易Agent）"],
+    "key_corrections": [
+      "豆包产品正式名称为'豆包工作'而非'豆包办公'",
+      "GPT-5.6 Sol降价为限时3个月，非永久降价",
+      "General Intuition 60亿美元估值为投前估值且融资仍在谈判中，非已完成",
+      "小鹏机器人融资金额官方表述为'超9亿美元'，约合430亿元人民币"
+    ]
+  }
+}
