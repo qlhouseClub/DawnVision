@@ -1,0 +1,23 @@
+{
+  "slug": "openexecutive-open-source-ai-executive-caocao",
+  "category": "槽点 · 职场观察",
+  "title": "CEO拿开发者给AI腾位置，开发者们回敬了一个开源的AI CEO",
+  "title_short": "开发者开源AI CEO回敬老板",
+  "title_break": "被AI转型裁掉的团队开源了OpenExecutive<br>让agent坐上CEO和高管的决策椅",
+  "deck": "被\"AI转型\"裁掉的团队干了票大的：OpenExecutive让AI agent接管CEO与高管的决策职能，仓库这几天在开发者圈子里持续刷屏。",
+  "keywords": "Dawn Vision,OpenExecutive,SenteLabsAI,AI CEO,裁员,AI转型,开源项目,职场",
+  "og_description": "开源项目OpenExecutive让AI agent承担CEO及高管职能：一场由被裁开发者发起的职场行为艺术。",
+  "twitter_description": "老板说你的岗位可以被AI替代；被裁的开发者把CEO岗位做成了开源项目。今天的Cao献给OpenExecutive。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 720,
+  "sources": [
+    {
+      "text": "GitHub - SenteLabsAI/OpenExecutive",
+      "url": "https://github.com/SenteLabsAI/OpenExecutive"
+    }
+  ],
+  "body_html": "<p>今天的槽点，献给一间了不起的开源仓库：<strong>OpenExecutive</strong>——一个让 AI agent 承担 CEO 及高管职能的组织决策工具，作者是一支自称在公司“AI 转型”中被裁员的开发者团队。故事起点颇具行为艺术气质：你们用 AI 腾出我的工位，我就亲手把你们的会议室也做成可自动化模块。</p>\n      <p>项目本周在开发者圈持续发酵（星标与 fork 数字一天一变，咱就不引精确快照了，反正足够热闹），科技博客跟进一片，评论区吵出了三大流派。</p>\n      <h2>流派一：黑色幽默派</h2>\n      <p>他们指出一个微妙的对称性：<strong>当老板宣布“你的岗位可以被 AI 替代”时，默认自己的岗位自带不可替代性光环</strong>。而事实上，高管的日常工作——定 OKR、审预算、写汇报、画战略蓝图——恰恰是公司里<strong>最像 LLM 输出的文本活动</strong>。评论区有人补刀：“OpenExecutive 的第一版需求文档，就是把董事会纪要转成了 prompt。”</p>\n      <h2>流派二：认真当真派</h2>\n      <p>这一派已经在读架构了：把决策权限、否决规则、责任背书机制建模进 agent 工作流，理论上确实可行。<strong>问题从来不在技术能不能模拟决策，而在决策出错时谁负责</strong>。AI 可以替你签掉一张报销单，暂时没法替你被员工堵在电梯里骂半小时。</p>\n      <h2>流派三：照镜子派</h2>\n      <p>也是本栏目最共情的一派：这个项目的价值根本不是复仇文学，而是<strong>一面递给管理层和打工人的双向镜子</strong>。打工人看见自己的工种有多脆弱，老板看见自己的核心职能有多少其实是流程皮肤。<strong>自动化你的工作叫降本增效，自动化他的决策就叫行为艺术——这不合理。</strong></p>\n      <p>仓库还在活跃更新，有几个模块做得意外地像回事。指望它明天就把 CEO 选下去并不现实；但拿它反向审计一家公司的决策链条冗余度，说不定明年就会出现在某咨询公司的提案模板里。</p>",
+  "footnote_tip": "实用提醒：1. 面对“AI转型”“组织优化”类裁员沟通，先拿到书面方案再谈条件，口头承诺不作数；2. 把自己的核心工作流整理成文档并保留底稿——它既是交接证据也是面试素材；3. 与其抱怨不如先武装自己：今天这个仓库的架构思路值得亲手搭一遍。",
+  "cognitive_notes": "OpenExecutive · SenteLabsAI · AI agent承接CEO及高管职能 · 开发者圈刷屏 · 高管工作=最像LLM输出的文本活动 · 决策责任归属是硬约束 · 不引用精确热度读数",
+  "source_summary": "本文基于 GitHub 项目主页（SenteLabsAI/OpenExecutive）撰写，社区反应采定性描述；因不同时间快照的热度读数差异过大，全文未引用精确点赞或星标数字。二手传播主要来自多家科技博客跟进报道。"
+}

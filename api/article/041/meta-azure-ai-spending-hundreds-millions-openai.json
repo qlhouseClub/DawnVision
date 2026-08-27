@@ -1,0 +1,41 @@
+{
+  "slug": "meta-azure-ai-spending-hundreds-millions-openai",
+  "title": "Meta年花数亿美元采购Azure AI：开源旗手偷偷给OpenAI交租，AI竞合时代没有永恒敌人",
+  "title_short": "Meta数亿美元采购Azure AI",
+  "title_break": "Meta每年数亿美元采购Azure AI模型<br>开源旗手成了OpenAI的大买家",
+  "deck": "8月20日Bloomberg披露：Meta每年通过Azure花费数亿美元调用OpenAI等模型，每周消耗数万亿Token。做Llama的公司，正在用GPT来校验自家模型。",
+  "keywords": "Dawn Vision, Meta, Azure, OpenAI, 大模型采购, Llama, Microsoft Foundry, AI竞合, 模型评测, 算力",
+  "og_description": "Meta每年通过Azure花费数亿美元采购OpenAI模型，开源AI旗手成为闭源模型大买家，揭示AI行业竞合真相。",
+  "twitter_description": "做开源Llama的Meta，每年花数亿美元买OpenAI的Token来对标自己的模型。AI圈没有永远的敌人，只有永远的利益。",
+  "read_time": "约 10 分钟阅读",
+  "word_count": 2500,
+  "sources": [
+    {
+      "text": "Bloomberg - Meta Has Quietly Become One of Microsoft's Largest AI Customers",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-20/meta-has-quietly-become-one-of-microsoft-s-largest-ai-customers"
+    },
+    {
+      "text": "Implicator.ai - Meta Spends Hundreds of Millions a Year on AI Models Through Microsoft",
+      "url": "https://www.implicator.ai/meta-spends-hundreds-millions-ai-models-via-azure/"
+    },
+    {
+      "text": "新浪财经 - Meta每周在Azure上使用数万亿token 已成为微软最大AI客户之一",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-08-21/doc-inxixsen6234244.shtml"
+    },
+    {
+      "text": "Microsoft FY2026 Q4 Earnings - Azure AI Revenue",
+      "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4"
+    },
+    {
+      "text": "Meta Q2 2026 Earnings - Capital Expenditure Forecast",
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results/"
+    }
+  ],
+  "body_html": "      <p>数亿美元。数万亿Token。</p>\n      <p>8月20日，Bloomberg援引知情人士消息放出一个让AI圈五味杂陈的数字：<strong>Meta每年通过微软Azure云花费数亿美元采购第三方AI模型服务</strong>，每周消耗的Token量达到数万亿级别。而这些采购的模型中，据报道包括OpenAI的模型——Meta的工程师们通过Microsoft Foundry调用GPT，用来做什么？用来<strong>对标、评测、打分Meta自家的Llama系列模型</strong>。</p>\n      <p>做开源大模型最积极、喊\"AI民主化\"喊得最响的公司，正在每年给OpenAI交数亿美元的\"评测费\"。这画面，堪比特斯拉每年买一堆比亚迪拆了研究，然后告诉全世界电动车应该免费。</p>\n      <p>更有意思的是微软的角色。它是OpenAI最大的投资方，是Azure云的运营方，是Foundry模型市场的搭建者——同时它也向所有人出售模型访问权，包括自己投资对象的竞争对手Meta。而Meta呢？一边花1300-1450亿美元建自己的AI基础设施，一边每年数亿美元买对手的模型来比对。两家公司都拒绝评论具体金额。</p>\n      <p>AI行业的\"竞合\"（coopetition），在这组数字里达到了荒诞的顶峰。</p>\n\n      <h2>Meta到底在买什么？不是依赖，是标尺</h2>\n      <p>先说清楚：Meta不是在用OpenAI的模型跑自己的核心业务，也不是把Llama的训练数据外包给GPT。根据Bloomberg和后续多家媒体的交叉验证，Meta采购外部模型的核心用途是<strong>模型评测和对标（benchmarking and evaluation）</strong>。</p>\n      <p>什么意思？Meta的工程师每更新一版Llama，都需要知道它在各种任务上的表现到底怎么样。这就需要一个\"标尺\"——拿业界公认最强的模型（比如GPT-5.6、Claude Opus 5）来跑同样的任务，对比输出质量，找出差距，指导下一轮训练。每一次提问、每一次对比、每一次打分，都会折算成Token消耗。当你有几百个工程师每天在做这件事，Token消耗自然是天量。</p>\n      <p>Meta CTO Andrew Bosworth在7月的一次公开发言中其实已经打过预防针：他承认公司会租用领先的外部模型作为开发工作的一部分。只是当时没人想到，这个\"租用\"的规模已经达到了每年数亿美元、每周数万亿Token的级别。</p>\n      <p>这也解释了为什么Meta选择通过Azure Foundry采购，而不是直接跟OpenAI签合同。Foundry是微软的模型市场，上面不止有OpenAI，还有Anthropic、Google、多家开源模型——Meta可以在一个平台上同时调用多个竞品模型做横向对比，不用分别对接各家的API。对Meta来说这是最省事的方式，对微软来说这是笔无本万利的生意——它不需要训练模型，只需要做\"模型的AWS\"，从每一笔Token交易中抽成。</p>\n      <div class=\"pull-quote\">\"Meta每周通过Azure消耗数万亿Token，做Llama评测——这大概是AI行业最昂贵的'参考答案'。\"<span class=\"pull-quote__attr\">—— 一位AI基础设施从业者的评论</span></div>\n\n      <h2>微软：AI时代的瑞士，卖铲子给所有挖金矿的人</h2>\n      <p>把视线拉到微软这边，你会发现Satya Nadella下的是一盘比\"投资OpenAI\"大得多的棋。</p>\n      <p>微软最新财报显示，截至2026年7月29日，Foundry平台已经拥有<strong>10万客户</strong>，收入同比翻倍还多。使用多家模型提供商服务的客户数比年初增长了5倍，年消耗Token量达到1万亿级别的客户数同比增长4倍。Azure整个2026财年收入突破<strong>1000亿美元</strong>，同比增长41%——CFO Amy Hood在财报电话会上说\"系统仍然存在供应约束\"、\"需求持续超过可用供给\"。</p>\n      <p>微软最聪明的地方在于：它不选边站。它是OpenAI最大的股东（约49%），但Foundry上卖的不止OpenAI——Anthropic、Google Gemini、Meta自己的Llama、各家开源模型，全都有。它跟OpenAI有深度的产品整合（Copilot、365 Copilot），但这不影响它向Meta出售OpenAI的Token。OpenAI贡献了微软AI收入的约70%，但微软的野心显然不是\"只做OpenAI的渠道\"，而是做整个AI行业的\"水电煤\"。</p>\n      <p>这就像当年亚马逊做AWS——亚马逊自己是电商公司，但AWS向所有电商竞争对手出售云服务，包括Netflix（一度是AWS最大客户，同时是亚马逊Prime Video的竞争对手）。没人因为亚马逊是竞争对手就拒绝AWS，因为它确实是最好用的云平台。微软现在想做的，就是AI模型时代的AWS。</p>\n      <p>Meta愿意花这个钱，本身就说明了问题：不管你怎么骂闭源模型、怎么推崇开源，当你需要一个\"标准答案\"来衡量自己模型水平的时候，你还是得买最强的闭源模型来做标尺。这不是信仰问题，是工程问题。</p>\n\n      <h2>开源vs闭源：不是二元对立，是分层共存</h2>\n      <p>Meta买OpenAI服务这个消息出来后，开源派和闭源派在社交媒体上吵翻了天。开源派觉得Meta\"背叛了革命\"，闭源派觉得这证明了\"开源模型终究不如闭源\"。但两边都没抓住重点。</p>\n      <p>真相是：开源和闭源在AI产业链上承担的是完全不同的角色，根本不是你死我活的关系。</p>\n      <p>闭源前沿模型（GPT-5.6、Claude Opus 5、Grok 4.6）的角色是<strong>能力前沿和评测标尺</strong>——它们定义了当前AI能做到什么水平，是整个行业的\"天花板\"。所有做模型的公司，不管开源闭源，都需要盯着这个天花板找差距。前沿模型的训练成本动辄数十上百亿美元，只有能获取海量资本和算力的公司（OpenAI、Anthropic、Google、xAI）才玩得起。</p>\n      <p>开源模型（Llama、Qwen、DeepSeek、Mistral）的角色是<strong>普及化和场景落地</strong>——它们让企业和开发者能在自己的基础设施上跑模型，不用担心数据泄露、API涨价、供应商锁定。Llama推动了整个开源AI生态的爆发，Qwen和DeepSeek在性价比上持续给美国巨头施压，这些都是事实。</p>\n      <p>Meta做开源Llama是真的，Meta买OpenAI的Token做评测也是真的。这两个事实不矛盾。就像丰田会买特斯拉拆了研究，但不影响丰田自己卖混动车和电动车；苹果会买三星的手机来分析，但不影响苹果自己做iPhone。<strong>用竞争对手的产品来对标自己，是科技行业最正常不过的工程实践。</strong></p>\n      <p>值得注意的是，Meta也在讨论推出自己的模型API服务，与Foundry直接竞争。这意味着今天Meta是微软的客户，明天可能就是微软的竞争对手。AI行业的角色转换就是这么快。</p>\n\n      <h2>1350亿美元capex的背后：没有人能在AI里自给自足</h2>\n      <p>再看一个更大的背景：Meta刚刚把2026年的资本开支预期从年初的1150-1350亿美元上调到了<strong>1300-1450亿美元</strong>。Q2一个季度就花了310.8亿美元在capex上。这些钱大部分都砸在了数据中心、自研芯片（MTIA）、GPU采购上。</p>\n      <p>即便如此，Meta依然需要每年数亿美元买外部模型服务。这告诉我们一个被\"AI自给自足\"叙事掩盖的事实：<strong>在AI这个行业里，没有任何一家公司能做到完全自给自足</strong>。</p>\n      <p>Google有TPU、有Gemini，但Google Cloud也在卖NVIDIA GPU、也通过Vertex AI提供多家模型。Amazon有Bedrock模型市场，自己也做模型，但Bedrock上卖得最好的是Anthropic的Claude。微软投资OpenAI，但Foundry上卖所有人的模型。Meta做开源Llama，但买OpenAI的Token做评测。<strong>每家公司都在\"做自己的模型\"和\"用别人的模型\"之间找平衡。</strong></p>\n      <p>这背后的逻辑很简单：AI发展太快了。今天你是最强，明天可能就被超越了。任何一家公司如果只用自己的模型、不看外面在发生什么，很快就会变成井底之蛙。Bosworth说Meta的目标是用自家基础设施满足2026年的计算需求，但\"外部云合同\"也是计划的一部分——这个措辞本身就说明，连Meta这样的巨头都承认，外部模型和算力是必需品，不是可选项。</p>\n\n      <h2>终局判断：AI行业没有铁幕，只有贸易网络</h2>\n      <p>很多人喜欢把AI行业描述成\"阵营对抗\"——开源vs闭源、美国vs中国、大厂vs创业公司。但Meta每年数亿美元买OpenAI Token这件事告诉我们：<strong>AI行业没有铁幕，只有一张错综复杂的贸易网络。</strong></p>\n      <p>微软向Meta出售OpenAI的服务，OpenAI通过微软云触达更多企业客户，Meta用OpenAI的能力提升Llama，Llama的普及反过来推动整个行业对AI基础设施的需求，微软的云和Foundry生意越做越大——这是一个多赢的循环，而不是零和博弈。</p>\n      <p>对AI创业者和企业用户来说，这意味着什么？</p>\n      <p>第一，<strong>不要站队</strong>。不要因为信仰开源就拒绝闭源模型，也不要迷信闭源就否定开源的价值。选工具看场景、看性价比、看数据安全需求，而不是看意识形态。</p>\n      <p>第二，<strong>模型评测是刚需，而且是昂贵的刚需</strong>。Meta每周消耗数万亿Token做评测，说明\"知道自己模型在行业里排第几\"这件事本身就值很多钱。做AI产品的公司，不要省评测的钱——你不跟最强的比，怎么知道自己差在哪里？</p>\n      <p>第三，<strong>微软的模型市场策略值得所有平台型公司学习</strong>。不选边站、不绑定单一模型、让客户在一个平台上用到所有最好的模型——这种\"瑞士\"策略在AI快速迭代的时代反而最安全。Stripe收购OpenRouter、Ramp发布Router.com，本质上都是在做同样的事。</p>\n      <p>AI行业的竞赛不是百米冲刺，是马拉松。在这场马拉松里，没有永远的朋友，没有永远的敌人，只有永远的算力账单和Token消耗。Meta给OpenAI交的这数亿美元\"学费\"，最终的回报是更好的Llama——而更好的Llama会逼OpenAI做出更好的GPT。<strong>这种\"你中有我、我中有你\"的竞争，才是AI进步最快的方式。</strong></p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "做开源Llama的Meta每年花数亿美元买OpenAI的Token——AI行业没有永远的敌人，只有永远的算力账单。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Meta · Azure · OpenAI · 数亿美元 · 数万亿Token · Llama · 模型评测 · Microsoft Foundry · 10万客户 · 1300亿capex · AI竞合 · 开源闭源共存",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 18 个源信号生成，经编辑部人工审核。素材来源：Bloomberg、Implicator.ai、新浪财经、Microsoft财报、Meta财报。"
+}

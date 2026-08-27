@@ -1,0 +1,24 @@
+{
+  "slug": "meta-project-ot-ai-native-reorg-shelved",
+  "category": "巨头动态 · 战略调整",
+  "title": "“AI原生”改革急刹车：路透还原Meta Project OT，第二轮裁员为何取消",
+  "title_break": "路透还原Project OT内幕<br>“AI原生”转型撞上事故上升与内部反弹",
+  "deck": "一场发生在上半年的组织手术，8月26日才被路透完整揭开：Meta曾计划部分团队最多裁撤60%、分两轮执行；首轮10%落地后重大技术事故上升约40%，第二轮紧急叫停。（历史性调查报道——事件均为过去时）",
+  "keywords": "Dawn Vision,Meta,Project OT,AI原生,裁员,扎克伯格,AI agent,路透社,组织转型",
+  "og_description": "路透调查还原Meta Project OT：目标AI原生企业、部分团队最多裁撤60%，第二轮因内部反弹与技术受挫被取消。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 780,
+  "sources": [
+    {
+      "text": "Ars Technica - Meta's scrapped plans to go AI-native included slashing teams by 60 percent (via Reuters)",
+      "url": "https://arstechnica.com/ai/2026/08/metas-scrapped-plans-to-go-ai-native-included-slashing-teams-by-60-percent/"
+    }
+  ],
+  "body_html": "<p>路透社的一份调查报道，把 Meta 内部代号 <strong>Project OT</strong>（Organization Transformation，组织转型）的计划摊在了阳光下。信源是<strong>二十余位内部人士</strong>，故事主线是一场差点完成、最终急刹车的巨型公司重写。</p>\n      <h2>一场被叫停的组织手术</h2>\n      <p>时间线并不复杂：<strong>2026年1月</strong>，Project OT 启动，目标是把 Meta 改造为“<strong>AI 原生</strong>”企业——用 AI agent 替代部分岗位职能，方案一度涉及<strong>部分团队裁员最多 60%</strong>，分两轮执行。<strong>5月20日</strong>，第一轮约 <strong>10%</strong> 的裁员落地；原定紧随其后执行的第二轮，则在内部反弹与技术受挫的双重压力下被取消。</p>\n      <h2>技术账本并不好看</h2>\n      <p>据内部数据，部署的 AI agent 曾造成“大规模破坏性行为”，<strong>重大技术事故上升约 40%</strong>；AI 显著提升了代码产量，却没有带来同比的功能产出。翻译一下：<strong>产能指标是好看的，交付指标是不及格的</strong>。扎克伯格随后公开承认，AI agent 的技术成熟度低于预期。</p>\n      <h2>“AI原生”的正确姿势</h2>\n      <p>这件事给全行业踩出了一个清晰的坑：<strong>用尚未成熟的技术重组巨型组织，省下的工资会被事故与返工加倍收回去</strong>。“AI 原生”如果只是裁员的委婉说法，注定失败；正确顺序应当是让工具先行验证、流程逐段重构，而不是反过头来用人头去填宏大叙事的缺口。</p>\n      <p>对普通从业者而言，这个案例倒有安慰剂效应：<strong>agent 替岗的时间表，正在被现实一次次往后推</strong>。至少在这家最具改造冲动的公司身上，2026 年给出的答案是“还不行”。</p>",
+  "pull_quote": {
+    "text": "用还没长成的技术去重组一家巨型公司，代价通常由最没有议价权的人支付。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Project OT · Organization Transformation · 部分团队最多60% · 两轮执行 · 首轮10%已落地 · 二轮取消 · 重大事故+40% · 扎克伯格承认低于预期 · 历史性揭露报道(事件发生于1-5月，报道时点8/26)",
+  "source_summary": "本文核心事实源自路透社调查报道（经 Ars Technica 刊载），沿用其二十余位内部人士信源口径；事故率等内部数据无法独立核实，正文保持报道原文表述。 时效说明：事件本体发生于今年1月至5月间，路透社报道为8月26日的揭露性补报，正文已作历史性调查定性处理。"
+}

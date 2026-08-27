@@ -1,0 +1,28 @@
+{
+  "slug": "google-publishers-preferred-sources-ai-search-traffic",
+  "category": "AI 新媒体 · 内容创作",
+  "title": "Google给出版商发\"优先来源\"按钮：AI搜索抢走流量后，一个白名单能止血吗",
+  "title_break": "Google推出出版商Preferred Sources按钮<br>AI搜索时代的流量止血贴",
+  "deck": "8月20日Google推出\"Preferred Sources\"嵌入按钮，读者可将出版商设为AI搜索优先来源，点击率是普通来源2倍。但这能补上AI Overview截走的流量吗？",
+  "keywords": "Dawn Vision,Google,Preferred Sources,出版商,AI搜索,流量,AI Overviews,白名单,内容生态,媒体",
+  "og_description": "Google推出Preferred Sources按钮让出版商嵌入网站，读者可设为优先来源获得2倍点击率，但AI搜索持续截流出版商流量背景下效果存疑。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 750,
+  "sources": [
+    {
+      "text": "TechCrunch - Google gives publishers a new way to fight AI-driven traffic losses",
+      "url": "https://techcrunch.com/2026/08/20/google-gives-publishers-a-new-way-to-fight-ai-driven-traffic-losses/"
+    },
+    {
+      "text": "Google官方 - Highlighting original, high-quality content in Search",
+      "url": "https://blog.google/products-and-platforms/products/search/original-high-quality-content-search/"
+    }
+  ],
+  "body_html": "      <p>2倍点击率听起来不错，但前提是还有人点击。</p>\n      <p>8月20日，Google推出了一个让出版商嵌入自家网站的\"Preferred Sources\"按钮——读者点击后，该出版商就会成为其在Google Search、Discover、Google News中的优先信源，在AI Mode和AI Overviews中更容易被引用和推荐。Google称，今年5月该功能在AI搜索中上线以来，已有<strong>34.5万个</strong>独立来源被读者选为优先来源，用户点击优先来源的概率是普通来源的<strong>2倍</strong>。</p>\n      <p>出版商等这个按钮等了很久。但问题是：在AI搜索已经大规模截流的背景下，一个\"白名单\"按钮，真的能把流失的流量还回来吗？</p>\n\n      <h2>AI搜索时代，出版商的流量去哪了？</h2>\n      <p>先看背景。自2025年Google推出AI Overviews以来，出版商网站流量持续下滑。AI Overviews直接在搜索结果页面给出答案，用户不需要再点击任何链接。TechCrunch早在2025年6月就报道过AI Overviews对出版商流量的杀伤，之后多个独立研究确认了这一趋势：用户越来越少离开Google的页面。</p>\n      <p>这不是Google第一次试图安抚出版商。今年5月，Google在AI Mode和AI Overviews中首次推出Preferred Sources功能，让用户手动标记信任的信源。但那时候读者只能去Google的设置页面手动添加，转化率很低。这次的嵌入按钮让出版商可以直接在自己的网站上放置按钮，读者点一下就完成添加——这是Google第一次主动给出版商\"引流工具\"。</p>\n      <p>同时Google还宣布，读者很快可以用自然语言定制Discover信息流——告诉Google\"我想多看这个话题\"或\"少看那个话题\"，实时调整推荐内容。Android用户还可以定制Google News的音频简报。</p>\n\n      <h2>2倍点击率≠2倍流量</h2>\n      <p>表面上看，这是Google的善意：给读者选择权，给出版商流量杠杆。但仔细想，这个机制有几个致命问题。</p>\n      <p>第一，<strong>基数问题</strong>。Google说优先来源点击率是普通来源的2倍，但AI Overviews出现后，搜索结果页的总点击率本身就在下降。如果原来100次搜索有40次点击外链，AI Overviews之后可能只有20次，那么\"2倍点击率\"只是在20次里拿更多份额，跟原来的40次比还是少了。这是一个经典的\"变小的馅饼上切更大块\"的问题。</p>\n      <p>第二，<strong>马太效应</strong>。什么样的出版商能积累最多\"优先来源\"读者？是本来就有品牌、有流量的大媒体。纽约时报、BBC、卫报这种级别的媒体，会获得最多的读者标记；而中小型独立出版商、垂直领域博客，可能根本没有足够的读者来点击按钮。Preferred Sources机制最终可能加速流量向头部集中，而不是公平分配。</p>\n      <p>第三，<strong>Google仍然控制分发权</strong>。即便你被标记为优先来源，Google的AI仍然决定在哪个查询下展示哪个来源的内容。\"优先\"不是\"保证\"，Google没有承诺优先来源一定会出现在AI Overviews的引用中。这更像是给出版商一颗安慰剂，而不是真正的流量保证。</p>\n      <div class=\"pull-quote\">\"Google给出版商一个按钮说'让你的读者选你当优先'，但它没说的是——如果没人搜完了还点链接，优先又有什么用？\"<span class=\"pull-quote__attr\">—— 一位数字媒体从业者的吐槽</span></div>\n      <p>不过话说回来，这总比什么都没有强。在AI重塑信息分发的大趋势下，出版商需要一切可用的工具来维护读者关系。<strong>Preferred Sources按钮的真正价值可能不在流量，而在数据</strong>——出版商第一次可以知道哪些读者愿意主动标记自己为信任来源，这是一个高价值的忠诚读者信号。</p>\n      <p>对内容创作者来说，策略很清晰：把按钮放到网站显眼位置，把\"标记我们为优先来源\"变成读者运营的一部分，同时不要把鸡蛋放在Google一个篮子里——邮件列表、RSS、私域流量，这些才是真正不受平台控制的渠道。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "Google给出版商的优先来源按钮，是在变小的馅饼上切更大的块——2倍点击率，弥补不了AI搜索截走的总流量。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Google · Preferred Sources · 出版商 · AI搜索 · 流量流失 · 34.5万来源 · 2倍CTR · AI Overviews · 马太效应 · 内容生态",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：TechCrunch、Google官方博客。"
+}

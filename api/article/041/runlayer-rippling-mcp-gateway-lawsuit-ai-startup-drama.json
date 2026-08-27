@@ -1,0 +1,32 @@
+{
+  "slug": "runlayer-rippling-mcp-gateway-lawsuit-ai-startup-drama",
+  "title": "MCP网关官司打了三周零赔偿撤诉，被告转头发布竞品——AI创业圈的创意保护是个笑话",
+  "title_break": "Runlayer诉Rippling剽窃MCP网关创意<br>三周后零赔偿撤诉，Rippling当天发竞品",
+  "deck": "Runlayer指控Rippling评估产品一年后剽窃MCP网关创意，双方诉讼三周后无赔偿撤诉，Rippling当天发布竞品。AI创业圈的\"创意保护\"，在大公司面前不堪一击。",
+  "keywords": "Dawn Vision,Runlayer,Rippling,MCP网关,诉讼,创意剽窃,AI创业,硅谷,NDA,竞品发布",
+  "og_description": "Runlayer诉Rippling剽窃MCP网关创意案以零赔偿撤诉，Rippling当天发布竞品，AI创业圈创意保护形同虚设。",
+  "read_time": "约 4 分钟阅读",
+  "word_count": 750,
+  "sources": [
+    {
+      "text": "TechCrunch - Runlayer, Rippling drop lawsuits — but the brouhaha is still a cautionary tale for founders",
+      "url": "https://techcrunch.com/2026/08/20/runlayer-rippling-drop-lawsuits-but-the-brouhaha-is-still-a-cautionary-tale-for-founders/"
+    },
+    {
+      "text": "Superintelligence News - Runlayer and Rippling Drop Their AI Gateway Lawsuits",
+      "url": "https://superintelligencenews.com/applications/ai-gateway-runlayer-rippling-lawsuits-drop/"
+    },
+    {
+      "text": "Zona Integritas - Runlayer and Rippling Drop Mutual AI Gateway Lawsuits Without Settlement",
+      "url": "https://www.zonaintegritas.news/runlayer-and-rippling-drop-mutual-lawsuits"
+    }
+  ],
+  "body_html": "      <p>朋友们，今天AI创业圈的魔幻故事，简直可以写进《2026年硅谷大公司防坑指南》的序言。</p>\n      <p>事情是这样的：有一家叫<strong>Runlayer</strong>的AI安全创业公司，做MCP网关的——就是给企业AI Agent做安全过滤、管理内部系统访问权限的那种基础设施。创始人Andrew Berman是个连续创业者，上一家公司Vowel在2024年卖给了Zapier。Runlayer从Khosla Ventures和Felicis融了<strong>4200万美元</strong>，2025年11月才走出隐身模式。</p>\n      <p>Runlayer的产品在早期测试阶段接触了HR和SaaS巨头<strong>Rippling</strong>。Rippling评估了Runlayer的产品将近一年——你没看错，将近一年——最后没签合同。然后Berman收到了一条短信：Rippling通知他，他们正在自己做一个竞争的MCP网关产品。</p>\n      <p>Berman怒了，起诉Rippling违约和剽窃创意。Rippling反手反诉Runlayer专利侵权。两边打了<strong>三周</strong>的官司——三周！发现程序都走完了。然后8月20日晚，双方同时撤诉。<strong>没有和解协议，没有金钱赔偿，没有律师费支付</strong>。谁也没赢，谁也没输。</p>\n      <p>你以为这就完了？Rippling撤诉之后，<strong>当天就发布了自己的MCP网关产品</strong>。</p>\n      <p>朋友们，你们品品这个时间线：评估你的产品一年→不买→自己做→被起诉→打三周→撤诉→当天发布竞品。这不是抄袭，这是把\"我看了你的产品然后自己做一个\"写在脸上了。</p>\n\n      <h2>AI创业圈的\"创意保护\"就是张纸</h2>\n      <p>冷静下来想想，这个结果其实一点都不意外。在硅谷，创意本身不值钱——这是一句老话，但Runlayer的案例把这句话演绎到了极致。</p>\n      <p>NDA（保密协议）签了吗？应该签了。评估协议签了吗？肯定签了。专利呢？Rippling反过来告Runlayer专利侵权——在大公司的法务团队面前，创业公司的专利和NDA就像纸糊的盾牌。你花几十万律师费去告一个几十亿估值的公司，对方用一个零头的法务预算就能拖你半年一年，拖到你现金流断裂不得不撤诉。</p>\n      <p>三周就撤诉，说明Runlayer很可能发现继续打下去得不偿失——即使赢了，赔偿金额可能还不够付律师费；输了还要赔Rippling的律师费。对一个融了4200万的早期公司来说，在官司上消耗资源是致命的。Rippling呢？它融了几十亿，估值几百亿，三周的官司对它来说就是法务团队的日常工作。</p>\n      <p>更讽刺的是Rippling的反应：撤诉当天发布竞品，连装都懒得装一下。这相当于在说：\"对，我就是看了你的东西然后自己做了，你能怎么样？\"</p>\n\n      <h2>给AI创业者的三个血淋淋的教训</h2>\n      <p>第一，<strong>不要把你的核心产品给潜在竞争对手做\"评估\"，不管他们说得多好听</strong>。Rippling是HR和IT管理平台，MCP网关管理Agent对内部系统的访问权限——这完全可以成为Rippling自己产品的一个功能模块。Runlayer应该从第一天就意识到Rippling是潜在竞争对手，而不是潜在客户。大公司跟你\"谈合作\"\"做评估\"，很多时候就是在做竞品调研。</p>\n      <p>第二，<strong>创意没有壁垒，速度才有</strong>。如果你做的东西很容易被复制，那光有创意是不够的。你需要比大公司跑得快10倍——在他们评估你的时候你已经迭代了5个版本，在他们做出竞品的时候你已经建立了客户粘性和品牌认知。Runlayer从隐身到现在不到一年，产品和客户基础还不够厚，被Rippling抄了确实没太多还手之力。</p>\n      <p>第三，<strong>选边站队，不要跟有动机做同款产品的公司走太近</strong>。你的客户应该是那些不会自己做你产品的公司。如果你发现一个潜在客户有工程团队、有分销渠道、有充分动机进入你的赛道——快跑。</p>\n      <p>朋友们，AI创业的世界是残酷的。大公司有法务、有资金、有渠道，他们可以看完你的产品、打几场官司、然后发布竞品，最后你什么也做不了。这不是说创业没希望了——而是说，在这个丛林里，你需要比聪明更聪明，比快更快，比谨慎更谨慎。</p>\n      <p>Runlayer的故事告诉我们：在AI基础设施这个赛道，<strong>\"我先想到的\"不值钱，\"我先跑出来的\"才值钱</strong>。</p>\n      <p>今天就槽到这里，明天继续。</p>",
+  "pull_quote": {
+    "text": "评估你的产品一年→不买→自己做→被诉→打三周→撤诉→当天发竞品。AI创业圈的创意保护，在大公司法务面前就是纸糊的盾牌。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Runlayer · Rippling · MCP网关 · 诉讼 · 三周撤诉 · 零赔偿 · 当天发竞品 · 创意剽窃 · AI创业 · NDA · 4200万融资 · Andrew Berman · Khosla Ventures",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的公开信息整理，素材来源：TechCrunch、Superintelligence News、Zona Integritas。",
+  "footnote_tip": "温馨提示：1. 不要把核心产品给有动机做竞品的大公司做\"评估\"，NDA在法务团队面前形同虚设；2. 创意没有壁垒，速度和客户粘性才是——在大公司做出竞品前你必须跑足够快；3. 如果潜在客户有能力自己做你的产品，他大概率最终会自己做，不要心存侥幸。"
+}

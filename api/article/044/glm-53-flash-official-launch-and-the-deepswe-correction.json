@@ -1,0 +1,25 @@
+{
+  "slug": "glm-53-flash-official-launch-and-the-deepswe-correction",
+  "title": "智谱官宣GLM-5.3-Flash并当场开源：\"牛来\"的80%神话，落成精确咬合的63.4%",
+  "title_short": "GLM-5.3-Flash 揭盖开源",
+  "title_break": "GLM-5.3-Flash 当场开源<br>80%神话落成63.4%，与社区复测精确咬合",
+  "deck": "漂了一周的\"牛来\"由智谱亲手揭盖：型号正是GLM-5.3-Flash，320B-A18B MoE、百万上下文、MIT协议，权重当晚进入Hugging Face，价格约为前代十分之一。刷屏的DeepSWE 80%呢？10道题造的神，被113题全量复测和官方成绩单一同修成了63.4%。",
+  "keywords": "Dawn Vision,GLM-5.3-Flash,Z.ai,智谱,Ox Alpha,牛来,DeepSWE,Hugging Face,MIT协议,320B-A18B,港股",
+  "og_description": "智谱官宣Ox Alpha即GLM-5.3-Flash并当晚开源：320B-A18B MoE、百万上下文、MIT协议；刷屏的DeepSWE 80%经全量复测与官方数据修正为63.4%，三组数字精确咬合。",
+  "twitter_description": "\"牛来\"官宣即开源：GLM-5.3-Flash，320B-A18B，百万上下文，MIT协议。80%是小样本神话，63.4%才是全量真相。",
+  "read_time": "约 4 分钟阅读",
+  "word_count": 927,
+  "cognitive_notes": "GLM-5.3-Flash · Ox Alpha官方认领 · 8/26晚官宣+当场开源(HF/MIT) · 320B-A18B MoE · 百万上下文 · 价格≈前代1/10(厂商口径) · DeepSWE三层咬合: 小样本80%(Ben Davis)→社区113题≈63%→官方63.4% · v1.1榜无条目 · 审计发现4题参考答案过不了验证器 · 使用量2x DeepSeek(厂商自述) · 港股盘中+8%",
+  "source_summary": "本文基于 Dawn Vision 认知引擎对当日信号的交叉验证生成，核心事实经 TechCrunch 独家报道与智谱官方公告双源确认；80%／约63%／63.4% 三组数字的口径差异（10题小样本抽测 ／ 113题社区全量复测 ／ 官方公告成绩单）已在正文分层标注；使用量对比与价格比为厂商自述口径，正文中均已标记。",
+  "body_html": "<h2>揭盖时刻</h2>\n<p>悬念解开了，而且解得比所有人预期的更彻底。<strong>8月26日晚</strong>，Z.ai 正式确认：过去一周横扫多个评测榜的神秘模型 Ox Alpha——中文社区昵称<strong>\"牛来\"</strong>——正是 GLM 系列的新一代旗舰 <strong>GLM-5.3-Flash</strong>。没有预热海报，没有发布会，甚至没有惯常那种\"计划开源\"的口头承诺：官宣与行动是同一个动作，<strong>权重当晚就推上了 Hugging Face，MIT 协议</strong>。</p>\n<h2>规格速览</h2>\n<p>先把硬参数摆出来：<strong>3200 亿总参数、单次激活仅 180 亿</strong>（320B-A18B MoE）；<strong>原生多模态</strong>架构，文本、图像、视频在同一套底座里处理，而不是外挂视觉塔；<strong>100 万 token 上下文窗口</strong>；定价约为前代的 <strong>十分之一</strong>（厂商口径）。无论下面要讲的故事有多少波折，有一个事实没有争议：Z.ai 把一个前沿规模的开放权重模型，直接放进了 Flash 价位段。</p>\n<h2>神话是怎么炼成的</h2>\n<p>复盘这条引爆链路很有必要。Ox Alpha 匿名上线一周，在多个评测位悄然登顶；随后开发者 Ben Davis 发出一篇<strong>只有 10 道题的小样本抽测</strong>，通过率约 <strong>80%</strong> 的截图点燃了社交媒体，\"领先第二名约 15 个百分点\"的说法随之疯转——为 agentic coding 而生的 DeepSWE 这张考卷一夜出圈。小样本不是原罪，但它天生适合造神。</p>\n<h2>全量校准</h2>\n<p>接下来发生的事，比 80% 这个数字本身好看得多：开发者随即发起 <strong>113 题全量复测</strong>，成绩落在约 <strong>63%</strong>；而智谱在官宣当晚公布的成绩单是 <strong>63.4%</strong>——与社区复测几乎精确咬合。两个细节同样重要：其一，DeepSWE v1.1 官方榜单至今没有这个模型的条目，所有数字都来自公告口径与第三方转测；其二，有审计者发现这 113 道题里有 <strong>4 题</strong>连官方参考答案本身都无法通过验证器——基准自身的成色也要打个折扣看。</p>\n<h2>排位重估</h2>\n<p>以 <strong>63.4%</strong> 计，GLM-5.3-Flash 在社区复测口径下坐不上 DeepSWE 的头把交椅——Claude Fable 5 约 <strong>65%</strong> 的读数仍在它前面；但它依然稳稳站在第一梯队，与 Grok 4.6、自家的 GLM-5.3（均约 62%）拉开半个身位。真正的头条不是名次，而是这次校准本身展示的双层闭环：<strong>社区科学以天为单位纠偏，厂商在同一天认领了修正后的数字</strong>。这在开源模型的历史里并不多见。</p>\n<h2>商业信号与市场反应</h2>\n<p>Z.ai 同步给出了商业面的说法：模型使用量已达 DeepSeek 两倍以上——注意，这是<strong>厂商自述、未经第三方审计</strong>的口径。资本市场则给了更即时的反馈：港股当日盘中一度上涨超 <strong>8%</strong>。\"跑分营销\"换来的注意力与\"当场开源\"兑现的开发者信任，在这一天的 K 线里短暂重合了。</p>\n<h2>冷水环节，照旧</h2>\n<p>泼冷水的时间到了：一次基准咬合不等于全面代差胜利。多模态的真实生产负载远比 DeepSWE 的任务集复杂，工程稳定性、长上下文表现、成本曲线都还要等真实流量来检验。变化在于叙事时态——叙事一直停在那句预告：\"等权重真正放出之后的社区复现潮，才是这块金字招牌的第一场压力测试\"；现在，<strong>权重已经在场上了，压力测试从将来时变成了进行时</strong>。这也是把\"牛来\"请下神坛之后，这个故事最值得记住的部分。</p>",
+  "pull_quote": {
+    "text": "先跑分后认领的策略赢了一周注意力；而真正赢得体面的，是社区用113道题完成的复测——神话落地为63.4%的那一刻，纠正者与被纠正者都成了赢家。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "sources": [
+    {
+      "text": "TechCrunch - Surprise: Z.ai is the AI lab behind the mysterious Ox Alpha model",
+      "url": "https://techcrunch.com/2026/08/26/surprise-z-ai-is-the-ai-lab-behind-the-mysterious-ox-alpha-model/"
+    }
+  ]
+}

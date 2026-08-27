@@ -1,0 +1,36 @@
+{
+  "slug": "ramp-router-ai-model-routing-40-percent-savings",
+  "category": "大模型 · 商业分析",
+  "title": "Ramp发布Router.com：一个API调度所有大模型，企业AI成本平均降40%",
+  "title_break": "Ramp发布模型路由服务Router.com<br>企业AI推理成本平均降低40%",
+  "deck": "8月19日，企业支出管理公司Ramp对外开放内部运行3年的AI模型路由平台，智能调度OpenAI/Anthropic/Grok等模型，2026年底前免费。",
+  "keywords": "Dawn Vision,Ramp,Router.com,模型路由,AI成本,大模型API,Foundry,Stripe,OpenRouter,NVIDIA Switchyard",
+  "og_description": "Ramp发布Router.com模型路由服务，一个API智能调度多家大模型，企业推理成本平均降低40%，AI流量控制层成为新赛道。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 850,
+  "sources": [
+    {
+      "text": "Ramp官方博客 - Introducing Router.com",
+      "url": "https://ramp.com/blog/router-launch"
+    },
+    {
+      "text": "TechCrunch - Ramp launches its own AI model router, called Router",
+      "url": "https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/"
+    },
+    {
+      "text": "PYMNTS - Stripe and Ramp Are Betting on AI Traffic Controllers",
+      "url": "https://www.pymnts.com/news/artificial-intelligence/2026/stripe-and-ramp-are-betting-on-ai-traffic-controllers/"
+    },
+    {
+      "text": "SQ Magazine - Ramp Launches Router.com to Cut AI Bills by 40%",
+      "url": "https://sqmagazine.co.uk/ramp-router-com-ai-model-routing-launch/"
+    }
+  ],
+  "body_html": "      <p>模型更新太快，你的工程团队跟不上了。</p>\n      <p>8月19日，以企业支出管理闻名的Ramp做了一件出人意料的事：把内部运行了3年的AI模型路由系统对外开放，取名<strong>Router.com</strong>。一个API接入，智能调度OpenAI、Anthropic、SpaceXAI（Grok）等多家模型，自动为每个请求选择性价比最优的模型。Ramp称现有客户平均节省<strong>40%</strong>的推理成本，且不牺牲质量和稳定性。2026年底前路由功能免费，还送26美元模型信用额。</p>\n      <p>就在上周，Stripe刚以70亿美元收购OpenRouter（039期已报道）。支付公司和费用管理公司，不约而同杀入了AI\"交通指挥\"赛道。</p>\n\n      <h2>模型大爆炸时代，企业需要一个AI调度员</h2>\n      <p>问题很简单：2026年的大模型市场已经乱成一锅粥。OpenAI发了GPT-5.6系列，Anthropic出了Claude Opus 5和Sonnet 5，Google有Gemini 3.7，xAI有Grok 4.6，开源阵营有Llama 4、Qwen3.8、DeepSeek V4……每家都说自己最强，每个都在不同任务上各有胜负，每个月都有新模型发布、新降价、新benchmark。</p>\n      <p>对企业工程团队来说，这是噩梦。你花两周时间评测完选定了一个模型，下周另一家降价30%；你刚把工作流迁到Claude，发现某个特定任务Luna更快更便宜；你写死了调用GPT-5.6 Sol的代码，结果Sol在高峰期限速，服务直接挂掉。Ramp的AI Index数据显示，企业AI支出自2025年6月以来增长了<strong>20.7倍</strong>，但大部分公司根本不知道自己的钱花在了哪里、哪些请求其实可以用更便宜的模型处理。</p>\n      <p>Router的解法是四大策略：<strong>Flex tier</strong>自动在弹性层（同模型但延迟不稳定、价格更低）和标准层之间切换，弹性层延迟达标时自动走便宜路径；<strong>Shadow models</strong>把真实流量的副本发给候选模型做对比测试，不影响生产就能评估新模型；<strong>Benchmark routing</strong>让开发者定义benchmark权重，Router自动选得分最高的模型；<strong>NVIDIA Switchyard</strong>在Agent多步任务中动态切换，简单步骤用小模型、难步骤才升级到旗舰模型。</p>\n      <p>Ramp举了一个内部例子：一个编码Agent任务，58轮对话用Luna处理，只有最后5轮难的升级到Sol，两个模型的prompt缓存都保持预热状态。<strong>既拿到了旗舰模型的能力，又没有为每一轮都付旗舰模型的价格。</strong></p>\n\n      <h2>支付公司为什么在做AI基础设施？</h2>\n      <p>Ramp是做企业费用报销和支出管理起家的，Stripe是做支付网关的。这两家公司为什么同时盯上了模型路由？</p>\n      <p>答案藏在它们的业务基因里。Ramp和Stripe的核心能力都是<strong>在复杂系统中做智能路由</strong>。Stripe在全球支付网络里决定每笔交易走哪个支付通道成功率最高、手续费最低；Ramp在企业采购流程里决定每张账单走哪个审批路径最合规、最省钱。模型路由本质上是同一个问题：每一个AI请求应该走哪个\"通道\"（模型），在质量、速度、成本之间找最优解。</p>\n      <p>Ramp强调自己的独立性：\"我们不做模型，所以没有理由偏向任何一家。\"这跟Stripe收购OpenRouter的逻辑一致——做中立的AI流量调度层，谁的模型好、价格优，就把流量给谁。Ramp还提供详细的请求级成本可视化：每个请求用了什么模型、花了多少钱、延迟多少、有没有fallback——让企业第一次能看清自己的AI账单。</p>\n      <div class=\"pull-quote\">\"AI是大多数公司增长最快的支出项，也是最算不清账的一项。Router让你第一次知道每一分AI钱花在了哪里。\"<span class=\"pull-quote__attr\">—— Veeral Patel, Ramp Applied AI负责人</span></div>\n      <p>模型路由这个赛道正在快速成型。微软Foundry做模型市场，Stripe/OpenRouter和Ramp/Router做流量调度，Perplexity也在8月21日发布了Agent API（单一端点接入41个模型）。<strong>当模型本身成为可替换的商品，路由层就是新的流量入口和价值捕获点。</strong></p>\n      <p>对企业来说这是好事：竞争意味着价格下降、工具成熟。对模型公司来说这是警示：如果路由层可以随时把流量从你这里切到竞争对手那里，你的护城河到底是什么？</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "当模型成为可替换商品，路由层就是新的流量入口和价值捕获点。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Ramp · Router.com · 模型路由 · 40%成本节省 · 四大策略 · NVIDIA Switchyard · Stripe OpenRouter · AI流量控制 · 企业AI支出",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 12 个源信号生成，经编辑部人工审核。素材来源：Ramp官方博客、TechCrunch、PYMNTS、SQ Magazine。"
+}

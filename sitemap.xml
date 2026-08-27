@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.dawnvision.net/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.dawnvision.net/articles/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.dawnvision.net/cao/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -23,6 +23,60 @@
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/glm-53-flash-official-launch-and-the-deepswe-correction/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/openai-hf-incident-official-report-alabama-subpoena/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/zai-ox-alpha-glm-claim-deepswe-benchmark/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/openai-jalapeno-chip-first-benchmarks-perf-watt/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/mac-mini-m6-price-hike-local-ai-official/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/meta-project-ot-ai-native-reorg-shelved/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/instinct-series-b-250m-2-5b-valuation/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/robot-brain-builders-leaving-gpt2-era/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dawnvision.net/articles/openexecutive-open-source-ai-executive-caocao/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.dawnvision.net/articles/xpeng-robot-900m-funding-6-3b-valuation-tencent-alibaba/</loc>

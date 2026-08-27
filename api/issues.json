@@ -1,5 +1,109 @@
 [
   {
+    "number": "044",
+    "date": "2026-08-27",
+    "date_display": "2026.08.27",
+    "cover": {
+      "slug": "glm-53-flash-official-launch-and-the-deepswe-correction",
+      "title": "智谱官宣GLM-5.3-Flash并当场开源：\"牛来\"的80%神话，落成精确咬合的63.4%",
+      "deck": "漂了一周的\"牛来\"由智谱亲手揭盖：型号正是GLM-5.3-Flash，320B-A18B MoE、百万上下文、MIT协议，权重当晚进入Hugging Face，价格约为前代十分之一。刷屏的DeepSWE 80%呢？10道题造的神，被113题全量复测和官方成绩单一同修成了63.4%。",
+      "title_short": "GLM-5.3-Flash 揭盖开源"
+    },
+    "has_cao": true,
+    "brief_count": 7
+  },
+  {
+    "number": "043",
+    "date": "2026-08-26",
+    "date_display": "2026.08.26",
+    "cover": {
+      "slug": "xpeng-robot-900m-funding-6-3b-valuation-tencent-alibaba",
+      "title": "小鹏机器人9亿美元首轮融资：腾讯阿里同时入局，具身智能进入车厂降维时代",
+      "deck": "9亿美元首轮融资、63亿美元投后估值、腾讯阿里联合押注——小鹏机器人刷新中国具身智能单轮融资纪录。当车厂带着供应链、量产能力和品牌下场，人形机器人的竞争逻辑正在被重写。",
+      "title_short": "小鹏机器人9亿美金融资刷新纪录"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "042",
+    "date": "2026-08-24",
+    "date_display": "2026.08.24",
+    "cover": {
+      "slug": "ox-alpha-stealth-model-openrouter-zhipu-glm",
+      "title": "牛来Ox Alpha：4万亿Token匿名爆火背后，开源模型正在喂养闭源竞赛",
+      "deck": "没有公司认领，没有官方文档，一个匿名模型4天被调用4万亿次，技术指纹直指智谱GLM——开源与闭源的边界正在溶解。",
+      "title_short": "牛来模型4万亿Token之谜"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "041",
+    "date": "2026-08-21",
+    "date_display": "2026.08.21",
+    "cover": {
+      "slug": "meta-azure-ai-spending-hundreds-millions-openai",
+      "title": "Meta年花数亿美元采购Azure AI：开源旗手偷偷给OpenAI交租，AI竞合时代没有永恒敌人",
+      "deck": "8月20日Bloomberg披露：Meta每年通过Azure花费数亿美元调用OpenAI等模型，每周消耗数万亿Token。做Llama的公司，正在用GPT来校验自家模型。",
+      "title_short": "Meta数亿美元采购Azure AI"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "040",
+    "date": "2026-08-20",
+    "date_display": "2026.08.20",
+    "cover": {
+      "slug": "anthropic-surpasses-openai-revenue-q2-2026",
+      "title": "大模型营收王座易主：Anthropic Q2 116亿美元首超OpenAI，一个盈利一个巨亏",
+      "deck": "116亿vs67亿。8月19日华尔街日报披露Q2财报数据：Anthropic营收翻倍首次盈利，OpenAI增长18%亏损却扩大32%至123亿。成立晚5年、规模小一半的公司，在单位经济模型上彻底赢了第一回合。",
+      "title_short": "Anthropic营收首超OpenAI"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "039",
+    "date": "2026-08-20",
+    "date_display": "2026年8月20日",
+    "cover": {
+      "slug": "stripe-openrouter-acquisition",
+      "title": "Stripe 70 亿美元买下 OpenRouter：AI 基础设施的大整合时代开始了",
+      "deck": "支付巨头买下模型路由层，AI 行业的重心正在从模型本身转向计量、计费和路由这些中间层。",
+      "title_short": "Stripe 收购 OpenRouter"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "038",
+    "date": "2026-08-19",
+    "date_display": "2026年8月19日",
+    "cover": {
+      "slug": "unitree-ipo-superhuman-robot",
+      "title": "宇树上市前夜：人形机器人第一次跑赢了人类",
+      "deck": "610亿市值登陆科创板，「超人」原型机跳高2米、速度12.66m/s双破人类纪录，具身智能的拐点真的来了吗？",
+      "title_short": "宇树上市前夜"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "037",
+    "date": "2026-08-17",
+    "date_display": "2026.08.17",
+    "cover": {
+      "slug": "stripe-acquires-openrouter-7-billion-ai-infrastructure",
+      "title": "Stripe 70亿美元收购OpenRouter：支付巨头杀进AI中间层，模型路由成为新战场",
+      "deck": "美国时间8月16日，Stripe以超70亿美元收购AI模型路由平台OpenRouter。三个月前估值仅13亿，现在翻了5.4倍。支付巨头为什么要花重金买一个\"API中转站\"？因为决定每次请求走哪个模型的权力，可能比模型本身更值钱。",
+      "title_short": "Stripe 70亿收购OpenRouter杀入AI中间层"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
     "number": "036",
     "date": "2026-08-14",
     "date_display": "2026.08.14",

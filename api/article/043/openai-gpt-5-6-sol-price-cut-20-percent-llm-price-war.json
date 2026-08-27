@@ -1,0 +1,36 @@
+{
+  "slug": "openai-gpt-5-6-sol-price-cut-20-percent-llm-price-war",
+  "category": "大模型 · 商业分析",
+  "title": "GPT-5.6 Sol降价33%：前沿模型开打价格战，OpenAI的防线还能守多久？",
+  "title_break": "GPT-5.6 Sol降价33%<br>前沿模型也开始打价格战",
+  "deck": "输入降20%、输出降33%，OpenAI一个月内两次降价。当最前沿的模型也开始卷价格，说明大模型市场的竞争压力已经从底层烧到了天花板。",
+  "keywords": "Dawn Vision,OpenAI,GPT-5.6 Sol,大模型降价,价格战,API定价,Anthropic,DeepSeek",
+  "og_description": "OpenAI宣布GPT-5.6 Sol降价20%以上，输入$4/百万Token、输出$20/百万Token，限时三个月。前沿模型也开打价格战。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 820,
+  "sources": [
+    {
+      "text": "OpenAI官方论坛 - 20% price reduction for GPT 5.6 Sol",
+      "url": "https://community.openai.com/t/20-price-reduction-for-gpt-5-6-sol-api-codex-credits-and-chatgpt-work/1391726"
+    },
+    {
+      "text": "WinBuzzer - OpenAI Cuts GPT-5.6 Sol API Prices by Up to 33%",
+      "url": "https://winbuzzer.com/2026/08/23/openai-cuts-gpt-5-6-sol-api-prices-by-up-to-33-percent-through-november-21-xcxwbn/"
+    },
+    {
+      "text": "ExplainX.ai - OpenAI GPT-5.6 Sol API Price Cut 20%",
+      "url": "https://www.explainx.ai/blog/openai-gpt-5-6-sol-api-price-cut-20-percent-august-2026"
+    },
+    {
+      "text": "环球时报 - 美AI大模型接连降价",
+      "url": "http://m.toutiao.com/group/7677778228588708378/"
+    }
+  ],
+  "body_html": "      <p>$4输入，$20输出——每百万Token。</p>\n      <p>8月21日，OpenAI宣布将GPT-5.6 Sol的API价格下调<strong>20%以上</strong>：输入价格从$5降至$4（降20%），输出价格从$30降至$20（降33%）。这次降价限时3个月，至11月21日，适用于API、ChatGPT Work credits和Codex credits，但不涉及Pro/Plus/Business订阅。</p>\n      <p>这已经是不到一个月内的第二次降价。7月底，OpenAI刚下调过中端和低成本模型的价格——中端模型降20%，低成本模型降幅甚至高达80%。如果说上一次降价是\"清理中低端战场\"，那这一次就是<strong>把价格战打到了自己的旗舰产品头上</strong>。</p>\n\n      <h2>为什么是现在？三重压力叠加</h2>\n      <p>前沿模型降价本身不是新闻，但OpenAI主动降价，而且是一月两降，这个节奏很值得琢磨。背后至少有三重压力。</p>\n      <p>第一重是<strong>Anthropic的正面竞争</strong>。Claude Sonnet 5发布后凭借速度和性价比抢走了大量开发者，很多企业从GPT-4级别模型直接迁移到了Sonnet。Anthropic Q2营收首次超过OpenAI——这个消息对OpenAI的冲击可能比外界想象的要大。开发者用脚投票的时候，价格是最直接的武器。</p>\n      <p>第二重是<strong>中国模型的价格碾压</strong>。DeepSeek、豆包、通义千问这些中国大模型的API价格，普遍在每百万输入token $0.2-$1的区间，和GPT-5.6 Sol的$4比起来，差了4-20倍。虽然性能有差距，但对于大多数任务来说，这个性能差距远没有价格差距那么大。很多海外开发者已经在悄悄用中国模型做非核心任务——OpenAI不可能视而不见。</p>\n      <p>第三重是<strong>推理成本的快速下降</strong>。降价的底气来自成本的下降——MoE架构、推理优化、芯片效率提升，让前沿模型的单位token成本一直在快速下降。既然成本降了，那就用降价换市场份额。这和消费电子行业的逻辑是一样的：摩尔定律让成本下降，厂商就用降价来刺激需求、扩大市场。</p>\n      <p>但需要注意的是：这次降价是<strong>限时3个月</strong>的，不是永久降价。为什么有限期？可能是暑期促销、可能是应对竞争的临时手段、也可能是想看看降价后的需求弹性——如果降价带来的用量增长足以抵消单价下降，那可能就永久降下去；如果不行，11月再涨回来也说不准。</p>\n\n      <h2>价格战的终局：免费的基础层，赚钱的增值层</h2>\n      <p>大模型的价格走势，其实和历史上很多基础设施技术的路径是一样的——从稀缺到过剩，从高价到低价再到接近免费。</p>\n      <p>早期，大模型是稀缺资源，谁有模型谁就能收钱。2023年初，GPT-4的API价格是$0.06/1k输入token（相当于$60/百万），比现在贵了15倍。那时候用大模型做产品的公司，最大的成本就是API调用费。</p>\n      <p>现在，模型能力在提升，价格却在下降。这意味着<strong>基础模型能力正在快速商品化</strong>——就像云计算的算力、移动互联网的带宽一样，会越来越便宜，直到接近成本价。未来，\"调用一次大模型花多少钱\"可能会像\"发一条短信花多少钱\"一样，不再是创业者最关心的问题。</p>\n      <p>那OpenAI靠什么赚钱？答案是：<strong>增值服务和生态锁定</strong>。你看微软的打法就很清楚——Azure云服务、Copilot产品、企业级部署，这些才是利润大头。模型本身可以便宜甚至免费，但一旦你进入了我的生态、用了我的工具链、接了我的Agent框架，你就很难走了。模型是入口，生态才是护城河。</p>\n      <p>对开发者和创业公司来说，这是个好消息：<strong>底层模型的成本不再是创业的主要障碍</strong>。你不需要再为API费用发愁，省下来的钱可以投入到产品设计、用户体验、垂直场景深耕上。未来AI创业的核心竞争力，不再是\"我能调用某个独家模型\"，而是\"我对这个场景的理解足够深、我的产品体验足够好\"。</p>\n      <p>但反过来说，这也意味着<strong>仅靠套壳大模型的创业公司会死得更快</strong>。如果模型能力本身快速商品化，那你的价值是什么？如果只是把用户的query转发给大模型再把答案转回来，那这个中间层会被迅速挤压掉。要么你有独家数据，要么你有独特场景，要么你有产品壁垒——否则，在模型越来越便宜的时代，纯中介没有生存空间。</p>\n      <p>价格战才刚刚开始，后面还会有更多轮降价。对于整个行业来说，这是走向成熟的必经之路；对于每个玩家来说，这是考验真正价值的时候。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "基础模型能力正在快速商品化——就像云计算的算力、移动互联网的带宽一样，会越来越便宜，直到接近成本价。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "GPT-5.6 Sol · OpenAI降价 · 大模型价格战 · 模型商品化 · Anthropic竞争 · 中国模型价格 · 推理成本下降",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 12 个源信号生成，经编辑部人工审核。素材来源：OpenAI官方论坛、WinBuzzer、ExplainX.ai、环球时报、MaxAssistant。"
+}

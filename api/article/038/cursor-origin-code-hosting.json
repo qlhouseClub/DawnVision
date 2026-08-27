@@ -1,0 +1,31 @@
+{
+  "slug": "cursor-origin-code-hosting",
+  "category": "AI编程",
+  "title": "Cursor推Origin代码托管：AI Agent时代，GitHub需要被重写吗？",
+  "title_short": "Origin代码托管",
+  "title_break": "Cursor推Origin代码托管：\nAI Agent时代，GitHub需要被重写吗？",
+  "deck": "在编辑器里直接做Code Review、PR管理、Agent协作，Origin不是又一个GitHub，是为AI Agent重新设计的代码基础设施。",
+  "read_time": "约 5 分钟阅读",
+  "og_description": "Cursor推出Origin代码托管平台，支持仓库管理、PR双向同步、Vercel/Depot集成。恰逢GitHub全球宕机，Agent-native的代码基础设施时代来了？",
+  "tags": [
+    "Cursor",
+    "GitHub",
+    "AI编程",
+    "代码托管"
+  ],
+  "body_html": "<p>8月17日早上，Cursor向所有付费用户推出了Origin——它自己的代码托管平台。三个半小时后，GitHub发生了持续近七小时的全球大面积故障。</p><p>时间点是巧合，但信号不是。当AI Agent越来越多地承担编码工作，承载代码的基础设施，也到了该重新设计的时候。</p><h2>Origin不是另一个GitHub</h2><p>如果只是「又一个代码托管平台」，那根本不值得关注。GitLab、Bitbucket、Gitea……市面上从来不缺。</p><p>Origin的不同之处在于它的定位：<strong>Agent-native的代码协作环境</strong>。它不是在浏览器里给你一个仓库页面，而是把代码托管、PR管理、AI代码审查全部内嵌在Cursor编辑器里。</p><p>想象一下这个工作流：你在写代码的同时，AI Agent直接在旁边的面板里帮你审查PR diff，回答问题，应用修改，推送分支——全程不用切换到浏览器。Vercel的预览部署、Depot或Buildkite的CI集成，也都在同一个环境里完成。</p><p>这背后是一个正在发生的结构性变化：<strong>写代码不再是软件开发的主要瓶颈，代码审查才是。</strong>有数据显示，Cursor内部合并的PR中，约35%是由自主AI Agent打开的。当自动生成的代码量越来越大，传统的PR队列越来越像一个调度系统，而不是人类异步讨论的地方。</p><h2>聪明的「软着陆」策略</h2><p>Cursor没有上来就喊「替代GitHub」。Origin采用了一种非常务实的迁移策略：GitHub镜像。</p><p>你可以连接现有的GitHub组织，Origin实时同步你的仓库。推送仍然走GitHub，GitHub依然是权威来源。但PR评论和权限可以双向同步——你在Cursor里评论，GitHub上也能看到；GitHub上有人回复，几秒内就同步到Origin。</p><p>这大大降低了团队的试错成本。不用做高风险的全量迁移，不用说服整个公司换平台，先用起来，觉得好再深入。</p><p>但明眼人都能看出来：一旦团队的日常代码审查工作流迁移到了Origin，GitHub就会逐渐退化成一个「存储后端」。当使用习惯和协作网络都搬到了新平台，真正的替代就只是时间问题。</p><p>这是一个非常经典的「从侧翼包抄」的策略。</p><p>明天见。</p>",
+  "sources": [
+    {
+      "url": "https://cursor.com/cn/changelog/origin-code-hosting",
+      "text": "Cursor官方Changelog"
+    },
+    {
+      "url": "https://siliconangle.com/2026/08/17/cursor-launches-origin-code-hosting-service-to-compete-with-github/",
+      "text": "SiliconANGLE报道"
+    },
+    {
+      "url": "https://www.jobadvisor.link/2026/08/cursor-launches-origin-code-hosting.html",
+      "text": "JobAdvisor分析文章"
+    }
+  ]
+}

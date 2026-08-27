@@ -1,0 +1,28 @@
+{
+  "slug": "openai-jalapeno-chip-first-benchmarks-perf-watt",
+  "category": "算力基建 · 芯片战争",
+  "title": "OpenAI自研芯片交卷：特定负载下每瓦效率最高1.9倍，Jalapeño向英伟达腹地开火",
+  "title_break": "Jalapeño公布首批基准成绩<br>InferenceX下每瓦效率达GB300的1.5-1.9倍",
+  "deck": "自研芯片启动九个月即出成绩：SemiAnalysis公开基准下，Jalapeño每瓦工作量最高1.9倍于GB300、延迟降低最高3.6倍——而封装功耗只有对手一半。",
+  "keywords": "Dawn Vision,OpenAI,Jalapeño,自研芯片,InferenceX,SemiAnalysis,GB300,每瓦效率,推理延迟,英伟达",
+  "og_description": "OpenAI自研推理芯片Jalapeño公布首批成绩：InferenceX基准下每瓦工作量达GB300的1.5-1.9倍。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 780,
+  "sources": [
+    {
+      "text": "OpenAI Blog - Jalapeño first results",
+      "url": "https://openai.com/index/jalapeno-first-results/"
+    },
+    {
+      "text": "The Verge - OpenAI Jalapeño AI chip benchmarks",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/984290/openai-jalapeno-ai-chip-benchmarks"
+    }
+  ],
+  "body_html": "<p>距项目启动仅约 <strong>九个月</strong>，OpenAI 的自研推理芯片 <strong>Jalapeño</strong> 就交出了第一份对外成绩单。这次它进的依然是\"别人家的考场\"：SemiAnalysis 维护的公开推理基准 <strong>InferenceX</strong>——把自家硬件放进第三方监考的评估体系，正在成为大厂交卷的标准姿势。</p>\n      <h2>成绩单长什么样</h2>\n      <p>官方口径如下：测试覆盖三个模型——GPT-OSS 120B、DeepSeek R1 670B、Kimi K2.5 1T，统一采用 MXFP4 精度、nominal 8k/1k 上下文与 STP 设置。在峰值吞吐场景下，Jalapeño 每瓦完成的 AI 工作量为对比系统 GB200/GB300 的 <strong>1.5 至 1.9 倍</strong>；端到端延迟方面的优势更为醒目，达到 <strong>1.7 至 3.6 倍</strong>。而整场对比里最刺眼的数字藏在物理层：<strong>Jalapeño 封装 TDP 为 700W，GB300 为 1400W</strong>——正好一半。</p>\n      <h2>为什么主打\"每瓦\"和\"延迟\"</h2>\n      <p>这两个指标的选定颇富指向性。<strong>每瓦工作量</strong>对应推理经济学的核心命题：当模型毛利被电费一口口吃掉，能效比就是利润率本身。<strong>低批量下的低延迟</strong>则瞄准 Agent 工作负载的真实形态——大量短上下文、高频次的小请求，而不是训练式长任务的热核满载。换句话说，Jalapeño 不是要去抢 GPU 的所有跑道，它盯住的是<strong>下一代流量结构里的主力泳道</strong>。</p>\n      <h2>边界必须划清楚</h2>\n      <p>需要把话说严：这是<strong>特定负载、固定精度、非对等功率条件下的相对优势</strong>，不是对英伟达的全面超越。700W 对 1400W 本就条件不一，官方亦未给出超大规模集群的吞吐对照。若因此宣称\"英伟达护城河失守\"，属于过度解读。</p>\n      <p>但方向性已经足够清晰：<strong>九个月拿出首测结果，说明这条自研管线绝不是 PPT 项目</strong>。叠加 AWS、Google、Meta 各自的自研芯片布局，\"去英伟达化\"正从个别巨头的生存焦虑演变为行业标准动作——而下一次采购谈判桌上谁的语气更平静，将由这些数字决定。</p>",
+  "pull_quote": {
+    "text": "芯片战争的胜负不会写在发布会的掌声里，而会写在每一度电换来的 token 上。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Jalapeño · InferenceX公开基准 · 每瓦工作量1.5-1.9倍 · 延迟降低1.7-3.6倍 · TDP 700W vs 1400W · 九个月出首测 · 特定负载口径",
+  "source_summary": "本文基于 OpenAI 官方博客一手信息，辅以 The Verge 报道交叉确认；所有对比数据限定于 SemiAnalysis InferenceX 公开基准下的指定工作负载与精度配置，功率条件不对等已在正文标注。"
+}

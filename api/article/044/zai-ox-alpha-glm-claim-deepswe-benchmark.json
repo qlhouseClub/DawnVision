@@ -1,0 +1,24 @@
+{
+  "slug": "zai-ox-alpha-glm-claim-deepswe-benchmark",
+  "category": "大模型 · 商业分析",
+  "title": "神秘模型\"牛来\"现身：Z.ai认领Ox Alpha为GLM系列新一代旗舰",
+  "title_break": "Z.ai正式认领Ox Alpha<br>首发期约80%小样本读数，经113题复测与官方口径校准为63.4%",
+  "deck": "漂了一周的\"牛来\"终于揭盖：智谱确认Ox Alpha出自GLM系列新一代。首发期流传的\"通过率约80%\"来自一张仅10道题的小样本考卷；113题全量复测与官方成绩单随后共同把数字校准至63.4%。",
+  "keywords": "Dawn Vision,Z.ai,智谱,Ox Alpha,牛来,GLM,DeepSWE,多模态,开源权重,港股",
+  "og_description": "智谱确认神秘登顶模型Ox Alpha为其GLM系列新一代旗舰；首发期DeepSWE约80%读数系10题小样本口径，经113题复测与官方数据校准为63.4%。",
+  "read_time": "约 3 分钟阅读",
+  "word_count": 646,
+  "sources": [
+    {
+      "text": "TechCrunch - Surprise: Z.ai is the AI lab behind the mysterious Ox Alpha model",
+      "url": "https://techcrunch.com/2026/08/26/surprise-z-ai-is-the-ai-lab-behind-the-mysterious-ox-alpha-model/"
+    }
+  ],
+  "body_html": "<p>悬念解开了。<strong>8月26日</strong>，Z.ai（智谱）正式确认，过去一周横扫多个评测榜的神秘模型 <strong>Ox Alpha</strong>——中文社区昵称\"牛来\"——正是 GLM 系列的新一代多模态旗舰。没有预热海报，没有发布会，用一份第三方成绩单完成了官宣。</p>\n      <h2>一张成绩单的三层校准</h2>\n      <p>先把数字摆出来——连同它们的来路。首发刷屏的<strong>约 80%</strong>，是开发者 Ben Davis 拿一张只有 <strong>10 道题的小样卷</strong>抽出来的读数，当时一度压过 Claude Fable 5 的约 <strong>65%</strong>、GLM-5.3 与 Grok 4.6 的约 <strong>62%</strong>；随后 113 题全量复测落在约 <strong>63%</strong>，官方成绩单定格 <strong>63.4%</strong>——对小样本的梯次领先就此作古，第一梯队的位置却站稳了。值得注意的是，这份榜单并非 Z.ai 自己选的考场——就像 OpenAI 把 Jalapeño 送去 SemiAnalysis 的公开基准一样，把成绩放在别人家的考卷上，正在成为头部实验室流行的表态方式。</p>\n      <h2>商业面：两倍使用量与当天兑现的开源</h2>\n      <p>Z.ai 同步给出两个商业信号：其一是模型<strong>使用量已达 DeepSeek 两倍以上</strong>——注意，这是厂商自述口径，暂无第三方审计背书；其二，开源不再是口头支票——<strong>官宣当晚权重就已推上 Hugging Face，挂在 MIT 协议下</strong>。配合消息公布当日智谱港股盘中一度上涨超 <strong>8%</strong> 的市场反应，这更像一场精心编排的组合拳：先用匿名登顶制造话题，再用认领收割注意力，最后用当场兑现的开源，一次性买断开发者生态的耐心。</p>\n      <h2>为什么不办发布会</h2>\n      <p>这可能是本条简报最有意思的部分。当模型能力的商品化速度快过宣传语的保鲜期，<strong>\"先跑分、后认领\"就成了新的发布范式</strong>：匿 名状态让评测免于人设光环的干扰，认领瞬间又自带戏剧张力。对 Z.ai 来说，这一轮组合操作的性价比，远高于一场传统 keynote。</p>\n      <p>当然也要泼半盆冷水：<strong>单一榜单领先不等于全面代差</strong>。多模态的真实生产负载远比 DeepSWE 的任务集复杂，Ox Alpha 的工程稳定性、上下文长度与成本曲线目前都是未知数。权重真正放出后的社区复现潮随即到场——113题复测与官方成绩单一起把这块金字招牌送进了压力舱，首轮结果是读数回落、闭环体面。</p>",
+  "pull_quote": {
+    "text": "当评测话语权开始向公开基准转移，发新模型的正确姿势就从发布会变成了第三方成绩单。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Ox Alpha · GLM新一代多模态 · DeepSWE三层口径: 小样本80%(10题)→复测≈63%→官方63.4% · 先跑分后认领 · 使用量DeepSeek两倍以上（厂商自述） · 权重已开源(HF/MIT) · 港股盘中+8%",
+  "source_summary": "本文基于 Dawn Vision 认知引擎对当日信号的交叉验证生成，核心事实经 TechCrunch 独家报道确认；DeepSWE 通过率为第三方评测数据；\"使用量为 DeepSeek 两倍以上\"系 Z.ai 自述口径，已在正文中明确标注。 口径更新：首发期第三方读数约80%经证实为Ben Davis 10题小样本；后续113题全量复测约63%、官方公告63.4%，三层口径已在正文分层标注。"
+}

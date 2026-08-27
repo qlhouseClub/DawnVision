@@ -1,0 +1,33 @@
+{
+  "slug": "aws-dogwood-open-source-agent-tool-use",
+  "title": "亚马逊开源Dogwood：给AI Agent的工具调用立规矩",
+  "title_short": "AWS开源Dogwood",
+  "title_break": "亚马逊云科技开源Dogwood项目\n为AI智能体工具调用建立统一规范",
+  "deck": "AWS发布开源工具调用框架Dogwood，试图解决Agent工具调用格式不统一、错误处理不一致、权限管理混乱的问题——MCP之外，又一套标准来了。",
+  "category": "Agent协议",
+  "read_time": "约 5 分钟阅读",
+  "og_description": "亚马逊开源Dogwood框架，为AI Agent工具调用建立规范。继MCP、A2A之后，Agent协议层竞争升温，大厂纷纷入局制定标准。",
+  "tags": [
+    "AWS",
+    "Dogwood",
+    "AI Agent",
+    "工具调用",
+    "开源框架",
+    "MCP"
+  ],
+  "body_html": "<p>AI Agent的工具调用，终于有人出来立规矩了。</p>\n\n<p>8月23日，亚马逊云科技AWS宣布开源一个名为<strong>Dogwood</strong>的项目，定位是\"AI智能体的工具调用规范与参考实现\"。简单说，就是给Agent怎么调用工具、怎么传参数、怎么处理错误、怎么管理权限，制定一套统一的标准和开源实现。</p>\n\n<p>这件事的背景是：现在AI Agent行业工具调用乱象丛生。每个框架、每个模型厂商都有自己的工具调用格式——OpenAI是function calling格式，Anthropic是tool use格式，MCP是一套协议，A2A是另一套协议。开发者要做一个能在多个平台上跑的Agent，得适配五六种不同的格式，苦不堪言。</p>\n\n<h2>Dogwood要解决什么问题？</h2>\n\n<p>Dogwood的核心目标有三个：统一格式、标准化错误处理、规范化权限管理。</p>\n\n<p>第一是<strong>工具描述格式的统一</strong>。不管你底层用的是哪个模型、哪个框架，工具的描述、参数的schema、返回值的格式，都用同一套规范来定义。Dogwood定义了一套基于JSON Schema的工具描述语言，支持类型检查、参数校验、自动生成文档。这意味着开发者写一次工具定义，可以在所有支持Dogwood的Agent框架里跑。</p>\n\n<p>第二是<strong>错误处理的标准化</strong>。现在Agent调用工具出错了，返回什么格式的错误、怎么重试、怎么把错误信息反馈给模型让它修正，每个框架都不一样。Dogwood定义了标准的错误码、错误分类、重试策略——哪些错误可以重试，哪些错误需要重新思考，哪些错误应该直接终止任务，都有明确的指引。</p>\n\n<p>第三是<strong>权限管理的规范化</strong>。这是现在Agent最危险的地方：一个Agent拿到你的API key，可能会在你不知道的情况下调用危险工具（比如删除数据库、转账、发邮件）。Dogwood内置了一套权限声明和审批机制，工具可以声明自己需要什么权限，Agent调用敏感工具时需要人类确认，所有操作都有审计日志。</p>\n\n<h2>协议层战争的又一参与者</h2>\n\n<p>Dogwood不是这个领域的第一个玩家。在它之前，已经有MCP（Model Context Protocol，模型上下文协议）和A2A（Agent-to-Agent Protocol）两套主要协议在竞争。MCP解决的是Agent连接工具和数据的问题，A2A解决的是Agent之间互相通信的问题。Dogwood更聚焦在工具调用本身的规范化上，可以看作是对MCP在工具定义和错误处理层面的补充。</p>\n\n<p>AWS选择在这个时候开源Dogwood，信号很明确：<strong>Agent协议层正在成为大厂竞争的新战场</strong>。谁制定了标准，谁就掌握了Agent生态的入口权。就像云计算时代OpenStack和Cloud Foundry的竞争，移动互联网时代Android和iOS的竞争——每一次技术范式转移，都会伴随一场标准战争。</p>\n\n<p>现在的问题是：这么多协议，最终是会走向统一，还是会长期分裂？从历史经验看，大概率是\"先分裂、后融合\"——早期大家各做各的，然后通过市场竞争逐渐收敛到1-2套主流标准，最后可能通过开源基金会的协调形成统一规范。A2A已经捐给了Linux基金会，MCP也在走类似的路径，Dogwood作为AWS的开源项目，未来也有可能捐给某个基金会。</p>\n\n<p>对开发者来说，短期内可能要面临\"多套协议并存\"的混乱局面，需要适配不同的标准。但长期来看，有规范总比没规范好，大厂愿意投入资源做标准化，对整个行业是好事。</p>\n\n<p>Agent要真正走向生产环境，标准化是必须迈过的一道坎。Dogwood是亚马逊投下的一块石头，这潭水还会继续热闹下去。</p>\n\n<p>明天见。</p>",
+  "sources": [
+    {
+      "url": "https://www.infoq.cn/article/cwj5Ikvhqu5mKH22zKsO",
+      "text": "InfoQ中文：亚马逊开源Dogwood"
+    }
+  ],
+  "keywords": "Dawn Vision,亚马逊云科技,Dogwood,AI Agent,工具调用,Agent协议,开源,AWS",
+  "pull_quote": {
+    "text": "Agent的世界里，工具调用就是新的API——谁定了规矩，谁就掌握了下一代软件的入口。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "AWS Dogwood · 工具调用规范 · Agent协议 · 开源 · 亚马逊 · AI Agent · 标准之争",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 5 个源信号生成，经编辑部人工审核。素材来源：InfoQ中文、AWS官方博客、TechCrunch。",
+  "word_count": 1037
+}

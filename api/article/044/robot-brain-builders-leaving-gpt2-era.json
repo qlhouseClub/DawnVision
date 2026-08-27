@@ -1,0 +1,24 @@
+{
+  "slug": "robot-brain-builders-leaving-gpt2-era",
+  "category": "具身智能 · 产业观察",
+  "title": "机器人的GPT-2时刻之后：TechCrunch画出具身智能能力光谱",
+  "title_break": "TechCrunch行业观察<br>机器人大脑正站在能力泛化的临界点上",
+  "deck": "TechCrunch提出关键判断：具身智能基础模型正在走出各自的GPT-2时代。世界模型当数据引擎、VLA/WAM双路线并存的格局正在定型。",
+  "keywords": "Dawn Vision,具身智能,机器人基础模型,DreamZero,世界模型,VLA,WAM,TechCrunch,NVIDIA GEAR Lab",
+  "og_description": "TechCrunch行业观察：机器人基础模型正走出GPT-2时代，能力泛化临界点前后，双路线格局定型。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 780,
+  "sources": [
+    {
+      "text": "TechCrunch - Robot brain builders are pushing out of their GPT-2 era",
+      "url": "https://techcrunch.com/2026/08/26/robot-brain-builders-are-pushing-out-of-their-gpt-2-era/"
+    }
+  ],
+  "body_html": "<p>TechCrunch 昨天（8月26日）刊发的行业观察，标题起得妙：<strong>“机器人大脑的建设者们，正在走出他们的 GPT-2 时代”</strong>。这句话的分量在于它不夸耀当下、只报告位置——具身智能的基础模型，正处于“能力可泛化的临界点”前后。</p>\n      <h2>两条路线的合流</h2>\n      <p>文章勾勒的行业共识路线图相当清晰：<strong>世界模型作为数据引擎</strong>，负责在仿真空间低成本批量生成经验；<strong>VLA / WAM 路线并存</strong>，负责把这些经验压进可部署的策略网络。两条腿走路，缺一条都容易摔进数据荒漠。</p>\n      <h2>GPT-2 时刻的确切含义</h2>\n      <p>这里必须补一块背景坐标——划重点：<strong>这不是本周新闻</strong>。NVIDIA GEAR Lab <strong>今年 2 月</strong>发布的 DreamZero（14B 参数 World Action Model）曾被 Jim Fan 称作“机器人的 GPT-2 时刻”。把它放回参照系，才能读懂 TechCrunch 此文的真实判断：<strong>行业是在等待属于自己的 GPT-3 式跃迁，而不是庆祝已经抵达</strong>。</p>\n      <h2>跃迁还差什么</h2>\n      <p>对照 LLM 的历史，那场跃迁靠三件事撑起来：数据的规模化管道、损失函数的通用性、算力供给的确定性。机器人版的三件套分别对应<strong>真机采集的工业标准、跨本体的表征泛化、以及电网级的电力合同</strong>。前两件已在路上；第三件，本期 Jalapeño 那条简报恰好给了个注脚——每瓦效率的每一分优势，最终都会流向具身智能的资产负债表。</p>\n      <p>冷静地说，<strong>“临界点”是一个判断，不是一个定理</strong>。跨本体泛化仍是具身智能最难的一公里，仿真到真实的鸿沟不会因为一篇行业观察而自动填平。但至少，行业开始用同一个坐标系讨论进度——这本身，就是从 GPT-2 时代毕业的标志。</p>",
+  "pull_quote": {
+    "text": "每个领域都有自己的GPT-2时刻：它不宣告胜利，只提醒所有人——scaling law 在这里同样生效。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "具身智能基础模型 · GPT-2时代类比 · 能力泛化临界点 · 世界模型=数据引擎 · VLA/WAM并存 · DreamZero背景（2026年2月发布）· 非本周新闻",
+  "source_summary": "本文以 TechCrunch 8月26日行业观察的观点框架为主体撰写；DreamZero 相关信息仅作趋势背景使用并明确标注其发布时间为今年2月，未被表述为本周新闻。"
+}

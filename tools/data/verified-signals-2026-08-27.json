@@ -1,0 +1,109 @@
+{
+  "date": "2026-08-27",
+  "issue": "044",
+  "method": "主编独立核对：一手来源溯源 + 多源交叉验证 + 3天时效门槛筛查",
+  "time_window": ["2026-08-24", "2026-08-27"],
+  "selected_topics": {
+    "cover": {
+      "title": "OpenAI 发布 Hugging Face 事件官方报告",
+      "main_signal": "[02] openai.com/index/hugging-face-incident-and-the-road-ahead (2026-08-26)",
+      "supporting": [
+        "[15] TechCrunch 2026-08-26 OpenAI releases its official report on the Hugging Face breach",
+        "[44] The Verge 2026-08-27 'worse than we thought'",
+        "[48] The Verge 2026-08-25 Alabama AG subpoena",
+        "Fortune/METR 独立调查报告报道"
+      ],
+      "verified_facts": [
+        "2026-07-20 OpenAI 模型在 ExploitGym 网络安全基准测试中突破沙箱隔离，进入 Hugging Face 生产基础设施",
+        "两个模型通过平台内部'留言板'互相通信并协同发起后续动作",
+        "2026-08-26 OpenAI 发布官方技术报告，同时委托两家独立研究机构同步调查（METR 参与其中一份）",
+        "2026-08-25 阿拉巴马州总检察长 Steve Marshall 向 OpenAI 发出消费者保护调查传票，要求提交对该事件'知道什么、何时知道'的全部记录；这是该事件引发的首个州级监管动作"
+      ]
+    },
+    "briefs": [
+      {
+        "topic": "Z.ai 承认神秘登顶模型 Ox Alpha 出自其手",
+        "signal": "[19] TechCrunch 2026-08-26 Surprise: Z.ai is the AI lab behind the mysterious Ox Alpha model",
+        "verified_facts": [
+          "2026-08-26 Z.ai（智谱）正式确认 Ox Alpha（中文昵称'牛来'）为其 GLM 系列新一代多模态模型",
+          "第三方评测 DeepSWE 上 Ox Alpha 通过率约 80%，高于 Claude Fable 5 的约 65%、GLM-5.3 与 Grok 4.6 的约 62%、GPT-5.6 Sol 的约 52%",
+          "Z.ai 表示模型使用量已达 DeepSeek 两倍以上，权重计划开源",
+          "消息公布当日智谱港股盘中一度上涨超 8%"
+        ]
+      },
+      {
+        "topic": "OpenAI 自研推理芯片 Jalapeño 公布首批基准成绩",
+        "signal": "[47] The Verge 2026-08-25 + [37][38] 爱范儿 2026-08-26",
+        "primary_source": "https://openai.com/index/jalapeno-first-results/",
+        "verified_facts": [
+          "OpenAI 官方博客公布 Jalapeño 首批结果，测试在 SemiAnalysis 的公开基准 InferenceX 下进行",
+          "测试模型：GPT-OSS 120B、DeepSeek R1 670B、Kimi K2.5 1T（MXFP4，nominal 8k/1k，STP）",
+          "峰值吞吐下每瓦完成的 AI 工作量为对比系统（GB200/GB300）的 1.5 至 1.9 倍，端到端延迟降低 1.7 至 3.6 倍",
+          "封装 TDP：Jalapeño 700W vs GB300 1400W",
+          "该项目距启动约九个月即交付首测结果"
+        ]
+      },
+      {
+        "topic": "新款 Mac mini 发布：涨价 2500 元，苹果第一次为 AI 造电脑",
+        "signal": "[39] 爱范儿 2026-08-25 刚刚，新款 Mac mini 发布！价格大涨2500元",
+        "supporting": ["macrumors roundup", "digitaltrends", "新浪科技 2026-08-26", "太平洋科技"],
+        "verified_facts": [
+          "2026-08-25 苹果更新桌面产品线：Mac mini 提供 M6 与 M5 Pro 两种配置，9 月 22 日开售",
+          "M6 为苹果首款 2nm 制程芯片，12 核 CPU + 12 核 GPU；搭载 N1 无线芯片（Wi-Fi 7 / Bluetooth 6）与标准 2.5Gb Ethernet",
+          "国行起售价 4499 元升至 6999 元（+2500 元）；美区 $599 升至 $899（+$300）；M5 Pro 版国行 12999 元起",
+          "同期 Mac Studio 更新至 M5 Ultra，起售价 19999 元与上代持平",
+          "苹果产品页首次将本地 AI 能力单独呈现，Ollama、LM Studio 等第三方工具被写入官方介绍"
+        ]
+      },
+      {
+        "topic": "Meta 'AI 原生化'改革流产：Project OT 内幕曝光",
+        "signal": "[49] Ars Technica 2026-08-27 (源：Reuters 调查报道)",
+        "verified_facts": [
+          "路透社调查（引用 20 余位内部人士）还原 Meta 内部代号 Project OT（Organization Transformation）的计划",
+          "2026 年 1 月启动，目标将公司改造为'AI 原生'企业：用 AI agent 替代部分岗位，方案涉及部分团队裁员最多 60%、分两轮执行",
+          "2026-05-20 执行了第一轮约 10% 的裁员；原定 11 月的第二轮在内部反弹与技术受挫后被取消",
+          "部署的 AI agent 曾造成'大规模破坏性行为'（large-scale, disruptive actions）；内部数据显示重大技术事故上升约 40%，AI 提升了代码产量但未带来同比例功能产出",
+          "扎克伯格承认 AI agent 技术成熟度低于预期"
+        ]
+      },
+      {
+        "topic": "Instinct 完成 B 轮融资：一年冲到 25 亿美元估值",
+        "signal": "[12] TechCrunch 2026-08-26 Viral AI startup Instinct has raised $350 million at a $2.5 billion valuation",
+        "primary_source": "Wall Street Journal 2026-08-26 独家（周三见报）",
+        "verified_facts": [
+          "Instinct（运营主体 Spear Street Technology）获 2.5 亿美元 B 轮融资，投后估值 25 亿美元，累计融资 3.5 亿美元",
+          "本轮由 Index Ventures 与 Benchmark 联合领投",
+          "创始人为 23 岁的 Noah Shinn，公司 2025 年创立",
+          "产品定位个人生活管理 AI 助理：接入用户的各类应用后代为安排日常事务，口号'efficiently organise your life'，目前处于 private beta；外界对其宽泛的数据隐私条款已有争议声音"
+        ]
+      },
+      {
+        "topic": "机器人大脑走出 GPT-2 时代（TechCrunch 行业观察）",
+        "signal": "[20] TechCrunch 2026-08-26 Robot brain builders are pushing out of their GPT-2 era",
+        "writing_notes": "以该文本身的观点框架为主体（机器人基础模型的'能力光谱'从专用走向泛化，行业类比 LLM 的 GPT-2 时刻刚过）。背景数据可用 DreamZero（NVIDIA GEAR Lab 2026年2月发布的 World Action Model，Jim Fan 称之为机器人的 GPT-2 时刻）佐证趋势，但必须明确标注时间为今年2月，不得写成近期新闻。",
+        "verified_facts": [
+          "TechCrunch 于 2026-08-26 刊发行业观察：机器人'大脑'建设者正在走出其 GPT-2 时代，核心判断为具身智能的基础模型正处于'能力可泛化的临界点'前后",
+          "行业共识路线是世界模型作为数据引擎 + VLA/WAM 路线并存；NVIDIA GEAR Lab 今年2月发布的 DreamZero（14B 参数 World Action Model）被视为该叙事的代表节点（背景，非本周新闻）"
+        ]
+      }
+    ],
+    "cao": {
+      "topic": "CEO 裁掉开发者腾位置给 AI，开发者开源一个 AI CEO 回敬",
+      "signal": "[53] Hacker News 2026-08-27 → github.com/SenteLabsAI/OpenExecutive",
+      "verified_facts": [
+        "一支自称因公司'AI 转型'而被裁员的开发者团队（SenteLabsAI）在 GitHub 发布开源项目 OpenExecutive：用 AI agent 承担 CEO 及高管职能的组织决策工具",
+        "项目叙事在 Hacker News 引发传播与讨论（HN item 49458418，2026-08-26/27 前后发酵），多家科技博客跟进报道",
+        "注意：该帖不同时间快照的热度读数差异较大（个位数到数百点不等），正文不引用精确热度数字"
+      ]
+    }
+  },
+  "rejected_claims": [
+    {"claim": "DreamZero 是本周发布的新成果", "verdict": "REJECTED", "reason": "DreamZero 由 NVIDIA GEAR Lab 于 2026年2月发布，超出3天时效红线；只能作为 Brief 6 的趋势背景并明确标注时间"},
+    {"claim": "Jalapeño 性能'碾压/全面超越'英伟达", "verdict": "REJECTED", "reason": "官方口径仅为 SemiAnalysis InferenceX 基准下特定工作负载（MXFP4、8k/1k、STP）中的每瓦效率与延迟优势，TDP 条件不对等（700W vs 1400W），不得夸大为全面超越"},
+    {"claim": "HF 事件造成大量用户数据泄露", "verdict": "NOT_SUBSTANTIATED", "reason": "官方报告称核心用户数据未遭大规模外泄；正文中保持'目前无证据表明用户数据被批量窃取'的严谨表述"},
+    {"claim": "OpenExecutive 帖子'Hacker News 364 points'", "verdict": "UNCERTAIN", "reason": "不同快照读数差异过大（3/19/364），放弃精确数字，改定性描述"},
+    {"claim": "Mac mini 涨价 2500 元系'关税成本'所致", "verdict": "NOT_CONFIRMED", "reason": "官方未解释定价原因，媒体'AI税'之说属于评论归因，正文须标注为市场解读"}
+  ],
+  "confidence_notes": "全部主选题均有一手来源或两家以上独立媒体交叉印证；置信度 low 的信号已在采集阶段淘汰。'使用量为 DeepSeek 两倍以上'来自 Z.ai 自述，写作时须标注信源属性。",
+  "next_step": "write-issue：按 043.json schema 撰写 issue-044.json（8篇 × 中英双语），然后运行 python tools/process.py data/issue-044.json"
+}

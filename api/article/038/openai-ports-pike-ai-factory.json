@@ -1,0 +1,35 @@
+{
+  "slug": "openai-ports-pike-ai-factory",
+  "category": "大模型商业",
+  "title": "OpenAI的8吉瓦AI工厂：算力军备竞赛进入基建时代",
+  "title_short": "8吉瓦AI工厂",
+  "title_break": "OpenAI的8吉瓦AI工厂：\n算力军备竞赛进入基建时代",
+  "deck": "PORTS-Pike项目锁定8GW容量，150万块GPU/代，英伟达担保1050亿美元。当AI开始用「吉瓦」计量，竞争的就不是芯片了。",
+  "read_time": "约 6 分钟阅读",
+  "og_description": "OpenAI联合英伟达在俄亥俄州建设PORTS-Pike AI工厂，8GW IT容量、150万块GPU、1050亿美元担保。算力竞赛已从芯片争夺升级为土地、电力和建筑外壳的基础设施战争。",
+  "tags": [
+    "OpenAI",
+    "英伟达",
+    "算力基建",
+    "AI工厂"
+  ],
+  "body_html": "<p>AI到底有多烧钱？过去的答案是「多少万块GPU」，现在的答案变成了「多少吉瓦」。</p><p>8月17日，OpenAI正式宣布加入PORTS-Pike项目——在美国俄亥俄州Pike县建设世界级AI基础设施园区。整个项目锁定约<strong>8GW IT容量</strong>，由SB Energy建设并运营，OpenAI签了20年租约，英伟达提供信用担保并成为独家算力供应商。</p><p>8GW是什么概念？大约是一座超大型工业基地的用电负荷。首批800MW预计2028年投用，后续还需要新建电厂、输电线路和配套设施。</p><h2>150万块GPU的含义</h2><p>按照英伟达的测算，初始4.25GW部署，每一代AI工厂系统对应约<strong>150万块GPU</strong>，可能带来1500亿到2000亿美元的收入机会。如果后续扩展到全部8GW甚至16GW，对应的长期计算机会约6000亿美元。</p><p>注意，这不是说OpenAI今天已经签了6000亿的订单。这是英伟达按20年规划周期、多代GPU升级测算出的长期市场机会。第一代装进去，几年后升级第二代，再升级第三代——AI数据中心不是建一次用20年，而是每隔几年就换一次「心脏」。</p><p>很多人对10万、20万卡的集群已经觉得规模巨大，现在行业开始讨论百万级GPU基础设施。这是量级的跃迁。</p><h2>英伟达角色的质变</h2><p>这个项目里最值得关注的，不是又卖了多少GPU，而是英伟达角色的根本变化。</p><p>过去它只是GPU供应商，一手交钱一手交货。现在它越来越深地介入：芯片供应、网络、软件、数据中心设计、资本投资，甚至项目融资担保。英伟达向SB Energy投资了<strong>15亿美元</strong>，同时为前4.25GW提供最高<strong>1050亿美元</strong>的租赁残值担保。</p><p>为什么？因为如果未来AI算力真的是一个数千亿美元的市场，对于英伟达而言，最重要的事情已经不是「让客户买我的GPU」，而是<strong>确保客户真的有钱、有电、有数据中心把GPU买回去</strong>。</p><p>Jensen Huang造了一个新词：LPS——Land（土地）、Power（电力）、Shell（建筑外壳）。这三样东西，已经取代了芯片本身，成为AI扩张的真正瓶颈。</p><p>明天见。</p>",
+  "sources": [
+    {
+      "url": "https://openai.com/index/openai-joins-ports-pike-project/",
+      "text": "OpenAI官方公告"
+    },
+    {
+      "url": "https://nvidianews.nvidia.com/news/nvidia-guarantees-sb-energy-s-ports-pike-technology-campus-in-ohio-to-exclusively-host-nvidia-ai-compute",
+      "text": "NVIDIA官方新闻稿"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm",
+      "text": "SEC文件 - NVIDIA 8-K报告"
+    },
+    {
+      "url": "https://36kr.com/p/3944432341177984",
+      "text": "36氪：一座AI工厂就要150万块GPU"
+    }
+  ]
+}

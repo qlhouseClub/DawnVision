@@ -1,0 +1,24 @@
+{
+  "slug": "instinct-series-b-250m-2-5b-valuation",
+  "category": "AI 创投",
+  "title": "两年冲到25亿估值：Instinct完成2.5亿美元B轮融资",
+  "title_break": "Index与Benchmark罕见联手领投<br>Instinct两年做到25亿美元投后估值",
+  "deck": "病毒式传播的个人生活管理助理Instinct完成B轮：2.5亿美元进账、投后25亿美元，累计融资3.5亿。公司成立于2024年，创始人是Noah Shinn。",
+  "keywords": "Dawn Vision,Instinct,Noah Shinn,B轮融资,Index Ventures,Benchmark,个人AI助理,Spear Street Technology,隐私条款",
+  "og_description": "Instinct完成2.5亿美元B轮融资，投后估值25亿美元，Index与Benchmark联合领投，公司成立仅两年。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 750,
+  "sources": [
+    {
+      "text": "TechCrunch - Viral AI startup Instinct has raised $350 million at a $2.5 billion valuation (cumulative)",
+      "url": "https://techcrunch.com/2026/08/26/viral-ai-startup-instinct-has-raised-350-million-at-a-2-5-billion-valuation/"
+    }
+  ],
+  "body_html": "<p><strong>2.5 亿美元 B 轮，投后估值 25 亿</strong>——凭空蹿红的个人生活管理 AI 助理 Instinct，用约两年时间走完了多数创业公司数年的融资曲线。据《华尔街日报》周三独家报道，本轮由 <strong>Index Ventures 与 Benchmark 联合领投</strong>——两家气质迥异的顶级基金出现在同一张 term sheet 上，本身就是叙事的一部分。</p>\n      <h2>两年、两轮叙述、一个2024年就入场的创始人</h2>\n      <p>Instinct 运营主体为 Spear Street Technology，公司创立于 2024 年，创始人是 Noah Shinn。算上本轮，公司累计融资已达 <strong>3.5 亿美元</strong>。产品定位直白得近乎莽撞：<strong>接入用户的各类应用后代为安排日常事务</strong>，口号是“efficiently organise your life”。翻译成人话——你授权它动用你的邮箱、日历、待办和通讯录，它替你把日子过明白。目前仍处 private beta。</p>\n      <h2>钱押的是什么</h2>\n      <p>Benchmark 与 Index 同时下注，赌的不是现有功能清单，而是<strong>入口位置的归属</strong>。当“助理”从聊天窗口沉淀为常驻进程，谁握住用户的信任与数据，谁就有机会成为移动端的下一层操作系统。<strong>个人代理是最贴近用户的应用形态，也是最容易被平台收编的形态</strong>——这道风险题每个投资人都看得见，但在 private beta 阶段进场的定价，赌的就是快半步。</p>\n      <h2>冷水与山头</h2>\n      <p>必须保留的事实是：该产品因<strong>过于宽泛的数据隐私条款，已经出现争议声音</strong>。在一个隐私即货币的赛道里，条款写了什么比 demo 演了什么更重要。而从 private beta 到规模化之间，还隔着留存与信任两座山。25 亿美元的估值买下的，只是第一座山头的攻城锤。</p>",
+  "pull_quote": {
+    "text": "每当平台入口出现松动，资本就会重新为“下一个超级App”的老习惯买单。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Instinct · B轮2.5亿美元 · 投后25亿 · 累计融资3.5亿 · Index×Benchmark联合领投 · 公司2024年成立 · 两年做到25亿 · Spear Street Technology · private beta · 隐私争议已现",
+  "source_summary": "融资金额与估值以《华尔街日报》独家报道为源头，经 TechCrunch 报道交叉印证；累计融资3.5亿美元与本轮2.5亿美元系两种口径，正文已分别标注。 口径说明：正文按《华尔街日报》表述将公司创立时间定为2024年、\"两年\"作为成长周期口径；TechCrunch标题中的$350M系累计融资而非本轮金额，已在文中分层标注。"
+}
