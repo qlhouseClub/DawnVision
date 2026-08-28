@@ -1,0 +1,140 @@
+{
+  "date": "2026-08-28",
+  "issue": "045",
+  "method": "主编独立核对：一手来源溯源 + 多源交叉验证 + 3天时效门槛筛查",
+  "time_window": ["2026-08-25", "2026-08-28"],
+  "selected_topics": {
+    "cover": {
+      "title": "英伟达 Q2 FY2027 财报：营收破 962 亿美元，同周被曝暂停收入分成协议",
+      "main_signal": "nvidianews.nvidia.com 官方 Q2 FY2027 财报新闻稿（2026-08-27 盘后发布）",
+      "supporting": [
+        "WSJ 2026-08-27/28 报道：英伟达上周暂停面向 AI 云服务商的收入分成/信用支持计划（电子工程专辑、Wccftech、AAStocks 等多家转引）",
+        "raw-signals-2026-08-28.json 中 RSS 采集的财报相关信号"
+      ],
+      "verified_facts": [
+        "Q2 FY2027 营收 962 亿美元，同比增长 106%",
+        "数据中心业务营收 890 亿美元，同比增长 117%",
+        "GAAP 毛利率 75.0%，GAAP 净利润 597 亿美元，GAAP 摊薄每股收益 2.46 美元",
+        "Q3 FY2027 营收指引 1080 亿美元；本季度向股东返还 260 亿美元",
+        "黄仁勋财报声明：'Compute is revenue'（算力即收入），Blackwell 需求'really extraordinary'",
+        "下一代 Vera Rubin 平台已进入全面投产（full production），Vera CPU 定位'首款为 AI agent 打造的 CPU'",
+        "WSJ 报道（财报发布次日见报）：英伟达已于上周暂停面向 AI 云服务商的收入分成计划；原方案为向云厂商提供信用支持、换取云业务营收分成；条款含'芯片只租给经批准的客户''算力分散给多家小型 AI 公司'；内部讨论认为存在反垄断风险敞口；公司不排除调整方案或并入其他计划重启；正文须标注为 WSJ 报道，非公司官方口径，不引用精确盘中股价数字"
+      ]
+    },
+    "briefs": [
+      {
+        "topic": "MiniMax：8月ARR突破8亿美元，6个月5.3倍",
+        "category": "大模型 · 商业分析",
+        "signal": "新浪财经7x24 2026-08-27 + 华尔街见闻 2026-08-27 + AASTOCKS（杰富瑞报告转引）",
+        "confidence": "medium-high（券商报告+多媒体报道，公司未单独发通稿）",
+        "writing_notes": "数字来自 Jefferies 报告转引与 MiniMax 中期业绩后的券商点评，正文须标注'杰富瑞口径/据报道'，不得写成公司官方审计披露；ARR为年化口径需在冷水段说明",
+        "verified_facts": [
+          "杰富瑞报告：MiniMax 8月年化收入（ARR）已超 8 亿美元，高于该行此前 5.8 亿美元的预测；目标价上调至 533 港元",
+          "时间轴：2026年2月 ARR 突破 1.5 亿美元（摩根士丹利报告口径）→ 8月超 8 亿美元，约6个月5.3倍",
+          "7月 Token 消耗量较 2026 年初增长 20 倍；6月下旬 M3 上线后 TPS 从 20 提升至 100；7月文本模型使用量快速增长；8月 H3 发布贡献增量 ARR",
+          "MiniMax 已公布港交所上市后首份中期业绩（MINIMAX-W, 00100.HK）",
+          "杰富瑞预期：毛利率下半年改善、2027年继续扩张；公司战略概括为'最大化智能、最小化成本'"
+        ]
+      },
+      {
+        "topic": "Stability AI 获 7600 万美元 B 轮，三大唱片公司与 EA 入股",
+        "category": "AI 设计 · 创作工具",
+        "signal": "Variety 独家 2026-08-25 + Stability AI 官方博客 2026-08-25",
+        "primary_source": "https://variety.com/2026/biz/news/stability-ai-raises-76-million-funding-round-1236842351/ + stability.ai 官方声明",
+        "confidence": "high（独家报道+官方确认）",
+        "verified_facts": [
+          "Stability AI 宣布获 7600 万美元 B 轮融资（2026-08-25）",
+          "新投资方：环球音乐（UMG）、华纳音乐、索尼音乐三大唱片 + EA + AMD Ventures + Pacific Alliance Ventures",
+          "现有股东跟投：Coatue、Greycroft、Kadmos、Lightspeed、Mantis Capital、Sound Ventures、WPP；个人投资者含 Sean Parker、Eric Schmidt（此前 James Cameron 亦为其背书者）",
+          "自 CEO Prem Akkaraju 2024年6月上任以来累计融资 2.32 亿美元",
+          "资金用途：创意生产产品、应用研究与专业服务；已与 UMG 合作开发专业音乐人生成工具；'与创作者分利'的授权框架为官方叙事"
+        ]
+      },
+      {
+        "topic": "OpenAI 在印度上线广告：Free 与 Go 档用户可见",
+        "category": "政策 · 监管",
+        "signal": "IT之家 2026-08-27 + Techlomedia/Business Outreach（印度媒体）2026-08-27/28",
+        "confidence": "high（官方产品动作+多家独立媒体）",
+        "writing_notes": "IPO 计划说法仅见于印度媒体报道（tezzbuzz），正文若引用须标注'据印度媒体报道'；卢比兑人民币汇率不写入正文",
+        "verified_facts": [
+          "8月27日 OpenAI 宣布在印度向 Free 与 Go 档用户投放广告；Go 档印度定价 399 卢比/月",
+          "广告面向登录的成年用户、分阶段推送，通过邮件或站内通知告知；广告出现在部分回答下方",
+          "Plus、Pro、Business、Enterprise、Education 档位维持无广告",
+          "本月早些时候 OpenAI 已修改服务条款，明确用户可能看到广告",
+          "背景：2月数据显示 ChatGPT 印度周活超 1 亿；OpenAI 称印度周活同比翻倍；用户高频用 ChatGPT 做产品调研与购买决策"
+        ]
+      },
+      {
+        "topic": "第二届世界人形机器人运动会闭幕：666队/2056台/1301场",
+        "category": "具身智能 · 机器人",
+        "signal": "中国日报 2026-08-27 + 上海发布 2026-08-26 + 参考消息/北京台 2026-08-26/28",
+        "confidence": "high（官方赛事数据，多源一致）",
+        "writing_notes": "注意是第二届（首届2025年8月）。角度为'闭幕成绩单+产业信号'，避免与044期WRC大会机器人内容重复（044讲大会与新品，本篇讲赛事数据与数据资产）",
+        "verified_facts": [
+          "第二届世界人形机器人运动会于 2026-08-26 晚在北京（国家速滑馆'冰丝带'）闭幕，赛程五天",
+          "规模：16 个国家和地区、666 支队伍、2056 台人形机器人，51 个赛项、1301 场对决、51 块金牌",
+          "赛会纪录：人形机器人百米跑进 10 秒、跳远 3.4 米，多项赛会纪录刷新",
+          "上海企业在金牌榜、奖牌榜均列第一",
+          "赛事记录数千小时实机运行数据、上万次动作捕捉",
+          "参考消息闭幕盘点：'过去一年，中国机器人公司实现了巨大飞跃'"
+        ]
+      },
+      {
+        "topic": "Anthropic 开放 Model Hardware Standard（MHS）研究预览",
+        "category": "AI Agent · 工程实践",
+        "signal": "Anthropic 官方博客 2026-08-27",
+        "primary_source": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
+        "confidence": "high（官方一手来源）",
+        "writing_notes": "角度：agent 操作物理设备的安全规范 + 协议卡位（与MCP互补）；不夸大为'已成的行业标准'，明确 research preview 属性",
+        "verified_facts": [
+          "8月27日 Anthropic 开放 Model Hardware Standard（MHS）研究预览版（research preview）",
+          "定位：一份让 AI agent 安全操作物理设备的共享规范（shared specification）",
+          "首批开放对象：科研实验室与先进制造商",
+          "能力：agent 可并行操作多台实验室与制造设备（显微镜、移液器 liquid handlers、机械臂等），执行复杂任务链"
+        ]
+      },
+      {
+        "topic": "通义万相 Wan 3.0 全量上线 + 优速版上架百炼：视频生成价格战",
+        "category": "AI 商业化 · 行业观察",
+        "signal": "阿里云官方博客（GA 2026-08-24）+ 百炼帮助文档 wan3.0-video-prime（更新 2026-08-26）+ 36氪/搜狐/CNMO 2026-08-24-26 + IT之家 2026-08-26-28 跟进报道",
+        "primary_source": "https://www.alibabacloud.com/blog/wan3-0-at-general-availability-capabilities-benchmarks-pricing-and-the-workflows-it-changes_603505",
+        "confidence": "high（官方一手来源+媒体交叉）",
+        "writing_notes": "时效说明：GA 为 8月24日（Day -4），但 8月26日优速版 wan3.0-video-prime 上架百炼在3天窗口内，且 IT之家等媒体 8/26-28 持续跟进报道；按 writing-style.md 时效例外条款处理——文章核心聚焦'本周价格战动态'（8/26 Prime 上架 + 定价体系），8/24 GA 为必要背景。正文不写'首届/首创'类绝对化表述。",
+        "verified_facts": [
+          "时间线：8月6日邀测/公测 → 8月24日全量上线（千问创作 Web/PC/APP + 百炼 API + 国际渠道 GA）→ 8月26日优速版 wan3.0-video-prime 上架百炼",
+          "单次生成最长 30 秒（比上代 15 秒翻倍）；首次支持 doc/xls/ppt/pdf/md 等文档输入直接生成视频",
+          "统一支持文生视频、图生视频（首帧/首尾帧）、参考生视频；支持文本、图像、视频、音频多模态输入",
+          "国内 API 定价（每秒）：480P 0.3 元、720P 0.6 元、1080P 1.2 元；国际版 480P $0.05、720P $0.10、1080P $0.20",
+          "对比：开发者测算同规格比字节 Seedance 2.5 便宜近一半（掘金社区文章口径）",
+          "背景：8月24日阿里宣布完成约102亿美元（800亿港元）配股融资；36氪报道阿里内部 HappyHorse 与 Wan3.0 并行推进（'赛马'）"
+        ]
+      }
+    ],
+    "cao": {
+      "topic": "Hugging Face 发布 399 美元开源机器鸭 Microduck",
+      "signal": "Engadget 2026-08-27 + DeepTech深科技 2026-08-27/28 + Numerama 2026-08-27 + Gadget Review/AIBase 2026-08-27/28",
+      "confidence": "high（Engadget/官方发布+多家媒体）",
+      "writing_notes": "关键事实勘误：深科技口径为'身高25厘米、自重不足800克'（800克是自重不是抓取负载，不得写成'能抓800克物品'）。槽点角度：人形机器人宏大叙事 vs 399美元可爱路线；时机梗：英伟达约129亿美元收购HF消息曝光次日发布（深科技口径，正文以'消息曝光次日'表述）",
+      "verified_facts": [
+        "8月27日 Hugging Face 与旗下法国子公司 Pollen Robotics（波尔多，2025年4月被HF收购）发布开源机器鸭 Microduck",
+        "售价 399 美元，预购通道已开，官方计划圣诞前发货",
+        "身高 25 厘米、自重不足 800 克；摇摆步态行走、能踩轮滑、摔倒后可自行起身；喙可叼起袜子、抓取笔等物品",
+        "全开源；强化学习策略以 50Hz 运行；可在仿真中训练新动作后部署真机（Numerama：'à entraîner soi-même'）",
+        "背景：发布前一日，英伟达以约 129 亿美元收购 Hugging Face 的消息曝光（深科技口径）；此为背景提及，不展开"
+      ]
+    }
+  },
+  "rejected_claims": [
+    {"claim": "A2A 协议加入 AAIF（Agentic AI Foundation）", "verdict": "REJECTED", "reason": "新闻时间为 2026-08-17 至 08-19，超出 3 天时效红线"},
+    {"claim": "Adobe Firefly 接入 Kling 3.0 视频模型", "verdict": "REJECTED", "reason": "核查确认为 2026-08-20 消息（8 天前），超出时效红线；已以 Stability AI（08-25）替换该类别选题"},
+    {"claim": "AI agent 在站会上替人类道歉引发现场争议", "verdict": "REJECTED", "reason": "仅能溯源到 explainx.ai 单一博客，无法定位一手来源与确切时间，置信度 low，淘汰；Cao 由 HF Microduck 顶替"},
+    {"claim": "Rish（Neynar 创始人）关于 AI agent 的言论", "verdict": "REJECTED", "reason": "未找到一手来源与确切日期，置信度 low"},
+    {"claim": "Microduck 能抓起 800 克物品", "verdict": "CORRECTED", "reason": "深科技原文'重不足800克'指机器人自重，非抓取负载；写作时改为'自重不足800克'"},
+    {"claim": "世界人形机器人运动会为'首届'", "verdict": "CORRECTED", "reason": "2026年为第二届（首届2025年8月）；多源（中国日报/上海发布/参考消息）均表述为第二届"},
+    {"claim": "Wan 3.0 全量上线为8月26-28日新闻", "verdict": "CORRECTED", "reason": "GA 实为 8月24日（Day -4）；按时效例外条款以 8月26日 Prime 上架+本周价格战为报点，GA 作背景，已在 writing_notes 说明"},
+    {"claim": "英伟达财报后'股价大涨/大跌 X%'", "verdict": "NOT_SUBSTANTIATED", "reason": "盘后发布时点与盘前交易数据在不同快照间波动，正文避免引用精确盘中涨跌幅，改定性描述"},
+    {"claim": "MiniMax ARR 数据为公司官方审计披露", "verdict": "REJECTED", "reason": "数据源为 Jefferies 券商报告转引与媒体报道，非公司官方通稿，正文须标注'杰富瑞口径'"}
+  ],
+  "confidence_notes": "封面（英伟达官方财报新闻稿+WSJ多源转引）与 Brief 2/3/4/5、Cao 均有一手来源或两家以上独立媒体交叉印证；MiniMax ARR 为 medium-high（券商报告转引）、Wan3.0 按时效例外条款处理并已注明理由。置信度 low 的信号（AI agent 站会道歉、Rish Neynar）已在选题阶段淘汰。",
+  "next_step": "write-issue：按 010.json schema 撰写 issue-045.json（8篇 × 中英双语），然后运行 python tools/run.py process"
+}

@@ -1,0 +1,371 @@
+{
+  "issue": {
+    "number": "045",
+    "date": "2026-08-28",
+    "date_display": "2026.08.28"
+  },
+  "cover": {
+    "slug": "nvidia-q2-fy2027-earnings-and-revenue-sharing-pause",
+    "title": "英伟达Q2营收962亿美元再破纪录：增长的B面，是一场被暂停的分成实验",
+    "title_en": "NVIDIA's $96.2B Quarter Sets Records Again: On the B-Side of Growth, a Revenue-Sharing Experiment Hits Pause",
+    "title_short": "英伟达Q2财报与分成暂停",
+    "title_short_en": "NVIDIA Q2: Records and a Pause",
+    "title_break": "英伟达Q2营收962亿美元<br>数据中心890亿再超预期；同周WSJ曝：AI云收入分成计划已暂停",
+    "title_break_en": "NVIDIA Q2 Revenue Hits $96.2B<br>Data Center at $89B Again; Same Week, WSJ Reports the AI Cloud Revenue-Sharing Program Is Paused",
+    "deck": "8月27日盘后，英伟达交出FY2027 Q2成绩单：营收962亿美元、同比翻倍，数据中心890亿，Vera Rubin全面投产。同周《华尔街日报》报道，其面向AI云厂商的收入分成计划已于上周暂停——最强财报与最敏感的模式实验，同周上演。",
+    "deck_en": "After hours on August 27, NVIDIA delivered its FY2027 Q2 report card: $96.2B revenue, doubling year over year, $89B from data centers, Vera Rubin in full production. The same week, the Wall Street Journal reported its revenue-sharing program for AI cloud providers was paused last week — the strongest earnings report and the most sensitive business-model experiment, staged in one week.",
+    "keywords": "Dawn Vision,英伟达,NVIDIA,Q2 FY2027,财报,数据中心,Vera Rubin,Blackwell,收入分成,WSJ,反垄断,AI云",
+    "keywords_en": "Dawn Vision,NVIDIA,Q2 FY2027,earnings,data center,Vera Rubin,Blackwell,revenue sharing,WSJ,antitrust,AI cloud",
+    "og_description": "英伟达Q2 FY2027营收962亿美元、同比增长106%，数据中心890亿、同比增长117%；Vera Rubin全面投产。同周《华尔街日报》报道其暂停面向AI云厂商的收入分成计划。",
+    "og_description_en": "NVIDIA's Q2 FY2027 revenue hit $96.2B, up 106% YoY, with $89B from data centers, up 117%; Vera Rubin enters full production. The same week, the WSJ reported its revenue-sharing program for AI cloud providers is paused.",
+    "twitter_description": "962亿美元营收、106%增速、Vera Rubin全面投产；同周WSJ曝收入分成计划暂停。英伟达的A面与B面。",
+    "twitter_description_en": "$96.2B revenue, +106% YoY, Vera Rubin in full production — and a WSJ-reported pause on the revenue-sharing program. NVIDIA's A-side and B-side.",
+    "read_time": "约 10 分钟阅读",
+    "read_time_en": "~10 min read",
+    "word_count": 2180,
+    "cognitive_notes": "英伟达Q2 FY2027（截至2026-07-26） · 营收962亿美元(+106% YoY, +18% QoQ) · 数据中心890亿(+117%) · GAAP/非GAAP毛利率均75.0% · GAAP净利597亿 · GAAP EPS 2.46美元/非GAAP 2.22 · Q3指引1080亿 · 本季股东返还260亿 · 黄仁勋'Compute is revenue' · Blackwell需求'really extraordinary' · Vera Rubin全面投产 · Vera CPU'首款为AI agent打造的CPU' · WSJ报道(8/27)：上周暂停收入分成计划，条款含'只租给经批准客户/算力分散给小型AI公司'，内部担心反垄断风险，不排除调整后重启 · 大摩首次信用覆盖：中性评级，'资产负债表即服务'质疑",
+    "cognitive_notes_en": "NVIDIA Q2 FY2027 (quarter ended 2026-07-26) · Revenue $96.2B (+106% YoY, +18% QoQ) · Data center $89B (+117%) · GAAP and non-GAAP gross margin both 75.0% · GAAP net income $59.7B · GAAP EPS $2.46 / non-GAAP $2.22 · Q3 guide $108B · $26B returned to shareholders this quarter · Jensen Huang 'Compute is revenue' · Blackwell demand 'really extraordinary' · Vera Rubin in full production · Vera CPU 'first CPU built for AI agents' · WSJ (Aug 27): revenue-sharing program paused last week; terms included 'lease only to approved customers' and 'spreading compute across smaller AI companies'; internal antitrust concerns; may restart in adjusted form · Morgan Stanley initiates credit coverage: neutral, 'balance sheet as a service' concerns",
+    "source_summary": "本文基于 Dawn Vision 认知引擎对当日信号的交叉验证生成。财务数据全部来自英伟达官方财报新闻稿（一手来源）；收入分成计划暂停为《华尔街日报》8月27日报道口径（经电子工程专辑、Channel NewsAsia等多家媒体转引确认），非公司官方公告，正文已明确标注；摩根士丹利信用覆盖相关表述来自新浪财经转引报道。全文未引用精确盘中股价数字。",
+    "source_summary_en": "Produced by the Dawn Vision cognition engine and cross-checked against same-day signals. All financial figures come from NVIDIA's official earnings press release (primary source). The revenue-sharing pause is as reported by the Wall Street Journal on August 27 (corroborated via EE China, Channel NewsAsia and others), not an official company announcement, and is labeled as such in the text; the Morgan Stanley credit-coverage note is via Sina Finance's report. No precise intraday share-price figures are cited.",
+    "body_html": "<p>962亿美元。8月27日美股盘后，英伟达公布2027财年第二季度（截至7月26日）财报：<strong>营收962亿美元，同比增长106%、环比增长18%</strong>；数据中心业务单季<strong>890亿美元，同比增长117%</strong>——一年前，总营收还只有467亿。数字本身没有悬念，悬念在同一天晚些时候到来：《华尔街日报》报道称，这家公司上周悄悄暂停了一项面向AI云服务商的收入分成计划。史上最猛的财报，和一次最敏感的商业模式急刹车，发生在同一周。</p>\n<h2>成绩单：千亿门槛前的一个季度</h2>\n<p>先把硬数字过一遍：<strong>GAAP与非GAAP毛利率均为75.0%</strong>；GAAP净利润<strong>597亿美元</strong>，GAAP摊薄每股收益<strong>2.46美元</strong>（non-GAAP每股2.22美元）。管理层给出的下一季度营收指引是<strong>1080亿美元</strong>——按这个斜率，单季千亿美元营收的门槛，就站在下个季度门口。本季度公司还向股东返还了<strong>260亿美元</strong>，回购加分红的力度同样在刷新自己的纪录。算一笔结构账：数据中心已占总营收的<strong>九成以上</strong>，这家公司的命运曲线，和全球AI算力开支几乎是同一条线。</p>\n<h2>黄仁勋的两句话</h2>\n<p>财报声明里，黄仁勋留了两句值得抄录的话。第一句：<strong>“Compute is revenue”（算力即收入）</strong>——把算力采购直接等同于收入创造的叙事，既说给客户听，也说给华尔街听。第二句是对Blackwell需求的形容：<strong>“really extraordinary”（真的非同寻常）</strong>。产品面上的注脚更硬：下一代<strong>Vera Rubin平台已进入全面投产</strong>（full production），配套的Vera CPU被定位为“首款为AI agent打造的CPU”。注意这个措辞——芯片公司的产品定义已经开始围着agent转，AI agent正在从软件叙事变成硬件设计目标，这是比任何一句口号都诚实的行业信号。</p>\n<h2>B面：被按下暂停键的分成实验</h2>\n<p>然后是这条真正值得展开的新闻。《华尔街日报》8月27日援引知情人士报道称，英伟达已于<strong>上周暂停</strong>一项面向AI云服务商的融资安排：原方案是由英伟达向云厂商<strong>提供信用支持，换取其云业务的营收分成</strong>。报道披露的条款细节颇具想象力——芯片<strong>只租给“经批准的客户”</strong>，并要求<strong>把算力分散给多家小型AI公司</strong>使用。促使暂停的原因，据称是内部员工担忧该模式可能招致<strong>反垄断审查</strong>，对公司“向客户施加经营控制的边界”也存在顾虑。必须强调：以上均为<strong>WSJ报道口径，并非公司官方公告</strong>；据知情人士说法，英伟达不排除调整方案后重启，或将其并入其他计划。</p>\n<h2>“资产负债表即服务”的质疑</h2>\n<p>同周还有一条容易被忽略的动态：据新浪财经转引的报道，摩根士丹利首次启动对英伟达的信用研究覆盖，给出<strong>中性评级</strong>，并警告这家公司正在把资产负债表转化为战略性的AI融资工具——也就是被质疑为<strong>“资产负债表即服务”</strong>的模式。把两条新闻放在一起，画面就完整了：当最大的芯片供应商同时扮演自己客户的融资方，<strong>收入的“成色”问题</strong>——有多少需求是被自家的信用支持催生出来的——就成了损益表之外必须追问的变量。历史上，电信设备与光伏行业都上演过“供应商加杠杆撑起客户需求”的剧本，结局参半。而这次主动暂停，至少说明公司自己也在重新掂量这条边界。</p>\n<h2>为什么B面比A面更值得盯</h2>\n<p>A面无需多虑：需求真实、指引清晰、客户排队，1080亿的指引摆在那里。值得盯住的是B面的两个长期变量。其一，<strong>厂商融资的闭环到底有多大</strong>——分成计划是暂停不是终止，换一种更收敛的形态卷土重来的概率不低；届时真正该看的不是营收第一行，而是应收账款、合同条款和现金流的附注。其二，<strong>反垄断的边界划在哪里</strong>——“只租给经批准的客户”已经不是销售行为，而是产业链控制；监管对这类安排的容忍度，将决定算力巨头商业模式的半径。千亿门槛很亮，但英伟达的下一阶段故事，多半写在财报附注里，而不是新闻标题里。</p>\n<p>明天见。</p>",
+    "body_html_en": "<p>$96.2 billion. After hours on August 27, NVIDIA reported its fiscal Q2 2027 results (quarter ended July 26): <strong>revenue of $96.2B, up 106% year over year and 18% sequentially</strong>; the data center business alone booked <strong>$89B, up 117%</strong> — a year ago, total revenue was $46.7B. The numbers held no suspense; the suspense arrived later that day, when the Wall Street Journal reported the company had quietly paused a revenue-sharing program aimed at AI cloud providers. The most ferocious earnings report in tech history, and the most sensitive business-model brake job, landed in the same week.</p>\n<h2>The Report Card: One Quarter From the Trillion-Run-Rate Gate</h2>\n<p>The hard numbers first: <strong>GAAP and non-GAAP gross margins both at 75.0%</strong>; GAAP net income of <strong>$59.7B</strong>; GAAP diluted EPS of <strong>$2.46</strong> (non-GAAP: $2.22). Management guided next-quarter revenue to <strong>$108B</strong> — at this slope, a hundred-billion-dollar quarter is standing at next quarter's door. The company also returned <strong>$26B</strong> to shareholders this quarter, outbidding even its own buyback records. One structural note: data center now exceeds <strong>ninety percent</strong> of total revenue — this company's destiny curve and the world's AI capex line are, for better or worse, the same line.</p>\n<h2>Two Sentences From Jensen Huang</h2>\n<p>Two lines from the earnings statement deserve transcription. First: <strong>“Compute is revenue”</strong> — a narrative that equates compute purchases with revenue creation, pitched simultaneously to customers and to Wall Street. Second, on Blackwell demand: <strong>“really extraordinary.”</strong> The product footnote is harder: the next-gen <strong>Vera Rubin platform has entered full production</strong>, and its companion Vera CPU is positioned as “the first CPU built for AI agents.” Note the wording — chip product definitions are now being drawn around agents. AI agents have graduated from software storyline to hardware design target; that is a more honest industry signal than any slogan.</p>\n<h2>The B-Side: A Revenue-Sharing Experiment Hits Pause</h2>\n<p>Then comes the story actually worth unpacking. Per the Wall Street Journal on August 27, citing people familiar with the matter, NVIDIA <strong>paused last week</strong> a financing arrangement for AI cloud providers: the original design had NVIDIA <strong>extending credit support to cloud providers in exchange for a share of their cloud revenue</strong>. The reported terms were imaginative — chips <strong>leased only to “approved customers,”</strong> with requirements to <strong>spread compute across multiple smaller AI companies</strong>. What triggered the pause, reportedly, was internal worry that the model could invite <strong>antitrust scrutiny</strong>, plus discomfort over the boundary of “exerting operating control over customers.” To be crystal clear: all of this is <strong>WSJ-reported, not an official company announcement</strong>; per those sources, NVIDIA hasn't ruled out reviving the program in adjusted form or folding it into other plans.</p>\n<h2>The “Balance Sheet as a Service” Question</h2>\n<p>Another quiet data point landed the same week: per a report carried by Sina Finance, Morgan Stanley initiated credit coverage of NVIDIA with a <strong>neutral rating</strong>, warning that the company is turning its balance sheet into a strategic AI-financing vehicle — the setup critics have tagged <strong>“balance sheet as a service.”</strong> Place the two stories side by side and the picture completes itself: when the largest chip supplier doubles as financier to its own customers, the <strong>“quality” of revenue</strong> — how much demand was midwifed by one's own credit support — becomes a variable to interrogate beyond the income statement. Telecom equipment and solar both staged the “vendor leverage propping up customer demand” script before, with mixed endings. That this pause was proactive at least suggests the company itself is re-weighing that boundary.</p>\n<h2>Why the B-Side Matters More Than the A-Side</h2>\n<p>The A-side needs little worrying: demand is real, guidance is clear, customers are queueing — the $108B number sits right there. The long-term variables live on the B-side. First, <strong>how big the vendor-financing loop actually gets</strong> — the program is paused, not terminated, and a comeback in a more restrained form is far from unlikely; when it returns, read the receivables, contract clauses and cash-flow footnotes rather than the top line. Second, <strong>where the antitrust boundary gets drawn</strong> — “lease only to approved customers” is no longer a sales act but supply-chain control; regulators' tolerance for such arrangements will define the radius of compute giants' business models. The hundred-billion gate glitters, but NVIDIA's next chapter will most likely be written in the earnings footnotes, not the headlines.</p>\n<p>See you tomorrow.</p>",
+    "pull_quote": {
+      "text": "千亿门槛很亮，但英伟达的下一阶段故事，多半写在财报附注里。",
+      "text_en": "The hundred-billion gate glitters, but NVIDIA's next chapter will be written in the earnings footnotes.",
+      "attr": "—— Dawn Vision编辑部",
+      "attr_en": "— The Dawn Vision Editorial Desk"
+    },
+    "sources": [
+      {
+        "text": "NVIDIA Newsroom - Q2 FY2027 财报新闻稿（官方一手来源）",
+        "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027"
+      },
+      {
+        "text": "新浪财经 - 英伟达暂停收入分成协议 与 大摩信用覆盖（转引华尔街日报）",
+        "url": "https://finance.sina.com.cn/stock/t/2026-08-28/doc-inipvmmz8992179.shtml"
+      },
+      {
+        "text": "金融界 - 英伟达暂停部分AI云服务商收益分成合作，推出不足两个月（转引WSJ）",
+        "url": "http://m.toutiao.com/group/7678914222620721690/"
+      },
+      {
+        "text": "Wccftech - NVIDIA Quietly Freezes Its Cloud Credit Support Deals",
+        "url": "https://wccftech.com/nvidia-quietly-freezes-its-cloud-credit-support-deals-after-internal-talks-warn-of-antitrust-exposure/"
+      }
+    ]
+  },
+  "briefs": [
+    {
+      "slug": "minimax-arr-5x-in-six-months-jefferies",
+      "title": "MiniMax ARR半年涨5.3倍：港股AI第一次有了可跟踪的增长曲线",
+      "title_en": "MiniMax's ARR Is Up 5.3x in Six Months: Hong Kong AI Finally Has a Growth Curve to Track",
+      "title_break": "MiniMax ARR半年涨5.3倍<br>港股AI第一次有了可跟踪的增长曲线",
+      "title_break_en": "MiniMax's ARR Is Up 5.3x in Six Months<br>Hong Kong AI Finally Has a Growth Curve to Track",
+      "deck": "杰富瑞将MINIMAX-W目标价上调至533港元，核心依据是8月ARR突破8亿美元、半年5.3倍。但这条曲线是投行推算的，不是公司披露的——成色得拆开看。",
+      "deck_en": "Jefferies lifted its MINIMAX-W target to HKD533 on news that ARR topped $800 million in August — a 5.3x jump in six months. But the curve is a broker's estimate, not a company disclosure.",
+      "keywords": "Dawn Vision,MiniMax,杰富瑞,ARR,MINIMAX-W,港股AI,M3,H3,Token调用量,商业分析",
+      "keywords_en": "Dawn Vision, MiniMax, Jefferies, ARR, MINIMAX-W, HK AI stocks, M3, H3, token usage, business analysis",
+      "og_description": "杰富瑞报告：MiniMax 8月年化收入超8亿美元，半年5.3倍；7月Token消耗量较年初增长20倍。投行口径的增长曲线，应该怎么读？",
+      "og_description_en": "Jefferies: MiniMax's annualized revenue topped $800M in August, up 5.3x in six months; July token usage grew 20x since the start of the year.",
+      "read_time": "约 4 分钟阅读",
+      "read_time_en": "~2 min read",
+      "word_count": 860,
+      "sources": [
+        {
+          "text": "新浪财经7x24 - 杰富瑞：上调MiniMax目标价至533港元，8月年化收入胜预期",
+          "url": "https://finance.sina.com.cn/7x24/2026-08-27/doc-iniptnuz5833917.shtml"
+        },
+        {
+          "text": "华尔街见闻 - 华尔街点评MiniMax财报：8月ARR突破8亿美元，下半年毛利有望改善",
+          "url": "http://m.toutiao.com/group/7678554259789251115/"
+        },
+        {
+          "text": "AASTOCKS - Jefferies Raises MINIMAX-W TP to HKD533; Aug Annualized Revenue USD800M+",
+          "url": "https://wdatahk.aastocks.com/en/mobile/news.aspx?newsid=NOW.1541185&newssource=AAFN"
+        }
+      ],
+      "body_html": "<p>5.3倍，六个月。</p>\n      <p>8月27日，杰富瑞（Jefferies）发布报告，将MINIMAX-W（00100.HK）目标价从506港元上调至533港元。上调的核心依据只有一条：<strong>8月年化收入（ARR）已突破8亿美元</strong>，高于该行此前5.8亿美元的预测。作为参照系：今年2月，另一家投行口径下的ARR还只是1.5亿美元——半年时间，约5.3倍。</p>\n      <h2>增长从哪来：把曲线拆开看</h2>\n      <p>拆开增速，驱动因素相当具体：<strong>7月Token消耗量较2026年初增长20倍</strong>；6月下旬M3上线后，推理速度从20 TPS提升到100 TPS，直接改善了模型可用性；7月文本模型使用量快速爬坡；8月H3发布又添了新的增量。换句话说，这不是单点爆发，而是\"模型迭代→速度改善→用量放大\"的链条在连续转动。</p>\n      <p>杰富瑞同时预期毛利率下半年改善、2027年仍有扩张空间，并把公司战略概括为\"最大化智能、最小化成本\"。即将推出的M3.1、M3 Pro与H3.1，被视作这条曲线的后续燃料。</p>\n      <h2>冷水也要泼：这是投行的曲线，不是公司的报表</h2>\n      <p>必须说清口径：<strong>8亿美元ARR不是MiniMax的官方审计披露</strong>，而是杰富瑞基于公开调用数据与渠道调研的推算。ARR本身是年化口径——把某个月的收入乘以12，它放大的是趋势，不是当期利润。公司确实已公布上市后首份中期业绩，但\"投行推算\"与\"公司披露\"之间，始终隔着一层需要自己验证的距离。</p>\n      <h2>为什么这条曲线重要</h2>\n      <p>港股AI此前缺的从来不是技术叙事，而是<strong>一条可以被逐月跟踪的增长曲线</strong>。MiniMax恰好补上了这个位置：模型迭代有节奏、调用量有数据、投行有跟踪报告。对二级市场而言，这是第一次可以用\"成长股\"的方法论去读一家中国大模型公司——而不是只靠\"题材股\"的想象力。</p>\n      <p>曲线是真的，口径是借来的。跟踪它，但别把它当成财务报表。</p>\n      <p>明天见。</p>",
+      "body_html_en": "<p>5.3x, in six months.</p>\n      <p>On August 27, Jefferies raised its target price on MINIMAX-W (00100.HK) from HKD506 to HKD533. The justification came down to a single line: <strong>annualized revenue run-rate (ARR) topped $800 million in August</strong>, beating the bank's earlier $580 million forecast. For scale: last February, ARR stood at $150 million on another bank's estimate — roughly 5.3x in half a year.</p>\n      <h2>Where the growth comes from</h2>\n      <p>Break the curve down and the drivers are concrete: <strong>token consumption in July grew 20x since the start of 2026</strong>; after M3 launched in late June, inference speed jumped from 20 to 100 TPS, directly improving usability; text-model usage climbed steeply through July; and August's H3 release added a fresh increment. This is not a single spike — it is a chain of \"model iteration → faster inference → more usage\" turning continuously.</p>\n      <p>Jefferies expects gross margin to improve in the second half and expand further in 2027, summarizing the company's strategy as \"maximize intelligence, minimize cost.\" Upcoming M3.1, M3 Pro and H3.1 are framed as the next fuel for the curve.</p>\n      <h2>A bucket of cold water: the broker's curve, not the company's books</h2>\n      <p>The caliber matters: <strong>the $800 million ARR is not an audited company disclosure</strong> — it is Jefferies' estimate from public usage data and channel checks. ARR is an annualized figure: one month's revenue multiplied by twelve. It amplifies the trend, not current profit. MiniMax has published its first interim results since listing, but between \"broker estimate\" and \"company disclosure\" remains a gap you have to verify yourself.</p>\n      <h2>Why the curve matters</h2>\n      <p>What Hong Kong AI lacked was never a technology narrative — it was <strong>a growth curve that could be tracked month by month</strong>. MiniMax fills that slot: models ship on rhythm, usage has numbers, brokers publish coverage. For public markets, this is the first time a Chinese frontier-model company can be read with a growth-stock playbook, rather than only a theme-stock imagination.</p>\n      <p>The curve is real; the caliber is borrowed. Track it — just don't mistake it for a financial statement.</p>\n      <p>See you tomorrow.</p>",
+      "pull_quote": {
+        "text": "半年5.3倍的曲线足够漂亮，但它出自投行之手——跟踪它，别迷信它。",
+        "text_en": "A 5.3x curve in six months is beautiful — but it is drawn by a broker. Track it; don't worship it.",
+        "attr": "—— Dawn Vision编辑部",
+        "attr_en": "— The Dawn Vision Editorial Desk"
+      },
+      "cognitive_notes": "MiniMax · 杰富瑞报告 · ARR突破8亿美元 · 半年5.3倍 · Token消耗20倍 · M3/H3迭代 · 港股AI增长曲线",
+      "cognitive_notes_en": "MiniMax · Jefferies report · ARR tops $800M · 5.3x in six months · 20x token growth · M3/H3 iteration · HK AI growth curve",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理当日采集信号并交叉验证 3 个核心来源后生成，经编辑部人工审核。素材来源：新浪财经7x24、华尔街见闻、AASTOCKS。ARR数据为杰富瑞报告口径，非公司官方披露。",
+      "source_summary_en": "This article was generated by the Dawn Vision cognitive engine processing collected daily signals with cross-validation of three core sources, followed by human editorial review. Sources: Sina Finance 7x24, Wallstreetcn, AASTOCKS. ARR figures reflect Jefferies' estimates, not official company disclosure.",
+      "category": "大模型 · 商业分析",
+      "category_en": "LLM · Business"
+    },
+    {
+      "slug": "stability-ai-76m-series-b-labels-ea",
+      "title": "Stability AI获7600万美元B轮：三大唱片与EA入股，版权之争用股权收场",
+      "title_en": "Stability AI Raises $76M Series B: The Big Three Labels and EA Buy In — Settling Copyright with Equity",
+      "title_break": "Stability AI获7600万美元B轮<br>三大唱片与EA入股，版权之争用股权收场",
+      "title_break_en": "Stability AI Raises $76M Series B<br>Big Labels and EA Buy In: Settling Copyright with Equity",
+      "deck": "环球、华纳、索尼与EA一同进入Stability AI股东名单。曾对簿公堂的双方坐上同一张股权表——这可能是AIGC版权之争最现实的收场方式。",
+      "deck_en": "Universal, Warner, Sony and EA are now on Stability AI's cap table. The once-litigating parties share one register — possibly the most realistic endgame for the AIGC copyright war.",
+      "keywords": "Dawn Vision,Stability AI,B轮融资,环球音乐,华纳音乐,索尼音乐,EA,版权,授权分成,AMD Ventures",
+      "keywords_en": "Dawn Vision, Stability AI, Series B, Universal Music, Warner Music, Sony Music, EA, copyright, licensing, AMD Ventures",
+      "og_description": "Stability AI获7600万美元B轮融资：三大唱片公司、EA与AMD Ventures入股；CEO任内累计融资2.32亿美元。",
+      "og_description_en": "Stability AI raises a $76M Series B: the three major labels, EA and AMD Ventures invest; $232M raised under its current CEO.",
+      "read_time": "约 4 分钟阅读",
+      "read_time_en": "~2 min read",
+      "word_count": 840,
+      "sources": [
+        {
+          "text": "Variety (EXCLUSIVE) - Stability AI Raises $76 Million in Funding Round Backed by UMG, Warner, Sony and EA",
+          "url": "https://variety.com/2026/biz/news/stability-ai-raises-76-million-funding-round-1236842351/"
+        },
+        {
+          "text": "Stability AI官方 - The Entertainment Industry's Biggest Names Back Stability AI",
+          "url": "https://stability.ai/news-updates/stability-ai-latest-funding-backed-by-entertainment-industry-biggest-names"
+        },
+        {
+          "text": "TNW - Stability AI raises $76mn from Universal, Warner, Sony Music and EA",
+          "url": "https://thenextweb.com/news/stability-ai-76m-funding-universal-warner-sony-music-ea"
+        }
+      ],
+      "body_html": "<p>这份投资人名单，比融资金额更值得读。</p>\n      <p>8月25日，Stability AI宣布完成<strong>7600万美元B轮融资</strong>。新进股东名单罕见地整齐：<strong>环球音乐、华纳音乐、索尼音乐三大唱片公司，游戏巨头EA，外加AMD Ventures与Pacific Alliance Ventures</strong>。Coatue、Greycroft、Lightspeed等老股东继续跟投，Sean Parker、Eric Schmidt等个人投资者连续第二轮加注。</p>\n      <h2>从被告席到股东名册</h2>\n      <p>把时间倒回三年前，唱片公司与Stability之间只有一种关系：原告与被告。生成模型用受版权保护的内容做训练，音乐行业是最先掀桌子的那个。而如今，三大唱片一起坐进了股东名册。<strong>这不是情怀和解，是利益结构的重建</strong>——与其在法庭上争论\"训练数据算不算侵权\"，不如在股权表上商量\"未来收入怎么分\"。</p>\n      <p>官方叙事也给了呼应：Stability已与环球音乐合作开发面向专业音乐人的生成工具，\"与创作者分利\"的授权框架被写进了融资通稿。CEO Prem Akkaraju自2024年6月上任以来累计融资<strong>2.32亿美元</strong>，资金用途被描述为创意生产产品、应用研究与专业服务。</p>\n      <h2>这是Stability的翻身仗，也是行业模板</h2>\n      <p>对Stability而言，这轮融资的意义大于数字本身：在diffusion模型的光环被后来者分食之后，它找到的差异化位置不是模型跑分，而是<strong>\"版权安全\"的渠道卡位</strong>——手握三大唱片与EA的官方合作，等于在企业级市场挂出了\"可以放心用\"的招牌。</p>\n      <p>对整个生成式AI行业，这更像一份可以抄的作业：<strong>版权问题的终局未必是判决书，可能是股东名册</strong>。当内容方从诉讼者变成收益方，对抗就变成了分成。当然，先别急着感动——唱片公司入股的是渠道，不是创作者；分利规则怎么定、艺术家能拿到几成，仍是悬而未决的下一章。</p>\n      <p>明天见。</p>",
+      "body_html_en": "<p>Read the investor list, not just the amount.</p>\n      <p>On August 25, Stability AI announced a <strong>$76 million Series B</strong>. The new-money lineup is unusually tidy: <strong>the three major labels — Universal, Warner and Sony Music — plus gaming giant EA, alongside AMD Ventures and Pacific Alliance Ventures</strong>. Existing backers Coatue, Greycroft and Lightspeed followed on, and individual investors including Sean Parker and Eric Schmidt doubled down for a second consecutive round.</p>\n      <h2>From the defendant's seat to the register</h2>\n      <p>Three years ago, the labels and Stability had exactly one relationship: plaintiff and defendant. Generative models trained on copyrighted content made music the first industry to flip the table. Now all three majors sit on the same shareholder register. <strong>This is not a sentimental truce — it is a rebuilt structure of interests</strong>: rather than arguing in court over whether training data infringes, the parties negotiate how future revenue gets split on a cap table.</p>\n      <p>The official narrative echoes the logic: Stability is already building generation tools for professional musicians with UMG, and a licensing framework premised on \"sharing value with creators\" is written into the announcement. CEO Prem Akkaraju has now raised <strong>$232 million cumulatively</strong> since taking office in June 2024, earmarked for creative production products, applied research and professional services.</p>\n      <h2>A comeback for Stability, a template for the industry</h2>\n      <p>For Stability, the round matters more than its size: after the diffusion halo was shared away by newer rivals, its differentiated position is not benchmark leadership but <strong>channel positioning as the \"copyright-safe\" option</strong> — official partnerships with the three majors and EA amount to a corporate-market sign reading \"use without fear.\"</p>\n      <p>For generative AI at large, it reads like homework worth copying: <strong>the endgame of copyright may not be a verdict but a shareholder register</strong>. When content owners turn from litigants into beneficiaries, conflict becomes revenue share. Don't get sentimental yet, though — the labels invested in the channel, not in creators; how the split rules are written, and how many points artists actually receive, is the still-unwritten next chapter.</p>\n      <p>See you tomorrow.</p>",
+      "pull_quote": {
+        "text": "版权问题的终局未必是判决书，也可能是股东名册。",
+        "text_en": "The endgame of copyright may not be a verdict — it may be a shareholder register.",
+        "attr": "—— Dawn Vision编辑部",
+        "attr_en": "— The Dawn Vision Editorial Desk"
+      },
+      "cognitive_notes": "Stability AI · 7600万美元B轮 · 三大唱片入股 · EA · 版权授权框架 · 与创作者分利 · 累计融资2.32亿美元",
+      "cognitive_notes_en": "Stability AI · $76M Series B · major labels invest · EA · licensing framework · creator value sharing · $232M cumulative",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理当日采集信号并交叉验证 3 个核心来源后生成，经编辑部人工审核。素材来源：Variety独家、Stability AI官方博客、The Next Web。",
+      "source_summary_en": "This article was generated by the Dawn Vision cognitive engine processing collected daily signals with cross-validation of three core sources, followed by human editorial review. Sources: Variety (exclusive), Stability AI official blog, The Next Web.",
+      "category": "AI 设计 · 创作工具",
+      "category_en": "AI Design · Creative Tools"
+    },
+    {
+      "slug": "openai-ads-india-free-go-tiers",
+      "title": "OpenAI把广告开进印度：1亿周活的免费午餐，开始有人买单",
+      "title_en": "OpenAI Turns On Ads in India: 100 Million Weekly Free Users Start Paying Their Way",
+      "title_break": "OpenAI把广告开进印度<br>1亿周活的免费午餐，开始有人买单",
+      "title_break_en": "OpenAI Turns On Ads in India<br>100 Million Weekly Free Users Start Paying Their Way",
+      "deck": "8月27日起，印度Free与Go档用户将在部分回答下方看到明确标注的广告；付费档位保持无广告。ChatGPT的商业模式，第一次在十亿人口级市场试水。",
+      "deck_en": "From August 27, Free and Go users in India will see clearly labeled ads below some responses; paid tiers stay ad-free. ChatGPT's business model is being tested in a billion-person market.",
+      "keywords": "Dawn Vision,OpenAI,ChatGPT,印度,广告,商业化,Go套餐,订阅制,免费用户,服务条款",
+      "keywords_en": "Dawn Vision, OpenAI, ChatGPT, India, ads, monetization, Go tier, subscription, free users, terms of service",
+      "og_description": "OpenAI在印度向Free与Go档用户投放广告，广告出现在部分回答下方并明确标注；Plus及以上付费档位维持无广告。",
+      "og_description_en": "OpenAI rolls out ads for Free and Go users in India, clearly labeled below some responses; paid tiers remain ad-free.",
+      "read_time": "约 4 分钟阅读",
+      "read_time_en": "~2 min read",
+      "word_count": 870,
+      "sources": [
+        {
+          "text": "Mid-Day (IANS) - ChatGPT to roll out ad-led service in India for users of Free, Go tiers",
+          "url": "https://www.mid-day.com/amp/tech/ai/article/chatgpt-to-roll-out-adled-service-in-india-for-users-of-freego-tiers-23646922"
+        },
+        {
+          "text": "Analytics Insight - OpenAI Brings ChatGPT Ads to India for Free, Go Users",
+          "url": "https://www.analyticsinsight.net/news/openai-brings-chatgpt-ads-to-india-for-free-go-users"
+        },
+        {
+          "text": "今日头条·科技杰西 - OpenAI官宣印度试点ChatGPT广告，免费/Go用户将精准触达",
+          "url": "http://m.toutiao.com/group/7678705099601936948/"
+        }
+      ],
+      "body_html": "<p>免费的时代没有消失，只是换了一种付费方式。</p>\n      <p>8月27日，OpenAI宣布在印度向<strong>Free与Go两档用户</strong>投放广告。规则写得很细：广告只面向登录的成年用户，分阶段推送，并通过邮件或站内通知告知；位置在<strong>部分回答下方</strong>，有清晰标注、与回答视觉分离。Go档印度定价399卢比/月，是门槛最低的轻付费档——也在广告覆盖范围内。<strong>Plus、Pro、Business、Enterprise与Education档位维持无广告。</strong></p>\n      <h2>为什么是印度，为什么是现在</h2>\n      <p>答案写在用户盘子里：今年2月的数据显示，<strong>ChatGPT在印度的周活跃用户已超过1亿</strong>，OpenAI称印度周活同比翻倍。还有一个容易被忽略的细节：印度用户高频使用ChatGPT做<strong>产品调研与购买决策</strong>——对广告主而言，这几乎是理想的投放场景。商业化的基础设施也已提前铺好：本月早些时候，OpenAI修改了服务条款，明确\"用户可能看到广告\"。先改条款、再上广告，顺序是对的，虽然多数用户根本不会翻到那一页。</p>\n      <h2>订阅制与广告制的混血儿</h2>\n      <p>ChatGPT的商业模型正从\"纯订阅\"走向\"订阅+广告\"双轨：<strong>付费买清净，免费看广告</strong>——这是互联网产品用二十年验证过的经典结构，如今被平移到对话式AI上。但对话式广告的风险与信息流不同：用户带着问题而来，却在答案附近看到推广内容，\"回答\"与\"推销\"的边界标注得再清楚，也天然存在信任张力。广告只出现在\"部分回答下方\"而非回答内部，算是OpenAI目前画出的安全边界。</p>\n      <h2>真正的看点：印度的示范意义</h2>\n      <p>印度是ChatGPT最大的市场之一，也是最价格敏感的市场之一。如果\"免费+广告\"在印度跑通了用户与收入的平衡，这套模式大概率会被复制到更多新兴市场；如果用户反弹激烈，广告扩张就会减速。对整个行业而言，这是ChatGPT商业化路径的一次压力测试——<strong>1亿周活的注意力，第一次被摆上了货架</strong>。</p>\n      <p>明天见。</p>",
+      "body_html_en": "<p>Free isn't going away — it is just getting a different payment method.</p>\n      <p>On August 27, OpenAI began serving ads to <strong>Free and Go tier users in India</strong>. The rules are detailed: ads target logged-in adults, roll out in phases, and are announced via email or in-app notice; they appear <strong>below some responses</strong>, clearly labeled and visually separated from the answer. The Go tier — India's entry-level plan at 399 rupees per month — is included in the rollout. <strong>Plus, Pro, Business, Enterprise and Education tiers remain ad-free.</strong></p>\n      <h2>Why India, and why now</h2>\n      <p>The answer sits in the user base: February data showed <strong>ChatGPT's weekly active users in India exceeding 100 million</strong>, and OpenAI says the country's weekly actives doubled year over year. An easily missed detail: Indian users rely on ChatGPT heavily for <strong>product research and purchase decisions</strong> — nearly ideal ground for advertisers. The infrastructure was laid in advance: earlier this month, OpenAI updated its terms of service to state that users may see ads. Terms first, ads second — the right order, even if almost nobody reads that page.</p>\n      <h2>A hybrid of subscriptions and advertising</h2>\n      <p>ChatGPT's business model is shifting from pure subscription to a dual-track \"subscription + ads\" structure: <strong>pay for quiet, watch ads for free</strong> — the classic internet playbook, now transplanted onto conversational AI. But conversational ads carry different risks than feed ads: users arrive with a question and find sponsored content near the answer, so the boundary between \"answering\" and \"selling\" creates trust tension no matter how clearly it is labeled. Keeping ads below \"some responses\" rather than inside them is the safety line OpenAI has drawn for now.</p>\n      <h2>The real story: India as the test bench</h2>\n      <p>India is one of ChatGPT's largest markets and among its most price-sensitive. If \"free + ads\" balances users and revenue there, expect the model to be copied across other emerging markets; if the backlash is loud, ad expansion slows. For the industry, this is a stress test of ChatGPT's commercialization — <strong>100 million weekly users' attention is on the shelf for the first time</strong>.</p>\n      <p>See you tomorrow.</p>",
+      "pull_quote": {
+        "text": "付费买清净，免费看广告——对话式AI，也逃不过互联网的经典结构。",
+        "text_en": "Pay for quiet, watch ads for free — conversational AI can't escape the internet's classic structure.",
+        "attr": "—— Dawn Vision编辑部",
+        "attr_en": "— The Dawn Vision Editorial Desk"
+      },
+      "cognitive_notes": "OpenAI · 印度上线广告 · Free/Go档可见 · 回答下方明确标注 · 付费档无广告 · 印度周活超1亿 · 条款先行",
+      "cognitive_notes_en": "OpenAI · ads in India · Free/Go tiers · labeled below responses · paid tiers ad-free · 100M+ WAU in India · terms updated first",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理当日采集信号并交叉验证 3 个核心来源后生成，经编辑部人工审核。素材来源：Mid-Day（IANS）、Analytics Insight、国内科技媒体转引。",
+      "source_summary_en": "This article was generated by the Dawn Vision cognitive engine processing collected daily signals with cross-validation of three core sources, followed by human editorial review. Sources: Mid-Day (IANS), Analytics Insight, Chinese tech media syndication.",
+      "category": "政策 · 监管",
+      "category_en": "AI Regulation · Policy"
+    },
+    {
+      "slug": "humanoid-robot-games-close-data-harvest",
+      "title": "第二届人形机器人运动会闭幕：666支队伍交卷，真正的奖品是数据",
+      "title_en": "The Humanoid Robot Games Close: 666 Teams Report for Duty — the Real Prize Is the Data",
+      "title_break": "第二届人形机器人运动会闭幕<br>666支队伍交卷，真正的奖品是数据",
+      "title_break_en": "The Humanoid Robot Games Close<br>666 Teams Report for Duty — the Real Prize Is the Data",
+      "deck": "五天赛程，16国666支队伍、2056台机器人、1301场对决。百米跑进10秒、跳远3.4米，纪录接连刷新——但比奖牌更值钱的，是数千小时实机运行数据。",
+      "deck_en": "Five days, 666 teams from 16 countries, 2,056 robots, 1,301 matches. Sub-10-second 100m sprints and 3.4m long jumps — but the real prize is thousands of hours of real-robot data.",
+      "keywords": "Dawn Vision,人形机器人运动会,冰丝带,具身智能,赛会纪录,实机数据,智元,宇树,机器人产业",
+      "keywords_en": "Dawn Vision, Humanoid Robot Games, Ice Ribbon, embodied AI, Games records, real-robot data, AgiBot, Unitree, robotics industry",
+      "og_description": "第二届世界人形机器人运动会闭幕：16国666支队伍、2056台机器人、1301场对决；百米跑进10秒、跳远3.4米，多项赛会纪录刷新。",
+      "og_description_en": "The 2nd World Humanoid Robot Games close: 666 teams from 16 countries, 2,056 robots, 1,301 matches; sub-10s sprints, 3.4m long jumps, multiple records broken.",
+      "read_time": "约 4 分钟阅读",
+      "read_time_en": "~2 min read",
+      "word_count": 850,
+      "sources": [
+        {
+          "text": "闪电新闻 - 多项纪录被刷新！第二届世界人形机器人运动会落幕",
+          "url": "http://m.toutiao.com/group/7678637144176460331/"
+        },
+        {
+          "text": "央视网（新华社） - 第二届世界人形机器人运动会参赛机器人数量较上届翻两番",
+          "url": "https://news.cctv.com/2026/08/14/ARTInrPLHAmBubal1nGoNVQe260814.shtml"
+        },
+        {
+          "text": "北青网 - 人形机器人运动会闭幕，全球首个赛会全量数据集发布",
+          "url": "http://m.toutiao.com/group/7678566926458225186/"
+        }
+      ],
+      "body_html": "<p>闭幕式上没有意外，但有一个数字值得反复看：<strong>2056台</strong>。</p>\n      <p>8月26日晚，第二届世界人形机器人运动会在北京国家速滑馆\"冰丝带\"闭幕。五天赛程，来自16个国家和地区的666支队伍、2056台人形机器人，在51个赛项里完成1301场对决，决出51块金牌。与首届相比，<strong>参赛队伍增长138%，机器人数量翻了两番</strong>。</p>\n      <h2>成绩单：纪录是用来刷新的</h2>\n      <p>竞技层面的数字已经超出上一届的想象：<strong>人形机器人百米跑进10秒、跳远3.4米</strong>，多项赛会纪录接连刷新。硬件本体、关节模组和运动控制算法的迭代速度，正在按月计。去年还需要解说的\"稳健行走\"，今年已经是默认入场门槛。</p>\n      <h2>比金牌更值钱的：一场数据资产的丰收</h2>\n      <p>这场运动会真正的产出，可能不在领奖台上。五天赛程记录了<strong>数千小时实机运行数据、上万次动作捕捉</strong>——上百台不同构型的人形机器人，在真实场地里摔倒、爬起、对抗、失误。对具身智能公司来说，这是花钱都难买到的真机数据：仿真环境再漂亮，也替代不了真实的地面摩擦与真实碰撞。数据集的公开流通，会让没能进决赛的队伍，也拿到决赛级别的训练素材。</p>\n      <h2>产业信号：从\"能走\"到\"能打\"</h2>\n      <p>三个信号值得记下：第一，参赛规模一年翻倍以上，\"以赛代练\"成了行业共识的公共测试场；第二，赛事按竞技与场景应用两大板块设计，机器人开始被放进真实任务环境里验收，而不只是在舞台上表演；第三，上海企业在金牌榜、奖牌榜均列第一——产业集群的厚度与成绩单的厚度一一对应。参考消息的闭幕盘点说，\"过去一年，中国机器人公司实现了巨大飞跃\"，运动会只是把这场飞跃，变成了可以计量的成绩单。</p>\n      <p>比赛结束了，数据才刚刚开始工作。</p>\n      <p>明天见。</p>",
+      "body_html_en": "<p>No surprises at the closing ceremony — but one number deserves a second look: <strong>2,056</strong>.</p>\n      <p>On the evening of August 26, the 2nd World Humanoid Robot Games closed at Beijing's National Speed Skating Oval, the \"Ice Ribbon.\" Across five days, 666 teams from 16 countries and regions put 2,056 humanoid robots through 1,301 matches in 51 events, awarding 51 gold medals. Compared with the first Games, <strong>entries grew 138% and the robot count quadrupled</strong>.</p>\n      <h2>The scoreboard: records exist to be broken</h2>\n      <p>The athletic numbers already outrun the last edition's imagination: <strong>a humanoid robot ran 100 meters in under 10 seconds and jumped 3.4 meters</strong>, with multiple Games records falling one after another. Iteration on hardware, joint modules and motion-control algorithms is now measured in months. The \"steady walking\" that needed commentary last year is this year's entry bar.</p>\n      <h2>Worth more than gold: a data harvest</h2>\n      <p>The Games' real output may not stand on the podium. Five days of competition logged <strong>thousands of hours of real-robot operation data and tens of thousands of motion-capture sequences</strong> — hundreds of differently configured humanoids falling, recovering, competing and failing on a real field. For embodied-AI companies, that is data money can hardly buy: however polished the simulation, it cannot reproduce real ground friction and real collisions. And if the dataset circulates publicly, even teams that missed the finals gain finals-grade training material.</p>\n      <h2>Industry signal: from \"can walk\" to \"can compete\"</h2>\n      <p>Three signals worth recording: first, entries more than doubled in a year — racing has become the industry's agreed public testbed; second, the Games were structured into athletic and applied-scenario tracks, putting robots into real task environments for acceptance rather than stage performance; third, Shanghai companies topped both the gold and overall medal tables — industrial cluster depth matches scoreboard depth one to one. Reference News' closing review put it plainly: \"Over the past year, Chinese robotics companies have made a great leap.\" The Games simply turned that leap into a measurable scoreboard.</p>\n      <p>The competition is over. The data is just getting to work.</p>\n      <p>See you tomorrow.</p>",
+      "pull_quote": {
+        "text": "比赛结束了，数据才刚刚开始工作。",
+        "text_en": "The competition is over. The data is just getting to work.",
+        "attr": "—— Dawn Vision编辑部",
+        "attr_en": "— The Dawn Vision Editorial Desk"
+      },
+      "cognitive_notes": "第二届人形机器人运动会 · 冰丝带闭幕 · 666队/2056台/1301场 · 百米进10秒 · 跳远3.4米 · 数千小时实机数据 · 上海企业奖牌榜第一",
+      "cognitive_notes_en": "2nd Humanoid Robot Games · Ice Ribbon closing · 666 teams/2,056 robots/1,301 matches · sub-10s 100m · 3.4m long jump · thousands of hours of real-robot data · Shanghai tops medal table",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理当日采集信号并交叉验证 3 个核心来源后生成，经编辑部人工审核。素材来源：闪电新闻、央视网（新华社）、北青网。",
+      "source_summary_en": "This article was generated by the Dawn Vision cognitive engine processing collected daily signals with cross-validation of three core sources, followed by human editorial review. Sources: Lightning News, CCTV (Xinhua), Beijing Youth Daily.",
+      "category": "具身智能 · 机器人",
+      "category_en": "Embodied AI · Robotics"
+    },
+    {
+      "slug": "anthropic-mhs-research-preview",
+      "title": "Anthropic开放MHS研究预览：AI的下一块拼图，是操作物理设备的权限",
+      "title_en": "Anthropic Opens the Model Hardware Standard: The Next Piece of the AI Puzzle Is Permission to Touch the Physical World",
+      "title_break": "Anthropic开放MHS研究预览<br>AI的下一块拼图，是操作物理设备的权限",
+      "title_break_en": "Anthropic Opens the Model Hardware Standard<br>The Next Piece Is Permission to Touch the Physical World",
+      "deck": "一份让AI agent安全操作显微镜、移液器和机械臂的共享规范。软件agent的协议战争刚分出格局，物理世界的接口标准已经开始抢占。",
+      "deck_en": "A shared specification letting AI agents safely drive microscopes, liquid handlers and robotic arms. Just as the software agent protocol war settles, the physical-world interface race begins.",
+      "keywords": "Dawn Vision,Anthropic,MHS,Model Hardware Standard,实验自动化,AI Agent,协议标准,科研自动化,机械臂,硬件集成",
+      "keywords_en": "Dawn Vision, Anthropic, MHS, Model Hardware Standard, lab automation, AI agents, protocol standards, research automation, robotic arms, hardware integration",
+      "og_description": "Anthropic开放Model Hardware Standard研究预览：让AI agent安全并行操作显微镜、移液器、机械臂等物理设备的共享规范，首批面向科研实验室与先进制造商。",
+      "og_description_en": "Anthropic opens the Model Hardware Standard research preview: a shared spec for AI agents to safely operate microscopes, liquid handlers and robotic arms in parallel, first for labs and manufacturers.",
+      "read_time": "约 4 分钟阅读",
+      "read_time_en": "~2 min read",
+      "word_count": 860,
+      "sources": [
+        {
+          "text": "Anthropic官方 - Previewing the Model Hardware Standard (research preview)",
+          "url": "https://www.anthropic.com/news/model-hardware-standard-research-preview"
+        },
+        {
+          "text": "财联社 - Anthropic首款在物理世界运行的AI工具问世",
+          "url": "http://m.toutiao.com/group/7678968868308369930/"
+        }
+      ],
+      "body_html": "<p>过去两年，AI agent 学会了写代码、订机票、发邮件，甚至能自主完成多步软件操作，但它们始终隔着一层玻璃——看得见显微镜，摸不到旋钮。8月27日，Anthropic 发布 Model Hardware Standard（MHS）研究预览，试图把这层玻璃换成一扇有规矩的门。</p>\n      <h2>让AI“动手”之前，先写好安全手册</h2>\n      <p>MHS 本质上是一份共享规范：定义 AI agent 如何以受控、可审计的方式操作真实物理设备。首批开放对象是科研实验室与先进制造商——在这个场景里，显微镜、移液器、机械臂可以并行接受调度，模型不再是“给建议的顾问”，而是“能上手的研究员”。据财联社报道，采用统一规范后，硬件集成时间有望从数周缩短到数小时，实验室甚至可以让 AI 跑通24小时不间断的自主实验。对日夜排队等机时的科研人员来说，这才是真正的效率跃迁。</p>\n      <h2>与MCP互补，而不是重复造轮子</h2>\n      <p>Anthropic 此前推出的 MCP 解决了模型连接软件世界的协议问题；MHS 瞄准的是另一半——物理世界。两者逻辑一致：先定接口，再定权限，最后才谈能力。当 agent 的操作对象从数据库变成培养皿，“权限”与“安全”的分量完全不同：一次误操作不再是脏数据，而是碎掉的样本和烧掉的电机。这也是 MHS 选择“规范先行、产品在后”的原因——先在纸面上把边界画清楚，再让设备真正动起来。</p>\n      <h2>研究预览，别急着当成标准</h2>\n      <p>需要说明的是，这仍是 research preview，不是已成事实的行业标准。它能否成立，取决于多少设备厂商愿意接入、多少实验室愿意把仪器交出来——协议的价值从来在于被采用，而非被发布。但方向本身值得盯住：当 AI 的下一步是“动手”，谁来定义“怎么动手才安全”，谁就握住了物理自动化的入场券。</p>\n      <p>数字世界的协议之战已经打完，物理世界的刚刚开哨。明天见。</p>",
+      "body_html_en": "<p>Over the past two years, AI agents have learned to write code, book flights and send emails — even to orchestrate multi-step software tasks on their own. Yet they have always been separated from the physical world by a sheet of glass: they can see the microscope, but never touch its knobs. On August 27, Anthropic released a research preview of the Model Hardware Standard (MHS), an attempt to turn that glass into a door with rules.</p>\n      <h2>A safety manual before AI gets hands</h2>\n      <p>At its core, MHS is a shared specification that defines how AI agents may operate real physical devices in a controlled, auditable way. The first adopters are research labs and advanced manufacturers, where microscopes, liquid handlers and robotic arms can be orchestrated in parallel — the model stops being \"an advisor with suggestions\" and becomes \"a researcher with hands.\" According to Chinese outlet Cailianshe, a unified spec is expected to cut hardware integration from weeks to hours, letting labs run autonomous experiments around the clock. For researchers queuing for instrument time, that is a genuine leap.</p>\n      <h2>Complementary to MCP, not a reinvention</h2>\n      <p>Anthropic's earlier MCP solved the protocol problem of connecting models to the software world; MHS aims at the other half — the physical world. The logic is identical: define the interface first, then permissions, and only then talk about capability. When the object of an agent's action changes from a database to a petri dish, the weight of \"permission\" and \"safety\" changes entirely: a bad operation is no longer dirty data, but broken samples and burnt-out motors. That is why MHS ships as a specification first — draw the boundaries on paper before letting devices actually move.</p>\n      <h2>A research preview, not a standard</h2>\n      <p>To be clear, this is still a research preview, not an established industry standard. Whether it holds depends on how many device makers choose to integrate and how many labs hand over their instruments — a protocol's value lies in adoption, not announcement. But the direction is worth watching: when AI's next step is \"acting in the real world,\" whoever defines \"how to act safely\" holds the ticket to physical automation.</p>\n      <p>The protocol war in the digital world is over; the one in the physical world has just begun. See you tomorrow.</p>",
+      "pull_quote": {
+        "text": "模型连接数字世界的协议已经有了，现在轮到物理世界——这一次，Anthropic想先写下规则。",
+        "text_en": "The protocol for models to reach the digital world already exists; now it is the physical world's turn — and this time, Anthropic wants to write the rules first.",
+        "attr": "—— Dawn Vision编辑部",
+        "attr_en": "— The Dawn Vision Editorial Desk"
+      },
+      "cognitive_notes": "MHS与MCP的对照是本文核心框架：MCP管软件接口，MHS管物理设备，本质都是“先定协议、再放能力”。编辑部保留了对research preview属性的强调，避免把厂商预览渲染成既成标准；“数周缩短到数小时”的说法注明来自财联社报道，而非官方实测数据。",
+      "cognitive_notes_en": "The MHS-vs-MCP contrast is the core framing: MCP governs software interfaces, MHS governs physical devices — both follow the logic of \"protocol first, capability second.\" We kept the research-preview caveat prominent to avoid inflating a vendor preview into an established standard, and attributed the \"weeks to hours\" claim to Cailianshe rather than official benchmarks.",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理当日采集信号并交叉验证 2 个核心来源后生成，经编辑部人工审核。素材来源：Anthropic官方新闻稿（MHS研究预览的定义与首批场景）、财联社（硬件集成时间与24小时自主实验报道）。",
+      "source_summary_en": "This article was generated by the Dawn Vision cognitive engine from signals collected that day and cross-verified against 2 core sources, with human editorial review. Sources: Anthropic's official announcement (definition and initial scenarios of the MHS research preview), Cailianshe (hardware integration timeline and 24-hour autonomous experiment reporting).",
+      "category": "AI Agent · 工程实践",
+      "category_en": "AI Agent · Engineering"
+    },
+    {
+      "slug": "wan3-0-prime-30s-video-pricing-war",
+      "title": "通义万相3.0 Prime上架百炼：AI视频竞争，从拼时长转向拼价格",
+      "title_en": "Wan 3.0 Prime Lands on Bailian: The AI Video Race Shifts from Length to Price",
+      "title_break": "万相3.0开卖：AI视频从拼时长到拼价格",
+      "title_break_en": "AI Video: From Length to Price",
+      "deck": "8月24日全面上线的通义万相3.0，Prime版本8月26日正式登陆阿里云百炼。单次30秒、能直接吃下文档和网页输入，国际站API定价0.05-0.20美元/秒，约为竞品Seedance 2.5的一半。加上同门的HappyHorse，阿里在AI视频上摆出了双线作战的架势。",
+      "deck_en": "Wan 3.0, fully launched on August 24, saw its Prime version land on Alibaba Cloud's Bailian platform on August 26. It generates up to 30 seconds per run, ingests documents and web pages directly, and is priced at $0.05-$0.20 per second on the international API — roughly half of rival Seedance 2.5. With sibling model HappyHorse alongside, Alibaba is fielding a two-track lineup in AI video.",
+      "keywords": "通义万相3.0, Wan3.0, 阿里云百炼, AI视频生成, 30秒长视频, Seedance, HappyHorse, 价格战",
+      "keywords_en": "Wan 3.0, Alibaba Bailian, AI video generation, 30-second video, Seedance, HappyHorse, pricing war",
+      "og_description": "通义万相3.0 Prime上架百炼：单次30秒、支持文档输入，国际定价约为Seedance 2.5的一半。AI视频竞争正从拼时长转向拼价格。",
+      "og_description_en": "Wan 3.0 Prime is now on Alibaba's Bailian: up to 30 seconds per generation, document input support, and international pricing at roughly half of Seedance 2.5. The AI video race is shifting from length to price.",
+      "read_time": "约 4 分钟阅读",
+      "read_time_en": "~2 min read",
+      "word_count": 850,
+      "sources": [
+        {
+          "text": "Alibaba Cloud官方博客 - Wan3.0: 30-Second AI Video Generation from Any Input",
+          "url": "https://www.alibabacloud.com/blog/wan3-0-30-second-ai-video-generation-from-any-input_603452"
+        },
+        {
+          "text": "阿里云帮助中心 - 万相3.0视频生成API参考",
+          "url": "https://help.aliyun.com/zh/model-studio/wan3-video-generation-api-reference"
+        },
+        {
+          "text": "阿里云帮助中心 - 视频生成与编辑模型矩阵",
+          "url": "https://help.aliyun.com/zh/model-studio/video-generate-edit-model/"
+        },
+        {
+          "text": "千问AI平台 - 万相3.0模型定价页",
+          "url": "https://www.qianwenai.com/models/wan3.0-video"
+        }
+      ],
+      "body_html": "<p>视频生成模型的竞赛正在换赛道：上半场拼谁生得长，下半场拼谁生得便宜。8月24日通义万相3.0全面上线，两天后的8月26日，其Prime版本正式上架阿里云百炼——30秒长视频，开始按秒计价。</p>\n      <h2>30秒，和“万物皆素材”</h2>\n      <p>规格层面，万相3.0把单次生成时长拉到30秒，是上一代的两倍，输出帧率30fps，并原生输出台词、BGM与音效。更值得注意的在输入端：除了文、图、音视频，它支持直接传入doc、xls、ppt、pdf等文档和公开网页链接，让模型读完全文再生成视频，单次最多可参考20个多模态素材。把“读材料”和“出片子”合并成一步，这才是“文档直出视频”的完整含义。</p>\n      <h2>价格表上见真章</h2>\n      <p>国内API原价为480P 0.3元/秒、720P 0.6元/秒、1080P 1.2元/秒；国际站定价0.05、0.10、0.20美元/秒——一段30秒的1080P视频约6美元，480P草稿版只要1.5美元。按国际站定价口径，这大约是竞品Seedance 2.5的一半。当分辨率、时长、音效都被拉齐之后，价格成了最直观的那根杠杆。</p>\n      <h2>双线赛马的阿里</h2>\n      <p>在百炼的视频模型矩阵里，happyhorse-1.1与万相3.0系列并列出现在官方推荐位——同一个战场，两条产品线。叠加阿里8月24日完成约百亿美元级的配售，AI基础设施的弹药已经备足。对阿里来说，万相走旗舰对标，HappyHorse走差异化路线，赛马机制在AI视频上重演。</p>\n      <p>需要提醒的是，各家定价口径（分辨率、计费单位、是否含音效）并不完全对齐，跨平台比价前先看清脚注。但趋势已经清楚：时长战后是价格战，受益的终究是拿着创意排队的人。明天见。</p>",
+      "body_html_en": "<p>The AI video race is switching tracks: the first half was about who could generate longer clips, the second half is about who can generate them cheaper. Wan 3.0 went fully live on August 24, and two days later, on August 26, its Prime version landed on Alibaba Cloud's Bailian platform — 30-second videos, now billed by the second.</p>\n      <h2>30 seconds, and \"everything is material\"</h2>\n      <p>On specs, Wan 3.0 stretches a single generation to 30 seconds — twice the previous generation — at 30fps, with native dialogue, BGM and sound effects. The input side matters even more: beyond text, images, audio and video, it accepts documents (doc, xls, ppt, pdf and more) and public web links, reading the material in full before generating the video, with up to 20 multimodal references per run. Merging \"reading the material\" and \"producing the clip\" into one step is what document-to-video actually means.</p>\n      <h2>The price list does the talking</h2>\n      <p>Domestic list API pricing is RMB 0.3/0.6/1.2 per second for 480P/720P/1080P; international pricing is $0.05, $0.10 and $0.20 — a 30-second 1080P clip runs about $6, and a 480P draft just $1.50. By international list pricing, that is roughly half of rival Seedance 2.5. Once resolution, duration and audio are all matched, price becomes the most visible lever.</p>\n      <h2>Alibaba's two-track lineup</h2>\n      <p>In Bailian's video model matrix, happyhorse-1.1 sits alongside the Wan 3.0 family in the official recommendations — two product lines on the same battlefield. Add Alibaba's roughly $10 billion share placement completed on August 24, and the ammo for AI infrastructure looks fully stocked. Wan takes the flagship head-on while HappyHorse differentiates; the horse-racing mechanism replays in AI video.</p>\n      <p>One caveat: pricing terms (resolution, billing units, audio inclusion) are not fully aligned across vendors, so read the footnotes before comparing. But the trend is clear — after the length war comes the price war, and the winners are the creators queuing with ideas. See you tomorrow.</p>",
+      "pull_quote": {
+        "text": "当30秒视频按秒计价、价格只有对手一半，AI视频的竞争就从实验室竞赛变成了成本竞赛。",
+        "text_en": "When a 30-second video is billed by the second at half a rival's price, the AI video race turns from a lab contest into a cost contest.",
+        "attr": "—— Dawn Vision编辑部",
+        "attr_en": "— The Dawn Vision Editorial Desk"
+      },
+      "cognitive_notes": "本文以8月26日Prime上架百炼为时效锚点，8月24日的GA作为背景信息交代；价格均按API原价口径呈现（国内0.3-1.2元/秒、国际站0.05-0.20美元/秒），“约为Seedance 2.5一半”依据国际站定价对比并注明口径；全文未使用任何“首创”类表述；HappyHorse与万相并列的信息来自百炼官方模型矩阵页。",
+      "cognitive_notes_en": "This piece anchors timeliness on the Prime launch on Bailian on August 26, with the August 24 general availability as background. All prices are presented at list API rates (RMB 0.3-1.2/second in China; $0.05-$0.20/second internationally), and the \"roughly half of Seedance 2.5\" comparison follows international list pricing with the basis noted. No \"first-ever\" claims are made; the HappyHorse-Wan parallel comes from Bailian's official model matrix page.",
+      "source_summary": "本文基于 Dawn Vision 认知引擎处理当日采集信号并交叉验证 4 个核心来源后生成，经编辑部人工审核。素材来源：Alibaba Cloud官方博客（规格与国际站定价）、阿里云帮助中心万相3.0 API参考（时长/帧率/输入能力）、阿里云百炼模型矩阵页（HappyHorse与万相并列）、千问AI平台模型定价页（国内API定价）。",
+      "source_summary_en": "This article was generated by the Dawn Vision cognitive engine from signals collected that day and cross-verified against 4 core sources, with human editorial review. Sources: Alibaba Cloud's official blog (specs and international pricing), Alibaba Cloud Help Center's Wan 3.0 API reference (duration, frame rate, input capabilities), Bailian's official model matrix page (HappyHorse-Wan parallel), and the Qianwen AI platform's model pricing page (domestic API pricing).",
+      "category": "AI 商业化 · 行业观察",
+      "category_en": "AI Biz · Industry"
+    }
+  ],
+  "cao": {
+    "slug": "hf-microduck-399-robot-duck-caocao",
+    "category": "槽点 · 职场观察",
+    "category_en": "Cao · Workplace",
+    "title": "同行还在画人形大饼，Hugging Face已经把399美元的鸭子排进圣诞发货单",
+    "title_en": "Rivals Keep Promising Humanoids; Hugging Face Already Has a $399 Duck on the Christmas Shipping List",
+    "title_short": "399美元的开源机器鸭Microduck开卖",
+    "title_short_en": "The $399 Open-Source Robot Duck Is Here",
+    "title_break": "英伟达约129亿美元收购HF消息曝光次日<br>Hugging Face发布399美元开源机器鸭Microduck",
+    "title_break_en": "One Day After Nvidia's Reported $12.9B HF Deal Surfaced<br>Hugging Face Unveils the $399 Open-Source Robot Duck Microduck",
+    "deck": "8月27日，Hugging Face与旗下法国子公司Pollen Robotics发布开源机器鸭Microduck：身高25厘米、自重不足800克，会摇摆走路、会踩轮滑、摔倒了能自己爬起来，喙能叼袜子抓笔。预售价399美元（约合2700元），圣诞前发货。前一日，英伟达约129亿美元收购HF的消息刚被曝光。",
+    "deck_en": "On August 27, Hugging Face and its French subsidiary Pollen Robotics unveiled Microduck, an open-source robot duck: 25cm tall, under 800 grams, waddling, roller skating, self-righting after falls, and picking up socks or pens with its beak. Pre-orders opened at $399, shipping before Christmas. The day before, reports of Nvidia's roughly $12.9B acquisition of HF had just surfaced.",
+    "keywords": "Dawn Vision,Hugging Face,Microduck,Pollen Robotics,机器鸭,开源机器人,具身智能,人形机器人,英伟达",
+    "keywords_en": "Dawn Vision,Hugging Face,Microduck,Pollen Robotics,Robot Duck,Open-Source Robot,Embodied AI,Humanoid Robot,Nvidia",
+    "og_description": "Hugging Face发布399美元开源机器鸭Microduck：会走会滑会自己爬起来，圣诞前发货。在人形机器人的宏大叙事旁边，多了一条可爱而清醒的路线。",
+    "og_description_en": "Hugging Face's $399 open-source robot duck Microduck walks, skates and picks itself back up, shipping before Christmas. Next to the humanoid mega-narrative, here comes a cuter — and more sober — route.",
+    "twitter_description": "129亿美元收购的消息次日，Hugging Face发布了只399美元的机器鸭。今天的Cao献给Microduck——一只比某些人形样机诚实的鸭子。",
+    "twitter_description_en": "One day after the $12.9B acquisition reports, Hugging Face shipped a $399 robot duck. Today's Cao goes to Microduck — a duck more honest than certain humanoids.",
+    "read_time": "约 5 分钟阅读",
+    "read_time_en": "~5 min read",
+    "word_count": 780,
+    "sources": [
+      {
+        "text": "Pollen Robotics官方 - Meet Microduck（发布博客）",
+        "url": "https://pollen-robotics.com/microduck/blog/introducing-microduck/"
+      },
+      {
+        "text": "Engadget - Hugging Face and Pollen Robotics open pre-orders for the $399 Microduck",
+        "url": "https://www.engadget.com/2245407/huggingface-and-pollen-robotics-opn-pre-orders-for-the-microduck-robot/"
+      },
+      {
+        "text": "Numerama - Hugging Face lance un mini robot-canard à entraîner soi-même",
+        "url": "https://www.numerama.com/tech/2319771-hugging-face-lance-un-mini-robot-canard-a-entrainer-soi-meme.html"
+      },
+      {
+        "text": "腾讯新闻科技 - 能走会滑、跌倒自起，Hugging Face开源了一只399美元的机器鸭",
+        "url": "http://news.qq.com/rain/a/20260828A06X0Z00"
+      }
+    ],
+    "body_html": "<p>昨天，科技圈还在为英伟达约129亿美元收购Hugging Face的消息沸腾；今天，也就是消息曝光次日，Hugging Face用一只鸭子抢回了自己的主场。8月27日，HF与旗下法国子公司Pollen Robotics发布开源机器鸭Microduck：身高25厘米，自重不足800克，预售价399美元，约合人民币2700元，圣诞前发货。</p>\n      <p>这只鸭子会的可不少：摇摆式走路、踩轮滑、摔倒了能自己爬起来，喙还能叼袜子、抓笔。四种配色任选，附赠游戏手柄。CEO Clement Delangue在X上发了一段50秒的演示视频——比起某些人形机器人「明年量产」的PPT，这只鸭子把发货日期直接写在了购物页面上。</p>\n      <h2>399美元，买到的是一只真能调教的鸭子</h2>\n      <p>Microduck最值钱的不是硬件，是开源。强化学习算法以50赫兹的频率在仿真环境里训练，训练好的策略直接部署到真机上——你完全可以在自己电脑上练出一只属于你的鸭子。Pollen Robotics是HF在2025年4月收购的波尔多团队，换句话说，这只鸭子从出生起就带着开源社区的基因，而不是大公司一时的营销灵感。</p>\n      <h2>宏大叙事之外，还有一条可爱而清醒的路线</h2>\n      <p>人形机器人融资动辄上亿美元，Demo一个比一个震撼，可普通人对机器人的想象依然停留在「它什么时候能帮我干活」。Microduck没有承诺帮你洗碗，它只是会走路、会滑冰、摔了自己爬起来——但它是真实的、开源的、399美元的。这个行业最缺的从来不是星辰大海的叙事，而是把东西做出来、卖出去、还能让人笑着掏钱的执行力。</p>\n      <h2>职场启示：先发货，再讲故事</h2>\n      <p>这只鸭子给每个打工人上了一课：与其花三年画一张人形大饼，不如花三个月交付一只鸭子。被收购的传闻满天飞？那就让好消息比传闻晚到不到24小时——你们聊你们的129亿，我发我的399。面对无法掌控的局面，最好的回应永远是拿出实际的东西。</p>\n      <p>今天就槽到这里，明天继续。</p>",
+    "body_html_en": "<p>Yesterday the tech world was still buzzing about Nvidia's reported $12.9B acquisition of Hugging Face; today — the very next day after the reports surfaced — Hugging Face reclaimed its home turf with a duck. On August 27, HF and its French subsidiary Pollen Robotics unveiled Microduck, an open-source robot duck: 25cm tall, under 800 grams, $399 to pre-order (roughly RMB 2,700), shipping before Christmas.</p>\n      <p>And this duck can do plenty: it waddles, roller skates, picks itself back up after a fall, and its beak can carry socks or grab pens. Four color options, gamepad included. CEO Clement Delangue posted a 50-second demo on X — and unlike the \"mass production next year\" slide decks of certain humanoid robots, this one prints its shipping date right on the product page.</p>\n      <h2>$399 buys a duck you can actually train</h2>\n      <p>Microduck's most valuable part isn't the hardware — it's the open source. Reinforcement learning runs at 50Hz in simulation, and trained policies deploy straight onto the real robot — you can genuinely train your own duck on your own computer. Pollen Robotics is the Bordeaux team HF acquired in April 2025; in other words, this duck was born with open-source DNA, not cooked up as a one-off marketing stunt.</p>\n      <h2>Beside the mega-narrative, a cuter and more sober route</h2>\n      <p>Humanoid robotics startups raise nine-figure sums, and every demo out-dazzles the last — yet ordinary people's imagination of robots still stops at \"when will it do my chores.\" Microduck doesn't promise to wash your dishes. It walks, it skates, it gets up on its own — but it is real, open source, and $399. What this industry lacks has never been narratives about the stars; it is the execution to build a thing, ship it, and make people happily pay for it.</p>\n      <h2>Workplace lesson: ship first, tell the story later</h2>\n      <p>Every worker can take a page from this duck: rather than spend three years sketching a humanoid pie in the sky, spend three months delivering a duck. Acquisition rumors flying everywhere? Then let the good news arrive less than 24 hours after the leak — you talk about your $12.9B, I ship my $399. When facing something beyond your control, the best answer is always to put something real on the table.</p>\n      <p>That's all for today's rant — more tomorrow.</p>",
+    "footnote_tip": "实用提醒：1. 遇到「被收购」「被优化」这类传闻满天飞的时刻，把注意力放回自己能交付的东西上——可交付物永远是最好的回应；2. 学学这只鸭子的路数：目标定小一点、周期定短一点、成果亮出来，让交付自己说话；3. 关注具身智能时注意区分「自重」和「负载」等关键参数，看完演示视频，先看发货时间表。",
+    "footnote_tip_en": "Practical tips: 1. When acquisition or layoff rumors are flying, put your attention back on what you can actually deliver — a deliverable is always the best response; 2. Borrow the duck's playbook: set smaller goals, shorten cycles, show your work, and let delivery speak for itself; 3. When following embodied AI, distinguish key specs like \"self-weight\" vs \"payload\" — after the demo video, check the shipping schedule first.",
+    "cognitive_notes": "本文以8月27日Hugging Face与Pollen Robotics发布Microduck为时效锚点；英伟达约129亿美元收购HF的信息按「消息曝光次日」口径处理，不写成已确认交易；关键参数「不足800克」为自重而非负载，编辑部已剔除二手报道中「可抓起800克物品」的错误表述；预售价399美元（约合2700元）与圣诞前发货经官方与多家媒体交叉验证；强化学习50赫兹、仿真训练真机部署等细节来自Pollen官方博客。",
+    "cognitive_notes_en": "This article anchors on the August 27 release of Microduck by Hugging Face and Pollen Robotics. Nvidia's reported ~$12.9B acquisition of HF is phrased as \"surfaced the day before,\" not as a confirmed deal. The key spec \"under 800 grams\" refers to self-weight, not payload — the editorial desk removed the erroneous \"picks up to 800 grams\" phrasing found in secondary coverage. The $399 pre-order price (roughly RMB 2,700) and pre-Christmas shipping are cross-verified against official and multiple media sources; details such as 50Hz reinforcement learning and sim-to-real deployment come from Pollen's official blog.",
+    "source_summary": "本文基于 Dawn Vision 认知引擎处理当日采集信号并交叉验证 4 个核心来源后生成，经编辑部人工审核。素材来源：Pollen Robotics官方发布博客（规格、训练方式与演示）、Engadget（预售价格与发货时间）、Numerama（开源训练细节）、腾讯新闻科技（中文语境补充）。",
+    "source_summary_en": "This article was generated by the Dawn Vision cognitive engine from signals collected that day and cross-verified against 4 core sources, with human editorial review. Sources: Pollen Robotics' official release blog (specs, training approach and demos), Engadget (pre-order pricing and shipping), Numerama (open-source training details), and Tencent News tech coverage (Chinese-language context)."
+  }
+}
