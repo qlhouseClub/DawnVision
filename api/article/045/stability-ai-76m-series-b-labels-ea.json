@@ -1,0 +1,32 @@
+{
+  "slug": "stability-ai-76m-series-b-labels-ea",
+  "title": "Stability AI获7600万美元B轮：三大唱片与EA入股，版权之争用股权收场",
+  "title_break": "Stability AI获7600万美元B轮<br>三大唱片与EA入股，版权之争用股权收场",
+  "deck": "环球、华纳、索尼与EA一同进入Stability AI股东名单。曾对簿公堂的双方坐上同一张股权表——这可能是AIGC版权之争最现实的收场方式。",
+  "keywords": "Dawn Vision,Stability AI,B轮融资,环球音乐,华纳音乐,索尼音乐,EA,版权,授权分成,AMD Ventures",
+  "og_description": "Stability AI获7600万美元B轮融资：三大唱片公司、EA与AMD Ventures入股；CEO任内累计融资2.32亿美元。",
+  "read_time": "约 4 分钟阅读",
+  "word_count": 840,
+  "sources": [
+    {
+      "text": "Variety (EXCLUSIVE) - Stability AI Raises $76 Million in Funding Round Backed by UMG, Warner, Sony and EA",
+      "url": "https://variety.com/2026/biz/news/stability-ai-raises-76-million-funding-round-1236842351/"
+    },
+    {
+      "text": "Stability AI官方 - The Entertainment Industry's Biggest Names Back Stability AI",
+      "url": "https://stability.ai/news-updates/stability-ai-latest-funding-backed-by-entertainment-industry-biggest-names"
+    },
+    {
+      "text": "TNW - Stability AI raises $76mn from Universal, Warner, Sony Music and EA",
+      "url": "https://thenextweb.com/news/stability-ai-76m-funding-universal-warner-sony-music-ea"
+    }
+  ],
+  "body_html": "<p>这份投资人名单，比融资金额更值得读。</p>\n      <p>8月25日，Stability AI宣布完成<strong>7600万美元B轮融资</strong>。新进股东名单罕见地整齐：<strong>环球音乐、华纳音乐、索尼音乐三大唱片公司，游戏巨头EA，外加AMD Ventures与Pacific Alliance Ventures</strong>。Coatue、Greycroft、Lightspeed等老股东继续跟投，Sean Parker、Eric Schmidt等个人投资者连续第二轮加注。</p>\n      <h2>从被告席到股东名册</h2>\n      <p>把时间倒回三年前，唱片公司与Stability之间只有一种关系：原告与被告。生成模型用受版权保护的内容做训练，音乐行业是最先掀桌子的那个。而如今，三大唱片一起坐进了股东名册。<strong>这不是情怀和解，是利益结构的重建</strong>——与其在法庭上争论\"训练数据算不算侵权\"，不如在股权表上商量\"未来收入怎么分\"。</p>\n      <p>官方叙事也给了呼应：Stability已与环球音乐合作开发面向专业音乐人的生成工具，\"与创作者分利\"的授权框架被写进了融资通稿。CEO Prem Akkaraju自2024年6月上任以来累计融资<strong>2.32亿美元</strong>，资金用途被描述为创意生产产品、应用研究与专业服务。</p>\n      <h2>这是Stability的翻身仗，也是行业模板</h2>\n      <p>对Stability而言，这轮融资的意义大于数字本身：在diffusion模型的光环被后来者分食之后，它找到的差异化位置不是模型跑分，而是<strong>\"版权安全\"的渠道卡位</strong>——手握三大唱片与EA的官方合作，等于在企业级市场挂出了\"可以放心用\"的招牌。</p>\n      <p>对整个生成式AI行业，这更像一份可以抄的作业：<strong>版权问题的终局未必是判决书，可能是股东名册</strong>。当内容方从诉讼者变成收益方，对抗就变成了分成。当然，先别急着感动——唱片公司入股的是渠道，不是创作者；分利规则怎么定、艺术家能拿到几成，仍是悬而未决的下一章。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "版权问题的终局未必是判决书，也可能是股东名册。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Stability AI · 7600万美元B轮 · 三大唱片入股 · EA · 版权授权框架 · 与创作者分利 · 累计融资2.32亿美元",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理当日采集信号并交叉验证 3 个核心来源后生成，经编辑部人工审核。素材来源：Variety独家、Stability AI官方博客、The Next Web。",
+  "category": "AI 设计 · 创作工具"
+}

@@ -1,0 +1,154 @@
+{
+  "date": "2026-09-04",
+  "issue": "046",
+  "method": "主编独立核对：一手来源溯源 + 多源交叉验证 + 3天时效门槛筛查 + RSS信号与WebSearch/WebFetch补充验证",
+  "time_window": ["2026-09-01", "2026-09-04"],
+  "user_focus": "用户明确指示：重点放在 GPT-6 相关资讯，以及昨晚（9月3日美东）国外闭源大模型集体宕机事件。封面定为GPT-6发布，Brief 1定为集体宕机。",
+  "selected_topics": {
+    "cover": {
+      "title": "GPT-6 Astra 正式发布：跑分全面登顶，安全争议同步登顶",
+      "main_signal": "OpenAI 官方发布 GPT-6 Astra（2026-09-03，美东）+ InfoQ 深度文《GPT-6 Astra 正式登场：烧了10万块GPU》+ 36氪/智东西 + The Verge 安全争议报道",
+      "supporting": [
+        "InfoQ：训练细节、基准、定价、HF越界评估、FrontierCyber外部测试",
+        "The Verge：recurrent depth 技术安全争议",
+        "量子位/TechCrunch：发布报道",
+        "raw-signals-2026-09-04.json 多条RSS信号（OpenAI Blog案例文、Hacker News讨论）"
+      ],
+      "verified_facts": [
+        "9月3日（美东）OpenAI 正式发布 GPT-6 Astra；Astra 拉丁语'群星'，延续 Sol/Terra/Luna 天体命名序列",
+        "规格：105万 token 上下文、12.8万最大输出、支持文本+图像",
+        "训练：10万块 GPU 在德州 Stargate 基础设施上完成",
+        "基准：ARC-AGI-3 99.9%（OpenAI Responses API 口径；InfoQ 行文口径为 98.6%，存在评估框架口径差异，正文采用 OpenAI 披露口径并标注）；FrontierMath Tier 4 97.6%（Sam Altman 推特称 98%；Epoch AI 注意 OpenAI 资助了该测试集）；ExploitBench 100%",
+        "内部安全测试：20个近期高严重性 V8 漏洞，发现2个未知漏洞",
+        "FrontierCyber 外部测试（Irregular 执行）：Astra 86/226 vs Sol 34/226，七项 Elite 挑战均未完成——正文不得写成' 通过全部测试'",
+        "定价：$10/M 输入、$50/M 输出、缓存输入 $1、缓存写入 $12.5；输入超27.2万 token 费率翻倍；快速模式2.5倍速/2倍价格；整体约为 GPT-5.6 Sol 的2.5倍，与 Claude Fable 5.1 持平",
+        "工程基准：DeepSWE v1.1 74.1%、Terminal-Bench 4.0 57.9%、BenchCAD 95.9%、Terminal-Bench Science 64.6%（成本比 Fable 低31%）",
+        "HF越界新评估：Sol 越界48% vs Astra 0%（与044期HF入侵事件形成呼应，正文可简要提及背景）",
+        "技术争议：采用 recurrent depth / looped transformer，比其他前沿模型显示更少 'thinking'；有研究者警告'可能是迄今为止 AI 安全领域最糟糕的进展'；OpenAI 称已限制该技术使用以便监控",
+        "可用性：未来几天向 Plus/Pro/Business/Enterprise 开放，API 与 AWS 可用",
+        "Greg Brockman 表态'AGI时代的起点'"
+      ],
+      "writing_notes": "ARC-AGI-3 分数口径差异（99.9% vs 98.6%）是已知多源矛盾，正文统一采用 OpenAI 披露口径 99.9% 并标注'OpenAI口径'；FrontierMath 须标注 Epoch AI 的独立性警示；recurrent depth 安全争议必须呈现但注明为研究者观点；多源证伪细节（口径差异）不写入正文，仅在需要处标注口径。"
+    },
+    "briefs": [
+      {
+        "topic": "ChatGPT/Claude/Grok/Gemini 同日集体宕机",
+        "category": "算力基建 · 基础设施",
+        "signal": "Ars Technica《Four major AI models suffer rare overlapping downtime》(2026-09-04) + The Verge + 新浪科技/中文媒体 Downdetector 数据",
+        "primary_source": "https://arstechnica.com/gadgets/2026/09/four-major-ai-models-suffer-rare-overlapping-downtime/",
+        "confidence": "high（多家中英文媒体交叉，状态页时间线一致）",
+        "verified_facts": [
+          "9月3日上午（美东）ChatGPT、Claude、Grok、Gemini 四大闭源服务罕见同一时段中断，Ars Technica 称'practically unheard of'（几乎闻所未闻）",
+          "时间线：Anthropic 9:23 AM ET 最先报告（Claude Mythos 5.1 / Fable 5.1 / Opus 5 部分中断，另有 Sonnet 5 短暂异常），12:16 PM 恢复；OpenAI 10:43 AM 报告 ChatGPT 与 Codex elevated errors，12:55 PM 恢复",
+          "Grok：DownDetector 报告从<10（9AM）涨至1,365（9:45AM）；Gemini：从23（10:30AM）涨至412（11AM+），StatusGator 显示 Gemini API 10:45-11:15 likely outage",
+          "中文口径：Downdetector OpenAI 超1.2万份、Claude 约1200、Grok 约1000，合计超1.4万份；全程约3小时40分钟；Cursor 等下游工具连带中断",
+          "根因：OpenAI 官方称 'routing error'（路由错误），Anthropic 称 'infrastructure issue'（基础设施问题）；AWS/Azure/Cloudflare 均未报告重大故障；外部有'共享基础设施'推测（Cloudflare/Azure），无任何一方确认共同根因——正文只可写各方官方口径+外部推测标注",
+          "可靠性背景：Claude 过去90天正常运行率99.4%，ChatGPT 99.63%"
+        ],
+        "writing_notes": "角度：集中度风险——闭源模型集中度越高，单日集体故障的社会成本越大；四大服务共用底层基础设施的推测必须标注'外部推测'；各官方根因说法不同，不得合并成一个'确认的根因'。"
+      },
+      {
+        "topic": "英伟达正式确认以约129亿美元收购 Hugging Face",
+        "category": "大模型 · 商业分析",
+        "signal": "TechCrunch 2026-09-03 20:42《Nvidia confirms it will buy Hugging Face for $12.9 billion》+ The Verge 2026-09-03 21:16 + 爱范儿9月4日早报",
+        "primary_source": "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/",
+        "confidence": "high（官方确认+双科技媒体+中文媒体）",
+        "writing_notes": "时效例外条款适用：8月27日为'消息曝光'（045期Cao曾提及），9月3日为官方正式确认，属'近3天内的新重大进展'，且本文核心聚焦'确认'这一新进展。正文中须点明'一周前消息曝光、如今官宣'的时间线；'承诺保留开放平台'为官方口径。",
+        "verified_facts": [
+          "9月3日英伟达官方确认将以约129亿美元（The Verge 口径 $12.93B）收购 Hugging Face",
+          "Hugging Face 托管超300万个模型、超1800万开发者使用（Nvidia 说法）",
+          "英伟达承诺保留开放平台（爱范儿9月4日早报口径：'承诺保留开放平台'）",
+          "Hugging Face 成立于2016年，是全球最大的开源 AI 模型/数据集/工具托管平台",
+          "时间线：8月27日收购消息曝光（约129亿美元口径）→ 9月3日正式官宣确认",
+          "背景关联：全球最大 AI 芯片公司将开源社区最大基础设施收入麾下；044期曾报道 HF 遭 AI 越狱入侵事件，安全与中立性担忧将成为监管审视焦点"
+        ]
+      },
+      {
+        "topic": "Meta Muse Spark 贡献者定价：95%折扣换训练数据",
+        "category": "AI 商业化 · 行业观察",
+        "signal": "TechCrunch 原文（已全文核读）",
+        "primary_source": "TechCrunch - Meta Muse Spark contributor pricing",
+        "confidence": "medium-high（单一主流媒体原文，内部信源口径；引用独立研究者观点）",
+        "verified_facts": [
+          "Meta 为 coding/agents 模型 Muse Spark 推出'贡献者定价'：$0.10/M 输入 token（标准价 $1.25）、$0.20/M 输出 token（标准价 $4.25），约95%折扣",
+          "折扣的代价：使用贡献者定价即同意 Meta 将其数据用于模型训练",
+          "标准定价与贡献者定价价差约12倍（输入）/21倍（输出）",
+          "背景：Meta 内部员工追踪项目于6月被暂停（TechCrunch 报道口径）",
+          "观点引用：Arvind Narayanan（普林斯顿）——企业宁可买贵的 Enterprise 版本也不愿交出数据；Mario Zechner——Claude Code 等编码工具的成功证明了真实开发者数据驱动 RL 的价值",
+          "行业对照：开发者数据已成为模型公司眼中的高价值训练资产，'以折扣换数据'是数据获取的新明码标价模式"
+        ],
+        "writing_notes": "95%折扣为 TechCrunch 计算口径（$0.10 vs $1.25、$0.20 vs $4.25），正文给出两档价格即可；不写'Meta 将强制收集数据'，核心是'可选择换折扣'的机制设计；Narayanan/Zechner 观点须署名。"
+      },
+      {
+        "topic": "Armature 1.7万次会话实测：AI agent 如何选工具",
+        "category": "AI 编程 · 工具竞争",
+        "signal": "Hacker News（160分）+ Armature 研究原文（已全文核读）",
+        "primary_source": "Armature - 17k sessions 工具选择研究",
+        "confidence": "high（一手研究数据，方法透明）",
+        "verified_facts": [
+          "规模：16,893 sessions 实测、5292 有效、1163 prompt 变体、75个代码库、10种语言、3个 agent（Claude Code / Codex / Cursor），Gemini 3.7 Flash 任 orchestrator+judge",
+          "搜索行为：Codex 94% 用 web 搜索（9/10 用 site: 操作符）；Cursor 约2/3用 web；Claude Code 只30%用 web 但浏览页面数3倍（新领域如 sandbox 升至80%）",
+          "一致性：三类 agent 仅在42%的任务类别中选中同一工具",
+          "反差数据：LangChain 被提及194次仅4次被选；Paypal 被提及139次0次被选（Stripe 赢下124次）；Netlify 提及152次仅6次被选；Supabase 被提及242次却被 Neon 压制",
+          "胜率：Stripe 90%（支付）；Neon 66%（数据库）；S3 45%（文件存储）；邮件类 Resend 35.6% vs Postmark 27.4%",
+          "自建倾向：Claude Code 19% 的任务选择自建方案，Codex/Cursor 为10%",
+          "语音类分歧案例：Claude 选 Twilio、Codex 选 OpenAI Realtime、Cursor 选 Vapi"
+        ],
+        "writing_notes": "核心判断：'星标/提及量'不等于'agent 的选择'——文档与社区声量影响的是训练语料，而 agent 实际决策更依赖运行时验证（文档可读性、试错成本）；数据全部来自 Armature 一手研究，标注方法（5292有效会话）。"
+      },
+      {
+        "topic": "特朗普政府提交法庭陈述，支持 OpenAI 在 NYT 版权诉讼中的立场",
+        "category": "AI 监管 · 政策",
+        "signal": "TechCrunch 2026-09-02 + The Verge 2026-09-03 + 法庭文件 PDF（courtlistener）",
+        "primary_source": "https://techcrunch.com/2026/09/02/u-s-government-sides-with-openai-on-issue-of-training-llms-on-copyrighted-material/",
+        "confidence": "high（双主流媒体+法庭文件原文链接）",
+        "verified_facts": [
+          "特朗普政府向纽约南区法院（NYT 诉 OpenAI 案，2023年12月提起）提交20页法庭陈述（brief），支持 OpenAI 未经授权使用版权材料训练 LLM 的立场",
+          "陈述引用特朗普2025年1月行政令《Removing Barriers to American Leadership in Artificial Intelligence》",
+          "核心论点原文：'The United States has a strong interest in continuing to develop a robust and competitive artificial intelligence industry that sets the standard for the practice and procedure of AI use globally'；'retain global leadership in artificial intelligence'",
+          "另一关键论点：'Constraining LLM development under a misunderstanding of fair use doctrine would thwart such creative and scientific progress while hindering American prosperity and economic mobility'",
+          "性质：非裁决，brief 作者无管辖权，但行政分支介入仍有分量；NYT 曾于2026年7月指控 OpenAI 在诉讼中隐藏证据",
+          "先例背景：Alsup 法官裁定 Anthropic $1.5B 版权和解（处罚的是盗版 shadow library 而非训练本身）；迄今为止 AI 训练版权案例总体偏向 AI 公司"
+        ],
+        "writing_notes": "必须写清'这是法庭陈述不是裁决'；引用行政令与 brief 原文；把'政府站队'与'司法先例'分层呈现；正文强调此举对全球 AI 版权诉讼风向的信号意义。"
+      },
+      {
+        "topic": "嬴彻科技：卡车自动驾驶运营里程破10亿公里，定义'货运物理AI'",
+        "category": "具身智能 · 机器人",
+        "signal": "量子位 2026-09-04 09:40（获授权刊载的公司发布内容）",
+        "primary_source": "https://www.qbitai.com/2026/09/483598.html",
+        "confidence": "medium-high（公司官方口径经主流 AI 媒体刊发；市场份额等为公司自述，须标注）",
+        "verified_facts": [
+          "2026年9月3日，嬴彻科技宣布卡车自动驾驶商业运营里程突破10亿公里",
+          "公司自述以超90%市场份额领跑中国卡车智驾市场（须标注'公司口径'）",
+          "战略升级：从'自动驾驶'到'货运物理AI'（Freight Physical AI），构建覆盖干线、支线/城配及末端的全场景货运机器人网络",
+          "三大能力：货运原生智能（Freight World Model 货运世界模型，从货车视角生成训练数据）、场景智能（ROSL 真实世界运营场景库，积累几十万个高价值场景）、运营智能（运营大脑云端平台，单车智能扩展为车队协同）",
+          "商业化：高速网络覆盖率97%；2026年重卡采购中多家头部快递公司已将智驾作为100%标配",
+          "L4 进展：获浙江、北京、海南等多地 L4 测试牌照，与京东物流开展开放道路 L4 级干线载货示范应用；5月与顺丰速运、柳汽乘龙实现公开道路无人轻卡商业试运营；海外在欧洲、日本、中东实现实质性突破"
+        ],
+        "writing_notes": "全篇为公司官宣口径（量子位获授权刊载），市场份额、覆盖率等数据须标注'公司口径'；角度选'10亿公里数据资产+物理AI叙事进入货运'，与045期人形机器人运动会（数据资产角度）区分开——本篇聚焦货运垂直场景与商业化。"
+      }
+    ],
+    "cao": {
+      "topic": "GPT Image 2.5 测试版现身：伪造 GPT-6 发布会照片以假乱真",
+      "signal": "量子位 2026-09-04 + 多个英文独立源确认 OpenAI 未官方发布",
+      "confidence": "high（'未正式发布'本身已多源交叉确认；弹窗与 Arena 匿名模型为用户实测/社区证据）",
+      "writing_notes": "红线：GPT Image 2.5 尚未正式发布（OpenAI 无官方公告），只能写'测试版/泄露/社区发现'，绝不可写'正式发布'。槽点角度：一个还没发布的图像模型，最出圈的作品是伪造自家旗舰模型的发布会——AI 生成内容反过来污染 AI 新闻信源，'眼见为实'彻底作废。标题与正文可玩'套娃'梗。",
+      "verified_facts": [
+        "GPT Image 2.5 未正式发布：OpenAI 无官方公告，ChatGPT 中出现升级弹窗提示，LMArena 出现代号 luna-lisa-alpha 的匿名图像模型，社区普遍猜测为 GPT Image 2.5",
+        "实测能力（用户/媒体测试口径）：能伪造 GPT-6 发布会照片、奥特曼手写信，以假乱真",
+        "改进：相比 GPT Image 2 噪点明显改善；速度快；人脸稳定；图像内文字嵌入稳定",
+        "英文独立源（novaimage.ai 等）确认 OpenAI 未官方发布，Arena codename 证据不足以下结论"
+      ]
+    }
+  },
+  "rejected_topics": [
+    {"topic": "Gemini 3.8 Flash / Flash Cyber 发布", "reason": "与封面 GPT-6 同日争鸣，但用户指定重点为 GPT-6；可在封面内一句带过行业背景，不单独成篇"},
+    {"topic": "Nvidia PAIR 个人AI路由器 / Gmail Live 语音 / WeatherNext 3", "reason": "产品动态价值密度低于已选6篇，留作信号储备"},
+    {"topic": "Crusoe $3B 融资 / Thinking Machines $1B 轮", "reason": "融资类与 Nvidia-HF 收购（大事件）重叠，单期融资类仅保留最大一笔"},
+    {"topic": "K2 Horizon 六模型开源舰队 / Qwen 3.8 on Cerebras 1500 tokens/s", "reason": "开源与算力话题已被 Nvidia-HF（大模型·商业分析）与宕机（算力基建）占据分类；HN 热度真实但与本期主线弱相关，留作下期候选"},
+    {"topic": "陈大年复出入局大模型 / 华为云湖仓 / AI窗口期3-4年", "reason": "时效与信息增量不足"},
+    {"topic": "Amiga 游戏移植（72758行汇编一晚上 Godot）", "reason": "故事性极强但与 Armature 同属 AI 编程分类，本期让位；极佳的下期候选"},
+    {"topic": "围棋 Shin 让二子胜 KataGo / 爱范儿本地算力盒子 / Cybercab 得州45辆", "reason": "分类已满或热度不足"}
+  ]
+}

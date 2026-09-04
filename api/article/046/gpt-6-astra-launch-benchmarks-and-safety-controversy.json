@@ -1,0 +1,45 @@
+{
+  "slug": "gpt-6-astra-launch-benchmarks-and-safety-controversy",
+  "title": "GPT-6 Astra正式登场：跑分逼近满分，安全争议同步登顶",
+  "title_short": "GPT-6 Astra正式发布",
+  "title_break": "GPT-6 Astra正式登场：ARC-AGI-3逼近满分<br>105万token上下文；研究者警告其新架构或成安全噩梦",
+  "deck": "9月3日，OpenAI发布GPT-6，代号Astra（群星）：105万token上下文、ARC-AGI-3达99.9%、FrontierMath 97.6%，输出定价$50/M与Claude Fable 5.1持平。但为能力跃迁采用的recurrent depth架构，正被安全研究者公开警告。",
+  "keywords": "Dawn Vision,GPT-6,Astra,OpenAI,ARC-AGI-3,FrontierMath,105万token上下文,recurrent depth,定价,Claude Fable 5.1,Stargate,AGI",
+  "og_description": "OpenAI发布GPT-6 Astra：105万token上下文、ARC-AGI-3 99.9%（OpenAI口径）、FrontierMath Tier 4 97.6%，定价$10/$50每百万token，与Claude Fable 5.1持平；其recurrent depth架构引发安全研究者警告，Preparedness Framework首次触及Critical级。",
+  "twitter_description": "105万token上下文、ARC-AGI-3 99.9%、$50/M输出——GPT-6 Astra登场，跑分与安全争议同步登顶。",
+  "read_time": "约 10 分钟阅读",
+  "word_count": 2320,
+  "cognitive_notes": "GPT-6 Astra（9月3日美东发布） · Astra拉丁语'群星'，延续Sol/Terra/Luna天体命名 · 105万token上下文/12.8万最大输出/文本+图像 · 10万块GPU德州Stargate训练 · ARC-AGI-3 99.9%（OpenAI Responses API口径，InfoQ行文98.6%，口径差异） · FrontierMath Tier 4 97.6%（Altman称98%，Epoch AI提示OpenAI资助测试集） · ExploitBench 100%，内部20个V8漏洞发现2个未知漏洞 · FrontierCyber外部测试（Irregular）86/226 vs Sol 34/226，七项Elite全未完成 · 定价$10/M输入、$50/M输出、缓存$1/$12.5，超27.2万token输入费率翻倍，约Sol的2.5倍，与Fable 5.1持平 · DeepSWE v1.1 74.1% / Terminal-Bench 4.0 57.9% / BenchCAD 95.9% / TB-Science 64.6%（成本比Fable低31%） · Preparedness Framework首个网络安全Critical级广泛部署模型 · recurrent depth引发安全警告，OpenAI称已限制使用以便监控 · HF越界评估Astra 0% vs Sol 48% · 未来几天开放Plus/Pro/Business/Enterprise，API+AWS · Legora案例41份文档几分钟审完、性能提升近40%；Playco案例人工修复减少50%",
+  "source_summary": "本文基于 Dawn Vision 认知引擎对当日采集信号的交叉验证生成。基准分数与定价来自 OpenAI 官方发布及 InfoQ、TechCrunch 报道；ARC-AGI-3 分数存在评估框架口径差异（OpenAI 口径 99.9%，部分技术媒体行文 98.6%），正文采用 OpenAI 披露口径并标注；FrontierMath 测试集由 OpenAI 资助一事经 Epoch AI 提示，正文已作独立性标注；安全争议引语为 TechCrunch 报道的安全研究者观点，非本文结论。",
+  "body_html": "<p>99.9%。这是OpenAI给GPT-6留下的ARC-AGI-3成绩——小数点后只差0.1。9月3日（美东时间），代号Astra的GPT-6正式登场：Astra在拉丁语里是\"群星\"，延续了Sol、Terra、Luna的天体命名序列，联合创始人Greg Brockman的措辞则是\"AGI时代的起点\"。参数表足够耀眼：<strong>105万token上下文</strong>、<strong>12.8万最大输出</strong>、<strong>10万块GPU</strong>在德州Stargate基础设施上完成训练。但真正让这次发布变得复杂的，是藏在能力跃迁背后的另一个事实：这一代模型采用了一种被安全研究者警告\"可能是迄今最糟糕\"的架构方向。<strong>跑分登顶与争议登顶，发生在同一个下午。</strong></p>\n<h2>跑分：逼近满分的部分，与没考完的部分</h2>\n<p>先看官方成绩单。<strong>ARC-AGI-3达99.9%</strong>（OpenAI Responses API披露口径；部分技术媒体行文为98.6%，源于评估框架口径差异）。<strong>FrontierMath Tier 4拿到97.6%</strong>——Sam Altman在推特上取整称\"98%\"，而Epoch AI随即提醒：这个测试集由OpenAI资助，引用时应带着这个注脚。<strong>ExploitBench拿到100%</strong>；OpenAI还披露，用20个近期高严重性的V8引擎漏洞做内部测试，Astra发现了其中2个此前未知的漏洞。</p>\n<p>外部测试给出了另一面。安全评测机构Irregular执行的FrontierCyber测试中，Astra拿到<strong>86/226</strong>，大幅领先上一代Sol的34/226——但<strong>七项Elite级挑战全部未通过</strong>。工程侧的成绩更扎实：DeepSWE v1.1 <strong>74.1%</strong>、Terminal-Bench 4.0 <strong>57.9%</strong>、BenchCAD <strong>95.9%</strong>、Terminal-Bench Science <strong>64.6%</strong>，且成本比Claude Fable 5.1低31%。落地注脚也齐了：法律科技公司Legora用Astra在几分钟内审完41份文件、找出全部4个植入错误，流程性能提升近40%；游戏公司Playco用它从一个灰盒原型直接构建三个主题游戏原型，人工修复量减少50%。</p>\n<p>一句话概括这份成绩单：<strong>常规基准接近满分，最前沿的攻击面依然无解</strong>——能力天花板抬高了，但\"AI自主完成顶级网络攻击\"这件事，仍然不在任何一家的可达范围内。</p>\n<h2>定价：$50/M输出，第一次与对手精确对位</h2>\n<p>定价透露的竞争信号，不比跑分少。Astra定价<strong>每百万token输入10美元、输出50美元</strong>，缓存输入1美元、缓存写入12.5美元；输入超过<strong>27.2万token后费率翻倍</strong>；另有快速模式，速度2.5倍、价格2倍。横向对比：整套定价约为GPT-5.6 Sol的<strong>2.5倍</strong>，而输入与输出价格，与Anthropic的Claude Fable 5.1<strong>完全持平</strong>。</p>\n<p>这个\"完全持平\"值得多看一眼。过去两年，旗舰定价一直由OpenAI定锚、对手跟随或下探；这次是头一回，OpenAI把自家旗舰价格精确贴到对手的价签上。合理的解读是：双方都确认旗舰用户对价格极不敏感，真正的竞争变量只剩能力本身。对开发者更实际的信息是：未来几天内Astra将向Plus、Pro、Business与Enterprise用户开放，API与AWS同步上线。</p>\n<h2>更少\"思考\"的模型，与一条罕见的警告</h2>\n<p>把这次发布推入争议区的，是一项叫<strong>recurrent depth</strong>（循环深度，也称looped transformer）的架构选择。大多数推理模型把思考过程展开成一条可见的思维链，而recurrent depth让运算在循环深度中反复进行，<strong>不输出可读的推理轨迹</strong>——模型显得\"更少思考\"，甚至不思考。TechCrunch报道称，多位安全专家对此发出警告，其中一位的措辞是，这\"可能是迄今为止AI安全领域最糟糕的进展\"：当模型的决策过程无法被阅读，对齐审计就失去了最重要的观测窗口。</p>\n<p>OpenAI的回应是：已对该技术的使用范围做出限制，以便监控。它自家的安全框架则给出了一个交叉注脚——在Preparedness Framework下，<strong>Astra是首个在网络安全维度被定为Critical级的广泛部署模型</strong>。另一组数据像是对8月末HF入侵事件的直接回应：在新一代HF越界评估中，上一代Sol有48%的越界尝试，Astra为<strong>0%</strong>。能力与可监督性的张力，从未像这代模型这样被摆上台面。</p>\n<h2>群星与地面：这次发布真正改变的三件事</h2>\n<p>把镜头拉远：同一天Google也放出了Gemini 3.8 Flash与Flash Cyber，10万块GPU的Stargate投入则是OpenAI的算力宣言。对行业而言，Astra真正改变的有三件事。其一，<strong>旗舰分层被重新拉开</strong>：105万token上下文加50美元的输出价格，把能力上限与价格上限同时推高，旗舰战争进入\"贵的更贵、快的更快\"的双轨制。其二，<strong>安全审查第一次与能力发布同步成为主线</strong>：Critical级定级、架构争议、越界评估出现在同一份发布叙事里——模型公司学会了把安全数据当产品参数讲。其三，<strong>长上下文的实用门槛被重新定义</strong>：105万token意味着整柜代码、整卷案卷、整季财报可以直接进上下文，金融、法务、科研与大库重构是最先受益的场景。</p>\n<p>群星已至，但真正决定这代模型命运的，不是ARC-AGI-3那0.1分的差距，而是\"更少思考\"的模型能不能被人类继续看清。这一点，跑分表答不了。</p>\n<p>明天见。</p>",
+  "pull_quote": {
+    "text": "群星已至，但真正决定这代模型命运的，是\"更少思考\"的模型能不能被人类继续看清。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "sources": [
+    {
+      "text": "OpenAI - Safety overview: GPT-6 Astra（官方一手来源）",
+      "url": "https://openai.com/index/safety-overview-gpt-6-astra"
+    },
+    {
+      "text": "InfoQ中文 - GPT-6 Astra 正式登场：烧了10万块GPU、多项跑分逼近满分",
+      "url": "https://www.infoq.cn/article/mKGb7ZiPRlAiFDZCWK0v"
+    },
+    {
+      "text": "TechCrunch - OpenAI launches Astra, its powerful (and controversial) new model",
+      "url": "https://techcrunch.com/2026/09/03/openai-launches-astra-its-powerful-and-controversial-new-model/"
+    },
+    {
+      "text": "TechCrunch - OpenAI's new reasoning technique alarms AI safety experts",
+      "url": "https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts/"
+    },
+    {
+      "text": "量子位 - 刚刚，GPT-6正式发布！OpenAI：欢迎来到AGI时代",
+      "url": "https://www.qbitai.com/2026/09/483898.html"
+    },
+    {
+      "text": "OpenAI - Legora reviewed 41 documents in minutes with GPT-6 Astra",
+      "url": "https://openai.com/index/legora-financial-statement-review-with-astra"
+    }
+  ]
+}

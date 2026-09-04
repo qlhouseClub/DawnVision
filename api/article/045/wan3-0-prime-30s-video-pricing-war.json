@@ -1,0 +1,36 @@
+{
+  "slug": "wan3-0-prime-30s-video-pricing-war",
+  "title": "通义万相3.0 Prime上架百炼：AI视频竞争，从拼时长转向拼价格",
+  "title_break": "万相3.0开卖：AI视频从拼时长到拼价格",
+  "deck": "8月24日全面上线的通义万相3.0，Prime版本8月26日正式登陆阿里云百炼。单次30秒、能直接吃下文档和网页输入，国际站API定价0.05-0.20美元/秒，约为竞品Seedance 2.5的一半。加上同门的HappyHorse，阿里在AI视频上摆出了双线作战的架势。",
+  "keywords": "通义万相3.0, Wan3.0, 阿里云百炼, AI视频生成, 30秒长视频, Seedance, HappyHorse, 价格战",
+  "og_description": "通义万相3.0 Prime上架百炼：单次30秒、支持文档输入，国际定价约为Seedance 2.5的一半。AI视频竞争正从拼时长转向拼价格。",
+  "read_time": "约 4 分钟阅读",
+  "word_count": 850,
+  "sources": [
+    {
+      "text": "Alibaba Cloud官方博客 - Wan3.0: 30-Second AI Video Generation from Any Input",
+      "url": "https://www.alibabacloud.com/blog/wan3-0-30-second-ai-video-generation-from-any-input_603452"
+    },
+    {
+      "text": "阿里云帮助中心 - 万相3.0视频生成API参考",
+      "url": "https://help.aliyun.com/zh/model-studio/wan3-video-generation-api-reference"
+    },
+    {
+      "text": "阿里云帮助中心 - 视频生成与编辑模型矩阵",
+      "url": "https://help.aliyun.com/zh/model-studio/video-generate-edit-model/"
+    },
+    {
+      "text": "千问AI平台 - 万相3.0模型定价页",
+      "url": "https://www.qianwenai.com/models/wan3.0-video"
+    }
+  ],
+  "body_html": "<p>视频生成模型的竞赛正在换赛道：上半场拼谁生得长，下半场拼谁生得便宜。8月24日通义万相3.0全面上线，两天后的8月26日，其Prime版本正式上架阿里云百炼——30秒长视频，开始按秒计价。</p>\n      <h2>30秒，和“万物皆素材”</h2>\n      <p>规格层面，万相3.0把单次生成时长拉到30秒，是上一代的两倍，输出帧率30fps，并原生输出台词、BGM与音效。更值得注意的在输入端：除了文、图、音视频，它支持直接传入doc、xls、ppt、pdf等文档和公开网页链接，让模型读完全文再生成视频，单次最多可参考20个多模态素材。把“读材料”和“出片子”合并成一步，这才是“文档直出视频”的完整含义。</p>\n      <h2>价格表上见真章</h2>\n      <p>国内API原价为480P 0.3元/秒、720P 0.6元/秒、1080P 1.2元/秒；国际站定价0.05、0.10、0.20美元/秒——一段30秒的1080P视频约6美元，480P草稿版只要1.5美元。按国际站定价口径，这大约是竞品Seedance 2.5的一半。当分辨率、时长、音效都被拉齐之后，价格成了最直观的那根杠杆。</p>\n      <h2>双线赛马的阿里</h2>\n      <p>在百炼的视频模型矩阵里，happyhorse-1.1与万相3.0系列并列出现在官方推荐位——同一个战场，两条产品线。叠加阿里8月24日完成约百亿美元级的配售，AI基础设施的弹药已经备足。对阿里来说，万相走旗舰对标，HappyHorse走差异化路线，赛马机制在AI视频上重演。</p>\n      <p>需要提醒的是，各家定价口径（分辨率、计费单位、是否含音效）并不完全对齐，跨平台比价前先看清脚注。但趋势已经清楚：时长战后是价格战，受益的终究是拿着创意排队的人。明天见。</p>",
+  "pull_quote": {
+    "text": "当30秒视频按秒计价、价格只有对手一半，AI视频的竞争就从实验室竞赛变成了成本竞赛。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "本文以8月26日Prime上架百炼为时效锚点，8月24日的GA作为背景信息交代；价格均按API原价口径呈现（国内0.3-1.2元/秒、国际站0.05-0.20美元/秒），“约为Seedance 2.5一半”依据国际站定价对比并注明口径；全文未使用任何“首创”类表述；HappyHorse与万相并列的信息来自百炼官方模型矩阵页。",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理当日采集信号并交叉验证 4 个核心来源后生成，经编辑部人工审核。素材来源：Alibaba Cloud官方博客（规格与国际站定价）、阿里云帮助中心万相3.0 API参考（时长/帧率/输入能力）、阿里云百炼模型矩阵页（HappyHorse与万相并列）、千问AI平台模型定价页（国内API定价）。",
+  "category": "AI 商业化 · 行业观察"
+}

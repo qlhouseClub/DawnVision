@@ -1,0 +1,35 @@
+{
+  "slug": "hf-microduck-399-robot-duck-caocao",
+  "category": "槽点 · 职场观察",
+  "title": "同行还在画人形大饼，Hugging Face已经把399美元的鸭子排进圣诞发货单",
+  "title_short": "399美元的开源机器鸭Microduck开卖",
+  "title_break": "英伟达约129亿美元收购HF消息曝光次日<br>Hugging Face发布399美元开源机器鸭Microduck",
+  "deck": "8月27日，Hugging Face与旗下法国子公司Pollen Robotics发布开源机器鸭Microduck：身高25厘米、自重不足800克，会摇摆走路、会踩轮滑、摔倒了能自己爬起来，喙能叼袜子抓笔。预售价399美元（约合2700元），圣诞前发货。前一日，英伟达约129亿美元收购HF的消息刚被曝光。",
+  "keywords": "Dawn Vision,Hugging Face,Microduck,Pollen Robotics,机器鸭,开源机器人,具身智能,人形机器人,英伟达",
+  "og_description": "Hugging Face发布399美元开源机器鸭Microduck：会走会滑会自己爬起来，圣诞前发货。在人形机器人的宏大叙事旁边，多了一条可爱而清醒的路线。",
+  "twitter_description": "129亿美元收购的消息次日，Hugging Face发布了只399美元的机器鸭。今天的Cao献给Microduck——一只比某些人形样机诚实的鸭子。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 780,
+  "sources": [
+    {
+      "text": "Pollen Robotics官方 - Meet Microduck（发布博客）",
+      "url": "https://pollen-robotics.com/microduck/blog/introducing-microduck/"
+    },
+    {
+      "text": "Engadget - Hugging Face and Pollen Robotics open pre-orders for the $399 Microduck",
+      "url": "https://www.engadget.com/2245407/huggingface-and-pollen-robotics-opn-pre-orders-for-the-microduck-robot/"
+    },
+    {
+      "text": "Numerama - Hugging Face lance un mini robot-canard à entraîner soi-même",
+      "url": "https://www.numerama.com/tech/2319771-hugging-face-lance-un-mini-robot-canard-a-entrainer-soi-meme.html"
+    },
+    {
+      "text": "腾讯新闻科技 - 能走会滑、跌倒自起，Hugging Face开源了一只399美元的机器鸭",
+      "url": "http://news.qq.com/rain/a/20260828A06X0Z00"
+    }
+  ],
+  "body_html": "<p>昨天，科技圈还在为英伟达约129亿美元收购Hugging Face的消息沸腾；今天，也就是消息曝光次日，Hugging Face用一只鸭子抢回了自己的主场。8月27日，HF与旗下法国子公司Pollen Robotics发布开源机器鸭Microduck：身高25厘米，自重不足800克，预售价399美元，约合人民币2700元，圣诞前发货。</p>\n      <p>这只鸭子会的可不少：摇摆式走路、踩轮滑、摔倒了能自己爬起来，喙还能叼袜子、抓笔。四种配色任选，附赠游戏手柄。CEO Clement Delangue在X上发了一段50秒的演示视频——比起某些人形机器人「明年量产」的PPT，这只鸭子把发货日期直接写在了购物页面上。</p>\n      <h2>399美元，买到的是一只真能调教的鸭子</h2>\n      <p>Microduck最值钱的不是硬件，是开源。强化学习算法以50赫兹的频率在仿真环境里训练，训练好的策略直接部署到真机上——你完全可以在自己电脑上练出一只属于你的鸭子。Pollen Robotics是HF在2025年4月收购的波尔多团队，换句话说，这只鸭子从出生起就带着开源社区的基因，而不是大公司一时的营销灵感。</p>\n      <h2>宏大叙事之外，还有一条可爱而清醒的路线</h2>\n      <p>人形机器人融资动辄上亿美元，Demo一个比一个震撼，可普通人对机器人的想象依然停留在「它什么时候能帮我干活」。Microduck没有承诺帮你洗碗，它只是会走路、会滑冰、摔了自己爬起来——但它是真实的、开源的、399美元的。这个行业最缺的从来不是星辰大海的叙事，而是把东西做出来、卖出去、还能让人笑着掏钱的执行力。</p>\n      <h2>职场启示：先发货，再讲故事</h2>\n      <p>这只鸭子给每个打工人上了一课：与其花三年画一张人形大饼，不如花三个月交付一只鸭子。被收购的传闻满天飞？那就让好消息比传闻晚到不到24小时——你们聊你们的129亿，我发我的399。面对无法掌控的局面，最好的回应永远是拿出实际的东西。</p>\n      <p>今天就槽到这里，明天继续。</p>",
+  "footnote_tip": "实用提醒：1. 遇到「被收购」「被优化」这类传闻满天飞的时刻，把注意力放回自己能交付的东西上——可交付物永远是最好的回应；2. 学学这只鸭子的路数：目标定小一点、周期定短一点、成果亮出来，让交付自己说话；3. 关注具身智能时注意区分「自重」和「负载」等关键参数，看完演示视频，先看发货时间表。",
+  "cognitive_notes": "本文以8月27日Hugging Face与Pollen Robotics发布Microduck为时效锚点；英伟达约129亿美元收购HF的信息按「消息曝光次日」口径处理，不写成已确认交易；关键参数「不足800克」为自重而非负载，编辑部已剔除二手报道中「可抓起800克物品」的错误表述；预售价399美元（约合2700元）与圣诞前发货经官方与多家媒体交叉验证；强化学习50赫兹、仿真训练真机部署等细节来自Pollen官方博客。",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理当日采集信号并交叉验证 4 个核心来源后生成，经编辑部人工审核。素材来源：Pollen Robotics官方发布博客（规格、训练方式与演示）、Engadget（预售价格与发货时间）、Numerama（开源训练细节）、腾讯新闻科技（中文语境补充）。"
+}

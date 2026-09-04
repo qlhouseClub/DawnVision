@@ -1,5 +1,31 @@
 [
   {
+    "number": "046",
+    "date": "2026-09-04",
+    "date_display": "2026.09.04",
+    "cover": {
+      "slug": "gpt-6-astra-launch-benchmarks-and-safety-controversy",
+      "title": "GPT-6 Astra正式登场：跑分逼近满分，安全争议同步登顶",
+      "deck": "9月3日，OpenAI发布GPT-6，代号Astra（群星）：105万token上下文、ARC-AGI-3达99.9%、FrontierMath 97.6%，输出定价$50/M与Claude Fable 5.1持平。但为能力跃迁采用的recurrent depth架构，正被安全研究者公开警告。",
+      "title_short": "GPT-6 Astra正式发布"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "045",
+    "date": "2026-08-28",
+    "date_display": "2026.08.28",
+    "cover": {
+      "slug": "nvidia-q2-fy2027-earnings-and-revenue-sharing-pause",
+      "title": "英伟达Q2营收962亿美元再破纪录：增长的B面，是一场被暂停的分成实验",
+      "deck": "8月27日盘后，英伟达交出FY2027 Q2成绩单：营收962亿美元、同比翻倍，数据中心890亿，Vera Rubin全面投产。同周《华尔街日报》报道，其面向AI云厂商的收入分成计划已于上周暂停——最强财报与最敏感的模式实验，同周上演。",
+      "title_short": "英伟达Q2财报与分成暂停"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
     "number": "044",
     "date": "2026-08-27",
     "date_display": "2026.08.27",

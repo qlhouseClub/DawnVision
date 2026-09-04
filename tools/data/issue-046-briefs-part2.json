@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "meta-muse-spark-contributor-pricing-discount-for-data",
+    "title": "Meta推出贡献者定价：95%折扣，换你的代码进训练集",
+    "title_en": "Meta's Contributor Pricing: 95% Off, If Your Code Goes Into the Training Set",
+    "title_break": "Meta为Muse Spark推出贡献者定价<br>输入$0.10/M；折扣的代价是数据进训练集",
+    "title_break_en": "Meta Launches Contributor Pricing for Muse Spark<br>$0.10/M Input; the Price of the Discount Is Your Data",
+    "deck": "Meta为编码与agent模型Muse Spark推出'贡献者定价'：输入每百万token 0.1美元、输出0.2美元，约为标准价的5%。代价写在同一页上：接受折扣，即同意Meta将你的数据用于模型训练。",
+    "deck_en": "Meta has launched 'contributor pricing' for its coding and agent model Muse Spark: $0.10 per million input tokens, $0.20 per million output — about 5% of list price. The catch sits on the same page: accepting the discount means consenting to Meta training on your data.",
+    "keywords": "Dawn Vision,Meta,Muse Spark,贡献者定价,训练数据,95%折扣,数据换折扣,商业化",
+    "keywords_en": "Dawn Vision,Meta,Muse Spark,contributor pricing,training data,95% discount,data-for-compute,commercialization",
+    "og_description": "Meta为Muse Spark推出贡献者定价：输入$0.10/M、输出$0.20/M，约为标准价5%，代价是数据被用于训练。'以折扣换数据'成为明码标价的新模式。",
+    "og_description_en": "Meta's contributor pricing for Muse Spark: $0.10/M input, $0.20/M output — about 5% of list — in exchange for training rights on your data. 'Discount-for-data' is now a listed price.",
+    "read_time": "约 4 分钟阅读",
+    "read_time_en": "~2 min read",
+    "word_count": 840,
+    "sources": [
+      {
+        "text": "TechCrunch - Meta is paying to peek at how you use their latest AI model",
+        "url": "https://techcrunch.com/2026/09/03/meta-is-paying-to-peek-at-how-you-use-their-latest-ai-model/"
+      }
+    ],
+    "body_html": "<p>95%的折扣，从来不是白给的。</p>\n      <p>Meta为旗下编码与agent模型Muse Spark上线了\"贡献者定价\"：输入token每百万<strong>0.1美元</strong>、输出token每百万<strong>0.2美元</strong>——对照标准价的1.25美元与4.25美元，价差约12倍与21倍，按TechCrunch的算法约等于95%折扣。折扣的条件只有一行：接受这个价格，即同意Meta将你的数据用于模型训练。</p>\n      <h2>定价表里藏着一行小字</h2>\n      <p>这套机制的聪明之处在于\"自愿\"：没有人被强制收集数据，交换以折扣形式摆在台面上。但对预算敏感的开发者与初创团队，0.1美元的输入价几乎无法拒绝——尤其当隔壁标准价是1.25美元。敏感数据、客户代码、商业机密，每一项都得在\"省钱\"与\"交出去\"之间重新称重。TechCrunch还提到一个背景：Meta内部一个员工追踪项目已于6月被暂停——这家公司对\"数据来源\"的胃口，由来已久。</p>\n      <h2>为什么开发者数据突然值钱了</h2>\n      <p>两个署名观点值得听。普林斯顿计算机科学家Arvind Narayanan的判断是：企业客户宁可买贵的Enterprise版本，也不愿把内部数据交出去——这意味着贡献者定价瞄准的是另一群人：独立开发者、学生、小团队。开发者Mario Zechner则从另一面论证了这门生意的逻辑：Claude Code等编码工具的成功，已经证明真实开发者数据驱动强化学习的价值。换句话说，你的终端命令与代码上下文，在2026年的估值体系里，已是接近燃料级的资产。</p>\n      <h2>一场自愿的交易，一个岔路口</h2>\n      <p>\"以折扣换数据\"最深远的影响，是把数据获取从灰色地带拉进了明码标价：行业第一次有了公开价签——你的代码，值95%的账单减免。它比爬虫体面，比授权付费便宜，大概率会被同行抄走。但对个体开发者，岔路口上真正的问题是：当模型公司愿意付\"负价格\"买你的数据时，你的数据到底值多少？95%折扣给出的，只是下限。</p>\n      <p>明码标价不是终点，是讨价还价的开始。</p>\n      <p>明天见。</p>",
+    "body_html_en": "<p>A 95% discount is never free.</p>\n      <p>Meta has rolled out \"contributor pricing\" for its coding and agent model Muse Spark: <strong>$0.10 per million input tokens</strong> and <strong>$0.20 per million output tokens</strong> — against list prices of $1.25 and $4.25, gaps of roughly 12x and 21x, or about a 95% discount by TechCrunch's math. The condition fits on one line: accept this price, and you consent to Meta training on your data.</p>\n      <h2>The fine print on the price sheet</h2>\n      <p>The mechanism's cleverness lies in \"voluntary\": nobody is forcibly collected from; the trade sits openly on the table as a discount. But for budget-sensitive developers and startups, $0.10 input pricing is nearly irresistible — especially with $1.25 on the next shelf. Sensitive data, client code, trade secrets — each now needs re-weighing between \"saving money\" and \"handing it over.\" TechCrunch adds context: an internal Meta employee-tracking project was paused in June — this company's appetite for \"data sources\" is of long standing.</p>\n      <h2>Why developer data suddenly became precious</h2>\n      <p>Two named takes are worth hearing. Princeton computer scientist Arvind Narayanan's judgment: enterprise customers would rather buy the pricier Enterprise tier than hand over internal data — which means contributor pricing targets a different crowd: independent developers, students, small teams. Developer Mario Zechner argues the other side of the business: the success of coding tools like Claude Code has already proven the value of real developer data for driving reinforcement learning. Your terminal commands and code context, in 2026's valuation system, are fuel-grade assets.</p>\n      <h2>A voluntary trade at a fork</h2>\n      <p>The deepest impact of \"discount-for-data\" is dragging data acquisition out of the grey zone and into listed prices: the industry's first public tag — your code, worth a 95% reduction on the bill. It is more decent than scraping and cheaper than licensing, and competitors will surely copy it. But for the individual developer, the real question at the fork: when a model company is willing to pay a negative price for your data, what is your data actually worth? The 95% discount marks only the floor.</p>\n      <p>Listed prices aren't the end of negotiation — they're the start.</p>\n      <p>See you tomorrow.</p>",
+    "pull_quote": {
+      "text": "折扣是明码的，数据是暗码的——现在两者印在同一张价签上。",
+      "text_en": "The discount is priced in the open; the data isn't — now both are printed on the same price tag.",
+      "attr": "—— Dawn Vision编辑部",
+      "attr_en": "— The Dawn Vision Editorial Desk"
+    },
+    "cognitive_notes": "Meta为Muse Spark（coding/agents模型）推出贡献者定价 · $0.10/M输入（标准$1.25）、$0.20/M输出（标准$4.25），价差约12倍（输入）/21倍（输出），TechCrunch计算口径约95%折扣 · 条款：接受定价即同意数据用于模型训练 · 背景：Meta内部员工追踪项目6月被暂停（TechCrunch口径） · 观点：Arvind Narayanan（普林斯顿）——企业宁买Enterprise不交数据；Mario Zechner——Claude Code成功证明真实开发者数据驱动RL的价值 · 机制为自愿交换，非强制收集",
+    "cognitive_notes_en": "Meta launches contributor pricing for Muse Spark (coding/agents model) · $0.10/M input (list $1.25), $0.20/M output (list $4.25); gaps ~12x input / 21x output; ~95% discount by TechCrunch's math · Terms: accepting the price means consenting to training on your data · Context: internal Meta employee-tracking project paused in June (TechCrunch) · Takes: Arvind Narayanan (Princeton) — enterprises prefer pricey Enterprise tiers over surrendering data; Mario Zechner — Claude Code's success proves real developer data drives RL · Mechanism is a voluntary trade, not forced collection",
+    "source_summary": "本文基于 Dawn Vision 认知引擎处理当日采集信号并核对核心来源后生成，经编辑部人工审核。素材来源：TechCrunch原文（定价数字、条款机制、Narayanan与Zechner观点、员工追踪项目背景）。95%折扣为TechCrunch计算口径，正文同时给出两档价格原文；机制为'可选择换折扣'，正文未作'强制收集'表述。",
+    "source_summary_en": "This article was generated by the Dawn Vision cognitive engine processing collected daily signals against the core source, followed by human editorial review. Source: TechCrunch original (pricing figures, terms mechanism, Narayanan and Zechner quotes, employee-tracking context). The 95% discount is TechCrunch's calculated framing; both list prices are given in text. The mechanism is an opt-in trade; no 'forced collection' claim is made.",
+    "category": "AI 商业化 · 行业观察",
+    "category_en": "AI Business · Industry Watch"
+  },
+  {
+    "slug": "armature-17k-sessions-how-agents-really-pick-tools",
+    "title": "1.7万次实测拆穿直觉：AI agent选工具，不看星标看文档",
+    "title_en": "17,000 Sessions Debunk the Hunch: AI Agents Pick Tools by Docs, Not Stars",
+    "title_break": "16,893次会话实测：agent如何选工具<br>LangChain被提194次仅4次被选；Stripe拿下90%胜率",
+    "title_break_en": "16,893 Sessions on How Agents Pick Tools<br>LangChain Mentioned 194 Times, Chosen 4; Stripe Wins 90%",
+    "deck": "Armature用16,893次真实会话测了三个AI agent怎么选工具：三类agent只在42%的任务类别里选中同一工具；LangChain被提及194次、只有4次被选，Stripe则拿下90%胜率。社区声量与agent的投票，是两张完全不同的榜。",
+    "deck_en": "Armature ran 16,893 real sessions to see how three AI agents pick tools: the three agents agreed on the same tool in only 42% of task categories; LangChain was mentioned 194 times but chosen 4, while Stripe won 90% of payments tasks. Community buzz and agent votes are two different leaderboards.",
+    "keywords": "Dawn Vision,Armature,AI agent,工具选择,Claude Code,Codex,Cursor,LangChain,Stripe,Neon,开发者生态",
+    "keywords_en": "Dawn Vision,Armature,AI agents,tool selection,Claude Code,Codex,Cursor,LangChain,Stripe,Neon,developer ecosystem",
+    "og_description": "Armature 16,893次会话实测：三类AI agent仅42%类别选中同一工具；LangChain提及194次仅4次被选，Paypal提及139次0次被选；Stripe胜率90%。agent选型看的是运行时验证，不是社区声量。",
+    "og_description_en": "Armature's 16,893-session study: three AI agents agreed on tools in only 42% of task categories; LangChain mentioned 194 times, chosen 4; PayPal mentioned 139 times, chosen 0; Stripe won 90%. Agents pick by runtime verification, not community buzz.",
+    "read_time": "约 4 分钟阅读",
+    "read_time_en": "~2 min read",
+    "word_count": 870,
+    "sources": [
+      {
+        "text": "Armature - Which tools do coding agents actually install?（16,893 sessions研究原文）",
+        "url": "https://armature.tech/blog/which-tools-coding-agents-install"
+      }
+    ],
+    "body_html": "<p>被提及194次，被选择4次。</p>\n      <p>AI编程工具Armature发布了一项大样本研究：<strong>16,893次</strong>真实会话（其中5292次有效），覆盖1163个prompt变体、75个代码库、10种语言，让Claude Code、Codex与Cursor三个agent在真实任务里自选第三方工具，Gemini 3.7 Flash担任编排与评审。它回答了一个此前从没被数据回答过的问题：AI agent到底怎么选工具？</p>\n      <h2>方法：让agent自己投票</h2>\n      <p>实验设计相当克制：不预设正确答案，只记录agent在搭建支付、数据库、文件存储、邮件等真实集成任务中的搜索、试错与最终选择。先导发现是行为差异——<strong>Codex有94%的会话用web搜索</strong>，其中九成会加site:操作符定向；Cursor约三分之二用web；Claude Code只有30%用web、但浏览的页面数是别人的3倍，遇到sandbox这类新领域时比例升至80%。三个agent合起来，只在<strong>42%</strong>的任务类别里选中了同一个工具。</p>\n      <h2>声量与得票，是两张榜</h2>\n      <p>最扎眼的是\"提及量\"与\"得票率\"的剪刀差：LangChain在对话中被提及194次，最终只有4次被选；Paypal被提及139次、<strong>0次</strong>被选——同场景下Stripe赢下124次，支付类胜率90%；Netlify提及152次、6次被选；Supabase被提及242次，却在数据库类被Neon压制（胜率66%）。邮件类里Resend拿35.6%，Postmark 27.4%。还有一个例外值得玩味：Claude Code有<strong>19%</strong>的任务选择自建方案，Codex与Cursor只有10%—— Sometimes自己动手，胜过任何第三方。</p>\n      <h2>agent的选型逻辑：运行时验证</h2>\n      <p>数据指向一个朴素结论：星标与提及量影响的是训练语料，而agent做决定时更依赖运行时验证——文档能不能读懂、示例能不能直接跑、试错成本高不高。声量大的项目未必赢，文档工程好的项目开始赢。对开发者生态，这是一次选型权重的重估：为agent写作的文档，正在变成新的分发渠道。对那些\"被提及却不被选\"的项目，问题不在营销，而在于agent上手的那十分钟里，你给它的体验是什么。</p>\n      <p>agent不投票给声量，投票给它跑得通的东西。</p>\n      <p>明天见。</p>",
+    "body_html_en": "<p>Mentioned 194 times. Chosen 4.</p>\n      <p>AI coding toolmaker Armature published a large-sample study: <strong>16,893</strong> real sessions (5,292 valid), spanning 1,163 prompt variants, 75 codebases and 10 languages, letting Claude Code, Codex and Cursor choose third-party tools on real tasks, with Gemini 3.7 Flash orchestrating and judging. It answers a question no dataset had answered before: how do AI agents actually pick tools?</p>\n      <h2>Method: let the agents vote</h2>\n      <p>The design is restrained: no correct answers are presumed; the study merely logs how agents search, trial and finally choose while building real integrations — payments, databases, file storage, email. A preliminary finding is behavioral divergence: <strong>Codex used web search in 94% of sessions</strong>, with site: operators in nine out of ten; Cursor used web about two-thirds of the time; Claude Code used web only 30% of the time but browsed 3x as many pages, rising to 80% on novel domains like sandbox. Across all three, agents agreed on the same tool in only <strong>42%</strong> of task categories.</p>\n      <h2>Buzz and votes are different leaderboards</h2>\n      <p>The starkest gap sits between mentions and wins: LangChain was mentioned 194 times in conversation, finally chosen 4; PayPal mentioned 139 times, chosen <strong>0</strong> — in the same scenarios Stripe won 124 times, a 90% payments win rate; Netlify was mentioned 152 times, chosen 6; Supabase, mentioned 242 times, got squeezed in databases by Neon (66% win rate). In email, Resend took 35.6% against Postmark's 27.4%. One exception is worth savoring: Claude Code built its own solution in <strong>19%</strong> of tasks, versus 10% for Codex and Cursor — sometimes doing it yourself beats any third party.</p>\n      <h2>The agents' logic: runtime verification</h2>\n      <p>The data points to a plain conclusion: stars and mentions shape the training corpus, but agents decide on runtime verification — can the docs be parsed, do the examples actually run, how expensive is trial and error. Loud projects don't necessarily win; well-documented projects start to. For the developer ecosystem, this re-weights tool selection: docs written for agents are becoming a new distribution channel. For the mentioned-but-not-chosen, the problem isn't marketing — it's the ten-minute first-run experience you hand the agent.</p>\n      <p>Agents don't vote for buzz. They vote for what they can make run.</p>\n      <p>See you tomorrow.</p>",
+    "pull_quote": {
+      "text": "训练语料记住谁被谈论，运行时验证决定谁被安装——agent把这两张榜拆开了。",
+      "text_en": "Training corpora remember who gets talked about; runtime verification decides who gets installed. Agents just split the two leaderboards.",
+      "attr": "—— Dawn Vision编辑部",
+      "attr_en": "— The Dawn Vision Editorial Desk"
+    },
+    "cognitive_notes": "Armature 16,893 sessions实测（5292有效）、1163 prompt变体、75代码库、10语言 · 3个agent：Claude Code/Codex/Cursor，Gemini 3.7 Flash任orchestrator+judge · 搜索行为：Codex 94%用web（9/10用site:）；Cursor约2/3用web；Claude Code 30%用web但浏览页面3倍（sandbox新领域升至80%） · 一致性：三agent仅42%任务类别选同一工具 · 剪刀差：LangChain提及194次仅4次被选；Paypal提及139次0次被选（Stripe赢124次，支付胜率90%）；Netlify 152次仅6次；Supabase 242次被Neon压制（66%） · 邮件：Resend 35.6% vs Postmark 27.4% · 自建：Claude Code 19% vs Codex/Cursor 10%",
+    "cognitive_notes_en": "Armature's 16,893-session study (5,292 valid), 1,163 prompt variants, 75 codebases, 10 languages · Three agents: Claude Code / Codex / Cursor, with Gemini 3.7 Flash as orchestrator + judge · Search behavior: Codex 94% web (site: in 9/10); Cursor ~2/3 web; Claude Code 30% web but 3x pages (up to 80% on novel domains like sandbox) · Consistency: same tool chosen in only 42% of task categories · Buzz-vs-votes gap: LangChain 194 mentions / 4 chosen; PayPal 139 / 0 (Stripe won 124, 90% payments win rate); Netlify 152 / 6; Supabase 242 mentions, squeezed by Neon (66%) · Email: Resend 35.6% vs Postmark 27.4% · Self-build: Claude Code 19% vs Codex/Cursor 10%",
+    "source_summary": "本文基于 Dawn Vision 认知引擎处理当日采集信号并核对一手研究后生成，经编辑部人工审核。素材来源：Armature研究原文（全部数据与方法论），Hacker News社区讨论（160分热度，未作数据来源）。全部数字来自一手研究，方法与样本量已在正文标注；Hacker News仅作传播热度背景。",
+    "source_summary_en": "This article was generated by the Dawn Vision cognitive engine processing collected daily signals against the primary research, followed by human editorial review. Source: Armature's original study (all figures and methodology); Hacker News discussion (160-point heat) served only as distribution context. All numbers come from the primary research, with method and sample size labeled in the text.",
+    "category": "AI 编程 · 工具竞争",
+    "category_en": "AI Coding · Tool Race"
+  }
+]

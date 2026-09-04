@@ -275,6 +275,12 @@ def validate_file(filepath, copy=True):
         print(f"JSON 解析失败: {filepath.name} — {e}")
         return False
 
+    # 中间片段文件（briefs-part、partial、独立 cao 等）可能是 list 或缺 issue 键，
+    # 不属于完整 issue，跳过而非崩溃
+    if not isinstance(data, dict) or 'issue' not in data:
+        print(f"⏭  跳过非完整 issue 文件: {filepath.name}")
+        return True
+
     ok = validate_issue(data, filepath)
 
     if ok and copy:
@@ -284,8 +290,10 @@ def validate_file(filepath, copy=True):
 
 
 def validate_all(copy=True):
-    """校验 data/ 目录下所有 issue 文件"""
-    files = sorted(DATA_DIR.glob("issue-*.json"))
+    """校验 data/ 目录下所有完整 issue 文件（严格命名 issue-NNN.json，排除片段/中间文件）"""
+    all_candidates = sorted(DATA_DIR.glob("issue-*.json"))
+    # 仅保留严格命名的完整期文件 issue-<数字>.json，排除 -partial / -briefs-partN / -cao 等中间片段
+    files = [f for f in all_candidates if re.fullmatch(r'issue-\d+\.json', f.name)]
     if not files:
         print(f"未找到 issue 文件: {DATA_DIR}/issue-*.json")
         return False

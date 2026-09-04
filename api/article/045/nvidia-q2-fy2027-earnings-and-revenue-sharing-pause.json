@@ -1,0 +1,37 @@
+{
+  "slug": "nvidia-q2-fy2027-earnings-and-revenue-sharing-pause",
+  "title": "英伟达Q2营收962亿美元再破纪录：增长的B面，是一场被暂停的分成实验",
+  "title_short": "英伟达Q2财报与分成暂停",
+  "title_break": "英伟达Q2营收962亿美元<br>数据中心890亿再超预期；同周WSJ曝：AI云收入分成计划已暂停",
+  "deck": "8月27日盘后，英伟达交出FY2027 Q2成绩单：营收962亿美元、同比翻倍，数据中心890亿，Vera Rubin全面投产。同周《华尔街日报》报道，其面向AI云厂商的收入分成计划已于上周暂停——最强财报与最敏感的模式实验，同周上演。",
+  "keywords": "Dawn Vision,英伟达,NVIDIA,Q2 FY2027,财报,数据中心,Vera Rubin,Blackwell,收入分成,WSJ,反垄断,AI云",
+  "og_description": "英伟达Q2 FY2027营收962亿美元、同比增长106%，数据中心890亿、同比增长117%；Vera Rubin全面投产。同周《华尔街日报》报道其暂停面向AI云厂商的收入分成计划。",
+  "twitter_description": "962亿美元营收、106%增速、Vera Rubin全面投产；同周WSJ曝收入分成计划暂停。英伟达的A面与B面。",
+  "read_time": "约 10 分钟阅读",
+  "word_count": 2180,
+  "cognitive_notes": "英伟达Q2 FY2027（截至2026-07-26） · 营收962亿美元(+106% YoY, +18% QoQ) · 数据中心890亿(+117%) · GAAP/非GAAP毛利率均75.0% · GAAP净利597亿 · GAAP EPS 2.46美元/非GAAP 2.22 · Q3指引1080亿 · 本季股东返还260亿 · 黄仁勋'Compute is revenue' · Blackwell需求'really extraordinary' · Vera Rubin全面投产 · Vera CPU'首款为AI agent打造的CPU' · WSJ报道(8/27)：上周暂停收入分成计划，条款含'只租给经批准客户/算力分散给小型AI公司'，内部担心反垄断风险，不排除调整后重启 · 大摩首次信用覆盖：中性评级，'资产负债表即服务'质疑",
+  "source_summary": "本文基于 Dawn Vision 认知引擎对当日信号的交叉验证生成。财务数据全部来自英伟达官方财报新闻稿（一手来源）；收入分成计划暂停为《华尔街日报》8月27日报道口径（经电子工程专辑、Channel NewsAsia等多家媒体转引确认），非公司官方公告，正文已明确标注；摩根士丹利信用覆盖相关表述来自新浪财经转引报道。全文未引用精确盘中股价数字。",
+  "body_html": "<p>962亿美元。8月27日美股盘后，英伟达公布2027财年第二季度（截至7月26日）财报：<strong>营收962亿美元，同比增长106%、环比增长18%</strong>；数据中心业务单季<strong>890亿美元，同比增长117%</strong>——一年前，总营收还只有467亿。数字本身没有悬念，悬念在同一天晚些时候到来：《华尔街日报》报道称，这家公司上周悄悄暂停了一项面向AI云服务商的收入分成计划。史上最猛的财报，和一次最敏感的商业模式急刹车，发生在同一周。</p>\n<h2>成绩单：千亿门槛前的一个季度</h2>\n<p>先把硬数字过一遍：<strong>GAAP与非GAAP毛利率均为75.0%</strong>；GAAP净利润<strong>597亿美元</strong>，GAAP摊薄每股收益<strong>2.46美元</strong>（non-GAAP每股2.22美元）。管理层给出的下一季度营收指引是<strong>1080亿美元</strong>——按这个斜率，单季千亿美元营收的门槛，就站在下个季度门口。本季度公司还向股东返还了<strong>260亿美元</strong>，回购加分红的力度同样在刷新自己的纪录。算一笔结构账：数据中心已占总营收的<strong>九成以上</strong>，这家公司的命运曲线，和全球AI算力开支几乎是同一条线。</p>\n<h2>黄仁勋的两句话</h2>\n<p>财报声明里，黄仁勋留了两句值得抄录的话。第一句：<strong>“Compute is revenue”（算力即收入）</strong>——把算力采购直接等同于收入创造的叙事，既说给客户听，也说给华尔街听。第二句是对Blackwell需求的形容：<strong>“really extraordinary”（真的非同寻常）</strong>。产品面上的注脚更硬：下一代<strong>Vera Rubin平台已进入全面投产</strong>（full production），配套的Vera CPU被定位为“首款为AI agent打造的CPU”。注意这个措辞——芯片公司的产品定义已经开始围着agent转，AI agent正在从软件叙事变成硬件设计目标，这是比任何一句口号都诚实的行业信号。</p>\n<h2>B面：被按下暂停键的分成实验</h2>\n<p>然后是这条真正值得展开的新闻。《华尔街日报》8月27日援引知情人士报道称，英伟达已于<strong>上周暂停</strong>一项面向AI云服务商的融资安排：原方案是由英伟达向云厂商<strong>提供信用支持，换取其云业务的营收分成</strong>。报道披露的条款细节颇具想象力——芯片<strong>只租给“经批准的客户”</strong>，并要求<strong>把算力分散给多家小型AI公司</strong>使用。促使暂停的原因，据称是内部员工担忧该模式可能招致<strong>反垄断审查</strong>，对公司“向客户施加经营控制的边界”也存在顾虑。必须强调：以上均为<strong>WSJ报道口径，并非公司官方公告</strong>；据知情人士说法，英伟达不排除调整方案后重启，或将其并入其他计划。</p>\n<h2>“资产负债表即服务”的质疑</h2>\n<p>同周还有一条容易被忽略的动态：据新浪财经转引的报道，摩根士丹利首次启动对英伟达的信用研究覆盖，给出<strong>中性评级</strong>，并警告这家公司正在把资产负债表转化为战略性的AI融资工具——也就是被质疑为<strong>“资产负债表即服务”</strong>的模式。把两条新闻放在一起，画面就完整了：当最大的芯片供应商同时扮演自己客户的融资方，<strong>收入的“成色”问题</strong>——有多少需求是被自家的信用支持催生出来的——就成了损益表之外必须追问的变量。历史上，电信设备与光伏行业都上演过“供应商加杠杆撑起客户需求”的剧本，结局参半。而这次主动暂停，至少说明公司自己也在重新掂量这条边界。</p>\n<h2>为什么B面比A面更值得盯</h2>\n<p>A面无需多虑：需求真实、指引清晰、客户排队，1080亿的指引摆在那里。值得盯住的是B面的两个长期变量。其一，<strong>厂商融资的闭环到底有多大</strong>——分成计划是暂停不是终止，换一种更收敛的形态卷土重来的概率不低；届时真正该看的不是营收第一行，而是应收账款、合同条款和现金流的附注。其二，<strong>反垄断的边界划在哪里</strong>——“只租给经批准的客户”已经不是销售行为，而是产业链控制；监管对这类安排的容忍度，将决定算力巨头商业模式的半径。千亿门槛很亮，但英伟达的下一阶段故事，多半写在财报附注里，而不是新闻标题里。</p>\n<p>明天见。</p>",
+  "pull_quote": {
+    "text": "千亿门槛很亮，但英伟达的下一阶段故事，多半写在财报附注里。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "sources": [
+    {
+      "text": "NVIDIA Newsroom - Q2 FY2027 财报新闻稿（官方一手来源）",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027"
+    },
+    {
+      "text": "新浪财经 - 英伟达暂停收入分成协议 与 大摩信用覆盖（转引华尔街日报）",
+      "url": "https://finance.sina.com.cn/stock/t/2026-08-28/doc-inipvmmz8992179.shtml"
+    },
+    {
+      "text": "金融界 - 英伟达暂停部分AI云服务商收益分成合作，推出不足两个月（转引WSJ）",
+      "url": "http://m.toutiao.com/group/7678914222620721690/"
+    },
+    {
+      "text": "Wccftech - NVIDIA Quietly Freezes Its Cloud Credit Support Deals",
+      "url": "https://wccftech.com/nvidia-quietly-freezes-its-cloud-credit-support-deals-after-internal-talks-warn-of-antitrust-exposure/"
+    }
+  ]
+}

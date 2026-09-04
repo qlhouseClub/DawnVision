@@ -1,0 +1,24 @@
+{
+  "slug": "armature-17k-sessions-how-agents-really-pick-tools",
+  "title": "1.7万次实测拆穿直觉：AI agent选工具，不看星标看文档",
+  "title_break": "16,893次会话实测：agent如何选工具<br>LangChain被提194次仅4次被选；Stripe拿下90%胜率",
+  "deck": "Armature用16,893次真实会话测了三个AI agent怎么选工具：三类agent只在42%的任务类别里选中同一工具；LangChain被提及194次、只有4次被选，Stripe则拿下90%胜率。社区声量与agent的投票，是两张完全不同的榜。",
+  "keywords": "Dawn Vision,Armature,AI agent,工具选择,Claude Code,Codex,Cursor,LangChain,Stripe,Neon,开发者生态",
+  "og_description": "Armature 16,893次会话实测：三类AI agent仅42%类别选中同一工具；LangChain提及194次仅4次被选，Paypal提及139次0次被选；Stripe胜率90%。agent选型看的是运行时验证，不是社区声量。",
+  "read_time": "约 4 分钟阅读",
+  "word_count": 870,
+  "sources": [
+    {
+      "text": "Armature - Which tools do coding agents actually install?（16,893 sessions研究原文）",
+      "url": "https://armature.tech/blog/which-tools-coding-agents-install"
+    }
+  ],
+  "body_html": "<p>被提及194次，被选择4次。</p>\n      <p>AI编程工具Armature发布了一项大样本研究：<strong>16,893次</strong>真实会话（其中5292次有效），覆盖1163个prompt变体、75个代码库、10种语言，让Claude Code、Codex与Cursor三个agent在真实任务里自选第三方工具，Gemini 3.7 Flash担任编排与评审。它回答了一个此前从没被数据回答过的问题：AI agent到底怎么选工具？</p>\n      <h2>方法：让agent自己投票</h2>\n      <p>实验设计相当克制：不预设正确答案，只记录agent在搭建支付、数据库、文件存储、邮件等真实集成任务中的搜索、试错与最终选择。先导发现是行为差异——<strong>Codex有94%的会话用web搜索</strong>，其中九成会加site:操作符定向；Cursor约三分之二用web；Claude Code只有30%用web、但浏览的页面数是别人的3倍，遇到sandbox这类新领域时比例升至80%。三个agent合起来，只在<strong>42%</strong>的任务类别里选中了同一个工具。</p>\n      <h2>声量与得票，是两张榜</h2>\n      <p>最扎眼的是\"提及量\"与\"得票率\"的剪刀差：LangChain在对话中被提及194次，最终只有4次被选；Paypal被提及139次、<strong>0次</strong>被选——同场景下Stripe赢下124次，支付类胜率90%；Netlify提及152次、6次被选；Supabase被提及242次，却在数据库类被Neon压制（胜率66%）。邮件类里Resend拿35.6%，Postmark 27.4%。还有一个例外值得玩味：Claude Code有<strong>19%</strong>的任务选择自建方案，Codex与Cursor只有10%—— Sometimes自己动手，胜过任何第三方。</p>\n      <h2>agent的选型逻辑：运行时验证</h2>\n      <p>数据指向一个朴素结论：星标与提及量影响的是训练语料，而agent做决定时更依赖运行时验证——文档能不能读懂、示例能不能直接跑、试错成本高不高。声量大的项目未必赢，文档工程好的项目开始赢。对开发者生态，这是一次选型权重的重估：为agent写作的文档，正在变成新的分发渠道。对那些\"被提及却不被选\"的项目，问题不在营销，而在于agent上手的那十分钟里，你给它的体验是什么。</p>\n      <p>agent不投票给声量，投票给它跑得通的东西。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "训练语料记住谁被谈论，运行时验证决定谁被安装——agent把这两张榜拆开了。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Armature 16,893 sessions实测（5292有效）、1163 prompt变体、75代码库、10语言 · 3个agent：Claude Code/Codex/Cursor，Gemini 3.7 Flash任orchestrator+judge · 搜索行为：Codex 94%用web（9/10用site:）；Cursor约2/3用web；Claude Code 30%用web但浏览页面3倍（sandbox新领域升至80%） · 一致性：三agent仅42%任务类别选同一工具 · 剪刀差：LangChain提及194次仅4次被选；Paypal提及139次0次被选（Stripe赢124次，支付胜率90%）；Netlify 152次仅6次；Supabase 242次被Neon压制（66%） · 邮件：Resend 35.6% vs Postmark 27.4% · 自建：Claude Code 19% vs Codex/Cursor 10%",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理当日采集信号并核对一手研究后生成，经编辑部人工审核。素材来源：Armature研究原文（全部数据与方法论），Hacker News社区讨论（160分热度，未作数据来源）。全部数字来自一手研究，方法与样本量已在正文标注；Hacker News仅作传播热度背景。",
+  "category": "AI 编程 · 工具竞争"
+}

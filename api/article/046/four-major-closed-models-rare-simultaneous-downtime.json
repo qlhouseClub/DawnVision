@@ -1,0 +1,28 @@
+{
+  "slug": "four-major-closed-models-rare-simultaneous-downtime",
+  "title": "ChatGPT、Claude、Grok、Gemini同日集体宕机：闭源世界的单点时刻",
+  "title_break": "四大闭源模型同日集体宕机<br>3小时40分钟、超1.4万份报告；根因各说各话",
+  "deck": "9月3日上午（美东），ChatGPT、Claude、Grok、Gemini四大闭源服务罕见同一时段中断：Anthropic最先在9:23报告，OpenAI 10:43跟进，Downdetector合计涌入超1.4万份故障报告。官方根因各说各话，'共享基础设施'的推测无人认领。",
+  "keywords": "Dawn Vision,宕机,ChatGPT,Claude,Grok,Gemini,Downdetector,集中度风险,基础设施,路由错误",
+  "og_description": "9月3日美东上午，ChatGPT、Claude、Grok、Gemini四大闭源AI服务罕见同一时段中断，全程约3小时40分钟，Downdetector超1.4万份报告；OpenAI称路由错误，Anthropic称基础设施问题。",
+  "read_time": "约 4 分钟阅读",
+  "word_count": 860,
+  "sources": [
+    {
+      "text": "Ars Technica - Four major AI models suffer rare overlapping downtime",
+      "url": "https://arstechnica.com/gadgets/2026/09/four-major-ai-models-suffer-rare-overlapping-downtime/"
+    },
+    {
+      "text": "The Verge - ChatGPT, Claude, Grok and Gemini are down",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/989503/chatgpt-grok-claude-outage-down"
+    }
+  ],
+  "body_html": "<p>1.4万份报告，3小时40分钟，四家一起趴下。</p>\n      <p>9月3日上午（美东时间），ChatGPT、Claude、Grok、Gemini——人们日常最常用的四个闭源AI服务——罕见地在同一时段中断。Ars Technica的形容是\"practically unheard of\"（几乎闻所未闻）。对普通用户这只是一次闹脾气，对把整个工作流押在这四家身上的团队，这是一场没有预案的压力测试。</p>\n      <h2>时间线：从9:23到12:55</h2>\n      <p>Anthropic最先出事，也最先报告：<strong>9:23 AM ET</strong>，状态页显示Claude Mythos 5.1、Fable 5.1与Opus 5部分中断，Sonnet 5出现短暂异常；<strong>12:16 PM恢复</strong>。OpenAI在<strong>10:43</strong>跟进，报告ChatGPT与Codex错误率升高，12:55恢复。Grok的曲线更陡：Downdetector报告数从9点的不及10份，45分钟内冲到1365份；Gemini从10:30的23份涨到11点后的412份，StatusGator显示其API在10:45至11:15间处于疑似中断。中文监测口径下，Downdetector的OpenAI相关报告超过1.2万份，Claude约1200份，Grok约1000份，合计超1.4万份——Cursor等下游编程工具也随之连坐。</p>\n      <h2>根因各说各话，推测无人认领</h2>\n      <p>直到全部恢复，也没有一份联合解释。OpenAI的说法是<strong>路由错误（routing error）</strong>；Anthropic的说法是<strong>基础设施问题</strong>——两家口径不同，也都没有指向任何第三方。外界注意到，AWS、Azure、Cloudflare当天均未报告重大故障，于是\"四家共用底层基础设施\"的推测在社交平台流传；但目前没有任何一方确认共同根因，这个说法只能停在推测。值得记下的背景是：Claude过去90天的正常运行率为99.4%，ChatGPT为99.63%——这次\"几乎闻所未闻\"，恰恰发生在各家可靠性最好的时期。</p>\n      <h2>真正的考题：集中度</h2>\n      <p>这次事故真正的信息量不在故障本身，而在故障的形状：不是一家出事，而是四家同时出事。过去两年，把工作流押进闭源模型的企业与开发者只增不减，\"模型即供应商\"的集中度一路抬升；当最头部的四家在同一分钟失联，\"换一家\"这个从容的备选项第一次集体失效。宕机总会发生，真正的问题是：当它以\"集体\"的形式发生时，你的降级方案里还剩下谁？</p>\n      <p>答案应该在事故前就写好——3小时40分钟，足够每个团队补一课。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "当四家最头部的能力供应商在同一分钟失联，\"换一家\"这个选项第一次集体失效。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "9月3日美东上午四大闭源服务罕见重叠宕机 · Anthropic 9:23 AM ET最先报告（Claude Mythos 5.1/Fable 5.1/Opus 5部分中断，Sonnet 5短暂异常），12:16恢复 · OpenAI 10:43报告ChatGPT与Codex elevated errors，12:55恢复 · Grok Downdetector从<10（9AM）涨至1365（9:45）；Gemini从23（10:30）涨至412（11AM+），StatusGator显示Gemini API 10:45-11:15 likely outage · 中文口径：OpenAI超1.2万份、Claude约1200、Grok约1000，合计超1.4万份；全程约3小时40分钟 · Cursor等下游工具连带 · 根因：OpenAI 'routing error'，Anthropic 'infrastructure issue'；AWS/Azure/Cloudflare均无重大故障报告；共享基础设施推测无确认 · 可靠性背景：Claude 90天99.4%，ChatGPT 99.63%",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理当日采集信号并交叉验证 2 个核心来源后生成，经编辑部人工审核。素材来源：Ars Technica（时间线与\"几乎闻所未闻\"定性）、The Verge（各服务状态页口径）；Downdetector中文监测数据来自中文媒体转述口径。各官方根因说法不同，正文未合并为单一结论。",
+  "category": "算力基建 · 基础设施"
+}

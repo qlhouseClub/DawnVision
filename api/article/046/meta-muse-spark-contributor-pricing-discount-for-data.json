@@ -1,0 +1,24 @@
+{
+  "slug": "meta-muse-spark-contributor-pricing-discount-for-data",
+  "title": "Meta推出贡献者定价：95%折扣，换你的代码进训练集",
+  "title_break": "Meta为Muse Spark推出贡献者定价<br>输入$0.10/M；折扣的代价是数据进训练集",
+  "deck": "Meta为编码与agent模型Muse Spark推出'贡献者定价'：输入每百万token 0.1美元、输出0.2美元，约为标准价的5%。代价写在同一页上：接受折扣，即同意Meta将你的数据用于模型训练。",
+  "keywords": "Dawn Vision,Meta,Muse Spark,贡献者定价,训练数据,95%折扣,数据换折扣,商业化",
+  "og_description": "Meta为Muse Spark推出贡献者定价：输入$0.10/M、输出$0.20/M，约为标准价5%，代价是数据被用于训练。'以折扣换数据'成为明码标价的新模式。",
+  "read_time": "约 4 分钟阅读",
+  "word_count": 840,
+  "sources": [
+    {
+      "text": "TechCrunch - Meta is paying to peek at how you use their latest AI model",
+      "url": "https://techcrunch.com/2026/09/03/meta-is-paying-to-peek-at-how-you-use-their-latest-ai-model/"
+    }
+  ],
+  "body_html": "<p>95%的折扣，从来不是白给的。</p>\n      <p>Meta为旗下编码与agent模型Muse Spark上线了\"贡献者定价\"：输入token每百万<strong>0.1美元</strong>、输出token每百万<strong>0.2美元</strong>——对照标准价的1.25美元与4.25美元，价差约12倍与21倍，按TechCrunch的算法约等于95%折扣。折扣的条件只有一行：接受这个价格，即同意Meta将你的数据用于模型训练。</p>\n      <h2>定价表里藏着一行小字</h2>\n      <p>这套机制的聪明之处在于\"自愿\"：没有人被强制收集数据，交换以折扣形式摆在台面上。但对预算敏感的开发者与初创团队，0.1美元的输入价几乎无法拒绝——尤其当隔壁标准价是1.25美元。敏感数据、客户代码、商业机密，每一项都得在\"省钱\"与\"交出去\"之间重新称重。TechCrunch还提到一个背景：Meta内部一个员工追踪项目已于6月被暂停——这家公司对\"数据来源\"的胃口，由来已久。</p>\n      <h2>为什么开发者数据突然值钱了</h2>\n      <p>两个署名观点值得听。普林斯顿计算机科学家Arvind Narayanan的判断是：企业客户宁可买贵的Enterprise版本，也不愿把内部数据交出去——这意味着贡献者定价瞄准的是另一群人：独立开发者、学生、小团队。开发者Mario Zechner则从另一面论证了这门生意的逻辑：Claude Code等编码工具的成功，已经证明真实开发者数据驱动强化学习的价值。换句话说，你的终端命令与代码上下文，在2026年的估值体系里，已是接近燃料级的资产。</p>\n      <h2>一场自愿的交易，一个岔路口</h2>\n      <p>\"以折扣换数据\"最深远的影响，是把数据获取从灰色地带拉进了明码标价：行业第一次有了公开价签——你的代码，值95%的账单减免。它比爬虫体面，比授权付费便宜，大概率会被同行抄走。但对个体开发者，岔路口上真正的问题是：当模型公司愿意付\"负价格\"买你的数据时，你的数据到底值多少？95%折扣给出的，只是下限。</p>\n      <p>明码标价不是终点，是讨价还价的开始。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "折扣是明码的，数据是暗码的——现在两者印在同一张价签上。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Meta为Muse Spark（coding/agents模型）推出贡献者定价 · $0.10/M输入（标准$1.25）、$0.20/M输出（标准$4.25），价差约12倍（输入）/21倍（输出），TechCrunch计算口径约95%折扣 · 条款：接受定价即同意数据用于模型训练 · 背景：Meta内部员工追踪项目6月被暂停（TechCrunch口径） · 观点：Arvind Narayanan（普林斯顿）——企业宁买Enterprise不交数据；Mario Zechner——Claude Code成功证明真实开发者数据驱动RL的价值 · 机制为自愿交换，非强制收集",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理当日采集信号并核对核心来源后生成，经编辑部人工审核。素材来源：TechCrunch原文（定价数字、条款机制、Narayanan与Zechner观点、员工追踪项目背景）。95%折扣为TechCrunch计算口径，正文同时给出两档价格原文；机制为'可选择换折扣'，正文未作'强制收集'表述。",
+  "category": "AI 商业化 · 行业观察"
+}

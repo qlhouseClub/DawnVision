@@ -1,0 +1,32 @@
+{
+  "slug": "openai-ads-india-free-go-tiers",
+  "title": "OpenAI把广告开进印度：1亿周活的免费午餐，开始有人买单",
+  "title_break": "OpenAI把广告开进印度<br>1亿周活的免费午餐，开始有人买单",
+  "deck": "8月27日起，印度Free与Go档用户将在部分回答下方看到明确标注的广告；付费档位保持无广告。ChatGPT的商业模式，第一次在十亿人口级市场试水。",
+  "keywords": "Dawn Vision,OpenAI,ChatGPT,印度,广告,商业化,Go套餐,订阅制,免费用户,服务条款",
+  "og_description": "OpenAI在印度向Free与Go档用户投放广告，广告出现在部分回答下方并明确标注；Plus及以上付费档位维持无广告。",
+  "read_time": "约 4 分钟阅读",
+  "word_count": 870,
+  "sources": [
+    {
+      "text": "Mid-Day (IANS) - ChatGPT to roll out ad-led service in India for users of Free, Go tiers",
+      "url": "https://www.mid-day.com/amp/tech/ai/article/chatgpt-to-roll-out-adled-service-in-india-for-users-of-freego-tiers-23646922"
+    },
+    {
+      "text": "Analytics Insight - OpenAI Brings ChatGPT Ads to India for Free, Go Users",
+      "url": "https://www.analyticsinsight.net/news/openai-brings-chatgpt-ads-to-india-for-free-go-users"
+    },
+    {
+      "text": "今日头条·科技杰西 - OpenAI官宣印度试点ChatGPT广告，免费/Go用户将精准触达",
+      "url": "http://m.toutiao.com/group/7678705099601936948/"
+    }
+  ],
+  "body_html": "<p>免费的时代没有消失，只是换了一种付费方式。</p>\n      <p>8月27日，OpenAI宣布在印度向<strong>Free与Go两档用户</strong>投放广告。规则写得很细：广告只面向登录的成年用户，分阶段推送，并通过邮件或站内通知告知；位置在<strong>部分回答下方</strong>，有清晰标注、与回答视觉分离。Go档印度定价399卢比/月，是门槛最低的轻付费档——也在广告覆盖范围内。<strong>Plus、Pro、Business、Enterprise与Education档位维持无广告。</strong></p>\n      <h2>为什么是印度，为什么是现在</h2>\n      <p>答案写在用户盘子里：今年2月的数据显示，<strong>ChatGPT在印度的周活跃用户已超过1亿</strong>，OpenAI称印度周活同比翻倍。还有一个容易被忽略的细节：印度用户高频使用ChatGPT做<strong>产品调研与购买决策</strong>——对广告主而言，这几乎是理想的投放场景。商业化的基础设施也已提前铺好：本月早些时候，OpenAI修改了服务条款，明确\"用户可能看到广告\"。先改条款、再上广告，顺序是对的，虽然多数用户根本不会翻到那一页。</p>\n      <h2>订阅制与广告制的混血儿</h2>\n      <p>ChatGPT的商业模型正从\"纯订阅\"走向\"订阅+广告\"双轨：<strong>付费买清净，免费看广告</strong>——这是互联网产品用二十年验证过的经典结构，如今被平移到对话式AI上。但对话式广告的风险与信息流不同：用户带着问题而来，却在答案附近看到推广内容，\"回答\"与\"推销\"的边界标注得再清楚，也天然存在信任张力。广告只出现在\"部分回答下方\"而非回答内部，算是OpenAI目前画出的安全边界。</p>\n      <h2>真正的看点：印度的示范意义</h2>\n      <p>印度是ChatGPT最大的市场之一，也是最价格敏感的市场之一。如果\"免费+广告\"在印度跑通了用户与收入的平衡，这套模式大概率会被复制到更多新兴市场；如果用户反弹激烈，广告扩张就会减速。对整个行业而言，这是ChatGPT商业化路径的一次压力测试——<strong>1亿周活的注意力，第一次被摆上了货架</strong>。</p>\n      <p>明天见。</p>",
+  "pull_quote": {
+    "text": "付费买清净，免费看广告——对话式AI，也逃不过互联网的经典结构。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "OpenAI · 印度上线广告 · Free/Go档可见 · 回答下方明确标注 · 付费档无广告 · 印度周活超1亿 · 条款先行",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理当日采集信号并交叉验证 3 个核心来源后生成，经编辑部人工审核。素材来源：Mid-Day（IANS）、Analytics Insight、国内科技媒体转引。",
+  "category": "政策 · 监管"
+}
