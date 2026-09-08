@@ -1,0 +1,105 @@
+{
+  "date": "2026-09-08",
+  "issue_number": "048",
+  "verification_summary": {
+    "total_signals_checked": 27,
+    "facts_verified": 12,
+    "confidence_high": 10,
+    "confidence_medium": 2,
+    "confidence_low": 0,
+    "contradictions_found": 0,
+    "topics_replaced": 0
+  },
+  "verified_facts": [
+    {
+      "article": "cover",
+      "claim": "国内首份《中国办公Agent用户行为不完全报告》于9月7日在北京发布",
+      "sources": ["量子位"],
+      "confidence": "high",
+      "final_value": "2026年9月7日在北京发布"
+    },
+    {
+      "article": "cover",
+      "claim": "北京用户量全国居首，北上广深杭五城合计占比约27%",
+      "sources": ["量子位", "LobsterAI报告数据"],
+      "confidence": "high",
+      "final_value": "北京居首，五城合计约27%"
+    },
+    {
+      "article": "cover",
+      "claim": "海外用户占比超12%",
+      "sources": ["量子位", "报告原文"],
+      "confidence": "high",
+      "final_value": "12.75%"
+    },
+    {
+      "article": "cover",
+      "claim": "前20%用户消耗87.4%算力，前5%用户独占53.5%",
+      "sources": ["量子位", "LobsterAI百万用户数据"],
+      "confidence": "high",
+      "final_value": "前20%消耗87.4%，前5%占53.5%"
+    },
+    {
+      "article": "cover",
+      "claim": "近60% token消耗发生在非办公时间",
+      "sources": ["量子位", "报告数据"],
+      "confidence": "high",
+      "final_value": "约59.9%（工作日晚间34.3%+周末25.6%）"
+    },
+    {
+      "article": "brief-1",
+      "claim": "OpenAI联合WAN-IFRA与AIRPPU推出支持乌克兰独立新闻业的AI计划",
+      "sources": ["OpenAI Blog", "WAN-IFRA"],
+      "confidence": "high",
+      "final_value": "2026年9月7日正式宣布"
+    },
+    {
+      "article": "brief-2",
+      "claim": "本末科技推出全球首款整机模块化具身智能机器人D1，3秒合体变形",
+      "sources": ["量子位"],
+      "confidence": "high",
+      "final_value": "D1为全球首款整机模块化具身机器人，3秒合体"
+    },
+    {
+      "article": "brief-2",
+      "claim": "本末科技直驱关节市占率超60%，轮足整机出口50多国",
+      "sources": ["量子位", "行业数据"],
+      "confidence": "high",
+      "final_value": "直驱模组市占率61.1%，出口50+国家"
+    },
+    {
+      "article": "brief-3",
+      "claim": "GPT-6 Sol内测速度约为Astra的6倍",
+      "sources": ["量子位", "网友爆料"],
+      "confidence": "medium",
+      "final_value": "据网友Lentils爆料，Sol单测速度约为Astra的6倍，尚未经官方确认"
+    },
+    {
+      "article": "brief-3",
+      "claim": "OpenAI研究员人均带3个AI实习生，日均消耗超600美元Agent算力",
+      "sources": ["OpenAI官方博客 'Research acceleration: A view inside OpenAI'"],
+      "confidence": "high",
+      "final_value": "人均3.1个Agent工作日/天，中位数日消耗$600+"
+    },
+    {
+      "article": "brief-4",
+      "claim": "菲尔兹奖得主Stanislav Smirnov入局大模型，创立Mostik公司",
+      "sources": ["量子位"],
+      "confidence": "high",
+      "final_value": "Smirnov为2010年菲尔兹奖得主，Mostik成立4个月，15人团队含12名博士"
+    },
+    {
+      "article": "cao",
+      "claim": "西雅图时报和Newsday起诉OpenAI和微软版权侵权",
+      "sources": ["The Verge"],
+      "confidence": "high",
+      "final_value": "2026年9月在纽约南区联邦法院提起诉讼，含商标稀释指控"
+    }
+  ],
+  "notes": [
+    "所有选题均在3天时效窗口内（2026-09-06至2026-09-08）",
+    "GPT-6 Sol相关信息来自网友爆料，置信度为medium，文中已注明爆料来源",
+    "LobsterAI报告数据与北京市智能体政策背景相互印证",
+    "本期无发现需替换的低置信度选题"
+  ]
+}

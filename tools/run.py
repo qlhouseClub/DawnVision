@@ -106,7 +106,7 @@ def cmd_collect(args):
     """采集"""
     date = args.date or next_workday()[0]
     cmd = [sys.executable, str(TOOLS_DIR / "collect.py"), "--date", date]
-    if args.add:
+    if getattr(args, 'add', False):
         cmd.append("--add")
     run_step(cmd)
 
@@ -124,7 +124,7 @@ def cmd_draft(args):
 
     cmd = [sys.executable, str(TOOLS_DIR / "draft.py"), str(signals_file),
            "--issue-num", issue_num, "--date", date]
-    if args.auto:
+    if getattr(args, 'auto', False):
         cmd.append("--auto")
     run_step(cmd)
 
