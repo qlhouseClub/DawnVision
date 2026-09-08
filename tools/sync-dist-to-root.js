@@ -1,73 +1,66 @@
-// Sync web/dist/ to project root (for GitHub Pages)
+// 将 web/dist/ 下的文件同步到项目根目录（GitHub Pages 从根目录服务）
 const fs = require('fs');
 const path = require('path');
 
-const rootDir = path.resolve(__dirname, '..');
-const distDir = path.resolve(__dirname, '..', 'web', 'dist');
+const distDir = path.join(__dirname, '..', 'web', 'dist');
+const rootDir = path.join(__dirname, '..');
 
-// Directories to delete from root first
-const dirsToDelete = ['_astro', 'articles', 'cao', 'about', 'pagefind', '502', '503', '504', 'chunks', 'pages'];
+// 要跳过的目录/文件（不复制到根目录）
+const skipItems = ['chunks', 'pages', 'CNAME'];
 
-console.log('=== Sync dist -> root ===');
+// 要先删除的旧目录
+const dirsToClean = ['_astro', 'articles', 'cao', 'about', 'pagefind', '502', '503', '504', 'chunks', 'pages'];
 
-// Step 1: Delete old directories
-for (const dir of dirsToDelete) {
-  const fullPath = path.join(rootDir, dir);
-  if (fs.existsSync(fullPath)) {
-    fs.rmSync(fullPath, { recursive: true, force: true });
-    console.log(`  Deleted: ${dir}/`);
+console.log('清理根目录旧构建产物...');
+for (const dir of dirsToClean) {
+  const dirPath = path.join(rootDir, dir);
+  if (fs.existsSync(dirPath)) {
+    fs.rmSync(dirPath, { recursive: true, force: true });
+    console.log(`  ✓ 已删除 ${dir}/`);
   }
 }
 
-// Also delete old top-level HTML files (index, etc.)
-const topLevelFiles = ['index.html', 'rss.xml', 'sitemap.xml', 'version.json', 'favicon.svg', 'og-image.png'];
-for (const file of topLevelFiles) {
-  const fullPath = path.join(rootDir, file);
-  if (fs.existsSync(fullPath) && fs.statSync(fullPath).isFile()) {
-    fs.unlinkSync(fullPath);
-    console.log(`  Deleted: ${file}`);
-  }
-}
+// 也清理根目录下可能存在的零散文件（除了特定文件外）
+const rootFilesToKeep = [
+  '.git', '.gitignore', 'README.md', 'CNAME',
+  'web', 'tools', 'deploy-cn',
+  'package.json', 'package-lock.json',
+  '.github',
+  'node_modules'
+];
 
-// Step 2: Copy all files from dist/, skip chunks, pages, CNAME
-const skipItems = new Set(['chunks', 'pages', 'CNAME']);
+console.log('\n复制 dist/ 到根目录...');
 
-function copyDir(src, dest) {
-  if (!fs.existsSync(dest)) {
-    fs.mkdirSync(dest, { recursive: true });
-  }
-  const items = fs.readdirSync(src);
-  for (const item of items) {
-    if (skipItems.has(item)) continue;
-    const srcPath = path.join(src, item);
-    const destPath = path.join(dest, item);
-    const stat = fs.statSync(srcPath);
-    if (stat.isDirectory()) {
-      copyDir(srcPath, destPath);
-    } else {
-      fs.copyFileSync(srcPath, destPath);
+function copyRecursive(src, dest, skipList) {
+  if (!fs.existsSync(src)) return;
+  
+  const stats = fs.statSync(src);
+  
+  if (stats.isDirectory()) {
+    const basename = path.basename(src);
+    if (skipList.includes(basename)) {
+      console.log(`  ⏭  跳过 ${basename}/`);
+      return;
     }
-  }
-}
-
-copyDir(distDir, rootDir);
-console.log('  Copy complete.');
-
-// Count files
-function countFiles(dir) {
-  let count = 0;
-  if (!fs.existsSync(dir)) return 0;
-  const items = fs.readdirSync(dir);
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    if (fs.statSync(fullPath).isDirectory()) {
-      count += countFiles(fullPath);
-    } else {
-      count++;
+    
+    if (!fs.existsSync(dest)) {
+      fs.mkdirSync(dest, { recursive: true });
     }
+    
+    const items = fs.readdirSync(src);
+    for (const item of items) {
+      copyRecursive(path.join(src, item), path.join(dest, item), skipList);
+    }
+  } else {
+    const basename = path.basename(src);
+    if (skipList.includes(basename)) {
+      console.log(`  ⏭  跳过 ${basename}`);
+      return;
+    }
+    fs.copyFileSync(src, dest);
   }
-  return count;
 }
 
-const fileCount = countFiles(rootDir) - countFiles(path.join(rootDir, 'web')) - countFiles(path.join(rootDir, 'tools')) - countFiles(path.join(rootDir, 'deploy-cn'));
-console.log(`\n✅ Sync complete. Root directory now contains site files.`);
+copyRecursive(distDir, rootDir, skipItems);
+
+console.log('\n✅ 同步完成！');

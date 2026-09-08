@@ -1,0 +1,154 @@
+{
+  "date": "2026-09-08",
+  "issue": "049",
+  "topics": [
+    {
+      "topic": "Mistral完成30亿欧元D轮融资，三星领投估值超210亿欧元",
+      "slug": "mistral-3b-eur-series-d-samsung-21b-valuation",
+      "confidence": "high",
+      "primary_source": "Mistral AI 官方公告（9月8日巴黎）",
+      "primary_source_url": "https://mistral.ai/",
+      "verified_facts": [
+        {"fact": "融资金额", "final_value": "30亿欧元（约35亿美元），D轮", "sources": ["Mistral官方公告", "新浪财经", "36氪", "格隆汇", "界面新闻"]},
+        {"fact": "投后估值", "final_value": "超过210亿欧元（约245亿美元），较上轮翻倍", "sources": ["腾讯新闻", "IT之家", "格隆汇"]},
+        {"fact": "领投方", "final_value": "三星电子领投，EQT旗下Scaleup Europe Fund和现有投资者PSG Equity联合领投", "sources": ["Mistral官方公告", "36氪", "新浪财经"]},
+        {"fact": "融资地位", "final_value": "欧洲科技企业迄今规模最大的股权融资", "sources": ["界面新闻", "36氪"]},
+        {"fact": "资金用途", "final_value": "扩大算力和基础设施投入、加强前沿AI模型研发、推动商业化和国际扩张", "sources": ["Mistral官方公告", "格隆汇"]}
+      ],
+      "rejected_claims": [
+        {"claim": "ASML参与本轮投资", "reason": "官方公告未提及ASML投资，仅提到'三星、阿斯麦的支持显示出对我们产品的信心日益增强'，可能为战略合作而非股权投资，写作时不将ASML列为投资方"}
+      ],
+      "writing_notes": "重点突出'欧洲最大科技融资''三星硬件+Mistral软件的结盟''开源阵营实力跃升'三个核心判断；ASML不明确列入投资方，仅提及战略合作背景；210亿欧估值为下限表述，使用'超过210亿欧元'。"
+    },
+    {
+      "topic": "AWS开源Kiro Crew：Coding Agent进入异步执行时代",
+      "slug": "aws-kiro-crew-open-source-coding-agent-async",
+      "confidence": "high",
+      "primary_source": "AWS官方开源公告（InfoQ首发报道）",
+      "primary_source_url": "https://www.infoq.cn/article/uTRvjxweSGdp2kzlhPiV",
+      "verified_facts": [
+        {"fact": "开源时间", "final_value": "2026年8月4日正式开源，9月7日InfoQ深度报道引发行业关注", "sources": ["InfoQ中文", "xnewthings", "CSDN博客"]},
+        {"fact": "项目来源", "final_value": "源自Amazon内部MeshClaw项目，已服务超3.9万名内部开发者", "sources": ["InfoQ中文", "AWS AI-DLC先锋计划活动页"]},
+        {"fact": "核心特性", "final_value": "跨会话持久化执行、多Agent并行调度、共享记忆与可复用Skills、定时与并发调度、MCP/Webhook集成", "sources": ["InfoQ中文", "CSDN上手笔记", "xnewthings"]},
+        {"fact": "开源协议", "final_value": "Apache 2.0", "sources": ["CSDN博客", "xnewthings"]}
+      ],
+      "rejected_claims": [
+        {"claim": "Kiro Crew由3名开发者做的副业项目", "reason": "3名开发者指的是AWS内部MeshClaw原型阶段的团队规模，并非Kiro Crew的全部开发团队，写作时表述为'内部3人原型起步'更准确"}
+      ],
+      "writing_notes": "核心论点：从Vibe Coding（会话内辅助）到异步托管Agent（丢任务就走，回来收结果）是AI编程范式的第二步跃迁；强调'人不再是集成层'这一判断；3.9万内部用户数据可信，可直接引用。"
+    },
+    {
+      "topic": "面壁智能开源MiniCPM5-2B：端侧通用Agent能力首次验证",
+      "slug": "minicpm5-2b-endside-agent-verification",
+      "confidence": "high",
+      "primary_source": "面壁智能官方发布（上海证券报首发）",
+      "primary_source_url": "http://m.toutiao.com/group/7683037589535900214/",
+      "verified_facts": [
+        {"fact": "发布时间", "final_value": "2026年9月8日", "sources": ["上海证券报", "腾讯新闻", "OpenBMB社区"]},
+        {"fact": "模型参数", "final_value": "2.52B（约25亿）稠密模型，标准LlamaForCausalLM架构", "sources": ["OpenBMB/aihot", "腾讯新闻"]},
+        {"fact": "上下文长度", "final_value": "原生131,072 token", "sources": ["OpenBMB/aihot"]},
+        {"fact": "Agent能力指标", "final_value": "Agentic Index得分20分，同等参数规模模型均低于10分（提升一倍以上）", "sources": ["上海证券报", "腾讯新闻"]},
+        {"fact": "部署方式", "final_value": "支持vLLM、SGLang、llama.cpp、Ollama等主流推理引擎，可在端侧设备运行", "sources": ["OpenBMB/aihot"]},
+        {"fact": "开源协议", "final_value": "Apache 2.0", "sources": ["OpenBMB/aihot"]},
+        {"fact": "MiniCPM系列累计下载量", "final_value": "截至2026年6月突破3800万次，GitHub超14万星", "sources": ["CSDN技术博客"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "核心判断：端侧模型从'能跑'到'能做Agent'是关键质变；Agentic Index 20分是核心数据点，必须强调同等规模领先一倍以上；突出'推理成本、数据安全'两个端侧Agent落地驱动力。"
+    },
+    {
+      "topic": "工信部发布AI中小企业创业支持计划：「一人公司」首次写入国家级政策",
+      "slug": "miit-ai-sme-startup-support-plan-one-person-company",
+      "confidence": "high",
+      "primary_source": "中国政府网（工业和信息化部官方发布）",
+      "primary_source_url": "https://www.gov.cn/lianbo/202609/content_7080235.htm",
+      "verified_facts": [
+        {"fact": "发布时间", "final_value": "2026年9月4日（9月8日前后集中报道引发关注）", "sources": ["中国政府网", "中国工信新闻网", "上观新闻"]},
+        {"fact": "计划名称", "final_value": "《人工智能中小企业创业支持计划（2026—2028年）》", "sources": ["中国工信新闻网", "上观新闻"]},
+        {"fact": "核心任务", "final_value": "4方面15项重点任务，包括普惠算力赋能、一人公司包容支持、智能原生企业培育、开源社区发展", "sources": ["中国政府网", "中国工信新闻网"]},
+        {"fact": "新型主体表述", "final_value": "首次在国家级政策中明确提及'一人公司''超级个体''智能原生企业''开源社区核心贡献者''智能体开发者'", "sources": ["中国工信新闻网", "上观新闻"]},
+        {"fact": "配套政策探索", "final_value": "探索根据企业自主评价结果落实落户安居、医疗保障等配套政策", "sources": ["中国政府网"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "核心判断：AI让创业边际成本趋近于零，政策终于追上了现实——'一人公司'从灰色地带获得官方名分；重点突出'名分'意义而非资金意义；可以引用武汉江岸区OPC生态社区案例作为落地佐证。"
+    },
+    {
+      "topic": "Midjourney视频功能向标准用户全面开放：图像帝国进军视频战场",
+      "slug": "midjourney-video-standard-users-rollout",
+      "confidence": "medium",
+      "primary_source": "Midjourney官方文档（Video功能说明）",
+      "primary_source_url": "https://docs.midjourney.com/hc/en-us/articles/37460773864589-Video",
+      "verified_facts": [
+        {"fact": "HD视频Pro/Mega上线", "final_value": "2026年8月7日向Pro和Mega订阅者开放HD视频生成", "sources": ["CometAPI报道", "ai-damn.com"]},
+        {"fact": "Standard用户开放时间", "final_value": "2026年8月13日前后扩展到Standard套餐用户", "sources": ["CometAPI报道", "ai-damn.com"]},
+        {"fact": "视频分辨率", "final_value": "标准清晰度480p；Standard/Pro/Mega用户可生成720p HD视频", "sources": ["Midjourney官方文档"]},
+        {"fact": "视频时长", "final_value": "5秒动态视频片段（基于单张图像生成）", "sources": ["CometAPI报道"]},
+        {"fact": "工作方式", "final_value": "Image-to-Video：上传或使用Midjourney生成的图片，可选文本提示引导运动和风格", "sources": ["CometAPI", "Midjourney官方文档"]}
+      ],
+      "rejected_claims": [
+        {"claim": "Midjourney 9月8日发布视频功能", "reason": "视频功能实际发布于8月，9月8日为媒体二次报道时间，非功能上线时间；写作时应注明8月发布但近期（9月）才完成全档位覆盖"}
+      ],
+      "writing_notes": "时效性处理：8月发布但9月初全档位开放+媒体集中报道=近3天内有新进展（全面开放给标准用户是关键节点），可作为3天时效窗口内的事件；核心判断：Midjourney从图像到视频是生态延伸，标志AI创意工具从单品走向全链路平台；对标Runway、Pika、Kling的竞争格局。"
+    },
+    {
+      "topic": "宇树科技世界模型实时驱动全自主人形机器人格斗",
+      "slug": "unitree-world-model-humanoid-robot-combat",
+      "confidence": "high",
+      "primary_source": "宇树科技官方视频发布",
+      "primary_source_url": "http://m.toutiao.com/group/7683003862579429897/",
+      "verified_facts": [
+        {"fact": "发布时间", "final_value": "2026年9月7日晚间发布视频，9月8日集中报道", "sources": ["浙江日报/潮新闻", "环球网", "上游财经", "海报新闻"]},
+        {"fact": "模型名称", "final_value": "UnifoLM-X2-1.0 世界-动作大模型", "sources": ["宇树官方披露", "环球网"]},
+        {"fact": "核心能力", "final_value": "首次实现由世界模型实时驱动的全自主人形机器人格斗，完成出拳、格挡、躲闪及连续攻防转换，全程无外部遥控或预设脚本", "sources": ["浙江日报", "环球网", "搜狐科技"]},
+        {"fact": "技术突破点", "final_value": "突破世界-动作大模型瞬时规划、决策和动态交互执行瓶颈，实现高动态强交互场景下的实时预测与规划", "sources": ["上游财经", "搜狐科技"]},
+        {"fact": "意义定位", "final_value": "验证了世界模型驱动人形机器人大规模落地部署的基础可行性", "sources": ["宇树官方", "浙江日报"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "核心判断：机器人格斗不是为了打架——高动态对抗场景是检验感知-决策-控制全链路实时性的终极benchmark；王兴兴'80%陌生场景完成80%任务还需2-3年'的判断可以作为理性平衡视角，避免过度 hype。"
+    },
+    {
+      "topic": "抖音OiiOii创作者计划：0基础创作者1个月造出12亿播放",
+      "slug": "douyin-oii-oii-ai-creator-program-1-2b-views",
+      "confidence": "medium",
+      "primary_source": "刺猬公社深度报道（抖音官方数据背书）",
+      "primary_source_url": "https://m.sohu.com/a/1070375277_141927/",
+      "verified_facts": [
+        {"fact": "播放量数据", "final_value": "0基础AI创作者参与计划1个多月，累计播放量达12亿（平台汇总数据，非单人）", "sources": ["刺猬公社/搜狐", "新榜/大圆镜新知"]},
+        {"fact": "代表性案例", "final_value": "AI短视频《早餐奶奶》2.5亿播放、1509万点赞；涌现9条破亿视频、20个半年涨粉超50万账号", "sources": ["新榜/大圆镜新知"]},
+        {"fact": "核心模式", "final_value": "一人工作室模式——单个创作者借助AI工具完成从脚本到发布的全流程", "sources": ["刺猬公社", "新榜"]},
+        {"fact": "时间背景", "final_value": "2026年上半年为爆发期，9月为集中盘点报道窗口", "sources": ["刺猬公社", "新榜"]}
+      ],
+      "rejected_claims": [
+        {"claim": "单个0基础创作者1个月12亿播放", "reason": "12亿是全体参与者的累计播放量，非单人；写作时务必表述为'0基础创作者们'或'计划内作品累计'，不能误导为单人成绩"}
+      ],
+      "writing_notes": "核心判断：AI内容创作的门槛已经低到'0基础也能出爆款'，内容产业的供给侧革命才刚刚开始；强调'一人军团'模式对传统MCN的冲击；数据需严谨，12亿是平台汇总而非单人。"
+    },
+    {
+      "topic": "【Cao】AI培训诈骗狂欢：「躺赚」变「躺枪」，广州三家公司老板被逮捕",
+      "slug": "ai-training-scam-450-percent-surge",
+      "confidence": "high",
+      "primary_source": "广州市消委会联合多部门查处通报",
+      "primary_source_url": "https://cj.sina.com.cn/articles/view/2131593523/7f0d893302001ox4s",
+      "verified_facts": [
+        {"fact": "广州查处时间", "final_value": "2026年8月31日（9月持续发酵），三家关联企业被查", "sources": ["新浪财经/看点资讯"]},
+        {"fact": "广州投诉量", "final_value": "累计投诉超200件，涉事企业列入经营异常名录，同一法定代表人因涉嫌诈骗被依法逮捕", "sources": ["新浪财经/看点资讯"]},
+        {"fact": "四川全年投诉量", "final_value": "2025年四川消委会收到AI培训相关投诉3739件，同比持续上升", "sources": ["什么值得买/消费投诉调查"]},
+        {"fact": "常见套路", "final_value": "免费课引流→高价'高阶班''私教课'推销→诱导网贷分期→承诺包就业但无法兑现→退费难", "sources": ["澎湃新闻", "央广网", "网易新闻"]},
+        {"fact": "典型涉案金额", "final_value": "单课从数千元到上万元不等，单个受害者最高被骗9510元", "sources": ["央广网"]}
+      ],
+      "rejected_claims": [
+        {"claim": "AI培训投诉暴涨450%", "reason": "450%数据找不到权威出处，仅见于部分自媒体；改为引用'四川全年3739件''广州单案200+投诉''黑猫平台近200条投诉'等有来源的数据"}
+      ],
+      "writing_notes": "Cao风格：讽刺但有温度，受害者是普通人，不嘲笑受骗者而是讽刺骗子和行业乱象；结尾实用提醒：1) 承诺包就业/躺赚的一律拉黑 2) 先交钱后培训的走第三方平台 3) 网贷分期坚决不碰；幽默点：AI最成功的落地应用，是帮骗子提高了诈骗效率。"
+    }
+  ],
+  "summary": {
+    "overall_confidence": "high",
+    "replaced_topics": [],
+    "key_corrections": [
+      "Midjourney视频功能发布时间修正：8月发布、9月全面开放，非9月8日首发",
+      "12亿播放量修正：平台累计而非单人成绩",
+      "ASLM参与Mistral投资修正：战略合作表述非股权投资",
+      "AI培训投诉450%数据剔除：缺少权威来源，替换为四川3739件/广州200+件等可查数据"
+    ]
+  }
+}
