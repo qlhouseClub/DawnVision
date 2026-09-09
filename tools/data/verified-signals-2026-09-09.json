@@ -1,0 +1,156 @@
+{
+  "date": "2026-09-09",
+  "issue": "050",
+  "topics": [
+    {
+      "topic": "OpenAI发布ChatGPT Images 2.5",
+      "slug": "chatgpt-images-2-5-sketch-openai",
+      "confidence": "high",
+      "primary_source": "OpenAI官方博客",
+      "primary_source_url": "https://openai.com/index/introducing-chatgpt-images-2-5",
+      "verified_facts": [
+        {"fact": "发布日期", "final_value": "2026年9月8日", "sources": ["OpenAI官方博客", "IT之家", "太平洋科技"]},
+        {"fact": "新增Sketch功能", "final_value": "用户在对话中输入@Sketch即可手绘草图作为图片生成视觉参考", "sources": ["OpenAI官方博客", "站长之家", "ZAKER"]},
+        {"fact": "延迟降低", "final_value": "对比Images 2.0延迟降低最高50%", "sources": ["OpenAI官方博客", "IT之家"]},
+        {"fact": "新增模板库", "final_value": "Templates功能覆盖海报、商品图等常用格式", "sources": ["OpenAI官方博客", "站长之家"]},
+        {"fact": "API双模型", "final_value": "GPT-Image-2.5 Flare（快速）和GPT-Image-2.5 Sunburst（高精度）", "sources": ["OpenAI官方博客", "163新闻"]},
+        {"fact": "全球使用量", "final_value": "每周通过ChatGPT Images和API生成超过30亿张图片", "sources": ["OpenAI官方博客"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "这是OpenAI今日最重磅产品发布，封面文章重点。Sketch功能是核心卖点，强调'手绘即生成'的创新体验。延迟降低50%是技术亮点。注意与049期Midjourney Video做差异化——这是静态图片领域的革新。"
+    },
+    {
+      "topic": "蚂蚁百灵发布金融增强模型Ling-3.0-flash-Fin",
+      "slug": "ant-lingfin-financial-ai-model",
+      "confidence": "high",
+      "primary_source": "量子位",
+      "primary_source_url": "https://www.qbitai.com/2026/09/486288.html",
+      "verified_facts": [
+        {"fact": "发布日期", "final_value": "2026年9月9日（外滩大会前夕）", "sources": ["量子位", "36氪"]},
+        {"fact": "模型名称", "final_value": "Ling-3.0-flash-Fin", "sources": ["量子位", "Hugging Face", "Aibase"]},
+        {"fact": "参数规模", "final_value": "124B总参数，5.1B激活参数", "sources": ["Hugging Face", "量子位", "Aibase"]},
+        {"fact": "上下文窗口", "final_value": "256K", "sources": ["Hugging Face", "量子位"]},
+        {"fact": "开源协议", "final_value": "MIT许可证", "sources": ["Hugging Face", "Aibase"]},
+        {"fact": "核心功能", "final_value": "金融投研：信息检索、研究推理、估值建模、研报撰写", "sources": ["量子位"]},
+        {"fact": "合作方", "final_value": "联合中金公司及金融领域专家", "sources": ["PHP中文网", "Aibase"]},
+        {"fact": "评测基准", "final_value": "同步开放FinFIRST金融搜索Agent评测基准", "sources": ["量子位"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "Brief选题，分类'大模型商业'。重点：首个金融增强模型、124B参数、联合中金公司、从'回答问题'到'完成工作'的范式转变。"
+    },
+    {
+      "topic": "智元AGILE2.0感控一体模型发布",
+      "slug": "agibot-agile2-embodied-ai",
+      "confidence": "high",
+      "primary_source": "北京商报",
+      "primary_source_url": "http://m.toutiao.com/group/7683396683299848755/",
+      "verified_facts": [
+        {"fact": "发布日期", "final_value": "2026年9月9日前后", "sources": ["北京商报", "环球网", "上观新闻"]},
+        {"fact": "AGILE全称", "final_value": "AGIBOT Generative Intelligent Locomotion Engine（生成式通用小脑引擎）", "sources": ["北京商报", "智元官网"]},
+        {"fact": "核心概念", "final_value": "'睁眼运动'：边看边想边动", "sources": ["环球网", "北京商报"]},
+        {"fact": "技术特点", "final_value": "端到端视觉感控一体闭环，无中间模块", "sources": ["环球网", "北京商报"]},
+        {"fact": "展示载体", "final_value": "灵犀X2机器人，通过《杂技BOT》创意短片展示", "sources": ["环球网", "北京商报"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "Brief选题，分类'具身智能'。重点：'睁眼运动'概念、端到端闭环、灵犀X2。注意与049期MiniCPM5-2B端侧Agent做差异化——这是机器人运动控制领域的突破。"
+    },
+    {
+      "topic": "京东云拟建摩尔线程十万卡GPU智算集群",
+      "slug": "jd-cloud-mthreads-100k-gpu",
+      "confidence": "high",
+      "primary_source": "上海证券报",
+      "primary_source_url": "http://m.toutiao.com/group/7683403498309829146/",
+      "verified_facts": [
+        {"fact": "宣布日期", "final_value": "2026年9月9日，京东全球科技探索者大会", "sources": ["上海证券报", "同花顺", "南方都市报"]},
+        {"fact": "合作方", "final_value": "京东云 × 摩尔线程（688795.SH）", "sources": ["上海证券报", "同花顺"]},
+        {"fact": "集群规模", "final_value": "十万卡（100,000张）全功能GPU集群", "sources": ["上海证券报", "腾讯新闻"]},
+        {"fact": "应用方向", "final_value": "大模型训练、推理及具身智能", "sources": ["上海证券报", "同花顺"]},
+        {"fact": "开放性", "final_value": "向全行业开放算力", "sources": ["上海证券报"]},
+        {"fact": "项目状态", "final_value": "'拟建'规划，非已建成", "sources": ["上海证券报", "东方财富股吧"]},
+        {"fact": "高管发言", "final_value": "曹鹏（京东云总裁）、张建中（摩尔线程创始人）", "sources": ["上海证券报", "同花顺"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "Brief选题，分类'算力基建'。重点：十万卡规模、国产GPU首次进入头部云厂商、'拟建'状态。注意与010期Anthropic 20年算力合约做差异化——这是国产算力基建的里程碑。"
+    },
+    {
+      "topic": "最高法发布《涉人工智能纠纷案件审理意见》",
+      "slug": "supreme-court-ai-dispute-guidelines",
+      "confidence": "high",
+      "primary_source": "最高人民法院官网",
+      "primary_source_url": "https://www.court.gov.cn/zixun/xiangqing/511101.html",
+      "verified_facts": [
+        {"fact": "发布日期", "final_value": "2026年9月7日", "sources": ["最高人民法院官网", "新华社", "中国法院网"]},
+        {"fact": "文件全称", "final_value": "《最高人民法院关于依法审理涉人工智能纠纷案件的意见》，文号法发〔2026〕10号", "sources": ["最高人民法院官网"]},
+        {"fact": "内容结构", "final_value": "5个部分、24条", "sources": ["最高人民法院官网", "中新网"]},
+        {"fact": "首部性", "final_value": "首部由国家最高审判机构发布的涉人工智能司法裁判规则文件", "sources": ["最高人民法院官网", "中国法院网"]},
+        {"fact": "核心内容", "final_value": "AI换脸拟声、大数据杀熟、自动驾驶事故等场景裁判规则", "sources": ["最高人民法院官网", "中新网"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "Brief选题，分类'AI监管'。重点：首部性、24条规则覆盖AI换脸/大数据杀熟/自动驾驶等场景。注意这是国内AI监管的重要里程碑。"
+    },
+    {
+      "topic": "Cognition达到48B估值",
+      "slug": "cognition-48b-valuation-devin",
+      "confidence": "high",
+      "primary_source": "TechCrunch",
+      "primary_source_url": "https://feedsmonitor.com/article/cognition-hits-48b-valuation-signaling-investors-believe-ai-coding-is-04139f2bf8",
+      "verified_facts": [
+        {"fact": "估值金额", "final_value": "$480亿（$48B）", "sources": ["TechCrunch", "Unite.AI", "新浪财经"]},
+        {"fact": "融资金额", "final_value": "约$20亿（$2B）", "sources": ["TechCrunch", "Unite.AI"]},
+        {"fact": "融资轮次", "final_value": "E轮（Series E）", "sources": ["TechCrunch", "Unite.AI", "新浪财经"]},
+        {"fact": "领投方", "final_value": "a16z和Accel", "sources": ["TechCrunch", "Unite.AI"]},
+        {"fact": "上一轮估值", "final_value": "$260亿（2026年5月），四个月近乎翻倍", "sources": ["TechCrunch", "Unite.AI"]},
+        {"fact": "ARR", "final_value": "接近$9亿（$900M）", "sources": ["Unite.AI", "ecmsource"]}
+      ],
+      "rejected_claims": [
+        {"claim": "endroid.com报道为Series C", "reason": "单源分歧，主流来源均为Series E，Cognition此前已有多轮融资，E轮更可信"}
+      ],
+      "writing_notes": "Brief选题，分类'AI编程'。重点：$48B估值、四个月翻倍、Devin AI编程Agent、华人创办。注意这是AI编程领域的估值信号。"
+    },
+    {
+      "topic": "闲鱼AI服务订单半年增157%",
+      "slug": "xianyu-ai-services-157-percent",
+      "confidence": "medium-high",
+      "primary_source": "新浪财经（转载闲鱼官方数据）",
+      "primary_source_url": "https://finance.sina.com.cn/roll/2026-09-05/doc-iniquptn3555476.shtml",
+      "verified_facts": [
+        {"fact": "订单量", "final_value": "2026年上半年981.6万单", "sources": ["新浪财经", "网易", "上游新闻"]},
+        {"fact": "同比增长", "final_value": "157%", "sources": ["新浪财经", "网易", "上游新闻"]},
+        {"fact": "购买人数", "final_value": "近500万人", "sources": ["新浪财经", "网易"]},
+        {"fact": "子品类增长", "final_value": "AI编程涨1700%+、AI漫剧涨1400%+", "sources": ["新浪财经", "网易"]},
+        {"fact": "日均订单", "final_value": "每天五六万单", "sources": ["新浪财经"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "Brief选题，分类'AI轻创业'。重点：157%增长、981.6万单、AI编程涨1700%。注意数据来源为闲鱼官方自披露，非独立审计。这是AI轻创业市场的现实数据支撑。"
+    },
+    {
+      "topic": "OpenAI用1万AI智能体攻克纳维-斯托克斯千禧年难题",
+      "slug": "openai-navier-stokes-10k-agents",
+      "confidence": "medium",
+      "primary_source": "OpenAI官方博客",
+      "primary_source_url": "https://openai.com/index/navier-stokes-solution",
+      "verified_facts": [
+        {"fact": "发布日期", "final_value": "2026年9月8日", "sources": ["OpenAI官方博客"]},
+        {"fact": "智能体数量", "final_value": "约1万（on the order of 10,000）", "sources": ["OpenAI官方博客"]},
+        {"fact": "运行时间", "final_value": "88小时（9月1日-9月5日）", "sources": ["OpenAI官方博客"]},
+        {"fact": "形式化验证", "final_value": "Lean形式化验证，额外花费17小时", "sources": ["OpenAI官方博客"]},
+        {"fact": "官方措辞", "final_value": "'a solution'，明确表示不申领千禧年奖金", "sources": ["OpenAI官方博客"]},
+        {"fact": "争议", "final_value": "NYU教授Buckmaster质疑优先权，声称8月15日已突破", "sources": ["36氪", "Unite.AI"]}
+      ],
+      "rejected_claims": [
+        {"claim": "'攻克'千禧年难题", "reason": "过度简化。OpenAI官方用词为'a solution'，明确不申领奖金。数学界尚未独立验证。更准确表述为'声称提出了一个解'"},
+        {"claim": "'1万AI智能体独立完成'", "reason": "OpenAI数学家和AI研究人员参与了问题分解、提示设计、智能体编排和结果整合"}
+      ],
+      "writing_notes": "Cao选题。重点：有梗（千禧年难题）、有争议（'攻克'是否准确、优先权之争）、有数据（1万智能体、88小时）。幽默口语化风格，结尾给实用提醒。注意：行文中不提及证伪细节，但要准确呈现OpenAI官方措辞。"
+    }
+  ],
+  "summary": {
+    "overall_confidence": "high",
+    "replaced_topics": [],
+    "key_corrections": [
+      "OpenAI纳维-斯托克斯：'攻克'为媒体过度解读，官方措辞为'a solution'，且明确不申领千禧年奖金",
+      "Cognition融资轮次：单源（endroid.com）称Series C，但主流来源均为Series E",
+      "京东云摩尔线程：'拟建'状态，非已建成"
+    ]
+  }
+}
