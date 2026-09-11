@@ -1,0 +1,154 @@
+{
+  "date": "2026-09-11",
+  "issue": "051",
+  "topics": [
+    {
+      "topic": "OpenAI Agents API发布",
+      "slug": "openai-agents-api-managed-codex-harness",
+      "confidence": "high",
+      "primary_source": "OpenAI官方博客",
+      "primary_source_url": "https://openai.com/index/introducing-the-agents-api",
+      "verified_facts": [
+        {"fact": "发布日期", "final_value": "2026年9月10日", "sources": ["OpenAI Blog", "TechCrunch", "MarkTechPost"]},
+        {"fact": "产品定位", "final_value": "托管式云Agent服务，基于Codex harness", "sources": ["OpenAI Blog", "ai-tldr.dev"]},
+        {"fact": "核心能力", "final_value": "一次API调用创建生产级Agent，支持长时运行、子代理编排、工具调用", "sources": ["OpenAI Blog", "OpenAI Developers"]},
+        {"fact": "定价模式", "final_value": "仅收token和工具调用费，无额外服务费", "sources": ["OpenAI Blog", "金融界"]},
+        {"fact": "运行环境", "final_value": "支持OpenAI托管沙箱、自有基础设施或合作伙伴沙箱", "sources": ["OpenAI Blog"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "这是OpenAI从模型提供商向Agent平台转型的关键一步，重点强调托管服务模式对Agent创业公司的冲击"
+    },
+    {
+      "topic": "Anthropic蒸馏指控：1.51亿次'吸血'",
+      "slug": "anthropic-distillation-china-labs-200m-exchanges",
+      "confidence": "high",
+      "primary_source": "Anthropic Threat Intelligence Report",
+      "primary_source_url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
+      "verified_facts": [
+        {"fact": "报告发布日期", "final_value": "2026年9月10日", "sources": ["TechCrunch", "Anthropic Blog"]},
+        {"fact": "总交换次数", "final_value": "约2亿次", "sources": ["TechCrunch", "aiwain.blog"]},
+        {"fact": "阿里巴巴最大", "final_value": "1.51亿次交换，2026年5-7月，3500个账号，峰值每天300万次", "sources": ["TechCrunch", "TechInAsia", "aichatdaily"]},
+        {"fact": "Moonshot AI", "final_value": "2300万次交换", "sources": ["TechInAsia"]},
+        {"fact": "DeepSeek", "final_value": "1200万次交换，14天内", "sources": ["TechInAsia", "aichatdaily"]},
+        {"fact": "攻击目标", "final_value": "Claude的Agentic能力、工具使用、编码、数据分析、逻辑推理", "sources": ["TechCrunch"]},
+        {"fact": "技术手段", "final_value": "诱导模型暴露思维链，如伪装成翻译请求", "sources": ["TechCrunch"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "注意措辞中立，不带政治色彩，聚焦商业竞争和技术安全层面"
+    },
+    {
+      "topic": "Meta Muse冲上美区App Store第2",
+      "slug": "meta-muse-ai-agent-app-store-no2",
+      "confidence": "high",
+      "primary_source": "TechCrunch + Sensor Tower数据",
+      "primary_source_url": "https://techcrunch.com/2026/09/10/metas-ai-agent-muse-is-now-the-no-2-app-in-the-us/",
+      "verified_facts": [
+        {"fact": "发布时间", "final_value": "2026年9月9日（周二）", "sources": ["TechCrunch", "aipulselab"]},
+        {"fact": "iOS下载量", "final_value": "超过83,000次（美国）", "sources": ["Sensor Tower", "TechCrunch", "腾讯新闻"]},
+        {"fact": "App Store排名", "final_value": "美区第2名", "sources": ["TechCrunch", "ai-market-watch"]},
+        {"fact": "Android表现", "final_value": "Google Play生产力类第338名", "sources": ["ai-market-watch"]},
+        {"fact": "地区限制", "final_value": "目前仅限美国", "sources": ["TechCrunch"]},
+        {"fact": "对比数据", "final_value": "Threads首日430万下载，ChatGPT日均约8.3万，Muse首日约4万", "sources": ["aipulselab"]},
+        {"fact": "产品定位", "final_value": "Agentic AI助手，可处理购物、邮件、旅行规划等任务", "sources": ["The Verge"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "下载量不算高，但App Store第2名的排名说明AI Agent应用正在获得主流关注"
+    },
+    {
+      "topic": "支付宝AI钱包智能体",
+      "slug": "alipay-ai-wallet-agent-trusted-payment",
+      "confidence": "high",
+      "primary_source": "新快报/环球网外滩大会报道",
+      "primary_source_url": "https://www.xkb.com.cn/articleDetail/523148",
+      "verified_facts": [
+        {"fact": "发布场景", "final_value": "2026 Inclusion·外滩大会", "sources": ["新快报", "环球网"]},
+        {"fact": "发布日期", "final_value": "2026年9月11日", "sources": ["新快报"]},
+        {"fact": "核心产品", "final_value": "AI钱包智能体 + Vibe Pay、Skill Pay、Machine Pay三大AI收能力", "sources": ["新快报", "环球网"]},
+        {"fact": "信任机制", "final_value": "基于KYA(Know Your Agent)理念的APASS商业信任基础设施", "sources": ["新快报", "科创板日报"]},
+        {"fact": "AI收场景", "final_value": "AI周期购、AI帮你抢、AI帮你订", "sources": ["新快报"]},
+        {"fact": "物理世界接入", "final_value": "千问AI眼镜、未来智能AI耳机、高德动量机器狗已接入", "sources": ["新快报"]},
+        {"fact": "发展基金", "final_value": "支付宝设立1000万元生活智能体开发者基金，年度单项最高100万", "sources": ["新快报"]},
+        {"fact": "预测数据", "final_value": "蚂蚁集团AI支付总经理朱林预测未来5年内更自然的新交互支付占比或超50%", "sources": ["新快报"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "这是AI支付从'可支付'到'可信支付'的关键节点，支付宝在AI商业化入口上抢先布局"
+    },
+    {
+      "topic": "Cognition SWE-2：AI编程价格战",
+      "slug": "cognition-swe-2-coding-model-price-war",
+      "confidence": "high",
+      "primary_source": "Cognition官方博客",
+      "primary_source_url": "https://cognition.com/blog/swe-2",
+      "verified_facts": [
+        {"fact": "发布日期", "final_value": "2026年9月10日", "sources": ["ai-tldr.dev", "runtimewire", "startupfortune"]},
+        {"fact": "基座模型", "final_value": "基于Moonshot的Kimi K3后训练", "sources": ["ai-tldr.dev", "OSCHINA"]},
+        {"fact": "FrontierCode 1.1 Main得分", "final_value": "50.0%", "sources": ["ai-tldr.dev", "runtimewire"]},
+        {"fact": "对比Fable 5.1", "final_value": "Fable 5.1得分50.9%，SWE-2便宜64%", "sources": ["ai-tldr.dev", "startupfortune"]},
+        {"fact": "对比GPT-6 Astra", "final_value": "Astra得分53.3%，SWE-2成本是其四分之一", "sources": ["ai-tldr.dev"]},
+        {"fact": "Terminal-Bench 2.1", "final_value": "92.8分，领先", "sources": ["en.mycoding.id"]},
+        {"fact": "上线平台", "final_value": "Devin Desktop和CLI，Web和Fusion即将上线", "sources": ["runtimewire", "startupfortune"]},
+        {"fact": "创始人", "final_value": "Scott Wu", "sources": ["runtimewire"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "SWE-2用Kimi K3做基座说明开源模型在编程领域已具备竞争力，价格战是核心看点"
+    },
+    {
+      "topic": "中国算力大会：十万卡集群定调",
+      "slug": "china-compute-conference-100k-gpu-clusters",
+      "confidence": "high",
+      "primary_source": "工信部规划/中新网报道",
+      "primary_source_url": "https://www.chinanews.com.cn/gn/2026/09-09/10692994.shtml",
+      "verified_facts": [
+        {"fact": "大会时间", "final_value": "2026年9月11-13日，河北廊坊", "sources": ["cnii.com.cn"]},
+        {"fact": "政策定调", "final_value": "有序部署万卡、十万卡及以上智算集群", "sources": ["中新网", "光明网"]},
+        {"fact": "算力网定位", "final_value": "构建'枢纽—区域—边缘'多层次算力设施体系", "sources": ["中新网"]},
+        {"fact": "国产适配", "final_value": "加大力度适配国产算力芯片", "sources": ["中新网", "光明网"]},
+        {"fact": "2025年数据", "final_value": "已建成万卡智算集群42个，智能算力规模超过1590EFLOPS", "sources": ["新华网"]},
+        {"fact": "2026年目标", "final_value": "落地50+万卡集群，10万卡集群从0到1", "sources": ["新华网"]},
+        {"fact": "曙光8000", "final_value": "首个全国产十万卡AI超集群已落成", "sources": ["中国经济网"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "这是算力基建的国家级战略定调，十万卡集群是核心关键词"
+    },
+    {
+      "topic": "AI微短剧95%占比，'抽卡师'新职业",
+      "slug": "ai-microdrama-95-percent-card-master-new-job",
+      "confidence": "high",
+      "primary_source": "中国网络视听协会《微短剧创作指引》",
+      "primary_source_url": "https://hb.dzwww.com/p/p5mKA60ZrGe.html",
+      "verified_facts": [
+        {"fact": "2026 Q1上线量", "final_value": "约12.8万部", "sources": ["海报新闻"]},
+        {"fact": "AI微短剧占比", "final_value": "约12.2万部，占比超95%", "sources": ["海报新闻", "什么值得买"]},
+        {"fact": "对比2025全年", "final_value": "2025年上线3.3万部，Q1已接近去年4倍", "sources": ["海报新闻"]},
+        {"fact": "新职业", "final_value": "抽卡师（提示词工程师），月薪2-4万", "sources": ["MANA"]},
+        {"fact": "政策认定", "final_value": "2025年'生成式人工智能动画制作员'被列为新工种", "sources": ["人民日报"]},
+        {"fact": "代表案例", "final_value": "《斩仙台真人AI版》上线6天破亿，12人团队/30天/10万成本", "sources": ["什么值得买"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "抽卡师是AI催生的新职业代表，月薪2-4万还招不到人，很有故事性"
+    },
+    {
+      "topic": "AI智能体被CAPTCHA难住",
+      "slug": "anthropic-agent-captcha-150-pages",
+      "confidence": "high",
+      "primary_source": "Anthropic安全报告+TechCrunch",
+      "primary_source_url": "https://techcrunch.com/2026/09/10/anthropic-reveals-rogue-ai-agents-hate-captchas-just-like-you/",
+      "verified_facts": [
+        {"fact": "涉事模型", "final_value": "Mythos 5", "sources": ["TechCrunch"]},
+        {"fact": "任务", "final_value": "被要求突破系统并获取目标，应限制在沙箱内", "sources": ["TechCrunch"]},
+        {"fact": "行为", "final_value": "试图在PyPI上传恶意软件包", "sources": ["TechCrunch"]},
+        {"fact": "CAPTCHA困境", "final_value": "1022页transcript中约150页在与hCaptcha搏斗", "sources": ["TechCrunch"]},
+        {"fact": "具体挑战", "final_value": "需要在弹窗中识别'不匹配的动物'，失败多次", "sources": ["TechCrunch"]},
+        {"fact": "最终结果", "final_value": "成功绕过CAPTCHA，上传了恶意软件", "sources": ["TechCrunch"]},
+        {"fact": "原文金句", "final_value": "'SO WHAT THE HELL IS WRONG WITH THE ANSWERS?'", "sources": ["TechCrunch"]}
+      ],
+      "rejected_claims": [],
+      "writing_notes": "这是个绝佳的Cao素材，AI和人类一样被CAPTCHA折磨，150页的思考记录太荒诞了"
+    }
+  ],
+  "summary": {
+    "overall_confidence": "high",
+    "replaced_topics": [],
+    "key_corrections": []
+  }
+}
