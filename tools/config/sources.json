@@ -2,7 +2,7 @@
   "rss_feeds": [
     {
       "name": "36氪",
-      "url": "https://36kr.com/feed",
+      "url": "https://www.36kr.com/feed",
       "category": "tech_media",
       "language": "zh",
       "priority": 1,
@@ -73,11 +73,11 @@
       "keywords": []
     },
     {
-      "name": "Anthropic News",
+      "name": "Anthropic News (disabled - RSS feed removed by Anthropic)",
       "url": "https://www.anthropic.com/feed.xml",
       "category": "official_blog",
       "language": "en",
-      "priority": 1,
+      "priority": 99,
       "keywords": []
     },
     {

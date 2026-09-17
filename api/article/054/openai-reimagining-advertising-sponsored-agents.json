@@ -1,0 +1,32 @@
+{
+  "slug": "openai-reimagining-advertising-sponsored-agents",
+  "category": "大模型·商业分析",
+  "title": "OpenAI推出Sponsored Agents：ChatGPT对话界面变身商业触点",
+  "title_short": "ChatGPT对话式商务上线",
+  "title_break": "OpenAI推出<br>Sponsored Agents广告",
+  "deck": "OpenAI发布Sponsored Agents广告产品，用户可在ChatGPT中与品牌AI代理对话，HubSpot/Shopify首批合作，Shopify国际版9月23日上线",
+  "keywords": "Dawn Vision, OpenAI, Sponsored Agents, 对话式商务, 广告",
+  "og_description": "OpenAI推出Sponsored Agents，ChatGPT对话界面变身商业触点",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 820,
+  "tags": [
+    "OpenAI",
+    "Sponsored Agents",
+    "对话式商务",
+    "广告",
+    "Shopify"
+  ],
+  "sources": [
+    {
+      "text": "OpenAI - Reimagining Advertising with AI",
+      "url": "https://openai.com/index/reimagining-advertising-with-ai"
+    }
+  ],
+  "body_html": "<p>OpenAI终于亮出了广告这张底牌。<strong>Sponsored Agents</strong>——用户可以在ChatGPT中直接与品牌AI代理对话，这不是传统意义上的广告投放，而是把整个对话界面变成了商业触点。与此同时，面向ChatGPT Work的Ads Manager插件同步上线，HubSpot成为首个CRM合作伙伴，Shopify成为首个电商合作伙伴，<strong>Shopify国际版将于9月23日上线</strong>。</p>\n<h2>对话即商业：广告的范式转移</h2>\n<p>传统搜索广告的逻辑是\"用户搜索→展示广告→点击转化\"。Sponsored Agents彻底重构了这条链路：<span class=\"highlight\">用户对话→品牌代理响应→即时成交</span>。这不是广告，这是\"对话式商务\"——品牌不再需要争夺搜索结果页的广告位，而是直接在AI对话中建立存在感。</p>\n<p>HubSpot和Shopify的首批合作透露了OpenAI的分层策略。HubSpot覆盖B2B客户关系管理，Shopify覆盖B2C电商交易，两者合在一起几乎涵盖了在线商业的主要场景。更关键的是，<strong>AI驱动的文本自动定制和自动翻译功能</strong>意味着品牌可以用一套内容覆盖全球市场——这是传统广告平台做不到的。</p>\n<h2>ChatGPT Work：企业级广告的新战场</h2>\n<p>Ads Manager插件面向ChatGPT Work推出，说明OpenAI的目标不仅是消费者端。企业员工在工作中使用ChatGPT时，品牌可以通过赞助代理影响采购决策、工具选型和供应商评估。这种<span class=\"highlight\">\"工作场景中的商务渗透\"</span>比消费者广告更有价值，因为决策金额更大、转化链路更短。</p>\n<p>Shopify国际版9月23日上线的时间节点也值得关注——这恰好是Q4电商旺季的起点。OpenAI显然在为年终购物季做准备。对于中国的跨境卖家而言，一个新的流量入口正在形成：不再依赖搜索引擎和社交平台的广告投放，而是通过AI代理直接与海外消费者对话。对话式商务的时代，比所有人预想的都来得更快。</p>\n<div class=\"pull-quote\"><span>品牌不再争夺搜索广告位，而是在AI对话中争夺存在感。</span><span class=\"pull-quote__attr\">—— Dawn Vision编辑部</span></div>\n<p>明天见。</p>\n<div class=\"article-sources\"><p><strong>信息来源</strong></p><ul><li><a href=\"https://openai.com/index/reimagining-advertising-with-ai\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI - Reimagining Advertising with AI</a></li></ul><p class=\"source-disclaimer\">以上内容基于公开信息整理，仅供参考。</p></div>\n<div class=\"article-page__footnote\"><p>本文由 Dawn Vision 编辑部撰写，仅代表编辑部观点。文中数据来源于公开信息，如有出入请以原始来源为准。</p></div>",
+  "pull_quote": {
+    "text": "品牌不再争夺搜索广告位，而是在AI对话中争夺存在感。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "商业模式创新,对话式商务,广告范式,平台生态,跨境电商",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 2 个源信号生成，经编辑部人工审核。素材来源：OpenAI Blog。"
+}

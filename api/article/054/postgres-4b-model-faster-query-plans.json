@@ -1,0 +1,35 @@
+{
+  "slug": "postgres-4b-model-faster-query-plans",
+  "title": "花1200刀训个4B小模型，把Postgres几十年的查询优化按在地上摩擦",
+  "title_short": "1200刀暴打Postgres优化器",
+  "title_break": "花1200刀训个4B小模型，<br>把Postgres几十年的查询优化按在地上摩擦",
+  "deck": "一个人，两张H100，四台桌面Postgres容器，干翻了数据库公司几十年的查询优化器。你品，你细品。",
+  "keywords": "Dawn Vision, Postgres查询优化, LoRA微调, GRPO强化学习, 数据库性能",
+  "og_description": "1200刀训4B模型，查询速度提升81%，数据库公司集体沉默",
+  "read_time": "约 4 分钟阅读",
+  "word_count": 780,
+  "tags": [
+    "AI工程",
+    "数据库",
+    "开源模型",
+    "槽点日报"
+  ],
+  "sources": [
+    {
+      "text": "Hacker News - Training a 4B model to produce 81% faster Postgres query plans",
+      "url": "https://news.ycombinator.com/item?id=49731285"
+    },
+    {
+      "text": "Rohan Bansal - QORL: Query Optimization with Reinforcement Learning",
+      "url": "https://rohanbansal.com/qorl"
+    }
+  ],
+  "body_html": "<p>朋友们，今天这个槽点我酝酿了很久，因为它实在太荒诞了。一个叫Rohan Bansal的哥们，solo项目，没有团队，没有融资，用<strong>1200美元</strong>训了一个<strong>40亿参数</strong>的小模型，直接把Postgres的查询优化器按在地上摩擦，速度提升了<strong>81%</strong>。你没看错，81%，不是8.1%。</p><p>我再重复一遍这个数字：<strong>1200美元</strong>。这个钱在北京三环租一个月房子都不够。这个钱在硅谷连一顿像样的team lunch都请不起。但这个钱，够一个人训练出一个比Postgres默认查询计划快<strong>1.81倍</strong>的AI模型。</p><h2>桌面跑Postgres，云端训模型，这才是真正的全栈</h2><p>这个项目的架构我必须详细说说，因为它简直是工程界的\"一边骑自行车一边弹吉他\"。Rohan同学在他的<strong>桌面电脑</strong>上跑了<strong>4个Postgres容器</strong>，用来生成训练数据和评估查询计划。与此同时，他租了<strong>2块H100 SXM</strong>在云端跑了<strong>95个小时</strong>进行模型训练。桌面端出数据，云端出模型，完美闭环。</p><p>你可能会问：就这？就这。先用<strong>~500条GPT-6 Astra的轨迹</strong>做SFT（监督微调），然后用自己魔改的<strong>GRPO变体</strong>做强化学习。总共花了400美元的OpenAI API费用来生成这些教学轨迹。剩下的800美元是GPU租金。1200美元，打完收工。</p><p>但这里有个细节特别有意思：训练之前，这个4B小模型在113个join-heavy的SQL查询中，<strong>99个连查询计划都生成不出来</strong>。是的，99个，接近88%。它就像一个学生交了白卷。经过SFT + Agentic RL之后，<strong>全部113个查询</strong>都能生成比Postgres默认更好的计划。从交白卷到全科满分，这就是RLHF的魔力，不对，是GRPO的魔力。</p><h2>组合爆炸：一个你不想面对的数学噩梦</h2><p>为什么查询优化这么难？因为join ordering是<strong>NP-hard</strong>问题。什么意思呢？3张表就有<strong>4,608种</strong>执行计划。5张表？<strong>3,300万</strong>种。6张表？<strong>18亿</strong>种。7张表？<strong>5,320亿</strong>种。8张表？<strong>86万亿</strong>种。</p><p>86万亿。这个数字是什么概念？全世界80亿人，每人要评估<strong>10万种</strong>方案。Postgres的优化器面对这个组合爆炸只能用启发式算法——说白了就是\"差不多得了\"。但现在一个4B的小模型，经过训练后，居然能在这个NP-hard的地狱里找到更优的路径。</p><p>Hacker News上有位老哥说得好：<strong>P!=NP恰好是LLM有用的数学基础</strong>。生成（generation）是昂贵的、启发式的，但验证（verification）是廉价的。你不需要证明AI找到了最优解，你只需要证明它找到的解比Postgres默认的快就行了。多么优雅的工程哲学。</p><h2>HN评论区：比原项目更精彩</h2><p>这条新闻在Hacker News上拿了<strong>483分、96条评论</strong>，评论区的槽点比原项目还多。</p><p>有人说\"Stealing an apple from the British Empire\"——前沿大厂用盗版数据训练模型，现在你用它们的输出蒸馏，谁也没资格站在道德高地上指指点点。好家伙，这是一条<strong>AI训练的道德供应链</strong>：OpenAI偷互联网的数据 → 你偷OpenAI的输出 → Postgres用户偷你的时间。大家都有光明的未来。</p><p>还有人吐槽这篇文章\"需要5天才能读完\"，另一位立刻回复：\"他们忘了用同一个模型优化文章阅读速度。\"我笑出了声。这位朋友，你很有幽默感，但你可能不知道，优化阅读速度的问题也是NP-hard的。</p><p>当然也有严肃的技术讨论：怎么验证AI生成的查询计划<strong>真的执行正确</strong>？答案是：Rohan跑了所有计划，对比了实际执行结果。但评论区的灵魂拷问是——<strong>你愿意每几小时重新训练一次模型吗？</strong>数据库schema变了怎么办？数据分布漂移了怎么办？这些问题目前没有答案，但这不妨碍我们先爽一波。</p>",
+  "pull_quote": {
+    "text": "1200美元，在北京三环租一个月房子都不够，却够一个人训练出一个比Postgres优化器快81%的AI模型。数据库公司几十年的工程积累，被一个solo开发者用4B小模型按在地上摩擦——你品，你细品。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "反差萌, 工程极客, NP-hard科普, HN社区梗",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的公开信息整理，素材来源：Rohan Bansal博客、Hacker News。",
+  "footnote_tip": "<strong>实用Tips：</strong><ol><li>小模型做大模型蒸馏：先用GPT-6等大模型生成高质量轨迹做SFT，再用RL微调小模型，比从零训练效率高几个数量级。</li><li>查询计划验证铁律：永远用EXPLAIN ANALYZE跑实际执行结果对比，别信AI的自我评估。</li><li>成本意识：1200美元能做这么多，但前提是有扎实的数据库和ML功底，否则大概率得到一个跑不通的notebook。</li></ol>"
+}

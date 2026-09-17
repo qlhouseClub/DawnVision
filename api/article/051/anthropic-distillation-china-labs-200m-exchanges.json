@@ -1,0 +1,33 @@
+{
+  "slug": "anthropic-distillation-china-labs-200m-exchanges",
+  "category": "AI商业化",
+  "title": "Anthropic指控中国AI实验室'吸血'Claude：1.51亿次交换背后的技术暗战",
+  "title_short": "Anthropic蒸馏指控：1.51亿次暗战",
+  "title_break": "Anthropic指控中国AI实验室<br>1.51亿次交换背后的技术暗战",
+  "deck": "9月10日，Anthropic发布威胁情报报告，指控阿里巴巴、DeepSeek、Moonshot AI等中国AI实验室对Claude进行大规模蒸馏攻击，累计约2亿次恶意交换。其中阿里巴巴单家就贡献了1.51亿次。",
+  "keywords": "Dawn Vision, Anthropic, 蒸馏, 阿里巴巴, DeepSeek, Moonshot, AI安全, Claude",
+  "og_description": "Anthropic发布威胁情报报告，指控中国AI实验室对Claude进行大规模蒸馏攻击，累计约2亿次恶意交换，阿里巴巴单家1.51亿次。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 820,
+  "sources": [
+    {
+      "text": "Anthropic Threat Intelligence Report - September 2026",
+      "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+    },
+    {
+      "text": "TechCrunch - Anthropic details distillation campaigns",
+      "url": "https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/"
+    },
+    {
+      "text": "TechInAsia - Anthropic says China AI labs used Claude",
+      "url": "https://www.techinasia.com/news/anthropic-says-china-ai-labs-used-claude-to-train-models"
+    }
+  ],
+  "body_html": "<p>AI行业的\"吸血\"事件正在升级。</p><p>9月10日，Anthropic发布2026年9月威胁情报报告，指控多个中国AI实验室对Claude进行大规模\"蒸馏攻击\"。报告显示，<strong>累计约2亿次恶意交换被追踪到5个独立的攻击活动</strong>，其中阿里巴巴被指控的活动规模最大——在2026年5月至7月期间，通过3500个账号产生了<strong>1.51亿次交换</strong>，峰值接近每天300万次。</p>\n\n<h2>蒸馏攻击：偷学模型的\"思维链\"</h2><p>什么是蒸馏攻击？简单来说，就是通过大量查询目标模型，诱导其暴露内部推理过程（思维链），然后用这些数据训练自己的模型。</p><p>Anthropic在报告中指出，攻击者发展出了越来越复杂的方法来绕过防御。例如，<strong>有的攻击者伪装成翻译请求</strong>，要求Claude将\"工作记忆\"翻译成日文，从而诱导模型暴露思维链。</p><p>这次报告的指控范围远超2月的首次披露。除了阿里巴巴，Moonshot AI被指控产生了<strong>2300万次交换</strong>，DeepSeek被指控在14天内产生了<strong>1200万次交换</strong>。此外，小米和其他几家中国实验室也被点名。</p>\n\n<h2>阿里巴巴的1.51亿次：最大规模蒸馏</h2><p>阿里巴巴被指控的活动是Anthropic观察到的最大规模蒸馏攻击。</p><p>1.51亿次交换，分布在3500个账号上，使用单一固定提示词——Anthropic认为这是针对Qwen系列模型的协调训练行动。这意味着<strong>平均每分钟有超过1400次请求</strong>，持续了近3个月。</p><p>Moonshot AI的情况更敏感。报告指出，部分请求似乎直接来自中国军方——其中一个请求要求Claude分析监控录像，判断被拍摄对象是否\"行为异常\"。</p>\n\n<h2>技术暗战：AI竞争的新维度</h2><p>这次事件折射出AI竞争的新维度：<strong>不只是模型能力的竞争，更是数据获取方式的竞争</strong>。</p><p>对于中国AI实验室来说，直接蒸馏Claude的成本远低于从头训练。Claude在代码、推理、Agent能力上的优势，是通过海量数据和计算资源堆出来的。如果能\"免费\"获取这些能力，何乐而不为？</p><p>但这种做法的风险也很明显：一旦被发现，不仅面临法律风险，更会损害企业的国际信誉。</p><div class=\"pull-quote\">\"蒸馏攻击的本质是'知识盗窃'——你花10亿美元训练的能力，别人花100万美元就拿走了。\"<span class=\"pull-quote__attr\">—— 一位AI安全研究员的评论</span></div>\n\n<h2>对行业的影响</h2><p>这次事件可能加速AI模型的防御技术发展。Anthropic已经开始部署更先进的反蒸馏措施，包括检测异常查询模式、限制单账号请求频率等。</p><p>同时，这也可能推动AI模型的\"开放\"与\"封闭\"之争更加激烈。如果蒸馏攻击持续存在，模型厂商可能会更加保守地开放API，甚至限制某些地区的访问。</p><p>对于整个AI行业来说，这是一个警示：<strong>当AI能力成为核心竞争力时，保护这些能力的安全措施必须同步升级</strong>。</p><p>明天见。</p>",
+  "pull_quote": {
+    "text": "蒸馏攻击的本质是'知识盗窃'——你花10亿美元训练的能力，别人花100万美元就拿走了。",
+    "attr": "—— 一位AI安全研究员"
+  },
+  "cognitive_notes": "Anthropic · 蒸馏攻击 · 阿里巴巴 · DeepSeek · Moonshot · 2亿次交换 · Claude · AI安全",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 12 个源信号生成，经编辑部人工审核。素材来源：Anthropic威胁情报报告、TechCrunch、TechInAsia。"
+}

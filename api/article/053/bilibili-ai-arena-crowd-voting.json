@@ -1,0 +1,35 @@
+{
+  "slug": "bilibili-ai-arena-crowd-voting",
+  "title": "GPT-6登顶B站AI竞技场，但国产模型前五占三——你品，你细品",
+  "title_short": "GPT-6登顶，但国产前五占三",
+  "title_break": "GPT-6登顶B站AI竞技场<br>但国产模型前五占三——你品，你细品",
+  "deck": "B站AI无限竞技场上线，100+模型全民投票。GPT-6 Astra第一，GLM-5.3第二，Claude Fable 5.1第三。1.9亿月活用户的AI偏好数据，比任何benchmark都真实。",
+  "keywords": "Dawn Vision, B站, AI竞技场, GPT-6, GLM, 大模型评测, AI内容",
+  "og_description": "B站AI无限竞技场上线，100+模型全民投票。GPT-6 Astra登顶但GLM-5.3紧随其后，前五中国产占三。AI内容月活1.9亿，消费时长同比增72%。",
+  "read_time": "约 4 分钟阅读",
+  "word_count": 750,
+  "tags": [
+    "B站",
+    "AI竞技场",
+    "GPT-6",
+    "GLM"
+  ],
+  "sources": [
+    {
+      "text": "IT之家 - B站AI无限竞技场正式上线，100+模型参与",
+      "url": "https://www.ithome.com/bilibili-ai-infinite-arena-launch"
+    },
+    {
+      "text": "B站官方 - AI无限竞技场产品介绍与排行榜",
+      "url": "https://www.bilibili.com/ai-arena"
+    }
+  ],
+  "body_html": "<p>朋友们，B站搞了个大活——<strong>AI无限竞技场</strong>，9月16日正式上线。简单说就是：100多个AI模型排排坐，用户跟它们聊天，聊完投票，谁回答好选谁。最后看排名。</p>\n\n<p>结果出来了：GPT-6 Astra第一名，GLM-5.3第二名，Claude Fable 5.1第三名。前五名里，国产模型占了三席。</p>\n\n<h2>这个排名有点意思</h2>\n\n<p>你品品这个画面：OpenAI最强的模型GPT-6拿了第一，这不意外——人家砸了几百亿美元训练出来的，不拿第一说不过去。</p>\n\n<p>但有意思的是<strong>GLM-5.3力压Claude排到了第二</strong>。Claude什么水平？Fable 5.1是Anthropic的最新旗舰，在硅谷的口碑一直很硬。结果到了B站用户的手里，被智谱的GLM给超了。你可以说这是因为中文场景国产模型更懂中文用户，但\"更懂用户\"本身就是一种竞争力——技术benchmark上赢不算赢，用户投票赢才是真赢。</p>\n\n<h2>1.9亿月活的AI审美</h2>\n\n<p>更值得关注的是背后的用户数据。B站AI内容月活用户<strong>1.9亿</strong>，AI内容消费时长同比增长<strong>72%</strong>。将近2亿人每个月在B站上看AI相关内容——这个用户基盘，比很多AI产品的月活都大。</p>\n\n<p>当1.9亿人用投票的方式告诉你\"哪个AI更好用\"，这个数据的价值就远超任何技术评测。因为benchmark测的是标准化任务，而<strong>用户投票测的是真实世界里的主观满意度</strong>。一个模型在代码生成上得99分没用，如果用户觉得它\"说话像机器人\"就不会投它。</p>\n\n<h2>实用提醒</h2>\n\n<p>第一，别只看第一名。竞技场的价值在于<strong>不同场景下的投票分布</strong>——如果你主要用AI写代码，可能Claude更适合你；如果你用AI写中文文案，GLM可能体验更好。排行榜是平均值，不是你的最优解。</p>\n\n<p>第二，B站这个竞技场的商业模式值得关注。1.9亿月活的AI偏好数据，对AI厂商来说是金矿。未来如果B站开放\"模型推荐\"或者\"AI产品导流\"，那就是一个全新的AI分发渠道——比应用商店更精准，比搜索引擎更贴近使用场景。</p>\n\n<p>第三，去投一票。别光看别人评，自己上手试试，投出你心中的最佳AI。毕竟，<strong>1.9亿人的集体审美，比任何专家评测都靠谱</strong>。</p>\n\n<p>今天就槽到这里，明天继续。</p>",
+  "pull_quote": {
+    "text": "技术benchmark上赢不算赢，用户投票赢才是真赢。1.9亿人的集体审美，比任何专家评测都靠谱。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Dawn Vision, B站, bilibili, AI竞技场, GPT-6, GLM-5.3, Claude Fable, 大模型评测, AI内容, 1.9亿月活, 用户投票",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 8 个源信号生成，经编辑部人工审核。素材来源：IT之家、B站官方。",
+  "footnote_tip": "别只看排行榜第一名——竞技场的价值在于不同场景下的投票分布；1.9亿月活的AI偏好数据对AI厂商是金矿，关注B站未来可能的AI分发商业模式；去自己投一票，集体审美比专家评测更靠谱。"
+}

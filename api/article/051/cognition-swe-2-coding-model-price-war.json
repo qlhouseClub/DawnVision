@@ -1,0 +1,37 @@
+{
+  "slug": "cognition-swe-2-coding-model-price-war",
+  "category": "AI编程",
+  "title": "Cognition发布SWE-2：用Kimi K3做基座，AI编程模型的价格战正式开打",
+  "title_short": "Cognition SWE-2：AI编程价格战",
+  "title_break": "Cognition发布SWE-2<br>用Kimi K3做基座，AI编程价格战开打",
+  "deck": "9月10日，Cognition发布SWE-2编程模型，基于Moonshot的Kimi K3后训练，在FrontierCode上得分50.0%，接近Fable 5.1的50.9%，但成本便宜64%。开源模型在编程领域的竞争力正在被重新定义。",
+  "keywords": "Dawn Vision, Cognition, SWE-2, Devin, Kimi K3, AI编程, Fable 5.1, 价格战",
+  "og_description": "Cognition发布SWE-2编程模型，基于Kimi K3后训练，FrontierCode得分50.0%接近Fable 5.1，成本便宜64%，AI编程价格战正式开打。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 760,
+  "sources": [
+    {
+      "text": "Cognition官方博客 - SWE-2",
+      "url": "https://cognition.com/blog/swe-2"
+    },
+    {
+      "text": "ai-tldr.dev - SWE-2",
+      "url": "https://ai-tldr.dev/models/swe-2/"
+    },
+    {
+      "text": "runtimewire - Cognition ships SWE-2",
+      "url": "https://runtimewire.com/article/cognition-swe-2-coding-model-scott-wu"
+    },
+    {
+      "text": "OSCHINA - Cognition发布SWE-2",
+      "url": "https://www.oschina.net/news/502413/cognition-swe-2"
+    }
+  ],
+  "body_html": "<p>9月10日，Cognition发布了SWE-2编程模型。这不是一次常规的模型更新——它标志着<strong>AI编程模型的价格战正式开打</strong>。</p><p>核心数据：SWE-2在Cognition自建的FrontierCode 1.1 Main基准上得分<strong>50.0%</strong>，仅比Anthropic的Fable 5.1低0.9个百分点（50.9%），比GPT-6 Astra低3.3个百分点（53.3%）。但SWE-2的推理成本比Fable 5.1低<strong>64%</strong>，是GPT-6 Astra的<strong>四分之一</strong>。</p>\n\n<h2>Kimi K3做基座：开源模型的逆袭</h2><p>SWE-2最引人注目的细节是它的基座模型：<strong>Moonshot的Kimi K3</strong>。</p><p>这意味着Cognition没有选择GPT-6 Astra或Claude Fable 5.1作为基座，而是选择了一个开源模型。然后通过RL（强化学习）后训练，将Kimi K3的编程能力提升到了接近前沿闭源模型的水平。</p><p>这个选择有两层含义：第一，<strong>开源模型在编程领域已经具备了足够的基础能力</strong>，后训练可以进一步放大这个优势；第二，<strong>使用开源模型可以大幅降低成本</strong>，这正是SWE-2能够便宜64%的核心原因。</p>\n\n<h2>Terminal-Bench 2.1：SWE-2的真正主场</h2><p>虽然在FrontierCode上略逊于Fable 5.1和Astra，但SWE-2在另一个基准上表现出色：<strong>Terminal-Bench 2.1得分92.8分，领先所有竞品</strong>。</p><p>Terminal-Bench是一个更贴近真实编程场景的基准，测试的是模型在终端环境中完成复杂任务的能力。SWE-2在这个基准上的领先，说明它在实际编程工作流中可能比基准分数显示的更有竞争力。</p>\n\n<h2>价格战的信号</h2><p>SWE-2的发布释放了一个明确的信号：<strong>AI编程模型的定价正在被重新定义</strong>。</p><p>过去一年，AI编程模型的价格一直在下降，但幅度有限。SWE-2用开源基座+RL后训练的方式，实现了接近前沿模型的性能，同时大幅降低成本。这个模式如果被验证可行，将对整个AI编程市场产生深远影响。</p><p>对于开发者来说，这是好消息。当编程AI的成本降低64%时，更多开发者可以负担得起AI辅助编程，AI编程工具的普及速度将大幅加快。</p><div class=\"pull-quote\">\"SWE-2证明了一件事：开源模型+精细后训练，可以在编程领域挑战闭源前沿模型。\"<span class=\"pull-quote__attr\">—— 一位AI编程工具开发者</span></div>\n\n<h2>Cognition的战略</h2><p>SWE-2的发布也体现了Cognition的战略调整。</p><p>Cognition的旗舰产品Devin是AI编程Agent，之前一直依赖Claude和GPT系列模型。现在，Cognition开始自研模型，并用开源模型做基座。这意味着Cognition正在从\"Agent框架公司\"向\"模型+Agent全栈公司\"转型。</p><p>这个转型的核心逻辑是：<strong>控制成本，掌控体验</strong>。当你的Agent依赖第三方模型时，成本和体验都受制于人。自研模型可以让你根据Agent场景优化模型，同时大幅降低推理成本。</p><p>明天见。</p>",
+  "pull_quote": {
+    "text": "SWE-2证明了一件事：开源模型+精细后训练，可以在编程领域挑战闭源前沿模型。",
+    "attr": "—— 一位AI编程工具开发者"
+  },
+  "cognitive_notes": "Cognition · SWE-2 · Devin · Kimi K3 · AI编程 · FrontierCode · Terminal-Bench · 价格战 · 开源",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 12 个源信号生成，经编辑部人工审核。素材来源：Cognition官方博客、ai-tldr.dev、runtimewire、OSCHINA。"
+}

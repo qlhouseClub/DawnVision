@@ -1,0 +1,41 @@
+{
+  "slug": "openai-agents-api-managed-codex-harness",
+  "title": "OpenAI发布Agents API：一次调用，一个Agent，Agent创业公司该慌了",
+  "title_short": "OpenAI Agents API：托管Agent时代来了",
+  "title_break": "OpenAI发布Agents API<br>一次调用创建生产级Agent，托管时代来了",
+  "deck": "9月10日，OpenAI推出Agents API公测版——开发者只需一次API调用，就能创建可投入生产的云Agent，无需自建上下文管理、子代理编排等底层设施。这意味着Agent创业公司的护城河正在被填平。",
+  "keywords": "Dawn Vision, OpenAI, Agents API, Codex, 托管服务, 云Agent, 开发者",
+  "og_description": "OpenAI发布Agents API公测版，一次API调用创建生产级云Agent，基于Codex harness，无额外服务费。Agent创业公司的护城河正在被填平。",
+  "twitter_description": "一次API调用，一个生产级Agent——OpenAI Agents API让Agent创业公司的护城河正在蒸发。",
+  "read_time": "约 10 分钟阅读",
+  "word_count": 2400,
+  "sources": [
+    {
+      "text": "OpenAI官方博客 - Introducing the Agents API",
+      "url": "https://openai.com/index/introducing-the-agents-api"
+    },
+    {
+      "text": "TechCrunch - OpenAI launches Agents API",
+      "url": "https://techcrunch.com/"
+    },
+    {
+      "text": "MarkTechPost - OpenAI Launches the Agents API in Public Beta",
+      "url": "https://www.marktechpost.com/2026/09/10/openai-launches-the-agents-api-in-public-beta-putting-the-codex-harness-behind-one-api-call/"
+    },
+    {
+      "text": "ai-tldr.dev - OpenAI Agents API",
+      "url": "https://ai-tldr.dev/releases/openai-agents-api/"
+    },
+    {
+      "text": "金融界 - OpenAI推出Agents API公测版",
+      "url": "http://m.toutiao.com/group/7684182154276618804/"
+    }
+  ],
+  "body_html": "<p>9月10日，OpenAI在官方博客上发布了Agents API公测版。这不是一次常规的API更新——这是OpenAI从\"模型提供商\"向\"Agent平台\"转型的关键一步。</p><p>过去一年，无数创业公司试图在大模型之上构建Agent基础设施：上下文管理、会话持久化、子代理编排、工具调用、错误恢复……这些\"胶水代码\"构成了Agent创业公司的核心护城河。现在，OpenAI说：<strong>这些我都帮你做了，而且免费。</strong></p><p>Agents API的核心理念很简单：开发者只需在一次API调用中指定任务、模型、工具与运行环境，OpenAI就会自动处理剩下的所有事情——上下文压缩、长时运行、子代理并行、故障恢复。这意味着，<strong>构建一个生产级Agent的门槛，从\"需要一个工程团队\"降到了\"需要一行代码\"</strong>。</p>\n\n<h2>Codex harness：OpenAI的秘密武器</h2><p>Agents API的核心是Codex harness——这是OpenAI内部用于运行Codex的同一套基础设施。Codex是OpenAI的代码生成Agent，已经在内部运行了很长时间，处理了数百万次任务。</p><p>现在，这套基础设施被开放给了所有开发者。这意味着你可以用同样的可靠性、同样的性能、同样的扩展性来运行你自己的Agent——而不需要自己搭建任何基础设施。</p><p>具体来说，Agents API提供三个核心能力：</p><p><strong>第一，长时运行会话管理</strong>。Agent不再受限于单次请求-响应模式，可以在后台持续运行数小时甚至数天。OpenAI会自动处理上下文压缩，当会话上下文超过模型窗口时，自动压缩历史信息，确保Agent不会\"遗忘\"关键上下文。</p><p><strong>第二，子代理编排</strong>。一个Agent可以自动拆分任务，委派给多个子代理并行执行。这就像一个项目经理把任务分配给团队成员——但这里的\"团队成员\"都是AI Agent。</p><p><strong>第三，工具调用与MCP支持</strong>。Agent可以调用外部工具、访问数据库、执行代码、浏览网页。而且，Agents API原生支持MCP（Model Context Protocol），这意味着你可以无缝接入已经为MCP构建的整个工具生态。</p>\n\n<h2>托管模式：Agent创业公司的噩梦</h2><p>Agents API的定价模式是它最具杀伤力的部分：<strong>仅收取token和工具调用费用，无额外服务费</strong>。</p><p>这意味着什么？过去一年，许多Agent创业公司的商业模式是：提供Agent基础设施（上下文管理、编排、监控），收取订阅费或按调用收费。现在，OpenAI把这些能力免费提供了——你只需要支付模型调用的token费用。</p><p>这就像AWS当年对传统IDC的冲击：你不需要自己建机房，只需要按需付费。现在，你不需要自己建Agent基础设施，只需要调用API。</p><p>当然，这并不意味着所有Agent创业公司都会死掉。那些在特定垂直领域有深度积累的公司（比如法律Agent、医疗Agent、金融Agent）仍然有生存空间——因为它们的价值不仅在于基础设施，更在于领域知识和数据。</p><p>但是，那些纯粹做\"Agent基础设施\"的创业公司，现在必须重新思考自己的定位了。<strong>当OpenAI把基础设施免费提供时，你的价值在哪里？</strong></p>\n\n<h2>开发者生态：MCP成为标准</h2><p>Agents API原生支持MCP（Model Context Protocol），这是一个重要信号。</p><p>MCP是Anthropic在2024年提出的开放协议，用于标准化大模型与外部工具的连接方式。过去一年，MCP已经获得了广泛采用——Anthropic、Google、Microsoft、AWS等主要厂商都支持MCP。</p><p>现在，OpenAI通过Agents API正式拥抱MCP。这意味着<strong>MCP正在成为Agent工具调用的事实标准</strong>。对于开发者来说，这是一个好消息：你为MCP构建的工具，现在可以在OpenAI的Agent生态中使用，也可以在其他支持MCP的平台中使用。</p><p>这种标准化对整个Agent生态是有利的。它降低了工具开发者的适配成本，提高了工具的可移植性，最终会加速Agent应用的爆发。</p>\n\n<h2>竞争格局：OpenAI vs Anthropic vs Google</h2><p>Agents API的发布，让Agent基础设施的竞争格局更加清晰。</p><p>OpenAI的优势在于<strong>模型能力和用户基数</strong>。GPT-6 Astra是最强的通用模型之一，ChatGPT有数亿用户。Agents API让这些用户可以直接构建Agent，而不需要额外的基础设施。</p><p>Anthropic的优势在于<strong>安全性和企业级信任</strong>。Claude模型在安全性和可控性上一直领先，很多企业客户选择Anthropic就是因为它对安全的重视。Claude Code在开发者中的采用率也在快速增长。</p><p>Google的优势在于<strong>搜索和工具生态</strong>。Gemini模型与Google搜索、Gmail、Drive等服务深度集成，这在Agent场景中是独特的优势。</p><p>这场竞争的赢家，最终取决于谁能提供最好的Agent体验——不只是模型能力，还包括工具生态、开发体验、可靠性、安全性。</p>\n\n<h2>对开发者意味着什么？</h2><p>对于开发者来说，Agents API是一个巨大的利好。</p><p>过去，构建一个生产级Agent需要处理大量工程问题：上下文管理、错误恢复、并发控制、监控日志……这些\"胶水代码\"往往比Agent本身的逻辑还要复杂。现在，OpenAI帮你处理了这些。</p><p>你可以专注于Agent的核心逻辑：它应该做什么？它应该调用哪些工具？它应该如何响应用户？——而不需要担心底层基础设施。</p><p>当然，这也意味着<strong>Agent开发的门槛大幅降低</strong>。当每个人都能轻松构建Agent时，竞争会更加激烈。最终胜出的，不是那些\"能构建Agent\"的人，而是那些\"知道用Agent解决什么问题\"的人。</p><p>OpenAI这次发布的时间点也很有意思。9月10日，正好是秋季开发者大会的季节。接下来几个月，我们可能会看到更多Agent平台的更新——Anthropic、Google、Microsoft都在筹备各自的Agent产品。</p><p>Agent基础设施的竞争，才刚刚开始。</p><p>明天见。</p>",
+  "pull_quote": {
+    "text": "当OpenAI把Agent基础设施免费提供时，创业公司必须重新思考：你的价值到底在哪里？",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "OpenAI · Agents API · Codex · 托管Agent · Agent创业 · MCP · 工具调用 · 开发者",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 18 个源信号生成，经编辑部人工审核。素材来源：OpenAI官方博客、TechCrunch、MarkTechPost、ai-tldr.dev、金融界。"
+}

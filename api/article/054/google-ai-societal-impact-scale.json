@@ -1,0 +1,32 @@
+{
+  "slug": "google-ai-societal-impact-scale",
+  "category": "AI新媒体·内容创作",
+  "title": "Google AI社会影响力：300+语言覆盖70亿人，月活10亿处理万亿单词",
+  "title_short": "Google AI影响力数据盘点",
+  "title_break": "Google AI社会影响力：<br>300+语言覆盖70亿人",
+  "deck": "Google展示AI社会影响力全景：翻译月活10亿、AlphaFold 2亿蛋白质结构、糖尿病筛查115万人、Flood Hub覆盖20亿人口",
+  "keywords": "Dawn Vision, Google, AI社会影响, 翻译, 医疗AI",
+  "og_description": "Google AI社会影响力：翻译月活10亿、AlphaFold覆盖190国、医疗筛查百万人",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 840,
+  "tags": [
+    "Google",
+    "AI社会影响",
+    "翻译",
+    "医疗AI",
+    "灾害预警"
+  ],
+  "sources": [
+    {
+      "text": "Google Blog - AI for Societal Impact",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/"
+    }
+  ],
+  "body_html": "<p>Google正在用AI做一件比搜索引擎更大的事。<strong>覆盖300+语言、触达70亿人口（全球86%）</strong>的翻译系统，月活突破10亿、每月处理1万亿单词——这不是一个产品指标，而是一个文明级别的基础设施。AlphaFold在190个国家为400万研究者提供2亿蛋白质结构预测，AI医疗筛查覆盖了糖尿病115万人、乳腺癌17.5万女性（发现25%被遗漏的癌症）、结核病6个国家40个站点的2500+张X光片。</p>\n<h2>从翻译到气象：AI构建全球信息新层</h2>\n<p>Google Translate的规模数据令人震撼——月活10亿+，每月1万亿单词，目标是覆盖<strong>1000种语言</strong>。这已经不是一个翻译工具，而是人类有史以来最大规模的实时跨语言通信基础设施。当300+语言的壁垒被AI打破时，信息流动的方式将发生根本性改变。</p>\n<p>在气象领域，WeatherNext 3的降水预报精度提升了50%，已为印度<strong>3800万农民</strong>提供季风信息。Flood Hub覆盖150+国家、保护20亿人口，野火预警系统已发出520+次危机警报、覆盖7500万用户。PPE预测系统成功预判了83%的埃博拉热点区域。这些数字背后是AI从\"信息检索\"到<span class=\"highlight\">\"生命保护\"</span>的能力跃迁。</p>\n<h2>规模惊人，但只是起点</h2>\n<p>Google在AI社会影响领域的投入已超过<strong>10亿美元</strong>用于培训和技能提升，帮助超过1亿人获得数字和AI技能。这个数字看起来很大，但放在全球80亿人口的尺度上，仍然只是刚刚开始。AI医疗筛查覆盖了百万级人群，但全球有超过4亿糖尿病患者和数亿缺乏基本医疗资源的人口。</p>\n<p>真正值得关注的是Google展示的这个模式：<span class=\"highlight\">AI公司不仅在卖产品，更在构建公共基础设施</span>。翻译、气象、医疗、灾害预警——这些传统上由政府和国际组织承担的职能，正在被AI公司以技术手段重新定义。这既是科技向善的最佳叙事，也是AI时代权力格局重塑的缩影。</p>\n<div class=\"pull-quote\"><span>AI正在从信息检索工具跃迁为生命保护基础设施。</span><span class=\"pull-quote__attr\">—— Dawn Vision编辑部</span></div>\n<p>明天见。</p>\n<div class=\"article-sources\"><p><strong>信息来源</strong></p><ul><li><a href=\"https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google Blog - AI for Societal Impact</a></li></ul><p class=\"source-disclaimer\">以上内容基于公开信息整理，仅供参考。</p></div>\n<div class=\"article-page__footnote\"><p>本文由 Dawn Vision 编辑部撰写，仅代表编辑部观点。文中数据来源于公开信息，如有出入请以原始来源为准。</p></div>",
+  "pull_quote": {
+    "text": "AI正在从信息检索工具跃迁为生命保护基础设施。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "社会影响,基础设施,全球覆盖,技术向善,权力重塑",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 2 个源信号生成，经编辑部人工审核。素材来源：Google Blog。"
+}

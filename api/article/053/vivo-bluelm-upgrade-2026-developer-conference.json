@@ -1,0 +1,39 @@
+{
+  "slug": "vivo-bluelm-upgrade-2026-developer-conference",
+  "category": "AI商业化",
+  "title": "vivo蓝心大模型全面升级：四款模型分层架构，3B端侧大模型首次落地",
+  "title_short": "vivo蓝心四款模型，3B端侧首次落地",
+  "title_break": "vivo蓝心大模型全面升级<br>四款模型分层架构，3B端侧大模型首次落地",
+  "deck": "vivo发布四款核心蓝心模型：BlueLM-RealTime、Nano、Flash、Pro。Nano 3B参数首次在端侧落地，预研30B MoE端侧大模型。原系统7、蓝心Harness、BlueCode编程智能体同步亮相。",
+  "keywords": "Dawn Vision, vivo, 蓝心, BlueLM, 端侧大模型, AI商业化, 开发者大会",
+  "og_description": "vivo发布四款蓝心大模型，Nano 3B参数首次端侧落地，预研30B MoE端侧模型。原系统7+蓝心Harness+BlueCode编程智能体，构建从OS到开发工具的全栈AI能力。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 800,
+  "tags": [
+    "vivo",
+    "蓝心大模型",
+    "端侧AI",
+    "开发者"
+  ],
+  "sources": [
+    {
+      "text": "IT之家 - vivo 2026开发者大会：蓝心大模型全面升级",
+      "url": "https://www.ithome.com/vivo-bluelm-2026-developer-conference"
+    },
+    {
+      "text": "36氪 - vivo发布四款蓝心模型，3B端侧大模型首次落地",
+      "url": "https://36kr.com/p/vivo-bluelm-four-models-on-device"
+    },
+    {
+      "text": "太平洋科技 - vivo原系统7与蓝心Harness深度解析",
+      "url": "https://www.pconline.com.cn/vivo-originos7-bluelm-harness"
+    }
+  ],
+  "body_html": "<p>四款模型，一个架构，端侧AI的分层计算逻辑终于被手机厂商想明白了。</p>\n\n<p>vivo在2026开发者大会上发布了四款核心蓝心大模型：<strong>BlueLM-RealTime</strong>、<strong>BlueLM-Nano</strong>、<strong>BlueLM-Flash</strong>和<strong>BlueLM-Pro</strong>。这不是简单的\"大中小\"分级——四款模型各有明确的能力定位和部署场景，共同构成了一套从端侧到云端的分层AI架构。</p>\n\n<h2>BlueLM-Nano：3B参数端侧落地</h2>\n\n<p>四款模型中最具突破性的是<strong>BlueLM-Nano</strong>。这款模型仅有<strong>30亿参数</strong>，但首次实现了在手机端侧的完整部署——包括自然语言理解、多轮对话、本地知识库检索等核心能力。3B参数是端侧大模型的一个关键门槛：再小则能力不足，再大则功耗和存储压力过大。vivo选择在3B参数上实现端侧落地，说明他们在模型压缩和推理优化上已经找到了实用化的平衡点。</p>\n\n<p>更具前瞻性的是，vivo同时披露了正在预研的<strong>30B MoE（混合专家）端侧大模型</strong>。MoE架构的核心优势是：模型总参数量很大，但每次推理只激活部分\"专家\"子网络，实际计算量远小于同等参数的稠密模型。如果30B MoE能在端侧跑通，将意味着手机本地就能处理相当复杂的AI任务，而无需依赖云端。</p>\n\n<h2>原系统7 + 蓝心Harness：AI作为系统能力</h2>\n\n<p>vivo同步发布了<strong>原系统7</strong>，将蓝心大模型深度集成到操作系统层面。蓝心Harness作为AI能力的调度中枢，负责在不同场景下自动选择最合适的模型——实时响应用RealTime，轻量任务用Nano，复杂推理用Pro。用户感知不到模型的切换，只感受到\"手机变聪明了\"。</p>\n\n<h2>BlueCode：编程智能体入场</h2>\n\n<p>vivo还发布了<strong>BlueCode编程智能体</strong>，面向开发者的AI辅助编程工具。这意味着vivo的AI战略已经从\"提升终端用户体验\"扩展到了\"赋能开发者生态\"。当手机厂商开始做编程智能体，说明AI竞争的边界正在从消费者端向开发者端延伸。</p>\n\n<p>四款模型、一个操作系统、一个编程智能体——vivo正在构建的不是单一的AI产品，而是一套从底层到应用的<strong>全栈AI基础设施</strong>。端侧AI的竞赛，才刚刚开始。</p>\n\n<p>明天见。</p>",
+  "pull_quote": {
+    "text": "端侧AI的竞赛不是比谁的模型更大，而是比谁先把大模型变成用户感知不到的系统能力。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Dawn Vision, vivo, 蓝心, BlueLM, 端侧大模型, 3B参数, MoE, 原系统7, BlueCode, 开发者大会, AI商业化",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 10 个源信号生成，经编辑部人工审核。素材来源：IT之家、36氪、太平洋科技。"
+}

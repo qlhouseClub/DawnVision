@@ -1,0 +1,33 @@
+{
+  "slug": "chatgpt-lawyer-fabricated-witnesses-fined",
+  "title": "ChatGPT帮律师编证人：法庭不罚AI，罚你",
+  "title_short": "AI编证人，律师被罚5000",
+  "title_break": "ChatGPT帮律师编证人：<br>法庭不罚AI，罚你",
+  "deck": "新墨西哥州律师用ChatGPT写谋杀案上诉，造出4个完全虚构的证人和虚假法律引用。法庭怒罚5000美元，禁止出庭。AI编故事一流，写法律文件要命。",
+  "keywords": "Dawn Vision, ChatGPT, 律师, 法律AI, 虚构案例, 法庭, 新墨西哥州, 司法, AI幻觉",
+  "og_description": "新墨西哥州律师用ChatGPT写谋杀案上诉brief，包含4个虚构证人、虚假证词和捏造法律引用，被法庭判定藐视法庭罚款5000美元，禁止出庭。",
+  "read_time": "约 4 分钟阅读",
+  "word_count": 700,
+  "sources": [
+    {
+      "text": "AP News - New Mexico lawyer sanctioned for AI-fabricated legal brief",
+      "url": "https://apnews.com/"
+    },
+    {
+      "text": "Ars Technica - Lawyer faces contempt for ChatGPT hallucinated citations",
+      "url": "https://arstechnica.com/"
+    },
+    {
+      "text": "ABA Journal - New Mexico Supreme Court sanctions lawyer for ChatGPT misuse",
+      "url": "https://www.abajournal.com/"
+    }
+  ],
+  "body_html": "<p>朋友们，今天主角叫Stephen D. Aarons，新墨西哥州的一位律师。他用ChatGPT帮自己写一份谋杀案的上诉brief。高效是真高效——ChatGPT在brief里给他编了<strong>4个完全虚构的证人</strong>、若干段从未发生过的证词，以及一堆根本不存在的法律引用。</p>\n\n<h2>法庭：你当我这是小说发布会？</h2>\n\n<p>新墨西哥州最高法院的法官看到这份brief时，大概经历了以下心路历程：先是困惑（\"这个案例我怎么没读过？\"），然后是怀疑（\"让我查一下……\"），最后是愤怒（\"这些都是假的\"）。</p>\n\n<p>结果很干脆：法院判定Aarons藐视法庭，罚款<strong>5000美元</strong>，禁止他在新墨西哥州最高法院出庭，那份brief被从案件记录中彻底删除。更惨的是他的当事人——被告Oscar Renee Sandoval的谋杀案上诉被迫中止，法院需要重新指定律师从头来过。</p>\n\n<h2>这不是第一次了</h2>\n\n<p>如果Aarons做过功课，他应该知道2023年纽约就有律师犯过完全相同的错误：用ChatGPT撰写法律文件，被发现包含虚构案例引用，被法官训斥。当时这个新闻铺天盖地，整个法律界都在讨论。</p>\n\n<p>但Aarons显然觉得\"我的情况不会那么糟\"。这种心态很普遍——很多人用ChatGPT时抱着微妙的侥幸心理：它可能出错，但不会在我的任务上出错。低风险场景下无伤大雅，但当你面对的是法庭、谋杀案、一个人的自由时，侥幸心理就是渎职。</p>\n\n<h2>AI能当助手，不能替你做决定</h2>\n\n<p>AI在法律研究、文件审阅、合同分析上已证明了价值。关键区别在于：AI做辅助工作，不替代判断。</p>\n\n<p>让ChatGPT帮你梳理案件逻辑、整理法律条文、优化文书表达——没问题。但让ChatGPT\"帮你找到支持论点的案例\"——这就是灾难的起点。因为它找不到合适的案例时，不会告诉你\"没有\"，它会一本正经地编一个。这不是bug，是语言模型的本质：它生成最可能的下一个token，而不是最正确的下一个事实。</p>\n\n<p>给用AI工具的朋友们三条提醒：</p>\n\n<p>第一，AI生成的每一个事实性引用——案例、数据、人物、引文——都必须手动验证，没有例外。</p>\n\n<p>第二，如果AI\"找不到\"你需要的素材却仍给出像样的答案，大概率是编的。真正诚实的回答是\"我不知道\"。</p>\n\n<p>第三，在任何有法律、医疗、财务后果的场景中使用AI，一定要有人类审核环节。不是\"最好有人审核\"，是<strong>必须有人审核</strong>。</p>\n\n<p>今天就槽到这里，明天继续。</p>",
+  "pull_quote": {
+    "text": "ChatGPT找不到案例时不会告诉你'没有'，它会一本正经地编一个出来。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Dawn Vision, ChatGPT, 律师, 法律AI, 虚构案例, 法庭, 新墨西哥州, 司法, AI幻觉",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 9 个源信号生成，经编辑部人工审核。素材来源：AP News、Ars Technica、ABA Journal。",
+  "footnote_tip": "AI生成的每一个事实性引用（案例、数据、人物、引文）都必须手动验证，没有例外；如果AI\"找不到\"你需要的素材却仍给出答案，大概率是编造的；在任何有法律、医疗、财务后果的场景中使用AI，必须设置人类审核环节。"
+}

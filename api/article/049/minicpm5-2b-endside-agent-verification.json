@@ -1,0 +1,32 @@
+{
+  "slug": "minicpm5-2b-endside-agent-verification",
+  "category": "AI Agent · 工程实践",
+  "title": "面壁MiniCPM5-2B开源：2B参数Agentic Index达20分，端侧通用Agent有戏了",
+  "title_break": "面壁开源2B端侧Agent模型<br>Agentic Index达同等规模2倍",
+  "deck": "2.5B稠密参数、131K上下文、Apache 2.0协议，Agentic Index得分20——同等参数规模下其他模型还在10分以下徘徊。当Agent能力被压缩到端侧，数据安全和推理成本的两道难题同时被破解。",
+  "keywords": "Dawn Vision, 面壁智能, MiniCPM5-2B, 端侧Agent, Agentic Index, 端侧大模型, 开源",
+  "og_description": "面壁智能开源MiniCPM5-2B端侧模型，Agentic Index达20分同等规模领先一倍，端侧通用Agent从概念走向可用。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 790,
+  "sources": [
+    {
+      "text": "上海证券报 - 面壁智能开源MiniCPM5-2B 端侧智能体可行性获初步验证",
+      "url": "http://m.toutiao.com/group/7683037589535900214/"
+    },
+    {
+      "text": "腾讯新闻 - 端侧模型太夯了！面壁智能开源2B「小钢炮」，通用Agent杀到端侧",
+      "url": "http://news.qq.com/rain/a/20260908A07D0100"
+    },
+    {
+      "text": "OpenBMB社区 - MiniCPM5-2B: 2.52B稠密模型，34项基准平均53.9",
+      "url": "https://aihot.virxact.com/items/cmtrmx7qt09gvrotnsaaq5918"
+    }
+  ],
+  "body_html": "<p>说到Agent，你脑海里的画面大概是这样的：云端几百亿参数的大模型，跑着几百美元一天的算力，调用十几个工具，帮你完成复杂任务。端侧模型？那是用来做翻译、摘要、语音识别这种轻活儿的。</p>\n<p>但面壁智能9月8日开源的MiniCPM5-2B，正在推翻这个刻板印象。</p>\n<p>这款只有<strong>25.2亿参数</strong>的稠密模型，在Agentic Index上拿到了<strong>20分</strong>。听起来不高？但同等参数规模的其他模型，得分普遍还在10分以下。换句话说，在2B这个量级上，MiniCPM5把端侧Agent的能力基线往上提了一倍。</p>\n\n<h2>Agentic Index 20分意味着什么</h2>\n<p>Agentic Index是衡量模型工具调用、深度搜索、代码生成等智能体核心能力的综合指标。分数越高，说明模型越能独立完成复杂任务——不是简单回答问题，而是能调用工具、规划步骤、处理错误、迭代推进。</p>\n<p>20分放在云端大模型里可能不算什么，但在端侧场景下意义完全不同。它意味着一个完全跑在你手机、PC、车机本地的模型，可以完成：</p>\n<p>· 基本的工具调用和函数执行<br>· 多步骤任务规划<br>· 代码生成与简单调试<br>· 本地文档搜索与摘要</p>\n<p>这些能力如果放在一年前，你必须调用云端API才能实现。现在它们可以在你的设备上跑，数据不用出本地，推理不需要花钱，延迟几乎为零。</p>\n<p>更重要的是基础架构。MiniCPM5-2B采用标准LlamaForCausalLM架构，支持vLLM、SGLang、llama.cpp、Ollama等主流推理引擎——这意味着开发者不用折腾新工具链，拿来就能用。原生<strong>131,072 token</strong>的上下文长度，在端侧模型里也是第一梯队的水平。</p>\n\n<h2>端侧Agent的两个核心驱动力</h2>\n<p>为什么端侧Agent这件事这么重要？因为它同时解决了两个企业最头疼的问题。</p>\n<p>第一个是<strong>数据安全</strong>。企业用云端Agent最大的顾虑是什么？代码、文档、客户数据全要传给第三方模型，数据泄露的风险如影随形。如果Agent能在企业内网、甚至在员工的PC本地跑，数据不出公司大门——这个顾虑就没了。金融、医疗、政府这些对数据敏感的行业，端侧Agent几乎是刚需。</p>\n<p>第二个是<strong>推理成本</strong>。大模型API按token计费，用得越多花得越多。一个重度Agent用户一天可能消耗几百万甚至上千万token，成本相当可观。如果常用的80%任务可以由端侧小模型搞定，只把最复杂的20%交给云端——总体推理成本可能下降一个数量级。</p>\n<p>MiniCPM系列不是第一次刷新端侧模型的认知了。截至2026年6月，MiniCPM开源系列累计下载量已经突破<strong>3800万次</strong>，GitHub上超过14万颗星。这说明端侧模型的需求是真实存在的，而且在快速增长。</p>\n\n<p>当然，20分还远不是终点。云端前沿模型的Agent能力在持续进化，端侧要追的路还很长。但关键的一步已经迈出去了：<strong>端侧模型从「能回答问题」进化到了「能做任务」</strong>。</p>\n<p>未来的AI架构很可能是混合的——简单任务端侧搞定、复杂任务云端处理、两者无缝切换。到那一天，Agent才算真正走进了每个人的设备。</p>\n<p>明天见。</p>",
+  "pull_quote": {
+    "text": "端侧模型从「能回答问题」进化到了「能做任务」——这是关键的一步。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "MiniCPM5-2B · 面壁智能 · 端侧Agent · Agentic Index · 2B参数 · 数据安全 · 推理成本 · 131K上下文",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 12 个源信号生成，经编辑部人工审核。素材来源：上海证券报、腾讯新闻、OpenBMB社区、CSDN博客。"
+}

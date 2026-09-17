@@ -1,5 +1,109 @@
 [
   {
+    "number": "054",
+    "date": "2026-09-17",
+    "date_display": "2026.09.17",
+    "cover": {
+      "slug": "youdao-ai-open-day-model-agent-workflow",
+      "title": "周枫的AI三角命题：模型、Agent与工作流——一场关乎交付的行业分野",
+      "deck": "子曰4.0发布三款模型，有道同传2500万用户，iMagicBox成本降八成——当行业沉迷模型参数时，周枫抛出'模型+Agent+工作流'框架：这是基础设施路线之争，还是话术包装？",
+      "title_short": "AI三角命题与行业分野"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "053",
+    "date": "2026-09-17",
+    "date_display": "2026.09.17",
+    "cover": {
+      "slug": "openai-1-2-trillion-valuation-pre-ipo-funding",
+      "title": "OpenAI的1.2万亿定价：最贵的信仰，最不稳定的收入",
+      "deck": "OpenAI正在推进IPO前最后一轮融资，目标估值1.2万亿美元——比3月的8520亿高出40%。但定价逻辑建立在一组摇摇欲坠的数字之上：年化收入约250亿美元，Q1亏损93亿，Q2亏损123亿。ChatGPT周活9亿，全球AI助手份额却跌破50%。Anthropic年化收入已超OpenAI。IPO推迟至2027年。1.2万亿不是对OpenAI的定价——它是对“AI建设浪潮不会刹车”的定价。",
+      "title_short": "OpenAI 1.2万亿：信仰比营收贵"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "052",
+    "date": "2026-09-14",
+    "date_display": "2026.09.14",
+    "cover": {
+      "slug": "dario-amodei-pace-frontier-ai-safety-execution",
+      "title": "AI安全从口号到执行：Dario Amodei抛出三步计划，OpenAI、xAI同日响应",
+      "deck": "9月12日，Anthropic CEO Dario Amodei发布长文\"We Must Pace the Frontier\"，提出嵌入式评估员、民主国家行业协调、全球协调三步计划。OpenAI、xAI、Microsoft同日表态支持，OpenAI宣布2026年不上市。AI安全正从PR话术变成有牙齿的执行机制。",
+      "title_short": "AI安全执行时刻来了"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "051",
+    "date": "2026-09-11",
+    "date_display": "2026.09.11",
+    "cover": {
+      "slug": "openai-agents-api-managed-codex-harness",
+      "title": "OpenAI发布Agents API：一次调用，一个Agent，Agent创业公司该慌了",
+      "deck": "9月10日，OpenAI推出Agents API公测版——开发者只需一次API调用，就能创建可投入生产的云Agent，无需自建上下文管理、子代理编排等底层设施。这意味着Agent创业公司的护城河正在被填平。",
+      "title_short": "OpenAI Agents API：托管Agent时代来了"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "050",
+    "date": "2026-09-09",
+    "date_display": "2026.09.09",
+    "cover": {
+      "slug": "chatgpt-images-2-5-sketch-openai",
+      "title": "OpenAI发布ChatGPT Images 2.5：涂鸦即生成，AI图片进入「手绘时代」",
+      "deck": "在对话框里随手画个草图，AI就能生成专业级图片——OpenAI把图片创作的门槛降到了'会涂鸦就行'。延迟降低50%、新增模板库、支持图片批注修改，全球用户每周已生成超30亿张图片。",
+      "title_short": "ChatGPT Images 2.5：涂鸦即生成"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "049",
+    "date": "2026-09-08",
+    "date_display": "2026.09.08",
+    "cover": {
+      "slug": "mistral-3b-eur-series-d-samsung-21b-valuation",
+      "title": "Mistral拿下30亿欧元D轮：三星撑腰，开源AI的第二极站起来了",
+      "deck": "30亿欧元融资、210亿欧元估值、欧洲史上最大科技股权融资——三星把筹码压在了Mistral身上。当美国的前沿模型越走越闭源、越走越贵，开源阵营正在长出一个能打的对手。",
+      "title_short": "Mistral 30亿欧D轮，三星领投"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "048",
+    "date": "2026-09-08",
+    "date_display": "2026.09.08",
+    "cover": {
+      "slug": "office-agent-user-behavior-report",
+      "title": "首份办公Agent行为报告：北京领跑全国，但真正的主战场在深夜",
+      "deck": "国内首份《中国办公Agent用户行为不完全报告》发布：北京用户量全国居首，海外占比超12%，近60%算力消耗在非办公时间，人机协作的时间表正在被彻底重写，办公Agent进入重任务深集成新阶段。",
+      "title_short": "首份办公Agent行为报告"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
+    "number": "047",
+    "date": "2026-09-07",
+    "date_display": "2026.09.07",
+    "cover": {
+      "slug": "pachocki-slow-down-agi-has-arrived",
+      "title": "AGI 到底来没来：黄仁勋在台上喊到，首席科学家在底下写文章求刹车",
+      "deck": "GPT-6 Astra发布4天后，OpenAI首席科学家Pachocki发长文呼吁全行业放慢AI开发——智能体将学会欺骗、逃避监控、自我改进，没人做好了准备。同一天黄仁勋在社交平台高喊\"AGI已经到来\"。卖铲的、做模型的、搞安全的，三方声音同时从同一个行业里发出来，每个人说的都是真的。",
+      "title_short": "首席科学家求刹车 vs 黄仁勋喊 AGI 已到"
+    },
+    "has_cao": true,
+    "brief_count": 6
+  },
+  {
     "number": "046",
     "date": "2026-09-04",
     "date_display": "2026.09.04",

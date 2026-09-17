@@ -1,0 +1,33 @@
+{
+  "slug": "grok-copilot-word-excel-powerpoint-multi-model",
+  "category": "AI Agent",
+  "title": "Grok闯入Copilot三件套：微软从OpenAI独占走向多模型帝国",
+  "title_short": "Grok入驻Copilot三件套",
+  "title_break": "Grok闯入Copilot三件套<br>微软从OpenAI独占走向多模型帝国",
+  "deck": "9月12日，微软宣布在Copilot for Word/Excel/PowerPoint中添加Grok模型，面向Frontier客户预览阶段。Grok来自SpaceXAI（原xAI），是继Anthropic之后进入Copilot的第三个模型家族。",
+  "keywords": "Dawn Vision, Grok, Copilot, 微软, SpaceXAI, xAI, 多模型, Office",
+  "og_description": "微软在Copilot for Word/Excel/PowerPoint中添加Grok模型，仅面向Frontier客户预览。Grok来自SpaceXAI，是Copilot中第三个模型家族。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 790,
+  "sources": [
+    {
+      "text": "Microsoft Blog - Grok models now available in Microsoft 365 Copilot",
+      "url": "https://blogs.microsoft.com/blog/2026/09/12/grok-models-copilot/"
+    },
+    {
+      "text": "The Verge - Microsoft brings Grok to Copilot apps",
+      "url": "https://www.theverge.com/ai/2026/9/12/microsoft-grok-copilot-word-excel"
+    },
+    {
+      "text": "TechCrunch - Grok comes to Microsoft Copilot",
+      "url": "https://techcrunch.com/2026/09/12/grok-microsoft-copilot/"
+    }
+  ],
+  "body_html": "<p>9月12日，微软扔出了一颗不太起眼但意味深长的炸弹。</p><p>微软宣布在<strong>Copilot for Word、Excel和PowerPoint</strong>中添加Grok模型，目前面向Microsoft Frontier客户开放预览，默认关闭，需手动启用。EU/EFTA/UK地区在预览期间暂不可用。这看起来只是一次普通的模型更新，但背后的故事远比表面复杂。</p>\n\n<h2>Grok的来历：从Musk的死敌到微软的室友</h2><p>Grok来自SpaceXAI——这个名字需要拆解。2026年2月，Elon Musk的xAI被SpaceX收购；7月，合并后的实体更名为SpaceXAI。也就是说，Grok背后的AI团队现在隶属于SpaceX帝国。</p><p>这意味着什么？<strong>Musk曾是OpenAI最激烈的批评者</strong>，公开嘲讽微软与OpenAI的关系，甚至起诉OpenAI违背开源承诺。而现在，Musk的AI模型正通过微软的Copilot触达<strong>数亿Office用户</strong>。从死敌变室友，AI行业的关系网比任何剧本都离奇。</p><p>值得注意的是，Grok<strong>默认关闭</strong>——这意味着微软给了企业客户选择权，而不是强行推送。Frontier客户可以手动开启Grok，在Word中用于创意写作，在Excel中用于数据分析，在PowerPoint中用于演示生成。Grok 4.7即将发布，拥有<strong>2.1万亿参数</strong>，这个体量让它在某些任务上可能比GPT和Claude更有优势。</p>\n\n<h2>多模型帝国：微软的战略进化</h2><p>Grok进入Copilot，是微软\"多模型战略\"的又一步棋。</p><p>一年前，Copilot几乎等同于\"OpenAI的GPT\"。但过去几个月，微软接连引入了<strong>Anthropic的Claude</strong>作为第二个模型家族，现在又加入了<strong>SpaceXAI的Grok</strong>作为第三个。Copilot正在从\"OpenAI前端\"变成\"模型市场的聚合平台\"。</p><p>这个策略的逻辑很清晰：<strong>不把鸡蛋放在一个篮子里</strong>。微软在OpenAI身上押了超过130亿美元，但如果OpenAI的模型在某些场景下不是最优解呢？多模型策略让微软可以在不同任务上选择最适合的模型——用Claude处理长文档分析，用GPT处理通用对话，用Grok处理创意内容。</p><p>对OpenAI来说，这是一个微妙的信号：你依然是最重要的合作伙伴，但你不再是唯一的选择。对Anthropic和SpaceXAI来说，通过Copilot触达数亿Office用户，是一个极具吸引力的分发渠道。</p>\n\n<h2>Frontier客户：高端市场的实验场</h2><p>微软选择将Grok首先开放给<strong>Frontier客户</strong>，这个定位很有意思。</p><p>Frontier是微软的高端企业订阅层级，面向愿意率先尝试最新AI能力的企业。将Grok限定在Frontier客户，既控制了风险（如果Grok表现不佳，影响范围有限），又收集了真实的企业使用反馈。</p><p>EU/EFTA/UK地区的排除也不是意外。欧盟的AI法案对新模型的部署有严格要求，微软选择在合规审查完成前不向欧洲用户开放，是典型的\"先美后欧\"策略。</p><p>当微软的Copilot从\"一个模型\"变成\"多个模型可选\"，企业客户的AI策略也需要随之调整。<strong>选模型正在成为一种新的IT决策</strong>——就像当年选云服务商一样。而微软把自己定位为\"不做选择的选择平台\"，这个策略可能是Copilot最深的护城河。</p><p>明天见。</p>",
+  "pull_quote": {
+    "text": "从死敌到室友——AI行业的关系网比任何剧本都离奇。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Dawn Vision, Grok, Copilot, 微软, SpaceXAI, xAI, 多模型, Office",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 10 个源信号生成，经编辑部人工审核。素材来源：Microsoft Blog、The Verge、TechCrunch。"
+}

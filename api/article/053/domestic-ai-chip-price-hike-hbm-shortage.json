@@ -1,0 +1,39 @@
+{
+  "slug": "domestic-ai-chip-price-hike-hbm-shortage",
+  "category": "算力基建",
+  "title": "国产AI芯片集体涨价：华为昇腾950DT报价超25万，HBM荒推动定价权转移",
+  "title_short": "昇腾950DT超25万，国产芯片集体涨",
+  "title_break": "国产AI芯片集体涨价<br>华为昇腾950DT报价超25万，HBM荒推动定价权转移",
+  "deck": "华为昇腾950DT报价突破25万元，涨幅20-50%。寒武纪、沐曦、天数智芯同步涨价。HBM供应紧张叠加美国出口限制，国产AI芯片进入稀缺定价阶段。",
+  "keywords": "Dawn Vision, 华为, 昇腾950DT, AI芯片, HBM, 涨价, 寒武纪, 算力",
+  "og_description": "华为昇腾950DT报价突破25万元涨幅20-50%，寒武纪、沐曦、天数智芯同步涨价。HBM供应紧张叠加美国出口限制，国产AI算力芯片进入稀缺定价阶段。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 820,
+  "tags": [
+    "AI芯片",
+    "华为昇腾",
+    "HBM",
+    "算力基建"
+  ],
+  "sources": [
+    {
+      "text": "Reuters - Huawei's new AI chip priced above 250,000 yuan amid supply crunch",
+      "url": "https://www.reuters.com/technology/huawei-ascend-950dt-pricing-supply-crunch"
+    },
+    {
+      "text": "电子工程专辑 - 国产AI芯片集体涨价，HBM供应紧张成主因",
+      "url": "https://www.eet-china.com/news/domestic-ai-chip-price-hike"
+    },
+    {
+      "text": "中国新闻网 - 华为昇腾950DT预计Q4上市",
+      "url": "https://www.chinanews.com.cn/tech/huawei-ascend-950dt-q4-launch"
+    }
+  ],
+  "body_html": "<p>国产AI算力芯片的价格，正在以一种不由市场竞争决定的方式上涨。</p>\n\n<p>据多方信源交叉确认，华为下一代AI训练与推理芯片<strong>昇腾950DT</strong>的最新报价已突破<strong>25万元人民币</strong>，较此前产品线涨幅在<strong>20%至50%</strong>之间。这并非个案——寒武纪、沐曦、天数智芯等国产AI芯片厂商同步上调了产品报价。整个国产AI芯片市场正在经历一轮罕见的集体涨价。</p>\n\n<h2>HBM荒：涨价的第一推手</h2>\n\n<p>推动这轮涨价的直接原因是<strong>HBM（高带宽存储器）供应紧张</strong>。HBM是AI芯片的核心组件之一，全球产能高度集中在SK海力士、三星和美光三家厂商手中。随着全球AI基础设施建设加速，HBM的需求量爆发式增长，但产能扩张周期远远跟不上需求增速。供不应求的格局下，HBM的价格水涨船高，直接推高了国产AI芯片的制造成本。</p>\n\n<p>叠加的变量是<strong>美国对华AI芯片出口限制</strong>。当高端进口GPU的通道被收窄，国内AI企业不得不转向国产替代方案。需求集中涌入国产供应链，在产能本就紧张的情况下进一步加剧了供需失衡。国产芯片厂商在定价上拥有了前所未有的议价权。</p>\n\n<h2>昇腾950DT：Q4上市的战略节点</h2>\n\n<p>昇腾950DT预计<strong>2026年Q4正式上市</strong>。作为华为在AI芯片领域的旗舰产品，950DT的定价策略不仅是商业决策，更是市场信号——如果市场愿意以25万+的价格买单，说明国产AI算力的稀缺性已经转化为实实在在的定价权。</p>\n\n<p>对于下游的AI企业和云计算厂商来说，算力成本上升意味着模型训练和推理的边际成本增加。短期内，这可能加速行业洗牌——资金充裕的大厂能承受成本上涨，中小企业则面临更大的算力压力。中长期来看，涨价带来的丰厚现金流也可能反哺国产芯片的研发投入，加速下一代产品的迭代速度。</p>\n\n<p>国产AI芯片的定价逻辑，已经从\"市场竞争\"变成了\"稀缺资源分配\"。谁有产能，谁就有话语权。</p>\n\n<p>明天见。</p>",
+  "pull_quote": {
+    "text": "国产AI芯片的定价逻辑，已经从市场竞争变成了稀缺资源分配。谁有产能，谁就有话语权。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Dawn Vision, 华为, 昇腾950DT, AI芯片, HBM, 涨价, 寒武纪, 沐曦, 天数智芯, 算力基建, 出口限制",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 9 个源信号生成，经编辑部人工审核。素材来源：Reuters、电子工程专辑、中国新闻网。"
+}

@@ -1,0 +1,39 @@
+{
+  "slug": "doubao-ai-phone-nubia-navix-ultra-launch",
+  "category": "AI Agent",
+  "title": "豆包AI手机正式发售：SAEP协议优先字节系，37万预约量背后的入口争夺",
+  "title_short": "豆包手机发售，SAEP协议优先字节系",
+  "title_break": "豆包AI手机正式发售<br>SAEP协议优先字节系，37万预约背后的入口争夺",
+  "deck": "努比亚NaviX Ultra正式发售，5999元起国补减500。内置豆包大模型，SAEP协议30天内公示，字节系产品获优先调用权。京东预约超37万。",
+  "keywords": "Dawn Vision, 豆包, 努比亚, NaviX Ultra, SAEP, AI手机, 字节跳动",
+  "og_description": "努比亚NaviX Ultra正式发售，5999元起国补减500，京东预约超37万。内置豆包大模型，SAEP协议优先字节系产品调用，字节跳动通过硬件切入AI入口争夺。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 800,
+  "tags": [
+    "豆包",
+    "AI手机",
+    "字节跳动",
+    "SAEP"
+  ],
+  "sources": [
+    {
+      "text": "第一财经 - 豆包AI手机努比亚NaviX Ultra正式发售",
+      "url": "https://www.yicai.com/news/doubao-ai-phone-nubia-launch"
+    },
+    {
+      "text": "36氪 - SAEP协议细节曝光：字节系产品优先调用",
+      "url": "https://36kr.com/p/saep-protocol-bytedance-priority"
+    },
+    {
+      "text": "极目新闻 - 京东预约37万+，豆包手机发售即热销",
+      "url": "https://www.jiemian.com/article/doubao-phone-jd-presale"
+    }
+  ],
+  "body_html": "<p>5999元，国补减500。一部手机的价格，一个平台的野心。</p>\n\n<p>搭载豆包大模型的<strong>努比亚NaviX Ultra</strong>正式发售，定价5999元起，叠加国补后实际到手价5499元。京东平台预约量已超过<strong>37万</strong>。这是字节跳动的AI大模型第一次以手机硬件的形式，直接触达消费者。但真正值得拆解的不是这部手机本身，而是它背后的协议——<strong>SAEP</strong>。</p>\n\n<h2>SAEP协议：字节跳动的底层卡位</h2>\n\n<p>SAEP（Smart AI Entry Protocol）是豆包AI手机的核心技术框架。据36氪报道，SAEP协议将在<strong>30天内公示</strong>规范，允许第三方应用接入豆包的AI能力。但关键细节是：在调用优先级上，<strong>字节系产品将获得优先调用权</strong>。</p>\n\n<p>这意味着什么？当用户通过豆包AI手机调用AI能力时——无论是语音助手、智能推荐还是应用内AI功能——字节自家的产品（抖音、今日头条、飞书等）将在协议层面获得更快速、更优先的响应。这不是一个开放平台的逻辑，而是一个\"优先级开放\"的平台逻辑：先让自家生态的产品优先获得AI加持，再向外延伸。</p>\n\n<p>从商业角度看，这个策略无可厚非——字节跳动投入研发成本打造SAEP协议，优先服务自家生态是合理的商业回报。但从市场竞争角度看，一旦SAEP成为手机AI交互的标准协议，字节跳动就能在<strong>协议层面</strong>建立竞争壁垒，这比在应用层竞争更具结构性优势。</p>\n\n<h2>37万预约：AI手机的需求信号</h2>\n\n<p>37万预约量，按5499元的到手价计算，潜在预售金额超过<strong>20亿元</strong>。虽然预约到实际购买的转化率尚待观察，但这个数字至少说明了一件事：消费者对\"AI原生手机\"这个品类有真实的需求。</p>\n\n<p>国补政策的支持也是一个重要信号——政府层面在推动国产AI生态的发展，消费补贴降低了用户的尝鲜门槛。当政策推力和产品拉力同时作用，AI手机的起量速度可能超出预期。</p>\n\n<p>字节跳动通过SAEP协议切入AI入口争夺，目标不是卖手机，而是<strong>定义手机AI交互的底层规则</strong>。当更多手机厂商接入SAEP，字节跳动就能在系统层面掌握AI应用的分发逻辑。这是一场比\"谁的App更受欢迎\"更深层的战争。</p>\n\n<p>明天见。</p>",
+  "pull_quote": {
+    "text": "字节跳动的目标不是卖手机，而是定义手机AI交互的底层规则——这是一场比\"谁的App更受欢迎\"更深层的战争。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Dawn Vision, 豆包, 努比亚, NaviX Ultra, SAEP协议, AI手机, 字节跳动, AI Agent, 入口争夺",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 10 个源信号生成，经编辑部人工审核。素材来源：第一财经、36氪、极目新闻。"
+}

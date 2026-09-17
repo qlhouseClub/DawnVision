@@ -1,0 +1,39 @@
+{
+  "slug": "bilibili-ai-infinite-arena-launch",
+  "category": "AI新媒体",
+  "title": "B站AI无限竞技场上线：100+模型全民投票，GPT-6登顶但国产占前五三席",
+  "title_short": "B站AI竞技场：GPT-6登顶国产前三占二",
+  "title_break": "B站AI无限竞技场上线<br>100+模型全民投票，GPT-6登顶但国产占前五三席",
+  "deck": "B站AI无限竞技场9月16日上线，100+模型参与投票排名。GPT-6 Astra榜首，GLM-5.3第二，Claude Fable 5.1第三。10位UP主测评，AI内容消费时长同比增72%，月均1.9亿用户。",
+  "keywords": "Dawn Vision, B站, bilibili, AI竞技场, GPT-6, GLM, AI内容, 大模型评测",
+  "og_description": "B站AI无限竞技场上线，100+模型全民投票排名。GPT-6 Astra榜首，GLM-5.3第二，Claude Fable 5.1第三。AI内容消费时长同比增72%，月均1.9亿用户。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 800,
+  "tags": [
+    "B站",
+    "AI竞技场",
+    "大模型评测",
+    "GPT-6"
+  ],
+  "sources": [
+    {
+      "text": "IT之家 - B站AI无限竞技场正式上线",
+      "url": "https://www.ithome.com/bilibili-ai-infinite-arena-launch"
+    },
+    {
+      "text": "B站官方 - AI无限竞技场产品介绍",
+      "url": "https://www.bilibili.com/ai-arena"
+    },
+    {
+      "text": "网易 - B站AI内容月均1.9亿用户，消费时长增72%",
+      "url": "https://www.163.com/bilibili-ai-content-190m-users"
+    }
+  ],
+  "body_html": "<p>100多个AI模型，同一个擂台，用户说了算。</p>\n\n<p>9月16日，B站正式上线<strong>AI无限竞技场</strong>。这是一个开放的AI模型对战平台：用户可以同时与多个AI模型对话，投票选择回答更好的一方，形成实时排名。目前已有<strong>100+个模型</strong>参与竞技，覆盖GPT、Claude、Gemini、GLM、通义、文心等主流模型家族。</p>\n\n<h2>排行榜：GPT-6登顶，国产占前三两席</h2>\n\n<p>上线首日的排行榜数据颇具看点：<strong>GPT-6 Astra</strong>位居榜首，<strong>GLM-5.3</strong>排名第二，<strong>Claude Fable 5.1</strong>排名第三。前五名中国产模型占据了三席。</p>\n\n<p>这个排名的有趣之处在于，它不是技术benchmark的比拼，而是<strong>用户体验的直接投票</strong>。GPT-6登顶并不意外——OpenAI在通用对话能力上的积累依然领先。但GLM-5.3力压Claude排名第二，说明国产模型在中文场景下的用户体验已经具备了与全球顶级模型竞争的实力。</p>\n\n<h2>UP主测评：从专业视角拆解AI</h2>\n\n<p>B站同步邀请了<strong>10位头部UP主</strong>对竞技场进行深度测评。这些UP主覆盖科技、创意、教育等不同领域，从各自的专业视角对AI模型的表现进行拆解。这种\"用户生成内容+AI评测\"的结合，是B站独有的生态优势——其他平台很难同时拥有活跃的创作者社区和大规模的AI用户群体。</p>\n\n<h2>1.9亿月活：B站的AI内容飞轮</h2>\n\n<p>竞技场上线的底气来自B站AI内容的爆发式增长。数据显示，B站AI内容消费时长同比增长<strong>72%</strong>，月均AI内容用户达<strong>1.9亿</strong>。这意味着B站已经不仅仅是一个\"看视频\"的平台——它正在成为AI模型的<strong>分发渠道和评测入口</strong>。</p>\n\n<p>当用户在B站形成了\"用哪个AI模型\"的消费习惯，这个偏好就会影响他们在其他场景下的选择。B站AI竞技场的真正价值，不在于谁排名第一，而在于<strong>1.9亿月活用户的AI使用偏好数据</strong>。这些数据对AI厂商来说，比任何技术benchmark都更有商业价值。</p>\n\n<p>明天见。</p>",
+  "pull_quote": {
+    "text": "1.9亿月活用户的AI使用偏好数据，比任何技术benchmark都更有商业价值。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Dawn Vision, B站, bilibili, AI竞技场, GPT-6, GLM-5.3, Claude, 大模型评测, AI内容, 1.9亿月活",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 10 个源信号生成，经编辑部人工审核。素材来源：IT之家、B站官方、网易。"
+}

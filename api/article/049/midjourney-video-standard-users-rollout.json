@@ -1,0 +1,32 @@
+{
+  "slug": "midjourney-video-standard-users-rollout",
+  "category": "AI 设计 · 创意工具",
+  "title": "Midjourney视频向标准用户全面开放：图像帝国的下一步是动起来",
+  "title_break": "Midjourney视频全档位开放<br>图像帝国向视频领域扩张",
+  "deck": "从Pro/Mega专属到全档位开放，只用了一个月。720p HD视频、图片生成视频、批量处理——当最会做静图的公司开始做动图，AI创意工具的格局又要变了。",
+  "keywords": "Dawn Vision, Midjourney, AI视频, AI设计, 视频生成, 创意工具, Midjourney Video",
+  "og_description": "Midjourney视频功能全面开放标准用户，图像生成领域的头部玩家正式进军视频，AI创意工具格局再变。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 750,
+  "sources": [
+    {
+      "text": "Midjourney官方文档 - Video功能说明",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/37460773864589-Video"
+    },
+    {
+      "text": "CometAPI - Midjourney's HD Video Feature Goes Live",
+      "url": "https://www.cometapi.com/midjourneys-hd-video-mode-goes-live/"
+    },
+    {
+      "text": "ai-damn.com - Midjourney Expands Video Generation for Standard Users",
+      "url": "https://ai-damn.com/midjourney-expands-video-generation-for-standard-users-1755232256981"
+    }
+  ],
+  "body_html": "<p>Midjourney的用户最近大概都在做同一件事：把自己之前生成的那些静图，变成会动的短视频。</p>\n<p>8月初还只有Pro和Mega订阅者能用上的HD视频功能，不到一个月就全面开放给了Standard套餐用户。<strong>720p分辨率、图生视频、可选文本提示引导动效</strong>——曾经要额外付费的高级功能，现在基础套餐就能用。</p>\n<p>速度快得不像Midjourney的作风。以前一个v6版本能磨半年，现在视频功能从内测到全档位开放只用了几个月。</p>\n\n<h2>从静到动，为什么是现在</h2>\n<p>Midjourney做视频，不是什么意外。作为全球最大的AI图像生成平台之一，它天然拥有向视频延伸的用户基础和技术积累。但为什么是2026年下半年这个时间点全面铺开？</p>\n<p>答案是竞争。</p>\n<p>视频生成赛道现在热闹得很：Runway已经迭代到了Gen 4.5，Pika的动画风格独树一帜，可灵3.0在中文社区快速起量，Sora虽然还是邀请制但标杆效应明显。每一家都在抢用户、抢场景、抢创作者心智。</p>\n<p>Midjourney最大的优势是<strong>存量用户和内容生态</strong>。全球有数百万创作者已经在用Midjourney做图了——他们的工作流、审美、素材库，全都建立在这个平台上。现在平台说「你之前做的图，可以一键变成视频」，这些用户没有理由不试。迁移成本为零，体验却是全新的。</p>\n<p>目前Midjourney的视频功能还比较基础：5秒时长、基于单张图片生成动效、支持文本提示引导运动方向和风格。跟Sora那种能讲完整故事的长视频比，还有不小距离。但别忘了，Midjourney的用户最擅长的是什么？<strong>用有限的工具做出惊艳的作品</strong>。给他们一个5秒的视频生成器，他们能玩出多少花来，没人知道。</p>\n\n<h2>创意工具的全链路时代</h2>\n<p>Midjourney做视频这件事，背后有一个更大的趋势：AI创意工具正在从「单品」走向「全链路」。</p>\n<p>前两年，每个工具只做一件事——有的做图、有的做视频、有的做音乐、有的做文案。创作者要在好几个平台之间来回切换，流程碎、成本高、体验割裂。</p>\n<p>现在不一样了。头部玩家都在横向扩张：Midjourney从图到视频、Runway从视频到图像编辑、Canva从设计到文案到视频全链路覆盖、字节的可灵也在图文视频音乐之间打通。用户不需要那么多工具了，一个平台能搞定大部分事情，为什么还要到处跑？</p>\n<p>这对中小创意工具来说不是个好消息。当巨头开始做全链路，单点工具的生存空间会被挤压。要么被收购、要么做垂类深耕、要么被边缘化。但对创作者来说是好事——工具越少、效率越高、创意的注意力成本越低。</p>\n\n<p>Midjourney的视频才刚刚起步，5秒的时长、720p的分辨率，跟专业视频工具比还有差距。但有一件事是确定的：<strong>最懂审美、最懂创作者的那个团队，正式入局视频了</strong>。</p>\n<p>接下来的半年，视频生成的质量和可用性会再上一个台阶。对创作者来说，这是最好的时代——工具越来越强、越来越便宜、越来越顺手。剩下的唯一问题是：你的创意，跟上了吗？</p>\n<p>明天见。</p>",
+  "pull_quote": {
+    "text": "给Midjourney用户一个5秒的视频生成器，他们能玩出多少花来，没人知道。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Midjourney · AI视频 · 图生视频 · 创意工具 · 720p HD · 全链路工具 · 视频生成",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 7 个源信号生成，经编辑部人工审核。素材来源：Midjourney官方文档、CometAPI、ai-damn.com、牛客网盘点。"
+}

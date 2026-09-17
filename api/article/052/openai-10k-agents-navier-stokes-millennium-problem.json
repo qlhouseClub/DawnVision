@@ -1,0 +1,33 @@
+{
+  "slug": "openai-10k-agents-navier-stokes-millennium-problem",
+  "category": "AI编程",
+  "title": "1万Agent攻下千禧年难题：OpenAI赢了计算，数学界说你没赢证明",
+  "title_short": "万Agent攻克千禧难题，数学界不买账",
+  "title_break": "1万Agent攻下千禧难题：<br>OpenAI赢了计算，数学界说你没赢证明",
+  "deck": "OpenAI用1万个Agent花88小时攻克纳维-斯托克斯千禧年难题，消耗1300亿token。但数学界对此并不买账。",
+  "keywords": "Dawn Vision, OpenAI, Agent Swarm, 纳维-斯托克斯, 千禧年难题, GPT-6, 形式化验证, Lean, 菲尔兹奖",
+  "og_description": "OpenAI用约1万个并发AI Agent花88小时攻克纳维-斯托克斯千禧年难题，生成270万条消息、消耗1300亿token。数学界仍有争议，25位菲尔兹奖得主联合警告AI侵入数学。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 800,
+  "sources": [
+    {
+      "text": "OpenAI Blog - AI-generated proof of Navier-Stokes existence and smoothness",
+      "url": "https://openai.com/index/navier-stokes-proof"
+    },
+    {
+      "text": "Quanta Magazine - Mathematicians Question AI-Generated Navier-Stokes Proof",
+      "url": "https://www.quantamagazine.org/"
+    },
+    {
+      "text": "Nature - 25 Fields Medalists warn against AI in mathematics",
+      "url": "https://www.nature.com/"
+    }
+  ],
+  "body_html": "<p><strong>10,000</strong>个AI Agent同时运行，<strong>88</strong>小时不间断工作，生成<strong>270万条</strong>Agent间消息，消耗约<strong>1300亿</strong>输出token。这不是科幻小说里的设定，而是OpenAI在9月8日公布的一次真实计算任务——用AI Agent Swarm对纳维-斯托克斯方程的存在性与光滑性问题给出形式化证明。</p>\n\n<h2>史上最大规模的Agent协同实验</h2>\n\n<p>纳维-斯托克斯方程是描述流体运动的基本方程，属于Clay数学研究所公布的七大千禧年难题之一，悬赏100万美元。近200年来，数学家们始终无法证明其解在三维空间中是否总是存在且光滑。OpenAI声称，他们的Agent Swarm做到了。</p>\n\n<p>具体来看这次任务的规模：约10,000个并发Agent组成协作网络，每个Agent负责证明链中的不同环节，相互验证、相互修正，历时88小时产出了一份完整的证明草案。随后，Lean形式化验证系统由GPT-6 Astra执行，耗时<strong>17小时</strong>完成形式化检查。值得注意的是，Agent Swarm使用的并非GPT-6 Astra，而是OpenAI内部一个未公开的、能力更强的模型。</p>\n\n<h2>数学界的冷淡与菲尔兹奖得主的警告</h2>\n\n<p>OpenAI在声明中明确表示不会申请100万美元千禧年大奖。但即便如此，数学界的反应并不热烈。多位数学家指出，Agent Swarm生成的证明在技术路线和关键引理的合理性上仍需大量人工审核。\"通过形式化验证\"和\"数学上正确\"之间还有很大距离——Lean可以检查逻辑链条的一致性，但它无法判断证明的出发点是否有意义。</p>\n\n<p>更耐人寻味的是后续事件。仅仅三天后（9月11日），<strong>25位菲尔兹奖得主</strong>联合发表声明，警告AI正在\"侵入\"数学领域。声明并未直接点名OpenAI，但时间节点的巧合已经说明了一切。这些数学家担忧的核心问题不是AI能不能解题，而是AI参与数学研究的方式是否会削弱人类对\"理解\"的追求。</p>\n\n<h2>解题不等于理解：真正的千禧年难题</h2>\n\n<p>这次实验最大的技术价值，或许不在于纳维-斯托克斯本身，而在于它验证了Agent Swarm在超大规模复杂任务中的可行性。10,000个并发Agent、1300亿token的协调成本、88小时的持续运行——这套基础设施已经远超任何单一模型的能力边界。它更像是一个分布式计算系统，而不是传统意义上的AI推理。</p>\n\n<p>但\"能用Agent Swarm暴力攻下一个数学难题\"和\"AI理解了流体力学\"之间，隔着一个根本性的认知鸿沟。数学家追求的从来不只是正确的答案，而是答案背后的直觉、美感和洞察力。一个由10,000个Agent拼接出来的证明，即使逻辑无懈可击，也很难成为人类数学家灵感的源泉。</p>\n\n<p>OpenAI证明了Agent可以\"解题\"。但数学界真正关心的\"理解\"，仍然是一个只有人类才能回答的千禧年难题。</p>\n\n<p>明天见。</p>",
+  "pull_quote": {
+    "text": "1万个Agent可以拼出一个证明，但数学家要的从来不只是正确答案。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Dawn Vision, OpenAI, Agent Swarm, 纳维-斯托克斯, 千禧年难题, GPT-6, 形式化验证, Lean, 菲尔兹奖",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 12 个源信号生成，经编辑部人工审核。素材来源：OpenAI官方博客、Quanta Magazine、Nature。"
+}

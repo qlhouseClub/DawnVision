@@ -1,0 +1,37 @@
+{
+  "slug": "alipay-ai-wallet-agent-trusted-payment",
+  "category": "微信生态",
+  "title": "支付宝推出AI钱包智能体：从\"可支付\"到\"可信支付\"，Agent商业的信任基建来了",
+  "title_short": "支付宝AI钱包：可信支付时代",
+  "title_break": "支付宝推出AI钱包智能体<br>从可支付到可信支付，信任基建来了",
+  "deck": "9月11日外滩大会上，支付宝宣布推出AI钱包智能体及Vibe Pay、Skill Pay、Machine Pay三大能力，构建从可支付到可信支付的底层信任基础设施。蚂蚁CEO韩歆毅宣告：智能体商业的ChatGPT时刻已至。",
+  "keywords": "Dawn Vision, 支付宝, AI钱包, 智能体, APASS, KYA, 可信支付, 外滩大会",
+  "og_description": "支付宝在外滩大会推出AI钱包智能体和三大AI收能力，基于KYA理念构建可信支付基础设施，智能体商业的ChatGPT时刻已至。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 800,
+  "sources": [
+    {
+      "text": "新快报 - 蚂蚁集团CEO韩歆毅：智能体商业ChatGPT时刻已至",
+      "url": "https://www.xkb.com.cn/articleDetail/523148"
+    },
+    {
+      "text": "环球网 - 支付宝AI支付加速AI新经济爆发",
+      "url": "http://m.toutiao.com/group/7684141387767480838/"
+    },
+    {
+      "text": "科创板日报 - 从可支付到可信支付",
+      "url": "http://m.toutiao.com/group/7684146855655080498/"
+    },
+    {
+      "text": "支付宝Agent支付文档",
+      "url": "https://aipay.alipay.com/docs/overview.html"
+    }
+  ],
+  "body_html": "<p>当智能体开始替你花钱，你最担心什么？</p><p>9月11日，在2026 Inclusion·外滩大会上，蚂蚁集团CEO韩歆毅给出了他的答案：<strong>信任</strong>。他宣布，支付宝AI支付从\"可支付\"迈向\"可信支付\"，推出AI钱包智能体及三大\"AI收\"能力，为智能体商业构建底层信任基础设施。</p>\n\n<h2>AI钱包：你口袋里的\"自己人\"</h2><p>AI钱包智能体是支付宝这次发布的核心产品。它的定位是<strong>用户在智能体世界里的\"自己人\"</strong>——掌握交易的完整上下文，在确认交易符合用户授权、完成风险识别后，才执行最终支付。</p><p>这不是简单的自动扣款。传统支付是\"你点一下，我扣一笔\"；AI支付是\"智能体判断你要花钱，我先替你把关，确认没问题再付\"。这中间的信任链，就是APASS商业信任基础设施的核心。</p><p>基于KYA（Know Your Agent）理念，APASS建立了\"身份+行为\"双重信任链：对智能体身份、意图、授权进行持续核验。如果智能体越权，系统会拒绝交易并留下可追溯凭证。近期，Visa、Mastercard正与Alipay+探索KYA框架的互联互通。</p>\n\n<h2>三大AI收：Vibe Pay、Skill Pay、Machine Pay</h2><p>除了AI钱包，支付宝还推出了三大\"AI收\"能力，覆盖不同场景：</p><p><strong>Vibe Pay</strong>：面向AI应用创造场景，让AI应用的创造者能够直接从AI交互中获得收入。</p><p><strong>Skill Pay</strong>：面向Skill服务商，把支付环节嵌入Skill的调用和交付流程。你的产品是一个可被Agent调用的Skill，用户使用时自动完成收费。</p><p><strong>Machine Pay</strong>：面向机器互联场景，让机器狗、AI眼镜、AI耳机等物理设备也能完成支付。千问AI眼镜、未来智能AI耳机及高德动量机器狗\"途途\"已接入AI支付，实现\"看一下\"或语音下单。</p>\n\n<h2>1000万基金：支付宝的生态豪赌</h2><p>为了加速生态建设，韩歆毅宣布支付宝面向生活智能体开发者设立<strong>1000万元发展基金</strong>，年度单项最高奖励100万元。</p><p>这个信号很清楚：支付宝不想只做支付通道，它想成为智能体商业的基础设施。韩歆毅预测，<strong>未来5年内更自然的新交互支付占比或超50%</strong>。</p><div class=\"pull-quote\">\"当Agent开始帮你花钱了，整个智能体的商业生态就从一个支付真正变成一个繁荣、丰富的商业生态。\"<span class=\"pull-quote__attr\">—— 蚂蚁集团CEO韩歆毅</span></div>\n\n<h2>AI支付的竞争格局</h2><p>支付宝的布局，让AI支付的竞争格局更加清晰。</p><p>在国内，支付宝和微信支付在移动支付市场已经竞争了十年。现在，AI支付成为新的战场。支付宝率先推出AI钱包智能体，在\"可信支付\"这个维度上抢占了先机。</p><p>在国际上，Visa、Mastercard也在探索AI支付的可能性。KYA框架的互联互通，意味着支付宝希望把这套信任标准推向全球。</p><p>AI支付的核心问题不是技术，而是信任。谁先解决信任问题，谁就能在智能体商业中占据主导地位。</p><p>明天见。</p>",
+  "pull_quote": {
+    "text": "当Agent开始帮你花钱了，整个智能体的商业生态就从一个支付真正变成一个繁荣、丰富的商业生态。",
+    "attr": "—— 蚂蚁集团CEO韩歆毅"
+  },
+  "cognitive_notes": "支付宝 · AI钱包 · 智能体 · APASS · KYA · Vibe Pay · Skill Pay · Machine Pay · 外滩大会",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 14 个源信号生成，经编辑部人工审核。素材来源：新快报、环球网、科创板日报、支付宝Agent支付文档。"
+}

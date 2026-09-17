@@ -1,0 +1,39 @@
+{
+  "slug": "gemini-3-8-live-extended-thinking-voice",
+  "category": "大模型商业",
+  "title": "Gemini 3.8 Live发布：97种语言边想边说，Google重新定义对话AI的技术栈",
+  "title_short": "Gemini 3.8 Live：97语言边想边说",
+  "title_break": "Gemini 3.8 Live发布<br>97种语言边想边说，Google重新定义对话AI的技术栈",
+  "deck": "Google发布Gemini 3.8 Live，支持97种语言自动切换，Speech Quality Index 82.6登顶，Big Bench Audio 97.7%。首次实现\"边思考边语音\"，后台执行工具调用，SynthID水印确保可追溯。",
+  "keywords": "Dawn Vision, Google, Gemini, 3.8 Live, 语音AI, 多语言, 大模型",
+  "og_description": "Google发布Gemini 3.8 Live，97种语言自动切换，Speech Quality Index 82.6登顶。首次实现边思考边语音输出，后台执行工具调用，SynthID水印确保AI生成内容可追溯。",
+  "read_time": "约 5 分钟阅读",
+  "word_count": 810,
+  "tags": [
+    "Google",
+    "Gemini",
+    "语音AI",
+    "大模型"
+  ],
+  "sources": [
+    {
+      "text": "Google Blog - Introducing Gemini 3.8 Live",
+      "url": "https://blog.google/technology/ai/gemini-3-8-live"
+    },
+    {
+      "text": "36氪 - Gemini 3.8 Live发布：语音质量登顶，支持97种语言",
+      "url": "https://36kr.com/p/gemini-3-8-live-voice-multilingual"
+    },
+    {
+      "text": "Unite.AI - Gemini 3.8 Live Sets New Voice AI Benchmarks",
+      "url": "https://www.unite.ai/gemini-3-8-live-voice-benchmarks"
+    }
+  ],
+  "body_html": "<p>9月15日，Google发布了<strong>Gemini 3.8 Live</strong>。这不是一次渐进式的模型升级，而是对话AI技术栈的一次重新定义——它第一次让AI做到了\"边思考边说话\"。</p>\n\n<h2>97种语言与语音质量登顶</h2>\n\n<p>Gemini 3.8 Live支持<strong>97种语言的自动切换</strong>。用户在对话中切换语言时，模型无需任何提示或设置，自动识别并无缝响应。这对全球化场景下的AI应用——客服、翻译、教育——意味着一个质的飞跃：一个模型覆盖近百种语言，不再需要为每种语言单独部署。</p>\n\n<p>在语音质量评估中，Gemini 3.8 Live的表现同样亮眼。<strong>Speech Quality Index（SQI）82.6分</strong>，位列所有已发布模型第一。<strong>Big Bench Audio得分97.7%</strong>，<strong>τ-Voice测试68.6%</strong>。这些指标意味着，在\"听起来是否像人\"这个维度上，Gemini 3.8 Live已经逼近了人类对话的自然度。</p>\n\n<h2>边思考边说话：对话AI的范式突破</h2>\n\n<p>Gemini 3.8 Live最核心的技术突破是<strong>\"边思考边语音\"（Extended Thinking + Voice）</strong>能力。传统对话AI的流程是\"思考→生成文本→转语音→播放\"，用户需要等待模型完成整个链条。Gemini 3.8 Live打破了这个顺序：模型在进行复杂推理的同时，已经开始输出语音——用户可以实时听到AI的\"思考过程\"。</p>\n\n<p>与此同时，Gemini 3.8 Live支持<strong>后台执行工具调用</strong>。当模型在对话中需要查询数据库、调用API或执行代码时，这些操作在后台异步进行，不阻塞语音输出。用户感受到的是一个流畅的、像人一样\"边想边聊\"的交互体验。</p>\n\n<h2>SynthID水印与可追溯性</h2>\n\n<p>Google同步部署了<strong>SynthID水印技术</strong>。Gemini 3.8 Live生成的所有语音内容都携带不可见的数字水印，确保AI生成内容的可追溯性。在AI生成内容日益泛滥的当下，这项技术的意义超越了产品本身——它为AI内容的\"来源认证\"提供了一个可执行的技术方案。</p>\n\n<p>Gemini 3.8 Live不是在追赶GPT或Claude——它在定义一个新赛道。当AI可以边想边说、97种语言无缝切换、后台同时执行复杂任务时，\"对话AI\"这个词已经不足以描述它了。Google正在把Gemini打造成一个<strong>多模态、多语言、多任务的实时AI操作系统</strong>。</p>\n\n<p>明天见。</p>",
+  "pull_quote": {
+    "text": "当AI可以边想边说、97种语言无缝切换、后台同时执行复杂任务时，\"对话AI\"这个词已经不足以描述它了。",
+    "attr": "—— Dawn Vision编辑部"
+  },
+  "cognitive_notes": "Dawn Vision, Google, Gemini, 3.8 Live, 语音AI, 多语言, SQI, SynthID, 边思考边语音, 工具调用",
+  "source_summary": "本文基于 Dawn Vision 认知引擎处理的 10 个源信号生成，经编辑部人工审核。素材来源：Google Blog、36氪、Unite.AI。"
+}
